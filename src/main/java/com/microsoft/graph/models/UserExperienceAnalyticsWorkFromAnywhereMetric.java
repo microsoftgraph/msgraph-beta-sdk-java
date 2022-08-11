@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDevice;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionPage;
 
@@ -35,7 +34,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
     @SerializedName(value = "metricDevices", alternate = {"MetricDevices"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionPage metricDevices;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionPage metricDevices;
 
 
     /**
@@ -48,7 +47,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
 
 
         if (json.has("metricDevices")) {
-            metricDevices = serializer.deserializeObject(json.get("metricDevices"), UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionPage.class);
+            metricDevices = serializer.deserializeObject(json.get("metricDevices"), com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionPage.class);
         }
     }
 }

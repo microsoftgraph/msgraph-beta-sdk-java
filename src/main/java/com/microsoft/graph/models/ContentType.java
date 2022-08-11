@@ -14,12 +14,8 @@ import com.microsoft.graph.models.DocumentSetContent;
 import com.microsoft.graph.models.ItemReference;
 import com.microsoft.graph.models.ContentTypeOrder;
 import com.microsoft.graph.models.ContentType;
-import com.microsoft.graph.models.ColumnLink;
-import com.microsoft.graph.models.ColumnDefinition;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.ContentTypeCollectionPage;
 import com.microsoft.graph.requests.ColumnLinkCollectionPage;
-import com.microsoft.graph.requests.ColumnDefinitionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -176,7 +172,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The collection of content types that are ancestors of this content type.
      */
 	@Nullable
-    public ContentTypeCollectionPage baseTypes;
+    public com.microsoft.graph.requests.ContentTypeCollectionPage baseTypes;
 
     /**
      * The Column Links.
@@ -185,14 +181,14 @@ public class ContentType extends Entity implements IJsonBackedObject {
     @SerializedName(value = "columnLinks", alternate = {"ColumnLinks"})
     @Expose
 	@Nullable
-    public ColumnLinkCollectionPage columnLinks;
+    public com.microsoft.graph.requests.ColumnLinkCollectionPage columnLinks;
 
     /**
      * The Column Positions.
      * Column order information in a content type.
      */
 	@Nullable
-    public ColumnDefinitionCollectionPage columnPositions;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage columnPositions;
 
     /**
      * The Columns.
@@ -201,7 +197,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
 	@Nullable
-    public ColumnDefinitionCollectionPage columns;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage columns;
 
 
     /**
@@ -214,19 +210,19 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
 
         if (json.has("baseTypes")) {
-            baseTypes = serializer.deserializeObject(json.get("baseTypes"), ContentTypeCollectionPage.class);
+            baseTypes = serializer.deserializeObject(json.get("baseTypes"), com.microsoft.graph.requests.ContentTypeCollectionPage.class);
         }
 
         if (json.has("columnLinks")) {
-            columnLinks = serializer.deserializeObject(json.get("columnLinks"), ColumnLinkCollectionPage.class);
+            columnLinks = serializer.deserializeObject(json.get("columnLinks"), com.microsoft.graph.requests.ColumnLinkCollectionPage.class);
         }
 
         if (json.has("columnPositions")) {
-            columnPositions = serializer.deserializeObject(json.get("columnPositions"), ColumnDefinitionCollectionPage.class);
+            columnPositions = serializer.deserializeObject(json.get("columnPositions"), com.microsoft.graph.requests.ColumnDefinitionCollectionPage.class);
         }
 
         if (json.has("columns")) {
-            columns = serializer.deserializeObject(json.get("columns"), ColumnDefinitionCollectionPage.class);
+            columns = serializer.deserializeObject(json.get("columns"), com.microsoft.graph.requests.ColumnDefinitionCollectionPage.class);
         }
     }
 }

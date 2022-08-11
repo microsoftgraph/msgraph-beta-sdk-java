@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ProgramControl;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ProgramControlCollectionPage;
 
@@ -53,7 +52,7 @@ public class Program extends Entity implements IJsonBackedObject {
     @SerializedName(value = "controls", alternate = {"Controls"})
     @Expose
 	@Nullable
-    public ProgramControlCollectionPage controls;
+    public com.microsoft.graph.requests.ProgramControlCollectionPage controls;
 
 
     /**
@@ -66,7 +65,7 @@ public class Program extends Entity implements IJsonBackedObject {
 
 
         if (json.has("controls")) {
-            controls = serializer.deserializeObject(json.get("controls"), ProgramControlCollectionPage.class);
+            controls = serializer.deserializeObject(json.get("controls"), com.microsoft.graph.requests.ProgramControlCollectionPage.class);
         }
     }
 }

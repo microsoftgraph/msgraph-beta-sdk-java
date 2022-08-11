@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GroupPolicyUploadedDefinitionFile;
 import com.microsoft.graph.models.GroupPolicyUploadedLanguageFile;
-import com.microsoft.graph.requests.GroupPolicyOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyOperationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -69,8 +67,8 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
      * @return the collection request builder
      */
     @Nonnull
-    public GroupPolicyDefinitionCollectionWithReferencesRequestBuilder definitions() {
-        return new GroupPolicyDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("definitions"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesRequestBuilder definitions() {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("definitions"), getClient(), null);
     }
 
     /**
@@ -80,8 +78,8 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
      * @param id the item identifier
      */
     @Nonnull
-    public GroupPolicyDefinitionWithReferenceRequestBuilder definitions(@Nonnull final String id) {
-        return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder definitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the GroupPolicyOperation collection
@@ -89,8 +87,8 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
      * @return the collection request builder
      */
     @Nonnull
-    public GroupPolicyOperationCollectionRequestBuilder groupPolicyOperations() {
-        return new GroupPolicyOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicyOperations"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyOperationCollectionRequestBuilder groupPolicyOperations() {
+        return new com.microsoft.graph.requests.GroupPolicyOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicyOperations"), getClient(), null);
     }
 
     /**
@@ -100,8 +98,8 @@ public class GroupPolicyUploadedDefinitionFileRequestBuilder extends BaseRequest
      * @param id the item identifier
      */
     @Nonnull
-    public GroupPolicyOperationRequestBuilder groupPolicyOperations(@Nonnull final String id) {
-        return new GroupPolicyOperationRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicyOperations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyOperationRequestBuilder groupPolicyOperations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupPolicyOperationRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicyOperations") + "/" + id, getClient(), null);
     }
 
     /**

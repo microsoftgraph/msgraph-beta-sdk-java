@@ -36,7 +36,7 @@ public class InformationProtectionPolicySetting extends Entity implements IJsonB
 
     /**
      * The Is Downgrade Justification Required.
-     * 
+     * Exposes whether justification input is required on label downgrade.
      */
     @SerializedName(value = "isDowngradeJustificationRequired", alternate = {"IsDowngradeJustificationRequired"})
     @Expose
@@ -45,7 +45,7 @@ public class InformationProtectionPolicySetting extends Entity implements IJsonB
 
     /**
      * The Is Mandatory.
-     * 
+     * Exposes whether mandatory labeling is enabled.
      */
     @SerializedName(value = "isMandatory", alternate = {"IsMandatory"})
     @Expose
@@ -54,7 +54,7 @@ public class InformationProtectionPolicySetting extends Entity implements IJsonB
 
     /**
      * The More Info Url.
-     * 
+     * Exposes the more information URL that can be configured by the administrator.
      */
     @SerializedName(value = "moreInfoUrl", alternate = {"MoreInfoUrl"})
     @Expose

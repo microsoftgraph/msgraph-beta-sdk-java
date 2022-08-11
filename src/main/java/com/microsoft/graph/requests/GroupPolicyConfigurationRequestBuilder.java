@@ -10,10 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GroupPolicyConfiguration;
 import com.microsoft.graph.models.GroupPolicyConfigurationAssignment;
 import com.microsoft.graph.models.GroupPolicyDefinitionValue;
-import com.microsoft.graph.requests.GroupPolicyConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyDefinitionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyDefinitionValueRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +66,8 @@ public class GroupPolicyConfigurationRequestBuilder extends BaseRequestBuilder<G
      * @return the collection request builder
      */
     @Nonnull
-    public GroupPolicyConfigurationAssignmentCollectionRequestBuilder assignments() {
-        return new GroupPolicyConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.GroupPolicyConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -81,8 +77,8 @@ public class GroupPolicyConfigurationRequestBuilder extends BaseRequestBuilder<G
      * @param id the item identifier
      */
     @Nonnull
-    public GroupPolicyConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new GroupPolicyConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupPolicyConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the GroupPolicyDefinitionValue collection
@@ -90,8 +86,8 @@ public class GroupPolicyConfigurationRequestBuilder extends BaseRequestBuilder<G
      * @return the collection request builder
      */
     @Nonnull
-    public GroupPolicyDefinitionValueCollectionRequestBuilder definitionValues() {
-        return new GroupPolicyDefinitionValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValues"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionValueCollectionRequestBuilder definitionValues() {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValues"), getClient(), null);
     }
 
     /**
@@ -101,8 +97,8 @@ public class GroupPolicyConfigurationRequestBuilder extends BaseRequestBuilder<G
      * @param id the item identifier
      */
     @Nonnull
-    public GroupPolicyDefinitionValueRequestBuilder definitionValues(@Nonnull final String id) {
-        return new GroupPolicyDefinitionValueRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValues") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionValueRequestBuilder definitionValues(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionValueRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValues") + "/" + id, getClient(), null);
     }
 
     /**

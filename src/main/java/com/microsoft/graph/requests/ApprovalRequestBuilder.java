@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Approval;
 import com.microsoft.graph.models.ApprovalFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.ApprovalStepCollectionRequestBuilder;
-import com.microsoft.graph.requests.ApprovalStepRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder<Approval> {
      * @return the collection request builder
      */
     @Nonnull
-    public ApprovalStepCollectionRequestBuilder steps() {
-        return new ApprovalStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("steps"), getClient(), null);
+    public com.microsoft.graph.requests.ApprovalStepCollectionRequestBuilder steps() {
+        return new com.microsoft.graph.requests.ApprovalStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("steps"), getClient(), null);
     }
 
     /**
@@ -76,7 +74,7 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder<Approval> {
      * @param id the item identifier
      */
     @Nonnull
-    public ApprovalStepRequestBuilder steps(@Nonnull final String id) {
-        return new ApprovalStepRequestBuilder(getRequestUrlWithAdditionalSegment("steps") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ApprovalStepRequestBuilder steps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ApprovalStepRequestBuilder(getRequestUrlWithAdditionalSegment("steps") + "/" + id, getClient(), null);
     }
 }

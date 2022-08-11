@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.UnifiedRbacResourceAction;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.UnifiedRbacResourceActionCollectionPage;
 
@@ -44,7 +43,7 @@ public class UnifiedRbacResourceNamespace extends Entity implements IJsonBackedO
     @SerializedName(value = "resourceActions", alternate = {"ResourceActions"})
     @Expose
 	@Nullable
-    public UnifiedRbacResourceActionCollectionPage resourceActions;
+    public com.microsoft.graph.requests.UnifiedRbacResourceActionCollectionPage resourceActions;
 
 
     /**
@@ -57,7 +56,7 @@ public class UnifiedRbacResourceNamespace extends Entity implements IJsonBackedO
 
 
         if (json.has("resourceActions")) {
-            resourceActions = serializer.deserializeObject(json.get("resourceActions"), UnifiedRbacResourceActionCollectionPage.class);
+            resourceActions = serializer.deserializeObject(json.get("resourceActions"), com.microsoft.graph.requests.UnifiedRbacResourceActionCollectionPage.class);
         }
     }
 }

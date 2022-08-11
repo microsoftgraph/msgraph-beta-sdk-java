@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingInstance;
-import com.microsoft.graph.models.DeviceManagementConfigurationPolicy;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionPage;
 
@@ -108,7 +107,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements IJs
     @SerializedName(value = "referencingConfigurationPolicies", alternate = {"ReferencingConfigurationPolicies"})
     @Expose
 	@Nullable
-    public DeviceManagementConfigurationPolicyCollectionPage referencingConfigurationPolicies;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionPage referencingConfigurationPolicies;
 
 
     /**
@@ -121,7 +120,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements IJs
 
 
         if (json.has("referencingConfigurationPolicies")) {
-            referencingConfigurationPolicies = serializer.deserializeObject(json.get("referencingConfigurationPolicies"), DeviceManagementConfigurationPolicyCollectionPage.class);
+            referencingConfigurationPolicies = serializer.deserializeObject(json.get("referencingConfigurationPolicies"), com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionPage.class);
         }
     }
 }

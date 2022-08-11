@@ -14,7 +14,6 @@ import com.microsoft.graph.security.models.InformationProtectionAction;
 import com.microsoft.graph.security.models.ClassificationResult;
 import com.microsoft.graph.security.models.DowngradeJustification;
 import com.microsoft.graph.security.models.ContentLabel;
-import com.microsoft.graph.security.requests.SensitivityLabelRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,7 +69,7 @@ public class SensitivityLabelRequestBuilder extends BaseRequestBuilder<Sensitivi
      * @return the SensitivityLabelRequestBuilder instance
      */
     @Nonnull
-    public SensitivityLabelRequestBuilder parent() {
-        return new SensitivityLabelRequestBuilder(getRequestUrlWithAdditionalSegment("parent"), getClient(), null);
+    public com.microsoft.graph.security.requests.SensitivityLabelRequestBuilder parent() {
+        return new com.microsoft.graph.security.requests.SensitivityLabelRequestBuilder(getRequestUrlWithAdditionalSegment("parent"), getClient(), null);
     }
 }

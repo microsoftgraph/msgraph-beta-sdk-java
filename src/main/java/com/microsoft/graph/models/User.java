@@ -25,74 +25,35 @@ import com.microsoft.graph.models.ProvisionedPlan;
 import com.microsoft.graph.models.MailboxSettings;
 import com.microsoft.graph.models.UserPrint;
 import com.microsoft.graph.models.UserAnalytics;
-import com.microsoft.graph.models.CloudPC;
-import com.microsoft.graph.models.UsageRight;
 import com.microsoft.graph.models.InformationProtection;
-import com.microsoft.graph.models.AppRoleAssignment;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.LicenseDetails;
-import com.microsoft.graph.models.OAuth2PermissionGrant;
-import com.microsoft.graph.models.ScopedRoleMembership;
 import com.microsoft.graph.models.Calendar;
-import com.microsoft.graph.models.CalendarGroup;
-import com.microsoft.graph.models.Event;
-import com.microsoft.graph.models.ContactFolder;
-import com.microsoft.graph.models.Contact;
 import com.microsoft.graph.models.InferenceClassification;
-import com.microsoft.graph.models.Group;
-import com.microsoft.graph.models.MailFolder;
-import com.microsoft.graph.models.Message;
 import com.microsoft.graph.models.OutlookUser;
-import com.microsoft.graph.models.Person;
 import com.microsoft.graph.models.Drive;
-import com.microsoft.graph.models.Site;
-import com.microsoft.graph.models.Extension;
-import com.microsoft.graph.models.AppConsentRequest;
-import com.microsoft.graph.models.Approval;
-import com.microsoft.graph.models.AccessReviewInstance;
-import com.microsoft.graph.models.AgreementAcceptance;
 import com.microsoft.graph.security.models.Security;
-import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
-import com.microsoft.graph.models.ManagedDevice;
-import com.microsoft.graph.models.ManagedAppRegistration;
-import com.microsoft.graph.models.WindowsInformationProtectionDeviceRegistration;
-import com.microsoft.graph.models.DeviceManagementTroubleshootingEvent;
-import com.microsoft.graph.models.MobileAppIntentAndState;
-import com.microsoft.graph.models.MobileAppTroubleshootingEvent;
-import com.microsoft.graph.models.Notification;
 import com.microsoft.graph.models.PlannerUser;
 import com.microsoft.graph.models.ItemInsights;
 import com.microsoft.graph.models.UserSettings;
 import com.microsoft.graph.models.Onenote;
 import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.Profile;
-import com.microsoft.graph.models.UserActivity;
-import com.microsoft.graph.models.Device;
-import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.graph.models.Presence;
 import com.microsoft.graph.models.Authentication;
 import com.microsoft.graph.models.Tasks;
-import com.microsoft.graph.models.Chat;
-import com.microsoft.graph.models.Team;
 import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.models.Todo;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.UsageRightCollectionPage;
-import com.microsoft.graph.requests.AppRoleAssignmentCollectionPage;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.LicenseDetailsCollectionPage;
 import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage;
 import com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage;
 import com.microsoft.graph.requests.CalendarGroupCollectionPage;
-import com.microsoft.graph.requests.CalendarCollectionPage;
-import com.microsoft.graph.requests.EventCollectionPage;
 import com.microsoft.graph.requests.ContactFolderCollectionPage;
 import com.microsoft.graph.requests.ContactCollectionPage;
-import com.microsoft.graph.requests.GroupCollectionPage;
 import com.microsoft.graph.requests.MailFolderCollectionPage;
 import com.microsoft.graph.requests.MessageCollectionPage;
 import com.microsoft.graph.requests.PersonCollectionPage;
-import com.microsoft.graph.requests.DriveCollectionPage;
 import com.microsoft.graph.requests.SiteCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 import com.microsoft.graph.requests.AppConsentRequestCollectionPage;
@@ -107,9 +68,7 @@ import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollecti
 import com.microsoft.graph.requests.MobileAppIntentAndStateCollectionPage;
 import com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage;
 import com.microsoft.graph.requests.NotificationCollectionPage;
-import com.microsoft.graph.requests.ProfilePhotoCollectionPage;
 import com.microsoft.graph.requests.UserActivityCollectionPage;
-import com.microsoft.graph.requests.DeviceCollectionPage;
 import com.microsoft.graph.requests.OnlineMeetingCollectionPage;
 import com.microsoft.graph.requests.ChatCollectionPage;
 import com.microsoft.graph.requests.TeamCollectionPage;
@@ -491,7 +450,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Extension Attributes.
-     * Contains extensionAttributes1-15 for the user. The individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. These extension attributes are also known as Exchange custom attributes 1-15. Returned only on $select.
+     * Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
      */
     @SerializedName(value = "onPremisesExtensionAttributes", alternate = {"OnPremisesExtensionAttributes"})
     @Expose
@@ -545,7 +504,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+     * true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      */
     @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
@@ -563,7 +522,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Other Mails.
-     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, and counting empty collections).
+     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
      */
     @SerializedName(value = "otherMails", alternate = {"OtherMails"})
     @Expose
@@ -644,7 +603,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Security Identifier.
-     * 
+     * Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
      */
     @SerializedName(value = "securityIdentifier", alternate = {"SecurityIdentifier"})
     @Expose
@@ -806,7 +765,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Name.
-     * The preferred name for the user. Returned only on $select.
+     * The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select.
      */
     @SerializedName(value = "preferredName", alternate = {"PreferredName"})
     @Expose
@@ -856,7 +815,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "cloudPCs", alternate = {"CloudPCs"})
     @Expose
 	@Nullable
-    public CloudPCCollectionPage cloudPCs;
+    public com.microsoft.graph.requests.CloudPCCollectionPage cloudPCs;
 
     /**
      * The Usage Rights.
@@ -865,7 +824,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "usageRights", alternate = {"UsageRights"})
     @Expose
 	@Nullable
-    public UsageRightCollectionPage usageRights;
+    public com.microsoft.graph.requests.UsageRightCollectionPage usageRights;
 
     /**
      * The Information Protection.
@@ -877,27 +836,34 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public InformationProtection informationProtection;
 
     /**
+     * The App Role Assigned Resources.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.ServicePrincipalCollectionPage appRoleAssignedResources;
+
+    /**
      * The App Role Assignments.
      * Represents the app roles a user has been granted for an application. Supports $expand.
      */
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
 	@Nullable
-    public AppRoleAssignmentCollectionPage appRoleAssignments;
+    public com.microsoft.graph.requests.AppRoleAssignmentCollectionPage appRoleAssignments;
 
     /**
      * The Created Objects.
      * Directory objects that were created by the user. Read-only. Nullable.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage createdObjects;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage createdObjects;
 
     /**
      * The Direct Reports.
      * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage directReports;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage directReports;
 
     /**
      * The License Details.
@@ -906,7 +872,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "licenseDetails", alternate = {"LicenseDetails"})
     @Expose
 	@Nullable
-    public LicenseDetailsCollectionPage licenseDetails;
+    public com.microsoft.graph.requests.LicenseDetailsCollectionPage licenseDetails;
 
     /**
      * The Manager.
@@ -922,35 +888,35 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage memberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Oauth2Permission Grants.
      * 
      */
 	@Nullable
-    public OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
+    public com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
 
     /**
      * The Owned Devices.
      * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage ownedDevices;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedDevices;
 
     /**
      * The Owned Objects.
      * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage ownedObjects;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedObjects;
 
     /**
      * The Registered Devices.
      * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage registeredDevices;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage registeredDevices;
 
     /**
      * The Scoped Role Member Of.
@@ -959,21 +925,21 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "scopedRoleMemberOf", alternate = {"ScopedRoleMemberOf"})
     @Expose
 	@Nullable
-    public ScopedRoleMembershipCollectionPage scopedRoleMemberOf;
+    public com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage scopedRoleMemberOf;
 
     /**
      * The Transitive Member Of.
-     * 
+     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage transitiveMemberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
 
     /**
      * The Transitive Reports.
      * The transitive reports for a user. Read-only.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage transitiveReports;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveReports;
 
     /**
      * The Calendar.
@@ -991,7 +957,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "calendarGroups", alternate = {"CalendarGroups"})
     @Expose
 	@Nullable
-    public CalendarGroupCollectionPage calendarGroups;
+    public com.microsoft.graph.requests.CalendarGroupCollectionPage calendarGroups;
 
     /**
      * The Calendars.
@@ -1000,7 +966,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "calendars", alternate = {"Calendars"})
     @Expose
 	@Nullable
-    public CalendarCollectionPage calendars;
+    public com.microsoft.graph.requests.CalendarCollectionPage calendars;
 
     /**
      * The Calendar View.
@@ -1009,7 +975,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
 	@Nullable
-    public EventCollectionPage calendarView;
+    public com.microsoft.graph.requests.EventCollectionPage calendarView;
 
     /**
      * The Contact Folders.
@@ -1018,7 +984,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "contactFolders", alternate = {"ContactFolders"})
     @Expose
 	@Nullable
-    public ContactFolderCollectionPage contactFolders;
+    public com.microsoft.graph.requests.ContactFolderCollectionPage contactFolders;
 
     /**
      * The Contacts.
@@ -1027,7 +993,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "contacts", alternate = {"Contacts"})
     @Expose
 	@Nullable
-    public ContactCollectionPage contacts;
+    public com.microsoft.graph.requests.ContactCollectionPage contacts;
 
     /**
      * The Events.
@@ -1036,7 +1002,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose
 	@Nullable
-    public EventCollectionPage events;
+    public com.microsoft.graph.requests.EventCollectionPage events;
 
     /**
      * The Inference Classification.
@@ -1054,7 +1020,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "joinedGroups", alternate = {"JoinedGroups"})
     @Expose
 	@Nullable
-    public GroupCollectionPage joinedGroups;
+    public com.microsoft.graph.requests.GroupCollectionPage joinedGroups;
 
     /**
      * The Mail Folders.
@@ -1063,7 +1029,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "mailFolders", alternate = {"MailFolders"})
     @Expose
 	@Nullable
-    public MailFolderCollectionPage mailFolders;
+    public com.microsoft.graph.requests.MailFolderCollectionPage mailFolders;
 
     /**
      * The Messages.
@@ -1072,7 +1038,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
 	@Nullable
-    public MessageCollectionPage messages;
+    public com.microsoft.graph.requests.MessageCollectionPage messages;
 
     /**
      * The Outlook.
@@ -1090,7 +1056,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "people", alternate = {"People"})
     @Expose
 	@Nullable
-    public PersonCollectionPage people;
+    public com.microsoft.graph.requests.PersonCollectionPage people;
 
     /**
      * The Drive.
@@ -1108,23 +1074,23 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "drives", alternate = {"Drives"})
     @Expose
 	@Nullable
-    public DriveCollectionPage drives;
+    public com.microsoft.graph.requests.DriveCollectionPage drives;
 
     /**
      * The Followed Sites.
      * 
      */
 	@Nullable
-    public SiteCollectionPage followedSites;
+    public com.microsoft.graph.requests.SiteCollectionPage followedSites;
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the user. Nullable.
+     * The collection of open extensions defined for the user. Supports $expand. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
 	@Nullable
-    public ExtensionCollectionPage extensions;
+    public com.microsoft.graph.requests.ExtensionCollectionPage extensions;
 
     /**
      * The App Consent Requests For Approval.
@@ -1133,7 +1099,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "appConsentRequestsForApproval", alternate = {"AppConsentRequestsForApproval"})
     @Expose
 	@Nullable
-    public AppConsentRequestCollectionPage appConsentRequestsForApproval;
+    public com.microsoft.graph.requests.AppConsentRequestCollectionPage appConsentRequestsForApproval;
 
     /**
      * The Approvals.
@@ -1142,7 +1108,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "approvals", alternate = {"Approvals"})
     @Expose
 	@Nullable
-    public ApprovalCollectionPage approvals;
+    public com.microsoft.graph.requests.ApprovalCollectionPage approvals;
 
     /**
      * The Pending Access Review Instances.
@@ -1151,14 +1117,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "pendingAccessReviewInstances", alternate = {"PendingAccessReviewInstances"})
     @Expose
 	@Nullable
-    public AccessReviewInstanceCollectionPage pendingAccessReviewInstances;
+    public com.microsoft.graph.requests.AccessReviewInstanceCollectionPage pendingAccessReviewInstances;
 
     /**
      * The Agreement Acceptances.
      * The user's terms of use acceptance statuses. Read-only. Nullable.
      */
 	@Nullable
-    public AgreementAcceptanceCollectionPage agreementAcceptances;
+    public com.microsoft.graph.requests.AgreementAcceptanceCollectionPage agreementAcceptances;
 
     /**
      * The Security.
@@ -1176,7 +1142,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "deviceEnrollmentConfigurations", alternate = {"DeviceEnrollmentConfigurations"})
     @Expose
 	@Nullable
-    public DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
+    public com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
 
     /**
      * The Managed Devices.
@@ -1185,21 +1151,21 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "managedDevices", alternate = {"ManagedDevices"})
     @Expose
 	@Nullable
-    public ManagedDeviceCollectionPage managedDevices;
+    public com.microsoft.graph.requests.ManagedDeviceCollectionPage managedDevices;
 
     /**
      * The Managed App Registrations.
      * Zero or more managed app registrations that belong to the user.
      */
 	@Nullable
-    public ManagedAppRegistrationCollectionPage managedAppRegistrations;
+    public com.microsoft.graph.requests.ManagedAppRegistrationCollectionPage managedAppRegistrations;
 
     /**
      * The Windows Information Protection Device Registrations.
      * Zero or more WIP device registrations that belong to the user.
      */
 	@Nullable
-    public WindowsInformationProtectionDeviceRegistrationCollectionPage windowsInformationProtectionDeviceRegistrations;
+    public com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionPage windowsInformationProtectionDeviceRegistrations;
 
     /**
      * The Device Management Troubleshooting Events.
@@ -1208,7 +1174,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "deviceManagementTroubleshootingEvents", alternate = {"DeviceManagementTroubleshootingEvents"})
     @Expose
 	@Nullable
-    public DeviceManagementTroubleshootingEventCollectionPage deviceManagementTroubleshootingEvents;
+    public com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionPage deviceManagementTroubleshootingEvents;
 
     /**
      * The Mobile App Intent And States.
@@ -1217,7 +1183,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "mobileAppIntentAndStates", alternate = {"MobileAppIntentAndStates"})
     @Expose
 	@Nullable
-    public MobileAppIntentAndStateCollectionPage mobileAppIntentAndStates;
+    public com.microsoft.graph.requests.MobileAppIntentAndStateCollectionPage mobileAppIntentAndStates;
 
     /**
      * The Mobile App Troubleshooting Events.
@@ -1226,7 +1192,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "mobileAppTroubleshootingEvents", alternate = {"MobileAppTroubleshootingEvents"})
     @Expose
 	@Nullable
-    public MobileAppTroubleshootingEventCollectionPage mobileAppTroubleshootingEvents;
+    public com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage mobileAppTroubleshootingEvents;
 
     /**
      * The Notifications.
@@ -1235,7 +1201,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "notifications", alternate = {"Notifications"})
     @Expose
 	@Nullable
-    public NotificationCollectionPage notifications;
+    public com.microsoft.graph.requests.NotificationCollectionPage notifications;
 
     /**
      * The Planner.
@@ -1289,7 +1255,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "photos", alternate = {"Photos"})
     @Expose
 	@Nullable
-    public ProfilePhotoCollectionPage photos;
+    public com.microsoft.graph.requests.ProfilePhotoCollectionPage photos;
 
     /**
      * The Profile.
@@ -1307,7 +1273,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
 	@Nullable
-    public UserActivityCollectionPage activities;
+    public com.microsoft.graph.requests.UserActivityCollectionPage activities;
 
     /**
      * The Devices.
@@ -1316,7 +1282,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "devices", alternate = {"Devices"})
     @Expose
 	@Nullable
-    public DeviceCollectionPage devices;
+    public com.microsoft.graph.requests.DeviceCollectionPage devices;
 
     /**
      * The Online Meetings.
@@ -1325,7 +1291,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "onlineMeetings", alternate = {"OnlineMeetings"})
     @Expose
 	@Nullable
-    public OnlineMeetingCollectionPage onlineMeetings;
+    public com.microsoft.graph.requests.OnlineMeetingCollectionPage onlineMeetings;
 
     /**
      * The Presence.
@@ -1361,14 +1327,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "chats", alternate = {"Chats"})
     @Expose
 	@Nullable
-    public ChatCollectionPage chats;
+    public com.microsoft.graph.requests.ChatCollectionPage chats;
 
     /**
      * The Joined Teams.
      * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
      */
 	@Nullable
-    public TeamCollectionPage joinedTeams;
+    public com.microsoft.graph.requests.TeamCollectionPage joinedTeams;
 
     /**
      * The Teamwork.
@@ -1399,183 +1365,187 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("cloudPCs")) {
-            cloudPCs = serializer.deserializeObject(json.get("cloudPCs"), CloudPCCollectionPage.class);
+            cloudPCs = serializer.deserializeObject(json.get("cloudPCs"), com.microsoft.graph.requests.CloudPCCollectionPage.class);
         }
 
         if (json.has("usageRights")) {
-            usageRights = serializer.deserializeObject(json.get("usageRights"), UsageRightCollectionPage.class);
+            usageRights = serializer.deserializeObject(json.get("usageRights"), com.microsoft.graph.requests.UsageRightCollectionPage.class);
+        }
+
+        if (json.has("appRoleAssignedResources")) {
+            appRoleAssignedResources = serializer.deserializeObject(json.get("appRoleAssignedResources"), com.microsoft.graph.requests.ServicePrincipalCollectionPage.class);
         }
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments"), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments"), com.microsoft.graph.requests.AppRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("createdObjects")) {
-            createdObjects = serializer.deserializeObject(json.get("createdObjects"), DirectoryObjectCollectionPage.class);
+            createdObjects = serializer.deserializeObject(json.get("createdObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("directReports")) {
-            directReports = serializer.deserializeObject(json.get("directReports"), DirectoryObjectCollectionPage.class);
+            directReports = serializer.deserializeObject(json.get("directReports"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("licenseDetails")) {
-            licenseDetails = serializer.deserializeObject(json.get("licenseDetails"), LicenseDetailsCollectionPage.class);
+            licenseDetails = serializer.deserializeObject(json.get("licenseDetails"), com.microsoft.graph.requests.LicenseDetailsCollectionPage.class);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf"), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("oauth2PermissionGrants")) {
-            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants"), OAuth2PermissionGrantCollectionPage.class);
+            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants"), com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage.class);
         }
 
         if (json.has("ownedDevices")) {
-            ownedDevices = serializer.deserializeObject(json.get("ownedDevices"), DirectoryObjectCollectionPage.class);
+            ownedDevices = serializer.deserializeObject(json.get("ownedDevices"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("ownedObjects")) {
-            ownedObjects = serializer.deserializeObject(json.get("ownedObjects"), DirectoryObjectCollectionPage.class);
+            ownedObjects = serializer.deserializeObject(json.get("ownedObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("registeredDevices")) {
-            registeredDevices = serializer.deserializeObject(json.get("registeredDevices"), DirectoryObjectCollectionPage.class);
+            registeredDevices = serializer.deserializeObject(json.get("registeredDevices"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("scopedRoleMemberOf")) {
-            scopedRoleMemberOf = serializer.deserializeObject(json.get("scopedRoleMemberOf"), ScopedRoleMembershipCollectionPage.class);
+            scopedRoleMemberOf = serializer.deserializeObject(json.get("scopedRoleMemberOf"), com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("transitiveReports")) {
-            transitiveReports = serializer.deserializeObject(json.get("transitiveReports"), DirectoryObjectCollectionPage.class);
+            transitiveReports = serializer.deserializeObject(json.get("transitiveReports"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("calendarGroups")) {
-            calendarGroups = serializer.deserializeObject(json.get("calendarGroups"), CalendarGroupCollectionPage.class);
+            calendarGroups = serializer.deserializeObject(json.get("calendarGroups"), com.microsoft.graph.requests.CalendarGroupCollectionPage.class);
         }
 
         if (json.has("calendars")) {
-            calendars = serializer.deserializeObject(json.get("calendars"), CalendarCollectionPage.class);
+            calendars = serializer.deserializeObject(json.get("calendars"), com.microsoft.graph.requests.CalendarCollectionPage.class);
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView"), EventCollectionPage.class);
+            calendarView = serializer.deserializeObject(json.get("calendarView"), com.microsoft.graph.requests.EventCollectionPage.class);
         }
 
         if (json.has("contactFolders")) {
-            contactFolders = serializer.deserializeObject(json.get("contactFolders"), ContactFolderCollectionPage.class);
+            contactFolders = serializer.deserializeObject(json.get("contactFolders"), com.microsoft.graph.requests.ContactFolderCollectionPage.class);
         }
 
         if (json.has("contacts")) {
-            contacts = serializer.deserializeObject(json.get("contacts"), ContactCollectionPage.class);
+            contacts = serializer.deserializeObject(json.get("contacts"), com.microsoft.graph.requests.ContactCollectionPage.class);
         }
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events"), EventCollectionPage.class);
+            events = serializer.deserializeObject(json.get("events"), com.microsoft.graph.requests.EventCollectionPage.class);
         }
 
         if (json.has("joinedGroups")) {
-            joinedGroups = serializer.deserializeObject(json.get("joinedGroups"), GroupCollectionPage.class);
+            joinedGroups = serializer.deserializeObject(json.get("joinedGroups"), com.microsoft.graph.requests.GroupCollectionPage.class);
         }
 
         if (json.has("mailFolders")) {
-            mailFolders = serializer.deserializeObject(json.get("mailFolders"), MailFolderCollectionPage.class);
+            mailFolders = serializer.deserializeObject(json.get("mailFolders"), com.microsoft.graph.requests.MailFolderCollectionPage.class);
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages"), MessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages"), com.microsoft.graph.requests.MessageCollectionPage.class);
         }
 
         if (json.has("people")) {
-            people = serializer.deserializeObject(json.get("people"), PersonCollectionPage.class);
+            people = serializer.deserializeObject(json.get("people"), com.microsoft.graph.requests.PersonCollectionPage.class);
         }
 
         if (json.has("drives")) {
-            drives = serializer.deserializeObject(json.get("drives"), DriveCollectionPage.class);
+            drives = serializer.deserializeObject(json.get("drives"), com.microsoft.graph.requests.DriveCollectionPage.class);
         }
 
         if (json.has("followedSites")) {
-            followedSites = serializer.deserializeObject(json.get("followedSites"), SiteCollectionPage.class);
+            followedSites = serializer.deserializeObject(json.get("followedSites"), com.microsoft.graph.requests.SiteCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), com.microsoft.graph.requests.ExtensionCollectionPage.class);
         }
 
         if (json.has("appConsentRequestsForApproval")) {
-            appConsentRequestsForApproval = serializer.deserializeObject(json.get("appConsentRequestsForApproval"), AppConsentRequestCollectionPage.class);
+            appConsentRequestsForApproval = serializer.deserializeObject(json.get("appConsentRequestsForApproval"), com.microsoft.graph.requests.AppConsentRequestCollectionPage.class);
         }
 
         if (json.has("approvals")) {
-            approvals = serializer.deserializeObject(json.get("approvals"), ApprovalCollectionPage.class);
+            approvals = serializer.deserializeObject(json.get("approvals"), com.microsoft.graph.requests.ApprovalCollectionPage.class);
         }
 
         if (json.has("pendingAccessReviewInstances")) {
-            pendingAccessReviewInstances = serializer.deserializeObject(json.get("pendingAccessReviewInstances"), AccessReviewInstanceCollectionPage.class);
+            pendingAccessReviewInstances = serializer.deserializeObject(json.get("pendingAccessReviewInstances"), com.microsoft.graph.requests.AccessReviewInstanceCollectionPage.class);
         }
 
         if (json.has("agreementAcceptances")) {
-            agreementAcceptances = serializer.deserializeObject(json.get("agreementAcceptances"), AgreementAcceptanceCollectionPage.class);
+            agreementAcceptances = serializer.deserializeObject(json.get("agreementAcceptances"), com.microsoft.graph.requests.AgreementAcceptanceCollectionPage.class);
         }
 
         if (json.has("deviceEnrollmentConfigurations")) {
-            deviceEnrollmentConfigurations = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations"), DeviceEnrollmentConfigurationCollectionPage.class);
+            deviceEnrollmentConfigurations = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations"), com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionPage.class);
         }
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices"), ManagedDeviceCollectionPage.class);
+            managedDevices = serializer.deserializeObject(json.get("managedDevices"), com.microsoft.graph.requests.ManagedDeviceCollectionPage.class);
         }
 
         if (json.has("managedAppRegistrations")) {
-            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations"), ManagedAppRegistrationCollectionPage.class);
+            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations"), com.microsoft.graph.requests.ManagedAppRegistrationCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionDeviceRegistrations")) {
-            windowsInformationProtectionDeviceRegistrations = serializer.deserializeObject(json.get("windowsInformationProtectionDeviceRegistrations"), WindowsInformationProtectionDeviceRegistrationCollectionPage.class);
+            windowsInformationProtectionDeviceRegistrations = serializer.deserializeObject(json.get("windowsInformationProtectionDeviceRegistrations"), com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionPage.class);
         }
 
         if (json.has("deviceManagementTroubleshootingEvents")) {
-            deviceManagementTroubleshootingEvents = serializer.deserializeObject(json.get("deviceManagementTroubleshootingEvents"), DeviceManagementTroubleshootingEventCollectionPage.class);
+            deviceManagementTroubleshootingEvents = serializer.deserializeObject(json.get("deviceManagementTroubleshootingEvents"), com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionPage.class);
         }
 
         if (json.has("mobileAppIntentAndStates")) {
-            mobileAppIntentAndStates = serializer.deserializeObject(json.get("mobileAppIntentAndStates"), MobileAppIntentAndStateCollectionPage.class);
+            mobileAppIntentAndStates = serializer.deserializeObject(json.get("mobileAppIntentAndStates"), com.microsoft.graph.requests.MobileAppIntentAndStateCollectionPage.class);
         }
 
         if (json.has("mobileAppTroubleshootingEvents")) {
-            mobileAppTroubleshootingEvents = serializer.deserializeObject(json.get("mobileAppTroubleshootingEvents"), MobileAppTroubleshootingEventCollectionPage.class);
+            mobileAppTroubleshootingEvents = serializer.deserializeObject(json.get("mobileAppTroubleshootingEvents"), com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage.class);
         }
 
         if (json.has("notifications")) {
-            notifications = serializer.deserializeObject(json.get("notifications"), NotificationCollectionPage.class);
+            notifications = serializer.deserializeObject(json.get("notifications"), com.microsoft.graph.requests.NotificationCollectionPage.class);
         }
 
         if (json.has("photos")) {
-            photos = serializer.deserializeObject(json.get("photos"), ProfilePhotoCollectionPage.class);
+            photos = serializer.deserializeObject(json.get("photos"), com.microsoft.graph.requests.ProfilePhotoCollectionPage.class);
         }
 
         if (json.has("activities")) {
-            activities = serializer.deserializeObject(json.get("activities"), UserActivityCollectionPage.class);
+            activities = serializer.deserializeObject(json.get("activities"), com.microsoft.graph.requests.UserActivityCollectionPage.class);
         }
 
         if (json.has("devices")) {
-            devices = serializer.deserializeObject(json.get("devices"), DeviceCollectionPage.class);
+            devices = serializer.deserializeObject(json.get("devices"), com.microsoft.graph.requests.DeviceCollectionPage.class);
         }
 
         if (json.has("onlineMeetings")) {
-            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings"), OnlineMeetingCollectionPage.class);
+            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings"), com.microsoft.graph.requests.OnlineMeetingCollectionPage.class);
         }
 
         if (json.has("chats")) {
-            chats = serializer.deserializeObject(json.get("chats"), ChatCollectionPage.class);
+            chats = serializer.deserializeObject(json.get("chats"), com.microsoft.graph.requests.ChatCollectionPage.class);
         }
 
         if (json.has("joinedTeams")) {
-            joinedTeams = serializer.deserializeObject(json.get("joinedTeams"), TeamCollectionPage.class);
+            joinedTeams = serializer.deserializeObject(json.get("joinedTeams"), com.microsoft.graph.requests.TeamCollectionPage.class);
         }
     }
 }

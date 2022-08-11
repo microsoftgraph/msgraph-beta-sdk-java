@@ -128,7 +128,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose

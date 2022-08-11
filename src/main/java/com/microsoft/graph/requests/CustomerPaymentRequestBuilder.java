@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CustomerPayment;
-import com.microsoft.graph.requests.CustomerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class CustomerPaymentRequestBuilder extends BaseRequestBuilder<CustomerPa
      * @return the CustomerRequestBuilder instance
      */
     @Nonnull
-    public CustomerRequestBuilder customer() {
-        return new CustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customer"), getClient(), null);
+    public com.microsoft.graph.requests.CustomerRequestBuilder customer() {
+        return new com.microsoft.graph.requests.CustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customer"), getClient(), null);
     }
 }

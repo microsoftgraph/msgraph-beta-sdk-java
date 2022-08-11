@@ -11,12 +11,9 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.ediscovery.models.DataSourceScopes;
-import com.microsoft.graph.ediscovery.models.DataSource;
 import com.microsoft.graph.ediscovery.models.AddToReviewSetOperation;
 import com.microsoft.graph.ediscovery.models.EstimateStatisticsOperation;
-import com.microsoft.graph.ediscovery.models.NoncustodialDataSource;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.ediscovery.requests.DataSourceCollectionPage;
 import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionPage;
 
 
@@ -113,7 +110,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "additionalSources", alternate = {"AdditionalSources"})
     @Expose
 	@Nullable
-    public DataSourceCollectionPage additionalSources;
+    public com.microsoft.graph.ediscovery.requests.DataSourceCollectionPage additionalSources;
 
     /**
      * The Add To Review Set Operation.
@@ -129,7 +126,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
      * Custodian sources that are included in the sourceCollection.
      */
 	@Nullable
-    public DataSourceCollectionPage custodianSources;
+    public com.microsoft.graph.ediscovery.requests.DataSourceCollectionPage custodianSources;
 
     /**
      * The Last Estimate Statistics Operation.
@@ -145,7 +142,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
      * noncustodialDataSource sources that are included in the sourceCollection
      */
 	@Nullable
-    public NoncustodialDataSourceCollectionPage noncustodialSources;
+    public com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionPage noncustodialSources;
 
 
     /**
@@ -158,15 +155,15 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
 
         if (json.has("additionalSources")) {
-            additionalSources = serializer.deserializeObject(json.get("additionalSources"), DataSourceCollectionPage.class);
+            additionalSources = serializer.deserializeObject(json.get("additionalSources"), com.microsoft.graph.ediscovery.requests.DataSourceCollectionPage.class);
         }
 
         if (json.has("custodianSources")) {
-            custodianSources = serializer.deserializeObject(json.get("custodianSources"), DataSourceCollectionPage.class);
+            custodianSources = serializer.deserializeObject(json.get("custodianSources"), com.microsoft.graph.ediscovery.requests.DataSourceCollectionPage.class);
         }
 
         if (json.has("noncustodialSources")) {
-            noncustodialSources = serializer.deserializeObject(json.get("noncustodialSources"), NoncustodialDataSourceCollectionPage.class);
+            noncustodialSources = serializer.deserializeObject(json.get("noncustodialSources"), com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionPage.class);
         }
     }
 }

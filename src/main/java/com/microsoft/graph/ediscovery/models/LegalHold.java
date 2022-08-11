@@ -11,9 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.ediscovery.models.LegalHoldStatus;
-import com.microsoft.graph.ediscovery.models.SiteSource;
-import com.microsoft.graph.ediscovery.models.UnifiedGroupSource;
-import com.microsoft.graph.ediscovery.models.UserSource;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.ediscovery.requests.SiteSourceCollectionPage;
 import com.microsoft.graph.ediscovery.requests.UnifiedGroupSourceCollectionPage;
@@ -131,7 +128,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
     @SerializedName(value = "siteSources", alternate = {"SiteSources"})
     @Expose
 	@Nullable
-    public SiteSourceCollectionPage siteSources;
+    public com.microsoft.graph.ediscovery.requests.SiteSourceCollectionPage siteSources;
 
     /**
      * The Unified Group Sources.
@@ -140,7 +137,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
     @SerializedName(value = "unifiedGroupSources", alternate = {"UnifiedGroupSources"})
     @Expose
 	@Nullable
-    public UnifiedGroupSourceCollectionPage unifiedGroupSources;
+    public com.microsoft.graph.ediscovery.requests.UnifiedGroupSourceCollectionPage unifiedGroupSources;
 
     /**
      * The User Sources.
@@ -149,7 +146,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userSources", alternate = {"UserSources"})
     @Expose
 	@Nullable
-    public UserSourceCollectionPage userSources;
+    public com.microsoft.graph.ediscovery.requests.UserSourceCollectionPage userSources;
 
 
     /**
@@ -162,15 +159,15 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
 
         if (json.has("siteSources")) {
-            siteSources = serializer.deserializeObject(json.get("siteSources"), SiteSourceCollectionPage.class);
+            siteSources = serializer.deserializeObject(json.get("siteSources"), com.microsoft.graph.ediscovery.requests.SiteSourceCollectionPage.class);
         }
 
         if (json.has("unifiedGroupSources")) {
-            unifiedGroupSources = serializer.deserializeObject(json.get("unifiedGroupSources"), UnifiedGroupSourceCollectionPage.class);
+            unifiedGroupSources = serializer.deserializeObject(json.get("unifiedGroupSources"), com.microsoft.graph.ediscovery.requests.UnifiedGroupSourceCollectionPage.class);
         }
 
         if (json.has("userSources")) {
-            userSources = serializer.deserializeObject(json.get("userSources"), UserSourceCollectionPage.class);
+            userSources = serializer.deserializeObject(json.get("userSources"), com.microsoft.graph.ediscovery.requests.UserSourceCollectionPage.class);
         }
     }
 }

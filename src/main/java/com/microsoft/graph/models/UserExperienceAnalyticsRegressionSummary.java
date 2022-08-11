@@ -9,9 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.UserExperienceAnalyticsMetric;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -35,7 +33,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
     @SerializedName(value = "manufacturerRegression", alternate = {"ManufacturerRegression"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsMetricCollectionPage manufacturerRegression;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionPage manufacturerRegression;
 
     /**
      * The Model Regression.
@@ -44,7 +42,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
     @SerializedName(value = "modelRegression", alternate = {"ModelRegression"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsMetricCollectionPage modelRegression;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionPage modelRegression;
 
     /**
      * The Operating System Regression.
@@ -53,7 +51,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
     @SerializedName(value = "operatingSystemRegression", alternate = {"OperatingSystemRegression"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsMetricCollectionPage operatingSystemRegression;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionPage operatingSystemRegression;
 
 
     /**
@@ -66,15 +64,15 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
 
 
         if (json.has("manufacturerRegression")) {
-            manufacturerRegression = serializer.deserializeObject(json.get("manufacturerRegression"), UserExperienceAnalyticsMetricCollectionPage.class);
+            manufacturerRegression = serializer.deserializeObject(json.get("manufacturerRegression"), com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionPage.class);
         }
 
         if (json.has("modelRegression")) {
-            modelRegression = serializer.deserializeObject(json.get("modelRegression"), UserExperienceAnalyticsMetricCollectionPage.class);
+            modelRegression = serializer.deserializeObject(json.get("modelRegression"), com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionPage.class);
         }
 
         if (json.has("operatingSystemRegression")) {
-            operatingSystemRegression = serializer.deserializeObject(json.get("operatingSystemRegression"), UserExperienceAnalyticsMetricCollectionPage.class);
+            operatingSystemRegression = serializer.deserializeObject(json.get("operatingSystemRegression"), com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionPage.class);
         }
     }
 }

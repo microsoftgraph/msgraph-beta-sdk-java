@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ConditionalAccessRoot;
-import com.microsoft.graph.requests.AuthenticationContextClassReferenceCollectionRequestBuilder;
-import com.microsoft.graph.requests.AuthenticationContextClassReferenceRequestBuilder;
-import com.microsoft.graph.requests.NamedLocationCollectionRequestBuilder;
-import com.microsoft.graph.requests.NamedLocationRequestBuilder;
-import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +62,8 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<Cond
      * @return the collection request builder
      */
     @Nonnull
-    public AuthenticationContextClassReferenceCollectionRequestBuilder authenticationContextClassReferences() {
-        return new AuthenticationContextClassReferenceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationContextClassReferences"), getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationContextClassReferenceCollectionRequestBuilder authenticationContextClassReferences() {
+        return new com.microsoft.graph.requests.AuthenticationContextClassReferenceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationContextClassReferences"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<Cond
      * @param id the item identifier
      */
     @Nonnull
-    public AuthenticationContextClassReferenceRequestBuilder authenticationContextClassReferences(@Nonnull final String id) {
-        return new AuthenticationContextClassReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationContextClassReferences") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationContextClassReferenceRequestBuilder authenticationContextClassReferences(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuthenticationContextClassReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationContextClassReferences") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the NamedLocation collection
@@ -88,8 +82,8 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<Cond
      * @return the collection request builder
      */
     @Nonnull
-    public NamedLocationCollectionRequestBuilder namedLocations() {
-        return new NamedLocationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations"), getClient(), null);
+    public com.microsoft.graph.requests.NamedLocationCollectionRequestBuilder namedLocations() {
+        return new com.microsoft.graph.requests.NamedLocationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations"), getClient(), null);
     }
 
     /**
@@ -99,8 +93,8 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<Cond
      * @param id the item identifier
      */
     @Nonnull
-    public NamedLocationRequestBuilder namedLocations(@Nonnull final String id) {
-        return new NamedLocationRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.NamedLocationRequestBuilder namedLocations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.NamedLocationRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ConditionalAccessPolicy collection
@@ -108,8 +102,8 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<Cond
      * @return the collection request builder
      */
     @Nonnull
-    public ConditionalAccessPolicyCollectionRequestBuilder policies() {
-        return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
+    public com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder policies() {
+        return new com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
     }
 
     /**
@@ -119,7 +113,7 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<Cond
      * @param id the item identifier
      */
     @Nonnull
-    public ConditionalAccessPolicyRequestBuilder policies(@Nonnull final String id) {
-        return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder policies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
     }
 }

@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.ServicePrincipal;
+import com.microsoft.graph.models.Application;
 import com.microsoft.graph.models.Endpoint;
 import com.microsoft.graph.models.DirectoryObject;
 import java.util.Arrays;
@@ -39,7 +39,7 @@ import com.microsoft.graph.models.DirectoryObjectGetUserOwnedObjectsParameterSet
 public class EndpointCollectionRequestBuilder extends BaseCollectionRequestBuilder<Endpoint, EndpointRequestBuilder, EndpointCollectionResponse, EndpointCollectionPage, EndpointCollectionRequest> {
 
     /**
-     * The request builder for this collection of ServicePrincipal
+     * The request builder for this collection of Application
      *
      * @param requestUrl     the request URL
      * @param client         the service client

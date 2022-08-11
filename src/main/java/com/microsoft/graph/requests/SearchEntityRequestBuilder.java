@@ -10,12 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SearchEntity;
 import com.microsoft.graph.models.SearchRequest;
 import com.microsoft.graph.models.SearchResponse;
-import com.microsoft.graph.search.requests.AcronymCollectionRequestBuilder;
-import com.microsoft.graph.search.requests.AcronymRequestBuilder;
-import com.microsoft.graph.search.requests.BookmarkCollectionRequestBuilder;
-import com.microsoft.graph.search.requests.BookmarkRequestBuilder;
-import com.microsoft.graph.search.requests.QnaCollectionRequestBuilder;
-import com.microsoft.graph.search.requests.QnaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -71,8 +65,8 @@ public class SearchEntityRequestBuilder extends BaseRequestBuilder<SearchEntity>
      * @return the collection request builder
      */
     @Nonnull
-    public AcronymCollectionRequestBuilder acronyms() {
-        return new AcronymCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acronyms"), getClient(), null);
+    public com.microsoft.graph.search.requests.AcronymCollectionRequestBuilder acronyms() {
+        return new com.microsoft.graph.search.requests.AcronymCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acronyms"), getClient(), null);
     }
 
     /**
@@ -82,8 +76,8 @@ public class SearchEntityRequestBuilder extends BaseRequestBuilder<SearchEntity>
      * @param id the item identifier
      */
     @Nonnull
-    public AcronymRequestBuilder acronyms(@Nonnull final String id) {
-        return new AcronymRequestBuilder(getRequestUrlWithAdditionalSegment("acronyms") + "/" + id, getClient(), null);
+    public com.microsoft.graph.search.requests.AcronymRequestBuilder acronyms(@Nonnull final String id) {
+        return new com.microsoft.graph.search.requests.AcronymRequestBuilder(getRequestUrlWithAdditionalSegment("acronyms") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Bookmark collection
@@ -91,8 +85,8 @@ public class SearchEntityRequestBuilder extends BaseRequestBuilder<SearchEntity>
      * @return the collection request builder
      */
     @Nonnull
-    public BookmarkCollectionRequestBuilder bookmarks() {
-        return new BookmarkCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("bookmarks"), getClient(), null);
+    public com.microsoft.graph.search.requests.BookmarkCollectionRequestBuilder bookmarks() {
+        return new com.microsoft.graph.search.requests.BookmarkCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("bookmarks"), getClient(), null);
     }
 
     /**
@@ -102,8 +96,8 @@ public class SearchEntityRequestBuilder extends BaseRequestBuilder<SearchEntity>
      * @param id the item identifier
      */
     @Nonnull
-    public BookmarkRequestBuilder bookmarks(@Nonnull final String id) {
-        return new BookmarkRequestBuilder(getRequestUrlWithAdditionalSegment("bookmarks") + "/" + id, getClient(), null);
+    public com.microsoft.graph.search.requests.BookmarkRequestBuilder bookmarks(@Nonnull final String id) {
+        return new com.microsoft.graph.search.requests.BookmarkRequestBuilder(getRequestUrlWithAdditionalSegment("bookmarks") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Qna collection
@@ -111,8 +105,8 @@ public class SearchEntityRequestBuilder extends BaseRequestBuilder<SearchEntity>
      * @return the collection request builder
      */
     @Nonnull
-    public QnaCollectionRequestBuilder qnas() {
-        return new QnaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("qnas"), getClient(), null);
+    public com.microsoft.graph.search.requests.QnaCollectionRequestBuilder qnas() {
+        return new com.microsoft.graph.search.requests.QnaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("qnas"), getClient(), null);
     }
 
     /**
@@ -122,8 +116,8 @@ public class SearchEntityRequestBuilder extends BaseRequestBuilder<SearchEntity>
      * @param id the item identifier
      */
     @Nonnull
-    public QnaRequestBuilder qnas(@Nonnull final String id) {
-        return new QnaRequestBuilder(getRequestUrlWithAdditionalSegment("qnas") + "/" + id, getClient(), null);
+    public com.microsoft.graph.search.requests.QnaRequestBuilder qnas(@Nonnull final String id) {
+        return new com.microsoft.graph.search.requests.QnaRequestBuilder(getRequestUrlWithAdditionalSegment("qnas") + "/" + id, getClient(), null);
     }
 
     /**

@@ -9,10 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicy;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicyAssignment;
-import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -69,8 +65,8 @@ public class DeviceManagementConfigurationPolicyRequestBuilder extends BaseReque
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementConfigurationPolicyAssignmentCollectionRequestBuilder assignments() {
-        return new DeviceManagementConfigurationPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -80,8 +76,8 @@ public class DeviceManagementConfigurationPolicyRequestBuilder extends BaseReque
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementConfigurationPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new DeviceManagementConfigurationPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceManagementConfigurationSetting collection
@@ -89,8 +85,8 @@ public class DeviceManagementConfigurationPolicyRequestBuilder extends BaseReque
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementConfigurationSettingCollectionRequestBuilder settings() {
-        return new DeviceManagementConfigurationSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionRequestBuilder settings() {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 
     /**
@@ -100,8 +96,8 @@ public class DeviceManagementConfigurationPolicyRequestBuilder extends BaseReque
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementConfigurationSettingRequestBuilder settings(@Nonnull final String id) {
-        return new DeviceManagementConfigurationSettingRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingRequestBuilder settings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
     }
 
     /**

@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DepOnboardingSetting;
-import com.microsoft.graph.requests.DepIOSEnrollmentProfileWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.DepMacOSEnrollmentProfileWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.EnrollmentProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.EnrollmentProfileRequestBuilder;
-import com.microsoft.graph.requests.ImportedAppleDeviceIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.ImportedAppleDeviceIdentityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +64,8 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder<DepOn
      * @return the DepIOSEnrollmentProfileWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public DepIOSEnrollmentProfileWithReferenceRequestBuilder defaultIosEnrollmentProfile() {
-        return new DepIOSEnrollmentProfileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("defaultIosEnrollmentProfile"), getClient(), null);
+    public com.microsoft.graph.requests.DepIOSEnrollmentProfileWithReferenceRequestBuilder defaultIosEnrollmentProfile() {
+        return new com.microsoft.graph.requests.DepIOSEnrollmentProfileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("defaultIosEnrollmentProfile"), getClient(), null);
     }
 
     /**
@@ -80,8 +74,8 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder<DepOn
      * @return the DepMacOSEnrollmentProfileWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public DepMacOSEnrollmentProfileWithReferenceRequestBuilder defaultMacOsEnrollmentProfile() {
-        return new DepMacOSEnrollmentProfileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("defaultMacOsEnrollmentProfile"), getClient(), null);
+    public com.microsoft.graph.requests.DepMacOSEnrollmentProfileWithReferenceRequestBuilder defaultMacOsEnrollmentProfile() {
+        return new com.microsoft.graph.requests.DepMacOSEnrollmentProfileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("defaultMacOsEnrollmentProfile"), getClient(), null);
     }
     /**
      *  Gets a request builder for the EnrollmentProfile collection
@@ -89,8 +83,8 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder<DepOn
      * @return the collection request builder
      */
     @Nonnull
-    public EnrollmentProfileCollectionRequestBuilder enrollmentProfiles() {
-        return new EnrollmentProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("enrollmentProfiles"), getClient(), null);
+    public com.microsoft.graph.requests.EnrollmentProfileCollectionRequestBuilder enrollmentProfiles() {
+        return new com.microsoft.graph.requests.EnrollmentProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("enrollmentProfiles"), getClient(), null);
     }
 
     /**
@@ -100,8 +94,8 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder<DepOn
      * @param id the item identifier
      */
     @Nonnull
-    public EnrollmentProfileRequestBuilder enrollmentProfiles(@Nonnull final String id) {
-        return new EnrollmentProfileRequestBuilder(getRequestUrlWithAdditionalSegment("enrollmentProfiles") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EnrollmentProfileRequestBuilder enrollmentProfiles(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EnrollmentProfileRequestBuilder(getRequestUrlWithAdditionalSegment("enrollmentProfiles") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ImportedAppleDeviceIdentity collection
@@ -109,8 +103,8 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder<DepOn
      * @return the collection request builder
      */
     @Nonnull
-    public ImportedAppleDeviceIdentityCollectionRequestBuilder importedAppleDeviceIdentities() {
-        return new ImportedAppleDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("importedAppleDeviceIdentities"), getClient(), null);
+    public com.microsoft.graph.requests.ImportedAppleDeviceIdentityCollectionRequestBuilder importedAppleDeviceIdentities() {
+        return new com.microsoft.graph.requests.ImportedAppleDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("importedAppleDeviceIdentities"), getClient(), null);
     }
 
     /**
@@ -120,8 +114,8 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder<DepOn
      * @param id the item identifier
      */
     @Nonnull
-    public ImportedAppleDeviceIdentityRequestBuilder importedAppleDeviceIdentities(@Nonnull final String id) {
-        return new ImportedAppleDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("importedAppleDeviceIdentities") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ImportedAppleDeviceIdentityRequestBuilder importedAppleDeviceIdentities(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ImportedAppleDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("importedAppleDeviceIdentities") + "/" + id, getClient(), null);
     }
 
     /**

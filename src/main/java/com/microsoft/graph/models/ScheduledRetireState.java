@@ -16,9 +16,13 @@ public enum ScheduledRetireState
     */
     CANCEL_RETIRE,
     /**
-    * comfirm Retire
+    * confirm Retire
     */
-    COMFIRM_RETIRE,
+    CONFIRM_RETIRE,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
     /**
     * For ScheduledRetireState values that were not expected from the service
     */

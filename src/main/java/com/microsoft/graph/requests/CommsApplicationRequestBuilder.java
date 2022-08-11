@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CommsApplication;
-import com.microsoft.graph.requests.CallCollectionRequestBuilder;
-import com.microsoft.graph.requests.CallRequestBuilder;
-import com.microsoft.graph.requests.OnlineMeetingCollectionRequestBuilder;
-import com.microsoft.graph.requests.OnlineMeetingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class CommsApplicationRequestBuilder extends BaseRequestBuilder<CommsAppl
      * @return the collection request builder
      */
     @Nonnull
-    public CallCollectionRequestBuilder calls() {
-        return new CallCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calls"), getClient(), null);
+    public com.microsoft.graph.requests.CallCollectionRequestBuilder calls() {
+        return new com.microsoft.graph.requests.CallCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calls"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class CommsApplicationRequestBuilder extends BaseRequestBuilder<CommsAppl
      * @param id the item identifier
      */
     @Nonnull
-    public CallRequestBuilder calls(@Nonnull final String id) {
-        return new CallRequestBuilder(getRequestUrlWithAdditionalSegment("calls") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CallRequestBuilder calls(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CallRequestBuilder(getRequestUrlWithAdditionalSegment("calls") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the OnlineMeeting collection
@@ -86,8 +82,8 @@ public class CommsApplicationRequestBuilder extends BaseRequestBuilder<CommsAppl
      * @return the collection request builder
      */
     @Nonnull
-    public OnlineMeetingCollectionRequestBuilder onlineMeetings() {
-        return new OnlineMeetingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings"), getClient(), null);
+    public com.microsoft.graph.requests.OnlineMeetingCollectionRequestBuilder onlineMeetings() {
+        return new com.microsoft.graph.requests.OnlineMeetingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class CommsApplicationRequestBuilder extends BaseRequestBuilder<CommsAppl
      * @param id the item identifier
      */
     @Nonnull
-    public OnlineMeetingRequestBuilder onlineMeetings(@Nonnull final String id) {
-        return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OnlineMeetingRequestBuilder onlineMeetings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
     }
 }

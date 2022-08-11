@@ -10,8 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.models.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.EnrollmentConfigurationAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +66,8 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
-        return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -79,8 +77,8 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public EnrollmentConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EnrollmentConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

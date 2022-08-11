@@ -181,6 +181,15 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
     public String signInPageText;
 
     /**
+     * The Square Logo Dark Relative Url.
+     * A relative URL for the squareLogoDark property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+     */
+    @SerializedName(value = "squareLogoDarkRelativeUrl", alternate = {"SquareLogoDarkRelativeUrl"})
+    @Expose
+	@Nullable
+    public String squareLogoDarkRelativeUrl;
+
+    /**
      * The Square Logo Relative Url.
      * A relative URL for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
      */

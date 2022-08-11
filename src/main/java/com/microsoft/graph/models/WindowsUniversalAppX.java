@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WindowsArchitecture;
 import com.microsoft.graph.models.WindowsDeviceType;
 import com.microsoft.graph.models.WindowsMinimumOperatingSystem;
-import com.microsoft.graph.models.MobileContainedApp;
 import com.microsoft.graph.models.MobileLobApp;
 import com.microsoft.graph.requests.MobileContainedAppCollectionPage;
 
@@ -110,7 +109,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
     @SerializedName(value = "committedContainedApps", alternate = {"CommittedContainedApps"})
     @Expose
 	@Nullable
-    public MobileContainedAppCollectionPage committedContainedApps;
+    public com.microsoft.graph.requests.MobileContainedAppCollectionPage committedContainedApps;
 
 
     /**
@@ -123,7 +122,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
 
         if (json.has("committedContainedApps")) {
-            committedContainedApps = serializer.deserializeObject(json.get("committedContainedApps"), MobileContainedAppCollectionPage.class);
+            committedContainedApps = serializer.deserializeObject(json.get("committedContainedApps"), com.microsoft.graph.requests.MobileContainedAppCollectionPage.class);
         }
     }
 }

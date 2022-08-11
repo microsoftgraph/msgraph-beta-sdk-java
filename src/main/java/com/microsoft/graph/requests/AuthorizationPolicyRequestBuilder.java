@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AuthorizationPolicy;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.requests.DefaultUserRoleOverrideCollectionRequestBuilder;
-import com.microsoft.graph.requests.DefaultUserRoleOverrideRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -69,8 +67,8 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder<Author
      * @return the collection request builder
      */
     @Nonnull
-    public DefaultUserRoleOverrideCollectionRequestBuilder defaultUserRoleOverrides() {
-        return new DefaultUserRoleOverrideCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("defaultUserRoleOverrides"), getClient(), null);
+    public com.microsoft.graph.requests.DefaultUserRoleOverrideCollectionRequestBuilder defaultUserRoleOverrides() {
+        return new com.microsoft.graph.requests.DefaultUserRoleOverrideCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("defaultUserRoleOverrides"), getClient(), null);
     }
 
     /**
@@ -80,8 +78,8 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder<Author
      * @param id the item identifier
      */
     @Nonnull
-    public DefaultUserRoleOverrideRequestBuilder defaultUserRoleOverrides(@Nonnull final String id) {
-        return new DefaultUserRoleOverrideRequestBuilder(getRequestUrlWithAdditionalSegment("defaultUserRoleOverrides") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DefaultUserRoleOverrideRequestBuilder defaultUserRoleOverrides(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DefaultUserRoleOverrideRequestBuilder(getRequestUrlWithAdditionalSegment("defaultUserRoleOverrides") + "/" + id, getClient(), null);
     }
 
     /**

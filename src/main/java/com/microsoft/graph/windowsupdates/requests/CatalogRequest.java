@@ -8,8 +8,6 @@ package com.microsoft.graph.windowsupdates.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.windowsupdates.models.Catalog;
-import com.microsoft.graph.windowsupdates.requests.CatalogEntryCollectionRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.CatalogEntryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

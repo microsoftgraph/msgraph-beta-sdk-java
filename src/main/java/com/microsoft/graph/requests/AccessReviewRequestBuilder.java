@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReview;
-import com.microsoft.graph.requests.AccessReviewDecisionCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewDecisionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewReviewerCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewReviewerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +62,8 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder<AccessReview>
      * @return the collection request builder
      */
     @Nonnull
-    public AccessReviewDecisionCollectionRequestBuilder decisions() {
-        return new AccessReviewDecisionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("decisions"), getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewDecisionCollectionRequestBuilder decisions() {
+        return new com.microsoft.graph.requests.AccessReviewDecisionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("decisions"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder<AccessReview>
      * @param id the item identifier
      */
     @Nonnull
-    public AccessReviewDecisionRequestBuilder decisions(@Nonnull final String id) {
-        return new AccessReviewDecisionRequestBuilder(getRequestUrlWithAdditionalSegment("decisions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewDecisionRequestBuilder decisions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessReviewDecisionRequestBuilder(getRequestUrlWithAdditionalSegment("decisions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessReview collection
@@ -88,8 +82,8 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder<AccessReview>
      * @return the collection request builder
      */
     @Nonnull
-    public AccessReviewCollectionRequestBuilder instances() {
-        return new AccessReviewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewCollectionRequestBuilder instances() {
+        return new com.microsoft.graph.requests.AccessReviewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
     }
 
     /**
@@ -99,8 +93,8 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder<AccessReview>
      * @param id the item identifier
      */
     @Nonnull
-    public AccessReviewRequestBuilder instances(@Nonnull final String id) {
-        return new AccessReviewRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewRequestBuilder instances(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessReviewRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessReviewDecision collection
@@ -108,8 +102,8 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder<AccessReview>
      * @return the collection request builder
      */
     @Nonnull
-    public AccessReviewDecisionCollectionRequestBuilder myDecisions() {
-        return new AccessReviewDecisionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("myDecisions"), getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewDecisionCollectionRequestBuilder myDecisions() {
+        return new com.microsoft.graph.requests.AccessReviewDecisionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("myDecisions"), getClient(), null);
     }
 
     /**
@@ -119,8 +113,8 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder<AccessReview>
      * @param id the item identifier
      */
     @Nonnull
-    public AccessReviewDecisionRequestBuilder myDecisions(@Nonnull final String id) {
-        return new AccessReviewDecisionRequestBuilder(getRequestUrlWithAdditionalSegment("myDecisions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewDecisionRequestBuilder myDecisions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessReviewDecisionRequestBuilder(getRequestUrlWithAdditionalSegment("myDecisions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessReviewReviewer collection
@@ -128,8 +122,8 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder<AccessReview>
      * @return the collection request builder
      */
     @Nonnull
-    public AccessReviewReviewerCollectionRequestBuilder reviewers() {
-        return new AccessReviewReviewerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reviewers"), getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewReviewerCollectionRequestBuilder reviewers() {
+        return new com.microsoft.graph.requests.AccessReviewReviewerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reviewers"), getClient(), null);
     }
 
     /**
@@ -139,8 +133,8 @@ public class AccessReviewRequestBuilder extends BaseRequestBuilder<AccessReview>
      * @param id the item identifier
      */
     @Nonnull
-    public AccessReviewReviewerRequestBuilder reviewers(@Nonnull final String id) {
-        return new AccessReviewReviewerRequestBuilder(getRequestUrlWithAdditionalSegment("reviewers") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewReviewerRequestBuilder reviewers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessReviewReviewerRequestBuilder(getRequestUrlWithAdditionalSegment("reviewers") + "/" + id, getClient(), null);
     }
 
     /**

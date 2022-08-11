@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Company;
 import com.microsoft.graph.requests.CompanyCollectionPage;
 
 
@@ -47,7 +46,7 @@ public class Financials implements IJsonBackedObject {
     @SerializedName(value = "companies", alternate = {"Companies"})
     @Expose
 	@Nullable
-    public CompanyCollectionPage companies;
+    public com.microsoft.graph.requests.CompanyCollectionPage companies;
 
 
     /**
@@ -60,7 +59,7 @@ public class Financials implements IJsonBackedObject {
 
 
         if (json.has("companies")) {
-            companies = serializer.deserializeObject(json.get("companies"), CompanyCollectionPage.class);
+            companies = serializer.deserializeObject(json.get("companies"), com.microsoft.graph.requests.CompanyCollectionPage.class);
         }
     }
 }

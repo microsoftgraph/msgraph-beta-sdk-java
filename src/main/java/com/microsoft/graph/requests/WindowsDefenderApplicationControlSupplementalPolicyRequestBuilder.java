@@ -9,11 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicy;
 import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicyAssignment;
-import com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder;
-import com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder;
-import com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -69,8 +64,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder e
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder assignments() {
-        return new WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -80,8 +75,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder e
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**
@@ -90,8 +85,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder e
      * @return the WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder instance
      */
     @Nonnull
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder deploySummary() {
-        return new WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deploySummary"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder deploySummary() {
+        return new com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deploySummary"), getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus collection
@@ -99,8 +94,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder e
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder deviceStatuses() {
-        return new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder deviceStatuses() {
+        return new com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     /**
@@ -110,8 +105,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder e
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
-        return new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**

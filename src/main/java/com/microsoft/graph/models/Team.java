@@ -17,19 +17,12 @@ import com.microsoft.graph.models.TeamMessagingSettings;
 import com.microsoft.graph.models.TeamSpecialization;
 import com.microsoft.graph.models.TeamSummary;
 import com.microsoft.graph.models.TeamVisibilityType;
-import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.Group;
-import com.microsoft.graph.models.TeamsAppInstallation;
-import com.microsoft.graph.models.ConversationMember;
-import com.microsoft.graph.models.TeamsAsyncOperation;
-import com.microsoft.graph.models.User;
-import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.ProfilePhoto;
-import com.microsoft.graph.models.TeamworkTag;
+import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.TeamsTemplate;
 import com.microsoft.graph.models.Schedule;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.ChannelCollectionPage;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.TeamsAsyncOperationCollectionPage;
@@ -210,7 +203,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * List of channels either hosted in or shared with the team (incoming channels).
      */
 	@Nullable
-    public ChannelCollectionPage allChannels;
+    public com.microsoft.graph.requests.ChannelCollectionPage allChannels;
 
     /**
      * The Channels.
@@ -219,7 +212,7 @@ public class Team extends Entity implements IJsonBackedObject {
     @SerializedName(value = "channels", alternate = {"Channels"})
     @Expose
 	@Nullable
-    public ChannelCollectionPage channels;
+    public com.microsoft.graph.requests.ChannelCollectionPage channels;
 
     /**
      * The Group.
@@ -235,7 +228,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * List of channels shared with the team.
      */
 	@Nullable
-    public ChannelCollectionPage incomingChannels;
+    public com.microsoft.graph.requests.ChannelCollectionPage incomingChannels;
 
     /**
      * The Installed Apps.
@@ -244,7 +237,7 @@ public class Team extends Entity implements IJsonBackedObject {
     @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
 	@Nullable
-    public TeamsAppInstallationCollectionPage installedApps;
+    public com.microsoft.graph.requests.TeamsAppInstallationCollectionPage installedApps;
 
     /**
      * The Members.
@@ -253,7 +246,7 @@ public class Team extends Entity implements IJsonBackedObject {
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
 	@Nullable
-    public ConversationMemberCollectionPage members;
+    public com.microsoft.graph.requests.ConversationMemberCollectionPage members;
 
     /**
      * The Operations.
@@ -262,14 +255,14 @@ public class Team extends Entity implements IJsonBackedObject {
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public TeamsAsyncOperationCollectionPage operations;
+    public com.microsoft.graph.requests.TeamsAsyncOperationCollectionPage operations;
 
     /**
      * The Owners.
      * The list of this team's owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user delegated permissions, no owner can be specified (the current user is the owner). Owner must be specified as an object ID (GUID), not a UPN.
      */
 	@Nullable
-    public UserCollectionPage owners;
+    public com.microsoft.graph.requests.UserCollectionPage owners;
 
     /**
      * The Permission Grants.
@@ -278,7 +271,7 @@ public class Team extends Entity implements IJsonBackedObject {
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose
 	@Nullable
-    public ResourceSpecificPermissionGrantCollectionPage permissionGrants;
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage permissionGrants;
 
     /**
      * The Photo.
@@ -305,7 +298,7 @@ public class Team extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
 	@Nullable
-    public TeamworkTagCollectionPage tags;
+    public com.microsoft.graph.requests.TeamworkTagCollectionPage tags;
 
     /**
      * The Template.
@@ -336,39 +329,39 @@ public class Team extends Entity implements IJsonBackedObject {
 
 
         if (json.has("allChannels")) {
-            allChannels = serializer.deserializeObject(json.get("allChannels"), ChannelCollectionPage.class);
+            allChannels = serializer.deserializeObject(json.get("allChannels"), com.microsoft.graph.requests.ChannelCollectionPage.class);
         }
 
         if (json.has("channels")) {
-            channels = serializer.deserializeObject(json.get("channels"), ChannelCollectionPage.class);
+            channels = serializer.deserializeObject(json.get("channels"), com.microsoft.graph.requests.ChannelCollectionPage.class);
         }
 
         if (json.has("incomingChannels")) {
-            incomingChannels = serializer.deserializeObject(json.get("incomingChannels"), ChannelCollectionPage.class);
+            incomingChannels = serializer.deserializeObject(json.get("incomingChannels"), com.microsoft.graph.requests.ChannelCollectionPage.class);
         }
 
         if (json.has("installedApps")) {
-            installedApps = serializer.deserializeObject(json.get("installedApps"), TeamsAppInstallationCollectionPage.class);
+            installedApps = serializer.deserializeObject(json.get("installedApps"), com.microsoft.graph.requests.TeamsAppInstallationCollectionPage.class);
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), ConversationMemberCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.ConversationMemberCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), TeamsAsyncOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.TeamsAsyncOperationCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners"), UserCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.UserCollectionPage.class);
         }
 
         if (json.has("permissionGrants")) {
-            permissionGrants = serializer.deserializeObject(json.get("permissionGrants"), ResourceSpecificPermissionGrantCollectionPage.class);
+            permissionGrants = serializer.deserializeObject(json.get("permissionGrants"), com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage.class);
         }
 
         if (json.has("tags")) {
-            tags = serializer.deserializeObject(json.get("tags"), TeamworkTagCollectionPage.class);
+            tags = serializer.deserializeObject(json.get("tags"), com.microsoft.graph.requests.TeamworkTagCollectionPage.class);
         }
     }
 }

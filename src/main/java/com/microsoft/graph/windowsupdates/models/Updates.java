@@ -10,9 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.windowsupdates.models.Catalog;
-import com.microsoft.graph.windowsupdates.models.Deployment;
-import com.microsoft.graph.windowsupdates.models.ResourceConnection;
-import com.microsoft.graph.windowsupdates.models.UpdatableAsset;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.windowsupdates.requests.DeploymentCollectionPage;
 import com.microsoft.graph.windowsupdates.requests.ResourceConnectionCollectionPage;
@@ -49,16 +46,16 @@ public class Updates extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deployments", alternate = {"Deployments"})
     @Expose
 	@Nullable
-    public DeploymentCollectionPage deployments;
+    public com.microsoft.graph.windowsupdates.requests.DeploymentCollectionPage deployments;
 
     /**
      * The Resource Connections.
-     * 
+     * Service connections to external resources such as analytics workspaces.
      */
     @SerializedName(value = "resourceConnections", alternate = {"ResourceConnections"})
     @Expose
 	@Nullable
-    public ResourceConnectionCollectionPage resourceConnections;
+    public com.microsoft.graph.windowsupdates.requests.ResourceConnectionCollectionPage resourceConnections;
 
     /**
      * The Updatable Assets.
@@ -67,7 +64,7 @@ public class Updates extends Entity implements IJsonBackedObject {
     @SerializedName(value = "updatableAssets", alternate = {"UpdatableAssets"})
     @Expose
 	@Nullable
-    public UpdatableAssetCollectionPage updatableAssets;
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionPage updatableAssets;
 
 
     /**
@@ -80,15 +77,15 @@ public class Updates extends Entity implements IJsonBackedObject {
 
 
         if (json.has("deployments")) {
-            deployments = serializer.deserializeObject(json.get("deployments"), DeploymentCollectionPage.class);
+            deployments = serializer.deserializeObject(json.get("deployments"), com.microsoft.graph.windowsupdates.requests.DeploymentCollectionPage.class);
         }
 
         if (json.has("resourceConnections")) {
-            resourceConnections = serializer.deserializeObject(json.get("resourceConnections"), ResourceConnectionCollectionPage.class);
+            resourceConnections = serializer.deserializeObject(json.get("resourceConnections"), com.microsoft.graph.windowsupdates.requests.ResourceConnectionCollectionPage.class);
         }
 
         if (json.has("updatableAssets")) {
-            updatableAssets = serializer.deserializeObject(json.get("updatableAssets"), UpdatableAssetCollectionPage.class);
+            updatableAssets = serializer.deserializeObject(json.get("updatableAssets"), com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionPage.class);
         }
     }
 }

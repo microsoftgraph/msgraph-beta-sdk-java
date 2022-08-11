@@ -8,56 +8,6 @@ package com.microsoft.graph.managedtenants.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.managedtenants.models.ManagedTenant;
-import com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.AuditEventCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.AuditEventRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.CloudPcConnectionCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.CloudPcConnectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.CloudPcDeviceCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.CloudPcDeviceRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.CloudPcOverviewCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.CloudPcOverviewRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ConditionalAccessPolicyCoverageCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ConditionalAccessPolicyCoverageRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementActionCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementActionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementIntentRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.MyRoleCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.MyRoleRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.TenantGroupRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.TenantCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.TenantRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.TenantDetailedInformationCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.TenantDetailedInformationRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.TenantTagCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.TenantTagRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.WindowsDeviceMalwareStateCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.WindowsDeviceMalwareStateRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.WindowsProtectionStateCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.WindowsProtectionStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -112,8 +62,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public AggregatedPolicyComplianceCollectionRequestBuilder aggregatedPolicyCompliances() {
-        return new AggregatedPolicyComplianceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("aggregatedPolicyCompliances"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionRequestBuilder aggregatedPolicyCompliances() {
+        return new com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("aggregatedPolicyCompliances"), getClient(), null);
     }
 
     /**
@@ -123,8 +73,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public AggregatedPolicyComplianceRequestBuilder aggregatedPolicyCompliances(@Nonnull final String id) {
-        return new AggregatedPolicyComplianceRequestBuilder(getRequestUrlWithAdditionalSegment("aggregatedPolicyCompliances") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceRequestBuilder aggregatedPolicyCompliances(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceRequestBuilder(getRequestUrlWithAdditionalSegment("aggregatedPolicyCompliances") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AuditEvent collection
@@ -132,8 +82,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public AuditEventCollectionRequestBuilder auditEvents() {
-        return new AuditEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.AuditEventCollectionRequestBuilder auditEvents() {
+        return new com.microsoft.graph.managedtenants.requests.AuditEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents"), getClient(), null);
     }
 
     /**
@@ -143,8 +93,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public AuditEventRequestBuilder auditEvents(@Nonnull final String id) {
-        return new AuditEventRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.AuditEventRequestBuilder auditEvents(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.AuditEventRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcConnection collection
@@ -152,8 +102,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcConnectionCollectionRequestBuilder cloudPcConnections() {
-        return new CloudPcConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcConnections"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.CloudPcConnectionCollectionRequestBuilder cloudPcConnections() {
+        return new com.microsoft.graph.managedtenants.requests.CloudPcConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcConnections"), getClient(), null);
     }
 
     /**
@@ -163,8 +113,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcConnectionRequestBuilder cloudPcConnections(@Nonnull final String id) {
-        return new CloudPcConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcConnections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.CloudPcConnectionRequestBuilder cloudPcConnections(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.CloudPcConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcConnections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcDevice collection
@@ -172,8 +122,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcDeviceCollectionRequestBuilder cloudPcDevices() {
-        return new CloudPcDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcDevices"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.CloudPcDeviceCollectionRequestBuilder cloudPcDevices() {
+        return new com.microsoft.graph.managedtenants.requests.CloudPcDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcDevices"), getClient(), null);
     }
 
     /**
@@ -183,8 +133,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcDeviceRequestBuilder cloudPcDevices(@Nonnull final String id) {
-        return new CloudPcDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcDevices") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.CloudPcDeviceRequestBuilder cloudPcDevices(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.CloudPcDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcDevices") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcOverview collection
@@ -192,8 +142,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcOverviewCollectionRequestBuilder cloudPcsOverview() {
-        return new CloudPcOverviewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcsOverview"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.CloudPcOverviewCollectionRequestBuilder cloudPcsOverview() {
+        return new com.microsoft.graph.managedtenants.requests.CloudPcOverviewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcsOverview"), getClient(), null);
     }
 
     /**
@@ -203,8 +153,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcOverviewRequestBuilder cloudPcsOverview(@Nonnull final String id) {
-        return new CloudPcOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcsOverview") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.CloudPcOverviewRequestBuilder cloudPcsOverview(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.CloudPcOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPcsOverview") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ConditionalAccessPolicyCoverage collection
@@ -212,8 +162,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public ConditionalAccessPolicyCoverageCollectionRequestBuilder conditionalAccessPolicyCoverages() {
-        return new ConditionalAccessPolicyCoverageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicyCoverages"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ConditionalAccessPolicyCoverageCollectionRequestBuilder conditionalAccessPolicyCoverages() {
+        return new com.microsoft.graph.managedtenants.requests.ConditionalAccessPolicyCoverageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicyCoverages"), getClient(), null);
     }
 
     /**
@@ -223,8 +173,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public ConditionalAccessPolicyCoverageRequestBuilder conditionalAccessPolicyCoverages(@Nonnull final String id) {
-        return new ConditionalAccessPolicyCoverageRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicyCoverages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ConditionalAccessPolicyCoverageRequestBuilder conditionalAccessPolicyCoverages(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ConditionalAccessPolicyCoverageRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicyCoverages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CredentialUserRegistrationsSummary collection
@@ -232,8 +182,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public CredentialUserRegistrationsSummaryCollectionRequestBuilder credentialUserRegistrationsSummaries() {
-        return new CredentialUserRegistrationsSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationsSummaries"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryCollectionRequestBuilder credentialUserRegistrationsSummaries() {
+        return new com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationsSummaries"), getClient(), null);
     }
 
     /**
@@ -243,8 +193,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public CredentialUserRegistrationsSummaryRequestBuilder credentialUserRegistrationsSummaries(@Nonnull final String id) {
-        return new CredentialUserRegistrationsSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationsSummaries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryRequestBuilder credentialUserRegistrationsSummaries(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationsSummaries") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceCompliancePolicySettingStateSummary collection
@@ -252,8 +202,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder deviceCompliancePolicySettingStateSummaries() {
-        return new DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicySettingStateSummaries"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder deviceCompliancePolicySettingStateSummaries() {
+        return new com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicySettingStateSummaries"), getClient(), null);
     }
 
     /**
@@ -263,8 +213,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceCompliancePolicySettingStateSummaryRequestBuilder deviceCompliancePolicySettingStateSummaries(@Nonnull final String id) {
-        return new DeviceCompliancePolicySettingStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicySettingStateSummaries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryRequestBuilder deviceCompliancePolicySettingStateSummaries(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicySettingStateSummaries") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDeviceCompliance collection
@@ -272,8 +222,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedDeviceComplianceCollectionRequestBuilder managedDeviceCompliances() {
-        return new ManagedDeviceComplianceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCompliances"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceCollectionRequestBuilder managedDeviceCompliances() {
+        return new com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCompliances"), getClient(), null);
     }
 
     /**
@@ -283,8 +233,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedDeviceComplianceRequestBuilder managedDeviceCompliances(@Nonnull final String id) {
-        return new ManagedDeviceComplianceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCompliances") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceRequestBuilder managedDeviceCompliances(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCompliances") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDeviceComplianceTrend collection
@@ -292,8 +242,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedDeviceComplianceTrendCollectionRequestBuilder managedDeviceComplianceTrends() {
-        return new ManagedDeviceComplianceTrendCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceComplianceTrends"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendCollectionRequestBuilder managedDeviceComplianceTrends() {
+        return new com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceComplianceTrends"), getClient(), null);
     }
 
     /**
@@ -303,8 +253,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedDeviceComplianceTrendRequestBuilder managedDeviceComplianceTrends(@Nonnull final String id) {
-        return new ManagedDeviceComplianceTrendRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceComplianceTrends") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendRequestBuilder managedDeviceComplianceTrends(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceComplianceTrends") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementAction collection
@@ -312,8 +262,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementActionCollectionRequestBuilder managementActions() {
-        return new ManagementActionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementActions"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementActionCollectionRequestBuilder managementActions() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementActionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementActions"), getClient(), null);
     }
 
     /**
@@ -323,8 +273,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementActionRequestBuilder managementActions(@Nonnull final String id) {
-        return new ManagementActionRequestBuilder(getRequestUrlWithAdditionalSegment("managementActions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementActionRequestBuilder managementActions(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementActionRequestBuilder(getRequestUrlWithAdditionalSegment("managementActions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementActionTenantDeploymentStatus collection
@@ -332,8 +282,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementActionTenantDeploymentStatusCollectionRequestBuilder managementActionTenantDeploymentStatuses() {
-        return new ManagementActionTenantDeploymentStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementActionTenantDeploymentStatuses"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusCollectionRequestBuilder managementActionTenantDeploymentStatuses() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementActionTenantDeploymentStatuses"), getClient(), null);
     }
 
     /**
@@ -343,8 +293,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementActionTenantDeploymentStatusRequestBuilder managementActionTenantDeploymentStatuses(@Nonnull final String id) {
-        return new ManagementActionTenantDeploymentStatusRequestBuilder(getRequestUrlWithAdditionalSegment("managementActionTenantDeploymentStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusRequestBuilder managementActionTenantDeploymentStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusRequestBuilder(getRequestUrlWithAdditionalSegment("managementActionTenantDeploymentStatuses") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementIntent collection
@@ -352,8 +302,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementIntentCollectionRequestBuilder managementIntents() {
-        return new ManagementIntentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementIntents"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionRequestBuilder managementIntents() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementIntents"), getClient(), null);
     }
 
     /**
@@ -363,8 +313,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementIntentRequestBuilder managementIntents(@Nonnull final String id) {
-        return new ManagementIntentRequestBuilder(getRequestUrlWithAdditionalSegment("managementIntents") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementIntentRequestBuilder managementIntents(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementIntentRequestBuilder(getRequestUrlWithAdditionalSegment("managementIntents") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementTemplateCollectionObject collection
@@ -372,8 +322,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementTemplateCollectionObjectCollectionRequestBuilder managementTemplateCollections() {
-        return new ManagementTemplateCollectionObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionRequestBuilder managementTemplateCollections() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections"), getClient(), null);
     }
 
     /**
@@ -383,8 +333,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementTemplateCollectionObjectRequestBuilder managementTemplateCollections(@Nonnull final String id) {
-        return new ManagementTemplateCollectionObjectRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectRequestBuilder managementTemplateCollections(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementTemplate collection
@@ -392,8 +342,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementTemplateCollectionRequestBuilder managementTemplates() {
-        return new ManagementTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplates"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionRequestBuilder managementTemplates() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplates"), getClient(), null);
     }
 
     /**
@@ -403,8 +353,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementTemplateRequestBuilder managementTemplates(@Nonnull final String id) {
-        return new ManagementTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateRequestBuilder managementTemplates(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplates") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementTemplateStep collection
@@ -412,8 +362,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementTemplateStepCollectionRequestBuilder managementTemplateSteps() {
-        return new ManagementTemplateStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateSteps"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionRequestBuilder managementTemplateSteps() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateSteps"), getClient(), null);
     }
 
     /**
@@ -423,8 +373,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementTemplateStepRequestBuilder managementTemplateSteps(@Nonnull final String id) {
-        return new ManagementTemplateStepRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateSteps") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepRequestBuilder managementTemplateSteps(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateSteps") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementTemplateStepVersion collection
@@ -432,8 +382,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementTemplateStepVersionCollectionRequestBuilder managementTemplateStepVersions() {
-        return new ManagementTemplateStepVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateStepVersions"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionRequestBuilder managementTemplateStepVersions() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateStepVersions"), getClient(), null);
     }
 
     /**
@@ -443,8 +393,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementTemplateStepVersionRequestBuilder managementTemplateStepVersions(@Nonnull final String id) {
-        return new ManagementTemplateStepVersionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateStepVersions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionRequestBuilder managementTemplateStepVersions(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateStepVersions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MyRole collection
@@ -452,8 +402,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public MyRoleCollectionRequestBuilder myRoles() {
-        return new MyRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("myRoles"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.MyRoleCollectionRequestBuilder myRoles() {
+        return new com.microsoft.graph.managedtenants.requests.MyRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("myRoles"), getClient(), null);
     }
 
     /**
@@ -463,8 +413,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public MyRoleRequestBuilder myRoles(@Nonnull final String id) {
-        return new MyRoleRequestBuilder(getRequestUrlWithAdditionalSegment("myRoles") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.MyRoleRequestBuilder myRoles(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.MyRoleRequestBuilder(getRequestUrlWithAdditionalSegment("myRoles") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TenantGroup collection
@@ -472,8 +422,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public TenantGroupCollectionRequestBuilder tenantGroups() {
-        return new TenantGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantGroups"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.TenantGroupCollectionRequestBuilder tenantGroups() {
+        return new com.microsoft.graph.managedtenants.requests.TenantGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantGroups"), getClient(), null);
     }
 
     /**
@@ -483,8 +433,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public TenantGroupRequestBuilder tenantGroups(@Nonnull final String id) {
-        return new TenantGroupRequestBuilder(getRequestUrlWithAdditionalSegment("tenantGroups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.TenantGroupRequestBuilder tenantGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.TenantGroupRequestBuilder(getRequestUrlWithAdditionalSegment("tenantGroups") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Tenant collection
@@ -492,8 +442,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public TenantCollectionRequestBuilder tenants() {
-        return new TenantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenants"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.TenantCollectionRequestBuilder tenants() {
+        return new com.microsoft.graph.managedtenants.requests.TenantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenants"), getClient(), null);
     }
 
     /**
@@ -503,8 +453,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public TenantRequestBuilder tenants(@Nonnull final String id) {
-        return new TenantRequestBuilder(getRequestUrlWithAdditionalSegment("tenants") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.TenantRequestBuilder tenants(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.TenantRequestBuilder(getRequestUrlWithAdditionalSegment("tenants") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TenantCustomizedInformation collection
@@ -512,8 +462,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public TenantCustomizedInformationCollectionRequestBuilder tenantsCustomizedInformation() {
-        return new TenantCustomizedInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsCustomizedInformation"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationCollectionRequestBuilder tenantsCustomizedInformation() {
+        return new com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsCustomizedInformation"), getClient(), null);
     }
 
     /**
@@ -523,8 +473,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public TenantCustomizedInformationRequestBuilder tenantsCustomizedInformation(@Nonnull final String id) {
-        return new TenantCustomizedInformationRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsCustomizedInformation") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationRequestBuilder tenantsCustomizedInformation(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsCustomizedInformation") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TenantDetailedInformation collection
@@ -532,8 +482,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public TenantDetailedInformationCollectionRequestBuilder tenantsDetailedInformation() {
-        return new TenantDetailedInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsDetailedInformation"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.TenantDetailedInformationCollectionRequestBuilder tenantsDetailedInformation() {
+        return new com.microsoft.graph.managedtenants.requests.TenantDetailedInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsDetailedInformation"), getClient(), null);
     }
 
     /**
@@ -543,8 +493,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public TenantDetailedInformationRequestBuilder tenantsDetailedInformation(@Nonnull final String id) {
-        return new TenantDetailedInformationRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsDetailedInformation") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.TenantDetailedInformationRequestBuilder tenantsDetailedInformation(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.TenantDetailedInformationRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsDetailedInformation") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TenantTag collection
@@ -552,8 +502,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public TenantTagCollectionRequestBuilder tenantTags() {
-        return new TenantTagCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantTags"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.TenantTagCollectionRequestBuilder tenantTags() {
+        return new com.microsoft.graph.managedtenants.requests.TenantTagCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantTags"), getClient(), null);
     }
 
     /**
@@ -563,8 +513,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public TenantTagRequestBuilder tenantTags(@Nonnull final String id) {
-        return new TenantTagRequestBuilder(getRequestUrlWithAdditionalSegment("tenantTags") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.TenantTagRequestBuilder tenantTags(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.TenantTagRequestBuilder(getRequestUrlWithAdditionalSegment("tenantTags") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsDeviceMalwareState collection
@@ -572,8 +522,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsDeviceMalwareStateCollectionRequestBuilder windowsDeviceMalwareStates() {
-        return new WindowsDeviceMalwareStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsDeviceMalwareStates"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.WindowsDeviceMalwareStateCollectionRequestBuilder windowsDeviceMalwareStates() {
+        return new com.microsoft.graph.managedtenants.requests.WindowsDeviceMalwareStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsDeviceMalwareStates"), getClient(), null);
     }
 
     /**
@@ -583,8 +533,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsDeviceMalwareStateRequestBuilder windowsDeviceMalwareStates(@Nonnull final String id) {
-        return new WindowsDeviceMalwareStateRequestBuilder(getRequestUrlWithAdditionalSegment("windowsDeviceMalwareStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.WindowsDeviceMalwareStateRequestBuilder windowsDeviceMalwareStates(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.WindowsDeviceMalwareStateRequestBuilder(getRequestUrlWithAdditionalSegment("windowsDeviceMalwareStates") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsProtectionState collection
@@ -592,8 +542,8 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsProtectionStateCollectionRequestBuilder windowsProtectionStates() {
-        return new WindowsProtectionStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsProtectionStates"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.WindowsProtectionStateCollectionRequestBuilder windowsProtectionStates() {
+        return new com.microsoft.graph.managedtenants.requests.WindowsProtectionStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsProtectionStates"), getClient(), null);
     }
 
     /**
@@ -603,7 +553,7 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsProtectionStateRequestBuilder windowsProtectionStates(@Nonnull final String id) {
-        return new WindowsProtectionStateRequestBuilder(getRequestUrlWithAdditionalSegment("windowsProtectionStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.WindowsProtectionStateRequestBuilder windowsProtectionStates(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.WindowsProtectionStateRequestBuilder(getRequestUrlWithAdditionalSegment("windowsProtectionStates") + "/" + id, getClient(), null);
     }
 }

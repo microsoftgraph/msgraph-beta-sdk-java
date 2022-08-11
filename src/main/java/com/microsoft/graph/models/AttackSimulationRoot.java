@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.SimulationAutomation;
-import com.microsoft.graph.models.Simulation;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SimulationAutomationCollectionPage;
 import com.microsoft.graph.requests.SimulationCollectionPage;
@@ -37,7 +35,7 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "simulationAutomations", alternate = {"SimulationAutomations"})
     @Expose
 	@Nullable
-    public SimulationAutomationCollectionPage simulationAutomations;
+    public com.microsoft.graph.requests.SimulationAutomationCollectionPage simulationAutomations;
 
     /**
      * The Simulations.
@@ -46,7 +44,7 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "simulations", alternate = {"Simulations"})
     @Expose
 	@Nullable
-    public SimulationCollectionPage simulations;
+    public com.microsoft.graph.requests.SimulationCollectionPage simulations;
 
 
     /**
@@ -59,11 +57,11 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("simulationAutomations")) {
-            simulationAutomations = serializer.deserializeObject(json.get("simulationAutomations"), SimulationAutomationCollectionPage.class);
+            simulationAutomations = serializer.deserializeObject(json.get("simulationAutomations"), com.microsoft.graph.requests.SimulationAutomationCollectionPage.class);
         }
 
         if (json.has("simulations")) {
-            simulations = serializer.deserializeObject(json.get("simulations"), SimulationCollectionPage.class);
+            simulations = serializer.deserializeObject(json.get("simulations"), com.microsoft.graph.requests.SimulationCollectionPage.class);
         }
     }
 }

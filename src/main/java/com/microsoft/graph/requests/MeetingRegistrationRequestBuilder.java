@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MeetingRegistration;
-import com.microsoft.graph.requests.MeetingRegistrationQuestionCollectionRequestBuilder;
-import com.microsoft.graph.requests.MeetingRegistrationQuestionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class MeetingRegistrationRequestBuilder extends BaseRequestBuilder<Meetin
      * @return the collection request builder
      */
     @Nonnull
-    public MeetingRegistrantBaseCollectionRequestBuilder registrants() {
-        return new MeetingRegistrantBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registrants"), getClient(), null);
+    public com.microsoft.graph.requests.MeetingRegistrantBaseCollectionRequestBuilder registrants() {
+        return new com.microsoft.graph.requests.MeetingRegistrantBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registrants"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class MeetingRegistrationRequestBuilder extends BaseRequestBuilder<Meetin
      * @param id the item identifier
      */
     @Nonnull
-    public MeetingRegistrantBaseRequestBuilder registrants(@Nonnull final String id) {
-        return new MeetingRegistrantBaseRequestBuilder(getRequestUrlWithAdditionalSegment("registrants") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MeetingRegistrantBaseRequestBuilder registrants(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MeetingRegistrantBaseRequestBuilder(getRequestUrlWithAdditionalSegment("registrants") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MeetingRegistrationQuestion collection
@@ -84,8 +82,8 @@ public class MeetingRegistrationRequestBuilder extends BaseRequestBuilder<Meetin
      * @return the collection request builder
      */
     @Nonnull
-    public MeetingRegistrationQuestionCollectionRequestBuilder customQuestions() {
-        return new MeetingRegistrationQuestionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customQuestions"), getClient(), null);
+    public com.microsoft.graph.requests.MeetingRegistrationQuestionCollectionRequestBuilder customQuestions() {
+        return new com.microsoft.graph.requests.MeetingRegistrationQuestionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customQuestions"), getClient(), null);
     }
 
     /**
@@ -95,7 +93,7 @@ public class MeetingRegistrationRequestBuilder extends BaseRequestBuilder<Meetin
      * @param id the item identifier
      */
     @Nonnull
-    public MeetingRegistrationQuestionRequestBuilder customQuestions(@Nonnull final String id) {
-        return new MeetingRegistrationQuestionRequestBuilder(getRequestUrlWithAdditionalSegment("customQuestions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MeetingRegistrationQuestionRequestBuilder customQuestions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MeetingRegistrationQuestionRequestBuilder(getRequestUrlWithAdditionalSegment("customQuestions") + "/" + id, getClient(), null);
     }
 }

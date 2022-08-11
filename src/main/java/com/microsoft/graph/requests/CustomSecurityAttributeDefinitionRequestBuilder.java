@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CustomSecurityAttributeDefinition;
-import com.microsoft.graph.requests.AllowedValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.AllowedValueRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class CustomSecurityAttributeDefinitionRequestBuilder extends BaseRequest
      * @return the collection request builder
      */
     @Nonnull
-    public AllowedValueCollectionRequestBuilder allowedValues() {
-        return new AllowedValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("allowedValues"), getClient(), null);
+    public com.microsoft.graph.requests.AllowedValueCollectionRequestBuilder allowedValues() {
+        return new com.microsoft.graph.requests.AllowedValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("allowedValues"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class CustomSecurityAttributeDefinitionRequestBuilder extends BaseRequest
      * @param id the item identifier
      */
     @Nonnull
-    public AllowedValueRequestBuilder allowedValues(@Nonnull final String id) {
-        return new AllowedValueRequestBuilder(getRequestUrlWithAdditionalSegment("allowedValues") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AllowedValueRequestBuilder allowedValues(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AllowedValueRequestBuilder(getRequestUrlWithAdditionalSegment("allowedValues") + "/" + id, getClient(), null);
     }
 }

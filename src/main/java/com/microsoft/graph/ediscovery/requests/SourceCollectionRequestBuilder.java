@@ -8,14 +8,6 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.SourceCollection;
-import com.microsoft.graph.ediscovery.requests.DataSourceCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.DataSourceRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.AddToReviewSetOperationWithReferenceRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.DataSourceCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.DataSourceWithReferenceRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.EstimateStatisticsOperationWithReferenceRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +62,8 @@ public class SourceCollectionRequestBuilder extends BaseRequestBuilder<SourceCol
      * @return the collection request builder
      */
     @Nonnull
-    public DataSourceCollectionRequestBuilder additionalSources() {
-        return new DataSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("additionalSources"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.DataSourceCollectionRequestBuilder additionalSources() {
+        return new com.microsoft.graph.ediscovery.requests.DataSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("additionalSources"), getClient(), null);
     }
 
     /**
@@ -81,8 +73,8 @@ public class SourceCollectionRequestBuilder extends BaseRequestBuilder<SourceCol
      * @param id the item identifier
      */
     @Nonnull
-    public DataSourceRequestBuilder additionalSources(@Nonnull final String id) {
-        return new DataSourceRequestBuilder(getRequestUrlWithAdditionalSegment("additionalSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.DataSourceRequestBuilder additionalSources(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.DataSourceRequestBuilder(getRequestUrlWithAdditionalSegment("additionalSources") + "/" + id, getClient(), null);
     }
 
     /**
@@ -91,8 +83,8 @@ public class SourceCollectionRequestBuilder extends BaseRequestBuilder<SourceCol
      * @return the AddToReviewSetOperationWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AddToReviewSetOperationWithReferenceRequestBuilder addToReviewSetOperation() {
-        return new AddToReviewSetOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("addToReviewSetOperation"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.AddToReviewSetOperationWithReferenceRequestBuilder addToReviewSetOperation() {
+        return new com.microsoft.graph.ediscovery.requests.AddToReviewSetOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("addToReviewSetOperation"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DataSource collection
@@ -100,8 +92,8 @@ public class SourceCollectionRequestBuilder extends BaseRequestBuilder<SourceCol
      * @return the collection request builder
      */
     @Nonnull
-    public DataSourceCollectionWithReferencesRequestBuilder custodianSources() {
-        return new DataSourceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("custodianSources"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.DataSourceCollectionWithReferencesRequestBuilder custodianSources() {
+        return new com.microsoft.graph.ediscovery.requests.DataSourceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("custodianSources"), getClient(), null);
     }
 
     /**
@@ -111,8 +103,8 @@ public class SourceCollectionRequestBuilder extends BaseRequestBuilder<SourceCol
      * @param id the item identifier
      */
     @Nonnull
-    public DataSourceWithReferenceRequestBuilder custodianSources(@Nonnull final String id) {
-        return new DataSourceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("custodianSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.DataSourceWithReferenceRequestBuilder custodianSources(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.DataSourceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("custodianSources") + "/" + id, getClient(), null);
     }
 
     /**
@@ -121,8 +113,8 @@ public class SourceCollectionRequestBuilder extends BaseRequestBuilder<SourceCol
      * @return the EstimateStatisticsOperationWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public EstimateStatisticsOperationWithReferenceRequestBuilder lastEstimateStatisticsOperation() {
-        return new EstimateStatisticsOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastEstimateStatisticsOperation"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.EstimateStatisticsOperationWithReferenceRequestBuilder lastEstimateStatisticsOperation() {
+        return new com.microsoft.graph.ediscovery.requests.EstimateStatisticsOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastEstimateStatisticsOperation"), getClient(), null);
     }
     /**
      *  Gets a request builder for the NoncustodialDataSource collection
@@ -130,8 +122,8 @@ public class SourceCollectionRequestBuilder extends BaseRequestBuilder<SourceCol
      * @return the collection request builder
      */
     @Nonnull
-    public NoncustodialDataSourceCollectionWithReferencesRequestBuilder noncustodialSources() {
-        return new NoncustodialDataSourceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialSources"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionWithReferencesRequestBuilder noncustodialSources() {
+        return new com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialSources"), getClient(), null);
     }
 
     /**
@@ -141,8 +133,8 @@ public class SourceCollectionRequestBuilder extends BaseRequestBuilder<SourceCol
      * @param id the item identifier
      */
     @Nonnull
-    public NoncustodialDataSourceWithReferenceRequestBuilder noncustodialSources(@Nonnull final String id) {
-        return new NoncustodialDataSourceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceWithReferenceRequestBuilder noncustodialSources(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialSources") + "/" + id, getClient(), null);
     }
 
     /**

@@ -9,9 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.search.models.Acronym;
-import com.microsoft.graph.search.models.Bookmark;
-import com.microsoft.graph.search.models.Qna;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.search.requests.AcronymCollectionPage;
 import com.microsoft.graph.search.requests.BookmarkCollectionPage;
@@ -39,7 +36,7 @@ public class SearchEntity extends Entity implements IJsonBackedObject {
     @SerializedName(value = "acronyms", alternate = {"Acronyms"})
     @Expose
 	@Nullable
-    public AcronymCollectionPage acronyms;
+    public com.microsoft.graph.search.requests.AcronymCollectionPage acronyms;
 
     /**
      * The Bookmarks.
@@ -48,7 +45,7 @@ public class SearchEntity extends Entity implements IJsonBackedObject {
     @SerializedName(value = "bookmarks", alternate = {"Bookmarks"})
     @Expose
 	@Nullable
-    public BookmarkCollectionPage bookmarks;
+    public com.microsoft.graph.search.requests.BookmarkCollectionPage bookmarks;
 
     /**
      * The Qnas.
@@ -57,7 +54,7 @@ public class SearchEntity extends Entity implements IJsonBackedObject {
     @SerializedName(value = "qnas", alternate = {"Qnas"})
     @Expose
 	@Nullable
-    public QnaCollectionPage qnas;
+    public com.microsoft.graph.search.requests.QnaCollectionPage qnas;
 
 
     /**
@@ -70,15 +67,15 @@ public class SearchEntity extends Entity implements IJsonBackedObject {
 
 
         if (json.has("acronyms")) {
-            acronyms = serializer.deserializeObject(json.get("acronyms"), AcronymCollectionPage.class);
+            acronyms = serializer.deserializeObject(json.get("acronyms"), com.microsoft.graph.search.requests.AcronymCollectionPage.class);
         }
 
         if (json.has("bookmarks")) {
-            bookmarks = serializer.deserializeObject(json.get("bookmarks"), BookmarkCollectionPage.class);
+            bookmarks = serializer.deserializeObject(json.get("bookmarks"), com.microsoft.graph.search.requests.BookmarkCollectionPage.class);
         }
 
         if (json.has("qnas")) {
-            qnas = serializer.deserializeObject(json.get("qnas"), QnaCollectionPage.class);
+            qnas = serializer.deserializeObject(json.get("qnas"), com.microsoft.graph.search.requests.QnaCollectionPage.class);
         }
     }
 }

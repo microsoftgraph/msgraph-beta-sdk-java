@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Compliance;
-import com.microsoft.graph.ediscovery.requests.EdiscoveryrootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class ComplianceRequestBuilder extends BaseRequestBuilder<Compliance> {
      * @return the EdiscoveryrootRequestBuilder instance
      */
     @Nonnull
-    public EdiscoveryrootRequestBuilder ediscovery() {
-        return new EdiscoveryrootRequestBuilder(getRequestUrlWithAdditionalSegment("ediscovery"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.EdiscoveryrootRequestBuilder ediscovery() {
+        return new com.microsoft.graph.ediscovery.requests.EdiscoveryrootRequestBuilder(getRequestUrlWithAdditionalSegment("ediscovery"), getClient(), null);
     }
 }

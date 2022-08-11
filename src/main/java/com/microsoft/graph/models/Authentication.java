@@ -9,17 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.EmailAuthenticationMethod;
-import com.microsoft.graph.models.Fido2AuthenticationMethod;
-import com.microsoft.graph.models.AuthenticationMethod;
-import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethod;
-import com.microsoft.graph.models.LongRunningOperation;
-import com.microsoft.graph.models.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
-import com.microsoft.graph.models.PasswordAuthenticationMethod;
-import com.microsoft.graph.models.PhoneAuthenticationMethod;
-import com.microsoft.graph.models.SoftwareOathAuthenticationMethod;
-import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
-import com.microsoft.graph.models.WindowsHelloForBusinessAuthenticationMethod;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EmailAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.Fido2AuthenticationMethodCollectionPage;
@@ -55,7 +44,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "emailMethods", alternate = {"EmailMethods"})
     @Expose
 	@Nullable
-    public EmailAuthenticationMethodCollectionPage emailMethods;
+    public com.microsoft.graph.requests.EmailAuthenticationMethodCollectionPage emailMethods;
 
     /**
      * The Fido2Methods.
@@ -64,7 +53,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "fido2Methods", alternate = {"Fido2Methods"})
     @Expose
 	@Nullable
-    public Fido2AuthenticationMethodCollectionPage fido2Methods;
+    public com.microsoft.graph.requests.Fido2AuthenticationMethodCollectionPage fido2Methods;
 
     /**
      * The Methods.
@@ -73,7 +62,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "methods", alternate = {"Methods"})
     @Expose
 	@Nullable
-    public AuthenticationMethodCollectionPage methods;
+    public com.microsoft.graph.requests.AuthenticationMethodCollectionPage methods;
 
     /**
      * The Microsoft Authenticator Methods.
@@ -84,7 +73,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "microsoftAuthenticatorMethods", alternate = {"MicrosoftAuthenticatorMethods"})
     @Expose
 	@Nullable
-    public MicrosoftAuthenticatorAuthenticationMethodCollectionPage microsoftAuthenticatorMethods;
+    public com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodCollectionPage microsoftAuthenticatorMethods;
 
     /**
      * The Operations.
@@ -93,7 +82,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public LongRunningOperationCollectionPage operations;
+    public com.microsoft.graph.requests.LongRunningOperationCollectionPage operations;
 
     /**
      * The Passwordless Microsoft Authenticator Methods.
@@ -102,7 +91,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "passwordlessMicrosoftAuthenticatorMethods", alternate = {"PasswordlessMicrosoftAuthenticatorMethods"})
     @Expose
 	@Nullable
-    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage passwordlessMicrosoftAuthenticatorMethods;
+    public com.microsoft.graph.requests.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage passwordlessMicrosoftAuthenticatorMethods;
 
     /**
      * The Password Methods.
@@ -111,7 +100,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "passwordMethods", alternate = {"PasswordMethods"})
     @Expose
 	@Nullable
-    public PasswordAuthenticationMethodCollectionPage passwordMethods;
+    public com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionPage passwordMethods;
 
     /**
      * The Phone Methods.
@@ -120,7 +109,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "phoneMethods", alternate = {"PhoneMethods"})
     @Expose
 	@Nullable
-    public PhoneAuthenticationMethodCollectionPage phoneMethods;
+    public com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionPage phoneMethods;
 
     /**
      * The Software Oath Methods.
@@ -129,7 +118,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "softwareOathMethods", alternate = {"SoftwareOathMethods"})
     @Expose
 	@Nullable
-    public SoftwareOathAuthenticationMethodCollectionPage softwareOathMethods;
+    public com.microsoft.graph.requests.SoftwareOathAuthenticationMethodCollectionPage softwareOathMethods;
 
     /**
      * The Temporary Access Pass Methods.
@@ -138,7 +127,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "temporaryAccessPassMethods", alternate = {"TemporaryAccessPassMethods"})
     @Expose
 	@Nullable
-    public TemporaryAccessPassAuthenticationMethodCollectionPage temporaryAccessPassMethods;
+    public com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionPage temporaryAccessPassMethods;
 
     /**
      * The Windows Hello For Business Methods.
@@ -147,7 +136,7 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsHelloForBusinessMethods", alternate = {"WindowsHelloForBusinessMethods"})
     @Expose
 	@Nullable
-    public WindowsHelloForBusinessAuthenticationMethodCollectionPage windowsHelloForBusinessMethods;
+    public com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionPage windowsHelloForBusinessMethods;
 
 
     /**
@@ -160,47 +149,47 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
 
         if (json.has("emailMethods")) {
-            emailMethods = serializer.deserializeObject(json.get("emailMethods"), EmailAuthenticationMethodCollectionPage.class);
+            emailMethods = serializer.deserializeObject(json.get("emailMethods"), com.microsoft.graph.requests.EmailAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("fido2Methods")) {
-            fido2Methods = serializer.deserializeObject(json.get("fido2Methods"), Fido2AuthenticationMethodCollectionPage.class);
+            fido2Methods = serializer.deserializeObject(json.get("fido2Methods"), com.microsoft.graph.requests.Fido2AuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("methods")) {
-            methods = serializer.deserializeObject(json.get("methods"), AuthenticationMethodCollectionPage.class);
+            methods = serializer.deserializeObject(json.get("methods"), com.microsoft.graph.requests.AuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("microsoftAuthenticatorMethods")) {
-            microsoftAuthenticatorMethods = serializer.deserializeObject(json.get("microsoftAuthenticatorMethods"), MicrosoftAuthenticatorAuthenticationMethodCollectionPage.class);
+            microsoftAuthenticatorMethods = serializer.deserializeObject(json.get("microsoftAuthenticatorMethods"), com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), LongRunningOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.LongRunningOperationCollectionPage.class);
         }
 
         if (json.has("passwordlessMicrosoftAuthenticatorMethods")) {
-            passwordlessMicrosoftAuthenticatorMethods = serializer.deserializeObject(json.get("passwordlessMicrosoftAuthenticatorMethods"), PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage.class);
+            passwordlessMicrosoftAuthenticatorMethods = serializer.deserializeObject(json.get("passwordlessMicrosoftAuthenticatorMethods"), com.microsoft.graph.requests.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("passwordMethods")) {
-            passwordMethods = serializer.deserializeObject(json.get("passwordMethods"), PasswordAuthenticationMethodCollectionPage.class);
+            passwordMethods = serializer.deserializeObject(json.get("passwordMethods"), com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("phoneMethods")) {
-            phoneMethods = serializer.deserializeObject(json.get("phoneMethods"), PhoneAuthenticationMethodCollectionPage.class);
+            phoneMethods = serializer.deserializeObject(json.get("phoneMethods"), com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("softwareOathMethods")) {
-            softwareOathMethods = serializer.deserializeObject(json.get("softwareOathMethods"), SoftwareOathAuthenticationMethodCollectionPage.class);
+            softwareOathMethods = serializer.deserializeObject(json.get("softwareOathMethods"), com.microsoft.graph.requests.SoftwareOathAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("temporaryAccessPassMethods")) {
-            temporaryAccessPassMethods = serializer.deserializeObject(json.get("temporaryAccessPassMethods"), TemporaryAccessPassAuthenticationMethodCollectionPage.class);
+            temporaryAccessPassMethods = serializer.deserializeObject(json.get("temporaryAccessPassMethods"), com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("windowsHelloForBusinessMethods")) {
-            windowsHelloForBusinessMethods = serializer.deserializeObject(json.get("windowsHelloForBusinessMethods"), WindowsHelloForBusinessAuthenticationMethodCollectionPage.class);
+            windowsHelloForBusinessMethods = serializer.deserializeObject(json.get("windowsHelloForBusinessMethods"), com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionPage.class);
         }
     }
 }

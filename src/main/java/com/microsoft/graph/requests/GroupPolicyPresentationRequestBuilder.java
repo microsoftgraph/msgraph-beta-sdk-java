@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GroupPolicyPresentation;
-import com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class GroupPolicyPresentationRequestBuilder extends BaseRequestBuilder<Gr
      * @return the GroupPolicyDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public GroupPolicyDefinitionWithReferenceRequestBuilder definition() {
-        return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder definition() {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 }

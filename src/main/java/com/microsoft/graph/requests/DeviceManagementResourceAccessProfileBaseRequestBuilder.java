@@ -10,8 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementResourceAccessProfileBase;
 import com.microsoft.graph.models.DeviceManagementResourceAccessProfileAssignment;
 import com.microsoft.graph.models.PolicyPlatformType;
-import com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +65,8 @@ public class DeviceManagementResourceAccessProfileBaseRequestBuilder extends Bas
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder assignments() {
-        return new DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -78,8 +76,8 @@ public class DeviceManagementResourceAccessProfileBaseRequestBuilder extends Bas
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementResourceAccessProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new DeviceManagementResourceAccessProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

@@ -16,7 +16,6 @@ import com.microsoft.graph.models.NonEapAuthenticationMethodForEapTtlsType;
 import com.microsoft.graph.models.WindowsCertificateProfileBase;
 import com.microsoft.graph.models.Windows81TrustedRootCertificate;
 import com.microsoft.graph.models.DeviceConfiguration;
-import com.microsoft.graph.requests.Windows81TrustedRootCertificateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -227,7 +226,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Specify root certificates for server validation. This collection can contain a maximum of 500 elements.
      */
 	@Nullable
-    public Windows81TrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
+    public com.microsoft.graph.requests.Windows81TrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
 
     /**
      * The Secondary Identity Certificate For Client Authentication.
@@ -258,7 +257,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
 
 
         if (json.has("rootCertificatesForServerValidation")) {
-            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation"), Windows81TrustedRootCertificateCollectionPage.class);
+            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation"), com.microsoft.graph.requests.Windows81TrustedRootCertificateCollectionPage.class);
         }
     }
 }

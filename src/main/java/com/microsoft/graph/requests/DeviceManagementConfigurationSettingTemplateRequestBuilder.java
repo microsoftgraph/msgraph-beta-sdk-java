@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingTemplate;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceManagementConfigurationSettingTemplateRequestBuilder extends 
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder settingDefinitions() {
-        return new DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder settingDefinitions() {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DeviceManagementConfigurationSettingTemplateRequestBuilder extends 
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementConfigurationSettingDefinitionRequestBuilder settingDefinitions(@Nonnull final String id) {
-        return new DeviceManagementConfigurationSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionRequestBuilder settingDefinitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
     }
 }

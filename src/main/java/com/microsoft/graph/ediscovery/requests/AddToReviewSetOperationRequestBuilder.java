@@ -8,8 +8,6 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.AddToReviewSetOperation;
-import com.microsoft.graph.ediscovery.requests.ReviewSetWithReferenceRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.SourceCollectionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class AddToReviewSetOperationRequestBuilder extends BaseRequestBuilder<Ad
      * @return the ReviewSetWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ReviewSetWithReferenceRequestBuilder reviewSet() {
-        return new ReviewSetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSet"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.ReviewSetWithReferenceRequestBuilder reviewSet() {
+        return new com.microsoft.graph.ediscovery.requests.ReviewSetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSet"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AddToReviewSetOperationRequestBuilder extends BaseRequestBuilder<Ad
      * @return the SourceCollectionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public SourceCollectionWithReferenceRequestBuilder sourceCollection() {
-        return new SourceCollectionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollection"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.SourceCollectionWithReferenceRequestBuilder sourceCollection() {
+        return new com.microsoft.graph.ediscovery.requests.SourceCollectionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollection"), getClient(), null);
     }
 }

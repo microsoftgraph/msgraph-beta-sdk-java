@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
-import com.microsoft.graph.requests.RoleScopeTagCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.RoleScopeTagWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequ
      * @return the RoleDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public RoleDefinitionWithReferenceRequestBuilder roleDefinition() {
-        return new RoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
+    public com.microsoft.graph.requests.RoleDefinitionWithReferenceRequestBuilder roleDefinition() {
+        return new com.microsoft.graph.requests.RoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
     /**
      *  Gets a request builder for the RoleScopeTag collection
@@ -74,8 +72,8 @@ public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequ
      * @return the collection request builder
      */
     @Nonnull
-    public RoleScopeTagCollectionWithReferencesRequestBuilder roleScopeTags() {
-        return new RoleScopeTagCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("roleScopeTags"), getClient(), null);
+    public com.microsoft.graph.requests.RoleScopeTagCollectionWithReferencesRequestBuilder roleScopeTags() {
+        return new com.microsoft.graph.requests.RoleScopeTagCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("roleScopeTags"), getClient(), null);
     }
 
     /**
@@ -85,7 +83,7 @@ public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequ
      * @param id the item identifier
      */
     @Nonnull
-    public RoleScopeTagWithReferenceRequestBuilder roleScopeTags(@Nonnull final String id) {
-        return new RoleScopeTagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleScopeTags") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RoleScopeTagWithReferenceRequestBuilder roleScopeTags(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RoleScopeTagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleScopeTags") + "/" + id, getClient(), null);
     }
 }

@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MacOSSoftwareUpdateCategory;
-import com.microsoft.graph.models.MacOSSoftwareUpdateStateSummary;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MacOSSoftwareUpdateStateSummaryCollectionPage;
 
@@ -108,7 +107,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements IJsonB
     @SerializedName(value = "updateStateSummaries", alternate = {"UpdateStateSummaries"})
     @Expose
 	@Nullable
-    public MacOSSoftwareUpdateStateSummaryCollectionPage updateStateSummaries;
+    public com.microsoft.graph.requests.MacOSSoftwareUpdateStateSummaryCollectionPage updateStateSummaries;
 
 
     /**
@@ -121,7 +120,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements IJsonB
 
 
         if (json.has("updateStateSummaries")) {
-            updateStateSummaries = serializer.deserializeObject(json.get("updateStateSummaries"), MacOSSoftwareUpdateStateSummaryCollectionPage.class);
+            updateStateSummaries = serializer.deserializeObject(json.get("updateStateSummaries"), com.microsoft.graph.requests.MacOSSoftwareUpdateStateSummaryCollectionPage.class);
         }
     }
 }

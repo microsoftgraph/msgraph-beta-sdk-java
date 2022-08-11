@@ -8,7 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.Security;
-import com.microsoft.graph.security.requests.InformationProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
      * @return the InformationProtectionRequestBuilder instance
      */
     @Nonnull
-    public InformationProtectionRequestBuilder informationProtection() {
-        return new InformationProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("informationProtection"), getClient(), null);
+    public com.microsoft.graph.security.requests.InformationProtectionRequestBuilder informationProtection() {
+        return new com.microsoft.graph.security.requests.InformationProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("informationProtection"), getClient(), null);
     }
 }

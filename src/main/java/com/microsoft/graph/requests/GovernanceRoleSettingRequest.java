@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GovernanceRoleSetting;
-import com.microsoft.graph.requests.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.GovernanceRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

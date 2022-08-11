@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamsAppDefinition;
-import com.microsoft.graph.requests.TeamworkBotRequestBuilder;
-import com.microsoft.graph.requests.TeamsAppIconRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class TeamsAppDefinitionRequestBuilder extends BaseRequestBuilder<TeamsAp
      * @return the TeamworkBotRequestBuilder instance
      */
     @Nonnull
-    public TeamworkBotRequestBuilder bot() {
-        return new TeamworkBotRequestBuilder(getRequestUrlWithAdditionalSegment("bot"), getClient(), null);
+    public com.microsoft.graph.requests.TeamworkBotRequestBuilder bot() {
+        return new com.microsoft.graph.requests.TeamworkBotRequestBuilder(getRequestUrlWithAdditionalSegment("bot"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class TeamsAppDefinitionRequestBuilder extends BaseRequestBuilder<TeamsAp
      * @return the TeamsAppIconRequestBuilder instance
      */
     @Nonnull
-    public TeamsAppIconRequestBuilder colorIcon() {
-        return new TeamsAppIconRequestBuilder(getRequestUrlWithAdditionalSegment("colorIcon"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppIconRequestBuilder colorIcon() {
+        return new com.microsoft.graph.requests.TeamsAppIconRequestBuilder(getRequestUrlWithAdditionalSegment("colorIcon"), getClient(), null);
     }
 
     /**
@@ -85,7 +83,7 @@ public class TeamsAppDefinitionRequestBuilder extends BaseRequestBuilder<TeamsAp
      * @return the TeamsAppIconRequestBuilder instance
      */
     @Nonnull
-    public TeamsAppIconRequestBuilder outlineIcon() {
-        return new TeamsAppIconRequestBuilder(getRequestUrlWithAdditionalSegment("outlineIcon"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppIconRequestBuilder outlineIcon() {
+        return new com.microsoft.graph.requests.TeamsAppIconRequestBuilder(getRequestUrlWithAdditionalSegment("outlineIcon"), getClient(), null);
     }
 }

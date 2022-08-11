@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementScriptUserState;
-import com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementScriptDeviceStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceManagementScriptUserStateRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
-        return new DeviceManagementScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
+        return new com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DeviceManagementScriptUserStateRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementScriptDeviceStateRequestBuilder deviceRunStates(@Nonnull final String id) {
-        return new DeviceManagementScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementScriptDeviceStateRequestBuilder deviceRunStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
     }
 }

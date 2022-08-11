@@ -14,7 +14,6 @@ import com.microsoft.graph.models.ActionUrl;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStepVersion;
 import com.microsoft.graph.managedtenants.models.ManagementTemplate;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -135,7 +134,7 @@ public class ManagementTemplateStep extends Entity implements IJsonBackedObject 
      * 
      */
 	@Nullable
-    public ManagementTemplateStepVersionCollectionPage versions;
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage versions;
 
 
     /**
@@ -148,7 +147,7 @@ public class ManagementTemplateStep extends Entity implements IJsonBackedObject 
 
 
         if (json.has("versions")) {
-            versions = serializer.deserializeObject(json.get("versions"), ManagementTemplateStepVersionCollectionPage.class);
+            versions = serializer.deserializeObject(json.get("versions"), com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage.class);
         }
     }
 }

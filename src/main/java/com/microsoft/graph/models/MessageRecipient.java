@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MessageStatus;
-import com.microsoft.graph.models.MessageEvent;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MessageEventCollectionPage;
 
@@ -54,7 +53,7 @@ public class MessageRecipient extends Entity implements IJsonBackedObject {
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose
 	@Nullable
-    public MessageEventCollectionPage events;
+    public com.microsoft.graph.requests.MessageEventCollectionPage events;
 
 
     /**
@@ -67,7 +66,7 @@ public class MessageRecipient extends Entity implements IJsonBackedObject {
 
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events"), MessageEventCollectionPage.class);
+            events = serializer.deserializeObject(json.get("events"), com.microsoft.graph.requests.MessageEventCollectionPage.class);
         }
     }
 }

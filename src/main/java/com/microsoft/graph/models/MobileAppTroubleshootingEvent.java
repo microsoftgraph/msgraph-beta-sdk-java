@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MobileAppTroubleshootingHistoryItem;
-import com.microsoft.graph.models.AppLogCollectionRequest;
 import com.microsoft.graph.models.DeviceManagementTroubleshootingEvent;
 import com.microsoft.graph.requests.AppLogCollectionRequestCollectionPage;
 
@@ -72,7 +71,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     @SerializedName(value = "appLogCollectionRequests", alternate = {"AppLogCollectionRequests"})
     @Expose
 	@Nullable
-    public AppLogCollectionRequestCollectionPage appLogCollectionRequests;
+    public com.microsoft.graph.requests.AppLogCollectionRequestCollectionPage appLogCollectionRequests;
 
 
     /**
@@ -85,7 +84,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
 
 
         if (json.has("appLogCollectionRequests")) {
-            appLogCollectionRequests = serializer.deserializeObject(json.get("appLogCollectionRequests"), AppLogCollectionRequestCollectionPage.class);
+            appLogCollectionRequests = serializer.deserializeObject(json.get("appLogCollectionRequests"), com.microsoft.graph.requests.AppLogCollectionRequestCollectionPage.class);
         }
     }
 }

@@ -13,8 +13,6 @@ import com.microsoft.graph.models.AttributeDefinition;
 import com.microsoft.graph.models.ParseExpressionResponse;
 import com.microsoft.graph.models.FilterOperatorSchema;
 import com.microsoft.graph.models.AttributeMappingFunctionSchema;
-import com.microsoft.graph.requests.DirectoryDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.DirectoryDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +68,8 @@ public class SynchronizationSchemaRequestBuilder extends BaseRequestBuilder<Sync
      * @return the collection request builder
      */
     @Nonnull
-    public DirectoryDefinitionCollectionRequestBuilder directories() {
-        return new DirectoryDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("directories"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryDefinitionCollectionRequestBuilder directories() {
+        return new com.microsoft.graph.requests.DirectoryDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("directories"), getClient(), null);
     }
 
     /**
@@ -81,8 +79,8 @@ public class SynchronizationSchemaRequestBuilder extends BaseRequestBuilder<Sync
      * @param id the item identifier
      */
     @Nonnull
-    public DirectoryDefinitionRequestBuilder directories(@Nonnull final String id) {
-        return new DirectoryDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("directories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DirectoryDefinitionRequestBuilder directories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("directories") + "/" + id, getClient(), null);
     }
 
     /**

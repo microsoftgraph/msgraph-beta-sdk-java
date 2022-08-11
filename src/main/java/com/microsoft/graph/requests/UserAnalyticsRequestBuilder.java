@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserAnalytics;
-import com.microsoft.graph.requests.ActivityStatisticsCollectionRequestBuilder;
-import com.microsoft.graph.requests.ActivityStatisticsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class UserAnalyticsRequestBuilder extends BaseRequestBuilder<UserAnalytic
      * @return the collection request builder
      */
     @Nonnull
-    public ActivityStatisticsCollectionRequestBuilder activityStatistics() {
-        return new ActivityStatisticsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activityStatistics"), getClient(), null);
+    public com.microsoft.graph.requests.ActivityStatisticsCollectionRequestBuilder activityStatistics() {
+        return new com.microsoft.graph.requests.ActivityStatisticsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activityStatistics"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class UserAnalyticsRequestBuilder extends BaseRequestBuilder<UserAnalytic
      * @param id the item identifier
      */
     @Nonnull
-    public ActivityStatisticsRequestBuilder activityStatistics(@Nonnull final String id) {
-        return new ActivityStatisticsRequestBuilder(getRequestUrlWithAdditionalSegment("activityStatistics") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ActivityStatisticsRequestBuilder activityStatistics(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ActivityStatisticsRequestBuilder(getRequestUrlWithAdditionalSegment("activityStatistics") + "/" + id, getClient(), null);
     }
 }

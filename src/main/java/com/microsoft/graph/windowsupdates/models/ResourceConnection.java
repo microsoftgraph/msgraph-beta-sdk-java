@@ -28,7 +28,7 @@ public class ResourceConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * The state of the connection. The possible values are: connected, notAuthorized, notFound, unknownFutureValue.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

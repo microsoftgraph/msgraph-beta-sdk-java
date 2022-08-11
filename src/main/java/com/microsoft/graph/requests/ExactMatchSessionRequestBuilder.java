@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ExactMatchSession;
-import com.microsoft.graph.requests.ExactMatchUploadAgentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +63,8 @@ public class ExactMatchSessionRequestBuilder extends BaseRequestBuilder<ExactMat
      * @return the ExactMatchUploadAgentRequestBuilder instance
      */
     @Nonnull
-    public ExactMatchUploadAgentRequestBuilder uploadAgent() {
-        return new ExactMatchUploadAgentRequestBuilder(getRequestUrlWithAdditionalSegment("uploadAgent"), getClient(), null);
+    public com.microsoft.graph.requests.ExactMatchUploadAgentRequestBuilder uploadAgent() {
+        return new com.microsoft.graph.requests.ExactMatchUploadAgentRequestBuilder(getRequestUrlWithAdditionalSegment("uploadAgent"), getClient(), null);
     }
 
     /**

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GroupPolicyDefinitionFile;
-import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class GroupPolicyDefinitionFileRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public GroupPolicyDefinitionCollectionWithReferencesRequestBuilder definitions() {
-        return new GroupPolicyDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("definitions"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesRequestBuilder definitions() {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("definitions"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class GroupPolicyDefinitionFileRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public GroupPolicyDefinitionWithReferenceRequestBuilder definitions(@Nonnull final String id) {
-        return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder definitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitions") + "/" + id, getClient(), null);
     }
 }

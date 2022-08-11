@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TermsAndConditionsGroupAssignment;
-import com.microsoft.graph.requests.TermsAndConditionsWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class TermsAndConditionsGroupAssignmentRequestBuilder extends BaseRequest
      * @return the TermsAndConditionsWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TermsAndConditionsWithReferenceRequestBuilder termsAndConditions() {
-        return new TermsAndConditionsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions"), getClient(), null);
+    public com.microsoft.graph.requests.TermsAndConditionsWithReferenceRequestBuilder termsAndConditions() {
+        return new com.microsoft.graph.requests.TermsAndConditionsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions"), getClient(), null);
     }
 }

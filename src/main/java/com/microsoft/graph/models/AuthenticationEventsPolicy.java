@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AuthenticationListener;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AuthenticationListenerCollectionPage;
 
@@ -35,7 +34,7 @@ public class AuthenticationEventsPolicy extends Entity implements IJsonBackedObj
     @SerializedName(value = "onSignupStart", alternate = {"OnSignupStart"})
     @Expose
 	@Nullable
-    public AuthenticationListenerCollectionPage onSignupStart;
+    public com.microsoft.graph.requests.AuthenticationListenerCollectionPage onSignupStart;
 
 
     /**
@@ -48,7 +47,7 @@ public class AuthenticationEventsPolicy extends Entity implements IJsonBackedObj
 
 
         if (json.has("onSignupStart")) {
-            onSignupStart = serializer.deserializeObject(json.get("onSignupStart"), AuthenticationListenerCollectionPage.class);
+            onSignupStart = serializer.deserializeObject(json.get("onSignupStart"), com.microsoft.graph.requests.AuthenticationListenerCollectionPage.class);
         }
     }
 }

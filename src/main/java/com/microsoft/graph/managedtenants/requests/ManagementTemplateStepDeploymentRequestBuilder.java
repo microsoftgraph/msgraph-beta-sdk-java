@@ -8,7 +8,6 @@ package com.microsoft.graph.managedtenants.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStepDeployment;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +64,8 @@ public class ManagementTemplateStepDeploymentRequestBuilder extends BaseRequestB
      * @return the ManagementTemplateStepVersionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ManagementTemplateStepVersionWithReferenceRequestBuilder templateStepVersion() {
-        return new ManagementTemplateStepVersionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("templateStepVersion"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionWithReferenceRequestBuilder templateStepVersion() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("templateStepVersion"), getClient(), null);
     }
 
     /**

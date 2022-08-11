@@ -9,10 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PlannerTask;
 import com.microsoft.graph.models.PlannerDelta;
-import com.microsoft.graph.requests.PlannerAssignedToTaskBoardTaskFormatRequestBuilder;
-import com.microsoft.graph.requests.PlannerBucketTaskBoardTaskFormatRequestBuilder;
-import com.microsoft.graph.requests.PlannerTaskDetailsRequestBuilder;
-import com.microsoft.graph.requests.PlannerProgressTaskBoardTaskFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +64,8 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
      * @return the PlannerAssignedToTaskBoardTaskFormatRequestBuilder instance
      */
     @Nonnull
-    public PlannerAssignedToTaskBoardTaskFormatRequestBuilder assignedToTaskBoardFormat() {
-        return new PlannerAssignedToTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("assignedToTaskBoardFormat"), getClient(), null);
+    public com.microsoft.graph.requests.PlannerAssignedToTaskBoardTaskFormatRequestBuilder assignedToTaskBoardFormat() {
+        return new com.microsoft.graph.requests.PlannerAssignedToTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("assignedToTaskBoardFormat"), getClient(), null);
     }
 
     /**
@@ -78,8 +74,8 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
      * @return the PlannerBucketTaskBoardTaskFormatRequestBuilder instance
      */
     @Nonnull
-    public PlannerBucketTaskBoardTaskFormatRequestBuilder bucketTaskBoardFormat() {
-        return new PlannerBucketTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("bucketTaskBoardFormat"), getClient(), null);
+    public com.microsoft.graph.requests.PlannerBucketTaskBoardTaskFormatRequestBuilder bucketTaskBoardFormat() {
+        return new com.microsoft.graph.requests.PlannerBucketTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("bucketTaskBoardFormat"), getClient(), null);
     }
 
     /**
@@ -88,8 +84,8 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
      * @return the PlannerTaskDetailsRequestBuilder instance
      */
     @Nonnull
-    public PlannerTaskDetailsRequestBuilder details() {
-        return new PlannerTaskDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("details"), getClient(), null);
+    public com.microsoft.graph.requests.PlannerTaskDetailsRequestBuilder details() {
+        return new com.microsoft.graph.requests.PlannerTaskDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("details"), getClient(), null);
     }
 
     /**
@@ -98,7 +94,7 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder<PlannerTask> {
      * @return the PlannerProgressTaskBoardTaskFormatRequestBuilder instance
      */
     @Nonnull
-    public PlannerProgressTaskBoardTaskFormatRequestBuilder progressTaskBoardFormat() {
-        return new PlannerProgressTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("progressTaskBoardFormat"), getClient(), null);
+    public com.microsoft.graph.requests.PlannerProgressTaskBoardTaskFormatRequestBuilder progressTaskBoardFormat() {
+        return new com.microsoft.graph.requests.PlannerProgressTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("progressTaskBoardFormat"), getClient(), null);
     }
 }

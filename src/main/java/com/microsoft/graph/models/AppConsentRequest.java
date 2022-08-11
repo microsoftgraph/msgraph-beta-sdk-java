@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AppConsentRequestScope;
-import com.microsoft.graph.models.UserConsentRequest;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.UserConsentRequestCollectionPage;
 
@@ -72,7 +71,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userConsentRequests", alternate = {"UserConsentRequests"})
     @Expose
 	@Nullable
-    public UserConsentRequestCollectionPage userConsentRequests;
+    public com.microsoft.graph.requests.UserConsentRequestCollectionPage userConsentRequests;
 
 
     /**
@@ -85,7 +84,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
 
 
         if (json.has("userConsentRequests")) {
-            userConsentRequests = serializer.deserializeObject(json.get("userConsentRequests"), UserConsentRequestCollectionPage.class);
+            userConsentRequests = serializer.deserializeObject(json.get("userConsentRequests"), com.microsoft.graph.requests.UserConsentRequestCollectionPage.class);
         }
     }
 }

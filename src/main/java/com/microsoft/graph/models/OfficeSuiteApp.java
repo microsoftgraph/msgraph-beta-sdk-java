@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ExcludedApps;
 import com.microsoft.graph.models.OfficeSuiteInstallProgressDisplayLevel;
 import com.microsoft.graph.models.WindowsArchitecture;
+import com.microsoft.graph.models.OfficeSuiteDefaultFileFormatType;
 import com.microsoft.graph.models.OfficeProductId;
 import com.microsoft.graph.models.OfficeUpdateChannel;
 import com.microsoft.graph.models.MobileApp;
@@ -84,6 +85,15 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
     @Expose
 	@Nullable
     public EnumSet<WindowsArchitecture> officePlatformArchitecture;
+
+    /**
+     * The Office Suite App Default File Format.
+     * The property to represent the Office365 default file format type. Possible values are: notConfigured, officeOpenXMLFormat, officeOpenDocumentFormat, unknownFutureValue.
+     */
+    @SerializedName(value = "officeSuiteAppDefaultFileFormat", alternate = {"OfficeSuiteAppDefaultFileFormat"})
+    @Expose
+	@Nullable
+    public OfficeSuiteDefaultFileFormatType officeSuiteAppDefaultFileFormat;
 
     /**
      * The Product Ids.

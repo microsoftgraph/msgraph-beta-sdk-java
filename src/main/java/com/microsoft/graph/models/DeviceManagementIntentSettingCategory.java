@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.DeviceManagementSettingCategory;
 import com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionPage;
 
@@ -35,7 +34,7 @@ public class DeviceManagementIntentSettingCategory extends DeviceManagementSetti
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
 	@Nullable
-    public DeviceManagementSettingInstanceCollectionPage settings;
+    public com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionPage settings;
 
 
     /**
@@ -48,7 +47,7 @@ public class DeviceManagementIntentSettingCategory extends DeviceManagementSetti
 
 
         if (json.has("settings")) {
-            settings = serializer.deserializeObject(json.get("settings"), DeviceManagementSettingInstanceCollectionPage.class);
+            settings = serializer.deserializeObject(json.get("settings"), com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionPage.class);
         }
     }
 }

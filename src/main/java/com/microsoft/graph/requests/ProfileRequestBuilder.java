@@ -8,44 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Profile;
-import com.microsoft.graph.requests.UserAccountInformationCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserAccountInformationRequestBuilder;
-import com.microsoft.graph.requests.ItemAddressCollectionRequestBuilder;
-import com.microsoft.graph.requests.ItemAddressRequestBuilder;
-import com.microsoft.graph.requests.PersonAnnualEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.PersonAnnualEventRequestBuilder;
-import com.microsoft.graph.requests.PersonAwardCollectionRequestBuilder;
-import com.microsoft.graph.requests.PersonAwardRequestBuilder;
-import com.microsoft.graph.requests.PersonCertificationCollectionRequestBuilder;
-import com.microsoft.graph.requests.PersonCertificationRequestBuilder;
-import com.microsoft.graph.requests.EducationalActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.EducationalActivityRequestBuilder;
-import com.microsoft.graph.requests.ItemEmailCollectionRequestBuilder;
-import com.microsoft.graph.requests.ItemEmailRequestBuilder;
-import com.microsoft.graph.requests.PersonInterestCollectionRequestBuilder;
-import com.microsoft.graph.requests.PersonInterestRequestBuilder;
-import com.microsoft.graph.requests.LanguageProficiencyCollectionRequestBuilder;
-import com.microsoft.graph.requests.LanguageProficiencyRequestBuilder;
-import com.microsoft.graph.requests.PersonNameCollectionRequestBuilder;
-import com.microsoft.graph.requests.PersonNameRequestBuilder;
-import com.microsoft.graph.requests.PersonAnnotationCollectionRequestBuilder;
-import com.microsoft.graph.requests.PersonAnnotationRequestBuilder;
-import com.microsoft.graph.requests.ItemPatentCollectionRequestBuilder;
-import com.microsoft.graph.requests.ItemPatentRequestBuilder;
-import com.microsoft.graph.requests.ItemPhoneCollectionRequestBuilder;
-import com.microsoft.graph.requests.ItemPhoneRequestBuilder;
-import com.microsoft.graph.requests.WorkPositionCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkPositionRequestBuilder;
-import com.microsoft.graph.requests.ProjectParticipationCollectionRequestBuilder;
-import com.microsoft.graph.requests.ProjectParticipationRequestBuilder;
-import com.microsoft.graph.requests.ItemPublicationCollectionRequestBuilder;
-import com.microsoft.graph.requests.ItemPublicationRequestBuilder;
-import com.microsoft.graph.requests.SkillProficiencyCollectionRequestBuilder;
-import com.microsoft.graph.requests.SkillProficiencyRequestBuilder;
-import com.microsoft.graph.requests.WebAccountCollectionRequestBuilder;
-import com.microsoft.graph.requests.WebAccountRequestBuilder;
-import com.microsoft.graph.requests.PersonWebsiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.PersonWebsiteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -100,8 +62,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public UserAccountInformationCollectionRequestBuilder account() {
-        return new UserAccountInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
+    public com.microsoft.graph.requests.UserAccountInformationCollectionRequestBuilder account() {
+        return new com.microsoft.graph.requests.UserAccountInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 
     /**
@@ -111,8 +73,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public UserAccountInformationRequestBuilder account(@Nonnull final String id) {
-        return new UserAccountInformationRequestBuilder(getRequestUrlWithAdditionalSegment("account") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserAccountInformationRequestBuilder account(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserAccountInformationRequestBuilder(getRequestUrlWithAdditionalSegment("account") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ItemAddress collection
@@ -120,8 +82,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public ItemAddressCollectionRequestBuilder addresses() {
-        return new ItemAddressCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("addresses"), getClient(), null);
+    public com.microsoft.graph.requests.ItemAddressCollectionRequestBuilder addresses() {
+        return new com.microsoft.graph.requests.ItemAddressCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("addresses"), getClient(), null);
     }
 
     /**
@@ -131,8 +93,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public ItemAddressRequestBuilder addresses(@Nonnull final String id) {
-        return new ItemAddressRequestBuilder(getRequestUrlWithAdditionalSegment("addresses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ItemAddressRequestBuilder addresses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ItemAddressRequestBuilder(getRequestUrlWithAdditionalSegment("addresses") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PersonAnnualEvent collection
@@ -140,8 +102,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public PersonAnnualEventCollectionRequestBuilder anniversaries() {
-        return new PersonAnnualEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("anniversaries"), getClient(), null);
+    public com.microsoft.graph.requests.PersonAnnualEventCollectionRequestBuilder anniversaries() {
+        return new com.microsoft.graph.requests.PersonAnnualEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("anniversaries"), getClient(), null);
     }
 
     /**
@@ -151,8 +113,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public PersonAnnualEventRequestBuilder anniversaries(@Nonnull final String id) {
-        return new PersonAnnualEventRequestBuilder(getRequestUrlWithAdditionalSegment("anniversaries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PersonAnnualEventRequestBuilder anniversaries(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PersonAnnualEventRequestBuilder(getRequestUrlWithAdditionalSegment("anniversaries") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PersonAward collection
@@ -160,8 +122,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public PersonAwardCollectionRequestBuilder awards() {
-        return new PersonAwardCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("awards"), getClient(), null);
+    public com.microsoft.graph.requests.PersonAwardCollectionRequestBuilder awards() {
+        return new com.microsoft.graph.requests.PersonAwardCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("awards"), getClient(), null);
     }
 
     /**
@@ -171,8 +133,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public PersonAwardRequestBuilder awards(@Nonnull final String id) {
-        return new PersonAwardRequestBuilder(getRequestUrlWithAdditionalSegment("awards") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PersonAwardRequestBuilder awards(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PersonAwardRequestBuilder(getRequestUrlWithAdditionalSegment("awards") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PersonCertification collection
@@ -180,8 +142,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public PersonCertificationCollectionRequestBuilder certifications() {
-        return new PersonCertificationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("certifications"), getClient(), null);
+    public com.microsoft.graph.requests.PersonCertificationCollectionRequestBuilder certifications() {
+        return new com.microsoft.graph.requests.PersonCertificationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("certifications"), getClient(), null);
     }
 
     /**
@@ -191,8 +153,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public PersonCertificationRequestBuilder certifications(@Nonnull final String id) {
-        return new PersonCertificationRequestBuilder(getRequestUrlWithAdditionalSegment("certifications") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PersonCertificationRequestBuilder certifications(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PersonCertificationRequestBuilder(getRequestUrlWithAdditionalSegment("certifications") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the EducationalActivity collection
@@ -200,8 +162,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public EducationalActivityCollectionRequestBuilder educationalActivities() {
-        return new EducationalActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("educationalActivities"), getClient(), null);
+    public com.microsoft.graph.requests.EducationalActivityCollectionRequestBuilder educationalActivities() {
+        return new com.microsoft.graph.requests.EducationalActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("educationalActivities"), getClient(), null);
     }
 
     /**
@@ -211,8 +173,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public EducationalActivityRequestBuilder educationalActivities(@Nonnull final String id) {
-        return new EducationalActivityRequestBuilder(getRequestUrlWithAdditionalSegment("educationalActivities") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationalActivityRequestBuilder educationalActivities(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationalActivityRequestBuilder(getRequestUrlWithAdditionalSegment("educationalActivities") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ItemEmail collection
@@ -220,8 +182,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public ItemEmailCollectionRequestBuilder emails() {
-        return new ItemEmailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("emails"), getClient(), null);
+    public com.microsoft.graph.requests.ItemEmailCollectionRequestBuilder emails() {
+        return new com.microsoft.graph.requests.ItemEmailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("emails"), getClient(), null);
     }
 
     /**
@@ -231,8 +193,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public ItemEmailRequestBuilder emails(@Nonnull final String id) {
-        return new ItemEmailRequestBuilder(getRequestUrlWithAdditionalSegment("emails") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ItemEmailRequestBuilder emails(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ItemEmailRequestBuilder(getRequestUrlWithAdditionalSegment("emails") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PersonInterest collection
@@ -240,8 +202,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public PersonInterestCollectionRequestBuilder interests() {
-        return new PersonInterestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("interests"), getClient(), null);
+    public com.microsoft.graph.requests.PersonInterestCollectionRequestBuilder interests() {
+        return new com.microsoft.graph.requests.PersonInterestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("interests"), getClient(), null);
     }
 
     /**
@@ -251,8 +213,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public PersonInterestRequestBuilder interests(@Nonnull final String id) {
-        return new PersonInterestRequestBuilder(getRequestUrlWithAdditionalSegment("interests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PersonInterestRequestBuilder interests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PersonInterestRequestBuilder(getRequestUrlWithAdditionalSegment("interests") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the LanguageProficiency collection
@@ -260,8 +222,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public LanguageProficiencyCollectionRequestBuilder languages() {
-        return new LanguageProficiencyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("languages"), getClient(), null);
+    public com.microsoft.graph.requests.LanguageProficiencyCollectionRequestBuilder languages() {
+        return new com.microsoft.graph.requests.LanguageProficiencyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("languages"), getClient(), null);
     }
 
     /**
@@ -271,8 +233,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public LanguageProficiencyRequestBuilder languages(@Nonnull final String id) {
-        return new LanguageProficiencyRequestBuilder(getRequestUrlWithAdditionalSegment("languages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.LanguageProficiencyRequestBuilder languages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.LanguageProficiencyRequestBuilder(getRequestUrlWithAdditionalSegment("languages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PersonName collection
@@ -280,8 +242,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public PersonNameCollectionRequestBuilder names() {
-        return new PersonNameCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("names"), getClient(), null);
+    public com.microsoft.graph.requests.PersonNameCollectionRequestBuilder names() {
+        return new com.microsoft.graph.requests.PersonNameCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("names"), getClient(), null);
     }
 
     /**
@@ -291,8 +253,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public PersonNameRequestBuilder names(@Nonnull final String id) {
-        return new PersonNameRequestBuilder(getRequestUrlWithAdditionalSegment("names") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PersonNameRequestBuilder names(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PersonNameRequestBuilder(getRequestUrlWithAdditionalSegment("names") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PersonAnnotation collection
@@ -300,8 +262,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public PersonAnnotationCollectionRequestBuilder notes() {
-        return new PersonAnnotationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("notes"), getClient(), null);
+    public com.microsoft.graph.requests.PersonAnnotationCollectionRequestBuilder notes() {
+        return new com.microsoft.graph.requests.PersonAnnotationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("notes"), getClient(), null);
     }
 
     /**
@@ -311,8 +273,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public PersonAnnotationRequestBuilder notes(@Nonnull final String id) {
-        return new PersonAnnotationRequestBuilder(getRequestUrlWithAdditionalSegment("notes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PersonAnnotationRequestBuilder notes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PersonAnnotationRequestBuilder(getRequestUrlWithAdditionalSegment("notes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ItemPatent collection
@@ -320,8 +282,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public ItemPatentCollectionRequestBuilder patents() {
-        return new ItemPatentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("patents"), getClient(), null);
+    public com.microsoft.graph.requests.ItemPatentCollectionRequestBuilder patents() {
+        return new com.microsoft.graph.requests.ItemPatentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("patents"), getClient(), null);
     }
 
     /**
@@ -331,8 +293,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public ItemPatentRequestBuilder patents(@Nonnull final String id) {
-        return new ItemPatentRequestBuilder(getRequestUrlWithAdditionalSegment("patents") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ItemPatentRequestBuilder patents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ItemPatentRequestBuilder(getRequestUrlWithAdditionalSegment("patents") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ItemPhone collection
@@ -340,8 +302,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public ItemPhoneCollectionRequestBuilder phones() {
-        return new ItemPhoneCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("phones"), getClient(), null);
+    public com.microsoft.graph.requests.ItemPhoneCollectionRequestBuilder phones() {
+        return new com.microsoft.graph.requests.ItemPhoneCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("phones"), getClient(), null);
     }
 
     /**
@@ -351,8 +313,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public ItemPhoneRequestBuilder phones(@Nonnull final String id) {
-        return new ItemPhoneRequestBuilder(getRequestUrlWithAdditionalSegment("phones") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ItemPhoneRequestBuilder phones(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ItemPhoneRequestBuilder(getRequestUrlWithAdditionalSegment("phones") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WorkPosition collection
@@ -360,8 +322,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public WorkPositionCollectionRequestBuilder positions() {
-        return new WorkPositionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("positions"), getClient(), null);
+    public com.microsoft.graph.requests.WorkPositionCollectionRequestBuilder positions() {
+        return new com.microsoft.graph.requests.WorkPositionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("positions"), getClient(), null);
     }
 
     /**
@@ -371,8 +333,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public WorkPositionRequestBuilder positions(@Nonnull final String id) {
-        return new WorkPositionRequestBuilder(getRequestUrlWithAdditionalSegment("positions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WorkPositionRequestBuilder positions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkPositionRequestBuilder(getRequestUrlWithAdditionalSegment("positions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ProjectParticipation collection
@@ -380,8 +342,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public ProjectParticipationCollectionRequestBuilder projects() {
-        return new ProjectParticipationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("projects"), getClient(), null);
+    public com.microsoft.graph.requests.ProjectParticipationCollectionRequestBuilder projects() {
+        return new com.microsoft.graph.requests.ProjectParticipationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("projects"), getClient(), null);
     }
 
     /**
@@ -391,8 +353,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public ProjectParticipationRequestBuilder projects(@Nonnull final String id) {
-        return new ProjectParticipationRequestBuilder(getRequestUrlWithAdditionalSegment("projects") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ProjectParticipationRequestBuilder projects(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ProjectParticipationRequestBuilder(getRequestUrlWithAdditionalSegment("projects") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ItemPublication collection
@@ -400,8 +362,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public ItemPublicationCollectionRequestBuilder publications() {
-        return new ItemPublicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("publications"), getClient(), null);
+    public com.microsoft.graph.requests.ItemPublicationCollectionRequestBuilder publications() {
+        return new com.microsoft.graph.requests.ItemPublicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("publications"), getClient(), null);
     }
 
     /**
@@ -411,8 +373,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public ItemPublicationRequestBuilder publications(@Nonnull final String id) {
-        return new ItemPublicationRequestBuilder(getRequestUrlWithAdditionalSegment("publications") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ItemPublicationRequestBuilder publications(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ItemPublicationRequestBuilder(getRequestUrlWithAdditionalSegment("publications") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SkillProficiency collection
@@ -420,8 +382,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public SkillProficiencyCollectionRequestBuilder skills() {
-        return new SkillProficiencyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("skills"), getClient(), null);
+    public com.microsoft.graph.requests.SkillProficiencyCollectionRequestBuilder skills() {
+        return new com.microsoft.graph.requests.SkillProficiencyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("skills"), getClient(), null);
     }
 
     /**
@@ -431,8 +393,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public SkillProficiencyRequestBuilder skills(@Nonnull final String id) {
-        return new SkillProficiencyRequestBuilder(getRequestUrlWithAdditionalSegment("skills") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SkillProficiencyRequestBuilder skills(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SkillProficiencyRequestBuilder(getRequestUrlWithAdditionalSegment("skills") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WebAccount collection
@@ -440,8 +402,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public WebAccountCollectionRequestBuilder webAccounts() {
-        return new WebAccountCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("webAccounts"), getClient(), null);
+    public com.microsoft.graph.requests.WebAccountCollectionRequestBuilder webAccounts() {
+        return new com.microsoft.graph.requests.WebAccountCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("webAccounts"), getClient(), null);
     }
 
     /**
@@ -451,8 +413,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public WebAccountRequestBuilder webAccounts(@Nonnull final String id) {
-        return new WebAccountRequestBuilder(getRequestUrlWithAdditionalSegment("webAccounts") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WebAccountRequestBuilder webAccounts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WebAccountRequestBuilder(getRequestUrlWithAdditionalSegment("webAccounts") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PersonWebsite collection
@@ -460,8 +422,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @return the collection request builder
      */
     @Nonnull
-    public PersonWebsiteCollectionRequestBuilder websites() {
-        return new PersonWebsiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("websites"), getClient(), null);
+    public com.microsoft.graph.requests.PersonWebsiteCollectionRequestBuilder websites() {
+        return new com.microsoft.graph.requests.PersonWebsiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("websites"), getClient(), null);
     }
 
     /**
@@ -471,7 +433,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder<Profile> {
      * @param id the item identifier
      */
     @Nonnull
-    public PersonWebsiteRequestBuilder websites(@Nonnull final String id) {
-        return new PersonWebsiteRequestBuilder(getRequestUrlWithAdditionalSegment("websites") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PersonWebsiteRequestBuilder websites(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PersonWebsiteRequestBuilder(getRequestUrlWithAdditionalSegment("websites") + "/" + id, getClient(), null);
     }
 }

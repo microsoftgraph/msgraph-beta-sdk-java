@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementAutopilotEvent;
-import com.microsoft.graph.requests.DeviceManagementAutopilotPolicyStatusDetailCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementAutopilotPolicyStatusDetailRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceManagementAutopilotEventRequestBuilder extends BaseRequestBui
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementAutopilotPolicyStatusDetailCollectionRequestBuilder policyStatusDetails() {
-        return new DeviceManagementAutopilotPolicyStatusDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policyStatusDetails"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementAutopilotPolicyStatusDetailCollectionRequestBuilder policyStatusDetails() {
+        return new com.microsoft.graph.requests.DeviceManagementAutopilotPolicyStatusDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policyStatusDetails"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DeviceManagementAutopilotEventRequestBuilder extends BaseRequestBui
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementAutopilotPolicyStatusDetailRequestBuilder policyStatusDetails(@Nonnull final String id) {
-        return new DeviceManagementAutopilotPolicyStatusDetailRequestBuilder(getRequestUrlWithAdditionalSegment("policyStatusDetails") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementAutopilotPolicyStatusDetailRequestBuilder policyStatusDetails(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementAutopilotPolicyStatusDetailRequestBuilder(getRequestUrlWithAdditionalSegment("policyStatusDetails") + "/" + id, getClient(), null);
     }
 }

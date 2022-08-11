@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DefaultMfaMethodType;
+import com.microsoft.graph.models.SignInUserType;
 import com.microsoft.graph.models.Entity;
 
 
@@ -35,6 +36,15 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
     @Expose
 	@Nullable
     public DefaultMfaMethodType defaultMfaMethod;
+
+    /**
+     * The Is Admin.
+     * Whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
+     */
+    @SerializedName(value = "isAdmin", alternate = {"IsAdmin"})
+    @Expose
+	@Nullable
+    public Boolean isAdmin;
 
     /**
      * The Is Mfa Capable.
@@ -116,6 +126,15 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
     @Expose
 	@Nullable
     public String userPrincipalName;
+
+    /**
+     * The User Type.
+     * Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
+     */
+    @SerializedName(value = "userType", alternate = {"UserType"})
+    @Expose
+	@Nullable
+    public SignInUserType userType;
 
 
     /**

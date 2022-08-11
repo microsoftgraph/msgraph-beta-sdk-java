@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MeetingSpeaker;
-import com.microsoft.graph.models.MeetingRegistrationQuestion;
 import com.microsoft.graph.models.MeetingRegistrationBase;
 import com.microsoft.graph.requests.MeetingRegistrationQuestionCollectionPage;
 
@@ -99,7 +98,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements IJso
     @SerializedName(value = "customQuestions", alternate = {"CustomQuestions"})
     @Expose
 	@Nullable
-    public MeetingRegistrationQuestionCollectionPage customQuestions;
+    public com.microsoft.graph.requests.MeetingRegistrationQuestionCollectionPage customQuestions;
 
 
     /**
@@ -112,7 +111,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements IJso
 
 
         if (json.has("customQuestions")) {
-            customQuestions = serializer.deserializeObject(json.get("customQuestions"), MeetingRegistrationQuestionCollectionPage.class);
+            customQuestions = serializer.deserializeObject(json.get("customQuestions"), com.microsoft.graph.requests.MeetingRegistrationQuestionCollectionPage.class);
         }
     }
 }

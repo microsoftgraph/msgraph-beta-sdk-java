@@ -11,8 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ErrorCode;
 import com.microsoft.graph.models.PolicySetStatus;
-import com.microsoft.graph.models.PolicySetAssignment;
-import com.microsoft.graph.models.PolicySetItem;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PolicySetAssignmentCollectionPage;
 import com.microsoft.graph.requests.PolicySetItemCollectionPage;
@@ -111,7 +109,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public PolicySetAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.PolicySetAssignmentCollectionPage assignments;
 
     /**
      * The Items.
@@ -120,7 +118,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
 	@Nullable
-    public PolicySetItemCollectionPage items;
+    public com.microsoft.graph.requests.PolicySetItemCollectionPage items;
 
 
     /**
@@ -133,11 +131,11 @@ public class PolicySet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), PolicySetAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.PolicySetAssignmentCollectionPage.class);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items"), PolicySetItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items"), com.microsoft.graph.requests.PolicySetItemCollectionPage.class);
         }
     }
 }

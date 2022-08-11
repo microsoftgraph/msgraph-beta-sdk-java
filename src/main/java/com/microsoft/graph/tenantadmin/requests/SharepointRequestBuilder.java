@@ -8,7 +8,6 @@ package com.microsoft.graph.tenantadmin.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.tenantadmin.models.Sharepoint;
-import com.microsoft.graph.tenantadmin.requests.SettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class SharepointRequestBuilder extends BaseRequestBuilder<Sharepoint> {
      * @return the SettingsRequestBuilder instance
      */
     @Nonnull
-    public SettingsRequestBuilder settings() {
-        return new SettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    public com.microsoft.graph.tenantadmin.requests.SettingsRequestBuilder settings() {
+        return new com.microsoft.graph.tenantadmin.requests.SettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 }

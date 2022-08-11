@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AgentStatus;
 import com.microsoft.graph.models.OnPremisesPublishingType;
-import com.microsoft.graph.models.OnPremisesAgentGroup;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.OnPremisesAgentGroupCollectionPage;
 
@@ -71,7 +70,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
      * List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
      */
 	@Nullable
-    public OnPremisesAgentGroupCollectionPage agentGroups;
+    public com.microsoft.graph.requests.OnPremisesAgentGroupCollectionPage agentGroups;
 
 
     /**
@@ -84,7 +83,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
 
 
         if (json.has("agentGroups")) {
-            agentGroups = serializer.deserializeObject(json.get("agentGroups"), OnPremisesAgentGroupCollectionPage.class);
+            agentGroups = serializer.deserializeObject(json.get("agentGroups"), com.microsoft.graph.requests.OnPremisesAgentGroupCollectionPage.class);
         }
     }
 }

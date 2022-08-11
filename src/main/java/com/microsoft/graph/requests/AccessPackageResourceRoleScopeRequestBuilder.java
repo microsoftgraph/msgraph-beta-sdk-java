@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageResourceRoleScope;
-import com.microsoft.graph.requests.AccessPackageResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class AccessPackageResourceRoleScopeRequestBuilder extends BaseRequestBui
      * @return the AccessPackageResourceRoleRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageResourceRoleRequestBuilder accessPackageResourceRole() {
-        return new AccessPackageResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRole"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceRoleRequestBuilder accessPackageResourceRole() {
+        return new com.microsoft.graph.requests.AccessPackageResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRole"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AccessPackageResourceRoleScopeRequestBuilder extends BaseRequestBui
      * @return the AccessPackageResourceScopeRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageResourceScopeRequestBuilder accessPackageResourceScope() {
-        return new AccessPackageResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScope"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder accessPackageResourceScope() {
+        return new com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScope"), getClient(), null);
     }
 }

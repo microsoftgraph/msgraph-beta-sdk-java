@@ -42,7 +42,7 @@ public class ContentInfo implements IJsonBackedObject {
 
     /**
      * The Content Format.
-     * 
+     * The format of the content to be labeled. Possible values are: file, email.
      */
     @SerializedName(value = "contentFormat", alternate = {"ContentFormat"})
     @Expose
@@ -51,7 +51,7 @@ public class ContentInfo implements IJsonBackedObject {
 
     /**
      * The Identifier.
-     * 
+     * Identifier used for Azure Information Protection Analytics.
      */
     @SerializedName(value = "identifier", alternate = {"Identifier"})
     @Expose
@@ -60,7 +60,7 @@ public class ContentInfo implements IJsonBackedObject {
 
     /**
      * The Metadata.
-     * 
+     * Existing Microsoft Purview Information Protection metadata is passed as key-value pairs, where the key is the MSIP_Label_GUID_PropName.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
@@ -69,7 +69,7 @@ public class ContentInfo implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * The usage state of the content. The possible values are: rest, motion, or use.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

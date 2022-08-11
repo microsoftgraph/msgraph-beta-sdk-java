@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementComplexSettingInstance;
-import com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceManagementComplexSettingInstanceRequestBuilder extends BaseRe
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementSettingInstanceCollectionRequestBuilder value() {
-        return new DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("value"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionRequestBuilder value() {
+        return new com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("value"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DeviceManagementComplexSettingInstanceRequestBuilder extends BaseRe
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementSettingInstanceRequestBuilder value(@Nonnull final String id) {
-        return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("value") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementSettingInstanceRequestBuilder value(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("value") + "/" + id, getClient(), null);
     }
 }

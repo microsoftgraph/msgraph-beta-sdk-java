@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementScriptDeviceState;
-import com.microsoft.graph.requests.ManagedDeviceWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class DeviceManagementScriptDeviceStateRequestBuilder extends BaseRequest
      * @return the ManagedDeviceWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ManagedDeviceWithReferenceRequestBuilder managedDevice() {
-        return new ManagedDeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevice"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceWithReferenceRequestBuilder managedDevice() {
+        return new com.microsoft.graph.requests.ManagedDeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevice"), getClient(), null);
     }
 }

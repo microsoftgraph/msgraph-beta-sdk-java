@@ -10,10 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UserFlowApiConnectorConfiguration;
-import com.microsoft.graph.models.IdentityProvider;
-import com.microsoft.graph.models.UserFlowLanguageConfiguration;
-import com.microsoft.graph.models.IdentityUserFlowAttributeAssignment;
-import com.microsoft.graph.models.IdentityProviderBase;
 import com.microsoft.graph.models.IdentityUserFlow;
 import com.microsoft.graph.requests.IdentityProviderCollectionPage;
 import com.microsoft.graph.requests.UserFlowLanguageConfigurationCollectionPage;
@@ -51,7 +47,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
      */
     @Deprecated
 	@Nullable
-    public IdentityProviderCollectionPage identityProviders;
+    public com.microsoft.graph.requests.IdentityProviderCollectionPage identityProviders;
 
     /**
      * The Languages.
@@ -60,7 +56,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
     @SerializedName(value = "languages", alternate = {"Languages"})
     @Expose
 	@Nullable
-    public UserFlowLanguageConfigurationCollectionPage languages;
+    public com.microsoft.graph.requests.UserFlowLanguageConfigurationCollectionPage languages;
 
     /**
      * The User Attribute Assignments.
@@ -69,14 +65,14 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
     @SerializedName(value = "userAttributeAssignments", alternate = {"UserAttributeAssignments"})
     @Expose
 	@Nullable
-    public IdentityUserFlowAttributeAssignmentCollectionPage userAttributeAssignments;
+    public com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentCollectionPage userAttributeAssignments;
 
     /**
      * The User Flow Identity Providers.
      * 
      */
 	@Nullable
-    public IdentityProviderBaseCollectionPage userFlowIdentityProviders;
+    public com.microsoft.graph.requests.IdentityProviderBaseCollectionPage userFlowIdentityProviders;
 
 
     /**
@@ -89,19 +85,19 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
 
         if (json.has("identityProviders")) {
-            identityProviders = serializer.deserializeObject(json.get("identityProviders"), IdentityProviderCollectionPage.class);
+            identityProviders = serializer.deserializeObject(json.get("identityProviders"), com.microsoft.graph.requests.IdentityProviderCollectionPage.class);
         }
 
         if (json.has("languages")) {
-            languages = serializer.deserializeObject(json.get("languages"), UserFlowLanguageConfigurationCollectionPage.class);
+            languages = serializer.deserializeObject(json.get("languages"), com.microsoft.graph.requests.UserFlowLanguageConfigurationCollectionPage.class);
         }
 
         if (json.has("userAttributeAssignments")) {
-            userAttributeAssignments = serializer.deserializeObject(json.get("userAttributeAssignments"), IdentityUserFlowAttributeAssignmentCollectionPage.class);
+            userAttributeAssignments = serializer.deserializeObject(json.get("userAttributeAssignments"), com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentCollectionPage.class);
         }
 
         if (json.has("userFlowIdentityProviders")) {
-            userFlowIdentityProviders = serializer.deserializeObject(json.get("userFlowIdentityProviders"), IdentityProviderBaseCollectionPage.class);
+            userFlowIdentityProviders = serializer.deserializeObject(json.get("userFlowIdentityProviders"), com.microsoft.graph.requests.IdentityProviderBaseCollectionPage.class);
         }
     }
 }

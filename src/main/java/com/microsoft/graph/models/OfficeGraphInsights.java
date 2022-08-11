@@ -9,9 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.SharedInsight;
-import com.microsoft.graph.models.Trending;
-import com.microsoft.graph.models.UsedInsight;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SharedInsightCollectionPage;
 import com.microsoft.graph.requests.TrendingCollectionPage;
@@ -39,7 +36,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
     @SerializedName(value = "shared", alternate = {"Shared"})
     @Expose
 	@Nullable
-    public SharedInsightCollectionPage shared;
+    public com.microsoft.graph.requests.SharedInsightCollectionPage shared;
 
     /**
      * The Trending.
@@ -48,7 +45,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
     @SerializedName(value = "trending", alternate = {"Trending"})
     @Expose
 	@Nullable
-    public TrendingCollectionPage trending;
+    public com.microsoft.graph.requests.TrendingCollectionPage trending;
 
     /**
      * The Used.
@@ -57,7 +54,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
     @SerializedName(value = "used", alternate = {"Used"})
     @Expose
 	@Nullable
-    public UsedInsightCollectionPage used;
+    public com.microsoft.graph.requests.UsedInsightCollectionPage used;
 
 
     /**
@@ -70,15 +67,15 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
 
 
         if (json.has("shared")) {
-            shared = serializer.deserializeObject(json.get("shared"), SharedInsightCollectionPage.class);
+            shared = serializer.deserializeObject(json.get("shared"), com.microsoft.graph.requests.SharedInsightCollectionPage.class);
         }
 
         if (json.has("trending")) {
-            trending = serializer.deserializeObject(json.get("trending"), TrendingCollectionPage.class);
+            trending = serializer.deserializeObject(json.get("trending"), com.microsoft.graph.requests.TrendingCollectionPage.class);
         }
 
         if (json.has("used")) {
-            used = serializer.deserializeObject(json.get("used"), UsedInsightCollectionPage.class);
+            used = serializer.deserializeObject(json.get("used"), com.microsoft.graph.requests.UsedInsightCollectionPage.class);
         }
     }
 }
