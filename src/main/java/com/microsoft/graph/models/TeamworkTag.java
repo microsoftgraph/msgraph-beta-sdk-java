@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.TeamworkTagType;
-import com.microsoft.graph.models.TeamworkTagMember;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamworkTagMemberCollectionPage;
 
@@ -81,7 +80,7 @@ public class TeamworkTag extends Entity implements IJsonBackedObject {
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
 	@Nullable
-    public TeamworkTagMemberCollectionPage members;
+    public com.microsoft.graph.requests.TeamworkTagMemberCollectionPage members;
 
 
     /**
@@ -94,7 +93,7 @@ public class TeamworkTag extends Entity implements IJsonBackedObject {
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), TeamworkTagMemberCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.TeamworkTagMemberCollectionPage.class);
         }
     }
 }

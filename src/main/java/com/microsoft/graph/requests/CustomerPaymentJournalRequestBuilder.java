@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CustomerPaymentJournal;
-import com.microsoft.graph.requests.AccountRequestBuilder;
-import com.microsoft.graph.requests.CustomerPaymentCollectionRequestBuilder;
-import com.microsoft.graph.requests.CustomerPaymentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder<Cus
      * @return the AccountRequestBuilder instance
      */
     @Nonnull
-    public AccountRequestBuilder account() {
-        return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
+    public com.microsoft.graph.requests.AccountRequestBuilder account() {
+        return new com.microsoft.graph.requests.AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
     /**
      *  Gets a request builder for the CustomerPayment collection
@@ -75,8 +72,8 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder<Cus
      * @return the collection request builder
      */
     @Nonnull
-    public CustomerPaymentCollectionRequestBuilder customerPayments() {
-        return new CustomerPaymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments"), getClient(), null);
+    public com.microsoft.graph.requests.CustomerPaymentCollectionRequestBuilder customerPayments() {
+        return new com.microsoft.graph.requests.CustomerPaymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments"), getClient(), null);
     }
 
     /**
@@ -86,7 +83,7 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder<Cus
      * @param id the item identifier
      */
     @Nonnull
-    public CustomerPaymentRequestBuilder customerPayments(@Nonnull final String id) {
-        return new CustomerPaymentRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CustomerPaymentRequestBuilder customerPayments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CustomerPaymentRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments") + "/" + id, getClient(), null);
     }
 }

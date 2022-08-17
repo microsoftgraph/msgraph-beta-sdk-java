@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Customer;
-import com.microsoft.graph.requests.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.PaymentMethodRequestBuilder;
-import com.microsoft.graph.requests.PaymentTermRequestBuilder;
-import com.microsoft.graph.requests.PictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.PictureRequestBuilder;
-import com.microsoft.graph.requests.ShipmentMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -69,8 +63,8 @@ public class CustomerRequestBuilder extends BaseRequestBuilder<Customer> {
      * @return the CurrencyRequestBuilder instance
      */
     @Nonnull
-    public CurrencyRequestBuilder currency() {
-        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
+    public com.microsoft.graph.requests.CurrencyRequestBuilder currency() {
+        return new com.microsoft.graph.requests.CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class CustomerRequestBuilder extends BaseRequestBuilder<Customer> {
      * @return the PaymentMethodRequestBuilder instance
      */
     @Nonnull
-    public PaymentMethodRequestBuilder paymentMethod() {
-        return new PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethod"), getClient(), null);
+    public com.microsoft.graph.requests.PaymentMethodRequestBuilder paymentMethod() {
+        return new com.microsoft.graph.requests.PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethod"), getClient(), null);
     }
 
     /**
@@ -89,8 +83,8 @@ public class CustomerRequestBuilder extends BaseRequestBuilder<Customer> {
      * @return the PaymentTermRequestBuilder instance
      */
     @Nonnull
-    public PaymentTermRequestBuilder paymentTerm() {
-        return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
+    public com.microsoft.graph.requests.PaymentTermRequestBuilder paymentTerm() {
+        return new com.microsoft.graph.requests.PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
     }
     /**
      *  Gets a request builder for the Picture collection
@@ -98,8 +92,8 @@ public class CustomerRequestBuilder extends BaseRequestBuilder<Customer> {
      * @return the collection request builder
      */
     @Nonnull
-    public PictureCollectionRequestBuilder picture() {
-        return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
+    public com.microsoft.graph.requests.PictureCollectionRequestBuilder picture() {
+        return new com.microsoft.graph.requests.PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
     }
 
     /**
@@ -109,8 +103,8 @@ public class CustomerRequestBuilder extends BaseRequestBuilder<Customer> {
      * @param id the item identifier
      */
     @Nonnull
-    public PictureRequestBuilder picture(@Nonnull final String id) {
-        return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PictureRequestBuilder picture(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
 
     /**
@@ -119,7 +113,7 @@ public class CustomerRequestBuilder extends BaseRequestBuilder<Customer> {
      * @return the ShipmentMethodRequestBuilder instance
      */
     @Nonnull
-    public ShipmentMethodRequestBuilder shipmentMethod() {
-        return new ShipmentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethod"), getClient(), null);
+    public com.microsoft.graph.requests.ShipmentMethodRequestBuilder shipmentMethod() {
+        return new com.microsoft.graph.requests.ShipmentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethod"), getClient(), null);
     }
 }

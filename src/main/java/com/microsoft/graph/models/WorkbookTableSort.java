@@ -29,7 +29,7 @@ public class WorkbookTableSort extends Entity implements IJsonBackedObject {
 
     /**
      * The Fields.
-     * Represents the current conditions used to last sort the table. Read-only.
+     * 
      */
     @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose

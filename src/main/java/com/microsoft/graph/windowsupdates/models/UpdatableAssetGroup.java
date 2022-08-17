@@ -34,7 +34,7 @@ public class UpdatableAssetGroup extends UpdatableAsset implements IJsonBackedOb
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
 	@Nullable
-    public UpdatableAssetCollectionPage members;
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionPage members;
 
 
     /**
@@ -47,7 +47,7 @@ public class UpdatableAssetGroup extends UpdatableAsset implements IJsonBackedOb
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), UpdatableAssetCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionPage.class);
         }
     }
 }

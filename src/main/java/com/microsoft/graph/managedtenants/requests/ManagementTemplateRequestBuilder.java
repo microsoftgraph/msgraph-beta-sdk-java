@@ -8,10 +8,6 @@ package com.microsoft.graph.managedtenants.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.managedtenants.models.ManagementTemplate;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class ManagementTemplateRequestBuilder extends BaseRequestBuilder<Managem
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementTemplateCollectionObjectCollectionWithReferencesRequestBuilder managementTemplateCollections() {
-        return new ManagementTemplateCollectionObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionWithReferencesRequestBuilder managementTemplateCollections() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class ManagementTemplateRequestBuilder extends BaseRequestBuilder<Managem
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementTemplateCollectionObjectWithReferenceRequestBuilder managementTemplateCollections(@Nonnull final String id) {
-        return new ManagementTemplateCollectionObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectWithReferenceRequestBuilder managementTemplateCollections(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementTemplateStep collection
@@ -86,8 +82,8 @@ public class ManagementTemplateRequestBuilder extends BaseRequestBuilder<Managem
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementTemplateStepCollectionWithReferencesRequestBuilder managementTemplateSteps() {
-        return new ManagementTemplateStepCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateSteps"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionWithReferencesRequestBuilder managementTemplateSteps() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateSteps"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class ManagementTemplateRequestBuilder extends BaseRequestBuilder<Managem
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementTemplateStepWithReferenceRequestBuilder managementTemplateSteps(@Nonnull final String id) {
-        return new ManagementTemplateStepWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateSteps") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepWithReferenceRequestBuilder managementTemplateSteps(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateSteps") + "/" + id, getClient(), null);
     }
 }

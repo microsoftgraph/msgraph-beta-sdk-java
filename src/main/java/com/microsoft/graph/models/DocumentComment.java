@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DocumentCommentReply;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DocumentCommentReplyCollectionPage;
 
@@ -44,7 +43,7 @@ public class DocumentComment extends Entity implements IJsonBackedObject {
     @SerializedName(value = "replies", alternate = {"Replies"})
     @Expose
 	@Nullable
-    public DocumentCommentReplyCollectionPage replies;
+    public com.microsoft.graph.requests.DocumentCommentReplyCollectionPage replies;
 
 
     /**
@@ -57,7 +56,7 @@ public class DocumentComment extends Entity implements IJsonBackedObject {
 
 
         if (json.has("replies")) {
-            replies = serializer.deserializeObject(json.get("replies"), DocumentCommentReplyCollectionPage.class);
+            replies = serializer.deserializeObject(json.get("replies"), com.microsoft.graph.requests.DocumentCommentReplyCollectionPage.class);
         }
     }
 }

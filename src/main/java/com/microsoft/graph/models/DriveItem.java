@@ -31,14 +31,8 @@ import com.microsoft.graph.models.DriveItemSource;
 import com.microsoft.graph.models.SpecialFolder;
 import com.microsoft.graph.models.Video;
 import com.microsoft.graph.models.Workbook;
-import com.microsoft.graph.models.ItemActivityOLD;
 import com.microsoft.graph.models.ItemAnalytics;
-import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.ListItem;
-import com.microsoft.graph.models.Permission;
-import com.microsoft.graph.models.Subscription;
-import com.microsoft.graph.models.ThumbnailSet;
-import com.microsoft.graph.models.DriveItemVersion;
 import com.microsoft.graph.models.BaseItem;
 import com.microsoft.graph.requests.ItemActivityOLDCollectionPage;
 import com.microsoft.graph.requests.DriveItemCollectionPage;
@@ -303,7 +297,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
 	@Nullable
-    public ItemActivityOLDCollectionPage activities;
+    public com.microsoft.graph.requests.ItemActivityOLDCollectionPage activities;
 
     /**
      * The Analytics.
@@ -321,7 +315,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "children", alternate = {"Children"})
     @Expose
 	@Nullable
-    public DriveItemCollectionPage children;
+    public com.microsoft.graph.requests.DriveItemCollectionPage children;
 
     /**
      * The List Item.
@@ -339,7 +333,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "permissions", alternate = {"Permissions"})
     @Expose
 	@Nullable
-    public PermissionCollectionPage permissions;
+    public com.microsoft.graph.requests.PermissionCollectionPage permissions;
 
     /**
      * The Subscriptions.
@@ -348,7 +342,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose
 	@Nullable
-    public SubscriptionCollectionPage subscriptions;
+    public com.microsoft.graph.requests.SubscriptionCollectionPage subscriptions;
 
     /**
      * The Thumbnails.
@@ -357,7 +351,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "thumbnails", alternate = {"Thumbnails"})
     @Expose
 	@Nullable
-    public ThumbnailSetCollectionPage thumbnails;
+    public com.microsoft.graph.requests.ThumbnailSetCollectionPage thumbnails;
 
     /**
      * The Versions.
@@ -366,7 +360,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose
 	@Nullable
-    public DriveItemVersionCollectionPage versions;
+    public com.microsoft.graph.requests.DriveItemVersionCollectionPage versions;
 
 
     /**
@@ -379,27 +373,27 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("activities")) {
-            activities = serializer.deserializeObject(json.get("activities"), ItemActivityOLDCollectionPage.class);
+            activities = serializer.deserializeObject(json.get("activities"), com.microsoft.graph.requests.ItemActivityOLDCollectionPage.class);
         }
 
         if (json.has("children")) {
-            children = serializer.deserializeObject(json.get("children"), DriveItemCollectionPage.class);
+            children = serializer.deserializeObject(json.get("children"), com.microsoft.graph.requests.DriveItemCollectionPage.class);
         }
 
         if (json.has("permissions")) {
-            permissions = serializer.deserializeObject(json.get("permissions"), PermissionCollectionPage.class);
+            permissions = serializer.deserializeObject(json.get("permissions"), com.microsoft.graph.requests.PermissionCollectionPage.class);
         }
 
         if (json.has("subscriptions")) {
-            subscriptions = serializer.deserializeObject(json.get("subscriptions"), SubscriptionCollectionPage.class);
+            subscriptions = serializer.deserializeObject(json.get("subscriptions"), com.microsoft.graph.requests.SubscriptionCollectionPage.class);
         }
 
         if (json.has("thumbnails")) {
-            thumbnails = serializer.deserializeObject(json.get("thumbnails"), ThumbnailSetCollectionPage.class);
+            thumbnails = serializer.deserializeObject(json.get("thumbnails"), com.microsoft.graph.requests.ThumbnailSetCollectionPage.class);
         }
 
         if (json.has("versions")) {
-            versions = serializer.deserializeObject(json.get("versions"), DriveItemVersionCollectionPage.class);
+            versions = serializer.deserializeObject(json.get("versions"), com.microsoft.graph.requests.DriveItemVersionCollectionPage.class);
         }
     }
 }

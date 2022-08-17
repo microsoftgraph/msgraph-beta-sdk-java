@@ -14,8 +14,6 @@ import com.microsoft.graph.ediscovery.models.AdditionalDataOptions;
 import java.util.EnumSet;
 import com.microsoft.graph.ediscovery.models.ExportOptions;
 import com.microsoft.graph.ediscovery.models.ExportFileStructure;
-import com.microsoft.graph.ediscovery.requests.ReviewSetQueryCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.ReviewSetQueryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

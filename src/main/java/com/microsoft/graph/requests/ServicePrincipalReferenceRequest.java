@@ -12,37 +12,6 @@ import com.microsoft.graph.models.Credential;
 import com.microsoft.graph.models.PasswordSingleSignOnCredentialSet;
 import com.microsoft.graph.models.SelfSignedCertificate;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.AppManagementPolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.AppRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.ClaimsMappingPolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.ServicePrincipalRequestBuilder;
-import com.microsoft.graph.requests.DelegatedPermissionClassificationCollectionRequestBuilder;
-import com.microsoft.graph.requests.DelegatedPermissionClassificationRequestBuilder;
-import com.microsoft.graph.requests.EndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.EndpointRequestBuilder;
-import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionRequestBuilder;
-import com.microsoft.graph.requests.FederatedIdentityCredentialRequestBuilder;
-import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.LicenseDetailsCollectionRequestBuilder;
-import com.microsoft.graph.requests.LicenseDetailsRequestBuilder;
-import com.microsoft.graph.requests.UserRequestBuilder;
-import com.microsoft.graph.requests.GroupRequestBuilder;
-import com.microsoft.graph.requests.ApplicationRequestBuilder;
-import com.microsoft.graph.requests.DeviceRequestBuilder;
-import com.microsoft.graph.requests.OrgContactRequestBuilder;
-import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.OAuth2PermissionGrantWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.TokenIssuancePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.TokenIssuancePolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.TokenLifetimePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.TokenLifetimePolicyWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.SynchronizationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -95,5 +64,31 @@ public class ServicePrincipalReferenceRequest extends BaseReferenceRequest<Servi
     public ServicePrincipalReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
+    }
+    /**
+     * Puts the ServicePrincipal
+     *
+     * @param srcServicePrincipal the ServicePrincipal reference to PUT
+     * @return a future with the result
+     */
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> putAsync(@Nonnull final ServicePrincipal srcServicePrincipal) {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/servicePrincipals/" + srcServicePrincipal.id));
+        return sendAsync(HttpMethod.PUT, payload);
+    }
+
+    /**
+     * Puts the ServicePrincipal
+     *
+     * @param srcServicePrincipal the ServicePrincipal reference to PUT
+     * @return the ServicePrincipal
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    @Nullable
+    public ServicePrincipal put(@Nonnull final ServicePrincipal srcServicePrincipal) throws ClientException {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/servicePrincipals/" + srcServicePrincipal.id));
+        return send(HttpMethod.PUT, payload);
     }
 }

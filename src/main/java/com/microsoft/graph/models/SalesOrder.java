@@ -13,7 +13,6 @@ import com.microsoft.graph.models.PostalAddressType;
 import com.microsoft.graph.models.Currency;
 import com.microsoft.graph.models.Customer;
 import com.microsoft.graph.models.PaymentTerm;
-import com.microsoft.graph.models.SalesOrderLine;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SalesOrderLineCollectionPage;
 
@@ -345,7 +344,7 @@ public class SalesOrder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesOrderLines", alternate = {"SalesOrderLines"})
     @Expose
 	@Nullable
-    public SalesOrderLineCollectionPage salesOrderLines;
+    public com.microsoft.graph.requests.SalesOrderLineCollectionPage salesOrderLines;
 
 
     /**
@@ -358,7 +357,7 @@ public class SalesOrder extends Entity implements IJsonBackedObject {
 
 
         if (json.has("salesOrderLines")) {
-            salesOrderLines = serializer.deserializeObject(json.get("salesOrderLines"), SalesOrderLineCollectionPage.class);
+            salesOrderLines = serializer.deserializeObject(json.get("salesOrderLines"), com.microsoft.graph.requests.SalesOrderLineCollectionPage.class);
         }
     }
 }

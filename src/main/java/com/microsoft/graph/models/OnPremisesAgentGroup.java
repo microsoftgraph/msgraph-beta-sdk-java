@@ -10,8 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OnPremisesPublishingType;
-import com.microsoft.graph.models.OnPremisesAgent;
-import com.microsoft.graph.models.PublishedResource;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.OnPremisesAgentCollectionPage;
 import com.microsoft.graph.requests.PublishedResourceCollectionPage;
@@ -65,7 +63,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
     @SerializedName(value = "agents", alternate = {"Agents"})
     @Expose
 	@Nullable
-    public OnPremisesAgentCollectionPage agents;
+    public com.microsoft.graph.requests.OnPremisesAgentCollectionPage agents;
 
     /**
      * The Published Resources.
@@ -74,7 +72,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
     @SerializedName(value = "publishedResources", alternate = {"PublishedResources"})
     @Expose
 	@Nullable
-    public PublishedResourceCollectionPage publishedResources;
+    public com.microsoft.graph.requests.PublishedResourceCollectionPage publishedResources;
 
 
     /**
@@ -87,11 +85,11 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("agents")) {
-            agents = serializer.deserializeObject(json.get("agents"), OnPremisesAgentCollectionPage.class);
+            agents = serializer.deserializeObject(json.get("agents"), com.microsoft.graph.requests.OnPremisesAgentCollectionPage.class);
         }
 
         if (json.has("publishedResources")) {
-            publishedResources = serializer.deserializeObject(json.get("publishedResources"), PublishedResourceCollectionPage.class);
+            publishedResources = serializer.deserializeObject(json.get("publishedResources"), com.microsoft.graph.requests.PublishedResourceCollectionPage.class);
         }
     }
 }

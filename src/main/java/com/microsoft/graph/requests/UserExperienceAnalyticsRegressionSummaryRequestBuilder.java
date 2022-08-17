@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
 import com.microsoft.graph.models.UserExperienceAnalyticsSummarizedBy;
-import com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserExperienceAnalyticsMetricRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +64,8 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder extends Base
      * @return the collection request builder
      */
     @Nonnull
-    public UserExperienceAnalyticsMetricCollectionRequestBuilder manufacturerRegression() {
-        return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("manufacturerRegression"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionRequestBuilder manufacturerRegression() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("manufacturerRegression"), getClient(), null);
     }
 
     /**
@@ -77,8 +75,8 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder extends Base
      * @param id the item identifier
      */
     @Nonnull
-    public UserExperienceAnalyticsMetricRequestBuilder manufacturerRegression(@Nonnull final String id) {
-        return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("manufacturerRegression") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricRequestBuilder manufacturerRegression(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("manufacturerRegression") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserExperienceAnalyticsMetric collection
@@ -86,8 +84,8 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder extends Base
      * @return the collection request builder
      */
     @Nonnull
-    public UserExperienceAnalyticsMetricCollectionRequestBuilder modelRegression() {
-        return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("modelRegression"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionRequestBuilder modelRegression() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("modelRegression"), getClient(), null);
     }
 
     /**
@@ -97,8 +95,8 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder extends Base
      * @param id the item identifier
      */
     @Nonnull
-    public UserExperienceAnalyticsMetricRequestBuilder modelRegression(@Nonnull final String id) {
-        return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("modelRegression") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricRequestBuilder modelRegression(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("modelRegression") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserExperienceAnalyticsMetric collection
@@ -106,8 +104,8 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder extends Base
      * @return the collection request builder
      */
     @Nonnull
-    public UserExperienceAnalyticsMetricCollectionRequestBuilder operatingSystemRegression() {
-        return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operatingSystemRegression"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionRequestBuilder operatingSystemRegression() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operatingSystemRegression"), getClient(), null);
     }
 
     /**
@@ -117,8 +115,8 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder extends Base
      * @param id the item identifier
      */
     @Nonnull
-    public UserExperienceAnalyticsMetricRequestBuilder operatingSystemRegression(@Nonnull final String id) {
-        return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("operatingSystemRegression") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricRequestBuilder operatingSystemRegression(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("operatingSystemRegression") + "/" + id, getClient(), null);
     }
 
     /**

@@ -9,13 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DeviceManagementIntentAssignment;
-import com.microsoft.graph.models.DeviceManagementIntentSettingCategory;
-import com.microsoft.graph.models.DeviceManagementIntentDeviceSettingStateSummary;
-import com.microsoft.graph.models.DeviceManagementIntentDeviceState;
 import com.microsoft.graph.models.DeviceManagementIntentDeviceStateSummary;
-import com.microsoft.graph.models.DeviceManagementSettingInstance;
-import com.microsoft.graph.models.DeviceManagementIntentUserState;
 import com.microsoft.graph.models.DeviceManagementIntentUserStateSummary;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementIntentAssignmentCollectionPage;
@@ -101,7 +95,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public DeviceManagementIntentAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.DeviceManagementIntentAssignmentCollectionPage assignments;
 
     /**
      * The Categories.
@@ -110,7 +104,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
 	@Nullable
-    public DeviceManagementIntentSettingCategoryCollectionPage categories;
+    public com.microsoft.graph.requests.DeviceManagementIntentSettingCategoryCollectionPage categories;
 
     /**
      * The Device Setting State Summaries.
@@ -119,7 +113,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
     @SerializedName(value = "deviceSettingStateSummaries", alternate = {"DeviceSettingStateSummaries"})
     @Expose
 	@Nullable
-    public DeviceManagementIntentDeviceSettingStateSummaryCollectionPage deviceSettingStateSummaries;
+    public com.microsoft.graph.requests.DeviceManagementIntentDeviceSettingStateSummaryCollectionPage deviceSettingStateSummaries;
 
     /**
      * The Device States.
@@ -128,7 +122,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
     @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
 	@Nullable
-    public DeviceManagementIntentDeviceStateCollectionPage deviceStates;
+    public com.microsoft.graph.requests.DeviceManagementIntentDeviceStateCollectionPage deviceStates;
 
     /**
      * The Device State Summary.
@@ -146,7 +140,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
 	@Nullable
-    public DeviceManagementSettingInstanceCollectionPage settings;
+    public com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionPage settings;
 
     /**
      * The User States.
@@ -155,7 +149,7 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
     @SerializedName(value = "userStates", alternate = {"UserStates"})
     @Expose
 	@Nullable
-    public DeviceManagementIntentUserStateCollectionPage userStates;
+    public com.microsoft.graph.requests.DeviceManagementIntentUserStateCollectionPage userStates;
 
     /**
      * The User State Summary.
@@ -177,27 +171,27 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), DeviceManagementIntentAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.DeviceManagementIntentAssignmentCollectionPage.class);
         }
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories"), DeviceManagementIntentSettingCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.DeviceManagementIntentSettingCategoryCollectionPage.class);
         }
 
         if (json.has("deviceSettingStateSummaries")) {
-            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries"), DeviceManagementIntentDeviceSettingStateSummaryCollectionPage.class);
+            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries"), com.microsoft.graph.requests.DeviceManagementIntentDeviceSettingStateSummaryCollectionPage.class);
         }
 
         if (json.has("deviceStates")) {
-            deviceStates = serializer.deserializeObject(json.get("deviceStates"), DeviceManagementIntentDeviceStateCollectionPage.class);
+            deviceStates = serializer.deserializeObject(json.get("deviceStates"), com.microsoft.graph.requests.DeviceManagementIntentDeviceStateCollectionPage.class);
         }
 
         if (json.has("settings")) {
-            settings = serializer.deserializeObject(json.get("settings"), DeviceManagementSettingInstanceCollectionPage.class);
+            settings = serializer.deserializeObject(json.get("settings"), com.microsoft.graph.requests.DeviceManagementSettingInstanceCollectionPage.class);
         }
 
         if (json.has("userStates")) {
-            userStates = serializer.deserializeObject(json.get("userStates"), DeviceManagementIntentUserStateCollectionPage.class);
+            userStates = serializer.deserializeObject(json.get("userStates"), com.microsoft.graph.requests.DeviceManagementIntentUserStateCollectionPage.class);
         }
     }
 }

@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceCompliancePolicyGroupAssignment;
-import com.microsoft.graph.requests.DeviceCompliancePolicyWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class DeviceCompliancePolicyGroupAssignmentRequestBuilder extends BaseReq
      * @return the DeviceCompliancePolicyWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public DeviceCompliancePolicyWithReferenceRequestBuilder deviceCompliancePolicy() {
-        return new DeviceCompliancePolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicy"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceCompliancePolicyWithReferenceRequestBuilder deviceCompliancePolicy() {
+        return new com.microsoft.graph.requests.DeviceCompliancePolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicy"), getClient(), null);
     }
 }

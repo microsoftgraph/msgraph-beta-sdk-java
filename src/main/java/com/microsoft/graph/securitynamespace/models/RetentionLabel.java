@@ -15,7 +15,6 @@ import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.security.models.DefaultRecordBehavior;
 import com.microsoft.graph.security.models.RetentionDuration;
 import com.microsoft.graph.security.models.RetentionTrigger;
-import com.microsoft.graph.security.models.DispositionReviewStage;
 import com.microsoft.graph.security.models.RetentionEventType;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.security.requests.DispositionReviewStageCollectionPage;
@@ -168,7 +167,7 @@ public class RetentionLabel extends Entity implements IJsonBackedObject {
     @SerializedName(value = "dispositionReviewStages", alternate = {"DispositionReviewStages"})
     @Expose
 	@Nullable
-    public DispositionReviewStageCollectionPage dispositionReviewStages;
+    public com.microsoft.graph.security.requests.DispositionReviewStageCollectionPage dispositionReviewStages;
 
     /**
      * The Retention Event Type.
@@ -190,7 +189,7 @@ public class RetentionLabel extends Entity implements IJsonBackedObject {
 
 
         if (json.has("dispositionReviewStages")) {
-            dispositionReviewStages = serializer.deserializeObject(json.get("dispositionReviewStages"), DispositionReviewStageCollectionPage.class);
+            dispositionReviewStages = serializer.deserializeObject(json.get("dispositionReviewStages"), com.microsoft.graph.security.requests.DispositionReviewStageCollectionPage.class);
         }
     }
 }

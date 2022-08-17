@@ -67,8 +67,8 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @return the collection request builder
      */
     @Nonnull
-    public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
-        return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -78,8 +78,8 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @param id the item identifier
      */
     @Nonnull
-    public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsInformationProtectionAppLockerFile collection
@@ -87,8 +87,8 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsInformationProtectionAppLockerFileCollectionRequestBuilder exemptAppLockerFiles() {
-        return new WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder exemptAppLockerFiles() {
+        return new com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles"), getClient(), null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsInformationProtectionAppLockerFileRequestBuilder exemptAppLockerFiles(@Nonnull final String id) {
-        return new WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileRequestBuilder exemptAppLockerFiles(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("exemptAppLockerFiles") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsInformationProtectionAppLockerFile collection
@@ -107,8 +107,8 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles() {
-        return new WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles() {
+        return new com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles"), getClient(), null);
     }
 
     /**
@@ -118,8 +118,8 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(@Nonnull final String id) {
-        return new WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment("protectedAppLockerFiles") + "/" + id, getClient(), null);
     }
 
     /**

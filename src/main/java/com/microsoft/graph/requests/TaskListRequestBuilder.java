@@ -63,8 +63,8 @@ public class TaskListRequestBuilder extends BaseRequestBuilder<TaskList> {
      * @return the collection request builder
      */
     @Nonnull
-    public ExtensionCollectionRequestBuilder extensions() {
-        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    public com.microsoft.graph.requests.ExtensionCollectionRequestBuilder extensions() {
+        return new com.microsoft.graph.requests.ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
     /**
@@ -74,8 +74,8 @@ public class TaskListRequestBuilder extends BaseRequestBuilder<TaskList> {
      * @param id the item identifier
      */
     @Nonnull
-    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
-        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ExtensionRequestBuilder extensions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the BaseTask collection
@@ -83,8 +83,8 @@ public class TaskListRequestBuilder extends BaseRequestBuilder<TaskList> {
      * @return the collection request builder
      */
     @Nonnull
-    public BaseTaskCollectionRequestBuilder tasks() {
-        return new BaseTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
+    public com.microsoft.graph.requests.BaseTaskCollectionRequestBuilder tasks() {
+        return new com.microsoft.graph.requests.BaseTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
     /**
@@ -94,7 +94,7 @@ public class TaskListRequestBuilder extends BaseRequestBuilder<TaskList> {
      * @param id the item identifier
      */
     @Nonnull
-    public BaseTaskRequestBuilder tasks(@Nonnull final String id) {
-        return new BaseTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BaseTaskRequestBuilder tasks(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BaseTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

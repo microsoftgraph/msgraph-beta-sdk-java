@@ -9,8 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AndroidDeviceOwnerCertificateAccessType;
 import com.microsoft.graph.models.IntendedPurpose;
-import com.microsoft.graph.models.ManagedDeviceCertificateState;
+import com.microsoft.graph.models.AndroidDeviceOwnerSilentCertificateAccess;
 import com.microsoft.graph.models.AndroidDeviceOwnerCertificateProfileBase;
 import com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage;
 
@@ -30,6 +31,15 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
 
 
     /**
+     * The Certificate Access Type.
+     * Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
+     */
+    @SerializedName(value = "certificateAccessType", alternate = {"CertificateAccessType"})
+    @Expose
+	@Nullable
+    public AndroidDeviceOwnerCertificateAccessType certificateAccessType;
+
+    /**
      * The Intended Purpose.
      * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
      */
@@ -39,13 +49,22 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
     public IntendedPurpose intendedPurpose;
 
     /**
+     * The Silent Certificate Access Details.
+     * Certificate access information. This collection can contain a maximum of 50 elements.
+     */
+    @SerializedName(value = "silentCertificateAccessDetails", alternate = {"SilentCertificateAccessDetails"})
+    @Expose
+	@Nullable
+    public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> silentCertificateAccessDetails;
+
+    /**
      * The Managed Device Certificate States.
      * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      */
     @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
 	@Nullable
-    public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
+    public com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
 
     /**
@@ -58,7 +77,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
 
 
         if (json.has("managedDeviceCertificateStates")) {
-            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), ManagedDeviceCertificateStateCollectionPage.class);
+            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage.class);
         }
     }
 }

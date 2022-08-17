@@ -10,8 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.EmbeddedSIMActivationCode;
-import com.microsoft.graph.models.EmbeddedSIMActivationCodePoolAssignment;
-import com.microsoft.graph.models.EmbeddedSIMDeviceState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolAssignmentCollectionPage;
 import com.microsoft.graph.requests.EmbeddedSIMDeviceStateCollectionPage;
@@ -83,7 +81,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public EmbeddedSIMActivationCodePoolAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolAssignmentCollectionPage assignments;
 
     /**
      * The Device States.
@@ -92,7 +90,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
     @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
 	@Nullable
-    public EmbeddedSIMDeviceStateCollectionPage deviceStates;
+    public com.microsoft.graph.requests.EmbeddedSIMDeviceStateCollectionPage deviceStates;
 
 
     /**
@@ -105,11 +103,11 @@ public class EmbeddedSIMActivationCodePool extends Entity implements IJsonBacked
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), EmbeddedSIMActivationCodePoolAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceStates")) {
-            deviceStates = serializer.deserializeObject(json.get("deviceStates"), EmbeddedSIMDeviceStateCollectionPage.class);
+            deviceStates = serializer.deserializeObject(json.get("deviceStates"), com.microsoft.graph.requests.EmbeddedSIMDeviceStateCollectionPage.class);
         }
     }
 }

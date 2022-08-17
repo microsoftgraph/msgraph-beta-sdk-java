@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ExactMatchLookupJob;
-import com.microsoft.graph.requests.LookupResultRowCollectionRequestBuilder;
-import com.microsoft.graph.requests.LookupResultRowRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class ExactMatchLookupJobRequestBuilder extends BaseRequestBuilder<ExactM
      * @return the collection request builder
      */
     @Nonnull
-    public LookupResultRowCollectionRequestBuilder matchingRows() {
-        return new LookupResultRowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("matchingRows"), getClient(), null);
+    public com.microsoft.graph.requests.LookupResultRowCollectionRequestBuilder matchingRows() {
+        return new com.microsoft.graph.requests.LookupResultRowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("matchingRows"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class ExactMatchLookupJobRequestBuilder extends BaseRequestBuilder<ExactM
      * @param id the item identifier
      */
     @Nonnull
-    public LookupResultRowRequestBuilder matchingRows(@Nonnull final String id) {
-        return new LookupResultRowRequestBuilder(getRequestUrlWithAdditionalSegment("matchingRows") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.LookupResultRowRequestBuilder matchingRows(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.LookupResultRowRequestBuilder(getRequestUrlWithAdditionalSegment("matchingRows") + "/" + id, getClient(), null);
     }
 }

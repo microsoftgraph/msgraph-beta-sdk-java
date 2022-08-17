@@ -39,7 +39,7 @@ public class ResourceSpecificPermission implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Describes the level of access that the resource-specific permission represents.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -48,7 +48,7 @@ public class ResourceSpecificPermission implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the resource-specific permission.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class ResourceSpecificPermission implements IJsonBackedObject {
 
     /**
      * The Id.
-     * The unique identifier for the resource-specific application permission.
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -66,7 +66,7 @@ public class ResourceSpecificPermission implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * Indicates whether the permission is enabled.
+     * 
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -75,7 +75,7 @@ public class ResourceSpecificPermission implements IJsonBackedObject {
 
     /**
      * The Value.
-     * The value of the permission.
+     * 
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

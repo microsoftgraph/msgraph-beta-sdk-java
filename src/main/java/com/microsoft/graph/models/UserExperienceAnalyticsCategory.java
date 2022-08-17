@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UserExperienceAnalyticsInsight;
-import com.microsoft.graph.models.UserExperienceAnalyticsMetric;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionPage;
 
@@ -45,7 +44,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements IJsonBack
     @SerializedName(value = "metricValues", alternate = {"MetricValues"})
     @Expose
 	@Nullable
-    public UserExperienceAnalyticsMetricCollectionPage metricValues;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionPage metricValues;
 
 
     /**
@@ -58,7 +57,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements IJsonBack
 
 
         if (json.has("metricValues")) {
-            metricValues = serializer.deserializeObject(json.get("metricValues"), UserExperienceAnalyticsMetricCollectionPage.class);
+            metricValues = serializer.deserializeObject(json.get("metricValues"), com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionPage.class);
         }
     }
 }

@@ -12,8 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.RequestSchedule;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
-import com.microsoft.graph.models.AccessPackageAssignmentRequest;
-import com.microsoft.graph.models.AccessPackageAssignmentResourceRole;
 import com.microsoft.graph.models.AccessPackageSubject;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionPage;
@@ -140,7 +138,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
     @SerializedName(value = "accessPackageAssignmentRequests", alternate = {"AccessPackageAssignmentRequests"})
     @Expose
 	@Nullable
-    public AccessPackageAssignmentRequestCollectionPage accessPackageAssignmentRequests;
+    public com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionPage accessPackageAssignmentRequests;
 
     /**
      * The Access Package Assignment Resource Roles.
@@ -149,7 +147,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
     @SerializedName(value = "accessPackageAssignmentResourceRoles", alternate = {"AccessPackageAssignmentResourceRoles"})
     @Expose
 	@Nullable
-    public AccessPackageAssignmentResourceRoleCollectionPage accessPackageAssignmentResourceRoles;
+    public com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleCollectionPage accessPackageAssignmentResourceRoles;
 
     /**
      * The Target.
@@ -171,11 +169,11 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
 
 
         if (json.has("accessPackageAssignmentRequests")) {
-            accessPackageAssignmentRequests = serializer.deserializeObject(json.get("accessPackageAssignmentRequests"), AccessPackageAssignmentRequestCollectionPage.class);
+            accessPackageAssignmentRequests = serializer.deserializeObject(json.get("accessPackageAssignmentRequests"), com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionPage.class);
         }
 
         if (json.has("accessPackageAssignmentResourceRoles")) {
-            accessPackageAssignmentResourceRoles = serializer.deserializeObject(json.get("accessPackageAssignmentResourceRoles"), AccessPackageAssignmentResourceRoleCollectionPage.class);
+            accessPackageAssignmentResourceRoles = serializer.deserializeObject(json.get("accessPackageAssignmentResourceRoles"), com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleCollectionPage.class);
         }
     }
 }

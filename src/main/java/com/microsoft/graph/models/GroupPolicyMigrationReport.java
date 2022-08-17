@@ -10,8 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.GroupPolicyMigrationReadiness;
-import com.microsoft.graph.models.GroupPolicySettingMapping;
-import com.microsoft.graph.models.UnsupportedGroupPolicyExtension;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.GroupPolicySettingMappingCollectionPage;
 import com.microsoft.graph.requests.UnsupportedGroupPolicyExtensionCollectionPage;
@@ -146,7 +144,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
     @SerializedName(value = "groupPolicySettingMappings", alternate = {"GroupPolicySettingMappings"})
     @Expose
 	@Nullable
-    public GroupPolicySettingMappingCollectionPage groupPolicySettingMappings;
+    public com.microsoft.graph.requests.GroupPolicySettingMappingCollectionPage groupPolicySettingMappings;
 
     /**
      * The Unsupported Group Policy Extensions.
@@ -155,7 +153,7 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
     @SerializedName(value = "unsupportedGroupPolicyExtensions", alternate = {"UnsupportedGroupPolicyExtensions"})
     @Expose
 	@Nullable
-    public UnsupportedGroupPolicyExtensionCollectionPage unsupportedGroupPolicyExtensions;
+    public com.microsoft.graph.requests.UnsupportedGroupPolicyExtensionCollectionPage unsupportedGroupPolicyExtensions;
 
 
     /**
@@ -168,11 +166,11 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
 
 
         if (json.has("groupPolicySettingMappings")) {
-            groupPolicySettingMappings = serializer.deserializeObject(json.get("groupPolicySettingMappings"), GroupPolicySettingMappingCollectionPage.class);
+            groupPolicySettingMappings = serializer.deserializeObject(json.get("groupPolicySettingMappings"), com.microsoft.graph.requests.GroupPolicySettingMappingCollectionPage.class);
         }
 
         if (json.has("unsupportedGroupPolicyExtensions")) {
-            unsupportedGroupPolicyExtensions = serializer.deserializeObject(json.get("unsupportedGroupPolicyExtensions"), UnsupportedGroupPolicyExtensionCollectionPage.class);
+            unsupportedGroupPolicyExtensions = serializer.deserializeObject(json.get("unsupportedGroupPolicyExtensions"), com.microsoft.graph.requests.UnsupportedGroupPolicyExtensionCollectionPage.class);
         }
     }
 }

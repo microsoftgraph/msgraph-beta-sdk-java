@@ -57,6 +57,15 @@ public class CloudPcReviewStatus implements IJsonBackedObject {
     public String azureStorageAccountName;
 
     /**
+     * The Azure Storage Container Name.
+     * The name of the container in an Azure Storage account in which the Cloud PC snapshot is being saved.
+     */
+    @SerializedName(value = "azureStorageContainerName", alternate = {"AzureStorageContainerName"})
+    @Expose
+	@Nullable
+    public String azureStorageContainerName;
+
+    /**
      * The In Review.
      * True if the Cloud PC is set to in review by the administrator.
      */

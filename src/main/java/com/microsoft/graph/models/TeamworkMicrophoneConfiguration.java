@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.TeamworkPeripheral;
-import com.microsoft.graph.requests.TeamworkPeripheralCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -65,7 +64,7 @@ public class TeamworkMicrophoneConfiguration implements IJsonBackedObject {
     @SerializedName(value = "microphones", alternate = {"Microphones"})
     @Expose
 	@Nullable
-    public TeamworkPeripheralCollectionPage microphones;
+    public com.microsoft.graph.requests.TeamworkPeripheralCollectionPage microphones;
 
 
     /**

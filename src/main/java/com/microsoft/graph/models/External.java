@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ExternalConnection;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ExternalConnectionCollectionPage;
 
@@ -39,7 +38,7 @@ public class External extends Entity implements IJsonBackedObject {
     @SerializedName(value = "connections", alternate = {"Connections"})
     @Expose
 	@Nullable
-    public ExternalConnectionCollectionPage connections;
+    public com.microsoft.graph.requests.ExternalConnectionCollectionPage connections;
 
 
     /**
@@ -52,7 +51,7 @@ public class External extends Entity implements IJsonBackedObject {
 
 
         if (json.has("connections")) {
-            connections = serializer.deserializeObject(json.get("connections"), ExternalConnectionCollectionPage.class);
+            connections = serializer.deserializeObject(json.get("connections"), com.microsoft.graph.requests.ExternalConnectionCollectionPage.class);
         }
     }
 }

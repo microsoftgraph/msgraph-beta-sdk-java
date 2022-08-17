@@ -10,10 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.GovernanceResource;
-import com.microsoft.graph.models.GovernanceRoleAssignmentRequest;
-import com.microsoft.graph.models.GovernanceRoleAssignment;
-import com.microsoft.graph.models.GovernanceRoleDefinition;
-import com.microsoft.graph.models.GovernanceRoleSetting;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.GovernanceRoleAssignmentRequestCollectionPage;
 import com.microsoft.graph.requests.GovernanceRoleAssignmentCollectionPage;
@@ -105,7 +101,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
     @SerializedName(value = "roleAssignmentRequests", alternate = {"RoleAssignmentRequests"})
     @Expose
 	@Nullable
-    public GovernanceRoleAssignmentRequestCollectionPage roleAssignmentRequests;
+    public com.microsoft.graph.requests.GovernanceRoleAssignmentRequestCollectionPage roleAssignmentRequests;
 
     /**
      * The Role Assignments.
@@ -114,7 +110,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
     @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
 	@Nullable
-    public GovernanceRoleAssignmentCollectionPage roleAssignments;
+    public com.microsoft.graph.requests.GovernanceRoleAssignmentCollectionPage roleAssignments;
 
     /**
      * The Role Definitions.
@@ -123,7 +119,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
     @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
 	@Nullable
-    public GovernanceRoleDefinitionCollectionPage roleDefinitions;
+    public com.microsoft.graph.requests.GovernanceRoleDefinitionCollectionPage roleDefinitions;
 
     /**
      * The Role Settings.
@@ -132,7 +128,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
     @SerializedName(value = "roleSettings", alternate = {"RoleSettings"})
     @Expose
 	@Nullable
-    public GovernanceRoleSettingCollectionPage roleSettings;
+    public com.microsoft.graph.requests.GovernanceRoleSettingCollectionPage roleSettings;
 
 
     /**
@@ -145,19 +141,19 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
 
         if (json.has("roleAssignmentRequests")) {
-            roleAssignmentRequests = serializer.deserializeObject(json.get("roleAssignmentRequests"), GovernanceRoleAssignmentRequestCollectionPage.class);
+            roleAssignmentRequests = serializer.deserializeObject(json.get("roleAssignmentRequests"), com.microsoft.graph.requests.GovernanceRoleAssignmentRequestCollectionPage.class);
         }
 
         if (json.has("roleAssignments")) {
-            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), GovernanceRoleAssignmentCollectionPage.class);
+            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), com.microsoft.graph.requests.GovernanceRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("roleDefinitions")) {
-            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions"), GovernanceRoleDefinitionCollectionPage.class);
+            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions"), com.microsoft.graph.requests.GovernanceRoleDefinitionCollectionPage.class);
         }
 
         if (json.has("roleSettings")) {
-            roleSettings = serializer.deserializeObject(json.get("roleSettings"), GovernanceRoleSettingCollectionPage.class);
+            roleSettings = serializer.deserializeObject(json.get("roleSettings"), com.microsoft.graph.requests.GovernanceRoleSettingCollectionPage.class);
         }
     }
 }

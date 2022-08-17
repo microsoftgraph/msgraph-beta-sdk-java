@@ -8,21 +8,6 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.Case;
-import com.microsoft.graph.ediscovery.requests.CustodianCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.CustodianRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.LegalHoldCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.LegalHoldRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.CaseOperationCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.CaseOperationRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.ReviewSetCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.ReviewSetRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.CaseSettingsRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.SourceCollectionCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.SourceCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.TagCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.TagRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -77,8 +62,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @return the collection request builder
      */
     @Nonnull
-    public CustodianCollectionRequestBuilder custodians() {
-        return new CustodianCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("custodians"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.CustodianCollectionRequestBuilder custodians() {
+        return new com.microsoft.graph.ediscovery.requests.CustodianCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("custodians"), getClient(), null);
     }
 
     /**
@@ -88,8 +73,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @param id the item identifier
      */
     @Nonnull
-    public CustodianRequestBuilder custodians(@Nonnull final String id) {
-        return new CustodianRequestBuilder(getRequestUrlWithAdditionalSegment("custodians") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.CustodianRequestBuilder custodians(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.CustodianRequestBuilder(getRequestUrlWithAdditionalSegment("custodians") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the LegalHold collection
@@ -97,8 +82,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @return the collection request builder
      */
     @Nonnull
-    public LegalHoldCollectionRequestBuilder legalHolds() {
-        return new LegalHoldCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("legalHolds"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.LegalHoldCollectionRequestBuilder legalHolds() {
+        return new com.microsoft.graph.ediscovery.requests.LegalHoldCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("legalHolds"), getClient(), null);
     }
 
     /**
@@ -108,8 +93,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @param id the item identifier
      */
     @Nonnull
-    public LegalHoldRequestBuilder legalHolds(@Nonnull final String id) {
-        return new LegalHoldRequestBuilder(getRequestUrlWithAdditionalSegment("legalHolds") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.LegalHoldRequestBuilder legalHolds(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.LegalHoldRequestBuilder(getRequestUrlWithAdditionalSegment("legalHolds") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the NoncustodialDataSource collection
@@ -117,8 +102,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @return the collection request builder
      */
     @Nonnull
-    public NoncustodialDataSourceCollectionRequestBuilder noncustodialDataSources() {
-        return new NoncustodialDataSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialDataSources"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionRequestBuilder noncustodialDataSources() {
+        return new com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialDataSources"), getClient(), null);
     }
 
     /**
@@ -128,8 +113,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @param id the item identifier
      */
     @Nonnull
-    public NoncustodialDataSourceRequestBuilder noncustodialDataSources(@Nonnull final String id) {
-        return new NoncustodialDataSourceRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialDataSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceRequestBuilder noncustodialDataSources(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialDataSources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CaseOperation collection
@@ -137,8 +122,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @return the collection request builder
      */
     @Nonnull
-    public CaseOperationCollectionRequestBuilder operations() {
-        return new CaseOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.CaseOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.ediscovery.requests.CaseOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     /**
@@ -148,8 +133,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @param id the item identifier
      */
     @Nonnull
-    public CaseOperationRequestBuilder operations(@Nonnull final String id) {
-        return new CaseOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.CaseOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.CaseOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ReviewSet collection
@@ -157,8 +142,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @return the collection request builder
      */
     @Nonnull
-    public ReviewSetCollectionRequestBuilder reviewSets() {
-        return new ReviewSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSets"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.ReviewSetCollectionRequestBuilder reviewSets() {
+        return new com.microsoft.graph.ediscovery.requests.ReviewSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSets"), getClient(), null);
     }
 
     /**
@@ -168,8 +153,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @param id the item identifier
      */
     @Nonnull
-    public ReviewSetRequestBuilder reviewSets(@Nonnull final String id) {
-        return new ReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSets") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.ReviewSetRequestBuilder reviewSets(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.ReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSets") + "/" + id, getClient(), null);
     }
 
     /**
@@ -178,8 +163,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @return the CaseSettingsRequestBuilder instance
      */
     @Nonnull
-    public CaseSettingsRequestBuilder settings() {
-        return new CaseSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.CaseSettingsRequestBuilder settings() {
+        return new com.microsoft.graph.ediscovery.requests.CaseSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
     /**
      *  Gets a request builder for the SourceCollection collection
@@ -187,8 +172,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @return the collection request builder
      */
     @Nonnull
-    public SourceCollectionCollectionRequestBuilder sourceCollections() {
-        return new SourceCollectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollections"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.SourceCollectionCollectionRequestBuilder sourceCollections() {
+        return new com.microsoft.graph.ediscovery.requests.SourceCollectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollections"), getClient(), null);
     }
 
     /**
@@ -198,8 +183,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @param id the item identifier
      */
     @Nonnull
-    public SourceCollectionRequestBuilder sourceCollections(@Nonnull final String id) {
-        return new SourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.SourceCollectionRequestBuilder sourceCollections(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.SourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Tag collection
@@ -207,8 +192,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @return the collection request builder
      */
     @Nonnull
-    public TagCollectionRequestBuilder tags() {
-        return new TagCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tags"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.TagCollectionRequestBuilder tags() {
+        return new com.microsoft.graph.ediscovery.requests.TagCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tags"), getClient(), null);
     }
 
     /**
@@ -218,8 +203,8 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
      * @param id the item identifier
      */
     @Nonnull
-    public TagRequestBuilder tags(@Nonnull final String id) {
-        return new TagRequestBuilder(getRequestUrlWithAdditionalSegment("tags") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.TagRequestBuilder tags(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.TagRequestBuilder(getRequestUrlWithAdditionalSegment("tags") + "/" + id, getClient(), null);
     }
 
     /**

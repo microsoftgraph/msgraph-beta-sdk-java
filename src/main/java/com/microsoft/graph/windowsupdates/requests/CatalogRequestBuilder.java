@@ -8,8 +8,6 @@ package com.microsoft.graph.windowsupdates.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.windowsupdates.models.Catalog;
-import com.microsoft.graph.windowsupdates.requests.CatalogEntryCollectionRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.CatalogEntryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class CatalogRequestBuilder extends BaseRequestBuilder<Catalog> {
      * @return the collection request builder
      */
     @Nonnull
-    public CatalogEntryCollectionRequestBuilder entries() {
-        return new CatalogEntryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("entries"), getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.CatalogEntryCollectionRequestBuilder entries() {
+        return new com.microsoft.graph.windowsupdates.requests.CatalogEntryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("entries"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder<Catalog> {
      * @param id the item identifier
      */
     @Nonnull
-    public CatalogEntryRequestBuilder entries(@Nonnull final String id) {
-        return new CatalogEntryRequestBuilder(getRequestUrlWithAdditionalSegment("entries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.CatalogEntryRequestBuilder entries(@Nonnull final String id) {
+        return new com.microsoft.graph.windowsupdates.requests.CatalogEntryRequestBuilder(getRequestUrlWithAdditionalSegment("entries") + "/" + id, getClient(), null);
     }
 }

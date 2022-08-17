@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.IntuneBrandingProfile;
 import com.microsoft.graph.models.IntuneBrandingProfileAssignment;
-import com.microsoft.graph.requests.IntuneBrandingProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.IntuneBrandingProfileAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

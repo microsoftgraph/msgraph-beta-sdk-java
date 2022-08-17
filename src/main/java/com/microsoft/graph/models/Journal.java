@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Account;
-import com.microsoft.graph.models.JournalLine;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.JournalLineCollectionPage;
 
@@ -90,7 +89,7 @@ public class Journal extends Entity implements IJsonBackedObject {
     @SerializedName(value = "journalLines", alternate = {"JournalLines"})
     @Expose
 	@Nullable
-    public JournalLineCollectionPage journalLines;
+    public com.microsoft.graph.requests.JournalLineCollectionPage journalLines;
 
 
     /**
@@ -103,7 +102,7 @@ public class Journal extends Entity implements IJsonBackedObject {
 
 
         if (json.has("journalLines")) {
-            journalLines = serializer.deserializeObject(json.get("journalLines"), JournalLineCollectionPage.class);
+            journalLines = serializer.deserializeObject(json.get("journalLines"), com.microsoft.graph.requests.JournalLineCollectionPage.class);
         }
     }
 }

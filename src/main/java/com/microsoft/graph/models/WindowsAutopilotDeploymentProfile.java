@@ -12,8 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WindowsAutopilotDeviceType;
 import com.microsoft.graph.models.WindowsEnrollmentStatusScreenSettings;
 import com.microsoft.graph.models.OutOfBoxExperienceSettings;
-import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
-import com.microsoft.graph.models.WindowsAutopilotDeploymentProfileAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage;
 import com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentCollectionPage;
@@ -157,7 +155,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements IJsonBa
     @SerializedName(value = "assignedDevices", alternate = {"AssignedDevices"})
     @Expose
 	@Nullable
-    public WindowsAutopilotDeviceIdentityCollectionPage assignedDevices;
+    public com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage assignedDevices;
 
     /**
      * The Assignments.
@@ -166,7 +164,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements IJsonBa
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public WindowsAutopilotDeploymentProfileAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentCollectionPage assignments;
 
 
     /**
@@ -179,11 +177,11 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements IJsonBa
 
 
         if (json.has("assignedDevices")) {
-            assignedDevices = serializer.deserializeObject(json.get("assignedDevices"), WindowsAutopilotDeviceIdentityCollectionPage.class);
+            assignedDevices = serializer.deserializeObject(json.get("assignedDevices"), com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage.class);
         }
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), WindowsAutopilotDeploymentProfileAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentCollectionPage.class);
         }
     }
 }

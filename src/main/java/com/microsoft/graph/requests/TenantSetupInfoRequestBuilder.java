@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TenantSetupInfo;
-import com.microsoft.graph.requests.PrivilegedRoleSettingsWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class TenantSetupInfoRequestBuilder extends BaseRequestBuilder<TenantSetu
      * @return the PrivilegedRoleSettingsWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public PrivilegedRoleSettingsWithReferenceRequestBuilder defaultRolesSettings() {
-        return new PrivilegedRoleSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("defaultRolesSettings"), getClient(), null);
+    public com.microsoft.graph.requests.PrivilegedRoleSettingsWithReferenceRequestBuilder defaultRolesSettings() {
+        return new com.microsoft.graph.requests.PrivilegedRoleSettingsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("defaultRolesSettings"), getClient(), null);
     }
 }

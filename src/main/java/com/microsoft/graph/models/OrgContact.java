@@ -13,7 +13,6 @@ import com.microsoft.graph.models.PhysicalOfficeAddress;
 import com.microsoft.graph.models.OnPremisesProvisioningError;
 import com.microsoft.graph.models.Phone;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -161,7 +160,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage directReports;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage directReports;
 
     /**
      * The Manager.
@@ -177,21 +176,21 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage memberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Transitive Member Of.
      * 
      */
 	@Nullable
-    public DirectoryObjectCollectionPage transitiveMemberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
 
     /**
      * The Transitive Reports.
      * The transitive reports for a contact. Read-only.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage transitiveReports;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveReports;
 
 
     /**
@@ -204,19 +203,19 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("directReports")) {
-            directReports = serializer.deserializeObject(json.get("directReports"), DirectoryObjectCollectionPage.class);
+            directReports = serializer.deserializeObject(json.get("directReports"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf"), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("transitiveReports")) {
-            transitiveReports = serializer.deserializeObject(json.get("transitiveReports"), DirectoryObjectCollectionPage.class);
+            transitiveReports = serializer.deserializeObject(json.get("transitiveReports"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
     }
 }

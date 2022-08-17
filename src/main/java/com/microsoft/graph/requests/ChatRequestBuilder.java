@@ -14,21 +14,6 @@ import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.graph.models.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.TeamworkUserIdentity;
 import com.microsoft.graph.models.ChatMessage;
-import com.microsoft.graph.requests.TeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.TeamsAppInstallationRequestBuilder;
-import com.microsoft.graph.requests.ChatMessageInfoRequestBuilder;
-import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.ChatMessageRequestBuilder;
-import com.microsoft.graph.requests.TeamsAsyncOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.TeamsAsyncOperationRequestBuilder;
-import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder;
-import com.microsoft.graph.requests.PinnedChatMessageInfoCollectionRequestBuilder;
-import com.microsoft.graph.requests.PinnedChatMessageInfoRequestBuilder;
-import com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder;
-import com.microsoft.graph.requests.TeamsTabRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -88,8 +73,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @return the collection request builder
      */
     @Nonnull
-    public TeamsAppInstallationCollectionRequestBuilder installedApps() {
-        return new TeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppInstallationCollectionRequestBuilder installedApps() {
+        return new com.microsoft.graph.requests.TeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);
     }
 
     /**
@@ -99,8 +84,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @param id the item identifier
      */
     @Nonnull
-    public TeamsAppInstallationRequestBuilder installedApps(@Nonnull final String id) {
-        return new TeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppInstallationRequestBuilder installedApps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
     }
 
     /**
@@ -109,8 +94,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @return the ChatMessageInfoRequestBuilder instance
      */
     @Nonnull
-    public ChatMessageInfoRequestBuilder lastMessagePreview() {
-        return new ChatMessageInfoRequestBuilder(getRequestUrlWithAdditionalSegment("lastMessagePreview"), getClient(), null);
+    public com.microsoft.graph.requests.ChatMessageInfoRequestBuilder lastMessagePreview() {
+        return new com.microsoft.graph.requests.ChatMessageInfoRequestBuilder(getRequestUrlWithAdditionalSegment("lastMessagePreview"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ConversationMember collection
@@ -118,8 +103,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @return the collection request builder
      */
     @Nonnull
-    public ConversationMemberCollectionRequestBuilder members() {
-        return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    public com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder members() {
+        return new com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
     /**
@@ -129,8 +114,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @param id the item identifier
      */
     @Nonnull
-    public ConversationMemberRequestBuilder members(@Nonnull final String id) {
-        return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ConversationMemberRequestBuilder members(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ChatMessage collection
@@ -138,8 +123,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @return the collection request builder
      */
     @Nonnull
-    public ChatMessageCollectionRequestBuilder messages() {
-        return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
+    public com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder messages() {
+        return new com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
     /**
@@ -149,8 +134,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @param id the item identifier
      */
     @Nonnull
-    public ChatMessageRequestBuilder messages(@Nonnull final String id) {
-        return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ChatMessageRequestBuilder messages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TeamsAsyncOperation collection
@@ -158,8 +143,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @return the collection request builder
      */
     @Nonnull
-    public TeamsAsyncOperationCollectionRequestBuilder operations() {
-        return new TeamsAsyncOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAsyncOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.requests.TeamsAsyncOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     /**
@@ -169,8 +154,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @param id the item identifier
      */
     @Nonnull
-    public TeamsAsyncOperationRequestBuilder operations(@Nonnull final String id) {
-        return new TeamsAsyncOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TeamsAsyncOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamsAsyncOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ResourceSpecificPermissionGrant collection
@@ -178,8 +163,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @return the collection request builder
      */
     @Nonnull
-    public ResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
-        return new ResourceSpecificPermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants"), getClient(), null);
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
+        return new com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants"), getClient(), null);
     }
 
     /**
@@ -189,8 +174,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @param id the item identifier
      */
     @Nonnull
-    public ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id) {
-        return new ResourceSpecificPermissionGrantRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PinnedChatMessageInfo collection
@@ -198,8 +183,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @return the collection request builder
      */
     @Nonnull
-    public PinnedChatMessageInfoCollectionRequestBuilder pinnedMessages() {
-        return new PinnedChatMessageInfoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pinnedMessages"), getClient(), null);
+    public com.microsoft.graph.requests.PinnedChatMessageInfoCollectionRequestBuilder pinnedMessages() {
+        return new com.microsoft.graph.requests.PinnedChatMessageInfoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pinnedMessages"), getClient(), null);
     }
 
     /**
@@ -209,8 +194,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @param id the item identifier
      */
     @Nonnull
-    public PinnedChatMessageInfoRequestBuilder pinnedMessages(@Nonnull final String id) {
-        return new PinnedChatMessageInfoRequestBuilder(getRequestUrlWithAdditionalSegment("pinnedMessages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PinnedChatMessageInfoRequestBuilder pinnedMessages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PinnedChatMessageInfoRequestBuilder(getRequestUrlWithAdditionalSegment("pinnedMessages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TeamsTab collection
@@ -218,8 +203,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @return the collection request builder
      */
     @Nonnull
-    public TeamsTabCollectionRequestBuilder tabs() {
-        return new TeamsTabCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tabs"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder tabs() {
+        return new com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tabs"), getClient(), null);
     }
 
     /**
@@ -229,8 +214,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
      * @param id the item identifier
      */
     @Nonnull
-    public TeamsTabRequestBuilder tabs(@Nonnull final String id) {
-        return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TeamsTabRequestBuilder tabs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);
     }
 
     /**

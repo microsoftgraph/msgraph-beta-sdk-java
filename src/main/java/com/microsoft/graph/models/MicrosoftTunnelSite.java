@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MicrosoftTunnelConfiguration;
-import com.microsoft.graph.models.MicrosoftTunnelServer;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MicrosoftTunnelServerCollectionPage;
 
@@ -46,6 +45,15 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Enable Certificate Pinning.
+     * When set to true, certificate pinning will be enforced on connections between the Microsoft Tunnel server and Microsoft Tunnel clients. When set to false, certificate pinning will be disabled.
+     */
+    @SerializedName(value = "enableCertificatePinning", alternate = {"EnableCertificatePinning"})
+    @Expose
+	@Nullable
+    public Boolean enableCertificatePinning;
 
     /**
      * The Internal Network Probe Url.
@@ -135,7 +143,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
     @SerializedName(value = "microsoftTunnelServers", alternate = {"MicrosoftTunnelServers"})
     @Expose
 	@Nullable
-    public MicrosoftTunnelServerCollectionPage microsoftTunnelServers;
+    public com.microsoft.graph.requests.MicrosoftTunnelServerCollectionPage microsoftTunnelServers;
 
 
     /**
@@ -148,7 +156,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
 
 
         if (json.has("microsoftTunnelServers")) {
-            microsoftTunnelServers = serializer.deserializeObject(json.get("microsoftTunnelServers"), MicrosoftTunnelServerCollectionPage.class);
+            microsoftTunnelServers = serializer.deserializeObject(json.get("microsoftTunnelServers"), com.microsoft.graph.requests.MicrosoftTunnelServerCollectionPage.class);
         }
     }
 }

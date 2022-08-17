@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserExperienceAnalyticsCategory;
-import com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserExperienceAnalyticsMetricRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class UserExperienceAnalyticsCategoryRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public UserExperienceAnalyticsMetricCollectionRequestBuilder metricValues() {
-        return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("metricValues"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionRequestBuilder metricValues() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("metricValues"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class UserExperienceAnalyticsCategoryRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public UserExperienceAnalyticsMetricRequestBuilder metricValues(@Nonnull final String id) {
-        return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("metricValues") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricRequestBuilder metricValues(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("metricValues") + "/" + id, getClient(), null);
     }
 }

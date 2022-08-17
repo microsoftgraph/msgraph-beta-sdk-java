@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementSettingCategory;
-import com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementSettingDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

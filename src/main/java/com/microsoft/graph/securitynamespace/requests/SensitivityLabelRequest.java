@@ -14,7 +14,6 @@ import com.microsoft.graph.security.models.InformationProtectionAction;
 import com.microsoft.graph.security.models.ClassificationResult;
 import com.microsoft.graph.security.models.DowngradeJustification;
 import com.microsoft.graph.security.models.ContentLabel;
-import com.microsoft.graph.security.requests.SensitivityLabelRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -12,13 +12,6 @@ import com.microsoft.graph.models.TeamworkActivityTopic;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.graph.models.TeamworkNotificationRecipient;
-import com.microsoft.graph.requests.WorkforceIntegrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkforceIntegrationRequestBuilder;
-import com.microsoft.graph.requests.DeletedTeamCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeletedTeamRequestBuilder;
-import com.microsoft.graph.requests.TeamworkDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.TeamworkDeviceRequestBuilder;
-import com.microsoft.graph.requests.TeamsAppSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -74,8 +67,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @return the collection request builder
      */
     @Nonnull
-    public WorkforceIntegrationCollectionRequestBuilder workforceIntegrations() {
-        return new WorkforceIntegrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations"), getClient(), null);
+    public com.microsoft.graph.requests.WorkforceIntegrationCollectionRequestBuilder workforceIntegrations() {
+        return new com.microsoft.graph.requests.WorkforceIntegrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations"), getClient(), null);
     }
 
     /**
@@ -85,8 +78,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @param id the item identifier
      */
     @Nonnull
-    public WorkforceIntegrationRequestBuilder workforceIntegrations(@Nonnull final String id) {
-        return new WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WorkforceIntegrationRequestBuilder workforceIntegrations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeletedTeam collection
@@ -94,8 +87,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @return the collection request builder
      */
     @Nonnull
-    public DeletedTeamCollectionRequestBuilder deletedTeams() {
-        return new DeletedTeamCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedTeams"), getClient(), null);
+    public com.microsoft.graph.requests.DeletedTeamCollectionRequestBuilder deletedTeams() {
+        return new com.microsoft.graph.requests.DeletedTeamCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedTeams"), getClient(), null);
     }
 
     /**
@@ -105,8 +98,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @param id the item identifier
      */
     @Nonnull
-    public DeletedTeamRequestBuilder deletedTeams(@Nonnull final String id) {
-        return new DeletedTeamRequestBuilder(getRequestUrlWithAdditionalSegment("deletedTeams") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeletedTeamRequestBuilder deletedTeams(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeletedTeamRequestBuilder(getRequestUrlWithAdditionalSegment("deletedTeams") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TeamworkDevice collection
@@ -114,8 +107,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @return the collection request builder
      */
     @Nonnull
-    public TeamworkDeviceCollectionRequestBuilder devices() {
-        return new TeamworkDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("devices"), getClient(), null);
+    public com.microsoft.graph.requests.TeamworkDeviceCollectionRequestBuilder devices() {
+        return new com.microsoft.graph.requests.TeamworkDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("devices"), getClient(), null);
     }
 
     /**
@@ -125,8 +118,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @param id the item identifier
      */
     @Nonnull
-    public TeamworkDeviceRequestBuilder devices(@Nonnull final String id) {
-        return new TeamworkDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("devices") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TeamworkDeviceRequestBuilder devices(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamworkDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("devices") + "/" + id, getClient(), null);
     }
 
     /**
@@ -135,8 +128,28 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @return the TeamsAppSettingsRequestBuilder instance
      */
     @Nonnull
-    public TeamsAppSettingsRequestBuilder teamsAppSettings() {
-        return new TeamsAppSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppSettings"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppSettingsRequestBuilder teamsAppSettings() {
+        return new com.microsoft.graph.requests.TeamsAppSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppSettings"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the TeamTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TeamTemplateCollectionRequestBuilder teamTemplates() {
+        return new com.microsoft.graph.requests.TeamTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("teamTemplates"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TeamTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TeamTemplateRequestBuilder teamTemplates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("teamTemplates") + "/" + id, getClient(), null);
     }
 
     /**

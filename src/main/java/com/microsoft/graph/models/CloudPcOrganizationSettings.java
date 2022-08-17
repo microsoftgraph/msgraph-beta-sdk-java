@@ -29,6 +29,15 @@ public class CloudPcOrganizationSettings extends Entity implements IJsonBackedOb
 
 
     /**
+     * The Enable MEMAuto Enroll.
+     * Specifies whether new Cloud PCs will be automatically enrolled in Microsoft Endpoint Manager(MEM). The default value is false.
+     */
+    @SerializedName(value = "enableMEMAutoEnroll", alternate = {"EnableMEMAutoEnroll"})
+    @Expose
+	@Nullable
+    public Boolean enableMEMAutoEnroll;
+
+    /**
      * The Os Version.
      * The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
      */

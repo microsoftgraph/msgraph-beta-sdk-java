@@ -10,32 +10,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MicrosoftStoreForBusinessPortalSelectionOptions;
-import com.microsoft.graph.models.ManagedEBookCategory;
-import com.microsoft.graph.models.EnterpriseCodeSigningCertificate;
-import com.microsoft.graph.models.IosLobAppProvisioningConfiguration;
-import com.microsoft.graph.models.MobileAppCategory;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfiguration;
-import com.microsoft.graph.models.MobileApp;
 import com.microsoft.graph.models.SymantecCodeSigningCertificate;
-import com.microsoft.graph.models.ManagedEBook;
-import com.microsoft.graph.models.PolicySet;
-import com.microsoft.graph.models.SideLoadingKey;
-import com.microsoft.graph.models.VppToken;
 import com.microsoft.graph.models.WindowsManagementApp;
-import com.microsoft.graph.models.AndroidManagedAppProtection;
-import com.microsoft.graph.models.DefaultManagedAppProtection;
-import com.microsoft.graph.models.IosManagedAppProtection;
-import com.microsoft.graph.models.ManagedAppPolicy;
-import com.microsoft.graph.models.ManagedAppRegistration;
-import com.microsoft.graph.models.ManagedAppStatus;
-import com.microsoft.graph.models.MdmWindowsInformationProtectionPolicy;
-import com.microsoft.graph.models.TargetedManagedAppConfiguration;
-import com.microsoft.graph.models.WindowsInformationProtectionDeviceRegistration;
-import com.microsoft.graph.models.WindowsInformationProtectionPolicy;
-import com.microsoft.graph.models.WindowsInformationProtectionWipeAction;
-import com.microsoft.graph.models.WindowsManagedAppProtection;
-import com.microsoft.graph.models.DeviceAppManagementTask;
-import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicy;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ManagedEBookCategoryCollectionPage;
 import com.microsoft.graph.requests.EnterpriseCodeSigningCertificateCollectionPage;
@@ -88,7 +64,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Microsoft Store For Business Language.
-     * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is &amp;lt;languagecode2&amp;gt;-&amp;lt;country/regioncode2&amp;gt;, where &amp;lt;languagecode2&amp;gt; is a lowercase two-letter code derived from ISO 639-1 and &amp;lt;country/regioncode2&amp;gt; is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
+     * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -&amp;lt;country/regioncode2&amp;gt;, where  is a lowercase two-letter code derived from ISO 639-1 and &amp;lt;country/regioncode2&amp;gt; is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
      */
     @SerializedName(value = "microsoftStoreForBusinessLanguage", alternate = {"MicrosoftStoreForBusinessLanguage"})
     @Expose
@@ -129,7 +105,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managedEBookCategories", alternate = {"ManagedEBookCategories"})
     @Expose
 	@Nullable
-    public ManagedEBookCategoryCollectionPage managedEBookCategories;
+    public com.microsoft.graph.requests.ManagedEBookCategoryCollectionPage managedEBookCategories;
 
     /**
      * The Enterprise Code Signing Certificates.
@@ -138,7 +114,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "enterpriseCodeSigningCertificates", alternate = {"EnterpriseCodeSigningCertificates"})
     @Expose
 	@Nullable
-    public EnterpriseCodeSigningCertificateCollectionPage enterpriseCodeSigningCertificates;
+    public com.microsoft.graph.requests.EnterpriseCodeSigningCertificateCollectionPage enterpriseCodeSigningCertificates;
 
     /**
      * The Ios Lob App Provisioning Configurations.
@@ -147,7 +123,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "iosLobAppProvisioningConfigurations", alternate = {"IosLobAppProvisioningConfigurations"})
     @Expose
 	@Nullable
-    public IosLobAppProvisioningConfigurationCollectionPage iosLobAppProvisioningConfigurations;
+    public com.microsoft.graph.requests.IosLobAppProvisioningConfigurationCollectionPage iosLobAppProvisioningConfigurations;
 
     /**
      * The Mobile App Categories.
@@ -156,7 +132,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "mobileAppCategories", alternate = {"MobileAppCategories"})
     @Expose
 	@Nullable
-    public MobileAppCategoryCollectionPage mobileAppCategories;
+    public com.microsoft.graph.requests.MobileAppCategoryCollectionPage mobileAppCategories;
 
     /**
      * The Mobile App Configurations.
@@ -165,7 +141,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "mobileAppConfigurations", alternate = {"MobileAppConfigurations"})
     @Expose
 	@Nullable
-    public ManagedDeviceMobileAppConfigurationCollectionPage mobileAppConfigurations;
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationCollectionPage mobileAppConfigurations;
 
     /**
      * The Mobile Apps.
@@ -174,7 +150,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "mobileApps", alternate = {"MobileApps"})
     @Expose
 	@Nullable
-    public MobileAppCollectionPage mobileApps;
+    public com.microsoft.graph.requests.MobileAppCollectionPage mobileApps;
 
     /**
      * The Symantec Code Signing Certificate.
@@ -192,7 +168,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managedEBooks", alternate = {"ManagedEBooks"})
     @Expose
 	@Nullable
-    public ManagedEBookCollectionPage managedEBooks;
+    public com.microsoft.graph.requests.ManagedEBookCollectionPage managedEBooks;
 
     /**
      * The Policy Sets.
@@ -201,7 +177,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "policySets", alternate = {"PolicySets"})
     @Expose
 	@Nullable
-    public PolicySetCollectionPage policySets;
+    public com.microsoft.graph.requests.PolicySetCollectionPage policySets;
 
     /**
      * The Side Loading Keys.
@@ -210,7 +186,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sideLoadingKeys", alternate = {"SideLoadingKeys"})
     @Expose
 	@Nullable
-    public SideLoadingKeyCollectionPage sideLoadingKeys;
+    public com.microsoft.graph.requests.SideLoadingKeyCollectionPage sideLoadingKeys;
 
     /**
      * The Vpp Tokens.
@@ -219,7 +195,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "vppTokens", alternate = {"VppTokens"})
     @Expose
 	@Nullable
-    public VppTokenCollectionPage vppTokens;
+    public com.microsoft.graph.requests.VppTokenCollectionPage vppTokens;
 
     /**
      * The Windows Management App.
@@ -237,7 +213,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "androidManagedAppProtections", alternate = {"AndroidManagedAppProtections"})
     @Expose
 	@Nullable
-    public AndroidManagedAppProtectionCollectionPage androidManagedAppProtections;
+    public com.microsoft.graph.requests.AndroidManagedAppProtectionCollectionPage androidManagedAppProtections;
 
     /**
      * The Default Managed App Protections.
@@ -246,7 +222,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "defaultManagedAppProtections", alternate = {"DefaultManagedAppProtections"})
     @Expose
 	@Nullable
-    public DefaultManagedAppProtectionCollectionPage defaultManagedAppProtections;
+    public com.microsoft.graph.requests.DefaultManagedAppProtectionCollectionPage defaultManagedAppProtections;
 
     /**
      * The Ios Managed App Protections.
@@ -255,7 +231,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "iosManagedAppProtections", alternate = {"IosManagedAppProtections"})
     @Expose
 	@Nullable
-    public IosManagedAppProtectionCollectionPage iosManagedAppProtections;
+    public com.microsoft.graph.requests.IosManagedAppProtectionCollectionPage iosManagedAppProtections;
 
     /**
      * The Managed App Policies.
@@ -264,7 +240,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managedAppPolicies", alternate = {"ManagedAppPolicies"})
     @Expose
 	@Nullable
-    public ManagedAppPolicyCollectionPage managedAppPolicies;
+    public com.microsoft.graph.requests.ManagedAppPolicyCollectionPage managedAppPolicies;
 
     /**
      * The Managed App Registrations.
@@ -273,7 +249,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managedAppRegistrations", alternate = {"ManagedAppRegistrations"})
     @Expose
 	@Nullable
-    public ManagedAppRegistrationCollectionPage managedAppRegistrations;
+    public com.microsoft.graph.requests.ManagedAppRegistrationCollectionPage managedAppRegistrations;
 
     /**
      * The Managed App Statuses.
@@ -282,7 +258,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managedAppStatuses", alternate = {"ManagedAppStatuses"})
     @Expose
 	@Nullable
-    public ManagedAppStatusCollectionPage managedAppStatuses;
+    public com.microsoft.graph.requests.ManagedAppStatusCollectionPage managedAppStatuses;
 
     /**
      * The Mdm Windows Information Protection Policies.
@@ -291,7 +267,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "mdmWindowsInformationProtectionPolicies", alternate = {"MdmWindowsInformationProtectionPolicies"})
     @Expose
 	@Nullable
-    public MdmWindowsInformationProtectionPolicyCollectionPage mdmWindowsInformationProtectionPolicies;
+    public com.microsoft.graph.requests.MdmWindowsInformationProtectionPolicyCollectionPage mdmWindowsInformationProtectionPolicies;
 
     /**
      * The Targeted Managed App Configurations.
@@ -300,7 +276,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "targetedManagedAppConfigurations", alternate = {"TargetedManagedAppConfigurations"})
     @Expose
 	@Nullable
-    public TargetedManagedAppConfigurationCollectionPage targetedManagedAppConfigurations;
+    public com.microsoft.graph.requests.TargetedManagedAppConfigurationCollectionPage targetedManagedAppConfigurations;
 
     /**
      * The Windows Information Protection Device Registrations.
@@ -309,7 +285,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsInformationProtectionDeviceRegistrations", alternate = {"WindowsInformationProtectionDeviceRegistrations"})
     @Expose
 	@Nullable
-    public WindowsInformationProtectionDeviceRegistrationCollectionPage windowsInformationProtectionDeviceRegistrations;
+    public com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionPage windowsInformationProtectionDeviceRegistrations;
 
     /**
      * The Windows Information Protection Policies.
@@ -318,7 +294,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsInformationProtectionPolicies", alternate = {"WindowsInformationProtectionPolicies"})
     @Expose
 	@Nullable
-    public WindowsInformationProtectionPolicyCollectionPage windowsInformationProtectionPolicies;
+    public com.microsoft.graph.requests.WindowsInformationProtectionPolicyCollectionPage windowsInformationProtectionPolicies;
 
     /**
      * The Windows Information Protection Wipe Actions.
@@ -327,7 +303,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsInformationProtectionWipeActions", alternate = {"WindowsInformationProtectionWipeActions"})
     @Expose
 	@Nullable
-    public WindowsInformationProtectionWipeActionCollectionPage windowsInformationProtectionWipeActions;
+    public com.microsoft.graph.requests.WindowsInformationProtectionWipeActionCollectionPage windowsInformationProtectionWipeActions;
 
     /**
      * The Windows Managed App Protections.
@@ -336,7 +312,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsManagedAppProtections", alternate = {"WindowsManagedAppProtections"})
     @Expose
 	@Nullable
-    public WindowsManagedAppProtectionCollectionPage windowsManagedAppProtections;
+    public com.microsoft.graph.requests.WindowsManagedAppProtectionCollectionPage windowsManagedAppProtections;
 
     /**
      * The Device App Management Tasks.
@@ -345,7 +321,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceAppManagementTasks", alternate = {"DeviceAppManagementTasks"})
     @Expose
 	@Nullable
-    public DeviceAppManagementTaskCollectionPage deviceAppManagementTasks;
+    public com.microsoft.graph.requests.DeviceAppManagementTaskCollectionPage deviceAppManagementTasks;
 
     /**
      * The Wdac Supplemental Policies.
@@ -354,7 +330,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "wdacSupplementalPolicies", alternate = {"WdacSupplementalPolicies"})
     @Expose
 	@Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyCollectionPage wdacSupplementalPolicies;
+    public com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyCollectionPage wdacSupplementalPolicies;
 
 
     /**
@@ -367,99 +343,99 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("managedEBookCategories")) {
-            managedEBookCategories = serializer.deserializeObject(json.get("managedEBookCategories"), ManagedEBookCategoryCollectionPage.class);
+            managedEBookCategories = serializer.deserializeObject(json.get("managedEBookCategories"), com.microsoft.graph.requests.ManagedEBookCategoryCollectionPage.class);
         }
 
         if (json.has("enterpriseCodeSigningCertificates")) {
-            enterpriseCodeSigningCertificates = serializer.deserializeObject(json.get("enterpriseCodeSigningCertificates"), EnterpriseCodeSigningCertificateCollectionPage.class);
+            enterpriseCodeSigningCertificates = serializer.deserializeObject(json.get("enterpriseCodeSigningCertificates"), com.microsoft.graph.requests.EnterpriseCodeSigningCertificateCollectionPage.class);
         }
 
         if (json.has("iosLobAppProvisioningConfigurations")) {
-            iosLobAppProvisioningConfigurations = serializer.deserializeObject(json.get("iosLobAppProvisioningConfigurations"), IosLobAppProvisioningConfigurationCollectionPage.class);
+            iosLobAppProvisioningConfigurations = serializer.deserializeObject(json.get("iosLobAppProvisioningConfigurations"), com.microsoft.graph.requests.IosLobAppProvisioningConfigurationCollectionPage.class);
         }
 
         if (json.has("mobileAppCategories")) {
-            mobileAppCategories = serializer.deserializeObject(json.get("mobileAppCategories"), MobileAppCategoryCollectionPage.class);
+            mobileAppCategories = serializer.deserializeObject(json.get("mobileAppCategories"), com.microsoft.graph.requests.MobileAppCategoryCollectionPage.class);
         }
 
         if (json.has("mobileAppConfigurations")) {
-            mobileAppConfigurations = serializer.deserializeObject(json.get("mobileAppConfigurations"), ManagedDeviceMobileAppConfigurationCollectionPage.class);
+            mobileAppConfigurations = serializer.deserializeObject(json.get("mobileAppConfigurations"), com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationCollectionPage.class);
         }
 
         if (json.has("mobileApps")) {
-            mobileApps = serializer.deserializeObject(json.get("mobileApps"), MobileAppCollectionPage.class);
+            mobileApps = serializer.deserializeObject(json.get("mobileApps"), com.microsoft.graph.requests.MobileAppCollectionPage.class);
         }
 
         if (json.has("managedEBooks")) {
-            managedEBooks = serializer.deserializeObject(json.get("managedEBooks"), ManagedEBookCollectionPage.class);
+            managedEBooks = serializer.deserializeObject(json.get("managedEBooks"), com.microsoft.graph.requests.ManagedEBookCollectionPage.class);
         }
 
         if (json.has("policySets")) {
-            policySets = serializer.deserializeObject(json.get("policySets"), PolicySetCollectionPage.class);
+            policySets = serializer.deserializeObject(json.get("policySets"), com.microsoft.graph.requests.PolicySetCollectionPage.class);
         }
 
         if (json.has("sideLoadingKeys")) {
-            sideLoadingKeys = serializer.deserializeObject(json.get("sideLoadingKeys"), SideLoadingKeyCollectionPage.class);
+            sideLoadingKeys = serializer.deserializeObject(json.get("sideLoadingKeys"), com.microsoft.graph.requests.SideLoadingKeyCollectionPage.class);
         }
 
         if (json.has("vppTokens")) {
-            vppTokens = serializer.deserializeObject(json.get("vppTokens"), VppTokenCollectionPage.class);
+            vppTokens = serializer.deserializeObject(json.get("vppTokens"), com.microsoft.graph.requests.VppTokenCollectionPage.class);
         }
 
         if (json.has("androidManagedAppProtections")) {
-            androidManagedAppProtections = serializer.deserializeObject(json.get("androidManagedAppProtections"), AndroidManagedAppProtectionCollectionPage.class);
+            androidManagedAppProtections = serializer.deserializeObject(json.get("androidManagedAppProtections"), com.microsoft.graph.requests.AndroidManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("defaultManagedAppProtections")) {
-            defaultManagedAppProtections = serializer.deserializeObject(json.get("defaultManagedAppProtections"), DefaultManagedAppProtectionCollectionPage.class);
+            defaultManagedAppProtections = serializer.deserializeObject(json.get("defaultManagedAppProtections"), com.microsoft.graph.requests.DefaultManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("iosManagedAppProtections")) {
-            iosManagedAppProtections = serializer.deserializeObject(json.get("iosManagedAppProtections"), IosManagedAppProtectionCollectionPage.class);
+            iosManagedAppProtections = serializer.deserializeObject(json.get("iosManagedAppProtections"), com.microsoft.graph.requests.IosManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("managedAppPolicies")) {
-            managedAppPolicies = serializer.deserializeObject(json.get("managedAppPolicies"), ManagedAppPolicyCollectionPage.class);
+            managedAppPolicies = serializer.deserializeObject(json.get("managedAppPolicies"), com.microsoft.graph.requests.ManagedAppPolicyCollectionPage.class);
         }
 
         if (json.has("managedAppRegistrations")) {
-            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations"), ManagedAppRegistrationCollectionPage.class);
+            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations"), com.microsoft.graph.requests.ManagedAppRegistrationCollectionPage.class);
         }
 
         if (json.has("managedAppStatuses")) {
-            managedAppStatuses = serializer.deserializeObject(json.get("managedAppStatuses"), ManagedAppStatusCollectionPage.class);
+            managedAppStatuses = serializer.deserializeObject(json.get("managedAppStatuses"), com.microsoft.graph.requests.ManagedAppStatusCollectionPage.class);
         }
 
         if (json.has("mdmWindowsInformationProtectionPolicies")) {
-            mdmWindowsInformationProtectionPolicies = serializer.deserializeObject(json.get("mdmWindowsInformationProtectionPolicies"), MdmWindowsInformationProtectionPolicyCollectionPage.class);
+            mdmWindowsInformationProtectionPolicies = serializer.deserializeObject(json.get("mdmWindowsInformationProtectionPolicies"), com.microsoft.graph.requests.MdmWindowsInformationProtectionPolicyCollectionPage.class);
         }
 
         if (json.has("targetedManagedAppConfigurations")) {
-            targetedManagedAppConfigurations = serializer.deserializeObject(json.get("targetedManagedAppConfigurations"), TargetedManagedAppConfigurationCollectionPage.class);
+            targetedManagedAppConfigurations = serializer.deserializeObject(json.get("targetedManagedAppConfigurations"), com.microsoft.graph.requests.TargetedManagedAppConfigurationCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionDeviceRegistrations")) {
-            windowsInformationProtectionDeviceRegistrations = serializer.deserializeObject(json.get("windowsInformationProtectionDeviceRegistrations"), WindowsInformationProtectionDeviceRegistrationCollectionPage.class);
+            windowsInformationProtectionDeviceRegistrations = serializer.deserializeObject(json.get("windowsInformationProtectionDeviceRegistrations"), com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionPolicies")) {
-            windowsInformationProtectionPolicies = serializer.deserializeObject(json.get("windowsInformationProtectionPolicies"), WindowsInformationProtectionPolicyCollectionPage.class);
+            windowsInformationProtectionPolicies = serializer.deserializeObject(json.get("windowsInformationProtectionPolicies"), com.microsoft.graph.requests.WindowsInformationProtectionPolicyCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionWipeActions")) {
-            windowsInformationProtectionWipeActions = serializer.deserializeObject(json.get("windowsInformationProtectionWipeActions"), WindowsInformationProtectionWipeActionCollectionPage.class);
+            windowsInformationProtectionWipeActions = serializer.deserializeObject(json.get("windowsInformationProtectionWipeActions"), com.microsoft.graph.requests.WindowsInformationProtectionWipeActionCollectionPage.class);
         }
 
         if (json.has("windowsManagedAppProtections")) {
-            windowsManagedAppProtections = serializer.deserializeObject(json.get("windowsManagedAppProtections"), WindowsManagedAppProtectionCollectionPage.class);
+            windowsManagedAppProtections = serializer.deserializeObject(json.get("windowsManagedAppProtections"), com.microsoft.graph.requests.WindowsManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("deviceAppManagementTasks")) {
-            deviceAppManagementTasks = serializer.deserializeObject(json.get("deviceAppManagementTasks"), DeviceAppManagementTaskCollectionPage.class);
+            deviceAppManagementTasks = serializer.deserializeObject(json.get("deviceAppManagementTasks"), com.microsoft.graph.requests.DeviceAppManagementTaskCollectionPage.class);
         }
 
         if (json.has("wdacSupplementalPolicies")) {
-            wdacSupplementalPolicies = serializer.deserializeObject(json.get("wdacSupplementalPolicies"), WindowsDefenderApplicationControlSupplementalPolicyCollectionPage.class);
+            wdacSupplementalPolicies = serializer.deserializeObject(json.get("wdacSupplementalPolicies"), com.microsoft.graph.requests.WindowsDefenderApplicationControlSupplementalPolicyCollectionPage.class);
         }
     }
 }

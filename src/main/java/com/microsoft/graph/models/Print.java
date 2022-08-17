@@ -10,17 +10,10 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PrintSettings;
-import com.microsoft.graph.models.PrintConnector;
-import com.microsoft.graph.models.PrintOperation;
-import com.microsoft.graph.models.Printer;
-import com.microsoft.graph.models.PrinterShare;
 import com.microsoft.graph.models.ReportRoot;
-import com.microsoft.graph.models.PrintService;
-import com.microsoft.graph.models.PrintTaskDefinition;
 import com.microsoft.graph.requests.PrintConnectorCollectionPage;
 import com.microsoft.graph.requests.PrintOperationCollectionPage;
 import com.microsoft.graph.requests.PrinterCollectionPage;
-import com.microsoft.graph.requests.PrinterShareCollectionPage;
 import com.microsoft.graph.requests.PrintServiceCollectionPage;
 import com.microsoft.graph.requests.PrintTaskDefinitionCollectionPage;
 
@@ -68,16 +61,16 @@ public class Print implements IJsonBackedObject {
     @SerializedName(value = "connectors", alternate = {"Connectors"})
     @Expose
 	@Nullable
-    public PrintConnectorCollectionPage connectors;
+    public com.microsoft.graph.requests.PrintConnectorCollectionPage connectors;
 
     /**
      * The Operations.
-     * The list of print long running operations.
+     * 
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public PrintOperationCollectionPage operations;
+    public com.microsoft.graph.requests.PrintOperationCollectionPage operations;
 
     /**
      * The Printers.
@@ -86,7 +79,7 @@ public class Print implements IJsonBackedObject {
     @SerializedName(value = "printers", alternate = {"Printers"})
     @Expose
 	@Nullable
-    public PrinterCollectionPage printers;
+    public com.microsoft.graph.requests.PrinterCollectionPage printers;
 
     /**
      * The Printer Shares.
@@ -95,7 +88,7 @@ public class Print implements IJsonBackedObject {
     @SerializedName(value = "printerShares", alternate = {"PrinterShares"})
     @Expose
 	@Nullable
-    public PrinterShareCollectionPage printerShares;
+    public com.microsoft.graph.requests.PrinterShareCollectionPage printerShares;
 
     /**
      * The Reports.
@@ -113,7 +106,7 @@ public class Print implements IJsonBackedObject {
     @SerializedName(value = "services", alternate = {"Services"})
     @Expose
 	@Nullable
-    public PrintServiceCollectionPage services;
+    public com.microsoft.graph.requests.PrintServiceCollectionPage services;
 
     /**
      * The Shares.
@@ -122,16 +115,16 @@ public class Print implements IJsonBackedObject {
     @SerializedName(value = "shares", alternate = {"Shares"})
     @Expose
 	@Nullable
-    public PrinterShareCollectionPage shares;
+    public com.microsoft.graph.requests.PrinterShareCollectionPage shares;
 
     /**
      * The Task Definitions.
-     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * 
      */
     @SerializedName(value = "taskDefinitions", alternate = {"TaskDefinitions"})
     @Expose
 	@Nullable
-    public PrintTaskDefinitionCollectionPage taskDefinitions;
+    public com.microsoft.graph.requests.PrintTaskDefinitionCollectionPage taskDefinitions;
 
 
     /**
@@ -144,31 +137,31 @@ public class Print implements IJsonBackedObject {
 
 
         if (json.has("connectors")) {
-            connectors = serializer.deserializeObject(json.get("connectors"), PrintConnectorCollectionPage.class);
+            connectors = serializer.deserializeObject(json.get("connectors"), com.microsoft.graph.requests.PrintConnectorCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), PrintOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.PrintOperationCollectionPage.class);
         }
 
         if (json.has("printers")) {
-            printers = serializer.deserializeObject(json.get("printers"), PrinterCollectionPage.class);
+            printers = serializer.deserializeObject(json.get("printers"), com.microsoft.graph.requests.PrinterCollectionPage.class);
         }
 
         if (json.has("printerShares")) {
-            printerShares = serializer.deserializeObject(json.get("printerShares"), PrinterShareCollectionPage.class);
+            printerShares = serializer.deserializeObject(json.get("printerShares"), com.microsoft.graph.requests.PrinterShareCollectionPage.class);
         }
 
         if (json.has("services")) {
-            services = serializer.deserializeObject(json.get("services"), PrintServiceCollectionPage.class);
+            services = serializer.deserializeObject(json.get("services"), com.microsoft.graph.requests.PrintServiceCollectionPage.class);
         }
 
         if (json.has("shares")) {
-            shares = serializer.deserializeObject(json.get("shares"), PrinterShareCollectionPage.class);
+            shares = serializer.deserializeObject(json.get("shares"), com.microsoft.graph.requests.PrinterShareCollectionPage.class);
         }
 
         if (json.has("taskDefinitions")) {
-            taskDefinitions = serializer.deserializeObject(json.get("taskDefinitions"), PrintTaskDefinitionCollectionPage.class);
+            taskDefinitions = serializer.deserializeObject(json.get("taskDefinitions"), com.microsoft.graph.requests.PrintTaskDefinitionCollectionPage.class);
         }
     }
 }

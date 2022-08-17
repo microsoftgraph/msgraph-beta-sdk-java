@@ -11,15 +11,6 @@ import com.microsoft.graph.models.DeviceManagementScript;
 import com.microsoft.graph.models.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.DeviceManagementScriptAssignment;
 import com.microsoft.graph.models.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.DeviceManagementScriptAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementScriptAssignmentRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementScriptDeviceStateRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementScriptGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementScriptRunSummaryWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementScriptUserStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementScriptUserStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -75,8 +66,8 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder<Dev
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementScriptAssignmentCollectionRequestBuilder assignments() {
-        return new DeviceManagementScriptAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementScriptAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.DeviceManagementScriptAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -86,8 +77,8 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder<Dev
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementScriptAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new DeviceManagementScriptAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementScriptAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementScriptAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceManagementScriptDeviceState collection
@@ -95,8 +86,8 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder<Dev
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
-        return new DeviceManagementScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
+        return new com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
     }
 
     /**
@@ -106,8 +97,8 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder<Dev
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementScriptDeviceStateRequestBuilder deviceRunStates(@Nonnull final String id) {
-        return new DeviceManagementScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementScriptDeviceStateRequestBuilder deviceRunStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceManagementScriptGroupAssignment collection
@@ -115,8 +106,8 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder<Dev
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementScriptGroupAssignmentCollectionRequestBuilder groupAssignments() {
-        return new DeviceManagementScriptGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder groupAssignments() {
+        return new com.microsoft.graph.requests.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
     }
 
     /**
@@ -126,8 +117,8 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder<Dev
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementScriptGroupAssignmentRequestBuilder groupAssignments(@Nonnull final String id) {
-        return new DeviceManagementScriptGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementScriptGroupAssignmentRequestBuilder groupAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementScriptGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
     }
 
     /**
@@ -136,8 +127,8 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder<Dev
      * @return the DeviceManagementScriptRunSummaryWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public DeviceManagementScriptRunSummaryWithReferenceRequestBuilder runSummary() {
-        return new DeviceManagementScriptRunSummaryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("runSummary"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementScriptRunSummaryWithReferenceRequestBuilder runSummary() {
+        return new com.microsoft.graph.requests.DeviceManagementScriptRunSummaryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("runSummary"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceManagementScriptUserState collection
@@ -145,8 +136,8 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder<Dev
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementScriptUserStateCollectionRequestBuilder userRunStates() {
-        return new DeviceManagementScriptUserStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userRunStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementScriptUserStateCollectionRequestBuilder userRunStates() {
+        return new com.microsoft.graph.requests.DeviceManagementScriptUserStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userRunStates"), getClient(), null);
     }
 
     /**
@@ -156,8 +147,8 @@ public class DeviceManagementScriptRequestBuilder extends BaseRequestBuilder<Dev
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementScriptUserStateRequestBuilder userRunStates(@Nonnull final String id) {
-        return new DeviceManagementScriptUserStateRequestBuilder(getRequestUrlWithAdditionalSegment("userRunStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementScriptUserStateRequestBuilder userRunStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementScriptUserStateRequestBuilder(getRequestUrlWithAdditionalSegment("userRunStates") + "/" + id, getClient(), null);
     }
 
     /**

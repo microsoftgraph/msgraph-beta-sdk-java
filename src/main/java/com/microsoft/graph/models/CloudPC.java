@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CloudPcConnectivityResult;
 import com.microsoft.graph.models.CloudPcLoginResult;
 import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
@@ -40,6 +41,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String aadDeviceId;
+
+    /**
+     * The Connectivity Result.
+     * The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC is able to be connected or not.
+     */
+    @SerializedName(value = "connectivityResult", alternate = {"ConnectivityResult"})
+    @Expose
+	@Nullable
+    public CloudPcConnectivityResult connectivityResult;
 
     /**
      * The Display Name.

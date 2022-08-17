@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CustomSecurityAttributeDefinition;
-import com.microsoft.graph.requests.AllowedValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.AllowedValueRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

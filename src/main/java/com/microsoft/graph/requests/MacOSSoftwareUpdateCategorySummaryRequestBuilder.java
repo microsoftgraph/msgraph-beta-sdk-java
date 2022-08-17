@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MacOSSoftwareUpdateCategorySummary;
-import com.microsoft.graph.requests.MacOSSoftwareUpdateStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.MacOSSoftwareUpdateStateSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class MacOSSoftwareUpdateCategorySummaryRequestBuilder extends BaseReques
      * @return the collection request builder
      */
     @Nonnull
-    public MacOSSoftwareUpdateStateSummaryCollectionRequestBuilder updateStateSummaries() {
-        return new MacOSSoftwareUpdateStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("updateStateSummaries"), getClient(), null);
+    public com.microsoft.graph.requests.MacOSSoftwareUpdateStateSummaryCollectionRequestBuilder updateStateSummaries() {
+        return new com.microsoft.graph.requests.MacOSSoftwareUpdateStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("updateStateSummaries"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class MacOSSoftwareUpdateCategorySummaryRequestBuilder extends BaseReques
      * @param id the item identifier
      */
     @Nonnull
-    public MacOSSoftwareUpdateStateSummaryRequestBuilder updateStateSummaries(@Nonnull final String id) {
-        return new MacOSSoftwareUpdateStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("updateStateSummaries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MacOSSoftwareUpdateStateSummaryRequestBuilder updateStateSummaries(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MacOSSoftwareUpdateStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("updateStateSummaries") + "/" + id, getClient(), null);
     }
 }

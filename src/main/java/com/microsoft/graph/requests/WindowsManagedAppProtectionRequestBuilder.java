@@ -10,10 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsManagedAppProtection;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.ManagedMobileApp;
-import com.microsoft.graph.requests.ManagedMobileAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedMobileAppRequestBuilder;
-import com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -71,8 +67,8 @@ public class WindowsManagedAppProtectionRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedMobileAppCollectionRequestBuilder apps() {
-        return new ManagedMobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apps"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedMobileAppCollectionRequestBuilder apps() {
+        return new com.microsoft.graph.requests.ManagedMobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apps"), getClient(), null);
     }
 
     /**
@@ -82,8 +78,8 @@ public class WindowsManagedAppProtectionRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedMobileAppRequestBuilder apps(@Nonnull final String id) {
-        return new ManagedMobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("apps") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedMobileAppRequestBuilder apps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedMobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("apps") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TargetedManagedAppPolicyAssignment collection
@@ -91,8 +87,8 @@ public class WindowsManagedAppProtectionRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
-        return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -102,8 +98,8 @@ public class WindowsManagedAppProtectionRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

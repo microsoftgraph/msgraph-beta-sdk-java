@@ -18,7 +18,6 @@ import com.microsoft.graph.models.TeamworkDeviceHealthStatus;
 import com.microsoft.graph.models.TeamworkDeviceActivity;
 import com.microsoft.graph.models.TeamworkDeviceConfiguration;
 import com.microsoft.graph.models.TeamworkDeviceHealth;
-import com.microsoft.graph.models.TeamworkDeviceOperation;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamworkDeviceOperationCollectionPage;
 
@@ -170,7 +169,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public TeamworkDeviceOperationCollectionPage operations;
+    public com.microsoft.graph.requests.TeamworkDeviceOperationCollectionPage operations;
 
 
     /**
@@ -183,7 +182,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), TeamworkDeviceOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.TeamworkDeviceOperationCollectionPage.class);
         }
     }
 }

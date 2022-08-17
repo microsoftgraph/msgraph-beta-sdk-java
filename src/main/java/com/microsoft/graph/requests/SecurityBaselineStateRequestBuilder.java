@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SecurityBaselineState;
-import com.microsoft.graph.requests.SecurityBaselineSettingStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.SecurityBaselineSettingStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class SecurityBaselineStateRequestBuilder extends BaseRequestBuilder<Secu
      * @return the collection request builder
      */
     @Nonnull
-    public SecurityBaselineSettingStateCollectionRequestBuilder settingStates() {
-        return new SecurityBaselineSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingStates"), getClient(), null);
+    public com.microsoft.graph.requests.SecurityBaselineSettingStateCollectionRequestBuilder settingStates() {
+        return new com.microsoft.graph.requests.SecurityBaselineSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingStates"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class SecurityBaselineStateRequestBuilder extends BaseRequestBuilder<Secu
      * @param id the item identifier
      */
     @Nonnull
-    public SecurityBaselineSettingStateRequestBuilder settingStates(@Nonnull final String id) {
-        return new SecurityBaselineSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("settingStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SecurityBaselineSettingStateRequestBuilder settingStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SecurityBaselineSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("settingStates") + "/" + id, getClient(), null);
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DelegatedAdminCustomer;
-import com.microsoft.graph.requests.DelegatedAdminServiceManagementDetailCollectionRequestBuilder;
-import com.microsoft.graph.requests.DelegatedAdminServiceManagementDetailRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DelegatedAdminCustomerRequestBuilder extends BaseRequestBuilder<Del
      * @return the collection request builder
      */
     @Nonnull
-    public DelegatedAdminServiceManagementDetailCollectionRequestBuilder serviceManagementDetails() {
-        return new DelegatedAdminServiceManagementDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("serviceManagementDetails"), getClient(), null);
+    public com.microsoft.graph.requests.DelegatedAdminServiceManagementDetailCollectionRequestBuilder serviceManagementDetails() {
+        return new com.microsoft.graph.requests.DelegatedAdminServiceManagementDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("serviceManagementDetails"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DelegatedAdminCustomerRequestBuilder extends BaseRequestBuilder<Del
      * @param id the item identifier
      */
     @Nonnull
-    public DelegatedAdminServiceManagementDetailRequestBuilder serviceManagementDetails(@Nonnull final String id) {
-        return new DelegatedAdminServiceManagementDetailRequestBuilder(getRequestUrlWithAdditionalSegment("serviceManagementDetails") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DelegatedAdminServiceManagementDetailRequestBuilder serviceManagementDetails(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DelegatedAdminServiceManagementDetailRequestBuilder(getRequestUrlWithAdditionalSegment("serviceManagementDetails") + "/" + id, getClient(), null);
     }
 }

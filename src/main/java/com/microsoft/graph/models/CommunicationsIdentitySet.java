@@ -28,8 +28,17 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
 
     /**
+     * The Application Instance.
+     * The application instance associated with this action.
+     */
+    @SerializedName(value = "applicationInstance", alternate = {"ApplicationInstance"})
+    @Expose
+	@Nullable
+    public Identity applicationInstance;
+
+    /**
      * The Asserted Identity.
-     * 
+     * An identity the participant would like to present itself as to the other participants in the call.
      */
     @SerializedName(value = "assertedIdentity", alternate = {"AssertedIdentity"})
     @Expose
@@ -38,7 +47,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Azure Communication Services User.
-     * 
+     * The Azure Communication Services user associated with this action.
      */
     @SerializedName(value = "azureCommunicationServicesUser", alternate = {"AzureCommunicationServicesUser"})
     @Expose
@@ -46,13 +55,49 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
     public Identity azureCommunicationServicesUser;
 
     /**
+     * The Encrypted.
+     * The encrypted user associated with this action.
+     */
+    @SerializedName(value = "encrypted", alternate = {"Encrypted"})
+    @Expose
+	@Nullable
+    public Identity encrypted;
+
+    /**
      * The Endpoint Type.
-     * 
+     * Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      */
     @SerializedName(value = "endpointType", alternate = {"EndpointType"})
     @Expose
 	@Nullable
     public EndpointType endpointType;
+
+    /**
+     * The Guest.
+     * The guest user associated with this action.
+     */
+    @SerializedName(value = "guest", alternate = {"Guest"})
+    @Expose
+	@Nullable
+    public Identity guest;
+
+    /**
+     * The On Premises.
+     * The Skype for Business On-Premises user associated with this action.
+     */
+    @SerializedName(value = "onPremises", alternate = {"OnPremises"})
+    @Expose
+	@Nullable
+    public Identity onPremises;
+
+    /**
+     * The Phone.
+     * Inherited from identitySet. The phone user associated with this action.
+     */
+    @SerializedName(value = "phone", alternate = {"Phone"})
+    @Expose
+	@Nullable
+    public Identity phone;
 
 
     /**

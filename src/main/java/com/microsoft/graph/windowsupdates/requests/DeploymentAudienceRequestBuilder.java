@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.windowsupdates.models.DeploymentAudience;
 import com.microsoft.graph.windowsupdates.models.UpdatableAsset;
-import com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +65,8 @@ public class DeploymentAudienceRequestBuilder extends BaseRequestBuilder<Deploym
      * @return the collection request builder
      */
     @Nonnull
-    public UpdatableAssetCollectionRequestBuilder exclusions() {
-        return new UpdatableAssetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exclusions"), getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder exclusions() {
+        return new com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exclusions"), getClient(), null);
     }
 
     /**
@@ -78,8 +76,8 @@ public class DeploymentAudienceRequestBuilder extends BaseRequestBuilder<Deploym
      * @param id the item identifier
      */
     @Nonnull
-    public UpdatableAssetRequestBuilder exclusions(@Nonnull final String id) {
-        return new UpdatableAssetRequestBuilder(getRequestUrlWithAdditionalSegment("exclusions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder exclusions(@Nonnull final String id) {
+        return new com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder(getRequestUrlWithAdditionalSegment("exclusions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UpdatableAsset collection
@@ -87,8 +85,8 @@ public class DeploymentAudienceRequestBuilder extends BaseRequestBuilder<Deploym
      * @return the collection request builder
      */
     @Nonnull
-    public UpdatableAssetCollectionRequestBuilder members() {
-        return new UpdatableAssetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder members() {
+        return new com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
     /**
@@ -98,8 +96,8 @@ public class DeploymentAudienceRequestBuilder extends BaseRequestBuilder<Deploym
      * @param id the item identifier
      */
     @Nonnull
-    public UpdatableAssetRequestBuilder members(@Nonnull final String id) {
-        return new UpdatableAssetRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder members(@Nonnull final String id) {
+        return new com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
 
     /**

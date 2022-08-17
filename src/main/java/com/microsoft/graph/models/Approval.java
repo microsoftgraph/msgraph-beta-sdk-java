@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ApprovalStep;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ApprovalStepCollectionPage;
 
@@ -35,7 +34,7 @@ public class Approval extends Entity implements IJsonBackedObject {
     @SerializedName(value = "steps", alternate = {"Steps"})
     @Expose
 	@Nullable
-    public ApprovalStepCollectionPage steps;
+    public com.microsoft.graph.requests.ApprovalStepCollectionPage steps;
 
 
     /**
@@ -48,7 +47,7 @@ public class Approval extends Entity implements IJsonBackedObject {
 
 
         if (json.has("steps")) {
-            steps = serializer.deserializeObject(json.get("steps"), ApprovalStepCollectionPage.class);
+            steps = serializer.deserializeObject(json.get("steps"), com.microsoft.graph.requests.ApprovalStepCollectionPage.class);
         }
     }
 }

@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UnifiedRbacResourceAction;
-import com.microsoft.graph.requests.UnifiedRbacResourceScopeRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class UnifiedRbacResourceActionRequestBuilder extends BaseRequestBuilder<
      * @return the UnifiedRbacResourceScopeRequestBuilder instance
      */
     @Nonnull
-    public UnifiedRbacResourceScopeRequestBuilder resourceScope() {
-        return new UnifiedRbacResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("resourceScope"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRbacResourceScopeRequestBuilder resourceScope() {
+        return new com.microsoft.graph.requests.UnifiedRbacResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("resourceScope"), getClient(), null);
     }
 }

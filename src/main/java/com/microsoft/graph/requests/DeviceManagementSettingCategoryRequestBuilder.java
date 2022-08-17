@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementSettingCategory;
-import com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementSettingDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceManagementSettingCategoryRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementSettingDefinitionCollectionRequestBuilder settingDefinitions() {
-        return new DeviceManagementSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionRequestBuilder settingDefinitions() {
+        return new com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DeviceManagementSettingCategoryRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementSettingDefinitionRequestBuilder settingDefinitions(@Nonnull final String id) {
-        return new DeviceManagementSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementSettingDefinitionRequestBuilder settingDefinitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
     }
 }

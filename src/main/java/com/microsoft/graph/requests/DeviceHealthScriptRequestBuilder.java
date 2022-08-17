@@ -12,11 +12,6 @@ import com.microsoft.graph.models.DeviceHealthScriptAssignment;
 import com.microsoft.graph.models.DeviceHealthScriptRemediationHistory;
 import com.microsoft.graph.models.GlobalDeviceHealthScriptState;
 import com.microsoft.graph.models.DeviceHealthScriptRemediationSummary;
-import com.microsoft.graph.requests.DeviceHealthScriptAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceHealthScriptAssignmentRequestBuilder;
-import com.microsoft.graph.requests.DeviceHealthScriptDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceHealthScriptDeviceStateRequestBuilder;
-import com.microsoft.graph.requests.DeviceHealthScriptRunSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -73,8 +68,8 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder<DeviceH
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceHealthScriptAssignmentCollectionRequestBuilder assignments() {
-        return new DeviceHealthScriptAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceHealthScriptAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.DeviceHealthScriptAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -84,8 +79,8 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder<DeviceH
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceHealthScriptAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new DeviceHealthScriptAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceHealthScriptAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceHealthScriptAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceHealthScriptDeviceState collection
@@ -93,8 +88,8 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder<DeviceH
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceHealthScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
-        return new DeviceHealthScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceHealthScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
+        return new com.microsoft.graph.requests.DeviceHealthScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
     }
 
     /**
@@ -104,8 +99,8 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder<DeviceH
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceHealthScriptDeviceStateRequestBuilder deviceRunStates(@Nonnull final String id) {
-        return new DeviceHealthScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceHealthScriptDeviceStateRequestBuilder deviceRunStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceHealthScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
     }
 
     /**
@@ -114,8 +109,8 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder<DeviceH
      * @return the DeviceHealthScriptRunSummaryRequestBuilder instance
      */
     @Nonnull
-    public DeviceHealthScriptRunSummaryRequestBuilder runSummary() {
-        return new DeviceHealthScriptRunSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("runSummary"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceHealthScriptRunSummaryRequestBuilder runSummary() {
+        return new com.microsoft.graph.requests.DeviceHealthScriptRunSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("runSummary"), getClient(), null);
     }
 
     /**

@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Call;
-import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.graph.requests.CallCollectionPage;
 import com.microsoft.graph.requests.OnlineMeetingCollectionPage;
 
@@ -49,7 +47,7 @@ public class CommsApplication implements IJsonBackedObject {
     @SerializedName(value = "calls", alternate = {"Calls"})
     @Expose
 	@Nullable
-    public CallCollectionPage calls;
+    public com.microsoft.graph.requests.CallCollectionPage calls;
 
     /**
      * The Online Meetings.
@@ -58,7 +56,7 @@ public class CommsApplication implements IJsonBackedObject {
     @SerializedName(value = "onlineMeetings", alternate = {"OnlineMeetings"})
     @Expose
 	@Nullable
-    public OnlineMeetingCollectionPage onlineMeetings;
+    public com.microsoft.graph.requests.OnlineMeetingCollectionPage onlineMeetings;
 
 
     /**
@@ -71,11 +69,11 @@ public class CommsApplication implements IJsonBackedObject {
 
 
         if (json.has("calls")) {
-            calls = serializer.deserializeObject(json.get("calls"), CallCollectionPage.class);
+            calls = serializer.deserializeObject(json.get("calls"), com.microsoft.graph.requests.CallCollectionPage.class);
         }
 
         if (json.has("onlineMeetings")) {
-            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings"), OnlineMeetingCollectionPage.class);
+            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings"), com.microsoft.graph.requests.OnlineMeetingCollectionPage.class);
         }
     }
 }

@@ -27,7 +27,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
 
     /**
      * The Template Id.
-     * 
+     * The unique identifier for a protection template in Microsoft Purview Information Protection to apply to the content.
      */
     @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose

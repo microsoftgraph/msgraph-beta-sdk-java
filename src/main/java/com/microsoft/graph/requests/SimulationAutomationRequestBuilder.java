@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SimulationAutomation;
-import com.microsoft.graph.requests.SimulationAutomationRunCollectionRequestBuilder;
-import com.microsoft.graph.requests.SimulationAutomationRunRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class SimulationAutomationRequestBuilder extends BaseRequestBuilder<Simul
      * @return the collection request builder
      */
     @Nonnull
-    public SimulationAutomationRunCollectionRequestBuilder runs() {
-        return new SimulationAutomationRunCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("runs"), getClient(), null);
+    public com.microsoft.graph.requests.SimulationAutomationRunCollectionRequestBuilder runs() {
+        return new com.microsoft.graph.requests.SimulationAutomationRunCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("runs"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class SimulationAutomationRequestBuilder extends BaseRequestBuilder<Simul
      * @param id the item identifier
      */
     @Nonnull
-    public SimulationAutomationRunRequestBuilder runs(@Nonnull final String id) {
-        return new SimulationAutomationRunRequestBuilder(getRequestUrlWithAdditionalSegment("runs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SimulationAutomationRunRequestBuilder runs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SimulationAutomationRunRequestBuilder(getRequestUrlWithAdditionalSegment("runs") + "/" + id, getClient(), null);
     }
 }

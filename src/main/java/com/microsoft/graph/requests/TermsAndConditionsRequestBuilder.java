@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TermsAndConditions;
-import com.microsoft.graph.requests.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.TermsAndConditionsAcceptanceStatusRequestBuilder;
-import com.microsoft.graph.requests.TermsAndConditionsAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.TermsAndConditionsAssignmentRequestBuilder;
-import com.microsoft.graph.requests.TermsAndConditionsGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.TermsAndConditionsGroupAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +62,8 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      * @return the collection request builder
      */
     @Nonnull
-    public TermsAndConditionsAcceptanceStatusCollectionRequestBuilder acceptanceStatuses() {
-        return new TermsAndConditionsAcceptanceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder acceptanceStatuses() {
+        return new com.microsoft.graph.requests.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      * @param id the item identifier
      */
     @Nonnull
-    public TermsAndConditionsAcceptanceStatusRequestBuilder acceptanceStatuses(@Nonnull final String id) {
-        return new TermsAndConditionsAcceptanceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TermsAndConditionsAcceptanceStatusRequestBuilder acceptanceStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TermsAndConditionsAcceptanceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TermsAndConditionsAssignment collection
@@ -88,8 +82,8 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      * @return the collection request builder
      */
     @Nonnull
-    public TermsAndConditionsAssignmentCollectionRequestBuilder assignments() {
-        return new TermsAndConditionsAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.TermsAndConditionsAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.TermsAndConditionsAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -99,8 +93,8 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      * @param id the item identifier
      */
     @Nonnull
-    public TermsAndConditionsAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new TermsAndConditionsAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TermsAndConditionsAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TermsAndConditionsAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TermsAndConditionsGroupAssignment collection
@@ -108,8 +102,8 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      * @return the collection request builder
      */
     @Nonnull
-    public TermsAndConditionsGroupAssignmentCollectionRequestBuilder groupAssignments() {
-        return new TermsAndConditionsGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
+    public com.microsoft.graph.requests.TermsAndConditionsGroupAssignmentCollectionRequestBuilder groupAssignments() {
+        return new com.microsoft.graph.requests.TermsAndConditionsGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
     }
 
     /**
@@ -119,7 +113,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder<TermsAn
      * @param id the item identifier
      */
     @Nonnull
-    public TermsAndConditionsGroupAssignmentRequestBuilder groupAssignments(@Nonnull final String id) {
-        return new TermsAndConditionsGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TermsAndConditionsGroupAssignmentRequestBuilder groupAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TermsAndConditionsGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
     }
 }

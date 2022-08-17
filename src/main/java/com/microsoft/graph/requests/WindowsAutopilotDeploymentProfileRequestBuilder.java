@@ -9,10 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsAutopilotDeploymentProfile;
 import com.microsoft.graph.models.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityRequestBuilder;
-import com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +64,8 @@ public class WindowsAutopilotDeploymentProfileRequestBuilder extends BaseRequest
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsAutopilotDeviceIdentityCollectionRequestBuilder assignedDevices() {
-        return new WindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionRequestBuilder assignedDevices() {
+        return new com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices"), getClient(), null);
     }
 
     /**
@@ -79,8 +75,8 @@ public class WindowsAutopilotDeploymentProfileRequestBuilder extends BaseRequest
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsAutopilotDeviceIdentityRequestBuilder assignedDevices(@Nonnull final String id) {
-        return new WindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityRequestBuilder assignedDevices(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsAutopilotDeploymentProfileAssignment collection
@@ -88,8 +84,8 @@ public class WindowsAutopilotDeploymentProfileRequestBuilder extends BaseRequest
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder assignments() {
-        return new WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -99,8 +95,8 @@ public class WindowsAutopilotDeploymentProfileRequestBuilder extends BaseRequest
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsAutopilotDeploymentProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new WindowsAutopilotDeploymentProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

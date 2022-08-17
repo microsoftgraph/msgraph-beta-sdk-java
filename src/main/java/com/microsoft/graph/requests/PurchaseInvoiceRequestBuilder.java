@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PurchaseInvoice;
-import com.microsoft.graph.requests.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.PurchaseInvoiceLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.PurchaseInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.VendorRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +63,8 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder<PurchaseIn
      * @return the CurrencyRequestBuilder instance
      */
     @Nonnull
-    public CurrencyRequestBuilder currency() {
-        return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
+    public com.microsoft.graph.requests.CurrencyRequestBuilder currency() {
+        return new com.microsoft.graph.requests.CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
     /**
      *  Gets a request builder for the PurchaseInvoiceLine collection
@@ -76,8 +72,8 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder<PurchaseIn
      * @return the collection request builder
      */
     @Nonnull
-    public PurchaseInvoiceLineCollectionRequestBuilder purchaseInvoiceLines() {
-        return new PurchaseInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines"), getClient(), null);
+    public com.microsoft.graph.requests.PurchaseInvoiceLineCollectionRequestBuilder purchaseInvoiceLines() {
+        return new com.microsoft.graph.requests.PurchaseInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines"), getClient(), null);
     }
 
     /**
@@ -87,8 +83,8 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder<PurchaseIn
      * @param id the item identifier
      */
     @Nonnull
-    public PurchaseInvoiceLineRequestBuilder purchaseInvoiceLines(@Nonnull final String id) {
-        return new PurchaseInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PurchaseInvoiceLineRequestBuilder purchaseInvoiceLines(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PurchaseInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines") + "/" + id, getClient(), null);
     }
 
     /**
@@ -97,8 +93,8 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder<PurchaseIn
      * @return the VendorRequestBuilder instance
      */
     @Nonnull
-    public VendorRequestBuilder vendor() {
-        return new VendorRequestBuilder(getRequestUrlWithAdditionalSegment("vendor"), getClient(), null);
+    public com.microsoft.graph.requests.VendorRequestBuilder vendor() {
+        return new com.microsoft.graph.requests.VendorRequestBuilder(getRequestUrlWithAdditionalSegment("vendor"), getClient(), null);
     }
 
     /**

@@ -14,7 +14,6 @@ import com.microsoft.graph.models.AccessReviewHistoryDecisionFilter;
 import com.microsoft.graph.models.AccessReviewHistoryScheduleSettings;
 import com.microsoft.graph.models.AccessReviewScope;
 import com.microsoft.graph.models.AccessReviewHistoryStatus;
-import com.microsoft.graph.models.AccessReviewHistoryInstance;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewHistoryInstanceCollectionPage;
 
@@ -143,7 +142,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose
 	@Nullable
-    public AccessReviewHistoryInstanceCollectionPage instances;
+    public com.microsoft.graph.requests.AccessReviewHistoryInstanceCollectionPage instances;
 
 
     /**
@@ -156,7 +155,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
 
         if (json.has("instances")) {
-            instances = serializer.deserializeObject(json.get("instances"), AccessReviewHistoryInstanceCollectionPage.class);
+            instances = serializer.deserializeObject(json.get("instances"), com.microsoft.graph.requests.AccessReviewHistoryInstanceCollectionPage.class);
         }
     }
 }

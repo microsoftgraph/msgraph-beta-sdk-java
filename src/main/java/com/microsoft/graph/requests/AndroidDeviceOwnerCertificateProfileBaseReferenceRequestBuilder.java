@@ -16,7 +16,6 @@ import com.microsoft.graph.models.DeviceConfigurationTargetedUserAndDevice;
 import com.microsoft.graph.models.WindowsAssignedAccessProfile;
 import com.microsoft.graph.models.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.IosAvailableUpdateVersion;
-import com.microsoft.graph.requests.AndroidDeviceOwnerTrustedRootCertificateWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

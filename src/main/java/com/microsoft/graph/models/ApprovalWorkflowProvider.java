@@ -9,10 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.BusinessFlow;
-import com.microsoft.graph.models.GovernancePolicyTemplate;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.BusinessFlowCollectionPage;
 import com.microsoft.graph.requests.GovernancePolicyTemplateCollectionPage;
 
 
@@ -46,7 +43,7 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
     @SerializedName(value = "businessFlows", alternate = {"BusinessFlows"})
     @Expose
 	@Nullable
-    public BusinessFlowCollectionPage businessFlows;
+    public com.microsoft.graph.requests.BusinessFlowCollectionPage businessFlows;
 
     /**
      * The Business Flows With Requests Awaiting My Decision.
@@ -55,7 +52,7 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
     @SerializedName(value = "businessFlowsWithRequestsAwaitingMyDecision", alternate = {"BusinessFlowsWithRequestsAwaitingMyDecision"})
     @Expose
 	@Nullable
-    public BusinessFlowCollectionPage businessFlowsWithRequestsAwaitingMyDecision;
+    public com.microsoft.graph.requests.BusinessFlowCollectionPage businessFlowsWithRequestsAwaitingMyDecision;
 
     /**
      * The Policy Templates.
@@ -64,7 +61,7 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
     @SerializedName(value = "policyTemplates", alternate = {"PolicyTemplates"})
     @Expose
 	@Nullable
-    public GovernancePolicyTemplateCollectionPage policyTemplates;
+    public com.microsoft.graph.requests.GovernancePolicyTemplateCollectionPage policyTemplates;
 
 
     /**
@@ -77,15 +74,15 @@ public class ApprovalWorkflowProvider extends Entity implements IJsonBackedObjec
 
 
         if (json.has("businessFlows")) {
-            businessFlows = serializer.deserializeObject(json.get("businessFlows"), BusinessFlowCollectionPage.class);
+            businessFlows = serializer.deserializeObject(json.get("businessFlows"), com.microsoft.graph.requests.BusinessFlowCollectionPage.class);
         }
 
         if (json.has("businessFlowsWithRequestsAwaitingMyDecision")) {
-            businessFlowsWithRequestsAwaitingMyDecision = serializer.deserializeObject(json.get("businessFlowsWithRequestsAwaitingMyDecision"), BusinessFlowCollectionPage.class);
+            businessFlowsWithRequestsAwaitingMyDecision = serializer.deserializeObject(json.get("businessFlowsWithRequestsAwaitingMyDecision"), com.microsoft.graph.requests.BusinessFlowCollectionPage.class);
         }
 
         if (json.has("policyTemplates")) {
-            policyTemplates = serializer.deserializeObject(json.get("policyTemplates"), GovernancePolicyTemplateCollectionPage.class);
+            policyTemplates = serializer.deserializeObject(json.get("policyTemplates"), com.microsoft.graph.requests.GovernancePolicyTemplateCollectionPage.class);
         }
     }
 }

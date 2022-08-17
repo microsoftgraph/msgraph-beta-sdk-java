@@ -11,15 +11,6 @@ import com.microsoft.graph.models.ListItem;
 import com.microsoft.graph.models.DriveRecipient;
 import com.microsoft.graph.models.Permission;
 import com.microsoft.graph.models.ItemActivityStat;
-import com.microsoft.graph.requests.ItemActivityOLDCollectionRequestBuilder;
-import com.microsoft.graph.requests.ItemActivityOLDRequestBuilder;
-import com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.DocumentSetVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.DocumentSetVersionRequestBuilder;
-import com.microsoft.graph.requests.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.FieldValueSetRequestBuilder;
-import com.microsoft.graph.requests.ListItemVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ListItemVersionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -77,8 +68,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder createdByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder createdByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
@@ -87,8 +78,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder lastModifiedByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ItemActivityOLD collection
@@ -96,8 +87,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @return the collection request builder
      */
     @Nonnull
-    public ItemActivityOLDCollectionRequestBuilder activities() {
-        return new ItemActivityOLDCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
+    public com.microsoft.graph.requests.ItemActivityOLDCollectionRequestBuilder activities() {
+        return new com.microsoft.graph.requests.ItemActivityOLDCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
     }
 
     /**
@@ -107,8 +98,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @param id the item identifier
      */
     @Nonnull
-    public ItemActivityOLDRequestBuilder activities(@Nonnull final String id) {
-        return new ItemActivityOLDRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ItemActivityOLDRequestBuilder activities(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ItemActivityOLDRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
     }
 
     /**
@@ -117,8 +108,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @return the ItemAnalyticsWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ItemAnalyticsWithReferenceRequestBuilder analytics() {
-        return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
+    public com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder analytics() {
+        return new com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DocumentSetVersion collection
@@ -126,8 +117,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @return the collection request builder
      */
     @Nonnull
-    public DocumentSetVersionCollectionRequestBuilder documentSetVersions() {
-        return new DocumentSetVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("documentSetVersions"), getClient(), null);
+    public com.microsoft.graph.requests.DocumentSetVersionCollectionRequestBuilder documentSetVersions() {
+        return new com.microsoft.graph.requests.DocumentSetVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("documentSetVersions"), getClient(), null);
     }
 
     /**
@@ -137,8 +128,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @param id the item identifier
      */
     @Nonnull
-    public DocumentSetVersionRequestBuilder documentSetVersions(@Nonnull final String id) {
-        return new DocumentSetVersionRequestBuilder(getRequestUrlWithAdditionalSegment("documentSetVersions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DocumentSetVersionRequestBuilder documentSetVersions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DocumentSetVersionRequestBuilder(getRequestUrlWithAdditionalSegment("documentSetVersions") + "/" + id, getClient(), null);
     }
 
     /**
@@ -147,8 +138,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @return the DriveItemRequestBuilder instance
      */
     @Nonnull
-    public DriveItemRequestBuilder driveItem() {
-        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
+    public com.microsoft.graph.requests.DriveItemRequestBuilder driveItem() {
+        return new com.microsoft.graph.requests.DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
 
     /**
@@ -157,8 +148,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @return the FieldValueSetRequestBuilder instance
      */
     @Nonnull
-    public FieldValueSetRequestBuilder fields() {
-        return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
+    public com.microsoft.graph.requests.FieldValueSetRequestBuilder fields() {
+        return new com.microsoft.graph.requests.FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ListItemVersion collection
@@ -166,8 +157,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @return the collection request builder
      */
     @Nonnull
-    public ListItemVersionCollectionRequestBuilder versions() {
-        return new ListItemVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
+    public com.microsoft.graph.requests.ListItemVersionCollectionRequestBuilder versions() {
+        return new com.microsoft.graph.requests.ListItemVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
     }
 
     /**
@@ -177,8 +168,8 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @param id the item identifier
      */
     @Nonnull
-    public ListItemVersionRequestBuilder versions(@Nonnull final String id) {
-        return new ListItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ListItemVersionRequestBuilder versions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ListItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
     }
 
     /**

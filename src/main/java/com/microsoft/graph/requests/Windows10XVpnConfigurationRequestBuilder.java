@@ -66,8 +66,8 @@ public class Windows10XVpnConfigurationRequestBuilder extends BaseRequestBuilder
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder assignments() {
-        return new DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -77,8 +77,8 @@ public class Windows10XVpnConfigurationRequestBuilder extends BaseRequestBuilder
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementResourceAccessProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new DeviceManagementResourceAccessProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementResourceAccessProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

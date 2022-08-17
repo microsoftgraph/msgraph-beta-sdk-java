@@ -8,14 +8,6 @@ package com.microsoft.graph.externalconnectors.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.externalconnectors.models.ExternalConnection;
-import com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionRequestBuilder;
-import com.microsoft.graph.externalconnectors.requests.ExternalGroupRequestBuilder;
-import com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionRequestBuilder;
-import com.microsoft.graph.externalconnectors.requests.ExternalItemRequestBuilder;
-import com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionRequestBuilder;
-import com.microsoft.graph.externalconnectors.requests.ConnectionOperationRequestBuilder;
-import com.microsoft.graph.externalconnectors.requests.ConnectionQuotaWithReferenceRequestBuilder;
-import com.microsoft.graph.externalconnectors.requests.SchemaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +62,8 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<Externa
      * @return the collection request builder
      */
     @Nonnull
-    public ExternalGroupCollectionRequestBuilder groups() {
-        return new ExternalGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groups"), getClient(), null);
+    public com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionRequestBuilder groups() {
+        return new com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groups"), getClient(), null);
     }
 
     /**
@@ -81,8 +73,8 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<Externa
      * @param id the item identifier
      */
     @Nonnull
-    public ExternalGroupRequestBuilder groups(@Nonnull final String id) {
-        return new ExternalGroupRequestBuilder(getRequestUrlWithAdditionalSegment("groups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.externalconnectors.requests.ExternalGroupRequestBuilder groups(@Nonnull final String id) {
+        return new com.microsoft.graph.externalconnectors.requests.ExternalGroupRequestBuilder(getRequestUrlWithAdditionalSegment("groups") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ExternalItem collection
@@ -90,8 +82,8 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<Externa
      * @return the collection request builder
      */
     @Nonnull
-    public ExternalItemCollectionRequestBuilder items() {
-        return new ExternalItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
+    public com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionRequestBuilder items() {
+        return new com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
     /**
@@ -101,8 +93,8 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<Externa
      * @param id the item identifier
      */
     @Nonnull
-    public ExternalItemRequestBuilder items(@Nonnull final String id) {
-        return new ExternalItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
+    public com.microsoft.graph.externalconnectors.requests.ExternalItemRequestBuilder items(@Nonnull final String id) {
+        return new com.microsoft.graph.externalconnectors.requests.ExternalItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ConnectionOperation collection
@@ -110,8 +102,8 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<Externa
      * @return the collection request builder
      */
     @Nonnull
-    public ConnectionOperationCollectionRequestBuilder operations() {
-        return new ConnectionOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     /**
@@ -121,8 +113,8 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<Externa
      * @param id the item identifier
      */
     @Nonnull
-    public ConnectionOperationRequestBuilder operations(@Nonnull final String id) {
-        return new ConnectionOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.externalconnectors.requests.ConnectionOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.externalconnectors.requests.ConnectionOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 
     /**
@@ -131,8 +123,8 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<Externa
      * @return the ConnectionQuotaWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ConnectionQuotaWithReferenceRequestBuilder quota() {
-        return new ConnectionQuotaWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("quota"), getClient(), null);
+    public com.microsoft.graph.externalconnectors.requests.ConnectionQuotaWithReferenceRequestBuilder quota() {
+        return new com.microsoft.graph.externalconnectors.requests.ConnectionQuotaWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("quota"), getClient(), null);
     }
 
     /**
@@ -141,7 +133,7 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<Externa
      * @return the SchemaRequestBuilder instance
      */
     @Nonnull
-    public SchemaRequestBuilder schema() {
-        return new SchemaRequestBuilder(getRequestUrlWithAdditionalSegment("schema"), getClient(), null);
+    public com.microsoft.graph.externalconnectors.requests.SchemaRequestBuilder schema() {
+        return new com.microsoft.graph.externalconnectors.requests.SchemaRequestBuilder(getRequestUrlWithAdditionalSegment("schema"), getClient(), null);
     }
 }

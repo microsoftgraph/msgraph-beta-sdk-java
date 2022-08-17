@@ -8,8 +8,6 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.Ediscoveryroot;
-import com.microsoft.graph.ediscovery.requests.CaseCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.CaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class EdiscoveryrootRequestBuilder extends BaseRequestBuilder<Ediscoveryr
      * @return the collection request builder
      */
     @Nonnull
-    public CaseCollectionRequestBuilder cases() {
-        return new CaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cases"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.CaseCollectionRequestBuilder cases() {
+        return new com.microsoft.graph.ediscovery.requests.CaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cases"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class EdiscoveryrootRequestBuilder extends BaseRequestBuilder<Ediscoveryr
      * @param id the item identifier
      */
     @Nonnull
-    public CaseRequestBuilder cases(@Nonnull final String id) {
-        return new CaseRequestBuilder(getRequestUrlWithAdditionalSegment("cases") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.CaseRequestBuilder cases(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.CaseRequestBuilder(getRequestUrlWithAdditionalSegment("cases") + "/" + id, getClient(), null);
     }
 }

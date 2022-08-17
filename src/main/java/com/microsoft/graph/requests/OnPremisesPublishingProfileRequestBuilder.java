@@ -8,16 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OnPremisesPublishingProfile;
-import com.microsoft.graph.requests.OnPremisesAgentGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.OnPremisesAgentGroupRequestBuilder;
-import com.microsoft.graph.requests.OnPremisesAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.OnPremisesAgentRequestBuilder;
-import com.microsoft.graph.requests.ConnectorGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConnectorGroupRequestBuilder;
-import com.microsoft.graph.requests.ConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConnectorRequestBuilder;
-import com.microsoft.graph.requests.PublishedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.PublishedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -72,8 +62,8 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public OnPremisesAgentGroupCollectionRequestBuilder agentGroups() {
-        return new OnPremisesAgentGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups"), getClient(), null);
+    public com.microsoft.graph.requests.OnPremisesAgentGroupCollectionRequestBuilder agentGroups() {
+        return new com.microsoft.graph.requests.OnPremisesAgentGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups"), getClient(), null);
     }
 
     /**
@@ -83,8 +73,8 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public OnPremisesAgentGroupRequestBuilder agentGroups(@Nonnull final String id) {
-        return new OnPremisesAgentGroupRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OnPremisesAgentGroupRequestBuilder agentGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OnPremisesAgentGroupRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the OnPremisesAgent collection
@@ -92,8 +82,8 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public OnPremisesAgentCollectionRequestBuilder agents() {
-        return new OnPremisesAgentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agents"), getClient(), null);
+    public com.microsoft.graph.requests.OnPremisesAgentCollectionRequestBuilder agents() {
+        return new com.microsoft.graph.requests.OnPremisesAgentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agents"), getClient(), null);
     }
 
     /**
@@ -103,8 +93,8 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public OnPremisesAgentRequestBuilder agents(@Nonnull final String id) {
-        return new OnPremisesAgentRequestBuilder(getRequestUrlWithAdditionalSegment("agents") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OnPremisesAgentRequestBuilder agents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OnPremisesAgentRequestBuilder(getRequestUrlWithAdditionalSegment("agents") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ConnectorGroup collection
@@ -112,8 +102,8 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public ConnectorGroupCollectionRequestBuilder connectorGroups() {
-        return new ConnectorGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectorGroups"), getClient(), null);
+    public com.microsoft.graph.requests.ConnectorGroupCollectionRequestBuilder connectorGroups() {
+        return new com.microsoft.graph.requests.ConnectorGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectorGroups"), getClient(), null);
     }
 
     /**
@@ -123,8 +113,8 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public ConnectorGroupRequestBuilder connectorGroups(@Nonnull final String id) {
-        return new ConnectorGroupRequestBuilder(getRequestUrlWithAdditionalSegment("connectorGroups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ConnectorGroupRequestBuilder connectorGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConnectorGroupRequestBuilder(getRequestUrlWithAdditionalSegment("connectorGroups") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Connector collection
@@ -132,8 +122,8 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public ConnectorCollectionRequestBuilder connectors() {
-        return new ConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectors"), getClient(), null);
+    public com.microsoft.graph.requests.ConnectorCollectionRequestBuilder connectors() {
+        return new com.microsoft.graph.requests.ConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectors"), getClient(), null);
     }
 
     /**
@@ -143,8 +133,8 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public ConnectorRequestBuilder connectors(@Nonnull final String id) {
-        return new ConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("connectors") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ConnectorRequestBuilder connectors(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("connectors") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PublishedResource collection
@@ -152,8 +142,8 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public PublishedResourceCollectionRequestBuilder publishedResources() {
-        return new PublishedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources"), getClient(), null);
+    public com.microsoft.graph.requests.PublishedResourceCollectionRequestBuilder publishedResources() {
+        return new com.microsoft.graph.requests.PublishedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources"), getClient(), null);
     }
 
     /**
@@ -163,7 +153,7 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public PublishedResourceRequestBuilder publishedResources(@Nonnull final String id) {
-        return new PublishedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PublishedResourceRequestBuilder publishedResources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PublishedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources") + "/" + id, getClient(), null);
     }
 }

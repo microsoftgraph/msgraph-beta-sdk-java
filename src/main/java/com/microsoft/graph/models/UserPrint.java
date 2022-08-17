@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.PrinterShare;
 import com.microsoft.graph.requests.PrinterShareCollectionPage;
 
 
@@ -47,7 +46,7 @@ public class UserPrint implements IJsonBackedObject {
     @SerializedName(value = "recentPrinterShares", alternate = {"RecentPrinterShares"})
     @Expose
 	@Nullable
-    public PrinterShareCollectionPage recentPrinterShares;
+    public com.microsoft.graph.requests.PrinterShareCollectionPage recentPrinterShares;
 
 
     /**

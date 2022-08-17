@@ -11,9 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySource;
 import com.microsoft.graph.models.ConnectedOrganizationState;
-import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -109,7 +107,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
     @SerializedName(value = "externalSponsors", alternate = {"ExternalSponsors"})
     @Expose
 	@Nullable
-    public DirectoryObjectCollectionPage externalSponsors;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage externalSponsors;
 
     /**
      * The Internal Sponsors.
@@ -118,7 +116,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
     @SerializedName(value = "internalSponsors", alternate = {"InternalSponsors"})
     @Expose
 	@Nullable
-    public DirectoryObjectCollectionPage internalSponsors;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage internalSponsors;
 
 
     /**
@@ -131,11 +129,11 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
 
         if (json.has("externalSponsors")) {
-            externalSponsors = serializer.deserializeObject(json.get("externalSponsors"), DirectoryObjectCollectionPage.class);
+            externalSponsors = serializer.deserializeObject(json.get("externalSponsors"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("internalSponsors")) {
-            internalSponsors = serializer.deserializeObject(json.get("internalSponsors"), DirectoryObjectCollectionPage.class);
+            internalSponsors = serializer.deserializeObject(json.get("internalSponsors"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
     }
 }

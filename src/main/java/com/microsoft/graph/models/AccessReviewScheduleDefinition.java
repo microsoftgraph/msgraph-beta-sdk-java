@@ -15,7 +15,6 @@ import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.graph.models.AccessReviewScope;
 import com.microsoft.graph.models.AccessReviewScheduleSettings;
 import com.microsoft.graph.models.AccessReviewStageSettings;
-import com.microsoft.graph.models.AccessReviewInstance;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewInstanceCollectionPage;
 
@@ -176,7 +175,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose
 	@Nullable
-    public AccessReviewInstanceCollectionPage instances;
+    public com.microsoft.graph.requests.AccessReviewInstanceCollectionPage instances;
 
 
     /**
@@ -189,7 +188,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
 
         if (json.has("instances")) {
-            instances = serializer.deserializeObject(json.get("instances"), AccessReviewInstanceCollectionPage.class);
+            instances = serializer.deserializeObject(json.get("instances"), com.microsoft.graph.requests.AccessReviewInstanceCollectionPage.class);
         }
     }
 }

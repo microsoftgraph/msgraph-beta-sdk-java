@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereMetric;
-import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereDeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

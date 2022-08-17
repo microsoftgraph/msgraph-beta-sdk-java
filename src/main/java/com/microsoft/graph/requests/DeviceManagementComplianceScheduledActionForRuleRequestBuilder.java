@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementComplianceScheduledActionForRule;
-import com.microsoft.graph.requests.DeviceManagementComplianceActionItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementComplianceActionItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceManagementComplianceScheduledActionForRuleRequestBuilder exte
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementComplianceActionItemCollectionRequestBuilder scheduledActionConfigurations() {
-        return new DeviceManagementComplianceActionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementComplianceActionItemCollectionRequestBuilder scheduledActionConfigurations() {
+        return new com.microsoft.graph.requests.DeviceManagementComplianceActionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DeviceManagementComplianceScheduledActionForRuleRequestBuilder exte
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementComplianceActionItemRequestBuilder scheduledActionConfigurations(@Nonnull final String id) {
-        return new DeviceManagementComplianceActionItemRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementComplianceActionItemRequestBuilder scheduledActionConfigurations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementComplianceActionItemRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations") + "/" + id, getClient(), null);
     }
 }

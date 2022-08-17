@@ -28,7 +28,7 @@ public class OutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * The categories associated with the item
+     * 
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -37,7 +37,7 @@ public class OutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Key.
-     * Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+     * 
      */
     @SerializedName(value = "changeKey", alternate = {"ChangeKey"})
     @Expose

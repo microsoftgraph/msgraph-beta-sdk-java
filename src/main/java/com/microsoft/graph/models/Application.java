@@ -18,26 +18,20 @@ import com.microsoft.graph.models.OptionalClaims;
 import com.microsoft.graph.models.ParentalControlSettings;
 import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.PublicClientApplication;
+import com.microsoft.graph.models.RequestSignatureVerification;
 import com.microsoft.graph.models.RequiredResourceAccess;
 import com.microsoft.graph.models.SpaApplication;
 import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.WebApplication;
 import com.microsoft.graph.models.WindowsApplication;
 import com.microsoft.graph.models.OnPremisesPublishing;
-import com.microsoft.graph.models.AppManagementPolicy;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.ExtensionProperty;
-import com.microsoft.graph.models.FederatedIdentityCredential;
-import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
-import com.microsoft.graph.models.TokenIssuancePolicy;
-import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.graph.models.ConnectorGroup;
 import com.microsoft.graph.models.Synchronization;
 import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionPage;
 import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage;
 
@@ -67,7 +61,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -246,6 +240,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public String publisherDomain;
 
     /**
+     * The Request Signature Verification.
+     * 
+     */
+    @SerializedName(value = "requestSignatureVerification", alternate = {"RequestSignatureVerification"})
+    @Expose
+	@Nullable
+    public RequestSignatureVerification requestSignatureVerification;
+
+    /**
      * The Required Resource Access.
      * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).
      */
@@ -358,11 +361,11 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The appManagementPolicy applied to this application.
      */
 	@Nullable
-    public AppManagementPolicyCollectionPage appManagementPolicies;
+    public com.microsoft.graph.requests.AppManagementPolicyCollectionPage appManagementPolicies;
 
     /**
      * The Created On Behalf Of.
-     * 
+     * Supports $filter (eq when counting empty collections). Read-only.
      */
     @SerializedName(value = "createdOnBehalfOf", alternate = {"CreatedOnBehalfOf"})
     @Expose
@@ -371,12 +374,12 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extension Properties.
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      */
     @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose
 	@Nullable
-    public ExtensionPropertyCollectionPage extensionProperties;
+    public com.microsoft.graph.requests.ExtensionPropertyCollectionPage extensionProperties;
 
     /**
      * The Federated Identity Credentials.
@@ -385,35 +388,35 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose
 	@Nullable
-    public FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
+    public com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
 
     /**
      * The Home Realm Discovery Policies.
      * 
      */
 	@Nullable
-    public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+    public com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
     /**
      * The Owners.
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      */
 	@Nullable
-    public DirectoryObjectCollectionPage owners;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;
 
     /**
      * The Token Issuance Policies.
      * 
      */
 	@Nullable
-    public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
+    public com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
      * The tokenLifetimePolicies assigned to this application. Supports $expand.
      */
 	@Nullable
-    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
+    public com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
     /**
      * The Connector Group.
@@ -444,31 +447,31 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("appManagementPolicies")) {
-            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), AppManagementPolicyCollectionPage.class);
+            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), com.microsoft.graph.requests.AppManagementPolicyCollectionPage.class);
         }
 
         if (json.has("extensionProperties")) {
-            extensionProperties = serializer.deserializeObject(json.get("extensionProperties"), ExtensionPropertyCollectionPage.class);
+            extensionProperties = serializer.deserializeObject(json.get("extensionProperties"), com.microsoft.graph.requests.ExtensionPropertyCollectionPage.class);
         }
 
         if (json.has("federatedIdentityCredentials")) {
-            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), FederatedIdentityCredentialCollectionPage.class);
+            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), HomeRealmDiscoveryPolicyCollectionPage.class);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners"), DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), TokenIssuancePolicyCollectionPage.class);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), TokenLifetimePolicyCollectionPage.class);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage.class);
         }
     }
 }

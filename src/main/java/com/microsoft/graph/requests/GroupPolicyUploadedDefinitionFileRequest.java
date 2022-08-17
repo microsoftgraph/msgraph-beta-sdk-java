@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GroupPolicyUploadedDefinitionFile;
 import com.microsoft.graph.models.GroupPolicyUploadedLanguageFile;
-import com.microsoft.graph.requests.GroupPolicyOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicyOperationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

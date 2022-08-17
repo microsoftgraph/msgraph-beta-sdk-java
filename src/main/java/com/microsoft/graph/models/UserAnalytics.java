@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Settings;
-import com.microsoft.graph.models.ActivityStatistics;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ActivityStatisticsCollectionPage;
 
@@ -45,7 +44,7 @@ public class UserAnalytics extends Entity implements IJsonBackedObject {
     @SerializedName(value = "activityStatistics", alternate = {"ActivityStatistics"})
     @Expose
 	@Nullable
-    public ActivityStatisticsCollectionPage activityStatistics;
+    public com.microsoft.graph.requests.ActivityStatisticsCollectionPage activityStatistics;
 
 
     /**
@@ -58,7 +57,7 @@ public class UserAnalytics extends Entity implements IJsonBackedObject {
 
 
         if (json.has("activityStatistics")) {
-            activityStatistics = serializer.deserializeObject(json.get("activityStatistics"), ActivityStatisticsCollectionPage.class);
+            activityStatistics = serializer.deserializeObject(json.get("activityStatistics"), com.microsoft.graph.requests.ActivityStatisticsCollectionPage.class);
         }
     }
 }

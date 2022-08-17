@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GovernanceRoleDefinition;
-import com.microsoft.graph.requests.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.GovernanceRoleSettingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class GovernanceRoleDefinitionRequestBuilder extends BaseRequestBuilder<G
      * @return the GovernanceResourceRequestBuilder instance
      */
     @Nonnull
-    public GovernanceResourceRequestBuilder resource() {
-        return new GovernanceResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
+    public com.microsoft.graph.requests.GovernanceResourceRequestBuilder resource() {
+        return new com.microsoft.graph.requests.GovernanceResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class GovernanceRoleDefinitionRequestBuilder extends BaseRequestBuilder<G
      * @return the GovernanceRoleSettingRequestBuilder instance
      */
     @Nonnull
-    public GovernanceRoleSettingRequestBuilder roleSetting() {
-        return new GovernanceRoleSettingRequestBuilder(getRequestUrlWithAdditionalSegment("roleSetting"), getClient(), null);
+    public com.microsoft.graph.requests.GovernanceRoleSettingRequestBuilder roleSetting() {
+        return new com.microsoft.graph.requests.GovernanceRoleSettingRequestBuilder(getRequestUrlWithAdditionalSegment("roleSetting"), getClient(), null);
     }
 }

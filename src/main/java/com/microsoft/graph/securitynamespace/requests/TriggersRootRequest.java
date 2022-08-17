@@ -8,8 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.TriggersRoot;
-import com.microsoft.graph.security.requests.RetentionEventCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.RetentionEventRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ConnectorStatus;
-import com.microsoft.graph.models.ConnectorGroup;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ConnectorGroupCollectionPage;
 
@@ -61,7 +60,7 @@ public class Connector extends Entity implements IJsonBackedObject {
      * The connectorGroup that the connector is a member of. Read-only.
      */
 	@Nullable
-    public ConnectorGroupCollectionPage memberOf;
+    public com.microsoft.graph.requests.ConnectorGroupCollectionPage memberOf;
 
 
     /**
@@ -74,7 +73,7 @@ public class Connector extends Entity implements IJsonBackedObject {
 
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf"), ConnectorGroupCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.ConnectorGroupCollectionPage.class);
         }
     }
 }

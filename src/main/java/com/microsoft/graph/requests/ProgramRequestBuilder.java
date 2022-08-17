@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Program;
-import com.microsoft.graph.requests.ProgramControlCollectionRequestBuilder;
-import com.microsoft.graph.requests.ProgramControlRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class ProgramRequestBuilder extends BaseRequestBuilder<Program> {
      * @return the collection request builder
      */
     @Nonnull
-    public ProgramControlCollectionRequestBuilder controls() {
-        return new ProgramControlCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("controls"), getClient(), null);
+    public com.microsoft.graph.requests.ProgramControlCollectionRequestBuilder controls() {
+        return new com.microsoft.graph.requests.ProgramControlCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("controls"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class ProgramRequestBuilder extends BaseRequestBuilder<Program> {
      * @param id the item identifier
      */
     @Nonnull
-    public ProgramControlRequestBuilder controls(@Nonnull final String id) {
-        return new ProgramControlRequestBuilder(getRequestUrlWithAdditionalSegment("controls") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ProgramControlRequestBuilder controls(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ProgramControlRequestBuilder(getRequestUrlWithAdditionalSegment("controls") + "/" + id, getClient(), null);
     }
 }

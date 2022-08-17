@@ -9,13 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageAssignment;
 import com.microsoft.graph.models.AccessPackageAssignmentFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.AccessPackageRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -71,8 +64,8 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder<Ac
      * @return the AccessPackageRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageRequestBuilder accessPackage() {
-        return new AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackage"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageRequestBuilder accessPackage() {
+        return new com.microsoft.graph.requests.AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackage"), getClient(), null);
     }
 
     /**
@@ -81,8 +74,8 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder<Ac
      * @return the AccessPackageAssignmentPolicyRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicy() {
-        return new AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicy"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicy() {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageAssignmentRequest collection
@@ -90,8 +83,8 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder<Ac
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageAssignmentRequestCollectionRequestBuilder accessPackageAssignmentRequests() {
-        return new AccessPackageAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentRequests"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder accessPackageAssignmentRequests() {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentRequests"), getClient(), null);
     }
 
     /**
@@ -101,8 +94,8 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder<Ac
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageAssignmentRequestRequestBuilder accessPackageAssignmentRequests(@Nonnull final String id) {
-        return new AccessPackageAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder accessPackageAssignmentRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentRequests") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageAssignmentResourceRole collection
@@ -110,8 +103,8 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder<Ac
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageAssignmentResourceRoleCollectionRequestBuilder accessPackageAssignmentResourceRoles() {
-        return new AccessPackageAssignmentResourceRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleCollectionRequestBuilder accessPackageAssignmentResourceRoles() {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles"), getClient(), null);
     }
 
     /**
@@ -121,8 +114,8 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder<Ac
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageAssignmentResourceRoleRequestBuilder accessPackageAssignmentResourceRoles(@Nonnull final String id) {
-        return new AccessPackageAssignmentResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleRequestBuilder accessPackageAssignmentResourceRoles(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles") + "/" + id, getClient(), null);
     }
 
     /**
@@ -131,8 +124,8 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder<Ac
      * @return the AccessPackageSubjectRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageSubjectRequestBuilder target() {
-        return new AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("target"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder target() {
+        return new com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("target"), getClient(), null);
     }
 
     /**
