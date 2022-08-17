@@ -3,7 +3,7 @@ package microsoft.graph.models.ediscovery;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the compliance singleton. */
 public enum DataSourceContainerStatus implements ValuedEnum {
     Active("Active"),
     Released("Released"),

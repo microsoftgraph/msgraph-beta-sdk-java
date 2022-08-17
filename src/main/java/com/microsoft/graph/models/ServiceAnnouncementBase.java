@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the admin singleton. */
 public class ServiceAnnouncementBase extends Entity implements Parsable {
     /** Additional details about service event. This property doesn't support filters. */
     private java.util.List<KeyValuePair> _details;

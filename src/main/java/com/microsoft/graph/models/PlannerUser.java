@@ -14,7 +14,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     private PlannerFavoritePlanReferenceCollection _favoritePlanReferences;
     /** Read-only. Nullable. Returns the plannerPlans that the user marked as favorites. */
     private java.util.List<PlannerPlan> _favoritePlans;
-    /** Read-only. Nullable. Returns the plannerTasks assigned to the user. */
+    /** The plans property */
     private java.util.List<PlannerPlan> _plans;
     /** A collection containing references to the plans that were viewed recently by the user in apps that support recent plans. */
     private PlannerRecentPlanReferenceCollection _recentPlanReferences;
@@ -85,7 +85,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         }};
     }
     /**
-     * Gets the plans property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Gets the plans property value. The plans property
      * @return a plannerPlan
      */
     @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         this._favoritePlans = value;
     }
     /**
-     * Sets the plans property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Sets the plans property value. The plans property
      * @param value Value to set for the plans property.
      * @return a void
      */

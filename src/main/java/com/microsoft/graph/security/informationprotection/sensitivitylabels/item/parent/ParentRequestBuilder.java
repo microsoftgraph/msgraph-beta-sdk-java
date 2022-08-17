@@ -80,7 +80,7 @@ public class ParentRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get parent from security
+     * The parent label associated with a child label. Null if the label has no parent.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ParentRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get parent from security
+     * The parent label associated with a child label. Null if the label has no parent.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ParentRequestBuilder {
         }
     }
     /**
-     * Get parent from security
+     * The parent label associated with a child label. Null if the label has no parent.
      * @return a CompletableFuture of sensitivityLabel
      */
     public java.util.concurrent.CompletableFuture<SensitivityLabel> get() {
@@ -209,7 +209,7 @@ public class ParentRequestBuilder {
         }
     }
     /**
-     * Get parent from security
+     * The parent label associated with a child label. Null if the label has no parent.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sensitivityLabel
      */
@@ -226,7 +226,7 @@ public class ParentRequestBuilder {
         }
     }
     /**
-     * Get parent from security
+     * The parent label associated with a child label. Null if the label has no parent.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of sensitivityLabel
@@ -313,7 +313,7 @@ public class ParentRequestBuilder {
         public ParentRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get parent from security */
+    /** The parent label associated with a child label. Null if the label has no parent. */
     public class ParentRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

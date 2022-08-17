@@ -157,7 +157,7 @@ public class AuthenticationRequestBuilder {
         return requestInfo;
     }
     /**
-     * The authentication methods that are supported for the user.
+     * Get authentication from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -165,7 +165,7 @@ public class AuthenticationRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The authentication methods that are supported for the user.
+     * Get authentication from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -294,7 +294,7 @@ public class AuthenticationRequestBuilder {
         return new Fido2AuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * The authentication methods that are supported for the user.
+     * Get authentication from users
      * @return a CompletableFuture of authentication
      */
     public java.util.concurrent.CompletableFuture<Authentication> get() {
@@ -310,7 +310,7 @@ public class AuthenticationRequestBuilder {
         }
     }
     /**
-     * The authentication methods that are supported for the user.
+     * Get authentication from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authentication
      */
@@ -327,7 +327,7 @@ public class AuthenticationRequestBuilder {
         }
     }
     /**
-     * The authentication methods that are supported for the user.
+     * Get authentication from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of authentication
@@ -522,7 +522,7 @@ public class AuthenticationRequestBuilder {
         public AuthenticationRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The authentication methods that are supported for the user. */
+    /** Get authentication from users */
     public class AuthenticationRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

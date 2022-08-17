@@ -8,11 +8,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
 public class CloudPC extends Entity implements Parsable {
     /** The Azure Active Directory (Azure AD) device ID of the Cloud PC. */
     private String _aadDeviceId;
-    /** The connectivityResult property */
+    /** The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC is able to be connected or not. */
     private CloudPcConnectivityResult _connectivityResult;
     /** The display name of the Cloud PC. */
     private String _displayName;
@@ -53,7 +52,7 @@ public class CloudPC extends Entity implements Parsable {
     /** The user principal name (UPN) of the user assigned to the Cloud PC. */
     private String _userPrincipalName;
     /**
-     * Instantiates a new cloudPC and sets the default values.
+     * Instantiates a new CloudPC and sets the default values.
      * @return a void
      */
     public CloudPC() {
@@ -63,7 +62,7 @@ public class CloudPC extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPC
+     * @return a CloudPC
      */
     @javax.annotation.Nonnull
     public static CloudPC createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -79,7 +78,7 @@ public class CloudPC extends Entity implements Parsable {
         return this._aadDeviceId;
     }
     /**
-     * Gets the connectivityResult property value. The connectivityResult property
+     * Gets the connectivityResult property value. The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC is able to be connected or not.
      * @return a cloudPcConnectivityResult
      */
     @javax.annotation.Nullable
@@ -308,7 +307,7 @@ public class CloudPC extends Entity implements Parsable {
         this._aadDeviceId = value;
     }
     /**
-     * Sets the connectivityResult property value. The connectivityResult property
+     * Sets the connectivityResult property value. The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC is able to be connected or not.
      * @param value Value to set for the connectivityResult property.
      * @return a void
      */

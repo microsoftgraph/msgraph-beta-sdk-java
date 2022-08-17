@@ -11,15 +11,15 @@ import java.util.Objects;
 public class ControlScore implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Control action category (Identity, Data, Device, Apps, Infrastructure). */
+    /** The controlCategory property */
     private String _controlCategory;
-    /** Control unique name. */
+    /** The controlName property */
     private String _controlName;
-    /** Description of the control. */
+    /** The description property */
     private String _description;
     /** The OdataType property */
     private String _odataType;
-    /** Tenant achieved score for the control (it varies day by day depending on tenant operations on the control). */
+    /** The score property */
     private Double _score;
     /**
      * Instantiates a new controlScore and sets the default values.
@@ -48,7 +48,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
+     * Gets the controlCategory property value. The controlCategory property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -56,7 +56,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
         return this._controlCategory;
     }
     /**
-     * Gets the controlName property value. Control unique name.
+     * Gets the controlName property value. The controlName property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
         return this._controlName;
     }
     /**
-     * Gets the description property value. Description of the control.
+     * Gets the description property value. The description property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
+     * Gets the score property value. The score property
      * @return a double
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
+     * Sets the controlCategory property value. The controlCategory property
      * @param value Value to set for the controlCategory property.
      * @return a void
      */
@@ -133,7 +133,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
         this._controlCategory = value;
     }
     /**
-     * Sets the controlName property value. Control unique name.
+     * Sets the controlName property value. The controlName property
      * @param value Value to set for the controlName property.
      * @return a void
      */
@@ -141,7 +141,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
         this._controlName = value;
     }
     /**
-     * Sets the description property value. Description of the control.
+     * Sets the description property value. The description property
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -157,7 +157,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
+     * Sets the score property value. The score property
      * @param value Value to set for the score property.
      * @return a void
      */

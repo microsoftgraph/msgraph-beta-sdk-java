@@ -59,7 +59,7 @@ public class ColumnsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The collection of field definitions for this list.
+     * Get columns from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ColumnsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of field definitions for this list.
+     * Get columns from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class ColumnsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of field definitions for this list.
+     * Get columns from users
      * @return a CompletableFuture of ColumnDefinitionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ColumnDefinitionCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class ColumnsRequestBuilder {
         }
     }
     /**
-     * The collection of field definitions for this list.
+     * Get columns from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ColumnDefinitionCollectionResponse
      */
@@ -155,7 +155,7 @@ public class ColumnsRequestBuilder {
         }
     }
     /**
-     * The collection of field definitions for this list.
+     * Get columns from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ColumnDefinitionCollectionResponse
@@ -227,7 +227,7 @@ public class ColumnsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The collection of field definitions for this list. */
+    /** Get columns from users */
     public class ColumnsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

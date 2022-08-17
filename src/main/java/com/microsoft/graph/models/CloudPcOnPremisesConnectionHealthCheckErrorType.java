@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnum {
     DnsCheckFqdnNotFound("dnsCheckFqdnNotFound"),
     DnsCheckNameWithInvalidCharacter("dnsCheckNameWithInvalidCharacter"),
@@ -21,6 +21,8 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
     EndpointConnectivityCheckCloudPcUrlNotAllowListed("endpointConnectivityCheckCloudPcUrlNotAllowListed"),
     EndpointConnectivityCheckWVDUrlNotAllowListed("endpointConnectivityCheckWVDUrlNotAllowListed"),
     EndpointConnectivityCheckIntuneUrlNotAllowListed("endpointConnectivityCheckIntuneUrlNotAllowListed"),
+    EndpointConnectivityCheckAzureADUrlNotAllowListed("endpointConnectivityCheckAzureADUrlNotAllowListed"),
+    EndpointConnectivityCheckLocaleUrlNotAllowListed("endpointConnectivityCheckLocaleUrlNotAllowListed"),
     EndpointConnectivityCheckUnknownError("endpointConnectivityCheckUnknownError"),
     AzureAdDeviceSyncCheckDeviceNotFound("azureAdDeviceSyncCheckDeviceNotFound"),
     AzureAdDeviceSyncCheckLongSyncCircle("azureAdDeviceSyncCheckLongSyncCircle"),
@@ -88,6 +90,8 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
             case "endpointConnectivityCheckCloudPcUrlNotAllowListed": return EndpointConnectivityCheckCloudPcUrlNotAllowListed;
             case "endpointConnectivityCheckWVDUrlNotAllowListed": return EndpointConnectivityCheckWVDUrlNotAllowListed;
             case "endpointConnectivityCheckIntuneUrlNotAllowListed": return EndpointConnectivityCheckIntuneUrlNotAllowListed;
+            case "endpointConnectivityCheckAzureADUrlNotAllowListed": return EndpointConnectivityCheckAzureADUrlNotAllowListed;
+            case "endpointConnectivityCheckLocaleUrlNotAllowListed": return EndpointConnectivityCheckLocaleUrlNotAllowListed;
             case "endpointConnectivityCheckUnknownError": return EndpointConnectivityCheckUnknownError;
             case "azureAdDeviceSyncCheckDeviceNotFound": return AzureAdDeviceSyncCheckDeviceNotFound;
             case "azureAdDeviceSyncCheckLongSyncCircle": return AzureAdDeviceSyncCheckLongSyncCircle;

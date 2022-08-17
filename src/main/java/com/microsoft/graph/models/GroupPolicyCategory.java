@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The category entity stores the category of a group policy definition */
 public class GroupPolicyCategory extends Entity implements Parsable {
     /** The children categories */
     private java.util.List<GroupPolicyCategory> _children;
@@ -18,6 +17,8 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     private java.util.List<GroupPolicyDefinition> _definitions;
     /** The string id of the category's display name */
     private String _displayName;
+    /** Category Ingestion source */
+    private IngestionSource _ingestionSource;
     /** Defines if the category is a root category */
     private Boolean _isRoot;
     /** The date and time the entity was last modified. */
@@ -25,7 +26,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     /** The parent category */
     private GroupPolicyCategory _parent;
     /**
-     * Instantiates a new groupPolicyCategory and sets the default values.
+     * Instantiates a new GroupPolicyCategory and sets the default values.
      * @return a void
      */
     public GroupPolicyCategory() {
@@ -35,7 +36,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyCategory
+     * @return a GroupPolicyCategory
      */
     @javax.annotation.Nonnull
     public static GroupPolicyCategory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -86,10 +87,19 @@ public class GroupPolicyCategory extends Entity implements Parsable {
             this.put("definitionFile", (n) -> { currentObject.setDefinitionFile(n.getObjectValue(GroupPolicyDefinitionFile::createFromDiscriminatorValue)); });
             this.put("definitions", (n) -> { currentObject.setDefinitions(n.getCollectionOfObjectValues(GroupPolicyDefinition::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("ingestionSource", (n) -> { currentObject.setIngestionSource(n.getEnumValue(IngestionSource.class)); });
             this.put("isRoot", (n) -> { currentObject.setIsRoot(n.getBooleanValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("parent", (n) -> { currentObject.setParent(n.getObjectValue(GroupPolicyCategory::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the ingestionSource property value. Category Ingestion source
+     * @return a ingestionSource
+     */
+    @javax.annotation.Nullable
+    public IngestionSource getIngestionSource() {
+        return this._ingestionSource;
     }
     /**
      * Gets the isRoot property value. Defines if the category is a root category
@@ -127,6 +137,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
         writer.writeObjectValue("definitionFile", this.getDefinitionFile());
         writer.writeCollectionOfObjectValues("definitions", this.getDefinitions());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("ingestionSource", this.getIngestionSource());
         writer.writeBooleanValue("isRoot", this.getIsRoot());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeObjectValue("parent", this.getParent());
@@ -162,6 +173,14 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the ingestionSource property value. Category Ingestion source
+     * @param value Value to set for the ingestionSource property.
+     * @return a void
+     */
+    public void setIngestionSource(@javax.annotation.Nullable final IngestionSource value) {
+        this._ingestionSource = value;
     }
     /**
      * Sets the isRoot property value. Defines if the category is a root category

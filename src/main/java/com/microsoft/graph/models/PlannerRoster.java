@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class PlannerRoster extends Entity implements Parsable {
     /** Retrieves the members of the plannerRoster. */
     private java.util.List<PlannerRosterMember> _members;
     /** Retrieves the plans contained by the plannerRoster. */
     private java.util.List<PlannerPlan> _plans;
     /**
-     * Instantiates a new plannerRoster and sets the default values.
+     * Instantiates a new PlannerRoster and sets the default values.
      * @return a void
      */
     public PlannerRoster() {
@@ -24,7 +23,7 @@ public class PlannerRoster extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerRoster
+     * @return a PlannerRoster
      */
     @javax.annotation.Nonnull
     public static PlannerRoster createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

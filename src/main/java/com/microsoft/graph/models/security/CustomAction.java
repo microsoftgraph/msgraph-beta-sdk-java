@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CustomAction extends InformationProtectionAction implements Parsable {
-    /** The name property */
+    /** Name of the custom action. */
     private String _name;
-    /** The properties property */
+    /** Properties, in key-value pair format, of the action. */
     private java.util.List<KeyValuePair> _properties;
     /**
      * Instantiates a new CustomAction and sets the default values.
@@ -43,7 +43,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
         }};
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the custom action.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
         return this._name;
     }
     /**
-     * Gets the properties property value. The properties property
+     * Gets the properties property value. Properties, in key-value pair format, of the action.
      * @return a keyValuePair
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
         writer.writeCollectionOfObjectValues("properties", this.getProperties());
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the custom action.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -78,7 +78,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
         this._name = value;
     }
     /**
-     * Sets the properties property value. The properties property
+     * Sets the properties property value. Properties, in key-value pair format, of the action.
      * @param value Value to set for the properties property.
      * @return a void
      */

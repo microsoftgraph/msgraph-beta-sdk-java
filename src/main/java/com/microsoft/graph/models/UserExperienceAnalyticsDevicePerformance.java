@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device performance entity contains device boot performance details. */
 public class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsable {
     /** Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999 */
     private Double _averageBlueScreens;
@@ -49,7 +50,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     /** The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _startupPerformanceScore;
     /**
-     * Instantiates a new UserExperienceAnalyticsDevicePerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsDevicePerformance and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsDevicePerformance() {
@@ -59,7 +60,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDevicePerformance
+     * @return a userExperienceAnalyticsDevicePerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDevicePerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

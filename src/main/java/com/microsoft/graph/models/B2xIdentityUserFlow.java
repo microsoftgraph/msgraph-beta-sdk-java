@@ -10,7 +10,7 @@ import java.util.Objects;
 public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /** Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration. */
     private UserFlowApiConnectorConfiguration _apiConnectorConfiguration;
-    /** The identity providers included in the user flow. */
+    /** The identityProviders property */
     private java.util.List<IdentityProvider> _identityProviders;
     /** The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows. */
     private java.util.List<UserFlowLanguageConfiguration> _languages;
@@ -60,7 +60,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
         }};
     }
     /**
-     * Gets the identityProviders property value. The identity providers included in the user flow.
+     * Gets the identityProviders property value. The identityProviders property
      * @return a identityProvider
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
         this._apiConnectorConfiguration = value;
     }
     /**
-     * Sets the identityProviders property value. The identity providers included in the user flow.
+     * Sets the identityProviders property value. The identityProviders property
      * @param value Value to set for the identityProviders property.
      * @return a void
      */

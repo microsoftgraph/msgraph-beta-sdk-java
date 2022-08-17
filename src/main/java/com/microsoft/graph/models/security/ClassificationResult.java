@@ -11,13 +11,13 @@ import java.util.Objects;
 public class ClassificationResult implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The confidenceLevel property */
+    /** The confidence level, 0 to 100, of the result. */
     private Integer _confidenceLevel;
-    /** The count property */
+    /** The number of instances of the specific information type in the input. */
     private Integer _count;
     /** The OdataType property */
     private String _odataType;
-    /** The sensitiveTypeId property */
+    /** The GUID of the discovered sensitive information type. */
     private String _sensitiveTypeId;
     /**
      * Instantiates a new classificationResult and sets the default values.
@@ -46,7 +46,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the confidenceLevel property value. The confidenceLevel property
+     * Gets the confidenceLevel property value. The confidence level, 0 to 100, of the result.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -54,7 +54,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
         return this._confidenceLevel;
     }
     /**
-     * Gets the count property value. The count property
+     * Gets the count property value. The number of instances of the specific information type in the input.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the sensitiveTypeId property value. The sensitiveTypeId property
+     * Gets the sensitiveTypeId property value. The GUID of the discovered sensitive information type.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the confidenceLevel property value. The confidenceLevel property
+     * Sets the confidenceLevel property value. The confidence level, 0 to 100, of the result.
      * @param value Value to set for the confidenceLevel property.
      * @return a void
      */
@@ -121,7 +121,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
         this._confidenceLevel = value;
     }
     /**
-     * Sets the count property value. The count property
+     * Sets the count property value. The number of instances of the specific information type in the input.
      * @param value Value to set for the count property.
      * @return a void
      */
@@ -137,7 +137,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the sensitiveTypeId property value. The sensitiveTypeId property
+     * Sets the sensitiveTypeId property value. The GUID of the discovered sensitive information type.
      * @param value Value to set for the sensitiveTypeId property.
      * @return a void
      */

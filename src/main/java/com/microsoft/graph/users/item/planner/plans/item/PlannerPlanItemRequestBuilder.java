@@ -112,7 +112,7 @@ public class PlannerPlanItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Get plans from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -120,7 +120,7 @@ public class PlannerPlanItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Get plans from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -225,7 +225,7 @@ public class PlannerPlanItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Get plans from users
      * @return a CompletableFuture of plannerPlan
      */
     public java.util.concurrent.CompletableFuture<PlannerPlan> get() {
@@ -241,7 +241,7 @@ public class PlannerPlanItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Get plans from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerPlan
      */
@@ -258,7 +258,7 @@ public class PlannerPlanItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Get plans from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of plannerPlan
@@ -357,7 +357,7 @@ public class PlannerPlanItemRequestBuilder {
         public PlannerPlanItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. Returns the plannerTasks assigned to the user. */
+    /** Get plans from users */
     public class PlannerPlanItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

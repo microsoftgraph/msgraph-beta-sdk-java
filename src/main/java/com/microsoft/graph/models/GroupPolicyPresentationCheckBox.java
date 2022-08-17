@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class GroupPolicyPresentationCheckBox extends GroupPolicyPresentation implements Parsable {
+public class GroupPolicyPresentationCheckBox extends GroupPolicyUploadedPresentation implements Parsable {
     /** Default value for the check box. The default value is false. */
     private Boolean _defaultChecked;
     /**

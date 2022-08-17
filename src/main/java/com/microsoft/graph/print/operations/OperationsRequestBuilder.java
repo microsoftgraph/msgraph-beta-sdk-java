@@ -59,7 +59,7 @@ public class OperationsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The list of print long running operations.
+     * Get operations from print
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class OperationsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The list of print long running operations.
+     * Get operations from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class OperationsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of print long running operations.
+     * Get operations from print
      * @return a CompletableFuture of PrintOperationCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PrintOperationCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class OperationsRequestBuilder {
         }
     }
     /**
-     * The list of print long running operations.
+     * Get operations from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrintOperationCollectionResponse
      */
@@ -155,7 +155,7 @@ public class OperationsRequestBuilder {
         }
     }
     /**
-     * The list of print long running operations.
+     * Get operations from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PrintOperationCollectionResponse
@@ -227,7 +227,7 @@ public class OperationsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The list of print long running operations. */
+    /** Get operations from print */
     public class OperationsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

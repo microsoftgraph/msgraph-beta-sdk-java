@@ -10,7 +10,7 @@ import java.util.Objects;
 public class EducationSchool extends EducationOrganization implements Parsable {
     /** Address of the school. */
     private PhysicalAddress _address;
-    /** The underlying administrativeUnit for this school. */
+    /** The administrativeUnit property */
     private AdministrativeUnit _administrativeUnit;
     /** Classes taught at the school. Nullable. */
     private java.util.List<EducationClass> _classes;
@@ -63,7 +63,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
         return this._address;
     }
     /**
-     * Gets the administrativeUnit property value. The underlying administrativeUnit for this school.
+     * Gets the administrativeUnit property value. The administrativeUnit property
      * @return a administrativeUnit
      */
     @javax.annotation.Nullable
@@ -222,7 +222,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
         this._address = value;
     }
     /**
-     * Sets the administrativeUnit property value. The underlying administrativeUnit for this school.
+     * Sets the administrativeUnit property value. The administrativeUnit property
      * @param value Value to set for the administrativeUnit property.
      * @return a void
      */

@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WindowsProtectionState extends Entity implements Parsable {
     /** The anti-malware version for the managed device. Optional. Read-only. */
     private String _antiMalwareVersion;

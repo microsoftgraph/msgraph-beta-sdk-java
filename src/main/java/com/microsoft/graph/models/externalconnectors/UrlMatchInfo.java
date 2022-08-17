@@ -1,0 +1,127 @@
+package microsoft.graph.models.externalconnectors;
+
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
+    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    private Map<String, Object> _additionalData;
+    /** A list of the URL prefixes that must match URLs to be processed by this URL-to-item-resolver. */
+    private java.util.List<String> _baseUrls;
+    /** The OdataType property */
+    private String _odataType;
+    /** A regular expression that will be matched towards the URL that is processed by this URL-to-item-resolver. The ECMAScript specification for regular expressions (ECMA-262) is used for the evaluation. The named groups defined by the regular expression will be used later to extract values from the URL. */
+    private String _urlPattern;
+    /**
+     * Instantiates a new urlMatchInfo and sets the default values.
+     * @return a void
+     */
+    public UrlMatchInfo() {
+        this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.externalConnectors.urlMatchInfo");
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a urlMatchInfo
+     */
+    @javax.annotation.Nonnull
+    public static UrlMatchInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new UrlMatchInfo();
+    }
+    /**
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a Map<String, Object>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        return this._additionalData;
+    }
+    /**
+     * Gets the baseUrls property value. A list of the URL prefixes that must match URLs to be processed by this URL-to-item-resolver.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getBaseUrls() {
+        return this._baseUrls;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final UrlMatchInfo currentObject = this;
+        return new HashMap<>(3) {{
+            this.put("baseUrls", (n) -> { currentObject.setBaseUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+            this.put("urlPattern", (n) -> { currentObject.setUrlPattern(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
+     * Gets the urlPattern property value. A regular expression that will be matched towards the URL that is processed by this URL-to-item-resolver. The ECMAScript specification for regular expressions (ECMA-262) is used for the evaluation. The named groups defined by the regular expression will be used later to extract values from the URL.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getUrlPattern() {
+        return this._urlPattern;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        writer.writeCollectionOfPrimitiveValues("baseUrls", this.getBaseUrls());
+        writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeStringValue("urlPattern", this.getUrlPattern());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     * @return a void
+     */
+    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+        this._additionalData = value;
+    }
+    /**
+     * Sets the baseUrls property value. A list of the URL prefixes that must match URLs to be processed by this URL-to-item-resolver.
+     * @param value Value to set for the baseUrls property.
+     * @return a void
+     */
+    public void setBaseUrls(@javax.annotation.Nullable final java.util.List<String> value) {
+        this._baseUrls = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
+     * Sets the urlPattern property value. A regular expression that will be matched towards the URL that is processed by this URL-to-item-resolver. The ECMAScript specification for regular expressions (ECMA-262) is used for the evaluation. The named groups defined by the regular expression will be used later to extract values from the URL.
+     * @param value Value to set for the urlPattern property.
+     * @return a void
+     */
+    public void setUrlPattern(@javax.annotation.Nullable final String value) {
+        this._urlPattern = value;
+    }
+}

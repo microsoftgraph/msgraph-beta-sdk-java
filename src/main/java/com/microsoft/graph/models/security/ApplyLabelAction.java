@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ApplyLabelAction extends InformationProtectionAction implements Parsable {
-    /** The actions property */
+    /** The collection of actions that should be implemented by the caller. */
     private java.util.List<InformationProtectionAction> _actions;
     /** The actionSource property */
     private ActionSource _actionSource;
-    /** The responsibleSensitiveTypeIds property */
+    /** If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label. */
     private java.util.List<String> _responsibleSensitiveTypeIds;
     /** The sensitivityLabelId property */
     private String _sensitivityLabelId;
@@ -35,7 +35,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
         return new ApplyLabelAction();
     }
     /**
-     * Gets the actions property value. The actions property
+     * Gets the actions property value. The collection of actions that should be implemented by the caller.
      * @return a informationProtectionAction
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
         }};
     }
     /**
-     * Gets the responsibleSensitiveTypeIds property value. The responsibleSensitiveTypeIds property
+     * Gets the responsibleSensitiveTypeIds property value. If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
         writer.writeStringValue("sensitivityLabelId", this.getSensitivityLabelId());
     }
     /**
-     * Sets the actions property value. The actions property
+     * Sets the actions property value. The collection of actions that should be implemented by the caller.
      * @param value Value to set for the actions property.
      * @return a void
      */
@@ -110,7 +110,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
         this._actionSource = value;
     }
     /**
-     * Sets the responsibleSensitiveTypeIds property value. The responsibleSensitiveTypeIds property
+     * Sets the responsibleSensitiveTypeIds property value. If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
      * @param value Value to set for the responsibleSensitiveTypeIds property.
      * @return a void
      */

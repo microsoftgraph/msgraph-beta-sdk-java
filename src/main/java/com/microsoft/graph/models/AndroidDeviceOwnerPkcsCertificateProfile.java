@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertificateProfileBase implements Parsable {
+    /** Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue. */
+    private AndroidDeviceOwnerCertificateAccessType _certificateAccessType;
     /** CertificateStore types */
     private CertificateStore _certificateStore;
     /** PKCS Certificate Template Name */
@@ -22,6 +24,8 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     private java.util.List<CustomSubjectAlternativeName> _customSubjectAlternativeNames;
     /** Certificate state for devices. This collection can contain a maximum of 2147483647 elements. */
     private java.util.List<ManagedDeviceCertificateState> _managedDeviceCertificateStates;
+    /** Certificate access information. This collection can contain a maximum of 50 elements. */
+    private java.util.List<AndroidDeviceOwnerSilentCertificateAccess> _silentCertificateAccessDetails;
     /** Custom String that defines the AAD Attribute. */
     private String _subjectAlternativeNameFormatString;
     /** Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US */
@@ -43,6 +47,14 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     public static AndroidDeviceOwnerPkcsCertificateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidDeviceOwnerPkcsCertificateProfile();
+    }
+    /**
+     * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
+     * @return a androidDeviceOwnerCertificateAccessType
+     */
+    @javax.annotation.Nullable
+    public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
+        return this._certificateAccessType;
     }
     /**
      * Gets the certificateStore property value. CertificateStore types
@@ -100,6 +112,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerPkcsCertificateProfile currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("certificateAccessType", (n) -> { currentObject.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
             this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
             this.put("certificateTemplateName", (n) -> { currentObject.setCertificateTemplateName(n.getStringValue()); });
             this.put("certificationAuthority", (n) -> { currentObject.setCertificationAuthority(n.getStringValue()); });
@@ -107,6 +120,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
             this.put("certificationAuthorityType", (n) -> { currentObject.setCertificationAuthorityType(n.getEnumValue(DeviceManagementCertificationAuthority.class)); });
             this.put("customSubjectAlternativeNames", (n) -> { currentObject.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
             this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
+            this.put("silentCertificateAccessDetails", (n) -> { currentObject.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
             this.put("subjectAlternativeNameFormatString", (n) -> { currentObject.setSubjectAlternativeNameFormatString(n.getStringValue()); });
             this.put("subjectNameFormatString", (n) -> { currentObject.setSubjectNameFormatString(n.getStringValue()); });
         }};
@@ -118,6 +132,14 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
         return this._managedDeviceCertificateStates;
+    }
+    /**
+     * Gets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
+     * @return a androidDeviceOwnerSilentCertificateAccess
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> getSilentCertificateAccessDetails() {
+        return this._silentCertificateAccessDetails;
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
@@ -143,6 +165,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("certificateAccessType", this.getCertificateAccessType());
         writer.writeEnumValue("certificateStore", this.getCertificateStore());
         writer.writeStringValue("certificateTemplateName", this.getCertificateTemplateName());
         writer.writeStringValue("certificationAuthority", this.getCertificationAuthority());
@@ -150,8 +173,17 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
         writer.writeEnumValue("certificationAuthorityType", this.getCertificationAuthorityType());
         writer.writeCollectionOfObjectValues("customSubjectAlternativeNames", this.getCustomSubjectAlternativeNames());
         writer.writeCollectionOfObjectValues("managedDeviceCertificateStates", this.getManagedDeviceCertificateStates());
+        writer.writeCollectionOfObjectValues("silentCertificateAccessDetails", this.getSilentCertificateAccessDetails());
         writer.writeStringValue("subjectAlternativeNameFormatString", this.getSubjectAlternativeNameFormatString());
         writer.writeStringValue("subjectNameFormatString", this.getSubjectNameFormatString());
+    }
+    /**
+     * Sets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
+     * @param value Value to set for the certificateAccessType property.
+     * @return a void
+     */
+    public void setCertificateAccessType(@javax.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
+        this._certificateAccessType = value;
     }
     /**
      * Sets the certificateStore property value. CertificateStore types
@@ -208,6 +240,14 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
         this._managedDeviceCertificateStates = value;
+    }
+    /**
+     * Sets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
+     * @param value Value to set for the silentCertificateAccessDetails property.
+     * @return a void
+     */
+    public void setSilentCertificateAccessDetails(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerSilentCertificateAccess> value) {
+        this._silentCertificateAccessDetails = value;
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.

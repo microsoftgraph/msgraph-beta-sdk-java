@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RemoveContentHeaderAction extends InformationProtectionAction implements Parsable {
-    /** The uiElementNames property */
+    /** The name of the UI element of the header to be removed. */
     private java.util.List<String> _uiElementNames;
     /**
      * Instantiates a new RemoveContentHeaderAction and sets the default values.
@@ -40,7 +40,7 @@ public class RemoveContentHeaderAction extends InformationProtectionAction imple
         }};
     }
     /**
-     * Gets the uiElementNames property value. The uiElementNames property
+     * Gets the uiElementNames property value. The name of the UI element of the header to be removed.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class RemoveContentHeaderAction extends InformationProtectionAction imple
         writer.writeCollectionOfPrimitiveValues("uiElementNames", this.getUiElementNames());
     }
     /**
-     * Sets the uiElementNames property value. The uiElementNames property
+     * Sets the uiElementNames property value. The name of the UI element of the header to be removed.
      * @param value Value to set for the uiElementNames property.
      * @return a void
      */

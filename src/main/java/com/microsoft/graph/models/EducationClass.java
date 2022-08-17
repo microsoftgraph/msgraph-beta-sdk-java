@@ -36,7 +36,7 @@ public class EducationClass extends Entity implements Parsable {
     private String _externalSourceDetail;
     /** Grade level of the class. */
     private String _grade;
-    /** The underlying Microsoft 365 group object. */
+    /** The group property */
     private Group _group;
     /** Mail name for sending email to all members, if this is enabled. */
     private String _mailNickname;
@@ -209,7 +209,7 @@ public class EducationClass extends Entity implements Parsable {
         return this._grade;
     }
     /**
-     * Gets the group property value. The underlying Microsoft 365 group object.
+     * Gets the group property value. The group property
      * @return a group
      */
     @javax.annotation.Nullable
@@ -398,7 +398,7 @@ public class EducationClass extends Entity implements Parsable {
         this._grade = value;
     }
     /**
-     * Sets the group property value. The underlying Microsoft 365 group object.
+     * Sets the group property value. The group property
      * @param value Value to set for the group property.
      * @return a void
      */

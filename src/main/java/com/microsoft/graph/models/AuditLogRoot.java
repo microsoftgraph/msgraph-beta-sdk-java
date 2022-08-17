@@ -1,5 +1,6 @@
 package microsoft.graph.models;
 
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,11 +8,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class AuditLogRoot extends Entity implements Parsable {
+public class AuditLogRoot implements AdditionalDataHolder, Parsable {
+    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    private Map<String, Object> _additionalData;
     /** The directoryAudits property */
     private java.util.List<DirectoryAudit> _directoryAudits;
     /** The directoryProvisioning property */
     private java.util.List<ProvisioningObjectSummary> _directoryProvisioning;
+    /** The OdataType property */
+    private String _odataType;
     /** The provisioning property */
     private java.util.List<ProvisioningObjectSummary> _provisioning;
     /** The restrictedSignIns property */
@@ -23,7 +28,7 @@ public class AuditLogRoot extends Entity implements Parsable {
      * @return a void
      */
     public AuditLogRoot() {
-        super();
+        this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.auditLogRoot");
     }
     /**
@@ -35,6 +40,14 @@ public class AuditLogRoot extends Entity implements Parsable {
     public static AuditLogRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuditLogRoot();
+    }
+    /**
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a Map<String, Object>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        return this._additionalData;
     }
     /**
      * Gets the directoryAudits property value. The directoryAudits property
@@ -59,13 +72,22 @@ public class AuditLogRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditLogRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<>(6) {{
             this.put("directoryAudits", (n) -> { currentObject.setDirectoryAudits(n.getCollectionOfObjectValues(DirectoryAudit::createFromDiscriminatorValue)); });
             this.put("directoryProvisioning", (n) -> { currentObject.setDirectoryProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provisioning", (n) -> { currentObject.setProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
             this.put("restrictedSignIns", (n) -> { currentObject.setRestrictedSignIns(n.getCollectionOfObjectValues(RestrictedSignIn::createFromDiscriminatorValue)); });
             this.put("signIns", (n) -> { currentObject.setSignIns(n.getCollectionOfObjectValues(SignIn::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the provisioning property value. The provisioning property
@@ -98,12 +120,21 @@ public class AuditLogRoot extends Entity implements Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        super.serialize(writer);
         writer.writeCollectionOfObjectValues("directoryAudits", this.getDirectoryAudits());
         writer.writeCollectionOfObjectValues("directoryProvisioning", this.getDirectoryProvisioning());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("provisioning", this.getProvisioning());
         writer.writeCollectionOfObjectValues("restrictedSignIns", this.getRestrictedSignIns());
         writer.writeCollectionOfObjectValues("signIns", this.getSignIns());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     * @return a void
+     */
+    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+        this._additionalData = value;
     }
     /**
      * Sets the directoryAudits property value. The directoryAudits property
@@ -120,6 +151,14 @@ public class AuditLogRoot extends Entity implements Parsable {
      */
     public void setDirectoryProvisioning(@javax.annotation.Nullable final java.util.List<ProvisioningObjectSummary> value) {
         this._directoryProvisioning = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the provisioning property value. The provisioning property

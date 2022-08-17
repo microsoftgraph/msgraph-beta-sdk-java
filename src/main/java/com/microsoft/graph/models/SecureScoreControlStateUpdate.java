@@ -12,17 +12,17 @@ import java.util.Objects;
 public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Assigns the control to the user who will take the action. */
+    /** The assignedTo property */
     private String _assignedTo;
-    /** Provides optional comment about the control. */
+    /** The comment property */
     private String _comment;
     /** The OdataType property */
     private String _odataType;
-    /** State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty). */
+    /** The state property */
     private String _state;
-    /** ID of the user who updated tenant state. */
+    /** The updatedBy property */
     private String _updatedBy;
-    /** Time at which the control state was updated. */
+    /** The updatedDateTime property */
     private OffsetDateTime _updatedDateTime;
     /**
      * Instantiates a new secureScoreControlStateUpdate and sets the default values.
@@ -51,7 +51,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         return this._additionalData;
     }
     /**
-     * Gets the assignedTo property value. Assigns the control to the user who will take the action.
+     * Gets the assignedTo property value. The assignedTo property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         return this._assignedTo;
     }
     /**
-     * Gets the comment property value. Provides optional comment about the control.
+     * Gets the comment property value. The comment property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -91,7 +91,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         return this._odataType;
     }
     /**
-     * Gets the state property value. State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
+     * Gets the state property value. The state property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         return this._state;
     }
     /**
-     * Gets the updatedBy property value. ID of the user who updated tenant state.
+     * Gets the updatedBy property value. The updatedBy property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         return this._updatedBy;
     }
     /**
-     * Gets the updatedDateTime property value. Time at which the control state was updated.
+     * Gets the updatedDateTime property value. The updatedDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         this._additionalData = value;
     }
     /**
-     * Sets the assignedTo property value. Assigns the control to the user who will take the action.
+     * Sets the assignedTo property value. The assignedTo property
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
@@ -146,7 +146,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         this._assignedTo = value;
     }
     /**
-     * Sets the comment property value. Provides optional comment about the control.
+     * Sets the comment property value. The comment property
      * @param value Value to set for the comment property.
      * @return a void
      */
@@ -162,7 +162,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         this._odataType = value;
     }
     /**
-     * Sets the state property value. State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */
@@ -170,7 +170,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         this._state = value;
     }
     /**
-     * Sets the updatedBy property value. ID of the user who updated tenant state.
+     * Sets the updatedBy property value. The updatedBy property
      * @param value Value to set for the updatedBy property.
      * @return a void
      */
@@ -178,7 +178,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         this._updatedBy = value;
     }
     /**
-     * Sets the updatedDateTime property value. Time at which the control state was updated.
+     * Sets the updatedDateTime property value. The updatedDateTime property
      * @param value Value to set for the updatedDateTime property.
      * @return a void
      */

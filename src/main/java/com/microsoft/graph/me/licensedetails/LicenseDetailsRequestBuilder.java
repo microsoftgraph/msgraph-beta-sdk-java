@@ -59,7 +59,7 @@ public class LicenseDetailsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * Get licenseDetails from me
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class LicenseDetailsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * Get licenseDetails from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class LicenseDetailsRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * Get licenseDetails from me
      * @return a CompletableFuture of LicenseDetailsCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<LicenseDetailsCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class LicenseDetailsRequestBuilder {
         }
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * Get licenseDetails from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of LicenseDetailsCollectionResponse
      */
@@ -155,7 +155,7 @@ public class LicenseDetailsRequestBuilder {
         }
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * Get licenseDetails from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of LicenseDetailsCollectionResponse
@@ -227,7 +227,7 @@ public class LicenseDetailsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** A collection of this user's license details. Read-only. */
+    /** Get licenseDetails from me */
     public class LicenseDetailsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

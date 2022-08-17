@@ -20,6 +20,8 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     private byte[] _officeConfigurationXml;
     /** Contains properties for Windows architecture. */
     private WindowsArchitecture _officePlatformArchitecture;
+    /** Describes the OfficeSuiteApp file format types that can be selected. */
+    private OfficeSuiteDefaultFileFormatType _officeSuiteAppDefaultFileFormat;
     /** The Product Ids that represent the Office365 Suite SKU. */
     private java.util.List<String> _productIds;
     /** The property to determine whether to uninstall existing Office MSI if an Office365 app suite is deployed to the device or not. */
@@ -80,6 +82,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
             this.put("localesToInstall", (n) -> { currentObject.setLocalesToInstall(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("officeConfigurationXml", (n) -> { currentObject.setOfficeConfigurationXml(n.getByteArrayValue()); });
             this.put("officePlatformArchitecture", (n) -> { currentObject.setOfficePlatformArchitecture(n.getEnumValue(WindowsArchitecture.class)); });
+            this.put("officeSuiteAppDefaultFileFormat", (n) -> { currentObject.setOfficeSuiteAppDefaultFileFormat(n.getEnumValue(OfficeSuiteDefaultFileFormatType.class)); });
             this.put("productIds", (n) -> { currentObject.setProductIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("shouldUninstallOlderVersionsOfOffice", (n) -> { currentObject.setShouldUninstallOlderVersionsOfOffice(n.getBooleanValue()); });
             this.put("targetVersion", (n) -> { currentObject.setTargetVersion(n.getStringValue()); });
@@ -119,6 +122,14 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     @javax.annotation.Nullable
     public WindowsArchitecture getOfficePlatformArchitecture() {
         return this._officePlatformArchitecture;
+    }
+    /**
+     * Gets the officeSuiteAppDefaultFileFormat property value. Describes the OfficeSuiteApp file format types that can be selected.
+     * @return a officeSuiteDefaultFileFormatType
+     */
+    @javax.annotation.Nullable
+    public OfficeSuiteDefaultFileFormatType getOfficeSuiteAppDefaultFileFormat() {
+        return this._officeSuiteAppDefaultFileFormat;
     }
     /**
      * Gets the productIds property value. The Product Ids that represent the Office365 Suite SKU.
@@ -182,6 +193,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         writer.writeCollectionOfPrimitiveValues("localesToInstall", this.getLocalesToInstall());
         writer.writeByteArrayValue("officeConfigurationXml", this.getOfficeConfigurationXml());
         writer.writeEnumValue("officePlatformArchitecture", this.getOfficePlatformArchitecture());
+        writer.writeEnumValue("officeSuiteAppDefaultFileFormat", this.getOfficeSuiteAppDefaultFileFormat());
         writer.writeCollectionOfPrimitiveValues("productIds", this.getProductIds());
         writer.writeBooleanValue("shouldUninstallOlderVersionsOfOffice", this.getShouldUninstallOlderVersionsOfOffice());
         writer.writeStringValue("targetVersion", this.getTargetVersion());
@@ -236,6 +248,14 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
      */
     public void setOfficePlatformArchitecture(@javax.annotation.Nullable final WindowsArchitecture value) {
         this._officePlatformArchitecture = value;
+    }
+    /**
+     * Sets the officeSuiteAppDefaultFileFormat property value. Describes the OfficeSuiteApp file format types that can be selected.
+     * @param value Value to set for the officeSuiteAppDefaultFileFormat property.
+     * @return a void
+     */
+    public void setOfficeSuiteAppDefaultFileFormat(@javax.annotation.Nullable final OfficeSuiteDefaultFileFormatType value) {
+        this._officeSuiteAppDefaultFileFormat = value;
     }
     /**
      * Sets the productIds property value. The Product Ids that represent the Office365 Suite SKU.

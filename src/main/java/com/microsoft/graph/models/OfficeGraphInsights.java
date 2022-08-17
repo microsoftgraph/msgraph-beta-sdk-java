@@ -15,7 +15,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     /** Access this property from the derived type itemInsights. */
     private java.util.List<UsedInsight> _used;
     /**
-     * Instantiates a new officeGraphInsights and sets the default values.
+     * Instantiates a new OfficeGraphInsights and sets the default values.
      * @return a void
      */
     public OfficeGraphInsights() {
@@ -25,7 +25,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a officeGraphInsights
+     * @return a OfficeGraphInsights
      */
     @javax.annotation.Nonnull
     public static OfficeGraphInsights createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

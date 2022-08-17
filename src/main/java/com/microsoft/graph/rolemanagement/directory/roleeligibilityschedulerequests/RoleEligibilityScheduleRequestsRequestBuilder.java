@@ -60,7 +60,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * Get roleEligibilityScheduleRequests from roleManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * Get roleEligibilityScheduleRequests from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * Get roleEligibilityScheduleRequests from roleManagement
      * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequestCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleRequestCollectionResponse> get() {
@@ -149,7 +149,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder {
         }
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * Get roleEligibilityScheduleRequests from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequestCollectionResponse
      */
@@ -166,7 +166,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder {
         }
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * Get roleEligibilityScheduleRequests from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequestCollectionResponse
@@ -238,7 +238,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Requests for role eligibilities for principals through PIM. */
+    /** Get roleEligibilityScheduleRequests from roleManagement */
     public class RoleEligibilityScheduleRequestsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

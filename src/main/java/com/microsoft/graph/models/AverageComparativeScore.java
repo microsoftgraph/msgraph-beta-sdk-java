@@ -11,9 +11,9 @@ import java.util.Objects;
 public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Average score within specified basis. */
+    /** The averageScore property */
     private Double _averageScore;
-    /** Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes. */
+    /** The basis property */
     private String _basis;
     /** The OdataType property */
     private String _odataType;
@@ -44,7 +44,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the averageScore property value. Average score within specified basis.
+     * Gets the averageScore property value. The averageScore property
      * @return a double
      */
     @javax.annotation.Nullable
@@ -52,7 +52,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
         return this._averageScore;
     }
     /**
-     * Gets the basis property value. Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
+     * Gets the basis property value. The basis property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the averageScore property value. Average score within specified basis.
+     * Sets the averageScore property value. The averageScore property
      * @param value Value to set for the averageScore property.
      * @return a void
      */
@@ -109,7 +109,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
         this._averageScore = value;
     }
     /**
-     * Sets the basis property value. Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
+     * Sets the basis property value. The basis property
      * @param value Value to set for the basis property.
      * @return a void
      */

@@ -86,7 +86,7 @@ public class SensitivityLabelItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get sensitivityLabels from me
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class SensitivityLabelItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get sensitivityLabels from me
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class SensitivityLabelItemRequestBuilder {
         }
     }
     /**
-     * Get sensitivityLabels from me
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @return a CompletableFuture of sensitivityLabel
      */
     public java.util.concurrent.CompletableFuture<SensitivityLabel> get() {
@@ -215,7 +215,7 @@ public class SensitivityLabelItemRequestBuilder {
         }
     }
     /**
-     * Get sensitivityLabels from me
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sensitivityLabel
      */
@@ -232,7 +232,7 @@ public class SensitivityLabelItemRequestBuilder {
         }
     }
     /**
-     * Get sensitivityLabels from me
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of sensitivityLabel
@@ -319,7 +319,7 @@ public class SensitivityLabelItemRequestBuilder {
         public SensitivityLabelItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get sensitivityLabels from me */
+    /** Read the Microsoft Purview Information Protection labels for the user or organization. */
     public class SensitivityLabelItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

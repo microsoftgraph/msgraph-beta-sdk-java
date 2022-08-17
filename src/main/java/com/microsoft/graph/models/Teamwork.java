@@ -14,6 +14,8 @@ public class Teamwork extends Entity implements Parsable {
     private java.util.List<TeamworkDevice> _devices;
     /** Represents tenant-wide settings for all Teams apps in the tenant. */
     private TeamsAppSettings _teamsAppSettings;
+    /** The templates associated with a team. */
+    private java.util.List<TeamTemplate> _teamTemplates;
     /** A workforce integration with shifts. */
     private java.util.List<WorkforceIntegration> _workforceIntegrations;
     /**
@@ -61,6 +63,7 @@ public class Teamwork extends Entity implements Parsable {
             this.put("deletedTeams", (n) -> { currentObject.setDeletedTeams(n.getCollectionOfObjectValues(DeletedTeam::createFromDiscriminatorValue)); });
             this.put("devices", (n) -> { currentObject.setDevices(n.getCollectionOfObjectValues(TeamworkDevice::createFromDiscriminatorValue)); });
             this.put("teamsAppSettings", (n) -> { currentObject.setTeamsAppSettings(n.getObjectValue(TeamsAppSettings::createFromDiscriminatorValue)); });
+            this.put("teamTemplates", (n) -> { currentObject.setTeamTemplates(n.getCollectionOfObjectValues(TeamTemplate::createFromDiscriminatorValue)); });
             this.put("workforceIntegrations", (n) -> { currentObject.setWorkforceIntegrations(n.getCollectionOfObjectValues(WorkforceIntegration::createFromDiscriminatorValue)); });
         }};
     }
@@ -71,6 +74,14 @@ public class Teamwork extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamsAppSettings getTeamsAppSettings() {
         return this._teamsAppSettings;
+    }
+    /**
+     * Gets the teamTemplates property value. The templates associated with a team.
+     * @return a teamTemplate
+     */
+    @javax.annotation.Nullable
+    public java.util.List<TeamTemplate> getTeamTemplates() {
+        return this._teamTemplates;
     }
     /**
      * Gets the workforceIntegrations property value. A workforce integration with shifts.
@@ -91,6 +102,7 @@ public class Teamwork extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deletedTeams", this.getDeletedTeams());
         writer.writeCollectionOfObjectValues("devices", this.getDevices());
         writer.writeObjectValue("teamsAppSettings", this.getTeamsAppSettings());
+        writer.writeCollectionOfObjectValues("teamTemplates", this.getTeamTemplates());
         writer.writeCollectionOfObjectValues("workforceIntegrations", this.getWorkforceIntegrations());
     }
     /**
@@ -116,6 +128,14 @@ public class Teamwork extends Entity implements Parsable {
      */
     public void setTeamsAppSettings(@javax.annotation.Nullable final TeamsAppSettings value) {
         this._teamsAppSettings = value;
+    }
+    /**
+     * Sets the teamTemplates property value. The templates associated with a team.
+     * @param value Value to set for the teamTemplates property.
+     * @return a void
+     */
+    public void setTeamTemplates(@javax.annotation.Nullable final java.util.List<TeamTemplate> value) {
+        this._teamTemplates = value;
     }
     /**
      * Sets the workforceIntegrations property value. A workforce integration with shifts.

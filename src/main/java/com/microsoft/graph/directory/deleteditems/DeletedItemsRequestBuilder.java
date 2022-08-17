@@ -95,7 +95,7 @@ public class DeletedItemsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Get deletedItems from directory
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -103,7 +103,7 @@ public class DeletedItemsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Get deletedItems from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class DeletedItemsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Get deletedItems from directory
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -174,7 +174,7 @@ public class DeletedItemsRequestBuilder {
         }
     }
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Get deletedItems from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
@@ -191,7 +191,7 @@ public class DeletedItemsRequestBuilder {
         }
     }
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Get deletedItems from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
@@ -263,7 +263,7 @@ public class DeletedItemsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Recently deleted items. Read-only. Nullable. */
+    /** Get deletedItems from directory */
     public class DeletedItemsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

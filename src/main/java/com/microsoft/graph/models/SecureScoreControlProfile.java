@@ -25,7 +25,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     private Boolean _deprecated;
     /** Resource cost of implemmentating control (low, moderate, high). */
     private String _implementationCost;
-    /** Time at which the control profile entity was last modified. The Timestamp type represents date and time */
+    /** The lastModifiedDateTime property */
     private OffsetDateTime _lastModifiedDateTime;
     /** Current obtained max score on specified date. */
     private Double _maxScore;
@@ -159,7 +159,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this._implementationCost;
     }
     /**
-     * Gets the lastModifiedDateTime property value. Time at which the control profile entity was last modified. The Timestamp type represents date and time
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -339,7 +339,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this._implementationCost = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. Time at which the control profile entity was last modified. The Timestamp type represents date and time
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */

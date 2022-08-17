@@ -60,7 +60,7 @@ public class ActivitiesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * Get activities from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ActivitiesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * Get activities from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class ActivitiesRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * Get activities from users
      * @return a CompletableFuture of UserActivityCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UserActivityCollectionResponse> get() {
@@ -139,7 +139,7 @@ public class ActivitiesRequestBuilder {
         }
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * Get activities from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserActivityCollectionResponse
      */
@@ -156,7 +156,7 @@ public class ActivitiesRequestBuilder {
         }
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * Get activities from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UserActivityCollectionResponse
@@ -236,7 +236,7 @@ public class ActivitiesRequestBuilder {
     public RecentRequestBuilder recent() {
         return new RecentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The user's activities across devices. Read-only. Nullable. */
+    /** Get activities from users */
     public class ActivitiesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

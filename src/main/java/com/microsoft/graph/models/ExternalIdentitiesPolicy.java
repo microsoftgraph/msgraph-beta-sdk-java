@@ -10,7 +10,7 @@ import java.util.Objects;
 public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
     /** Notifies Azure AD whether to clean up the user information about the external identity, from the guest tenant, when the user is deleted in their home tenant. */
     private Boolean _allowDeletedIdentitiesDataRemoval;
-    /** Defines whether external users can leave the guest tenant. If set to false, self-service controls are not enabled, and the admin of the guest tenant must manually remove the external user from the guest tenant. */
+    /** Defines whether external users can leave the guest tenant. If set to false, self-service controls are disabled, and the admin of the guest tenant must manually remove the external user from the guest tenant. When the external user leaves the tenant, their data in the guest tenant is first soft-deleted then permanently deleted in 30 days. */
     private Boolean _allowExternalIdentitiesToLeave;
     /**
      * Instantiates a new ExternalIdentitiesPolicy and sets the default values.
@@ -39,7 +39,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
         return this._allowDeletedIdentitiesDataRemoval;
     }
     /**
-     * Gets the allowExternalIdentitiesToLeave property value. Defines whether external users can leave the guest tenant. If set to false, self-service controls are not enabled, and the admin of the guest tenant must manually remove the external user from the guest tenant.
+     * Gets the allowExternalIdentitiesToLeave property value. Defines whether external users can leave the guest tenant. If set to false, self-service controls are disabled, and the admin of the guest tenant must manually remove the external user from the guest tenant. When the external user leaves the tenant, their data in the guest tenant is first soft-deleted then permanently deleted in 30 days.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
         this._allowDeletedIdentitiesDataRemoval = value;
     }
     /**
-     * Sets the allowExternalIdentitiesToLeave property value. Defines whether external users can leave the guest tenant. If set to false, self-service controls are not enabled, and the admin of the guest tenant must manually remove the external user from the guest tenant.
+     * Sets the allowExternalIdentitiesToLeave property value. Defines whether external users can leave the guest tenant. If set to false, self-service controls are disabled, and the admin of the guest tenant must manually remove the external user from the guest tenant. When the external user leaves the tenant, their data in the guest tenant is first soft-deleted then permanently deleted in 30 days.
      * @param value Value to set for the allowExternalIdentitiesToLeave property.
      * @return a void
      */

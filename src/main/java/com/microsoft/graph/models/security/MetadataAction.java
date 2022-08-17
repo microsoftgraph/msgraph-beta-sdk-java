@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MetadataAction extends InformationProtectionAction implements Parsable {
-    /** The metadataToAdd property */
+    /** A collection of key-value pairs that should be added to the file. */
     private java.util.List<KeyValuePair> _metadataToAdd;
-    /** The metadataToRemove property */
+    /** A collection of strings that indicate which keys to remove from the file metadata. */
     private java.util.List<String> _metadataToRemove;
     /**
      * Instantiates a new MetadataAction and sets the default values.
@@ -43,7 +43,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
         }};
     }
     /**
-     * Gets the metadataToAdd property value. The metadataToAdd property
+     * Gets the metadataToAdd property value. A collection of key-value pairs that should be added to the file.
      * @return a keyValuePair
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
         return this._metadataToAdd;
     }
     /**
-     * Gets the metadataToRemove property value. The metadataToRemove property
+     * Gets the metadataToRemove property value. A collection of strings that indicate which keys to remove from the file metadata.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
         writer.writeCollectionOfPrimitiveValues("metadataToRemove", this.getMetadataToRemove());
     }
     /**
-     * Sets the metadataToAdd property value. The metadataToAdd property
+     * Sets the metadataToAdd property value. A collection of key-value pairs that should be added to the file.
      * @param value Value to set for the metadataToAdd property.
      * @return a void
      */
@@ -78,7 +78,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
         this._metadataToAdd = value;
     }
     /**
-     * Sets the metadataToRemove property value. The metadataToRemove property
+     * Sets the metadataToRemove property value. A collection of strings that indicate which keys to remove from the file metadata.
      * @param value Value to set for the metadataToRemove property.
      * @return a void
      */

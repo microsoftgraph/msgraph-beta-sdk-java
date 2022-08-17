@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyPresentation implements Parsable {
+public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPresentation implements Parsable {
     /** An unsigned integer that specifies the initial value for the decimal text box. The default value is 1. */
     private Long _defaultValue;
     /** An unsigned integer that specifies the maximum allowed value. The default value is 9999. */

@@ -7,11 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class UserRegistrationDetails extends Entity implements Parsable {
     /** The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue. */
     private DefaultMfaMethodType _defaultMfaMethod;
-    /** The isAdmin property */
+    /** Whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of. */
     private Boolean _isAdmin;
     /** Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq). */
     private Boolean _isMfaCapable;
@@ -31,7 +31,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     private String _userDisplayName;
     /** The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy. */
     private String _userPrincipalName;
-    /** The userType property */
+    /** Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue. */
     private SignInUserType _userType;
     /**
      * Instantiates a new userRegistrationDetails and sets the default values.
@@ -82,7 +82,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the isAdmin property value. The isAdmin property
+     * Gets the isAdmin property value. Whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -162,7 +162,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         return this._userPrincipalName;
     }
     /**
-     * Gets the userType property value. The userType property
+     * Gets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
      * @return a signInUserType
      */
     @javax.annotation.Nullable
@@ -199,7 +199,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         this._defaultMfaMethod = value;
     }
     /**
-     * Sets the isAdmin property value. The isAdmin property
+     * Sets the isAdmin property value. Whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
      * @param value Value to set for the isAdmin property.
      * @return a void
      */
@@ -279,7 +279,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         this._userPrincipalName = value;
     }
     /**
-     * Sets the userType property value. The userType property
+     * Sets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
      * @param value Value to set for the userType property.
      * @return a void
      */

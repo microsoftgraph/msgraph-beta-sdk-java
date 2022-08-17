@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwnerCertificateProfileBase implements Parsable {
+    /** Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue. */
+    private AndroidDeviceOwnerCertificateAccessType _certificateAccessType;
     /** Target store certificate. Possible values are: user, machine. */
     private CertificateStore _certificateStore;
     /** Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements. */
@@ -22,6 +24,8 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     private java.util.List<ManagedDeviceCertificateState> _managedDeviceCertificateStates;
     /** SCEP Server Url(s) */
     private java.util.List<String> _scepServerUrls;
+    /** Certificate access information. This collection can contain a maximum of 50 elements. */
+    private java.util.List<AndroidDeviceOwnerSilentCertificateAccess> _silentCertificateAccessDetails;
     /** Custom String that defines the AAD Attribute. */
     private String _subjectAlternativeNameFormatString;
     /** Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US */
@@ -43,6 +47,14 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     public static AndroidDeviceOwnerScepCertificateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidDeviceOwnerScepCertificateProfile();
+    }
+    /**
+     * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
+     * @return a androidDeviceOwnerCertificateAccessType
+     */
+    @javax.annotation.Nullable
+    public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
+        return this._certificateAccessType;
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
@@ -68,6 +80,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerScepCertificateProfile currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("certificateAccessType", (n) -> { currentObject.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
             this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
             this.put("customSubjectAlternativeNames", (n) -> { currentObject.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
             this.put("hashAlgorithm", (n) -> { currentObject.setHashAlgorithm(n.getEnumValue(HashAlgorithms.class)); });
@@ -75,6 +88,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
             this.put("keyUsage", (n) -> { currentObject.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
             this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
             this.put("scepServerUrls", (n) -> { currentObject.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("silentCertificateAccessDetails", (n) -> { currentObject.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
             this.put("subjectAlternativeNameFormatString", (n) -> { currentObject.setSubjectAlternativeNameFormatString(n.getStringValue()); });
             this.put("subjectNameFormatString", (n) -> { currentObject.setSubjectNameFormatString(n.getStringValue()); });
         }};
@@ -120,6 +134,14 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
         return this._scepServerUrls;
     }
     /**
+     * Gets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
+     * @return a androidDeviceOwnerSilentCertificateAccess
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> getSilentCertificateAccessDetails() {
+        return this._silentCertificateAccessDetails;
+    }
+    /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @return a string
      */
@@ -143,6 +165,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("certificateAccessType", this.getCertificateAccessType());
         writer.writeEnumValue("certificateStore", this.getCertificateStore());
         writer.writeCollectionOfObjectValues("customSubjectAlternativeNames", this.getCustomSubjectAlternativeNames());
         writer.writeEnumValue("hashAlgorithm", this.getHashAlgorithm());
@@ -150,8 +173,17 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
         writer.writeEnumValue("keyUsage", this.getKeyUsage());
         writer.writeCollectionOfObjectValues("managedDeviceCertificateStates", this.getManagedDeviceCertificateStates());
         writer.writeCollectionOfPrimitiveValues("scepServerUrls", this.getScepServerUrls());
+        writer.writeCollectionOfObjectValues("silentCertificateAccessDetails", this.getSilentCertificateAccessDetails());
         writer.writeStringValue("subjectAlternativeNameFormatString", this.getSubjectAlternativeNameFormatString());
         writer.writeStringValue("subjectNameFormatString", this.getSubjectNameFormatString());
+    }
+    /**
+     * Sets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
+     * @param value Value to set for the certificateAccessType property.
+     * @return a void
+     */
+    public void setCertificateAccessType(@javax.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
+        this._certificateAccessType = value;
     }
     /**
      * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
@@ -208,6 +240,14 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
      */
     public void setScepServerUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._scepServerUrls = value;
+    }
+    /**
+     * Sets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
+     * @param value Value to set for the silentCertificateAccessDetails property.
+     * @return a void
+     */
+    public void setSilentCertificateAccessDetails(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerSilentCertificateAccess> value) {
+        this._silentCertificateAccessDetails = value;
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.

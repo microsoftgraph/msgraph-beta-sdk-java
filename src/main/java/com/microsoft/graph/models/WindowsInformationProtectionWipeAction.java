@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents wipe requests issued by tenant admin for Bring-Your-Own-Device(BYOD) Windows devices. */
 public class WindowsInformationProtectionWipeAction extends Entity implements Parsable {
     /** Last checkin time of the device that was targeted by this wipe action. */
     private OffsetDateTime _lastCheckInDateTime;
@@ -22,7 +23,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     /** The UserId being targeted by this wipe action. */
     private String _targetedUserId;
     /**
-     * Instantiates a new WindowsInformationProtectionWipeAction and sets the default values.
+     * Instantiates a new windowsInformationProtectionWipeAction and sets the default values.
      * @return a void
      */
     public WindowsInformationProtectionWipeAction() {
@@ -32,7 +33,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtectionWipeAction
+     * @return a windowsInformationProtectionWipeAction
      */
     @javax.annotation.Nonnull
     public static WindowsInformationProtectionWipeAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

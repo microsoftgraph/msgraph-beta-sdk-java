@@ -12,11 +12,11 @@ import java.util.Objects;
 public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The additionalDetails property */
+    /** Additional message for this health check. */
     private String _additionalDetails;
-    /** The displayName property */
+    /** The connectivity health check item name. */
     private String _displayName;
-    /** The lastHealthCheckDateTime property */
+    /** Timestamp when the last check occurs. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z. */
     private OffsetDateTime _lastHealthCheckDateTime;
     /** The OdataType property */
     private String _odataType;
@@ -49,7 +49,7 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the additionalDetails property value. The additionalDetails property
+     * Gets the additionalDetails property value. Additional message for this health check.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
         return this._additionalDetails;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The connectivity health check item name.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -80,7 +80,7 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the lastHealthCheckDateTime property value. The lastHealthCheckDateTime property
+     * Gets the lastHealthCheckDateTime property value. Timestamp when the last check occurs. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the additionalDetails property value. The additionalDetails property
+     * Sets the additionalDetails property value. Additional message for this health check.
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
@@ -134,7 +134,7 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
         this._additionalDetails = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The connectivity health check item name.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -142,7 +142,7 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the lastHealthCheckDateTime property value. The lastHealthCheckDateTime property
+     * Sets the lastHealthCheckDateTime property value. Timestamp when the last check occurs. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastHealthCheckDateTime property.
      * @return a void
      */

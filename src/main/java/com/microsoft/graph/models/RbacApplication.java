@@ -12,21 +12,21 @@ public class RbacApplication extends Entity implements Parsable {
     private java.util.List<UnifiedRbacResourceNamespace> _resourceNamespaces;
     /** The roleAssignmentApprovals property */
     private java.util.List<Approval> _roleAssignmentApprovals;
-    /** Resource to grant access to users or groups. */
+    /** The roleAssignments property */
     private java.util.List<UnifiedRoleAssignment> _roleAssignments;
-    /** Instances for active role assignments. */
+    /** The roleAssignmentScheduleInstances property */
     private java.util.List<UnifiedRoleAssignmentScheduleInstance> _roleAssignmentScheduleInstances;
-    /** Requests for active role assignments to principals through PIM. */
+    /** The roleAssignmentScheduleRequests property */
     private java.util.List<UnifiedRoleAssignmentScheduleRequest> _roleAssignmentScheduleRequests;
-    /** Schedules for active role assignment operations. */
+    /** The roleAssignmentSchedules property */
     private java.util.List<UnifiedRoleAssignmentSchedule> _roleAssignmentSchedules;
-    /** Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles. */
+    /** The roleDefinitions property */
     private java.util.List<UnifiedRoleDefinition> _roleDefinitions;
-    /** Instances for role eligibility requests. */
+    /** The roleEligibilityScheduleInstances property */
     private java.util.List<UnifiedRoleEligibilityScheduleInstance> _roleEligibilityScheduleInstances;
-    /** Requests for role eligibilities for principals through PIM. */
+    /** The roleEligibilityScheduleRequests property */
     private java.util.List<UnifiedRoleEligibilityScheduleRequest> _roleEligibilityScheduleRequests;
-    /** Schedules for role eligibility operations. */
+    /** The roleEligibilitySchedules property */
     private java.util.List<UnifiedRoleEligibilitySchedule> _roleEligibilitySchedules;
     /** The transitiveRoleAssignments property */
     private java.util.List<UnifiedRoleAssignment> _transitiveRoleAssignments;
@@ -86,7 +86,7 @@ public class RbacApplication extends Entity implements Parsable {
         return this._roleAssignmentApprovals;
     }
     /**
-     * Gets the roleAssignments property value. Resource to grant access to users or groups.
+     * Gets the roleAssignments property value. The roleAssignments property
      * @return a unifiedRoleAssignment
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class RbacApplication extends Entity implements Parsable {
         return this._roleAssignments;
     }
     /**
-     * Gets the roleAssignmentScheduleInstances property value. Instances for active role assignments.
+     * Gets the roleAssignmentScheduleInstances property value. The roleAssignmentScheduleInstances property
      * @return a unifiedRoleAssignmentScheduleInstance
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class RbacApplication extends Entity implements Parsable {
         return this._roleAssignmentScheduleInstances;
     }
     /**
-     * Gets the roleAssignmentScheduleRequests property value. Requests for active role assignments to principals through PIM.
+     * Gets the roleAssignmentScheduleRequests property value. The roleAssignmentScheduleRequests property
      * @return a unifiedRoleAssignmentScheduleRequest
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class RbacApplication extends Entity implements Parsable {
         return this._roleAssignmentScheduleRequests;
     }
     /**
-     * Gets the roleAssignmentSchedules property value. Schedules for active role assignment operations.
+     * Gets the roleAssignmentSchedules property value. The roleAssignmentSchedules property
      * @return a unifiedRoleAssignmentSchedule
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class RbacApplication extends Entity implements Parsable {
         return this._roleAssignmentSchedules;
     }
     /**
-     * Gets the roleDefinitions property value. Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+     * Gets the roleDefinitions property value. The roleDefinitions property
      * @return a unifiedRoleDefinition
      */
     @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class RbacApplication extends Entity implements Parsable {
         return this._roleDefinitions;
     }
     /**
-     * Gets the roleEligibilityScheduleInstances property value. Instances for role eligibility requests.
+     * Gets the roleEligibilityScheduleInstances property value. The roleEligibilityScheduleInstances property
      * @return a unifiedRoleEligibilityScheduleInstance
      */
     @javax.annotation.Nullable
@@ -134,7 +134,7 @@ public class RbacApplication extends Entity implements Parsable {
         return this._roleEligibilityScheduleInstances;
     }
     /**
-     * Gets the roleEligibilityScheduleRequests property value. Requests for role eligibilities for principals through PIM.
+     * Gets the roleEligibilityScheduleRequests property value. The roleEligibilityScheduleRequests property
      * @return a unifiedRoleEligibilityScheduleRequest
      */
     @javax.annotation.Nullable
@@ -142,7 +142,7 @@ public class RbacApplication extends Entity implements Parsable {
         return this._roleEligibilityScheduleRequests;
     }
     /**
-     * Gets the roleEligibilitySchedules property value. Schedules for role eligibility operations.
+     * Gets the roleEligibilitySchedules property value. The roleEligibilitySchedules property
      * @return a unifiedRoleEligibilitySchedule
      */
     @javax.annotation.Nullable
@@ -194,7 +194,7 @@ public class RbacApplication extends Entity implements Parsable {
         this._roleAssignmentApprovals = value;
     }
     /**
-     * Sets the roleAssignments property value. Resource to grant access to users or groups.
+     * Sets the roleAssignments property value. The roleAssignments property
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
@@ -202,7 +202,7 @@ public class RbacApplication extends Entity implements Parsable {
         this._roleAssignments = value;
     }
     /**
-     * Sets the roleAssignmentScheduleInstances property value. Instances for active role assignments.
+     * Sets the roleAssignmentScheduleInstances property value. The roleAssignmentScheduleInstances property
      * @param value Value to set for the roleAssignmentScheduleInstances property.
      * @return a void
      */
@@ -210,7 +210,7 @@ public class RbacApplication extends Entity implements Parsable {
         this._roleAssignmentScheduleInstances = value;
     }
     /**
-     * Sets the roleAssignmentScheduleRequests property value. Requests for active role assignments to principals through PIM.
+     * Sets the roleAssignmentScheduleRequests property value. The roleAssignmentScheduleRequests property
      * @param value Value to set for the roleAssignmentScheduleRequests property.
      * @return a void
      */
@@ -218,7 +218,7 @@ public class RbacApplication extends Entity implements Parsable {
         this._roleAssignmentScheduleRequests = value;
     }
     /**
-     * Sets the roleAssignmentSchedules property value. Schedules for active role assignment operations.
+     * Sets the roleAssignmentSchedules property value. The roleAssignmentSchedules property
      * @param value Value to set for the roleAssignmentSchedules property.
      * @return a void
      */
@@ -226,7 +226,7 @@ public class RbacApplication extends Entity implements Parsable {
         this._roleAssignmentSchedules = value;
     }
     /**
-     * Sets the roleDefinitions property value. Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+     * Sets the roleDefinitions property value. The roleDefinitions property
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
@@ -234,7 +234,7 @@ public class RbacApplication extends Entity implements Parsable {
         this._roleDefinitions = value;
     }
     /**
-     * Sets the roleEligibilityScheduleInstances property value. Instances for role eligibility requests.
+     * Sets the roleEligibilityScheduleInstances property value. The roleEligibilityScheduleInstances property
      * @param value Value to set for the roleEligibilityScheduleInstances property.
      * @return a void
      */
@@ -242,7 +242,7 @@ public class RbacApplication extends Entity implements Parsable {
         this._roleEligibilityScheduleInstances = value;
     }
     /**
-     * Sets the roleEligibilityScheduleRequests property value. Requests for role eligibilities for principals through PIM.
+     * Sets the roleEligibilityScheduleRequests property value. The roleEligibilityScheduleRequests property
      * @param value Value to set for the roleEligibilityScheduleRequests property.
      * @return a void
      */
@@ -250,7 +250,7 @@ public class RbacApplication extends Entity implements Parsable {
         this._roleEligibilityScheduleRequests = value;
     }
     /**
-     * Sets the roleEligibilitySchedules property value. Schedules for role eligibility operations.
+     * Sets the roleEligibilitySchedules property value. The roleEligibilitySchedules property
      * @param value Value to set for the roleEligibilitySchedules property.
      * @return a void
      */

@@ -171,6 +171,10 @@ import microsoft.graph.devicemanagement.notificationmessagetemplates.item.Notifi
 import microsoft.graph.devicemanagement.notificationmessagetemplates.NotificationMessageTemplatesRequestBuilder;
 import microsoft.graph.devicemanagement.oemwarrantyinformationonboarding.item.OemWarrantyInformationOnboardingItemRequestBuilder;
 import microsoft.graph.devicemanagement.oemwarrantyinformationonboarding.OemWarrantyInformationOnboardingRequestBuilder;
+import microsoft.graph.devicemanagement.organizationalmessagedetails.item.OrganizationalMessageDetailItemRequestBuilder;
+import microsoft.graph.devicemanagement.organizationalmessagedetails.OrganizationalMessageDetailsRequestBuilder;
+import microsoft.graph.devicemanagement.organizationalmessageguidedcontents.item.OrganizationalMessageGuidedContentItemRequestBuilder;
+import microsoft.graph.devicemanagement.organizationalmessageguidedcontents.OrganizationalMessageGuidedContentsRequestBuilder;
 import microsoft.graph.devicemanagement.remoteactionaudits.item.RemoteActionAuditItemRequestBuilder;
 import microsoft.graph.devicemanagement.remoteactionaudits.RemoteActionAuditsRequestBuilder;
 import microsoft.graph.devicemanagement.remoteassistancepartners.item.RemoteAssistancePartnerItemRequestBuilder;
@@ -736,6 +740,16 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public OemWarrantyInformationOnboardingRequestBuilder oemWarrantyInformationOnboarding() {
         return new OemWarrantyInformationOnboardingRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The organizationalMessageDetails property */
+    @javax.annotation.Nonnull
+    public OrganizationalMessageDetailsRequestBuilder organizationalMessageDetails() {
+        return new OrganizationalMessageDetailsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The organizationalMessageGuidedContents property */
+    @javax.annotation.Nonnull
+    public OrganizationalMessageGuidedContentsRequestBuilder organizationalMessageGuidedContents() {
+        return new OrganizationalMessageGuidedContentsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
@@ -2174,6 +2188,30 @@ public class DeviceManagementRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("oemWarrantyInformationOnboarding%2Did", id);
         return new OemWarrantyInformationOnboardingItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.deviceManagement.organizationalMessageDetails.item collection
+     * @param id Unique identifier of the item
+     * @return a OrganizationalMessageDetailItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OrganizationalMessageDetailItemRequestBuilder organizationalMessageDetails(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("organizationalMessageDetail%2Did", id);
+        return new OrganizationalMessageDetailItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.deviceManagement.organizationalMessageGuidedContents.item collection
+     * @param id Unique identifier of the item
+     * @return a OrganizationalMessageGuidedContentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OrganizationalMessageGuidedContentItemRequestBuilder organizationalMessageGuidedContents(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("organizationalMessageGuidedContent%2Did", id);
+        return new OrganizationalMessageGuidedContentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update deviceManagement

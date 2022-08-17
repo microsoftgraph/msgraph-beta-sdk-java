@@ -11,11 +11,11 @@ import java.util.Objects;
 public class KeyValuePair implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The name property */
+    /** Name for this key-value pair. */
     private String _name;
     /** The OdataType property */
     private String _odataType;
-    /** The value property */
+    /** Value for this key-value pair. */
     private String _value;
     /**
      * Instantiates a new keyValuePair and sets the default values.
@@ -57,7 +57,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name for this key-value pair.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Value for this key-value pair.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name for this key-value pair.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -117,7 +117,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Value for this key-value pair.
      * @param value Value to set for the value property.
      * @return a void
      */

@@ -59,7 +59,7 @@ public class RoleAssignmentsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get roleAssignments from roleManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RoleAssignmentsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get roleAssignments from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class RoleAssignmentsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get roleAssignments from roleManagement
      * @return a CompletableFuture of UnifiedRoleAssignmentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class RoleAssignmentsRequestBuilder {
         }
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get roleAssignments from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleAssignmentCollectionResponse
      */
@@ -155,7 +155,7 @@ public class RoleAssignmentsRequestBuilder {
         }
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get roleAssignments from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UnifiedRoleAssignmentCollectionResponse
@@ -227,7 +227,7 @@ public class RoleAssignmentsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Resource to grant access to users or groups. */
+    /** Get roleAssignments from roleManagement */
     public class RoleAssignmentsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -53,7 +53,7 @@ public class RiskDetectionsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Retrieve the properties of a collection of **riskDetection** objects.
+     * Retrieve the properties of a **riskDetection** object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -61,7 +61,7 @@ public class RiskDetectionsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a collection of **riskDetection** objects.
+     * Retrieve the properties of a **riskDetection** object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -116,7 +116,7 @@ public class RiskDetectionsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a collection of **riskDetection** objects.
+     * Retrieve the properties of a **riskDetection** object.
      * @return a CompletableFuture of RiskDetectionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<RiskDetectionCollectionResponse> get() {
@@ -132,7 +132,7 @@ public class RiskDetectionsRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties of a collection of **riskDetection** objects.
+     * Retrieve the properties of a **riskDetection** object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RiskDetectionCollectionResponse
      */
@@ -149,7 +149,7 @@ public class RiskDetectionsRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties of a collection of **riskDetection** objects.
+     * Retrieve the properties of a **riskDetection** object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of RiskDetectionCollectionResponse
@@ -221,7 +221,7 @@ public class RiskDetectionsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Retrieve the properties of a collection of **riskDetection** objects. */
+    /** Retrieve the properties of a **riskDetection** object. */
     public class RiskDetectionsRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

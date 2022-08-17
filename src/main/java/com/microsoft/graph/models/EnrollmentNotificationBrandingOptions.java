@@ -3,20 +3,22 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum EnrollmentNotificationBrandingOptions implements ValuedEnum {
-    /** No Branding. */
+    /** Indicates that the template has no branding. */
     None("none"),
-    /** Include Company Logo. */
+    /** Indicates that the Company Logo is included in the notification. */
     IncludeCompanyLogo("includeCompanyLogo"),
-    /** Include Company Name. */
+    /** Indicates that the Company Name is included in the notification. */
     IncludeCompanyName("includeCompanyName"),
-    /** Include Contact Info. */
+    /** Indicates that the Contact Information is included in the notification. */
     IncludeContactInformation("includeContactInformation"),
-    /** Include Company Portal Link. */
+    /** Indicates that the Company Portal Link is included in the notification. */
     IncludeCompanyPortalLink("includeCompanyPortalLink"),
-    /** Include Device Details. */
-    IncludeDeviceDetails("includeDeviceDetails");
+    /** Indicates that the DeviceDetails is included in the notification. */
+    IncludeDeviceDetails("includeDeviceDetails"),
+    /** unknownFutureValue for evolvable enums pattern. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     EnrollmentNotificationBrandingOptions(final String value) {
         this.value = value;
@@ -33,6 +35,7 @@ public enum EnrollmentNotificationBrandingOptions implements ValuedEnum {
             case "includeContactInformation": return IncludeContactInformation;
             case "includeCompanyPortalLink": return IncludeCompanyPortalLink;
             case "includeDeviceDetails": return IncludeDeviceDetails;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

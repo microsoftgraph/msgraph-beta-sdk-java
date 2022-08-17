@@ -58,7 +58,7 @@ public class RootRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
+     * Get root from shares
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class RootRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
+     * Get root from shares
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class RootRequestBuilder {
         return requestInfo;
     }
     /**
-     * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
+     * Get root from shares
      * @return a CompletableFuture of driveItem
      */
     public java.util.concurrent.CompletableFuture<DriveItem> get() {
@@ -104,7 +104,7 @@ public class RootRequestBuilder {
         }
     }
     /**
-     * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
+     * Get root from shares
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of driveItem
      */
@@ -121,7 +121,7 @@ public class RootRequestBuilder {
         }
     }
     /**
-     * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
+     * Get root from shares
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of driveItem
@@ -138,7 +138,7 @@ public class RootRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Used to access the underlying driveItem. Deprecated -- use driveItem instead. */
+    /** Get root from shares */
     public class RootRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

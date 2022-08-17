@@ -10,9 +10,9 @@ import java.util.Objects;
 public class List extends BaseItem implements Parsable {
     /** The recent activities that took place within this list. */
     private java.util.List<ItemActivityOLD> _activities;
-    /** The collection of field definitions for this list. */
+    /** The columns property */
     private java.util.List<ColumnDefinition> _columns;
-    /** The collection of content types present in this list. */
+    /** The contentTypes property */
     private java.util.List<ContentType> _contentTypes;
     /** The displayable title of the list. */
     private String _displayName;
@@ -24,7 +24,7 @@ public class List extends BaseItem implements Parsable {
     private ListInfo _list;
     /** The collection of long running operations for the list. */
     private java.util.List<RichLongRunningOperation> _operations;
-    /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /** The sharepointIds property */
     private SharepointIds _sharepointIds;
     /** The set of subscriptions on the list. */
     private java.util.List<Subscription> _subscriptions;
@@ -57,7 +57,7 @@ public class List extends BaseItem implements Parsable {
         return this._activities;
     }
     /**
-     * Gets the columns property value. The collection of field definitions for this list.
+     * Gets the columns property value. The columns property
      * @return a columnDefinition
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class List extends BaseItem implements Parsable {
         return this._columns;
     }
     /**
-     * Gets the contentTypes property value. The collection of content types present in this list.
+     * Gets the contentTypes property value. The contentTypes property
      * @return a contentType
      */
     @javax.annotation.Nullable
@@ -134,7 +134,7 @@ public class List extends BaseItem implements Parsable {
         return this._operations;
     }
     /**
-     * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Gets the sharepointIds property value. The sharepointIds property
      * @return a sharepointIds
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class List extends BaseItem implements Parsable {
         this._activities = value;
     }
     /**
-     * Sets the columns property value. The collection of field definitions for this list.
+     * Sets the columns property value. The columns property
      * @param value Value to set for the columns property.
      * @return a void
      */
@@ -194,7 +194,7 @@ public class List extends BaseItem implements Parsable {
         this._columns = value;
     }
     /**
-     * Sets the contentTypes property value. The collection of content types present in this list.
+     * Sets the contentTypes property value. The contentTypes property
      * @param value Value to set for the contentTypes property.
      * @return a void
      */
@@ -242,7 +242,7 @@ public class List extends BaseItem implements Parsable {
         this._operations = value;
     }
     /**
-     * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Sets the sharepointIds property value. The sharepointIds property
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */

@@ -86,7 +86,7 @@ public class ColumnDefinitionItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of field definitions for this list.
+     * Get columns from drive
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ColumnDefinitionItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of field definitions for this list.
+     * Get columns from drive
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class ColumnDefinitionItemRequestBuilder {
         }
     }
     /**
-     * The collection of field definitions for this list.
+     * Get columns from drive
      * @return a CompletableFuture of columnDefinition
      */
     public java.util.concurrent.CompletableFuture<ColumnDefinition> get() {
@@ -215,7 +215,7 @@ public class ColumnDefinitionItemRequestBuilder {
         }
     }
     /**
-     * The collection of field definitions for this list.
+     * Get columns from drive
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of columnDefinition
      */
@@ -232,7 +232,7 @@ public class ColumnDefinitionItemRequestBuilder {
         }
     }
     /**
-     * The collection of field definitions for this list.
+     * Get columns from drive
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of columnDefinition
@@ -319,7 +319,7 @@ public class ColumnDefinitionItemRequestBuilder {
         public ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The collection of field definitions for this list. */
+    /** Get columns from drive */
     public class ColumnDefinitionItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

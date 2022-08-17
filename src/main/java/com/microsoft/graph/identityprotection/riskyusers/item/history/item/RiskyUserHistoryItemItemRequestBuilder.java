@@ -80,7 +80,7 @@ public class RiskyUserHistoryItemItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The activity related to user risk level change
+     * Get history from identityProtection
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class RiskyUserHistoryItemItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The activity related to user risk level change
+     * Get history from identityProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class RiskyUserHistoryItemItemRequestBuilder {
         }
     }
     /**
-     * The activity related to user risk level change
+     * Get history from identityProtection
      * @return a CompletableFuture of riskyUserHistoryItem
      */
     public java.util.concurrent.CompletableFuture<RiskyUserHistoryItem> get() {
@@ -209,7 +209,7 @@ public class RiskyUserHistoryItemItemRequestBuilder {
         }
     }
     /**
-     * The activity related to user risk level change
+     * Get history from identityProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of riskyUserHistoryItem
      */
@@ -226,7 +226,7 @@ public class RiskyUserHistoryItemItemRequestBuilder {
         }
     }
     /**
-     * The activity related to user risk level change
+     * Get history from identityProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of riskyUserHistoryItem
@@ -313,7 +313,7 @@ public class RiskyUserHistoryItemItemRequestBuilder {
         public RiskyUserHistoryItemItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The activity related to user risk level change */
+    /** Get history from identityProtection */
     public class RiskyUserHistoryItemItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

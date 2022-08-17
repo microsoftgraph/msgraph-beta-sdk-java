@@ -9,13 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel implements Parsable {
-    /** Identity of the user, device, and application which created the item. Read-only. */
+    /** The createdBy property */
     private IdentitySet _createdBy;
-    /** The name of the notebook. */
+    /** The displayName property */
     private String _displayName;
-    /** Identity of the user, device, and application which created the item. Read-only. */
+    /** The lastModifiedBy property */
     private IdentitySet _lastModifiedBy;
-    /** The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /** The lastModifiedDateTime property */
     private OffsetDateTime _lastModifiedDateTime;
     /**
      * Instantiates a new OnenoteEntityHierarchyModel and sets the default values.
@@ -45,7 +45,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         return new OnenoteEntityHierarchyModel();
     }
     /**
-     * Gets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
+     * Gets the createdBy property value. The createdBy property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -53,7 +53,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         return this._createdBy;
     }
     /**
-     * Gets the displayName property value. The name of the notebook.
+     * Gets the displayName property value. The displayName property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -75,7 +75,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         }};
     }
     /**
-     * Gets the lastModifiedBy property value. Identity of the user, device, and application which created the item. Read-only.
+     * Gets the lastModifiedBy property value. The lastModifiedBy property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         return this._lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -104,7 +104,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
-     * Sets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
+     * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -112,7 +112,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         this._createdBy = value;
     }
     /**
-     * Sets the displayName property value. The name of the notebook.
+     * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -120,7 +120,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         this._displayName = value;
     }
     /**
-     * Sets the lastModifiedBy property value. Identity of the user, device, and application which created the item. Read-only.
+     * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
@@ -128,7 +128,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         this._lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */

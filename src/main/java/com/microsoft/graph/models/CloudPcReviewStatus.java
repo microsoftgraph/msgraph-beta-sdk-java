@@ -16,6 +16,8 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     private String _azureStorageAccountId;
     /** The name of the Azure Storage account in which the Cloud PC snapshot is being saved. */
     private String _azureStorageAccountName;
+    /** The name of the container in an Azure Storage account in which the Cloud PC snapshot is being saved. */
+    private String _azureStorageContainerName;
     /** True if the Cloud PC is set to in review by the administrator. */
     private Boolean _inReview;
     /** The OdataType property */
@@ -73,15 +75,24 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         return this._azureStorageAccountName;
     }
     /**
+     * Gets the azureStorageContainerName property value. The name of the container in an Azure Storage account in which the Cloud PC snapshot is being saved.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getAzureStorageContainerName() {
+        return this._azureStorageContainerName;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcReviewStatus currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("azureStorageAccountId", (n) -> { currentObject.setAzureStorageAccountId(n.getStringValue()); });
             this.put("azureStorageAccountName", (n) -> { currentObject.setAzureStorageAccountName(n.getStringValue()); });
+            this.put("azureStorageContainerName", (n) -> { currentObject.setAzureStorageContainerName(n.getStringValue()); });
             this.put("inReview", (n) -> { currentObject.setInReview(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("restorePointDateTime", (n) -> { currentObject.setRestorePointDateTime(n.getOffsetDateTimeValue()); });
@@ -156,6 +167,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("azureStorageAccountId", this.getAzureStorageAccountId());
         writer.writeStringValue("azureStorageAccountName", this.getAzureStorageAccountName());
+        writer.writeStringValue("azureStorageContainerName", this.getAzureStorageContainerName());
         writer.writeBooleanValue("inReview", this.getInReview());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("restorePointDateTime", this.getRestorePointDateTime());
@@ -188,6 +200,14 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      */
     public void setAzureStorageAccountName(@javax.annotation.Nullable final String value) {
         this._azureStorageAccountName = value;
+    }
+    /**
+     * Sets the azureStorageContainerName property value. The name of the container in an Azure Storage account in which the Cloud PC snapshot is being saved.
+     * @param value Value to set for the azureStorageContainerName property.
+     * @return a void
+     */
+    public void setAzureStorageContainerName(@javax.annotation.Nullable final String value) {
+        this._azureStorageContainerName = value;
     }
     /**
      * Sets the inReview property value. True if the Cloud PC is set to in review by the administrator.

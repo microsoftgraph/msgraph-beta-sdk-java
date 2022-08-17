@@ -87,7 +87,7 @@ public class UserActivityItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * Get activities from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class UserActivityItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * Get activities from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +200,7 @@ public class UserActivityItemRequestBuilder {
         }
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * Get activities from users
      * @return a CompletableFuture of userActivity
      */
     public java.util.concurrent.CompletableFuture<UserActivity> get() {
@@ -216,7 +216,7 @@ public class UserActivityItemRequestBuilder {
         }
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * Get activities from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userActivity
      */
@@ -233,7 +233,7 @@ public class UserActivityItemRequestBuilder {
         }
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * Get activities from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of userActivity
@@ -332,7 +332,7 @@ public class UserActivityItemRequestBuilder {
         public UserActivityItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The user's activities across devices. Read-only. Nullable. */
+    /** Get activities from users */
     public class UserActivityItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

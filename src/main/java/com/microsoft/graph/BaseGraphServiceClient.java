@@ -182,6 +182,7 @@ import microsoft.graph.shares.item.SharedDriveItemItemRequestBuilder;
 import microsoft.graph.shares.SharesRequestBuilder;
 import microsoft.graph.sites.item.SiteItemRequestBuilder;
 import microsoft.graph.sites.SitesRequestBuilder;
+import microsoft.graph.solutions.SolutionsRequestBuilder;
 import microsoft.graph.storage.StorageRequestBuilder;
 import microsoft.graph.subscribedskus.item.SubscribedSkuItemRequestBuilder;
 import microsoft.graph.subscribedskus.SubscribedSkusRequestBuilder;
@@ -715,6 +716,11 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public SitesRequestBuilder sites() {
         return new SitesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The solutions property */
+    @javax.annotation.Nonnull
+    public SolutionsRequestBuilder solutions() {
+        return new SolutionsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The storage property */
     @javax.annotation.Nonnull

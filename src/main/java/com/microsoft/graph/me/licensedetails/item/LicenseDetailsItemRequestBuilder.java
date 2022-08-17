@@ -80,7 +80,7 @@ public class LicenseDetailsItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * Get licenseDetails from me
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class LicenseDetailsItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * Get licenseDetails from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class LicenseDetailsItemRequestBuilder {
         }
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * Get licenseDetails from me
      * @return a CompletableFuture of licenseDetails
      */
     public java.util.concurrent.CompletableFuture<LicenseDetails> get() {
@@ -209,7 +209,7 @@ public class LicenseDetailsItemRequestBuilder {
         }
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * Get licenseDetails from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of licenseDetails
      */
@@ -226,7 +226,7 @@ public class LicenseDetailsItemRequestBuilder {
         }
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * Get licenseDetails from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of licenseDetails
@@ -313,7 +313,7 @@ public class LicenseDetailsItemRequestBuilder {
         public LicenseDetailsItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** A collection of this user's license details. Read-only. */
+    /** Get licenseDetails from me */
     public class LicenseDetailsItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

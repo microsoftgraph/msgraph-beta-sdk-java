@@ -15,7 +15,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     private java.util.List<PrintConnector> _connectors;
     /** The OdataType property */
     private String _odataType;
-    /** The list of print long running operations. */
+    /** The operations property */
     private java.util.List<PrintOperation> _operations;
     /** The list of printers registered in the tenant. */
     private java.util.List<Printer> _printers;
@@ -29,7 +29,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     private PrintSettings _settings;
     /** The list of printer shares registered in the tenant. */
     private java.util.List<PrinterShare> _shares;
-    /** List of abstract definition for a task that can be triggered when various events occur within Universal Print. */
+    /** The taskDefinitions property */
     private java.util.List<PrintTaskDefinition> _taskDefinitions;
     /**
      * Instantiates a new Print and sets the default values.
@@ -94,7 +94,7 @@ public class Print implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the operations property value. The list of print long running operations.
+     * Gets the operations property value. The operations property
      * @return a printOperation
      */
     @javax.annotation.Nullable
@@ -150,7 +150,7 @@ public class Print implements AdditionalDataHolder, Parsable {
         return this._shares;
     }
     /**
-     * Gets the taskDefinitions property value. List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * Gets the taskDefinitions property value. The taskDefinitions property
      * @return a printTaskDefinition
      */
     @javax.annotation.Nullable
@@ -201,7 +201,7 @@ public class Print implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the operations property value. The list of print long running operations.
+     * Sets the operations property value. The operations property
      * @param value Value to set for the operations property.
      * @return a void
      */
@@ -257,7 +257,7 @@ public class Print implements AdditionalDataHolder, Parsable {
         this._shares = value;
     }
     /**
-     * Sets the taskDefinitions property value. List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * Sets the taskDefinitions property value. The taskDefinitions property
      * @param value Value to set for the taskDefinitions property.
      * @return a void
      */

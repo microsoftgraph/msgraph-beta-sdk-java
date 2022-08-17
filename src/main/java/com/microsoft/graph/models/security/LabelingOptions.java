@@ -13,11 +13,11 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The assignmentMethod property */
     private AssignmentMethod _assignmentMethod;
-    /** The downgradeJustification property */
+    /** The downgrade justification object that indicates if downgrade was justified and, if so, the reason. */
     private DowngradeJustification _downgradeJustification;
-    /** The extendedProperties property */
+    /** Extended properties will be parsed and returned in the standard Microsoft Purview Information Protection labeled metadata format as part of the label information. */
     private java.util.List<KeyValuePair> _extendedProperties;
-    /** The labelId property */
+    /** The GUID of the label that should be applied to the information. */
     private String _labelId;
     /** The OdataType property */
     private String _odataType;
@@ -56,7 +56,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
         return this._assignmentMethod;
     }
     /**
-     * Gets the downgradeJustification property value. The downgradeJustification property
+     * Gets the downgradeJustification property value. The downgrade justification object that indicates if downgrade was justified and, if so, the reason.
      * @return a downgradeJustification
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
         return this._downgradeJustification;
     }
     /**
-     * Gets the extendedProperties property value. The extendedProperties property
+     * Gets the extendedProperties property value. Extended properties will be parsed and returned in the standard Microsoft Purview Information Protection labeled metadata format as part of the label information.
      * @return a keyValuePair
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the labelId property value. The labelId property
+     * Gets the labelId property value. The GUID of the label that should be applied to the information.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
         this._assignmentMethod = value;
     }
     /**
-     * Sets the downgradeJustification property value. The downgradeJustification property
+     * Sets the downgradeJustification property value. The downgrade justification object that indicates if downgrade was justified and, if so, the reason.
      * @param value Value to set for the downgradeJustification property.
      * @return a void
      */
@@ -141,7 +141,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
         this._downgradeJustification = value;
     }
     /**
-     * Sets the extendedProperties property value. The extendedProperties property
+     * Sets the extendedProperties property value. Extended properties will be parsed and returned in the standard Microsoft Purview Information Protection labeled metadata format as part of the label information.
      * @param value Value to set for the extendedProperties property.
      * @return a void
      */
@@ -149,7 +149,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
         this._extendedProperties = value;
     }
     /**
-     * Sets the labelId property value. The labelId property
+     * Sets the labelId property value. The GUID of the label that should be applied to the information.
      * @param value Value to set for the labelId property.
      * @return a void
      */

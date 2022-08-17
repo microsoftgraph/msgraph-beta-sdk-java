@@ -21,6 +21,7 @@ import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.getcloudpc
 import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.reboot.RebootRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.rename.RenameRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
+import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.restore.RestoreRequestBuilder;
 import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.troubleshoot.TroubleshootRequestBuilder;
 import microsoft.graph.models.CloudPC;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -55,6 +56,11 @@ public class CloudPCItemRequestBuilder {
     }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The restore property */
+    @javax.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The troubleshoot property */
     @javax.annotation.Nonnull
     public TroubleshootRequestBuilder troubleshoot() {

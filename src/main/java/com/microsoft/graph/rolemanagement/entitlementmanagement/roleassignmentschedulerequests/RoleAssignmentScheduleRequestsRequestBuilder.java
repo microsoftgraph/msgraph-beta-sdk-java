@@ -60,7 +60,7 @@ public class RoleAssignmentScheduleRequestsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Requests for active role assignments to principals through PIM.
+     * Get roleAssignmentScheduleRequests from roleManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class RoleAssignmentScheduleRequestsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Requests for active role assignments to principals through PIM.
+     * Get roleAssignmentScheduleRequests from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class RoleAssignmentScheduleRequestsRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Requests for active role assignments to principals through PIM.
+     * Get roleAssignmentScheduleRequests from roleManagement
      * @return a CompletableFuture of UnifiedRoleAssignmentScheduleRequestCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentScheduleRequestCollectionResponse> get() {
@@ -149,7 +149,7 @@ public class RoleAssignmentScheduleRequestsRequestBuilder {
         }
     }
     /**
-     * Requests for active role assignments to principals through PIM.
+     * Get roleAssignmentScheduleRequests from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleAssignmentScheduleRequestCollectionResponse
      */
@@ -166,7 +166,7 @@ public class RoleAssignmentScheduleRequestsRequestBuilder {
         }
     }
     /**
-     * Requests for active role assignments to principals through PIM.
+     * Get roleAssignmentScheduleRequests from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UnifiedRoleAssignmentScheduleRequestCollectionResponse
@@ -238,7 +238,7 @@ public class RoleAssignmentScheduleRequestsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Requests for active role assignments to principals through PIM. */
+    /** Get roleAssignmentScheduleRequests from roleManagement */
     public class RoleAssignmentScheduleRequestsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

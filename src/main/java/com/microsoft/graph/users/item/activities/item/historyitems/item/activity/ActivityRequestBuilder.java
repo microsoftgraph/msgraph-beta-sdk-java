@@ -52,7 +52,7 @@ public class ActivityRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
+     * Get activity from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class ActivityRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
+     * Get activity from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class ActivityRequestBuilder {
         return requestInfo;
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
+     * Get activity from users
      * @return a CompletableFuture of userActivity
      */
     public java.util.concurrent.CompletableFuture<UserActivity> get() {
@@ -98,7 +98,7 @@ public class ActivityRequestBuilder {
         }
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
+     * Get activity from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userActivity
      */
@@ -115,7 +115,7 @@ public class ActivityRequestBuilder {
         }
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
+     * Get activity from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of userActivity
@@ -132,7 +132,7 @@ public class ActivityRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Optional. NavigationProperty/Containment; navigation property to the associated activity. */
+    /** Get activity from users */
     public class ActivityRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

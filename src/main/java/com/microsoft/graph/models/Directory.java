@@ -14,7 +14,7 @@ public class Directory extends Entity implements Parsable {
     private java.util.List<AttributeSet> _attributeSets;
     /** Schema of a custom security attributes (key-value pairs). */
     private java.util.List<CustomSecurityAttributeDefinition> _customSecurityAttributeDefinitions;
-    /** Recently deleted items. Read-only. Nullable. */
+    /** The deletedItems property */
     private java.util.List<DirectoryObject> _deletedItems;
     /** The featureRolloutPolicies property */
     private java.util.List<FeatureRolloutPolicy> _featureRolloutPolicies;
@@ -73,7 +73,7 @@ public class Directory extends Entity implements Parsable {
         return this._customSecurityAttributeDefinitions;
     }
     /**
-     * Gets the deletedItems property value. Recently deleted items. Read-only. Nullable.
+     * Gets the deletedItems property value. The deletedItems property
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -202,7 +202,7 @@ public class Directory extends Entity implements Parsable {
         this._customSecurityAttributeDefinitions = value;
     }
     /**
-     * Sets the deletedItems property value. Recently deleted items. Read-only. Nullable.
+     * Sets the deletedItems property value. The deletedItems property
      * @param value Value to set for the deletedItems property.
      * @return a void
      */

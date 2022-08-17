@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RiskyUser extends Entity implements Parsable {
-    /** The activity related to user risk level change */
+    /** The history property */
     private java.util.List<RiskyUserHistoryItem> _history;
     /** Indicates whether the user is deleted. Possible values are: true, false. */
     private Boolean _isDeleted;
@@ -72,7 +72,7 @@ public class RiskyUser extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the history property value. The activity related to user risk level change
+     * Gets the history property value. The history property
      * @return a riskyUserHistoryItem
      */
     @javax.annotation.Nullable
@@ -162,7 +162,7 @@ public class RiskyUser extends Entity implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the history property value. The activity related to user risk level change
+     * Sets the history property value. The history property
      * @param value Value to set for the history property.
      * @return a void
      */

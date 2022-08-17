@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TodoTask extends Entity implements Parsable {
     /** A collection of file attachments for the task. */
     private java.util.List<AttachmentBase> _attachments;
@@ -22,11 +22,11 @@ public class TodoTask extends Entity implements Parsable {
     private java.util.List<String> _categories;
     /** A collection of smaller subtasks linked to the more complex parent task. */
     private java.util.List<ChecklistItem> _checklistItems;
-    /** The date in the specified time zone that the task was finished. */
+    /** The date and time in the specified time zone that the task was finished. */
     private DateTimeTimeZone _completedDateTime;
     /** The date and time when the task was created. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
     private OffsetDateTime _createdDateTime;
-    /** The date in the specified time zone that the task is to be finished. */
+    /** The date and time in the specified time zone that the task is to be finished. */
     private DateTimeTimeZone _dueDateTime;
     /** The collection of open extensions defined for the task. Nullable. */
     private java.util.List<Extension> _extensions;
@@ -42,9 +42,9 @@ public class TodoTask extends Entity implements Parsable {
     private java.util.List<LinkedResource> _linkedResources;
     /** The recurrence pattern for the task. */
     private PatternedRecurrence _recurrence;
-    /** The date and time for a reminder alert of the task to occur. */
+    /** The date and time in the specified time zone for a reminder alert of the task to occur. */
     private DateTimeTimeZone _reminderDateTime;
-    /** The date in the specified time zone at which the task is scheduled to start. */
+    /** The date and time in the specified time zone at which the task is scheduled to start. */
     private DateTimeTimeZone _startDateTime;
     /** The status property */
     private TaskStatus _status;
@@ -117,7 +117,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._checklistItems;
     }
     /**
-     * Gets the completedDateTime property value. The date in the specified time zone that the task was finished.
+     * Gets the completedDateTime property value. The date and time in the specified time zone that the task was finished.
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the dueDateTime property value. The date in the specified time zone that the task is to be finished.
+     * Gets the dueDateTime property value. The date and time in the specified time zone that the task is to be finished.
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._recurrence;
     }
     /**
-     * Gets the reminderDateTime property value. The date and time for a reminder alert of the task to occur.
+     * Gets the reminderDateTime property value. The date and time in the specified time zone for a reminder alert of the task to occur.
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -235,7 +235,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._reminderDateTime;
     }
     /**
-     * Gets the startDateTime property value. The date in the specified time zone at which the task is scheduled to start.
+     * Gets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -336,7 +336,7 @@ public class TodoTask extends Entity implements Parsable {
         this._checklistItems = value;
     }
     /**
-     * Sets the completedDateTime property value. The date in the specified time zone that the task was finished.
+     * Sets the completedDateTime property value. The date and time in the specified time zone that the task was finished.
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
@@ -352,7 +352,7 @@ public class TodoTask extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the dueDateTime property value. The date in the specified time zone that the task is to be finished.
+     * Sets the dueDateTime property value. The date and time in the specified time zone that the task is to be finished.
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
@@ -416,7 +416,7 @@ public class TodoTask extends Entity implements Parsable {
         this._recurrence = value;
     }
     /**
-     * Sets the reminderDateTime property value. The date and time for a reminder alert of the task to occur.
+     * Sets the reminderDateTime property value. The date and time in the specified time zone for a reminder alert of the task to occur.
      * @param value Value to set for the reminderDateTime property.
      * @return a void
      */
@@ -424,7 +424,7 @@ public class TodoTask extends Entity implements Parsable {
         this._reminderDateTime = value;
     }
     /**
-     * Sets the startDateTime property value. The date in the specified time zone at which the task is scheduled to start.
+     * Sets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */

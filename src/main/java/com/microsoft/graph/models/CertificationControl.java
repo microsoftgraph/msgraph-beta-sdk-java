@@ -11,11 +11,11 @@ import java.util.Objects;
 public class CertificationControl implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Certification control name */
+    /** The name property */
     private String _name;
     /** The OdataType property */
     private String _odataType;
-    /** URL for the Microsoft Service Trust Portal */
+    /** The url property */
     private String _url;
     /**
      * Instantiates a new certificationControl and sets the default values.
@@ -57,7 +57,7 @@ public class CertificationControl implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the name property value. Certification control name
+     * Gets the name property value. The name property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class CertificationControl implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the url property value. URL for the Microsoft Service Trust Portal
+     * Gets the url property value. The url property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class CertificationControl implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the name property value. Certification control name
+     * Sets the name property value. The name property
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -117,7 +117,7 @@ public class CertificationControl implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the url property value. URL for the Microsoft Service Trust Portal
+     * Sets the url property value. The url property
      * @param value Value to set for the url property.
      * @return a void
      */

@@ -8,17 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AddWatermarkAction extends InformationProtectionAction implements Parsable {
-    /** The fontColor property */
+    /** Color of the font to use for the watermark. */
     private String _fontColor;
-    /** The fontName property */
+    /** Name of the font to use for the watermark. */
     private String _fontName;
-    /** The fontSize property */
+    /** Font size to use for the watermark. */
     private Integer _fontSize;
     /** The layout property */
     private WatermarkLayout _layout;
-    /** The text property */
+    /** The contents of the watermark itself. */
     private String _text;
-    /** The uiElementName property */
+    /** The name of the UI element where the watermark should be placed. */
     private String _uiElementName;
     /**
      * Instantiates a new AddWatermarkAction and sets the default values.
@@ -55,7 +55,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
         }};
     }
     /**
-     * Gets the fontColor property value. The fontColor property
+     * Gets the fontColor property value. Color of the font to use for the watermark.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
         return this._fontColor;
     }
     /**
-     * Gets the fontName property value. The fontName property
+     * Gets the fontName property value. Name of the font to use for the watermark.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
         return this._fontName;
     }
     /**
-     * Gets the fontSize property value. The fontSize property
+     * Gets the fontSize property value. Font size to use for the watermark.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
         return this._layout;
     }
     /**
-     * Gets the text property value. The text property
+     * Gets the text property value. The contents of the watermark itself.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
         return this._text;
     }
     /**
-     * Gets the uiElementName property value. The uiElementName property
+     * Gets the uiElementName property value. The name of the UI element where the watermark should be placed.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
         writer.writeStringValue("uiElementName", this.getUiElementName());
     }
     /**
-     * Sets the fontColor property value. The fontColor property
+     * Sets the fontColor property value. Color of the font to use for the watermark.
      * @param value Value to set for the fontColor property.
      * @return a void
      */
@@ -126,7 +126,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
         this._fontColor = value;
     }
     /**
-     * Sets the fontName property value. The fontName property
+     * Sets the fontName property value. Name of the font to use for the watermark.
      * @param value Value to set for the fontName property.
      * @return a void
      */
@@ -134,7 +134,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
         this._fontName = value;
     }
     /**
-     * Sets the fontSize property value. The fontSize property
+     * Sets the fontSize property value. Font size to use for the watermark.
      * @param value Value to set for the fontSize property.
      * @return a void
      */
@@ -150,7 +150,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
         this._layout = value;
     }
     /**
-     * Sets the text property value. The text property
+     * Sets the text property value. The contents of the watermark itself.
      * @param value Value to set for the text property.
      * @return a void
      */
@@ -158,7 +158,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
         this._text = value;
     }
     /**
-     * Sets the uiElementName property value. The uiElementName property
+     * Sets the uiElementName property value. The name of the UI element where the watermark should be placed.
      * @param value Value to set for the uiElementName property.
      * @return a void
      */

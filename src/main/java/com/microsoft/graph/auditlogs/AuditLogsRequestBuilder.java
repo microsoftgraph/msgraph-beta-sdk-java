@@ -172,7 +172,7 @@ public class AuditLogsRequestBuilder {
     }
     /**
      * Get auditLogs
-     * @return a CompletableFuture of auditLogRoot
+     * @return a CompletableFuture of AuditLogRoot
      */
     public java.util.concurrent.CompletableFuture<AuditLogRoot> get() {
         try {
@@ -189,7 +189,7 @@ public class AuditLogsRequestBuilder {
     /**
      * Get auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of auditLogRoot
+     * @return a CompletableFuture of AuditLogRoot
      */
     public java.util.concurrent.CompletableFuture<AuditLogRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<AuditLogsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -207,7 +207,7 @@ public class AuditLogsRequestBuilder {
      * Get auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of auditLogRoot
+     * @return a CompletableFuture of AuditLogRoot
      */
     public java.util.concurrent.CompletableFuture<AuditLogRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<AuditLogsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

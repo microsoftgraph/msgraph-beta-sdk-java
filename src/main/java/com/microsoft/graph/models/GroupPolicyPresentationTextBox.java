@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class GroupPolicyPresentationTextBox extends GroupPolicyPresentation implements Parsable {
+public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentation implements Parsable {
     /** Localized default string displayed in the text box. The default value is empty. */
     private String _defaultValue;
     /** An unsigned integer that specifies the maximum number of text characters. Default value is 1023. */

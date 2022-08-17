@@ -13,7 +13,7 @@ public class Package_escaped implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The OdataType property */
     private String _odataType;
-    /** A string indicating the type of package. While oneNote is the only currently defined value, you should expect other package types to be returned and handle them accordingly. */
+    /** The type property */
     private String _type;
     /**
      * Instantiates a new package_escaped and sets the default values.
@@ -62,7 +62,7 @@ public class Package_escaped implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the type property value. A string indicating the type of package. While oneNote is the only currently defined value, you should expect other package types to be returned and handle them accordingly.
+     * Gets the type property value. The type property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class Package_escaped implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the type property value. A string indicating the type of package. While oneNote is the only currently defined value, you should expect other package types to be returned and handle them accordingly.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */

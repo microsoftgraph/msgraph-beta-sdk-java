@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewReviewerScope extends AccessReviewScope implements Parsable {
-    /** The query specifying who will be the reviewer. See table for examples. */
+    /** The query specifying who will be the reviewer. */
     private String _query;
     /** In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions. */
     private String _queryRoot;
@@ -46,7 +46,7 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements Pars
         }};
     }
     /**
-     * Gets the query property value. The query specifying who will be the reviewer. See table for examples.
+     * Gets the query property value. The query specifying who will be the reviewer.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements Pars
         writer.writeStringValue("queryType", this.getQueryType());
     }
     /**
-     * Sets the query property value. The query specifying who will be the reviewer. See table for examples.
+     * Sets the query property value. The query specifying who will be the reviewer.
      * @param value Value to set for the query property.
      * @return a void
      */

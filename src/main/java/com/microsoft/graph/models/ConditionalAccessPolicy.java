@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ConditionalAccessPolicy extends Entity implements Parsable {
     /** The conditions property */
     private ConditionalAccessConditionSet _conditions;
@@ -26,7 +27,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     /** The state property */
     private ConditionalAccessPolicyState _state;
     /**
-     * Instantiates a new ConditionalAccessPolicy and sets the default values.
+     * Instantiates a new conditionalAccessPolicy and sets the default values.
      * @return a void
      */
     public ConditionalAccessPolicy() {
@@ -36,7 +37,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessPolicy
+     * @return a conditionalAccessPolicy
      */
     @javax.annotation.Nonnull
     public static ConditionalAccessPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

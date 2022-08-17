@@ -59,7 +59,7 @@ public class HistoryRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The activity related to user risk level change
+     * Get history from identityProtection
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class HistoryRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The activity related to user risk level change
+     * Get history from identityProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class HistoryRequestBuilder {
         return requestInfo;
     }
     /**
-     * The activity related to user risk level change
+     * Get history from identityProtection
      * @return a CompletableFuture of RiskyUserHistoryItemCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<RiskyUserHistoryItemCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class HistoryRequestBuilder {
         }
     }
     /**
-     * The activity related to user risk level change
+     * Get history from identityProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RiskyUserHistoryItemCollectionResponse
      */
@@ -155,7 +155,7 @@ public class HistoryRequestBuilder {
         }
     }
     /**
-     * The activity related to user risk level change
+     * Get history from identityProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of RiskyUserHistoryItemCollectionResponse
@@ -227,7 +227,7 @@ public class HistoryRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The activity related to user risk level change */
+    /** Get history from identityProtection */
     public class HistoryRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

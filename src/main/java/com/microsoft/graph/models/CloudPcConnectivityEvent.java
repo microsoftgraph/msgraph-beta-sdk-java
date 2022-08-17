@@ -12,15 +12,15 @@ import java.util.Objects;
 public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The eventDateTime property */
+    /** Indicates the date and time when this event was created. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z. */
     private OffsetDateTime _eventDateTime;
-    /** The eventName property */
+    /** Name of the event. */
     private String _eventName;
     /** The eventResult property */
     private CloudPcConnectivityEventResult _eventResult;
     /** The eventType property */
     private CloudPcConnectivityEventType _eventType;
-    /** The message property */
+    /** Additional message for this event. */
     private String _message;
     /** The OdataType property */
     private String _odataType;
@@ -51,7 +51,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
         return this._additionalData;
     }
     /**
-     * Gets the eventDateTime property value. The eventDateTime property
+     * Gets the eventDateTime property value. Indicates the date and time when this event was created. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
         return this._eventDateTime;
     }
     /**
-     * Gets the eventName property value. The eventName property
+     * Gets the eventName property value. Name of the event.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
         }};
     }
     /**
-     * Gets the message property value. The message property
+     * Gets the message property value. Additional message for this event.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
         this._additionalData = value;
     }
     /**
-     * Sets the eventDateTime property value. The eventDateTime property
+     * Sets the eventDateTime property value. Indicates the date and time when this event was created. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
@@ -146,7 +146,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
         this._eventDateTime = value;
     }
     /**
-     * Sets the eventName property value. The eventName property
+     * Sets the eventName property value. Name of the event.
      * @param value Value to set for the eventName property.
      * @return a void
      */
@@ -170,7 +170,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
         this._eventType = value;
     }
     /**
-     * Sets the message property value. The message property
+     * Sets the message property value. Additional message for this event.
      * @param value Value to set for the message property.
      * @return a void
      */

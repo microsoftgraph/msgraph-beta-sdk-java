@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class EducationOrganization extends Entity implements Parsable {
     /** Organization description. */
     private String _description;
@@ -15,7 +15,7 @@ public class EducationOrganization extends Entity implements Parsable {
     private String _displayName;
     /** Where this user was created from. Possible values are: sis, lms, or manual. */
     private EducationExternalSource _externalSource;
-    /** The name of the external source this resources was generated from. */
+    /** The externalSourceDetail property */
     private String _externalSourceDetail;
     /**
      * Instantiates a new educationOrganization and sets the default values.
@@ -67,7 +67,7 @@ public class EducationOrganization extends Entity implements Parsable {
         return this._externalSource;
     }
     /**
-     * Gets the externalSourceDetail property value. The name of the external source this resources was generated from.
+     * Gets the externalSourceDetail property value. The externalSourceDetail property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class EducationOrganization extends Entity implements Parsable {
         this._externalSource = value;
     }
     /**
-     * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
+     * Sets the externalSourceDetail property value. The externalSourceDetail property
      * @param value Value to set for the externalSourceDetail property.
      * @return a void
      */

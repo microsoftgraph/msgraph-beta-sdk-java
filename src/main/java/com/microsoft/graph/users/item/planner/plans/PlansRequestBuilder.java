@@ -59,7 +59,7 @@ public class PlansRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Get plans from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PlansRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Get plans from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class PlansRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Get plans from users
      * @return a CompletableFuture of PlannerPlanCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PlannerPlanCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class PlansRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Get plans from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PlannerPlanCollectionResponse
      */
@@ -155,7 +155,7 @@ public class PlansRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Get plans from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PlannerPlanCollectionResponse
@@ -227,7 +227,7 @@ public class PlansRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. Returns the plannerTasks assigned to the user. */
+    /** Get plans from users */
     public class PlansRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

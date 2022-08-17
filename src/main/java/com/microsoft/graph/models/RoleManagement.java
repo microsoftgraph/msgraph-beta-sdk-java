@@ -17,7 +17,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
     private RbacApplicationMultiple _deviceManagement;
     /** The directory property */
     private RbacApplication _directory;
-    /** Container for roles and assignments for entitlement management resources. */
+    /** The RbacApplication for Entitlement Management */
     private RbacApplication _entitlementManagement;
     /** The OdataType property */
     private String _odataType;
@@ -72,7 +72,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
         return this._directory;
     }
     /**
-     * Gets the entitlementManagement property value. Container for roles and assignments for entitlement management resources.
+     * Gets the entitlementManagement property value. The RbacApplication for Entitlement Management
      * @return a rbacApplication
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
         this._directory = value;
     }
     /**
-     * Sets the entitlementManagement property value. Container for roles and assignments for entitlement management resources.
+     * Sets the entitlementManagement property value. The RbacApplication for Entitlement Management
      * @param value Value to set for the entitlementManagement property.
      * @return a void
      */
