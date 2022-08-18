@@ -11,6 +11,70 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.53.0] - 2022-08-18
+
+### Added
+ 
+- AccessPackageSubjectLifecycle model.
+- AndroidDeviceOwnerCertificateAccessType model.
+- AndroidDeviceOwnerSilentCertificateAccess model.
+- AuthenticationConfigurationValidation model. 
+- AzureCommunicationServicesUserIdentity model. 
+- CloudPcHealthCheckItem model. 
+- CloudPCRestoreParameterSet models. 
+- CloudPcSupportedRegionStatus model. 
+- CommunicationsApplication models. 
+- Communications Identities models. 
+- DeviceDeltaParameterSet models. 
+- DeviceLicensingStatus model. 
+- GroupPeerOutlierRecommendationInsightSettings model. 
+- GroupPolicyConfigurationIngestionType model. 
+- HttpRequestEndpoint model. 
+- IngestionSource model. 
+- OfficeSuiteDefaultFileFormatType model. 
+- OutlierContainerType model. 
+- OutlierMemberType model. 
+- PowerliftDownloadRequest model. 
+- PowerliftIncidentMetadata model. 
+- RequestSignatureVerification model. 
+- SupportedClaimConfiguration model. 
+- TenantInformation model. 
+- VpnOnDemandRuleInterfaceTypeMatch model. 
+- WeakAlgorithms model. 
+- AdminReportSettings model and related requests. 
+- AuthenticationCondition models and related requests. 
+- AuthenticationEventListener model and related requests.
+- CallTranscript model and related requests. 
+- CloudPcConnectivityEvent models and related requests. 
+- CustomAuthenticationExtension models and related requests. 
+- DeviceManagementReportsGetNoncompliantDevicesAndSettingsReport models and related requests. 
+- EmployeeExperience model and related requests. 
+- GroupPolicyUploadedPresentation model and related requests. 
+- LearningContent model and related requests. 
+- LearningProvider model and related requests. 
+- ManagedDeviceAppDiagnostics models and related requests. 
+- ManagedDeviceDownloadAppDiagnostics models and related requests.
+- MembershipOutlierInsight model and related requests. 
+- OnTokenIssuanceStart models and related requests. 
+- OrganizationalMessage models and related requests. 
+- SecurityReportsRoot models and related requests. 
+- SecurityRunHuntingQuery models and related requests. 
+- SolutionsRoot model and requests. 
+- TeamTemplate models and related requests. 
+- TenantRelationshipFindTenantInformation models and related requests. 
+- UnifiedRoleDefinitionAssignedPrincipals models and related requests. 
+- VirtualAppointment models and related requests. 
+- Workspace model and related requests. 
+- Models and Requests added to the ExternalConncectors namespace. 
+- Models and Requests added to the Security namespace. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Model and request classes related to the newly added entities have been modified to reference the newly added models and requests. 
+- Security namespace has been expanded to include broadened functionality. 
+- ExternalConnectors namespace has been expanded to included broadened functionality.  
+
 ## [0.52.0] - 2022-06-29
 
 ### Added
