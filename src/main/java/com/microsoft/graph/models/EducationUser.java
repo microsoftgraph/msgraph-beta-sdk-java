@@ -21,15 +21,10 @@ import com.microsoft.graph.models.EducationUserRole;
 import com.microsoft.graph.models.ProvisionedPlan;
 import com.microsoft.graph.models.EducationStudent;
 import com.microsoft.graph.models.EducationTeacher;
-import com.microsoft.graph.models.EducationAssignment;
-import com.microsoft.graph.models.EducationRubric;
-import com.microsoft.graph.models.EducationClass;
-import com.microsoft.graph.models.EducationSchool;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationAssignmentCollectionPage;
 import com.microsoft.graph.requests.EducationRubricCollectionPage;
-import com.microsoft.graph.requests.EducationClassCollectionPage;
 import com.microsoft.graph.requests.EducationSchoolCollectionPage;
 
 
@@ -274,7 +269,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Show In Address List.
-     * True if the Outlook Global Address List should contain this user; otherwise, false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
+     * 
      */
     @SerializedName(value = "showInAddressList", alternate = {"ShowInAddressList"})
     @Expose
@@ -342,7 +337,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public EducationAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.EducationAssignmentCollectionPage assignments;
 
     /**
      * The Rubrics.
@@ -351,32 +346,32 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     @SerializedName(value = "rubrics", alternate = {"Rubrics"})
     @Expose
 	@Nullable
-    public EducationRubricCollectionPage rubrics;
+    public com.microsoft.graph.requests.EducationRubricCollectionPage rubrics;
 
     /**
      * The Classes.
      * Classes to which the user belongs. Nullable.
      */
 	@Nullable
-    public EducationClassCollectionPage classes;
+    public com.microsoft.graph.requests.EducationClassCollectionPage classes;
 
     /**
      * The Schools.
      * Schools to which the user belongs. Nullable.
      */
 	@Nullable
-    public EducationSchoolCollectionPage schools;
+    public com.microsoft.graph.requests.EducationSchoolCollectionPage schools;
 
     /**
      * The Taught Classes.
      * Classes for which the user is a teacher.
      */
 	@Nullable
-    public EducationClassCollectionPage taughtClasses;
+    public com.microsoft.graph.requests.EducationClassCollectionPage taughtClasses;
 
     /**
      * The User.
-     * The directory user that corresponds to this user.
+     * 
      */
     @SerializedName(value = "user", alternate = {"User"})
     @Expose
@@ -394,23 +389,23 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), EducationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.EducationAssignmentCollectionPage.class);
         }
 
         if (json.has("rubrics")) {
-            rubrics = serializer.deserializeObject(json.get("rubrics"), EducationRubricCollectionPage.class);
+            rubrics = serializer.deserializeObject(json.get("rubrics"), com.microsoft.graph.requests.EducationRubricCollectionPage.class);
         }
 
         if (json.has("classes")) {
-            classes = serializer.deserializeObject(json.get("classes"), EducationClassCollectionPage.class);
+            classes = serializer.deserializeObject(json.get("classes"), com.microsoft.graph.requests.EducationClassCollectionPage.class);
         }
 
         if (json.has("schools")) {
-            schools = serializer.deserializeObject(json.get("schools"), EducationSchoolCollectionPage.class);
+            schools = serializer.deserializeObject(json.get("schools"), com.microsoft.graph.requests.EducationSchoolCollectionPage.class);
         }
 
         if (json.has("taughtClasses")) {
-            taughtClasses = serializer.deserializeObject(json.get("taughtClasses"), EducationClassCollectionPage.class);
+            taughtClasses = serializer.deserializeObject(json.get("taughtClasses"), com.microsoft.graph.requests.EducationClassCollectionPage.class);
         }
     }
 }

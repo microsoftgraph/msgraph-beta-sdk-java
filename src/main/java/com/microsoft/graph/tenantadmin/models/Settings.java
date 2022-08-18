@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.tenantadmin.models.IdleSessionSignOut;
 import com.microsoft.graph.tenantadmin.models.ImageTaggingChoice;
 import com.microsoft.graph.tenantadmin.models.SharingCapabilities;
 import com.microsoft.graph.tenantadmin.models.SharingDomainRestrictionMode;
@@ -66,6 +67,15 @@ public class Settings extends Entity implements IJsonBackedObject {
     public java.util.List<String> excludedFileExtensionsForSyncApp;
 
     /**
+     * The Idle Session Sign Out.
+     * Specifies the idle session sign-out policies for the tenant.
+     */
+    @SerializedName(value = "idleSessionSignOut", alternate = {"IdleSessionSignOut"})
+    @Expose
+	@Nullable
+    public IdleSessionSignOut idleSessionSignOut;
+
+    /**
      * The Image Tagging Option.
      * Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
      */
@@ -93,6 +103,15 @@ public class Settings extends Entity implements IJsonBackedObject {
     public Boolean isFileActivityNotificationEnabled;
 
     /**
+     * The Is Legacy Auth Protocols Enabled.
+     * Indicates whether legacy authentication protocols are enabled for the tenant.
+     */
+    @SerializedName(value = "isLegacyAuthProtocolsEnabled", alternate = {"IsLegacyAuthProtocolsEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isLegacyAuthProtocolsEnabled;
+
+    /**
      * The Is Loop Enabled.
      * Indicates whetherif Fluid Framework is allowed on SharePoint sites.
      */
@@ -109,6 +128,15 @@ public class Settings extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean isMacSyncAppEnabled;
+
+    /**
+     * The Is Require Accepting User To Match Invited User Enabled.
+     * Indicates whether guests must sign in using the same account to which sharing invitations are sent.
+     */
+    @SerializedName(value = "isRequireAcceptingUserToMatchInvitedUserEnabled", alternate = {"IsRequireAcceptingUserToMatchInvitedUserEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isRequireAcceptingUserToMatchInvitedUserEnabled;
 
     /**
      * The Is Resharing By External Users Enabled.

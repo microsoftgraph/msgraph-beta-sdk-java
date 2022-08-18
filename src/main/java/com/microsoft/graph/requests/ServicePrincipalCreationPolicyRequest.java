@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ServicePrincipalCreationPolicy;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.requests.ServicePrincipalCreationConditionSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.ServicePrincipalCreationConditionSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

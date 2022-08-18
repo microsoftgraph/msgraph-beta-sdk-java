@@ -14,9 +14,6 @@ import com.microsoft.graph.models.Importance;
 import com.microsoft.graph.models.PatternedRecurrence;
 import com.microsoft.graph.models.TaskStatus_v2;
 import com.microsoft.graph.models.TaskViewpoint;
-import com.microsoft.graph.models.ChecklistItem;
-import com.microsoft.graph.models.Extension;
-import com.microsoft.graph.models.LinkedResource_v2;
 import com.microsoft.graph.models.BaseTaskList;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ChecklistItemCollectionPage;
@@ -153,7 +150,7 @@ public class BaseTask extends Entity implements IJsonBackedObject {
     @SerializedName(value = "checklistItems", alternate = {"ChecklistItems"})
     @Expose
 	@Nullable
-    public ChecklistItemCollectionPage checklistItems;
+    public com.microsoft.graph.requests.ChecklistItemCollectionPage checklistItems;
 
     /**
      * The Extensions.
@@ -162,7 +159,7 @@ public class BaseTask extends Entity implements IJsonBackedObject {
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
 	@Nullable
-    public ExtensionCollectionPage extensions;
+    public com.microsoft.graph.requests.ExtensionCollectionPage extensions;
 
     /**
      * The Linked Resources.
@@ -171,7 +168,7 @@ public class BaseTask extends Entity implements IJsonBackedObject {
     @SerializedName(value = "linkedResources", alternate = {"LinkedResources"})
     @Expose
 	@Nullable
-    public LinkedResource_v2CollectionPage linkedResources;
+    public com.microsoft.graph.requests.LinkedResource_v2CollectionPage linkedResources;
 
     /**
      * The Parent List.
@@ -193,15 +190,15 @@ public class BaseTask extends Entity implements IJsonBackedObject {
 
 
         if (json.has("checklistItems")) {
-            checklistItems = serializer.deserializeObject(json.get("checklistItems"), ChecklistItemCollectionPage.class);
+            checklistItems = serializer.deserializeObject(json.get("checklistItems"), com.microsoft.graph.requests.ChecklistItemCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), com.microsoft.graph.requests.ExtensionCollectionPage.class);
         }
 
         if (json.has("linkedResources")) {
-            linkedResources = serializer.deserializeObject(json.get("linkedResources"), LinkedResource_v2CollectionPage.class);
+            linkedResources = serializer.deserializeObject(json.get("linkedResources"), com.microsoft.graph.requests.LinkedResource_v2CollectionPage.class);
         }
     }
 }

@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GeneralLedgerEntry;
-import com.microsoft.graph.requests.AccountRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class GeneralLedgerEntryRequestBuilder extends BaseRequestBuilder<General
      * @return the AccountRequestBuilder instance
      */
     @Nonnull
-    public AccountRequestBuilder account() {
-        return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
+    public com.microsoft.graph.requests.AccountRequestBuilder account() {
+        return new com.microsoft.graph.requests.AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 }

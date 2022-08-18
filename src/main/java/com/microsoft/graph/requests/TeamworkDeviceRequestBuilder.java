@@ -9,11 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamworkDevice;
 import com.microsoft.graph.models.TeamworkSoftwareType;
-import com.microsoft.graph.requests.TeamworkDeviceActivityRequestBuilder;
-import com.microsoft.graph.requests.TeamworkDeviceConfigurationRequestBuilder;
-import com.microsoft.graph.requests.TeamworkDeviceHealthRequestBuilder;
-import com.microsoft.graph.requests.TeamworkDeviceOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.TeamworkDeviceOperationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +65,8 @@ public class TeamworkDeviceRequestBuilder extends BaseRequestBuilder<TeamworkDev
      * @return the TeamworkDeviceActivityRequestBuilder instance
      */
     @Nonnull
-    public TeamworkDeviceActivityRequestBuilder activity() {
-        return new TeamworkDeviceActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activity"), getClient(), null);
+    public com.microsoft.graph.requests.TeamworkDeviceActivityRequestBuilder activity() {
+        return new com.microsoft.graph.requests.TeamworkDeviceActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activity"), getClient(), null);
     }
 
     /**
@@ -80,8 +75,8 @@ public class TeamworkDeviceRequestBuilder extends BaseRequestBuilder<TeamworkDev
      * @return the TeamworkDeviceConfigurationRequestBuilder instance
      */
     @Nonnull
-    public TeamworkDeviceConfigurationRequestBuilder configuration() {
-        return new TeamworkDeviceConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("configuration"), getClient(), null);
+    public com.microsoft.graph.requests.TeamworkDeviceConfigurationRequestBuilder configuration() {
+        return new com.microsoft.graph.requests.TeamworkDeviceConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("configuration"), getClient(), null);
     }
 
     /**
@@ -90,8 +85,8 @@ public class TeamworkDeviceRequestBuilder extends BaseRequestBuilder<TeamworkDev
      * @return the TeamworkDeviceHealthRequestBuilder instance
      */
     @Nonnull
-    public TeamworkDeviceHealthRequestBuilder health() {
-        return new TeamworkDeviceHealthRequestBuilder(getRequestUrlWithAdditionalSegment("health"), getClient(), null);
+    public com.microsoft.graph.requests.TeamworkDeviceHealthRequestBuilder health() {
+        return new com.microsoft.graph.requests.TeamworkDeviceHealthRequestBuilder(getRequestUrlWithAdditionalSegment("health"), getClient(), null);
     }
     /**
      *  Gets a request builder for the TeamworkDeviceOperation collection
@@ -99,8 +94,8 @@ public class TeamworkDeviceRequestBuilder extends BaseRequestBuilder<TeamworkDev
      * @return the collection request builder
      */
     @Nonnull
-    public TeamworkDeviceOperationCollectionRequestBuilder operations() {
-        return new TeamworkDeviceOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public com.microsoft.graph.requests.TeamworkDeviceOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.requests.TeamworkDeviceOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     /**
@@ -110,8 +105,8 @@ public class TeamworkDeviceRequestBuilder extends BaseRequestBuilder<TeamworkDev
      * @param id the item identifier
      */
     @Nonnull
-    public TeamworkDeviceOperationRequestBuilder operations(@Nonnull final String id) {
-        return new TeamworkDeviceOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TeamworkDeviceOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamworkDeviceOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 
     /**

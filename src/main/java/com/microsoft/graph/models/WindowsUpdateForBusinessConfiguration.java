@@ -18,7 +18,6 @@ import com.microsoft.graph.models.PrereleaseFeatures;
 import com.microsoft.graph.models.WindowsUpdateNotificationDisplayOption;
 import com.microsoft.graph.models.WindowsUpdateForBusinessUpdateWeeks;
 import com.microsoft.graph.models.Enablement;
-import com.microsoft.graph.models.WindowsUpdateState;
 import com.microsoft.graph.models.DeviceConfiguration;
 import com.microsoft.graph.requests.WindowsUpdateStateCollectionPage;
 
@@ -368,7 +367,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @SerializedName(value = "deviceUpdateStates", alternate = {"DeviceUpdateStates"})
     @Expose
 	@Nullable
-    public WindowsUpdateStateCollectionPage deviceUpdateStates;
+    public com.microsoft.graph.requests.WindowsUpdateStateCollectionPage deviceUpdateStates;
 
 
     /**
@@ -381,7 +380,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
 
         if (json.has("deviceUpdateStates")) {
-            deviceUpdateStates = serializer.deserializeObject(json.get("deviceUpdateStates"), WindowsUpdateStateCollectionPage.class);
+            deviceUpdateStates = serializer.deserializeObject(json.get("deviceUpdateStates"), com.microsoft.graph.requests.WindowsUpdateStateCollectionPage.class);
         }
     }
 }

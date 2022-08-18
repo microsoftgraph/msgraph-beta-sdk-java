@@ -13,17 +13,12 @@ import com.microsoft.graph.models.EducationCourse;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EducationExternalSource;
 import com.microsoft.graph.models.EducationTerm;
-import com.microsoft.graph.models.EducationCategory;
 import com.microsoft.graph.models.EducationAssignmentDefaults;
-import com.microsoft.graph.models.EducationAssignment;
 import com.microsoft.graph.models.EducationAssignmentSettings;
 import com.microsoft.graph.models.Group;
-import com.microsoft.graph.models.EducationUser;
-import com.microsoft.graph.models.EducationSchool;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationCategoryCollectionPage;
 import com.microsoft.graph.requests.EducationAssignmentCollectionPage;
-import com.microsoft.graph.requests.EducationUserCollectionPage;
 import com.microsoft.graph.requests.EducationSchoolCollectionPage;
 
 
@@ -156,7 +151,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignmentCategories", alternate = {"AssignmentCategories"})
     @Expose
 	@Nullable
-    public EducationCategoryCollectionPage assignmentCategories;
+    public com.microsoft.graph.requests.EducationCategoryCollectionPage assignmentCategories;
 
     /**
      * The Assignment Defaults.
@@ -174,7 +169,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public EducationAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.EducationAssignmentCollectionPage assignments;
 
     /**
      * The Assignment Settings.
@@ -187,7 +182,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Group.
-     * The underlying Microsoft 365 group object.
+     * 
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose
@@ -199,21 +194,21 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      * All users in the class. Nullable.
      */
 	@Nullable
-    public EducationUserCollectionPage members;
+    public com.microsoft.graph.requests.EducationUserCollectionPage members;
 
     /**
      * The Schools.
      * All schools that this class is associated with. Nullable.
      */
 	@Nullable
-    public EducationSchoolCollectionPage schools;
+    public com.microsoft.graph.requests.EducationSchoolCollectionPage schools;
 
     /**
      * The Teachers.
      * All teachers in the class. Nullable.
      */
 	@Nullable
-    public EducationUserCollectionPage teachers;
+    public com.microsoft.graph.requests.EducationUserCollectionPage teachers;
 
 
     /**
@@ -226,23 +221,23 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignmentCategories")) {
-            assignmentCategories = serializer.deserializeObject(json.get("assignmentCategories"), EducationCategoryCollectionPage.class);
+            assignmentCategories = serializer.deserializeObject(json.get("assignmentCategories"), com.microsoft.graph.requests.EducationCategoryCollectionPage.class);
         }
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), EducationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.EducationAssignmentCollectionPage.class);
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), EducationUserCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.EducationUserCollectionPage.class);
         }
 
         if (json.has("schools")) {
-            schools = serializer.deserializeObject(json.get("schools"), EducationSchoolCollectionPage.class);
+            schools = serializer.deserializeObject(json.get("schools"), com.microsoft.graph.requests.EducationSchoolCollectionPage.class);
         }
 
         if (json.has("teachers")) {
-            teachers = serializer.deserializeObject(json.get("teachers"), EducationUserCollectionPage.class);
+            teachers = serializer.deserializeObject(json.get("teachers"), com.microsoft.graph.requests.EducationUserCollectionPage.class);
         }
     }
 }

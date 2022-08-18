@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.VpnOnDemandRuleConnectionAction;
 import com.microsoft.graph.models.VpnOnDemandRuleConnectionDomainAction;
+import com.microsoft.graph.models.VpnOnDemandRuleInterfaceTypeMatch;
 
 
 import com.google.gson.JsonObject;
@@ -59,6 +60,15 @@ public class VpnOnDemandRule implements IJsonBackedObject {
     public java.util.List<String> dnsSearchDomains;
 
     /**
+     * The Dns Server Address Match.
+     * DNS Search Server Address.
+     */
+    @SerializedName(value = "dnsServerAddressMatch", alternate = {"DnsServerAddressMatch"})
+    @Expose
+	@Nullable
+    public java.util.List<String> dnsServerAddressMatch;
+
+    /**
      * The Domain Action.
      * Domain Action (Only applicable when Action is evaluate connection). Possible values are: connectIfNeeded, neverConnect.
      */
@@ -75,6 +85,15 @@ public class VpnOnDemandRule implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<String> domains;
+
+    /**
+     * The Interface Type Match.
+     * Network interface to trigger VPN. Possible values are: notConfigured, ethernet, wiFi, cellular.
+     */
+    @SerializedName(value = "interfaceTypeMatch", alternate = {"InterfaceTypeMatch"})
+    @Expose
+	@Nullable
+    public VpnOnDemandRuleInterfaceTypeMatch interfaceTypeMatch;
 
     /**
      * The Probe Required Url.

@@ -10,8 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SynchronizationSecretKeyStringValuePair;
-import com.microsoft.graph.models.SynchronizationJob;
-import com.microsoft.graph.models.SynchronizationTemplate;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SynchronizationJobCollectionPage;
 import com.microsoft.graph.requests.SynchronizationTemplateCollectionPage;
@@ -47,7 +45,7 @@ public class Synchronization extends Entity implements IJsonBackedObject {
     @SerializedName(value = "jobs", alternate = {"Jobs"})
     @Expose
 	@Nullable
-    public SynchronizationJobCollectionPage jobs;
+    public com.microsoft.graph.requests.SynchronizationJobCollectionPage jobs;
 
     /**
      * The Templates.
@@ -56,7 +54,7 @@ public class Synchronization extends Entity implements IJsonBackedObject {
     @SerializedName(value = "templates", alternate = {"Templates"})
     @Expose
 	@Nullable
-    public SynchronizationTemplateCollectionPage templates;
+    public com.microsoft.graph.requests.SynchronizationTemplateCollectionPage templates;
 
 
     /**
@@ -69,11 +67,11 @@ public class Synchronization extends Entity implements IJsonBackedObject {
 
 
         if (json.has("jobs")) {
-            jobs = serializer.deserializeObject(json.get("jobs"), SynchronizationJobCollectionPage.class);
+            jobs = serializer.deserializeObject(json.get("jobs"), com.microsoft.graph.requests.SynchronizationJobCollectionPage.class);
         }
 
         if (json.has("templates")) {
-            templates = serializer.deserializeObject(json.get("templates"), SynchronizationTemplateCollectionPage.class);
+            templates = serializer.deserializeObject(json.get("templates"), com.microsoft.graph.requests.SynchronizationTemplateCollectionPage.class);
         }
     }
 }

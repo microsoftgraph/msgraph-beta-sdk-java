@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ConnectionInfo;
-import com.microsoft.graph.models.AccessPackageResource;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageResourceCollectionPage;
 
@@ -124,7 +123,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
      * Read-only. Required.
      */
 	@Nullable
-    public AccessPackageResourceCollectionPage accessPackageResources;
+    public com.microsoft.graph.requests.AccessPackageResourceCollectionPage accessPackageResources;
 
 
     /**
@@ -137,7 +136,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
 
         if (json.has("accessPackageResources")) {
-            accessPackageResources = serializer.deserializeObject(json.get("accessPackageResources"), AccessPackageResourceCollectionPage.class);
+            accessPackageResources = serializer.deserializeObject(json.get("accessPackageResources"), com.microsoft.graph.requests.AccessPackageResourceCollectionPage.class);
         }
     }
 }

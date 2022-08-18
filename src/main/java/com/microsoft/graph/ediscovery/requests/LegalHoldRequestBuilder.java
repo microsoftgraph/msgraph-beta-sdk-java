@@ -8,12 +8,6 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.LegalHold;
-import com.microsoft.graph.ediscovery.requests.SiteSourceCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.SiteSourceRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.UnifiedGroupSourceCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.UnifiedGroupSourceRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.UserSourceCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.UserSourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +62,8 @@ public class LegalHoldRequestBuilder extends BaseRequestBuilder<LegalHold> {
      * @return the collection request builder
      */
     @Nonnull
-    public SiteSourceCollectionRequestBuilder siteSources() {
-        return new SiteSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.SiteSourceCollectionRequestBuilder siteSources() {
+        return new com.microsoft.graph.ediscovery.requests.SiteSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class LegalHoldRequestBuilder extends BaseRequestBuilder<LegalHold> {
      * @param id the item identifier
      */
     @Nonnull
-    public SiteSourceRequestBuilder siteSources(@Nonnull final String id) {
-        return new SiteSourceRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.SiteSourceRequestBuilder siteSources(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.SiteSourceRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UnifiedGroupSource collection
@@ -88,8 +82,8 @@ public class LegalHoldRequestBuilder extends BaseRequestBuilder<LegalHold> {
      * @return the collection request builder
      */
     @Nonnull
-    public UnifiedGroupSourceCollectionRequestBuilder unifiedGroupSources() {
-        return new UnifiedGroupSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.UnifiedGroupSourceCollectionRequestBuilder unifiedGroupSources() {
+        return new com.microsoft.graph.ediscovery.requests.UnifiedGroupSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources"), getClient(), null);
     }
 
     /**
@@ -99,8 +93,8 @@ public class LegalHoldRequestBuilder extends BaseRequestBuilder<LegalHold> {
      * @param id the item identifier
      */
     @Nonnull
-    public UnifiedGroupSourceRequestBuilder unifiedGroupSources(@Nonnull final String id) {
-        return new UnifiedGroupSourceRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.UnifiedGroupSourceRequestBuilder unifiedGroupSources(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.UnifiedGroupSourceRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserSource collection
@@ -108,8 +102,8 @@ public class LegalHoldRequestBuilder extends BaseRequestBuilder<LegalHold> {
      * @return the collection request builder
      */
     @Nonnull
-    public UserSourceCollectionRequestBuilder userSources() {
-        return new UserSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userSources"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.UserSourceCollectionRequestBuilder userSources() {
+        return new com.microsoft.graph.ediscovery.requests.UserSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userSources"), getClient(), null);
     }
 
     /**
@@ -119,7 +113,7 @@ public class LegalHoldRequestBuilder extends BaseRequestBuilder<LegalHold> {
      * @param id the item identifier
      */
     @Nonnull
-    public UserSourceRequestBuilder userSources(@Nonnull final String id) {
-        return new UserSourceRequestBuilder(getRequestUrlWithAdditionalSegment("userSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.UserSourceRequestBuilder userSources(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.UserSourceRequestBuilder(getRequestUrlWithAdditionalSegment("userSources") + "/" + id, getClient(), null);
     }
 }

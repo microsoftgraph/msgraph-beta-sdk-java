@@ -13,8 +13,6 @@ import com.microsoft.graph.models.AttributeDefinition;
 import com.microsoft.graph.models.ParseExpressionResponse;
 import com.microsoft.graph.models.FilterOperatorSchema;
 import com.microsoft.graph.models.AttributeMappingFunctionSchema;
-import com.microsoft.graph.requests.DirectoryDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.DirectoryDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

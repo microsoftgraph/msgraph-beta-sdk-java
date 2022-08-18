@@ -76,6 +76,14 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     ENDPOINT_CONNECTIVITY_CHECK_INTUNE_URL_NOT_ALLOW_LISTED,
     /**
+    * endpoint Connectivity Check Azure ADUrl Not Allow Listed
+    */
+    ENDPOINT_CONNECTIVITY_CHECK_AZURE_AD_URL_NOT_ALLOW_LISTED,
+    /**
+    * endpoint Connectivity Check Locale Url Not Allow Listed
+    */
+    ENDPOINT_CONNECTIVITY_CHECK_LOCALE_URL_NOT_ALLOW_LISTED,
+    /**
     * endpoint Connectivity Check Unknown Error
     */
     ENDPOINT_CONNECTIVITY_CHECK_UNKNOWN_ERROR,
@@ -171,6 +179,18 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     * resource Availability Check Resource Group Locked For Delete
     */
     RESOURCE_AVAILABILITY_CHECK_RESOURCE_GROUP_LOCKED_FOR_DELETE,
+    /**
+    * resource Availability Check No Intune Reader Role Error
+    */
+    RESOURCE_AVAILABILITY_CHECK_NO_INTUNE_READER_ROLE_ERROR,
+    /**
+    * resource Availability Check Intune Default Windows Restriction Violation
+    */
+    RESOURCE_AVAILABILITY_CHECK_INTUNE_DEFAULT_WINDOWS_RESTRICTION_VIOLATION,
+    /**
+    * resource Availability Check Intune Custom Windows Restriction Violation
+    */
+    RESOURCE_AVAILABILITY_CHECK_INTUNE_CUSTOM_WINDOWS_RESTRICTION_VIOLATION,
     /**
     * resource Availability Check Transient Service Error
     */

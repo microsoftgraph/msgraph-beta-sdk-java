@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Approval;
 import com.microsoft.graph.models.ApprovalFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.ApprovalStepCollectionRequestBuilder;
-import com.microsoft.graph.requests.ApprovalStepRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

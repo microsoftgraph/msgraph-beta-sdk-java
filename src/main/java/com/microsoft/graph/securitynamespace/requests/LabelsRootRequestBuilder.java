@@ -8,8 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.LabelsRoot;
-import com.microsoft.graph.security.requests.RetentionLabelCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.RetentionLabelRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class LabelsRootRequestBuilder extends BaseRequestBuilder<LabelsRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public RetentionLabelCollectionRequestBuilder retentionLabels() {
-        return new RetentionLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("retentionLabels"), getClient(), null);
+    public com.microsoft.graph.security.requests.RetentionLabelCollectionRequestBuilder retentionLabels() {
+        return new com.microsoft.graph.security.requests.RetentionLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("retentionLabels"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class LabelsRootRequestBuilder extends BaseRequestBuilder<LabelsRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public RetentionLabelRequestBuilder retentionLabels(@Nonnull final String id) {
-        return new RetentionLabelRequestBuilder(getRequestUrlWithAdditionalSegment("retentionLabels") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.RetentionLabelRequestBuilder retentionLabels(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.RetentionLabelRequestBuilder(getRequestUrlWithAdditionalSegment("retentionLabels") + "/" + id, getClient(), null);
     }
 }

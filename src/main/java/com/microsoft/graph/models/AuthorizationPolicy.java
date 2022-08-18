@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AllowInvitesFrom;
 import com.microsoft.graph.models.DefaultUserRolePermissions;
-import com.microsoft.graph.models.DefaultUserRoleOverride;
 import com.microsoft.graph.models.PolicyBase;
 import com.microsoft.graph.requests.DefaultUserRoleOverrideCollectionPage;
 
@@ -118,7 +117,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
     @SerializedName(value = "defaultUserRoleOverrides", alternate = {"DefaultUserRoleOverrides"})
     @Expose
 	@Nullable
-    public DefaultUserRoleOverrideCollectionPage defaultUserRoleOverrides;
+    public com.microsoft.graph.requests.DefaultUserRoleOverrideCollectionPage defaultUserRoleOverrides;
 
 
     /**
@@ -131,7 +130,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
 
         if (json.has("defaultUserRoleOverrides")) {
-            defaultUserRoleOverrides = serializer.deserializeObject(json.get("defaultUserRoleOverrides"), DefaultUserRoleOverrideCollectionPage.class);
+            defaultUserRoleOverrides = serializer.deserializeObject(json.get("defaultUserRoleOverrides"), com.microsoft.graph.requests.DefaultUserRoleOverrideCollectionPage.class);
         }
     }
 }

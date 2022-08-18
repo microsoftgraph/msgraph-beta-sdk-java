@@ -10,16 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.BookingBusiness;
 import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.models.StaffAvailabilityItem;
-import com.microsoft.graph.requests.BookingAppointmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.BookingAppointmentRequestBuilder;
-import com.microsoft.graph.requests.BookingCustomerCollectionRequestBuilder;
-import com.microsoft.graph.requests.BookingCustomerRequestBuilder;
-import com.microsoft.graph.requests.BookingCustomQuestionCollectionRequestBuilder;
-import com.microsoft.graph.requests.BookingCustomQuestionRequestBuilder;
-import com.microsoft.graph.requests.BookingServiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.BookingServiceRequestBuilder;
-import com.microsoft.graph.requests.BookingStaffMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.BookingStaffMemberRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -75,8 +65,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @return the collection request builder
      */
     @Nonnull
-    public BookingAppointmentCollectionRequestBuilder appointments() {
-        return new BookingAppointmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appointments"), getClient(), null);
+    public com.microsoft.graph.requests.BookingAppointmentCollectionRequestBuilder appointments() {
+        return new com.microsoft.graph.requests.BookingAppointmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appointments"), getClient(), null);
     }
 
     /**
@@ -86,8 +76,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @param id the item identifier
      */
     @Nonnull
-    public BookingAppointmentRequestBuilder appointments(@Nonnull final String id) {
-        return new BookingAppointmentRequestBuilder(getRequestUrlWithAdditionalSegment("appointments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BookingAppointmentRequestBuilder appointments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BookingAppointmentRequestBuilder(getRequestUrlWithAdditionalSegment("appointments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the BookingAppointment collection
@@ -95,8 +85,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @return the collection request builder
      */
     @Nonnull
-    public BookingAppointmentCollectionRequestBuilder calendarView() {
-        return new BookingAppointmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
+    public com.microsoft.graph.requests.BookingAppointmentCollectionRequestBuilder calendarView() {
+        return new com.microsoft.graph.requests.BookingAppointmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
     }
 
     /**
@@ -106,8 +96,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @param id the item identifier
      */
     @Nonnull
-    public BookingAppointmentRequestBuilder calendarView(@Nonnull final String id) {
-        return new BookingAppointmentRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BookingAppointmentRequestBuilder calendarView(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BookingAppointmentRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the BookingCustomer collection
@@ -115,8 +105,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @return the collection request builder
      */
     @Nonnull
-    public BookingCustomerCollectionRequestBuilder customers() {
-        return new BookingCustomerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customers"), getClient(), null);
+    public com.microsoft.graph.requests.BookingCustomerCollectionRequestBuilder customers() {
+        return new com.microsoft.graph.requests.BookingCustomerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customers"), getClient(), null);
     }
 
     /**
@@ -126,8 +116,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @param id the item identifier
      */
     @Nonnull
-    public BookingCustomerRequestBuilder customers(@Nonnull final String id) {
-        return new BookingCustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customers") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BookingCustomerRequestBuilder customers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BookingCustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customers") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the BookingCustomQuestion collection
@@ -135,8 +125,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @return the collection request builder
      */
     @Nonnull
-    public BookingCustomQuestionCollectionRequestBuilder customQuestions() {
-        return new BookingCustomQuestionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customQuestions"), getClient(), null);
+    public com.microsoft.graph.requests.BookingCustomQuestionCollectionRequestBuilder customQuestions() {
+        return new com.microsoft.graph.requests.BookingCustomQuestionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customQuestions"), getClient(), null);
     }
 
     /**
@@ -146,8 +136,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @param id the item identifier
      */
     @Nonnull
-    public BookingCustomQuestionRequestBuilder customQuestions(@Nonnull final String id) {
-        return new BookingCustomQuestionRequestBuilder(getRequestUrlWithAdditionalSegment("customQuestions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BookingCustomQuestionRequestBuilder customQuestions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BookingCustomQuestionRequestBuilder(getRequestUrlWithAdditionalSegment("customQuestions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the BookingService collection
@@ -155,8 +145,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @return the collection request builder
      */
     @Nonnull
-    public BookingServiceCollectionRequestBuilder services() {
-        return new BookingServiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("services"), getClient(), null);
+    public com.microsoft.graph.requests.BookingServiceCollectionRequestBuilder services() {
+        return new com.microsoft.graph.requests.BookingServiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("services"), getClient(), null);
     }
 
     /**
@@ -166,8 +156,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @param id the item identifier
      */
     @Nonnull
-    public BookingServiceRequestBuilder services(@Nonnull final String id) {
-        return new BookingServiceRequestBuilder(getRequestUrlWithAdditionalSegment("services") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BookingServiceRequestBuilder services(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BookingServiceRequestBuilder(getRequestUrlWithAdditionalSegment("services") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the BookingStaffMember collection
@@ -175,8 +165,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @return the collection request builder
      */
     @Nonnull
-    public BookingStaffMemberCollectionRequestBuilder staffMembers() {
-        return new BookingStaffMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("staffMembers"), getClient(), null);
+    public com.microsoft.graph.requests.BookingStaffMemberCollectionRequestBuilder staffMembers() {
+        return new com.microsoft.graph.requests.BookingStaffMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("staffMembers"), getClient(), null);
     }
 
     /**
@@ -186,8 +176,8 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
      * @param id the item identifier
      */
     @Nonnull
-    public BookingStaffMemberRequestBuilder staffMembers(@Nonnull final String id) {
-        return new BookingStaffMemberRequestBuilder(getRequestUrlWithAdditionalSegment("staffMembers") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BookingStaffMemberRequestBuilder staffMembers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BookingStaffMemberRequestBuilder(getRequestUrlWithAdditionalSegment("staffMembers") + "/" + id, getClient(), null);
     }
 
     /**

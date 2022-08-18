@@ -42,7 +42,6 @@ import com.microsoft.graph.models.WindowsStartMenuAppListVisibilityType;
 import com.microsoft.graph.models.WindowsStartMenuModeType;
 import com.microsoft.graph.models.Windows10AppsForceUpdateSchedule;
 import com.microsoft.graph.models.WindowsSpotlightEnablementSettings;
-import com.microsoft.graph.models.WindowsPrivacyDataAccessControlItem;
 import com.microsoft.graph.models.DeviceConfiguration;
 import com.microsoft.graph.requests.WindowsPrivacyDataAccessControlItemCollectionPage;
 
@@ -2606,7 +2605,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     @SerializedName(value = "privacyAccessControls", alternate = {"PrivacyAccessControls"})
     @Expose
 	@Nullable
-    public WindowsPrivacyDataAccessControlItemCollectionPage privacyAccessControls;
+    public com.microsoft.graph.requests.WindowsPrivacyDataAccessControlItemCollectionPage privacyAccessControls;
 
 
     /**
@@ -2619,7 +2618,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
 
         if (json.has("privacyAccessControls")) {
-            privacyAccessControls = serializer.deserializeObject(json.get("privacyAccessControls"), WindowsPrivacyDataAccessControlItemCollectionPage.class);
+            privacyAccessControls = serializer.deserializeObject(json.get("privacyAccessControls"), com.microsoft.graph.requests.WindowsPrivacyDataAccessControlItemCollectionPage.class);
         }
     }
 }

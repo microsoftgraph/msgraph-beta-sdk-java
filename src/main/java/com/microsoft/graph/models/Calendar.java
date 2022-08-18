@@ -12,13 +12,8 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OnlineMeetingProviderType;
 import com.microsoft.graph.models.CalendarColor;
 import com.microsoft.graph.models.EmailAddress;
-import com.microsoft.graph.models.CalendarPermission;
-import com.microsoft.graph.models.Event;
-import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CalendarPermissionCollectionPage;
-import com.microsoft.graph.requests.EventCollectionPage;
 import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage;
 
@@ -188,7 +183,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
     @SerializedName(value = "calendarPermissions", alternate = {"CalendarPermissions"})
     @Expose
 	@Nullable
-    public CalendarPermissionCollectionPage calendarPermissions;
+    public com.microsoft.graph.requests.CalendarPermissionCollectionPage calendarPermissions;
 
     /**
      * The Calendar View.
@@ -197,7 +192,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
     @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
 	@Nullable
-    public EventCollectionPage calendarView;
+    public com.microsoft.graph.requests.EventCollectionPage calendarView;
 
     /**
      * The Events.
@@ -206,7 +201,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose
 	@Nullable
-    public EventCollectionPage events;
+    public com.microsoft.graph.requests.EventCollectionPage events;
 
     /**
      * The Multi Value Extended Properties.
@@ -215,7 +210,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
 	@Nullable
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -224,7 +219,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
 	@Nullable
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -237,23 +232,23 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calendarPermissions")) {
-            calendarPermissions = serializer.deserializeObject(json.get("calendarPermissions"), CalendarPermissionCollectionPage.class);
+            calendarPermissions = serializer.deserializeObject(json.get("calendarPermissions"), com.microsoft.graph.requests.CalendarPermissionCollectionPage.class);
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView"), EventCollectionPage.class);
+            calendarView = serializer.deserializeObject(json.get("calendarView"), com.microsoft.graph.requests.EventCollectionPage.class);
         }
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events"), EventCollectionPage.class);
+            events = serializer.deserializeObject(json.get("events"), com.microsoft.graph.requests.EventCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

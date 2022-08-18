@@ -28,6 +28,10 @@ public enum UserExperienceAnalyticsHealthState
     */
     MEETING_GOALS,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For UserExperienceAnalyticsHealthState values that were not expected from the service
     */
     UNEXPECTED_VALUE

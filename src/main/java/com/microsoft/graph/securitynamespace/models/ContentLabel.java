@@ -40,7 +40,7 @@ public class ContentLabel implements IJsonBackedObject {
 
     /**
      * The Assignment Method.
-     * 
+     * Describes whether the label was applied by an automated (standard) process or a person (privileged).
      */
     @SerializedName(value = "assignmentMethod", alternate = {"AssignmentMethod"})
     @Expose

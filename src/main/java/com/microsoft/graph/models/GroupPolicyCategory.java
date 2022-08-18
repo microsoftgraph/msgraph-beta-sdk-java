@@ -9,11 +9,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.GroupPolicyCategory;
+import com.microsoft.graph.models.IngestionSource;
 import com.microsoft.graph.models.GroupPolicyDefinitionFile;
-import com.microsoft.graph.models.GroupPolicyDefinition;
+import com.microsoft.graph.models.GroupPolicyCategory;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.GroupPolicyCategoryCollectionPage;
 import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage;
 
 
@@ -41,6 +40,15 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Ingestion Source.
+     * Defines this category's ingestion source (0 - unknown, 1 - custom, 2 - global). Possible values are: unknown, custom, builtIn, unknownFutureValue.
+     */
+    @SerializedName(value = "ingestionSource", alternate = {"IngestionSource"})
+    @Expose
+	@Nullable
+    public IngestionSource ingestionSource;
+
+    /**
      * The Is Root.
      * Defines if the category is a root category
      */
@@ -63,7 +71,7 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
      * The children categories
      */
 	@Nullable
-    public GroupPolicyCategoryCollectionPage children;
+    public com.microsoft.graph.requests.GroupPolicyCategoryCollectionPage children;
 
     /**
      * The Definition File.
@@ -79,7 +87,7 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
      * The immediate GroupPolicyDefinition children of the category
      */
 	@Nullable
-    public GroupPolicyDefinitionCollectionPage definitions;
+    public com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage definitions;
 
     /**
      * The Parent.
@@ -101,11 +109,11 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
 
 
         if (json.has("children")) {
-            children = serializer.deserializeObject(json.get("children"), GroupPolicyCategoryCollectionPage.class);
+            children = serializer.deserializeObject(json.get("children"), com.microsoft.graph.requests.GroupPolicyCategoryCollectionPage.class);
         }
 
         if (json.has("definitions")) {
-            definitions = serializer.deserializeObject(json.get("definitions"), GroupPolicyDefinitionCollectionPage.class);
+            definitions = serializer.deserializeObject(json.get("definitions"), com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage.class);
         }
     }
 }

@@ -9,14 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ExactMatchDataStore;
-import com.microsoft.graph.models.JobResponseBase;
-import com.microsoft.graph.models.SensitiveType;
-import com.microsoft.graph.models.SensitivityLabel;
-import com.microsoft.graph.models.ExactMatchUploadAgent;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ExactMatchDataStoreCollectionPage;
-import com.microsoft.graph.requests.JobResponseBaseCollectionPage;
 import com.microsoft.graph.requests.SensitiveTypeCollectionPage;
 import com.microsoft.graph.requests.SensitivityLabelCollectionPage;
 import com.microsoft.graph.requests.ExactMatchUploadAgentCollectionPage;
@@ -43,7 +37,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     @SerializedName(value = "exactMatchDataStores", alternate = {"ExactMatchDataStores"})
     @Expose
 	@Nullable
-    public ExactMatchDataStoreCollectionPage exactMatchDataStores;
+    public com.microsoft.graph.requests.ExactMatchDataStoreCollectionPage exactMatchDataStores;
 
     /**
      * The Classify File Jobs.
@@ -52,7 +46,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     @SerializedName(value = "classifyFileJobs", alternate = {"ClassifyFileJobs"})
     @Expose
 	@Nullable
-    public JobResponseBaseCollectionPage classifyFileJobs;
+    public com.microsoft.graph.requests.JobResponseBaseCollectionPage classifyFileJobs;
 
     /**
      * The Classify Text Jobs.
@@ -61,7 +55,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     @SerializedName(value = "classifyTextJobs", alternate = {"ClassifyTextJobs"})
     @Expose
 	@Nullable
-    public JobResponseBaseCollectionPage classifyTextJobs;
+    public com.microsoft.graph.requests.JobResponseBaseCollectionPage classifyTextJobs;
 
     /**
      * The Evaluate Dlp Policies Jobs.
@@ -70,7 +64,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     @SerializedName(value = "evaluateDlpPoliciesJobs", alternate = {"EvaluateDlpPoliciesJobs"})
     @Expose
 	@Nullable
-    public JobResponseBaseCollectionPage evaluateDlpPoliciesJobs;
+    public com.microsoft.graph.requests.JobResponseBaseCollectionPage evaluateDlpPoliciesJobs;
 
     /**
      * The Evaluate Label Jobs.
@@ -79,7 +73,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     @SerializedName(value = "evaluateLabelJobs", alternate = {"EvaluateLabelJobs"})
     @Expose
 	@Nullable
-    public JobResponseBaseCollectionPage evaluateLabelJobs;
+    public com.microsoft.graph.requests.JobResponseBaseCollectionPage evaluateLabelJobs;
 
     /**
      * The Jobs.
@@ -88,7 +82,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     @SerializedName(value = "jobs", alternate = {"Jobs"})
     @Expose
 	@Nullable
-    public JobResponseBaseCollectionPage jobs;
+    public com.microsoft.graph.requests.JobResponseBaseCollectionPage jobs;
 
     /**
      * The Sensitive Types.
@@ -97,7 +91,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     @SerializedName(value = "sensitiveTypes", alternate = {"SensitiveTypes"})
     @Expose
 	@Nullable
-    public SensitiveTypeCollectionPage sensitiveTypes;
+    public com.microsoft.graph.requests.SensitiveTypeCollectionPage sensitiveTypes;
 
     /**
      * The Sensitivity Labels.
@@ -106,7 +100,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     @SerializedName(value = "sensitivityLabels", alternate = {"SensitivityLabels"})
     @Expose
 	@Nullable
-    public SensitivityLabelCollectionPage sensitivityLabels;
+    public com.microsoft.graph.requests.SensitivityLabelCollectionPage sensitivityLabels;
 
     /**
      * The Exact Match Upload Agents.
@@ -115,7 +109,7 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     @SerializedName(value = "exactMatchUploadAgents", alternate = {"ExactMatchUploadAgents"})
     @Expose
 	@Nullable
-    public ExactMatchUploadAgentCollectionPage exactMatchUploadAgents;
+    public com.microsoft.graph.requests.ExactMatchUploadAgentCollectionPage exactMatchUploadAgents;
 
 
     /**
@@ -128,39 +122,39 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
 
 
         if (json.has("exactMatchDataStores")) {
-            exactMatchDataStores = serializer.deserializeObject(json.get("exactMatchDataStores"), ExactMatchDataStoreCollectionPage.class);
+            exactMatchDataStores = serializer.deserializeObject(json.get("exactMatchDataStores"), com.microsoft.graph.requests.ExactMatchDataStoreCollectionPage.class);
         }
 
         if (json.has("classifyFileJobs")) {
-            classifyFileJobs = serializer.deserializeObject(json.get("classifyFileJobs"), JobResponseBaseCollectionPage.class);
+            classifyFileJobs = serializer.deserializeObject(json.get("classifyFileJobs"), com.microsoft.graph.requests.JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("classifyTextJobs")) {
-            classifyTextJobs = serializer.deserializeObject(json.get("classifyTextJobs"), JobResponseBaseCollectionPage.class);
+            classifyTextJobs = serializer.deserializeObject(json.get("classifyTextJobs"), com.microsoft.graph.requests.JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("evaluateDlpPoliciesJobs")) {
-            evaluateDlpPoliciesJobs = serializer.deserializeObject(json.get("evaluateDlpPoliciesJobs"), JobResponseBaseCollectionPage.class);
+            evaluateDlpPoliciesJobs = serializer.deserializeObject(json.get("evaluateDlpPoliciesJobs"), com.microsoft.graph.requests.JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("evaluateLabelJobs")) {
-            evaluateLabelJobs = serializer.deserializeObject(json.get("evaluateLabelJobs"), JobResponseBaseCollectionPage.class);
+            evaluateLabelJobs = serializer.deserializeObject(json.get("evaluateLabelJobs"), com.microsoft.graph.requests.JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("jobs")) {
-            jobs = serializer.deserializeObject(json.get("jobs"), JobResponseBaseCollectionPage.class);
+            jobs = serializer.deserializeObject(json.get("jobs"), com.microsoft.graph.requests.JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("sensitiveTypes")) {
-            sensitiveTypes = serializer.deserializeObject(json.get("sensitiveTypes"), SensitiveTypeCollectionPage.class);
+            sensitiveTypes = serializer.deserializeObject(json.get("sensitiveTypes"), com.microsoft.graph.requests.SensitiveTypeCollectionPage.class);
         }
 
         if (json.has("sensitivityLabels")) {
-            sensitivityLabels = serializer.deserializeObject(json.get("sensitivityLabels"), SensitivityLabelCollectionPage.class);
+            sensitivityLabels = serializer.deserializeObject(json.get("sensitivityLabels"), com.microsoft.graph.requests.SensitivityLabelCollectionPage.class);
         }
 
         if (json.has("exactMatchUploadAgents")) {
-            exactMatchUploadAgents = serializer.deserializeObject(json.get("exactMatchUploadAgents"), ExactMatchUploadAgentCollectionPage.class);
+            exactMatchUploadAgents = serializer.deserializeObject(json.get("exactMatchUploadAgents"), com.microsoft.graph.requests.ExactMatchUploadAgentCollectionPage.class);
         }
     }
 }

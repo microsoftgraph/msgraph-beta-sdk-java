@@ -62,8 +62,8 @@ public class RiskyServicePrincipalHistoryItemRequestBuilder extends BaseRequestB
      * @return the collection request builder
      */
     @Nonnull
-    public RiskyServicePrincipalHistoryItemCollectionRequestBuilder history() {
-        return new RiskyServicePrincipalHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("history"), getClient(), null);
+    public com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemCollectionRequestBuilder history() {
+        return new com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("history"), getClient(), null);
     }
 
     /**
@@ -73,7 +73,7 @@ public class RiskyServicePrincipalHistoryItemRequestBuilder extends BaseRequestB
      * @param id the item identifier
      */
     @Nonnull
-    public RiskyServicePrincipalHistoryItemRequestBuilder history(@Nonnull final String id) {
-        return new RiskyServicePrincipalHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("history") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemRequestBuilder history(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RiskyServicePrincipalHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("history") + "/" + id, getClient(), null);
     }
 }

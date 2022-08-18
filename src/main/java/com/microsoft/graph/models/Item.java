@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ItemCategory;
-import com.microsoft.graph.models.Picture;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PictureCollectionPage;
 
@@ -180,7 +179,7 @@ public class Item extends Entity implements IJsonBackedObject {
     @SerializedName(value = "picture", alternate = {"Picture"})
     @Expose
 	@Nullable
-    public PictureCollectionPage picture;
+    public com.microsoft.graph.requests.PictureCollectionPage picture;
 
 
     /**
@@ -193,7 +192,7 @@ public class Item extends Entity implements IJsonBackedObject {
 
 
         if (json.has("picture")) {
-            picture = serializer.deserializeObject(json.get("picture"), PictureCollectionPage.class);
+            picture = serializer.deserializeObject(json.get("picture"), com.microsoft.graph.requests.PictureCollectionPage.class);
         }
     }
 }

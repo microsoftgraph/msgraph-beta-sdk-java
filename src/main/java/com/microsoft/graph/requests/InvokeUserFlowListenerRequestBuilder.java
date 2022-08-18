@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.InvokeUserFlowListener;
-import com.microsoft.graph.requests.B2xIdentityUserFlowWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class InvokeUserFlowListenerRequestBuilder extends BaseRequestBuilder<Inv
      * @return the B2xIdentityUserFlowWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public B2xIdentityUserFlowWithReferenceRequestBuilder userFlow() {
-        return new B2xIdentityUserFlowWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("userFlow"), getClient(), null);
+    public com.microsoft.graph.requests.B2xIdentityUserFlowWithReferenceRequestBuilder userFlow() {
+        return new com.microsoft.graph.requests.B2xIdentityUserFlowWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("userFlow"), getClient(), null);
     }
 }

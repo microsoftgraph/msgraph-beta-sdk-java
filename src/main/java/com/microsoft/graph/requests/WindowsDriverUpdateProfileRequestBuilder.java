@@ -11,10 +11,6 @@ import com.microsoft.graph.models.WindowsDriverUpdateProfile;
 import com.microsoft.graph.models.WindowsDriverUpdateProfileAssignment;
 import com.microsoft.graph.models.DriverApprovalAction;
 import com.microsoft.graph.models.BulkDriverActionResult;
-import com.microsoft.graph.requests.WindowsDriverUpdateProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsDriverUpdateProfileAssignmentRequestBuilder;
-import com.microsoft.graph.requests.WindowsDriverUpdateInventoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsDriverUpdateInventoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -71,8 +67,8 @@ public class WindowsDriverUpdateProfileRequestBuilder extends BaseRequestBuilder
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsDriverUpdateProfileAssignmentCollectionRequestBuilder assignments() {
-        return new WindowsDriverUpdateProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsDriverUpdateProfileAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.WindowsDriverUpdateProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -82,8 +78,8 @@ public class WindowsDriverUpdateProfileRequestBuilder extends BaseRequestBuilder
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsDriverUpdateProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new WindowsDriverUpdateProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsDriverUpdateProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsDriverUpdateProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsDriverUpdateInventory collection
@@ -91,8 +87,8 @@ public class WindowsDriverUpdateProfileRequestBuilder extends BaseRequestBuilder
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsDriverUpdateInventoryCollectionRequestBuilder driverInventories() {
-        return new WindowsDriverUpdateInventoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("driverInventories"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsDriverUpdateInventoryCollectionRequestBuilder driverInventories() {
+        return new com.microsoft.graph.requests.WindowsDriverUpdateInventoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("driverInventories"), getClient(), null);
     }
 
     /**
@@ -102,8 +98,8 @@ public class WindowsDriverUpdateProfileRequestBuilder extends BaseRequestBuilder
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsDriverUpdateInventoryRequestBuilder driverInventories(@Nonnull final String id) {
-        return new WindowsDriverUpdateInventoryRequestBuilder(getRequestUrlWithAdditionalSegment("driverInventories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsDriverUpdateInventoryRequestBuilder driverInventories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsDriverUpdateInventoryRequestBuilder(getRequestUrlWithAdditionalSegment("driverInventories") + "/" + id, getClient(), null);
     }
 
     /**

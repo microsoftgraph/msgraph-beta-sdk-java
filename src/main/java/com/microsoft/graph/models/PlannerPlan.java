@@ -12,9 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PlannerPlanContainer;
 import com.microsoft.graph.models.PlannerPlanContextCollection;
 import com.microsoft.graph.models.IdentitySet;
-import com.microsoft.graph.models.PlannerBucket;
 import com.microsoft.graph.models.PlannerPlanDetails;
-import com.microsoft.graph.models.PlannerTask;
 import com.microsoft.graph.models.PlannerDelta;
 import com.microsoft.graph.requests.PlannerBucketCollectionPage;
 import com.microsoft.graph.requests.PlannerTaskCollectionPage;
@@ -97,7 +95,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
     @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
 	@Nullable
-    public PlannerBucketCollectionPage buckets;
+    public com.microsoft.graph.requests.PlannerBucketCollectionPage buckets;
 
     /**
      * The Details.
@@ -115,7 +113,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
 	@Nullable
-    public PlannerTaskCollectionPage tasks;
+    public com.microsoft.graph.requests.PlannerTaskCollectionPage tasks;
 
 
     /**
@@ -128,11 +126,11 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
 
         if (json.has("buckets")) {
-            buckets = serializer.deserializeObject(json.get("buckets"), PlannerBucketCollectionPage.class);
+            buckets = serializer.deserializeObject(json.get("buckets"), com.microsoft.graph.requests.PlannerBucketCollectionPage.class);
         }
 
         if (json.has("tasks")) {
-            tasks = serializer.deserializeObject(json.get("tasks"), PlannerTaskCollectionPage.class);
+            tasks = serializer.deserializeObject(json.get("tasks"), com.microsoft.graph.requests.PlannerTaskCollectionPage.class);
         }
     }
 }

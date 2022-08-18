@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementReusablePolicySetting;
-import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceManagementReusablePolicySettingRequestBuilder extends BaseReq
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementConfigurationPolicyCollectionRequestBuilder referencingConfigurationPolicies() {
-        return new DeviceManagementConfigurationPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("referencingConfigurationPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionRequestBuilder referencingConfigurationPolicies() {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("referencingConfigurationPolicies"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class DeviceManagementReusablePolicySettingRequestBuilder extends BaseReq
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementConfigurationPolicyRequestBuilder referencingConfigurationPolicies(@Nonnull final String id) {
-        return new DeviceManagementConfigurationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("referencingConfigurationPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationPolicyRequestBuilder referencingConfigurationPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("referencingConfigurationPolicies") + "/" + id, getClient(), null);
     }
 
     /**

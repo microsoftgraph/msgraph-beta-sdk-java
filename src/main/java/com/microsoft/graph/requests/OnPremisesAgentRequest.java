@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OnPremisesAgent;
-import com.microsoft.graph.requests.OnPremisesAgentGroupCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.OnPremisesAgentGroupWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

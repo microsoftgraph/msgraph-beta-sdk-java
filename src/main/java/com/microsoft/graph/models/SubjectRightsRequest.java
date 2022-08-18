@@ -20,7 +20,6 @@ import com.microsoft.graph.models.SubjectRightsRequestSiteLocation;
 import com.microsoft.graph.models.SubjectRightsRequestStageDetail;
 import com.microsoft.graph.models.SubjectRightsRequestStatus;
 import com.microsoft.graph.models.SubjectRightsRequestType;
-import com.microsoft.graph.models.AuthoredNote;
 import com.microsoft.graph.models.Team;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AuthoredNoteCollectionPage;
@@ -263,7 +262,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
 	@Nullable
-    public AuthoredNoteCollectionPage notes;
+    public com.microsoft.graph.requests.AuthoredNoteCollectionPage notes;
 
     /**
      * The Team.
@@ -285,7 +284,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
 
         if (json.has("notes")) {
-            notes = serializer.deserializeObject(json.get("notes"), AuthoredNoteCollectionPage.class);
+            notes = serializer.deserializeObject(json.get("notes"), com.microsoft.graph.requests.AuthoredNoteCollectionPage.class);
         }
     }
 }

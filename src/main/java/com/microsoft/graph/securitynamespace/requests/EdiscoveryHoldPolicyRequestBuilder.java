@@ -8,10 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.EdiscoveryHoldPolicy;
-import com.microsoft.graph.security.requests.SiteSourceCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.SiteSourceRequestBuilder;
-import com.microsoft.graph.security.requests.UserSourceCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.UserSourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class EdiscoveryHoldPolicyRequestBuilder extends BaseRequestBuilder<Edisc
      * @return the collection request builder
      */
     @Nonnull
-    public SiteSourceCollectionRequestBuilder siteSources() {
-        return new SiteSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources"), getClient(), null);
+    public com.microsoft.graph.security.requests.SiteSourceCollectionRequestBuilder siteSources() {
+        return new com.microsoft.graph.security.requests.SiteSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class EdiscoveryHoldPolicyRequestBuilder extends BaseRequestBuilder<Edisc
      * @param id the item identifier
      */
     @Nonnull
-    public SiteSourceRequestBuilder siteSources(@Nonnull final String id) {
-        return new SiteSourceRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.SiteSourceRequestBuilder siteSources(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.SiteSourceRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserSource collection
@@ -86,8 +82,8 @@ public class EdiscoveryHoldPolicyRequestBuilder extends BaseRequestBuilder<Edisc
      * @return the collection request builder
      */
     @Nonnull
-    public UserSourceCollectionRequestBuilder userSources() {
-        return new UserSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userSources"), getClient(), null);
+    public com.microsoft.graph.security.requests.UserSourceCollectionRequestBuilder userSources() {
+        return new com.microsoft.graph.security.requests.UserSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userSources"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class EdiscoveryHoldPolicyRequestBuilder extends BaseRequestBuilder<Edisc
      * @param id the item identifier
      */
     @Nonnull
-    public UserSourceRequestBuilder userSources(@Nonnull final String id) {
-        return new UserSourceRequestBuilder(getRequestUrlWithAdditionalSegment("userSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.UserSourceRequestBuilder userSources(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.UserSourceRequestBuilder(getRequestUrlWithAdditionalSegment("userSources") + "/" + id, getClient(), null);
     }
 }

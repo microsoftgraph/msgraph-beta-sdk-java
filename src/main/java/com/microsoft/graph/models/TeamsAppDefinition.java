@@ -59,7 +59,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Verbose description of the application.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose

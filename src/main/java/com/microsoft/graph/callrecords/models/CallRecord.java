@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.callrecords.models.Modality;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.callrecords.models.CallType;
-import com.microsoft.graph.callrecords.models.Session;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.callrecords.requests.SessionCollectionPage;
 
@@ -119,7 +118,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sessions", alternate = {"Sessions"})
     @Expose
 	@Nullable
-    public SessionCollectionPage sessions;
+    public com.microsoft.graph.callrecords.requests.SessionCollectionPage sessions;
 
 
     /**
@@ -132,7 +131,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
 
         if (json.has("sessions")) {
-            sessions = serializer.deserializeObject(json.get("sessions"), SessionCollectionPage.class);
+            sessions = serializer.deserializeObject(json.get("sessions"), com.microsoft.graph.callrecords.requests.SessionCollectionPage.class);
         }
     }
 }

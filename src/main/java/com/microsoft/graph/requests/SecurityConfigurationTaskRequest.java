@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SecurityConfigurationTask;
 import com.microsoft.graph.models.DeviceAppManagementTaskStatus;
-import com.microsoft.graph.requests.VulnerableManagedDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.VulnerableManagedDeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PinnedChatMessageInfo;
-import com.microsoft.graph.requests.ChatMessageWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class PinnedChatMessageInfoRequestBuilder extends BaseRequestBuilder<Pinn
      * @return the ChatMessageWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ChatMessageWithReferenceRequestBuilder message() {
-        return new ChatMessageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("message"), getClient(), null);
+    public com.microsoft.graph.requests.ChatMessageWithReferenceRequestBuilder message() {
+        return new com.microsoft.graph.requests.ChatMessageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("message"), getClient(), null);
     }
 }

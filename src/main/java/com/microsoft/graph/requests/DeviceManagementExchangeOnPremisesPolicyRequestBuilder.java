@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementExchangeOnPremisesPolicy;
-import com.microsoft.graph.requests.OnPremisesConditionalAccessSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class DeviceManagementExchangeOnPremisesPolicyRequestBuilder extends Base
      * @return the OnPremisesConditionalAccessSettingsRequestBuilder instance
      */
     @Nonnull
-    public OnPremisesConditionalAccessSettingsRequestBuilder conditionalAccessSettings() {
-        return new OnPremisesConditionalAccessSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessSettings"), getClient(), null);
+    public com.microsoft.graph.requests.OnPremisesConditionalAccessSettingsRequestBuilder conditionalAccessSettings() {
+        return new com.microsoft.graph.requests.OnPremisesConditionalAccessSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessSettings"), getClient(), null);
     }
 }

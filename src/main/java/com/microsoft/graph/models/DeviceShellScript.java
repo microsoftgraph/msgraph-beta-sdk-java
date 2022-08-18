@@ -10,11 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.RunAsAccountType;
-import com.microsoft.graph.models.DeviceManagementScriptAssignment;
-import com.microsoft.graph.models.DeviceManagementScriptDeviceState;
-import com.microsoft.graph.models.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.DeviceManagementScriptRunSummary;
-import com.microsoft.graph.models.DeviceManagementScriptUserState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementScriptAssignmentCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionPage;
@@ -142,7 +138,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public DeviceManagementScriptAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.DeviceManagementScriptAssignmentCollectionPage assignments;
 
     /**
      * The Device Run States.
@@ -151,7 +147,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceRunStates", alternate = {"DeviceRunStates"})
     @Expose
 	@Nullable
-    public DeviceManagementScriptDeviceStateCollectionPage deviceRunStates;
+    public com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionPage deviceRunStates;
 
     /**
      * The Group Assignments.
@@ -160,7 +156,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groupAssignments", alternate = {"GroupAssignments"})
     @Expose
 	@Nullable
-    public DeviceManagementScriptGroupAssignmentCollectionPage groupAssignments;
+    public com.microsoft.graph.requests.DeviceManagementScriptGroupAssignmentCollectionPage groupAssignments;
 
     /**
      * The Run Summary.
@@ -178,7 +174,7 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userRunStates", alternate = {"UserRunStates"})
     @Expose
 	@Nullable
-    public DeviceManagementScriptUserStateCollectionPage userRunStates;
+    public com.microsoft.graph.requests.DeviceManagementScriptUserStateCollectionPage userRunStates;
 
 
     /**
@@ -191,19 +187,19 @@ public class DeviceShellScript extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), DeviceManagementScriptAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.DeviceManagementScriptAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceRunStates")) {
-            deviceRunStates = serializer.deserializeObject(json.get("deviceRunStates"), DeviceManagementScriptDeviceStateCollectionPage.class);
+            deviceRunStates = serializer.deserializeObject(json.get("deviceRunStates"), com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionPage.class);
         }
 
         if (json.has("groupAssignments")) {
-            groupAssignments = serializer.deserializeObject(json.get("groupAssignments"), DeviceManagementScriptGroupAssignmentCollectionPage.class);
+            groupAssignments = serializer.deserializeObject(json.get("groupAssignments"), com.microsoft.graph.requests.DeviceManagementScriptGroupAssignmentCollectionPage.class);
         }
 
         if (json.has("userRunStates")) {
-            userRunStates = serializer.deserializeObject(json.get("userRunStates"), DeviceManagementScriptUserStateCollectionPage.class);
+            userRunStates = serializer.deserializeObject(json.get("userRunStates"), com.microsoft.graph.requests.DeviceManagementScriptUserStateCollectionPage.class);
         }
     }
 }

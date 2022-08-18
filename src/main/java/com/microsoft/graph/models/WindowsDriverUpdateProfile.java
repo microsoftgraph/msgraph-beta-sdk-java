@@ -11,8 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DriverUpdateProfileApprovalType;
 import com.microsoft.graph.models.WindowsDriverUpdateProfileInventorySyncStatus;
-import com.microsoft.graph.models.WindowsDriverUpdateProfileAssignment;
-import com.microsoft.graph.models.WindowsDriverUpdateInventory;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WindowsDriverUpdateProfileAssignmentCollectionPage;
 import com.microsoft.graph.requests.WindowsDriverUpdateInventoryCollectionPage;
@@ -129,7 +127,7 @@ public class WindowsDriverUpdateProfile extends Entity implements IJsonBackedObj
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public WindowsDriverUpdateProfileAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.WindowsDriverUpdateProfileAssignmentCollectionPage assignments;
 
     /**
      * The Driver Inventories.
@@ -138,7 +136,7 @@ public class WindowsDriverUpdateProfile extends Entity implements IJsonBackedObj
     @SerializedName(value = "driverInventories", alternate = {"DriverInventories"})
     @Expose
 	@Nullable
-    public WindowsDriverUpdateInventoryCollectionPage driverInventories;
+    public com.microsoft.graph.requests.WindowsDriverUpdateInventoryCollectionPage driverInventories;
 
 
     /**
@@ -151,11 +149,11 @@ public class WindowsDriverUpdateProfile extends Entity implements IJsonBackedObj
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), WindowsDriverUpdateProfileAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.WindowsDriverUpdateProfileAssignmentCollectionPage.class);
         }
 
         if (json.has("driverInventories")) {
-            driverInventories = serializer.deserializeObject(json.get("driverInventories"), WindowsDriverUpdateInventoryCollectionPage.class);
+            driverInventories = serializer.deserializeObject(json.get("driverInventories"), com.microsoft.graph.requests.WindowsDriverUpdateInventoryCollectionPage.class);
         }
     }
 }

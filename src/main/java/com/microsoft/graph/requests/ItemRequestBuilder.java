@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Item;
-import com.microsoft.graph.requests.ItemCategoryRequestBuilder;
-import com.microsoft.graph.requests.PictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.PictureRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class ItemRequestBuilder extends BaseRequestBuilder<Item> {
      * @return the ItemCategoryRequestBuilder instance
      */
     @Nonnull
-    public ItemCategoryRequestBuilder itemCategory() {
-        return new ItemCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("itemCategory"), getClient(), null);
+    public com.microsoft.graph.requests.ItemCategoryRequestBuilder itemCategory() {
+        return new com.microsoft.graph.requests.ItemCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("itemCategory"), getClient(), null);
     }
     /**
      *  Gets a request builder for the Picture collection
@@ -75,8 +72,8 @@ public class ItemRequestBuilder extends BaseRequestBuilder<Item> {
      * @return the collection request builder
      */
     @Nonnull
-    public PictureCollectionRequestBuilder picture() {
-        return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
+    public com.microsoft.graph.requests.PictureCollectionRequestBuilder picture() {
+        return new com.microsoft.graph.requests.PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
     }
 
     /**
@@ -86,7 +83,7 @@ public class ItemRequestBuilder extends BaseRequestBuilder<Item> {
      * @param id the item identifier
      */
     @Nonnull
-    public PictureRequestBuilder picture(@Nonnull final String id) {
-        return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PictureRequestBuilder picture(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
 }

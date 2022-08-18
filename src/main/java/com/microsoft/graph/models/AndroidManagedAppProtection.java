@@ -14,7 +14,6 @@ import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.graph.models.AndroidManagedAppSafetyNetAppsVerificationType;
 import com.microsoft.graph.models.AndroidManagedAppSafetyNetDeviceAttestationType;
 import com.microsoft.graph.models.AndroidManagedAppSafetyNetEvaluationType;
-import com.microsoft.graph.models.ManagedMobileApp;
 import com.microsoft.graph.models.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.TargetedManagedAppProtection;
 import com.microsoft.graph.requests.ManagedMobileAppCollectionPage;
@@ -392,7 +391,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
 	@Nullable
-    public ManagedMobileAppCollectionPage apps;
+    public com.microsoft.graph.requests.ManagedMobileAppCollectionPage apps;
 
     /**
      * The Deployment Summary.
@@ -414,7 +413,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
 
         if (json.has("apps")) {
-            apps = serializer.deserializeObject(json.get("apps"), ManagedMobileAppCollectionPage.class);
+            apps = serializer.deserializeObject(json.get("apps"), com.microsoft.graph.requests.ManagedMobileAppCollectionPage.class);
         }
     }
 }

@@ -13,7 +13,6 @@ import com.microsoft.graph.models.PrinterCapabilities;
 import com.microsoft.graph.models.PrinterDefaults;
 import com.microsoft.graph.models.PrinterLocation;
 import com.microsoft.graph.models.PrinterStatus;
-import com.microsoft.graph.models.PrintJob;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PrintJobCollectionPage;
 
@@ -34,7 +33,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Capabilities.
-     * The capabilities of the printer/printerShare.
+     * 
      */
     @SerializedName(value = "capabilities", alternate = {"Capabilities"})
     @Expose
@@ -43,7 +42,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Defaults.
-     * The default print settings of printer/printerShare.
+     * 
      */
     @SerializedName(value = "defaults", alternate = {"Defaults"})
     @Expose
@@ -52,7 +51,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name of the printer/printerShare.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -61,7 +60,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Accepting Jobs.
-     * Whether the printer/printerShare is currently accepting new print jobs.
+     * 
      */
     @SerializedName(value = "isAcceptingJobs", alternate = {"IsAcceptingJobs"})
     @Expose
@@ -70,7 +69,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Location.
-     * The physical and/or organizational location of the printer/printerShare.
+     * 
      */
     @SerializedName(value = "location", alternate = {"Location"})
     @Expose
@@ -79,7 +78,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Manufacturer.
-     * The manufacturer of the printer/printerShare.
+     * 
      */
     @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
@@ -88,7 +87,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Model.
-     * The model name of the printer/printerShare.
+     * 
      */
     @SerializedName(value = "model", alternate = {"Model"})
     @Expose
@@ -106,7 +105,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The processing status of the printer/printerShare, including any errors.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -115,12 +114,12 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Jobs.
-     * The list of jobs that are queued for printing by the printer/printerShare.
+     * 
      */
     @SerializedName(value = "jobs", alternate = {"Jobs"})
     @Expose
 	@Nullable
-    public PrintJobCollectionPage jobs;
+    public com.microsoft.graph.requests.PrintJobCollectionPage jobs;
 
 
     /**
@@ -133,7 +132,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
 
         if (json.has("jobs")) {
-            jobs = serializer.deserializeObject(json.get("jobs"), PrintJobCollectionPage.class);
+            jobs = serializer.deserializeObject(json.get("jobs"), com.microsoft.graph.requests.PrintJobCollectionPage.class);
         }
     }
 }

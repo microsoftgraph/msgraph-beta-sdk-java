@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.PlannerRosterMember;
-import com.microsoft.graph.models.PlannerPlan;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PlannerRosterMemberCollectionPage;
 import com.microsoft.graph.requests.PlannerPlanCollectionPage;
@@ -37,14 +35,14 @@ public class PlannerRoster extends Entity implements IJsonBackedObject {
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
 	@Nullable
-    public PlannerRosterMemberCollectionPage members;
+    public com.microsoft.graph.requests.PlannerRosterMemberCollectionPage members;
 
     /**
      * The Plans.
      * Retrieves the plans contained by the plannerRoster.
      */
 	@Nullable
-    public PlannerPlanCollectionPage plans;
+    public com.microsoft.graph.requests.PlannerPlanCollectionPage plans;
 
 
     /**
@@ -57,11 +55,11 @@ public class PlannerRoster extends Entity implements IJsonBackedObject {
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), PlannerRosterMemberCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.PlannerRosterMemberCollectionPage.class);
         }
 
         if (json.has("plans")) {
-            plans = serializer.deserializeObject(json.get("plans"), PlannerPlanCollectionPage.class);
+            plans = serializer.deserializeObject(json.get("plans"), com.microsoft.graph.requests.PlannerPlanCollectionPage.class);
         }
     }
 }

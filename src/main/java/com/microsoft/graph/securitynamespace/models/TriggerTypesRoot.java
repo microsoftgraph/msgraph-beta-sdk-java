@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.security.models.RetentionEventType;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.security.requests.RetentionEventTypeCollectionPage;
 
@@ -35,7 +34,7 @@ public class TriggerTypesRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "retentionEventTypes", alternate = {"RetentionEventTypes"})
     @Expose
 	@Nullable
-    public RetentionEventTypeCollectionPage retentionEventTypes;
+    public com.microsoft.graph.security.requests.RetentionEventTypeCollectionPage retentionEventTypes;
 
 
     /**
@@ -48,7 +47,7 @@ public class TriggerTypesRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("retentionEventTypes")) {
-            retentionEventTypes = serializer.deserializeObject(json.get("retentionEventTypes"), RetentionEventTypeCollectionPage.class);
+            retentionEventTypes = serializer.deserializeObject(json.get("retentionEventTypes"), com.microsoft.graph.security.requests.RetentionEventTypeCollectionPage.class);
         }
     }
 }

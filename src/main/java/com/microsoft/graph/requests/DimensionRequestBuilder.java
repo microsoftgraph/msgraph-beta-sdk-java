@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Dimension;
-import com.microsoft.graph.requests.DimensionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.DimensionValueRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DimensionRequestBuilder extends BaseRequestBuilder<Dimension> {
      * @return the collection request builder
      */
     @Nonnull
-    public DimensionValueCollectionRequestBuilder dimensionValues() {
-        return new DimensionValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues"), getClient(), null);
+    public com.microsoft.graph.requests.DimensionValueCollectionRequestBuilder dimensionValues() {
+        return new com.microsoft.graph.requests.DimensionValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DimensionRequestBuilder extends BaseRequestBuilder<Dimension> {
      * @param id the item identifier
      */
     @Nonnull
-    public DimensionValueRequestBuilder dimensionValues(@Nonnull final String id) {
-        return new DimensionValueRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DimensionValueRequestBuilder dimensionValues(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DimensionValueRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues") + "/" + id, getClient(), null);
     }
 }

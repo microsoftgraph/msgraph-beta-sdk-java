@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AccessPackageAssignment;
 import com.microsoft.graph.models.AccessPackageResourceRole;
 import com.microsoft.graph.models.AccessPackageResourceScope;
 import com.microsoft.graph.models.AccessPackageSubject;
@@ -65,7 +64,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
     @SerializedName(value = "accessPackageAssignments", alternate = {"AccessPackageAssignments"})
     @Expose
 	@Nullable
-    public AccessPackageAssignmentCollectionPage accessPackageAssignments;
+    public com.microsoft.graph.requests.AccessPackageAssignmentCollectionPage accessPackageAssignments;
 
     /**
      * The Access Package Resource Role.
@@ -105,7 +104,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
 
         if (json.has("accessPackageAssignments")) {
-            accessPackageAssignments = serializer.deserializeObject(json.get("accessPackageAssignments"), AccessPackageAssignmentCollectionPage.class);
+            accessPackageAssignments = serializer.deserializeObject(json.get("accessPackageAssignments"), com.microsoft.graph.requests.AccessPackageAssignmentCollectionPage.class);
         }
     }
 }

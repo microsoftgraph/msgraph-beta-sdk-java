@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.TeamworkContentCameraConfiguration;
 import com.microsoft.graph.models.TeamworkPeripheral;
-import com.microsoft.graph.requests.TeamworkPeripheralCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -57,7 +56,7 @@ public class TeamworkCameraConfiguration implements IJsonBackedObject {
     @SerializedName(value = "cameras", alternate = {"Cameras"})
     @Expose
 	@Nullable
-    public TeamworkPeripheralCollectionPage cameras;
+    public com.microsoft.graph.requests.TeamworkPeripheralCollectionPage cameras;
 
     /**
      * The Default Content Camera.

@@ -29,7 +29,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
 
     /**
      * The Actions.
-     * 
+     * Actions to take if the label is accepted by the user.
      */
     @SerializedName(value = "actions", alternate = {"Actions"})
     @Expose
@@ -38,7 +38,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
 
     /**
      * The Action Source.
-     * 
+     * Specifies why the label was selected. Possible values are: manual, automatic, recommended, default.
      */
     @SerializedName(value = "actionSource", alternate = {"ActionSource"})
     @Expose
@@ -47,7 +47,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
 
     /**
      * The Responsible Sensitive Type Ids.
-     * 
+     * The sensitive information type GUIDs that caused the recommendation to be given.
      */
     @SerializedName(value = "responsibleSensitiveTypeIds", alternate = {"ResponsibleSensitiveTypeIds"})
     @Expose

@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Command;
-import com.microsoft.graph.requests.PayloadResponseWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class CommandRequestBuilder extends BaseRequestBuilder<Command> {
      * @return the PayloadResponseWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public PayloadResponseWithReferenceRequestBuilder responsepayload() {
-        return new PayloadResponseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("responsepayload"), getClient(), null);
+    public com.microsoft.graph.requests.PayloadResponseWithReferenceRequestBuilder responsepayload() {
+        return new com.microsoft.graph.requests.PayloadResponseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("responsepayload"), getClient(), null);
     }
 }

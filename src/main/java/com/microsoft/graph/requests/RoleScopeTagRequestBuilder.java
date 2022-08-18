@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RoleScopeTag;
 import com.microsoft.graph.models.RoleScopeTagAutoAssignment;
-import com.microsoft.graph.requests.RoleScopeTagAutoAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.RoleScopeTagAutoAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +64,8 @@ public class RoleScopeTagRequestBuilder extends BaseRequestBuilder<RoleScopeTag>
      * @return the collection request builder
      */
     @Nonnull
-    public RoleScopeTagAutoAssignmentCollectionRequestBuilder assignments() {
-        return new RoleScopeTagAutoAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.RoleScopeTagAutoAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.RoleScopeTagAutoAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -77,8 +75,8 @@ public class RoleScopeTagRequestBuilder extends BaseRequestBuilder<RoleScopeTag>
      * @param id the item identifier
      */
     @Nonnull
-    public RoleScopeTagAutoAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new RoleScopeTagAutoAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RoleScopeTagAutoAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RoleScopeTagAutoAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

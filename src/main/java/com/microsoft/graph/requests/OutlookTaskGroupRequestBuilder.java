@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OutlookTaskGroup;
-import com.microsoft.graph.requests.OutlookTaskFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.OutlookTaskFolderRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class OutlookTaskGroupRequestBuilder extends BaseRequestBuilder<OutlookTa
      * @return the collection request builder
      */
     @Nonnull
-    public OutlookTaskFolderCollectionRequestBuilder taskFolders() {
-        return new OutlookTaskFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskFolders"), getClient(), null);
+    public com.microsoft.graph.requests.OutlookTaskFolderCollectionRequestBuilder taskFolders() {
+        return new com.microsoft.graph.requests.OutlookTaskFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskFolders"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class OutlookTaskGroupRequestBuilder extends BaseRequestBuilder<OutlookTa
      * @param id the item identifier
      */
     @Nonnull
-    public OutlookTaskFolderRequestBuilder taskFolders(@Nonnull final String id) {
-        return new OutlookTaskFolderRequestBuilder(getRequestUrlWithAdditionalSegment("taskFolders") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OutlookTaskFolderRequestBuilder taskFolders(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OutlookTaskFolderRequestBuilder(getRequestUrlWithAdditionalSegment("taskFolders") + "/" + id, getClient(), null);
     }
 }

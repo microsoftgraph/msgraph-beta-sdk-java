@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PurchaseInvoiceLine;
-import com.microsoft.graph.requests.AccountRequestBuilder;
-import com.microsoft.graph.requests.ItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class PurchaseInvoiceLineRequestBuilder extends BaseRequestBuilder<Purcha
      * @return the AccountRequestBuilder instance
      */
     @Nonnull
-    public AccountRequestBuilder account() {
-        return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
+    public com.microsoft.graph.requests.AccountRequestBuilder account() {
+        return new com.microsoft.graph.requests.AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class PurchaseInvoiceLineRequestBuilder extends BaseRequestBuilder<Purcha
      * @return the ItemRequestBuilder instance
      */
     @Nonnull
-    public ItemRequestBuilder item() {
-        return new ItemRequestBuilder(getRequestUrlWithAdditionalSegment("item"), getClient(), null);
+    public com.microsoft.graph.requests.ItemRequestBuilder item() {
+        return new com.microsoft.graph.requests.ItemRequestBuilder(getRequestUrlWithAdditionalSegment("item"), getClient(), null);
     }
 }

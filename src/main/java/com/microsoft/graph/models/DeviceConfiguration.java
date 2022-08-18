@@ -12,12 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementApplicabilityRuleDeviceMode;
 import com.microsoft.graph.models.DeviceManagementApplicabilityRuleOsEdition;
 import com.microsoft.graph.models.DeviceManagementApplicabilityRuleOsVersion;
-import com.microsoft.graph.models.DeviceConfigurationAssignment;
-import com.microsoft.graph.models.SettingStateDeviceSummary;
-import com.microsoft.graph.models.DeviceConfigurationDeviceStatus;
 import com.microsoft.graph.models.DeviceConfigurationDeviceOverview;
-import com.microsoft.graph.models.DeviceConfigurationGroupAssignment;
-import com.microsoft.graph.models.DeviceConfigurationUserStatus;
 import com.microsoft.graph.models.DeviceConfigurationUserOverview;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceConfigurationAssignmentCollectionPage;
@@ -138,7 +133,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public DeviceConfigurationAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.DeviceConfigurationAssignmentCollectionPage assignments;
 
     /**
      * The Device Setting State Summaries.
@@ -147,7 +142,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceSettingStateSummaries", alternate = {"DeviceSettingStateSummaries"})
     @Expose
 	@Nullable
-    public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
+    public com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
 
     /**
      * The Device Statuses.
@@ -156,7 +151,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
 	@Nullable
-    public DeviceConfigurationDeviceStatusCollectionPage deviceStatuses;
+    public com.microsoft.graph.requests.DeviceConfigurationDeviceStatusCollectionPage deviceStatuses;
 
     /**
      * The Device Status Overview.
@@ -174,7 +169,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groupAssignments", alternate = {"GroupAssignments"})
     @Expose
 	@Nullable
-    public DeviceConfigurationGroupAssignmentCollectionPage groupAssignments;
+    public com.microsoft.graph.requests.DeviceConfigurationGroupAssignmentCollectionPage groupAssignments;
 
     /**
      * The User Statuses.
@@ -183,7 +178,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
 	@Nullable
-    public DeviceConfigurationUserStatusCollectionPage userStatuses;
+    public com.microsoft.graph.requests.DeviceConfigurationUserStatusCollectionPage userStatuses;
 
     /**
      * The User Status Overview.
@@ -205,23 +200,23 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), DeviceConfigurationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.DeviceConfigurationAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceSettingStateSummaries")) {
-            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries"), SettingStateDeviceSummaryCollectionPage.class);
+            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries"), com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), DeviceConfigurationDeviceStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), com.microsoft.graph.requests.DeviceConfigurationDeviceStatusCollectionPage.class);
         }
 
         if (json.has("groupAssignments")) {
-            groupAssignments = serializer.deserializeObject(json.get("groupAssignments"), DeviceConfigurationGroupAssignmentCollectionPage.class);
+            groupAssignments = serializer.deserializeObject(json.get("groupAssignments"), com.microsoft.graph.requests.DeviceConfigurationGroupAssignmentCollectionPage.class);
         }
 
         if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses"), DeviceConfigurationUserStatusCollectionPage.class);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses"), com.microsoft.graph.requests.DeviceConfigurationUserStatusCollectionPage.class);
         }
     }
 }

@@ -9,9 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.UnifiedRbacResourceNamespace;
-import com.microsoft.graph.models.UnifiedRoleAssignmentMultiple;
-import com.microsoft.graph.models.UnifiedRoleDefinition;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentMultipleCollectionPage;
@@ -39,7 +36,7 @@ public class RbacApplicationMultiple extends Entity implements IJsonBackedObject
     @SerializedName(value = "resourceNamespaces", alternate = {"ResourceNamespaces"})
     @Expose
 	@Nullable
-    public UnifiedRbacResourceNamespaceCollectionPage resourceNamespaces;
+    public com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionPage resourceNamespaces;
 
     /**
      * The Role Assignments.
@@ -48,7 +45,7 @@ public class RbacApplicationMultiple extends Entity implements IJsonBackedObject
     @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
 	@Nullable
-    public UnifiedRoleAssignmentMultipleCollectionPage roleAssignments;
+    public com.microsoft.graph.requests.UnifiedRoleAssignmentMultipleCollectionPage roleAssignments;
 
     /**
      * The Role Definitions.
@@ -57,7 +54,7 @@ public class RbacApplicationMultiple extends Entity implements IJsonBackedObject
     @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
 	@Nullable
-    public UnifiedRoleDefinitionCollectionPage roleDefinitions;
+    public com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionPage roleDefinitions;
 
 
     /**
@@ -70,15 +67,15 @@ public class RbacApplicationMultiple extends Entity implements IJsonBackedObject
 
 
         if (json.has("resourceNamespaces")) {
-            resourceNamespaces = serializer.deserializeObject(json.get("resourceNamespaces"), UnifiedRbacResourceNamespaceCollectionPage.class);
+            resourceNamespaces = serializer.deserializeObject(json.get("resourceNamespaces"), com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionPage.class);
         }
 
         if (json.has("roleAssignments")) {
-            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), UnifiedRoleAssignmentMultipleCollectionPage.class);
+            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), com.microsoft.graph.requests.UnifiedRoleAssignmentMultipleCollectionPage.class);
         }
 
         if (json.has("roleDefinitions")) {
-            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions"), UnifiedRoleDefinitionCollectionPage.class);
+            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions"), com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionPage.class);
         }
     }
 }

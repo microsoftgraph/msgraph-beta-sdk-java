@@ -13,8 +13,6 @@ import com.microsoft.graph.ediscovery.models.AdditionalDataOptions;
 import java.util.EnumSet;
 import com.microsoft.graph.ediscovery.models.ExportOptions;
 import com.microsoft.graph.ediscovery.models.ExportFileStructure;
-import com.microsoft.graph.ediscovery.requests.ReviewSetQueryCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.ReviewSetQueryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -71,8 +69,8 @@ public class ReviewSetRequestBuilder extends BaseRequestBuilder<ReviewSet> {
      * @return the collection request builder
      */
     @Nonnull
-    public ReviewSetQueryCollectionRequestBuilder queries() {
-        return new ReviewSetQueryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("queries"), getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.ReviewSetQueryCollectionRequestBuilder queries() {
+        return new com.microsoft.graph.ediscovery.requests.ReviewSetQueryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("queries"), getClient(), null);
     }
 
     /**
@@ -82,8 +80,8 @@ public class ReviewSetRequestBuilder extends BaseRequestBuilder<ReviewSet> {
      * @param id the item identifier
      */
     @Nonnull
-    public ReviewSetQueryRequestBuilder queries(@Nonnull final String id) {
-        return new ReviewSetQueryRequestBuilder(getRequestUrlWithAdditionalSegment("queries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.ediscovery.requests.ReviewSetQueryRequestBuilder queries(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.ReviewSetQueryRequestBuilder(getRequestUrlWithAdditionalSegment("queries") + "/" + id, getClient(), null);
     }
 
     /**

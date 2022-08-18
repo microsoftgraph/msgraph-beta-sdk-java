@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessReviewReviewerScope;
-import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage;
 
@@ -81,7 +80,7 @@ public class AccessReviewStage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
 	@Nullable
-    public AccessReviewInstanceDecisionItemCollectionPage decisions;
+    public com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage decisions;
 
 
     /**
@@ -94,7 +93,7 @@ public class AccessReviewStage extends Entity implements IJsonBackedObject {
 
 
         if (json.has("decisions")) {
-            decisions = serializer.deserializeObject(json.get("decisions"), AccessReviewInstanceDecisionItemCollectionPage.class);
+            decisions = serializer.deserializeObject(json.get("decisions"), com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage.class);
         }
     }
 }

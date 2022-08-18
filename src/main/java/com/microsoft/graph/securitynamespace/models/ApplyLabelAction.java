@@ -29,7 +29,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements IJs
 
     /**
      * The Actions.
-     * 
+     * The collection of actions that should be implemented by the caller.
      */
     @SerializedName(value = "actions", alternate = {"Actions"})
     @Expose
@@ -38,7 +38,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements IJs
 
     /**
      * The Action Source.
-     * 
+     * Specifies why the label was selected. Possible values are: manual, automatic, recommended, default.
      */
     @SerializedName(value = "actionSource", alternate = {"ActionSource"})
     @Expose
@@ -47,7 +47,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements IJs
 
     /**
      * The Responsible Sensitive Type Ids.
-     * 
+     * If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
      */
     @SerializedName(value = "responsibleSensitiveTypeIds", alternate = {"ResponsibleSensitiveTypeIds"})
     @Expose

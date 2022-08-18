@@ -9,10 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GroupPolicyMigrationReport;
 import com.microsoft.graph.models.GroupPolicyObjectFile;
-import com.microsoft.graph.requests.GroupPolicySettingMappingCollectionRequestBuilder;
-import com.microsoft.graph.requests.GroupPolicySettingMappingRequestBuilder;
-import com.microsoft.graph.requests.UnsupportedGroupPolicyExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.UnsupportedGroupPolicyExtensionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +63,8 @@ public class GroupPolicyMigrationReportRequestBuilder extends BaseRequestBuilder
      * @return the collection request builder
      */
     @Nonnull
-    public GroupPolicySettingMappingCollectionRequestBuilder groupPolicySettingMappings() {
-        return new GroupPolicySettingMappingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicySettingMappings"), getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicySettingMappingCollectionRequestBuilder groupPolicySettingMappings() {
+        return new com.microsoft.graph.requests.GroupPolicySettingMappingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicySettingMappings"), getClient(), null);
     }
 
     /**
@@ -78,8 +74,8 @@ public class GroupPolicyMigrationReportRequestBuilder extends BaseRequestBuilder
      * @param id the item identifier
      */
     @Nonnull
-    public GroupPolicySettingMappingRequestBuilder groupPolicySettingMappings(@Nonnull final String id) {
-        return new GroupPolicySettingMappingRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicySettingMappings") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GroupPolicySettingMappingRequestBuilder groupPolicySettingMappings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupPolicySettingMappingRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicySettingMappings") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UnsupportedGroupPolicyExtension collection
@@ -87,8 +83,8 @@ public class GroupPolicyMigrationReportRequestBuilder extends BaseRequestBuilder
      * @return the collection request builder
      */
     @Nonnull
-    public UnsupportedGroupPolicyExtensionCollectionRequestBuilder unsupportedGroupPolicyExtensions() {
-        return new UnsupportedGroupPolicyExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unsupportedGroupPolicyExtensions"), getClient(), null);
+    public com.microsoft.graph.requests.UnsupportedGroupPolicyExtensionCollectionRequestBuilder unsupportedGroupPolicyExtensions() {
+        return new com.microsoft.graph.requests.UnsupportedGroupPolicyExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unsupportedGroupPolicyExtensions"), getClient(), null);
     }
 
     /**
@@ -98,7 +94,7 @@ public class GroupPolicyMigrationReportRequestBuilder extends BaseRequestBuilder
      * @param id the item identifier
      */
     @Nonnull
-    public UnsupportedGroupPolicyExtensionRequestBuilder unsupportedGroupPolicyExtensions(@Nonnull final String id) {
-        return new UnsupportedGroupPolicyExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("unsupportedGroupPolicyExtensions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UnsupportedGroupPolicyExtensionRequestBuilder unsupportedGroupPolicyExtensions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnsupportedGroupPolicyExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("unsupportedGroupPolicyExtensions") + "/" + id, getClient(), null);
     }
 }

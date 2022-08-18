@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Account;
-import com.microsoft.graph.models.CustomerPayment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CustomerPaymentCollectionPage;
 
@@ -90,7 +89,7 @@ public class CustomerPaymentJournal extends Entity implements IJsonBackedObject 
     @SerializedName(value = "customerPayments", alternate = {"CustomerPayments"})
     @Expose
 	@Nullable
-    public CustomerPaymentCollectionPage customerPayments;
+    public com.microsoft.graph.requests.CustomerPaymentCollectionPage customerPayments;
 
 
     /**
@@ -103,7 +102,7 @@ public class CustomerPaymentJournal extends Entity implements IJsonBackedObject 
 
 
         if (json.has("customerPayments")) {
-            customerPayments = serializer.deserializeObject(json.get("customerPayments"), CustomerPaymentCollectionPage.class);
+            customerPayments = serializer.deserializeObject(json.get("customerPayments"), com.microsoft.graph.requests.CustomerPaymentCollectionPage.class);
         }
     }
 }

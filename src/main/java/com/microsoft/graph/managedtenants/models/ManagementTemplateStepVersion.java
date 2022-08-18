@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStep;
-import com.microsoft.graph.managedtenants.models.ManagementTemplateStepDeployment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepDeploymentCollectionPage;
 
@@ -117,7 +116,7 @@ public class ManagementTemplateStepVersion extends Entity implements IJsonBacked
     @SerializedName(value = "deployments", alternate = {"Deployments"})
     @Expose
 	@Nullable
-    public ManagementTemplateStepDeploymentCollectionPage deployments;
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepDeploymentCollectionPage deployments;
 
     /**
      * The Template Step.
@@ -139,7 +138,7 @@ public class ManagementTemplateStepVersion extends Entity implements IJsonBacked
 
 
         if (json.has("deployments")) {
-            deployments = serializer.deserializeObject(json.get("deployments"), ManagementTemplateStepDeploymentCollectionPage.class);
+            deployments = serializer.deserializeObject(json.get("deployments"), com.microsoft.graph.managedtenants.requests.ManagementTemplateStepDeploymentCollectionPage.class);
         }
     }
 }

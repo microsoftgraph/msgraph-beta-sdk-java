@@ -11,8 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessPackageResourceAttribute;
 import com.microsoft.graph.models.AccessPackageResourceEnvironment;
-import com.microsoft.graph.models.AccessPackageResourceRole;
-import com.microsoft.graph.models.AccessPackageResourceScope;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage;
 import com.microsoft.graph.requests.AccessPackageResourceScopeCollectionPage;
@@ -138,7 +136,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
     @SerializedName(value = "accessPackageResourceRoles", alternate = {"AccessPackageResourceRoles"})
     @Expose
 	@Nullable
-    public AccessPackageResourceRoleCollectionPage accessPackageResourceRoles;
+    public com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage accessPackageResourceRoles;
 
     /**
      * The Access Package Resource Scopes.
@@ -147,7 +145,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
     @SerializedName(value = "accessPackageResourceScopes", alternate = {"AccessPackageResourceScopes"})
     @Expose
 	@Nullable
-    public AccessPackageResourceScopeCollectionPage accessPackageResourceScopes;
+    public com.microsoft.graph.requests.AccessPackageResourceScopeCollectionPage accessPackageResourceScopes;
 
 
     /**
@@ -160,11 +158,11 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
 
         if (json.has("accessPackageResourceRoles")) {
-            accessPackageResourceRoles = serializer.deserializeObject(json.get("accessPackageResourceRoles"), AccessPackageResourceRoleCollectionPage.class);
+            accessPackageResourceRoles = serializer.deserializeObject(json.get("accessPackageResourceRoles"), com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage.class);
         }
 
         if (json.has("accessPackageResourceScopes")) {
-            accessPackageResourceScopes = serializer.deserializeObject(json.get("accessPackageResourceScopes"), AccessPackageResourceScopeCollectionPage.class);
+            accessPackageResourceScopes = serializer.deserializeObject(json.get("accessPackageResourceScopes"), com.microsoft.graph.requests.AccessPackageResourceScopeCollectionPage.class);
         }
     }
 }

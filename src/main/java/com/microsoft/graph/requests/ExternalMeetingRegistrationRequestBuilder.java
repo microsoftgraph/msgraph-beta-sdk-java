@@ -62,8 +62,8 @@ public class ExternalMeetingRegistrationRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public MeetingRegistrantBaseCollectionRequestBuilder registrants() {
-        return new MeetingRegistrantBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registrants"), getClient(), null);
+    public com.microsoft.graph.requests.MeetingRegistrantBaseCollectionRequestBuilder registrants() {
+        return new com.microsoft.graph.requests.MeetingRegistrantBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registrants"), getClient(), null);
     }
 
     /**
@@ -73,7 +73,7 @@ public class ExternalMeetingRegistrationRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public MeetingRegistrantBaseRequestBuilder registrants(@Nonnull final String id) {
-        return new MeetingRegistrantBaseRequestBuilder(getRequestUrlWithAdditionalSegment("registrants") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MeetingRegistrantBaseRequestBuilder registrants(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MeetingRegistrantBaseRequestBuilder(getRequestUrlWithAdditionalSegment("registrants") + "/" + id, getClient(), null);
     }
 }

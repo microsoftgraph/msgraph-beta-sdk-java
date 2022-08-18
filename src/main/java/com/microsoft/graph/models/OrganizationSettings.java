@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MicrosoftApplicationDataAccessSettings;
 import com.microsoft.graph.models.InsightsSettings;
-import com.microsoft.graph.models.ProfileCardProperty;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ProfileCardPropertyCollectionPage;
 
@@ -64,7 +63,7 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
     @SerializedName(value = "profileCardProperties", alternate = {"ProfileCardProperties"})
     @Expose
 	@Nullable
-    public ProfileCardPropertyCollectionPage profileCardProperties;
+    public com.microsoft.graph.requests.ProfileCardPropertyCollectionPage profileCardProperties;
 
 
     /**
@@ -77,7 +76,7 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
 
 
         if (json.has("profileCardProperties")) {
-            profileCardProperties = serializer.deserializeObject(json.get("profileCardProperties"), ProfileCardPropertyCollectionPage.class);
+            profileCardProperties = serializer.deserializeObject(json.get("profileCardProperties"), com.microsoft.graph.requests.ProfileCardPropertyCollectionPage.class);
         }
     }
 }

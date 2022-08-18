@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MessageRecipient;
-import com.microsoft.graph.requests.MessageEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.MessageEventRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class MessageRecipientRequestBuilder extends BaseRequestBuilder<MessageRe
      * @return the collection request builder
      */
     @Nonnull
-    public MessageEventCollectionRequestBuilder events() {
-        return new MessageEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
+    public com.microsoft.graph.requests.MessageEventCollectionRequestBuilder events() {
+        return new com.microsoft.graph.requests.MessageEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class MessageRecipientRequestBuilder extends BaseRequestBuilder<MessageRe
      * @param id the item identifier
      */
     @Nonnull
-    public MessageEventRequestBuilder events(@Nonnull final String id) {
-        return new MessageEventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MessageEventRequestBuilder events(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MessageEventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
 }

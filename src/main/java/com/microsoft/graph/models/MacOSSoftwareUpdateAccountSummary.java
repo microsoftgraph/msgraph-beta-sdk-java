@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.MacOSSoftwareUpdateCategorySummary;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MacOSSoftwareUpdateCategorySummaryCollectionPage;
 
@@ -125,7 +124,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements IJsonBa
     @SerializedName(value = "categorySummaries", alternate = {"CategorySummaries"})
     @Expose
 	@Nullable
-    public MacOSSoftwareUpdateCategorySummaryCollectionPage categorySummaries;
+    public com.microsoft.graph.requests.MacOSSoftwareUpdateCategorySummaryCollectionPage categorySummaries;
 
 
     /**
@@ -138,7 +137,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements IJsonBa
 
 
         if (json.has("categorySummaries")) {
-            categorySummaries = serializer.deserializeObject(json.get("categorySummaries"), MacOSSoftwareUpdateCategorySummaryCollectionPage.class);
+            categorySummaries = serializer.deserializeObject(json.get("categorySummaries"), com.microsoft.graph.requests.MacOSSoftwareUpdateCategorySummaryCollectionPage.class);
         }
     }
 }

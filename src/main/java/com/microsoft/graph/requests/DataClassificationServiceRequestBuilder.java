@@ -14,16 +14,6 @@ import com.microsoft.graph.models.MlClassificationMatchTolerance;
 import java.util.EnumSet;
 import com.microsoft.graph.models.ContentClassification;
 import com.microsoft.graph.models.ExactMatchClassificationResult;
-import com.microsoft.graph.requests.ExactMatchDataStoreCollectionRequestBuilder;
-import com.microsoft.graph.requests.ExactMatchDataStoreRequestBuilder;
-import com.microsoft.graph.requests.JobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.JobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.SensitiveTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.SensitiveTypeRequestBuilder;
-import com.microsoft.graph.requests.SensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.SensitivityLabelRequestBuilder;
-import com.microsoft.graph.requests.ExactMatchUploadAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.ExactMatchUploadAgentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -81,8 +71,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public ExactMatchDataStoreCollectionRequestBuilder exactMatchDataStores() {
-        return new ExactMatchDataStoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exactMatchDataStores"), getClient(), null);
+    public com.microsoft.graph.requests.ExactMatchDataStoreCollectionRequestBuilder exactMatchDataStores() {
+        return new com.microsoft.graph.requests.ExactMatchDataStoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exactMatchDataStores"), getClient(), null);
     }
 
     /**
@@ -92,8 +82,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public ExactMatchDataStoreRequestBuilder exactMatchDataStores(@Nonnull final String id) {
-        return new ExactMatchDataStoreRequestBuilder(getRequestUrlWithAdditionalSegment("exactMatchDataStores") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ExactMatchDataStoreRequestBuilder exactMatchDataStores(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ExactMatchDataStoreRequestBuilder(getRequestUrlWithAdditionalSegment("exactMatchDataStores") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the JobResponseBase collection
@@ -101,8 +91,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public JobResponseBaseCollectionRequestBuilder classifyFileJobs() {
-        return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classifyFileJobs"), getClient(), null);
+    public com.microsoft.graph.requests.JobResponseBaseCollectionRequestBuilder classifyFileJobs() {
+        return new com.microsoft.graph.requests.JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classifyFileJobs"), getClient(), null);
     }
 
     /**
@@ -112,8 +102,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public JobResponseBaseRequestBuilder classifyFileJobs(@Nonnull final String id) {
-        return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("classifyFileJobs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.JobResponseBaseRequestBuilder classifyFileJobs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("classifyFileJobs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the JobResponseBase collection
@@ -121,8 +111,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public JobResponseBaseCollectionRequestBuilder classifyTextJobs() {
-        return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classifyTextJobs"), getClient(), null);
+    public com.microsoft.graph.requests.JobResponseBaseCollectionRequestBuilder classifyTextJobs() {
+        return new com.microsoft.graph.requests.JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classifyTextJobs"), getClient(), null);
     }
 
     /**
@@ -132,8 +122,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public JobResponseBaseRequestBuilder classifyTextJobs(@Nonnull final String id) {
-        return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("classifyTextJobs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.JobResponseBaseRequestBuilder classifyTextJobs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("classifyTextJobs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the JobResponseBase collection
@@ -141,8 +131,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public JobResponseBaseCollectionRequestBuilder evaluateDlpPoliciesJobs() {
-        return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateDlpPoliciesJobs"), getClient(), null);
+    public com.microsoft.graph.requests.JobResponseBaseCollectionRequestBuilder evaluateDlpPoliciesJobs() {
+        return new com.microsoft.graph.requests.JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateDlpPoliciesJobs"), getClient(), null);
     }
 
     /**
@@ -152,8 +142,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public JobResponseBaseRequestBuilder evaluateDlpPoliciesJobs(@Nonnull final String id) {
-        return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateDlpPoliciesJobs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.JobResponseBaseRequestBuilder evaluateDlpPoliciesJobs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateDlpPoliciesJobs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the JobResponseBase collection
@@ -161,8 +151,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public JobResponseBaseCollectionRequestBuilder evaluateLabelJobs() {
-        return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateLabelJobs"), getClient(), null);
+    public com.microsoft.graph.requests.JobResponseBaseCollectionRequestBuilder evaluateLabelJobs() {
+        return new com.microsoft.graph.requests.JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateLabelJobs"), getClient(), null);
     }
 
     /**
@@ -172,8 +162,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public JobResponseBaseRequestBuilder evaluateLabelJobs(@Nonnull final String id) {
-        return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateLabelJobs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.JobResponseBaseRequestBuilder evaluateLabelJobs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("evaluateLabelJobs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the JobResponseBase collection
@@ -181,8 +171,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public JobResponseBaseCollectionRequestBuilder jobs() {
-        return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
+    public com.microsoft.graph.requests.JobResponseBaseCollectionRequestBuilder jobs() {
+        return new com.microsoft.graph.requests.JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
     }
 
     /**
@@ -192,8 +182,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public JobResponseBaseRequestBuilder jobs(@Nonnull final String id) {
-        return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.JobResponseBaseRequestBuilder jobs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SensitiveType collection
@@ -201,8 +191,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public SensitiveTypeCollectionRequestBuilder sensitiveTypes() {
-        return new SensitiveTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitiveTypes"), getClient(), null);
+    public com.microsoft.graph.requests.SensitiveTypeCollectionRequestBuilder sensitiveTypes() {
+        return new com.microsoft.graph.requests.SensitiveTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitiveTypes"), getClient(), null);
     }
 
     /**
@@ -212,8 +202,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public SensitiveTypeRequestBuilder sensitiveTypes(@Nonnull final String id) {
-        return new SensitiveTypeRequestBuilder(getRequestUrlWithAdditionalSegment("sensitiveTypes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SensitiveTypeRequestBuilder sensitiveTypes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SensitiveTypeRequestBuilder(getRequestUrlWithAdditionalSegment("sensitiveTypes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SensitivityLabel collection
@@ -221,8 +211,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public SensitivityLabelCollectionRequestBuilder sensitivityLabels() {
-        return new SensitivityLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels"), getClient(), null);
+    public com.microsoft.graph.requests.SensitivityLabelCollectionRequestBuilder sensitivityLabels() {
+        return new com.microsoft.graph.requests.SensitivityLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels"), getClient(), null);
     }
 
     /**
@@ -232,8 +222,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public SensitivityLabelRequestBuilder sensitivityLabels(@Nonnull final String id) {
-        return new SensitivityLabelRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SensitivityLabelRequestBuilder sensitivityLabels(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SensitivityLabelRequestBuilder(getRequestUrlWithAdditionalSegment("sensitivityLabels") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ExactMatchUploadAgent collection
@@ -241,8 +231,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public ExactMatchUploadAgentCollectionRequestBuilder exactMatchUploadAgents() {
-        return new ExactMatchUploadAgentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exactMatchUploadAgents"), getClient(), null);
+    public com.microsoft.graph.requests.ExactMatchUploadAgentCollectionRequestBuilder exactMatchUploadAgents() {
+        return new com.microsoft.graph.requests.ExactMatchUploadAgentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exactMatchUploadAgents"), getClient(), null);
     }
 
     /**
@@ -252,8 +242,8 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public ExactMatchUploadAgentRequestBuilder exactMatchUploadAgents(@Nonnull final String id) {
-        return new ExactMatchUploadAgentRequestBuilder(getRequestUrlWithAdditionalSegment("exactMatchUploadAgents") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ExactMatchUploadAgentRequestBuilder exactMatchUploadAgents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ExactMatchUploadAgentRequestBuilder(getRequestUrlWithAdditionalSegment("exactMatchUploadAgents") + "/" + id, getClient(), null);
     }
 
     /**

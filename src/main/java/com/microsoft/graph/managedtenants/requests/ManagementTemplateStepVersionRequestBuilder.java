@@ -8,9 +8,6 @@ package com.microsoft.graph.managedtenants.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStepVersion;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepWithReferenceRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepDeploymentCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepDeploymentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class ManagementTemplateStepVersionRequestBuilder extends BaseRequestBuil
      * @return the ManagementTemplateStepWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ManagementTemplateStepWithReferenceRequestBuilder acceptedFor() {
-        return new ManagementTemplateStepWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedFor"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepWithReferenceRequestBuilder acceptedFor() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedFor"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementTemplateStepDeployment collection
@@ -75,8 +72,8 @@ public class ManagementTemplateStepVersionRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementTemplateStepDeploymentCollectionRequestBuilder deployments() {
-        return new ManagementTemplateStepDeploymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deployments"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepDeploymentCollectionRequestBuilder deployments() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepDeploymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deployments"), getClient(), null);
     }
 
     /**
@@ -86,8 +83,8 @@ public class ManagementTemplateStepVersionRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementTemplateStepDeploymentRequestBuilder deployments(@Nonnull final String id) {
-        return new ManagementTemplateStepDeploymentRequestBuilder(getRequestUrlWithAdditionalSegment("deployments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepDeploymentRequestBuilder deployments(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepDeploymentRequestBuilder(getRequestUrlWithAdditionalSegment("deployments") + "/" + id, getClient(), null);
     }
 
     /**
@@ -96,7 +93,7 @@ public class ManagementTemplateStepVersionRequestBuilder extends BaseRequestBuil
      * @return the ManagementTemplateStepWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ManagementTemplateStepWithReferenceRequestBuilder templateStep() {
-        return new ManagementTemplateStepWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("templateStep"), getClient(), null);
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepWithReferenceRequestBuilder templateStep() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("templateStep"), getClient(), null);
     }
 }

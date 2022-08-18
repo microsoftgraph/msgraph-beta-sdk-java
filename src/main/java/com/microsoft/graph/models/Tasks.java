@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.BaseTask;
-import com.microsoft.graph.models.BaseTaskList;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.BaseTaskCollectionPage;
 import com.microsoft.graph.requests.BaseTaskListCollectionPage;
@@ -37,7 +35,7 @@ public class Tasks extends Entity implements IJsonBackedObject {
     @SerializedName(value = "alltasks", alternate = {"Alltasks"})
     @Expose
 	@Nullable
-    public BaseTaskCollectionPage alltasks;
+    public com.microsoft.graph.requests.BaseTaskCollectionPage alltasks;
 
     /**
      * The Lists.
@@ -46,7 +44,7 @@ public class Tasks extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lists", alternate = {"Lists"})
     @Expose
 	@Nullable
-    public BaseTaskListCollectionPage lists;
+    public com.microsoft.graph.requests.BaseTaskListCollectionPage lists;
 
 
     /**
@@ -59,11 +57,11 @@ public class Tasks extends Entity implements IJsonBackedObject {
 
 
         if (json.has("alltasks")) {
-            alltasks = serializer.deserializeObject(json.get("alltasks"), BaseTaskCollectionPage.class);
+            alltasks = serializer.deserializeObject(json.get("alltasks"), com.microsoft.graph.requests.BaseTaskCollectionPage.class);
         }
 
         if (json.has("lists")) {
-            lists = serializer.deserializeObject(json.get("lists"), BaseTaskListCollectionPage.class);
+            lists = serializer.deserializeObject(json.get("lists"), com.microsoft.graph.requests.BaseTaskListCollectionPage.class);
         }
     }
 }

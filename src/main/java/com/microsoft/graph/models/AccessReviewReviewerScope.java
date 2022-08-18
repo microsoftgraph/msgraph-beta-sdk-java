@@ -27,7 +27,7 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements IJso
 
     /**
      * The Query.
-     * The query specifying who will be the reviewer. See table for examples.
+     * The query specifying who will be the reviewer.
      */
     @SerializedName(value = "query", alternate = {"Query"})
     @Expose

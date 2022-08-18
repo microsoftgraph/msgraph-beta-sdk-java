@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MeetingRegistrationBase;
-import com.microsoft.graph.requests.MeetingRegistrantBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.MeetingRegistrantBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class MeetingRegistrationBaseRequestBuilder extends BaseRequestBuilder<Me
      * @return the collection request builder
      */
     @Nonnull
-    public MeetingRegistrantBaseCollectionRequestBuilder registrants() {
-        return new MeetingRegistrantBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registrants"), getClient(), null);
+    public com.microsoft.graph.requests.MeetingRegistrantBaseCollectionRequestBuilder registrants() {
+        return new com.microsoft.graph.requests.MeetingRegistrantBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registrants"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class MeetingRegistrationBaseRequestBuilder extends BaseRequestBuilder<Me
      * @param id the item identifier
      */
     @Nonnull
-    public MeetingRegistrantBaseRequestBuilder registrants(@Nonnull final String id) {
-        return new MeetingRegistrantBaseRequestBuilder(getRequestUrlWithAdditionalSegment("registrants") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MeetingRegistrantBaseRequestBuilder registrants(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MeetingRegistrantBaseRequestBuilder(getRequestUrlWithAdditionalSegment("registrants") + "/" + id, getClient(), null);
     }
 }

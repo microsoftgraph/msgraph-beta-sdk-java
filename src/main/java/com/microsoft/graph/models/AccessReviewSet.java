@@ -9,9 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
-import com.microsoft.graph.models.AccessReviewScheduleDefinition;
-import com.microsoft.graph.models.AccessReviewHistoryDefinition;
 import com.microsoft.graph.models.AccessReviewPolicy;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage;
@@ -40,7 +37,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
 	@Nullable
-    public AccessReviewInstanceDecisionItemCollectionPage decisions;
+    public com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage decisions;
 
     /**
      * The Definitions.
@@ -49,7 +46,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "definitions", alternate = {"Definitions"})
     @Expose
 	@Nullable
-    public AccessReviewScheduleDefinitionCollectionPage definitions;
+    public com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionPage definitions;
 
     /**
      * The History Definitions.
@@ -58,7 +55,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "historyDefinitions", alternate = {"HistoryDefinitions"})
     @Expose
 	@Nullable
-    public AccessReviewHistoryDefinitionCollectionPage historyDefinitions;
+    public com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionPage historyDefinitions;
 
     /**
      * The Policy.
@@ -80,15 +77,15 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("decisions")) {
-            decisions = serializer.deserializeObject(json.get("decisions"), AccessReviewInstanceDecisionItemCollectionPage.class);
+            decisions = serializer.deserializeObject(json.get("decisions"), com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage.class);
         }
 
         if (json.has("definitions")) {
-            definitions = serializer.deserializeObject(json.get("definitions"), AccessReviewScheduleDefinitionCollectionPage.class);
+            definitions = serializer.deserializeObject(json.get("definitions"), com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionPage.class);
         }
 
         if (json.has("historyDefinitions")) {
-            historyDefinitions = serializer.deserializeObject(json.get("historyDefinitions"), AccessReviewHistoryDefinitionCollectionPage.class);
+            historyDefinitions = serializer.deserializeObject(json.get("historyDefinitions"), com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionPage.class);
         }
     }
 }

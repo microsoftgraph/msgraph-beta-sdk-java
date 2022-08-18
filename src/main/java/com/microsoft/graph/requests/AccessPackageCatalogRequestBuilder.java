@@ -8,16 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageCatalog;
-import com.microsoft.graph.requests.AccessPackageResourceRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageRequestBuilder;
-import com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -72,8 +62,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageResourceRoleCollectionRequestBuilder accessPackageResourceRoles() {
-        return new AccessPackageResourceRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoles"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceRoleCollectionRequestBuilder accessPackageResourceRoles() {
+        return new com.microsoft.graph.requests.AccessPackageResourceRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoles"), getClient(), null);
     }
 
     /**
@@ -83,8 +73,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageResourceRoleRequestBuilder accessPackageResourceRoles(@Nonnull final String id) {
-        return new AccessPackageResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoles") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceRoleRequestBuilder accessPackageResourceRoles(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoles") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageResource collection
@@ -92,8 +82,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageResourceCollectionRequestBuilder accessPackageResources() {
-        return new AccessPackageResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceCollectionRequestBuilder accessPackageResources() {
+        return new com.microsoft.graph.requests.AccessPackageResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources"), getClient(), null);
     }
 
     /**
@@ -103,8 +93,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageResourceRequestBuilder accessPackageResources(@Nonnull final String id) {
-        return new AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceRequestBuilder accessPackageResources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageResourceScope collection
@@ -112,8 +102,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageResourceScopeCollectionRequestBuilder accessPackageResourceScopes() {
-        return new AccessPackageResourceScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScopes"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceScopeCollectionRequestBuilder accessPackageResourceScopes() {
+        return new com.microsoft.graph.requests.AccessPackageResourceScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScopes"), getClient(), null);
     }
 
     /**
@@ -123,8 +113,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageResourceScopeRequestBuilder accessPackageResourceScopes(@Nonnull final String id) {
-        return new AccessPackageResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScopes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder accessPackageResourceScopes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScopes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackage collection
@@ -132,8 +122,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageCollectionRequestBuilder accessPackages() {
-        return new AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder accessPackages() {
+        return new com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
     }
 
     /**
@@ -143,8 +133,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
-        return new AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CustomAccessPackageWorkflowExtension collection
@@ -152,8 +142,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @return the collection request builder
      */
     @Nonnull
-    public CustomAccessPackageWorkflowExtensionCollectionRequestBuilder customAccessPackageWorkflowExtensions() {
-        return new CustomAccessPackageWorkflowExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customAccessPackageWorkflowExtensions"), getClient(), null);
+    public com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionCollectionRequestBuilder customAccessPackageWorkflowExtensions() {
+        return new com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customAccessPackageWorkflowExtensions"), getClient(), null);
     }
 
     /**
@@ -163,7 +153,7 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @param id the item identifier
      */
     @Nonnull
-    public CustomAccessPackageWorkflowExtensionRequestBuilder customAccessPackageWorkflowExtensions(@Nonnull final String id) {
-        return new CustomAccessPackageWorkflowExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("customAccessPackageWorkflowExtensions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionRequestBuilder customAccessPackageWorkflowExtensions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CustomAccessPackageWorkflowExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("customAccessPackageWorkflowExtensions") + "/" + id, getClient(), null);
     }
 }

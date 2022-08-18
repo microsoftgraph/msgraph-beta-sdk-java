@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySet;
-import com.microsoft.graph.ediscovery.models.ReviewSetQuery;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.ediscovery.requests.ReviewSetQueryCollectionPage;
 
@@ -63,7 +62,7 @@ public class ReviewSet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "queries", alternate = {"Queries"})
     @Expose
 	@Nullable
-    public ReviewSetQueryCollectionPage queries;
+    public com.microsoft.graph.ediscovery.requests.ReviewSetQueryCollectionPage queries;
 
 
     /**
@@ -76,7 +75,7 @@ public class ReviewSet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("queries")) {
-            queries = serializer.deserializeObject(json.get("queries"), ReviewSetQueryCollectionPage.class);
+            queries = serializer.deserializeObject(json.get("queries"), com.microsoft.graph.ediscovery.requests.ReviewSetQueryCollectionPage.class);
         }
     }
 }

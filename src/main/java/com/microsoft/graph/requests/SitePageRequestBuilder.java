@@ -63,8 +63,8 @@ public class SitePageRequestBuilder extends BaseRequestBuilder<SitePage> {
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder createdByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder createdByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
@@ -73,8 +73,8 @@ public class SitePageRequestBuilder extends BaseRequestBuilder<SitePage> {
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder lastModifiedByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     /**

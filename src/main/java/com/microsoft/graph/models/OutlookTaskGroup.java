@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.OutlookTaskFolder;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.OutlookTaskFolderCollectionPage;
 
@@ -71,7 +70,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
     @SerializedName(value = "taskFolders", alternate = {"TaskFolders"})
     @Expose
 	@Nullable
-    public OutlookTaskFolderCollectionPage taskFolders;
+    public com.microsoft.graph.requests.OutlookTaskFolderCollectionPage taskFolders;
 
 
     /**
@@ -84,7 +83,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("taskFolders")) {
-            taskFolders = serializer.deserializeObject(json.get("taskFolders"), OutlookTaskFolderCollectionPage.class);
+            taskFolders = serializer.deserializeObject(json.get("taskFolders"), com.microsoft.graph.requests.OutlookTaskFolderCollectionPage.class);
         }
     }
 }

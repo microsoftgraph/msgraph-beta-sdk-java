@@ -11,14 +11,6 @@ import com.microsoft.graph.models.OutlookUser;
 import com.microsoft.graph.models.LocaleInfo;
 import com.microsoft.graph.models.TimeZoneInformation;
 import com.microsoft.graph.models.TimeZoneStandard;
-import com.microsoft.graph.requests.OutlookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.OutlookCategoryRequestBuilder;
-import com.microsoft.graph.requests.OutlookTaskFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.OutlookTaskFolderRequestBuilder;
-import com.microsoft.graph.requests.OutlookTaskGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.OutlookTaskGroupRequestBuilder;
-import com.microsoft.graph.requests.OutlookTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.OutlookTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -74,8 +66,8 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
      * @return the collection request builder
      */
     @Nonnull
-    public OutlookCategoryCollectionRequestBuilder masterCategories() {
-        return new OutlookCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories"), getClient(), null);
+    public com.microsoft.graph.requests.OutlookCategoryCollectionRequestBuilder masterCategories() {
+        return new com.microsoft.graph.requests.OutlookCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories"), getClient(), null);
     }
 
     /**
@@ -85,8 +77,8 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
      * @param id the item identifier
      */
     @Nonnull
-    public OutlookCategoryRequestBuilder masterCategories(@Nonnull final String id) {
-        return new OutlookCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OutlookCategoryRequestBuilder masterCategories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OutlookCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the OutlookTaskFolder collection
@@ -94,8 +86,8 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
      * @return the collection request builder
      */
     @Nonnull
-    public OutlookTaskFolderCollectionRequestBuilder taskFolders() {
-        return new OutlookTaskFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskFolders"), getClient(), null);
+    public com.microsoft.graph.requests.OutlookTaskFolderCollectionRequestBuilder taskFolders() {
+        return new com.microsoft.graph.requests.OutlookTaskFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskFolders"), getClient(), null);
     }
 
     /**
@@ -105,8 +97,8 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
      * @param id the item identifier
      */
     @Nonnull
-    public OutlookTaskFolderRequestBuilder taskFolders(@Nonnull final String id) {
-        return new OutlookTaskFolderRequestBuilder(getRequestUrlWithAdditionalSegment("taskFolders") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OutlookTaskFolderRequestBuilder taskFolders(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OutlookTaskFolderRequestBuilder(getRequestUrlWithAdditionalSegment("taskFolders") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the OutlookTaskGroup collection
@@ -114,8 +106,8 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
      * @return the collection request builder
      */
     @Nonnull
-    public OutlookTaskGroupCollectionRequestBuilder taskGroups() {
-        return new OutlookTaskGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskGroups"), getClient(), null);
+    public com.microsoft.graph.requests.OutlookTaskGroupCollectionRequestBuilder taskGroups() {
+        return new com.microsoft.graph.requests.OutlookTaskGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskGroups"), getClient(), null);
     }
 
     /**
@@ -125,8 +117,8 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
      * @param id the item identifier
      */
     @Nonnull
-    public OutlookTaskGroupRequestBuilder taskGroups(@Nonnull final String id) {
-        return new OutlookTaskGroupRequestBuilder(getRequestUrlWithAdditionalSegment("taskGroups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OutlookTaskGroupRequestBuilder taskGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OutlookTaskGroupRequestBuilder(getRequestUrlWithAdditionalSegment("taskGroups") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the OutlookTask collection
@@ -134,8 +126,8 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
      * @return the collection request builder
      */
     @Nonnull
-    public OutlookTaskCollectionRequestBuilder tasks() {
-        return new OutlookTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
+    public com.microsoft.graph.requests.OutlookTaskCollectionRequestBuilder tasks() {
+        return new com.microsoft.graph.requests.OutlookTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
     /**
@@ -145,8 +137,8 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
      * @param id the item identifier
      */
     @Nonnull
-    public OutlookTaskRequestBuilder tasks(@Nonnull final String id) {
-        return new OutlookTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OutlookTaskRequestBuilder tasks(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OutlookTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 
     /**

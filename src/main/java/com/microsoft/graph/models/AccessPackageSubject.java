@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.AccessPackageSubjectLifecycle;
 import com.microsoft.graph.models.ConnectedOrganization;
 import com.microsoft.graph.models.Entity;
 
@@ -73,7 +74,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The On Premises Security Identifier.
-     * A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
+     * 
      */
     @SerializedName(value = "onPremisesSecurityIdentifier", alternate = {"OnPremisesSecurityIdentifier"})
     @Expose
@@ -88,6 +89,15 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String principalName;
+
+    /**
+     * The Subject Lifecycle.
+     * 
+     */
+    @SerializedName(value = "subjectLifecycle", alternate = {"SubjectLifecycle"})
+    @Expose
+	@Nullable
+    public AccessPackageSubjectLifecycle subjectLifecycle;
 
     /**
      * The Type.

@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DeviceManagementScriptDeviceState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionPage;
 
@@ -62,7 +61,7 @@ public class DeviceManagementScriptUserState extends Entity implements IJsonBack
     @SerializedName(value = "deviceRunStates", alternate = {"DeviceRunStates"})
     @Expose
 	@Nullable
-    public DeviceManagementScriptDeviceStateCollectionPage deviceRunStates;
+    public com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionPage deviceRunStates;
 
 
     /**
@@ -75,7 +74,7 @@ public class DeviceManagementScriptUserState extends Entity implements IJsonBack
 
 
         if (json.has("deviceRunStates")) {
-            deviceRunStates = serializer.deserializeObject(json.get("deviceRunStates"), DeviceManagementScriptDeviceStateCollectionPage.class);
+            deviceRunStates = serializer.deserializeObject(json.get("deviceRunStates"), com.microsoft.graph.requests.DeviceManagementScriptDeviceStateCollectionPage.class);
         }
     }
 }

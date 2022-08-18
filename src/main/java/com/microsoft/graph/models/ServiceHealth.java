@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ServiceHealthStatus;
-import com.microsoft.graph.models.ServiceHealthIssue;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ServiceHealthIssueCollectionPage;
 
@@ -54,7 +53,7 @@ public class ServiceHealth extends Entity implements IJsonBackedObject {
     @SerializedName(value = "issues", alternate = {"Issues"})
     @Expose
 	@Nullable
-    public ServiceHealthIssueCollectionPage issues;
+    public com.microsoft.graph.requests.ServiceHealthIssueCollectionPage issues;
 
 
     /**
@@ -67,7 +66,7 @@ public class ServiceHealth extends Entity implements IJsonBackedObject {
 
 
         if (json.has("issues")) {
-            issues = serializer.deserializeObject(json.get("issues"), ServiceHealthIssueCollectionPage.class);
+            issues = serializer.deserializeObject(json.get("issues"), com.microsoft.graph.requests.ServiceHealthIssueCollectionPage.class);
         }
     }
 }

@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PermissionGrantPolicy;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.requests.PermissionGrantConditionSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.PermissionGrantConditionSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -69,8 +67,8 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
      * @return the collection request builder
      */
     @Nonnull
-    public PermissionGrantConditionSetCollectionRequestBuilder excludes() {
-        return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("excludes"), getClient(), null);
+    public com.microsoft.graph.requests.PermissionGrantConditionSetCollectionRequestBuilder excludes() {
+        return new com.microsoft.graph.requests.PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("excludes"), getClient(), null);
     }
 
     /**
@@ -80,8 +78,8 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
      * @param id the item identifier
      */
     @Nonnull
-    public PermissionGrantConditionSetRequestBuilder excludes(@Nonnull final String id) {
-        return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("excludes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PermissionGrantConditionSetRequestBuilder excludes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("excludes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PermissionGrantConditionSet collection
@@ -89,8 +87,8 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
      * @return the collection request builder
      */
     @Nonnull
-    public PermissionGrantConditionSetCollectionRequestBuilder includes() {
-        return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includes"), getClient(), null);
+    public com.microsoft.graph.requests.PermissionGrantConditionSetCollectionRequestBuilder includes() {
+        return new com.microsoft.graph.requests.PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includes"), getClient(), null);
     }
 
     /**
@@ -100,8 +98,17 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
      * @param id the item identifier
      */
     @Nonnull
-    public PermissionGrantConditionSetRequestBuilder includes(@Nonnull final String id) {
-        return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("includes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PermissionGrantConditionSetRequestBuilder includes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("includes") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public DirectoryObjectRestoreRequestBuilder restore() {
+        return new DirectoryObjectRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null);
     }
 
     /**
@@ -142,14 +149,5 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder<Perm
     @Nonnull
     public DirectoryObjectGetMemberObjectsCollectionRequestBuilder getMemberObjects(@Nonnull final DirectoryObjectGetMemberObjectsParameterSet parameters) {
         return new DirectoryObjectGetMemberObjectsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMemberObjects"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public DirectoryObjectRestoreRequestBuilder restore() {
-        return new DirectoryObjectRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null);
     }
 }

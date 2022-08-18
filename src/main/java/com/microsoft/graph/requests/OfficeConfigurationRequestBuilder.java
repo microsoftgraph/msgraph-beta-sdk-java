@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OfficeConfiguration;
-import com.microsoft.graph.requests.OfficeClientConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.OfficeClientConfigurationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class OfficeConfigurationRequestBuilder extends BaseRequestBuilder<Office
      * @return the collection request builder
      */
     @Nonnull
-    public OfficeClientConfigurationCollectionRequestBuilder clientConfigurations() {
-        return new OfficeClientConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("clientConfigurations"), getClient(), null);
+    public com.microsoft.graph.requests.OfficeClientConfigurationCollectionRequestBuilder clientConfigurations() {
+        return new com.microsoft.graph.requests.OfficeClientConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("clientConfigurations"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class OfficeConfigurationRequestBuilder extends BaseRequestBuilder<Office
      * @param id the item identifier
      */
     @Nonnull
-    public OfficeClientConfigurationRequestBuilder clientConfigurations(@Nonnull final String id) {
-        return new OfficeClientConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("clientConfigurations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OfficeClientConfigurationRequestBuilder clientConfigurations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OfficeClientConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("clientConfigurations") + "/" + id, getClient(), null);
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamworkTag;
-import com.microsoft.graph.requests.TeamworkTagMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.TeamworkTagMemberRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class TeamworkTagRequestBuilder extends BaseRequestBuilder<TeamworkTag> {
      * @return the collection request builder
      */
     @Nonnull
-    public TeamworkTagMemberCollectionRequestBuilder members() {
-        return new TeamworkTagMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    public com.microsoft.graph.requests.TeamworkTagMemberCollectionRequestBuilder members() {
+        return new com.microsoft.graph.requests.TeamworkTagMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class TeamworkTagRequestBuilder extends BaseRequestBuilder<TeamworkTag> {
      * @param id the item identifier
      */
     @Nonnull
-    public TeamworkTagMemberRequestBuilder members(@Nonnull final String id) {
-        return new TeamworkTagMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TeamworkTagMemberRequestBuilder members(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamworkTagMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
 }

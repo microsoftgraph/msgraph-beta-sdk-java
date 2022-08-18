@@ -19,8 +19,6 @@ import com.microsoft.graph.models.ChatMessageMention;
 import com.microsoft.graph.models.ChatMessageType;
 import com.microsoft.graph.models.ChatMessagePolicyViolation;
 import com.microsoft.graph.models.ChatMessageReaction;
-import com.microsoft.graph.models.ChatMessageHostedContent;
-import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ChatMessageHostedContentCollectionPage;
 import com.microsoft.graph.requests.ChatMessageCollectionPage;
@@ -245,7 +243,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "hostedContents", alternate = {"HostedContents"})
     @Expose
 	@Nullable
-    public ChatMessageHostedContentCollectionPage hostedContents;
+    public com.microsoft.graph.requests.ChatMessageHostedContentCollectionPage hostedContents;
 
     /**
      * The Replies.
@@ -254,7 +252,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "replies", alternate = {"Replies"})
     @Expose
 	@Nullable
-    public ChatMessageCollectionPage replies;
+    public com.microsoft.graph.requests.ChatMessageCollectionPage replies;
 
 
     /**
@@ -267,11 +265,11 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
 
         if (json.has("hostedContents")) {
-            hostedContents = serializer.deserializeObject(json.get("hostedContents"), ChatMessageHostedContentCollectionPage.class);
+            hostedContents = serializer.deserializeObject(json.get("hostedContents"), com.microsoft.graph.requests.ChatMessageHostedContentCollectionPage.class);
         }
 
         if (json.has("replies")) {
-            replies = serializer.deserializeObject(json.get("replies"), ChatMessageCollectionPage.class);
+            replies = serializer.deserializeObject(json.get("replies"), com.microsoft.graph.requests.ChatMessageCollectionPage.class);
         }
     }
 }

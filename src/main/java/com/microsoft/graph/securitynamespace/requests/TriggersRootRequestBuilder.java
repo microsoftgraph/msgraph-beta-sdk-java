@@ -8,8 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.TriggersRoot;
-import com.microsoft.graph.security.requests.RetentionEventCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.RetentionEventRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class TriggersRootRequestBuilder extends BaseRequestBuilder<TriggersRoot>
      * @return the collection request builder
      */
     @Nonnull
-    public RetentionEventCollectionRequestBuilder retentionEvents() {
-        return new RetentionEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("retentionEvents"), getClient(), null);
+    public com.microsoft.graph.security.requests.RetentionEventCollectionRequestBuilder retentionEvents() {
+        return new com.microsoft.graph.security.requests.RetentionEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("retentionEvents"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class TriggersRootRequestBuilder extends BaseRequestBuilder<TriggersRoot>
      * @param id the item identifier
      */
     @Nonnull
-    public RetentionEventRequestBuilder retentionEvents(@Nonnull final String id) {
-        return new RetentionEventRequestBuilder(getRequestUrlWithAdditionalSegment("retentionEvents") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.RetentionEventRequestBuilder retentionEvents(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.RetentionEventRequestBuilder(getRequestUrlWithAdditionalSegment("retentionEvents") + "/" + id, getClient(), null);
     }
 }

@@ -10,8 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.windowsupdates.models.UpdatableAssetGroup;
 import com.microsoft.graph.windowsupdates.models.UpdatableAsset;
 import com.microsoft.graph.windowsupdates.models.UpdateCategory;
-import com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +68,8 @@ public class UpdatableAssetGroupRequestBuilder extends BaseRequestBuilder<Updata
      * @return the collection request builder
      */
     @Nonnull
-    public UpdatableAssetCollectionRequestBuilder members() {
-        return new UpdatableAssetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder members() {
+        return new com.microsoft.graph.windowsupdates.requests.UpdatableAssetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
     /**
@@ -81,8 +79,8 @@ public class UpdatableAssetGroupRequestBuilder extends BaseRequestBuilder<Updata
      * @param id the item identifier
      */
     @Nonnull
-    public UpdatableAssetRequestBuilder members(@Nonnull final String id) {
-        return new UpdatableAssetRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    public com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder members(@Nonnull final String id) {
+        return new com.microsoft.graph.windowsupdates.requests.UpdatableAssetRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
 
     /**

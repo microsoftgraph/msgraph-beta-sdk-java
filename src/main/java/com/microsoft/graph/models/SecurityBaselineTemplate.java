@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.SecurityBaselineCategoryStateSummary;
-import com.microsoft.graph.models.SecurityBaselineDeviceState;
 import com.microsoft.graph.models.SecurityBaselineStateSummary;
 import com.microsoft.graph.models.DeviceManagementTemplate;
 import com.microsoft.graph.requests.SecurityBaselineCategoryStateSummaryCollectionPage;
@@ -38,7 +36,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     @SerializedName(value = "categoryDeviceStateSummaries", alternate = {"CategoryDeviceStateSummaries"})
     @Expose
 	@Nullable
-    public SecurityBaselineCategoryStateSummaryCollectionPage categoryDeviceStateSummaries;
+    public com.microsoft.graph.requests.SecurityBaselineCategoryStateSummaryCollectionPage categoryDeviceStateSummaries;
 
     /**
      * The Device States.
@@ -47,7 +45,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
 	@Nullable
-    public SecurityBaselineDeviceStateCollectionPage deviceStates;
+    public com.microsoft.graph.requests.SecurityBaselineDeviceStateCollectionPage deviceStates;
 
     /**
      * The Device State Summary.
@@ -69,11 +67,11 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
 
 
         if (json.has("categoryDeviceStateSummaries")) {
-            categoryDeviceStateSummaries = serializer.deserializeObject(json.get("categoryDeviceStateSummaries"), SecurityBaselineCategoryStateSummaryCollectionPage.class);
+            categoryDeviceStateSummaries = serializer.deserializeObject(json.get("categoryDeviceStateSummaries"), com.microsoft.graph.requests.SecurityBaselineCategoryStateSummaryCollectionPage.class);
         }
 
         if (json.has("deviceStates")) {
-            deviceStates = serializer.deserializeObject(json.get("deviceStates"), SecurityBaselineDeviceStateCollectionPage.class);
+            deviceStates = serializer.deserializeObject(json.get("deviceStates"), com.microsoft.graph.requests.SecurityBaselineDeviceStateCollectionPage.class);
         }
     }
 }

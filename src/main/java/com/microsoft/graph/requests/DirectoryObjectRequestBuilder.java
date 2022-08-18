@@ -63,6 +63,15 @@ public class DirectoryObjectRequestBuilder extends BaseRequestBuilder<DirectoryO
 
     /**
      * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public DirectoryObjectRestoreRequestBuilder restore() {
+        return new DirectoryObjectRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
      */
@@ -99,14 +108,5 @@ public class DirectoryObjectRequestBuilder extends BaseRequestBuilder<DirectoryO
     @Nonnull
     public DirectoryObjectGetMemberObjectsCollectionRequestBuilder getMemberObjects(@Nonnull final DirectoryObjectGetMemberObjectsParameterSet parameters) {
         return new DirectoryObjectGetMemberObjectsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMemberObjects"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public DirectoryObjectRestoreRequestBuilder restore() {
-        return new DirectoryObjectRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null);
     }
 }

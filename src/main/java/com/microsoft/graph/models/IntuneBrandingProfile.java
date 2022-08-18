@@ -13,7 +13,6 @@ import com.microsoft.graph.models.CompanyPortalBlockedAction;
 import com.microsoft.graph.models.EnrollmentAvailabilityOptions;
 import com.microsoft.graph.models.MimeContent;
 import com.microsoft.graph.models.RgbColor;
-import com.microsoft.graph.models.IntuneBrandingProfileAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.IntuneBrandingProfileAssignmentCollectionPage;
 
@@ -318,7 +317,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public IntuneBrandingProfileAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.IntuneBrandingProfileAssignmentCollectionPage assignments;
 
 
     /**
@@ -331,7 +330,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), IntuneBrandingProfileAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.IntuneBrandingProfileAssignmentCollectionPage.class);
         }
     }
 }

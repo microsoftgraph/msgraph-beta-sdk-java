@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeletedTeam;
 import com.microsoft.graph.models.ChatMessage;
-import com.microsoft.graph.requests.ChannelCollectionRequestBuilder;
-import com.microsoft.graph.requests.ChannelRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

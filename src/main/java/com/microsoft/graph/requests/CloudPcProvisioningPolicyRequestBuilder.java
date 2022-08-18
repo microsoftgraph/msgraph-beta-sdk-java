@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CloudPcProvisioningPolicy;
 import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignment;
-import com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +64,8 @@ public class CloudPcProvisioningPolicyRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public CloudPcProvisioningPolicyAssignmentCollectionRequestBuilder assignments() {
-        return new CloudPcProvisioningPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -77,8 +75,8 @@ public class CloudPcProvisioningPolicyRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public CloudPcProvisioningPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new CloudPcProvisioningPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

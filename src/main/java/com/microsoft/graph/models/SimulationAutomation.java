@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.EmailIdentity;
 import com.microsoft.graph.models.SimulationAutomationStatus;
-import com.microsoft.graph.models.SimulationAutomationRun;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SimulationAutomationRunCollectionPage;
 
@@ -118,7 +117,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "runs", alternate = {"Runs"})
     @Expose
 	@Nullable
-    public SimulationAutomationRunCollectionPage runs;
+    public com.microsoft.graph.requests.SimulationAutomationRunCollectionPage runs;
 
 
     /**
@@ -131,7 +130,7 @@ public class SimulationAutomation extends Entity implements IJsonBackedObject {
 
 
         if (json.has("runs")) {
-            runs = serializer.deserializeObject(json.get("runs"), SimulationAutomationRunCollectionPage.class);
+            runs = serializer.deserializeObject(json.get("runs"), com.microsoft.graph.requests.SimulationAutomationRunCollectionPage.class);
         }
     }
 }

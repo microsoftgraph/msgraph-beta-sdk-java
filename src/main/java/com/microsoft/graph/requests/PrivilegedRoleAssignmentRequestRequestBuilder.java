@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrivilegedRoleAssignmentRequest;
-import com.microsoft.graph.requests.PrivilegedRoleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +63,8 @@ public class PrivilegedRoleAssignmentRequestRequestBuilder extends BaseRequestBu
      * @return the PrivilegedRoleRequestBuilder instance
      */
     @Nonnull
-    public PrivilegedRoleRequestBuilder roleInfo() {
-        return new PrivilegedRoleRequestBuilder(getRequestUrlWithAdditionalSegment("roleInfo"), getClient(), null);
+    public com.microsoft.graph.requests.PrivilegedRoleRequestBuilder roleInfo() {
+        return new com.microsoft.graph.requests.PrivilegedRoleRequestBuilder(getRequestUrlWithAdditionalSegment("roleInfo"), getClient(), null);
     }
 
     /**

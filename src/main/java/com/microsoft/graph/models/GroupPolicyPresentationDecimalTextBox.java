@@ -8,7 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.GroupPolicyPresentation;
+import com.microsoft.graph.models.GroupPolicyUploadedPresentation;
 
 
 import com.google.gson.JsonObject;
@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Group Policy Presentation Decimal Text Box.
  */
-public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyPresentation implements IJsonBackedObject {
+public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPresentation implements IJsonBackedObject {
 
 
     /**

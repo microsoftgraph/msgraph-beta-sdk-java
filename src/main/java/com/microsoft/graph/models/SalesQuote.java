@@ -13,7 +13,6 @@ import com.microsoft.graph.models.PostalAddressType;
 import com.microsoft.graph.models.Currency;
 import com.microsoft.graph.models.Customer;
 import com.microsoft.graph.models.PaymentTerm;
-import com.microsoft.graph.models.SalesQuoteLine;
 import com.microsoft.graph.models.ShipmentMethod;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SalesQuoteLineCollectionPage;
@@ -346,7 +345,7 @@ public class SalesQuote extends Entity implements IJsonBackedObject {
     @SerializedName(value = "salesQuoteLines", alternate = {"SalesQuoteLines"})
     @Expose
 	@Nullable
-    public SalesQuoteLineCollectionPage salesQuoteLines;
+    public com.microsoft.graph.requests.SalesQuoteLineCollectionPage salesQuoteLines;
 
     /**
      * The Shipment Method.
@@ -368,7 +367,7 @@ public class SalesQuote extends Entity implements IJsonBackedObject {
 
 
         if (json.has("salesQuoteLines")) {
-            salesQuoteLines = serializer.deserializeObject(json.get("salesQuoteLines"), SalesQuoteLineCollectionPage.class);
+            salesQuoteLines = serializer.deserializeObject(json.get("salesQuoteLines"), com.microsoft.graph.requests.SalesQuoteLineCollectionPage.class);
         }
     }
 }

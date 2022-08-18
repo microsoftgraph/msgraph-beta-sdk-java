@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PolicyScope;
-import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.GroupCollectionPage;
 
@@ -97,7 +96,7 @@ public class MobilityManagementPolicy extends Entity implements IJsonBackedObjec
      * Azure AD groups under the scope of the mobility management application if appliesTo is selected
      */
 	@Nullable
-    public GroupCollectionPage includedGroups;
+    public com.microsoft.graph.requests.GroupCollectionPage includedGroups;
 
 
     /**
@@ -110,7 +109,7 @@ public class MobilityManagementPolicy extends Entity implements IJsonBackedObjec
 
 
         if (json.has("includedGroups")) {
-            includedGroups = serializer.deserializeObject(json.get("includedGroups"), GroupCollectionPage.class);
+            includedGroups = serializer.deserializeObject(json.get("includedGroups"), com.microsoft.graph.requests.GroupCollectionPage.class);
         }
     }
 }

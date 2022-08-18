@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SecurityConfigurationTask;
 import com.microsoft.graph.models.DeviceAppManagementTaskStatus;
-import com.microsoft.graph.requests.VulnerableManagedDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.VulnerableManagedDeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +64,8 @@ public class SecurityConfigurationTaskRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public VulnerableManagedDeviceCollectionRequestBuilder managedDevices() {
-        return new VulnerableManagedDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
+    public com.microsoft.graph.requests.VulnerableManagedDeviceCollectionRequestBuilder managedDevices() {
+        return new com.microsoft.graph.requests.VulnerableManagedDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
     }
 
     /**
@@ -77,8 +75,8 @@ public class SecurityConfigurationTaskRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public VulnerableManagedDeviceRequestBuilder managedDevices(@Nonnull final String id) {
-        return new VulnerableManagedDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.VulnerableManagedDeviceRequestBuilder managedDevices(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.VulnerableManagedDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
     }
 
     /**

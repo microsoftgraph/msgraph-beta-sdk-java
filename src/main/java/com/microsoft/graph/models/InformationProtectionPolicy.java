@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.InformationProtectionLabel;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.InformationProtectionLabelCollectionPage;
 
@@ -39,7 +38,7 @@ public class InformationProtectionPolicy extends Entity implements IJsonBackedOb
     @SerializedName(value = "labels", alternate = {"Labels"})
     @Expose
 	@Nullable
-    public InformationProtectionLabelCollectionPage labels;
+    public com.microsoft.graph.requests.InformationProtectionLabelCollectionPage labels;
 
 
     /**
@@ -52,7 +51,7 @@ public class InformationProtectionPolicy extends Entity implements IJsonBackedOb
 
 
         if (json.has("labels")) {
-            labels = serializer.deserializeObject(json.get("labels"), InformationProtectionLabelCollectionPage.class);
+            labels = serializer.deserializeObject(json.get("labels"), com.microsoft.graph.requests.InformationProtectionLabelCollectionPage.class);
         }
     }
 }

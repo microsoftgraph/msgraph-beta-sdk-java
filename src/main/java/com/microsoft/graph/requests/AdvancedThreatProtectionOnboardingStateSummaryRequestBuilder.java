@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AdvancedThreatProtectionOnboardingStateSummary;
-import com.microsoft.graph.requests.AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
      * @return the collection request builder
      */
     @Nonnull
-    public AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder advancedThreatProtectionOnboardingDeviceSettingStates() {
-        return new AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("advancedThreatProtectionOnboardingDeviceSettingStates"), getClient(), null);
+    public com.microsoft.graph.requests.AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder advancedThreatProtectionOnboardingDeviceSettingStates() {
+        return new com.microsoft.graph.requests.AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("advancedThreatProtectionOnboardingDeviceSettingStates"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
      * @param id the item identifier
      */
     @Nonnull
-    public AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder advancedThreatProtectionOnboardingDeviceSettingStates(@Nonnull final String id) {
-        return new AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("advancedThreatProtectionOnboardingDeviceSettingStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder advancedThreatProtectionOnboardingDeviceSettingStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("advancedThreatProtectionOnboardingDeviceSettingStates") + "/" + id, getClient(), null);
     }
 }

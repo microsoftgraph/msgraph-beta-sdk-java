@@ -13,7 +13,6 @@ import com.microsoft.graph.models.EndpointSecurityConfigurationApplicablePlatfor
 import com.microsoft.graph.models.EndpointSecurityConfigurationType;
 import com.microsoft.graph.models.EndpointSecurityConfigurationProfileType;
 import com.microsoft.graph.models.KeyValuePair;
-import com.microsoft.graph.models.VulnerableManagedDevice;
 import com.microsoft.graph.models.DeviceAppManagementTask;
 import com.microsoft.graph.requests.VulnerableManagedDeviceCollectionPage;
 
@@ -93,7 +92,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     @SerializedName(value = "managedDevices", alternate = {"ManagedDevices"})
     @Expose
 	@Nullable
-    public VulnerableManagedDeviceCollectionPage managedDevices;
+    public com.microsoft.graph.requests.VulnerableManagedDeviceCollectionPage managedDevices;
 
 
     /**
@@ -106,7 +105,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
 
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices"), VulnerableManagedDeviceCollectionPage.class);
+            managedDevices = serializer.deserializeObject(json.get("managedDevices"), com.microsoft.graph.requests.VulnerableManagedDeviceCollectionPage.class);
         }
     }
 }

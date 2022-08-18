@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
-import com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +66,8 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
      * @return the WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder deploymentProfile() {
-        return new WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deploymentProfile"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder deploymentProfile() {
+        return new com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deploymentProfile"), getClient(), null);
     }
 
     /**
@@ -77,8 +76,8 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
      * @return the WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder intendedDeploymentProfile() {
-        return new WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("intendedDeploymentProfile"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder intendedDeploymentProfile() {
+        return new com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("intendedDeploymentProfile"), getClient(), null);
     }
 
     /**

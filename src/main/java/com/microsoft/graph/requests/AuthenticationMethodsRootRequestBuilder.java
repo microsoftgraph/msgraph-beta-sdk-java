@@ -12,8 +12,6 @@ import com.microsoft.graph.models.UserRegistrationFeatureSummary;
 import com.microsoft.graph.models.IncludedUserTypes;
 import com.microsoft.graph.models.IncludedUserRoles;
 import com.microsoft.graph.models.UserRegistrationMethodSummary;
-import com.microsoft.graph.requests.UserRegistrationDetailsCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserRegistrationDetailsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +68,8 @@ public class AuthenticationMethodsRootRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public UserRegistrationDetailsCollectionRequestBuilder userRegistrationDetails() {
-        return new UserRegistrationDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userRegistrationDetails"), getClient(), null);
+    public com.microsoft.graph.requests.UserRegistrationDetailsCollectionRequestBuilder userRegistrationDetails() {
+        return new com.microsoft.graph.requests.UserRegistrationDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userRegistrationDetails"), getClient(), null);
     }
 
     /**
@@ -81,8 +79,8 @@ public class AuthenticationMethodsRootRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public UserRegistrationDetailsRequestBuilder userRegistrationDetails(@Nonnull final String id) {
-        return new UserRegistrationDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userRegistrationDetails") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserRegistrationDetailsRequestBuilder userRegistrationDetails(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserRegistrationDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userRegistrationDetails") + "/" + id, getClient(), null);
     }
 
     /**

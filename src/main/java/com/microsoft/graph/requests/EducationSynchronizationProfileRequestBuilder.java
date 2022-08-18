@@ -9,9 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EducationSynchronizationProfile;
 import com.microsoft.graph.models.EducationFileSynchronizationVerificationMessage;
-import com.microsoft.graph.requests.EducationSynchronizationErrorCollectionRequestBuilder;
-import com.microsoft.graph.requests.EducationSynchronizationErrorRequestBuilder;
-import com.microsoft.graph.requests.EducationSynchronizationProfileStatusRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class EducationSynchronizationProfileRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public EducationSynchronizationErrorCollectionRequestBuilder errors() {
-        return new EducationSynchronizationErrorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("errors"), getClient(), null);
+    public com.microsoft.graph.requests.EducationSynchronizationErrorCollectionRequestBuilder errors() {
+        return new com.microsoft.graph.requests.EducationSynchronizationErrorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("errors"), getClient(), null);
     }
 
     /**
@@ -77,8 +74,8 @@ public class EducationSynchronizationProfileRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public EducationSynchronizationErrorRequestBuilder errors(@Nonnull final String id) {
-        return new EducationSynchronizationErrorRequestBuilder(getRequestUrlWithAdditionalSegment("errors") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationSynchronizationErrorRequestBuilder errors(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationSynchronizationErrorRequestBuilder(getRequestUrlWithAdditionalSegment("errors") + "/" + id, getClient(), null);
     }
 
     /**
@@ -87,8 +84,8 @@ public class EducationSynchronizationProfileRequestBuilder extends BaseRequestBu
      * @return the EducationSynchronizationProfileStatusRequestBuilder instance
      */
     @Nonnull
-    public EducationSynchronizationProfileStatusRequestBuilder profileStatus() {
-        return new EducationSynchronizationProfileStatusRequestBuilder(getRequestUrlWithAdditionalSegment("profileStatus"), getClient(), null);
+    public com.microsoft.graph.requests.EducationSynchronizationProfileStatusRequestBuilder profileStatus() {
+        return new com.microsoft.graph.requests.EducationSynchronizationProfileStatusRequestBuilder(getRequestUrlWithAdditionalSegment("profileStatus"), getClient(), null);
     }
 
     /**

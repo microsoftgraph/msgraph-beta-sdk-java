@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MobilityManagementPolicy;
-import com.microsoft.graph.requests.GroupCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.GroupWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class MobilityManagementPolicyRequestBuilder extends BaseRequestBuilder<M
      * @return the collection request builder
      */
     @Nonnull
-    public GroupCollectionWithReferencesRequestBuilder includedGroups() {
-        return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("includedGroups"), getClient(), null);
+    public com.microsoft.graph.requests.GroupCollectionWithReferencesRequestBuilder includedGroups() {
+        return new com.microsoft.graph.requests.GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("includedGroups"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class MobilityManagementPolicyRequestBuilder extends BaseRequestBuilder<M
      * @param id the item identifier
      */
     @Nonnull
-    public GroupWithReferenceRequestBuilder includedGroups(@Nonnull final String id) {
-        return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("includedGroups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GroupWithReferenceRequestBuilder includedGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("includedGroups") + "/" + id, getClient(), null);
     }
 }

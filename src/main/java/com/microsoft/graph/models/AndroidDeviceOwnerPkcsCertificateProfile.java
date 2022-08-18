@@ -9,10 +9,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AndroidDeviceOwnerCertificateAccessType;
 import com.microsoft.graph.models.CertificateStore;
 import com.microsoft.graph.models.DeviceManagementCertificationAuthority;
 import com.microsoft.graph.models.CustomSubjectAlternativeName;
-import com.microsoft.graph.models.ManagedDeviceCertificateState;
+import com.microsoft.graph.models.AndroidDeviceOwnerSilentCertificateAccess;
 import com.microsoft.graph.models.AndroidDeviceOwnerCertificateProfileBase;
 import com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage;
 
@@ -30,6 +31,15 @@ import javax.annotation.Nonnull;
  */
 public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertificateProfileBase implements IJsonBackedObject {
 
+
+    /**
+     * The Certificate Access Type.
+     * Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
+     */
+    @SerializedName(value = "certificateAccessType", alternate = {"CertificateAccessType"})
+    @Expose
+	@Nullable
+    public AndroidDeviceOwnerCertificateAccessType certificateAccessType;
 
     /**
      * The Certificate Store.
@@ -86,6 +96,15 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     public java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
 
     /**
+     * The Silent Certificate Access Details.
+     * Certificate access information. This collection can contain a maximum of 50 elements.
+     */
+    @SerializedName(value = "silentCertificateAccessDetails", alternate = {"SilentCertificateAccessDetails"})
+    @Expose
+	@Nullable
+    public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> silentCertificateAccessDetails;
+
+    /**
      * The Subject Alternative Name Format String.
      * Custom String that defines the AAD Attribute.
      */
@@ -110,7 +129,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose
 	@Nullable
-    public ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
+    public com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
 
 
     /**
@@ -123,7 +142,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
 
 
         if (json.has("managedDeviceCertificateStates")) {
-            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), ManagedDeviceCertificateStateCollectionPage.class);
+            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage.class);
         }
     }
 }

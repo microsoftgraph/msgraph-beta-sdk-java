@@ -67,8 +67,8 @@ public class DeviceComanagementAuthorityConfigurationRequestBuilder extends Base
      * @return the collection request builder
      */
     @Nonnull
-    public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
-        return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -78,8 +78,8 @@ public class DeviceComanagementAuthorityConfigurationRequestBuilder extends Base
      * @param id the item identifier
      */
     @Nonnull
-    public EnrollmentConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EnrollmentConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**

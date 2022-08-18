@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OutboundSharedUserProfile;
-import com.microsoft.graph.requests.TenantReferenceCollectionRequestBuilder;
-import com.microsoft.graph.requests.TenantReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class OutboundSharedUserProfileRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public TenantReferenceCollectionRequestBuilder tenants() {
-        return new TenantReferenceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenants"), getClient(), null);
+    public com.microsoft.graph.requests.TenantReferenceCollectionRequestBuilder tenants() {
+        return new com.microsoft.graph.requests.TenantReferenceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenants"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class OutboundSharedUserProfileRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public TenantReferenceRequestBuilder tenants(@Nonnull final String id) {
-        return new TenantReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("tenants") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TenantReferenceRequestBuilder tenants(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TenantReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("tenants") + "/" + id, getClient(), null);
     }
 }
