@@ -7,9 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class OnenoteEntityBaseModel extends Entity implements Parsable {
-    /** The endpoint where you can get details about the page. Read-only. */
+    /** The self property */
     private String _self;
     /**
      * Instantiates a new onenoteEntityBaseModel and sets the default values.
@@ -54,7 +54,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the self property value. The endpoint where you can get details about the page. Read-only.
+     * Gets the self property value. The self property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
         writer.writeStringValue("self", this.getSelf());
     }
     /**
-     * Sets the self property value. The endpoint where you can get details about the page. Read-only.
+     * Sets the self property value. The self property
      * @param value Value to set for the self property.
      * @return a void
      */

@@ -175,7 +175,7 @@ public class LearningContentsRequestBuilder {
     /**
      * Create new navigation property to learningContents for employeeExperience
      * @param body 
-     * @return a CompletableFuture of LearningContent
+     * @return a CompletableFuture of learningContent
      */
     public java.util.concurrent.CompletableFuture<LearningContent> post(@javax.annotation.Nonnull final LearningContent body) {
         try {
@@ -193,7 +193,7 @@ public class LearningContentsRequestBuilder {
      * Create new navigation property to learningContents for employeeExperience
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LearningContent
+     * @return a CompletableFuture of learningContent
      */
     public java.util.concurrent.CompletableFuture<LearningContent> post(@javax.annotation.Nonnull final LearningContent body, @javax.annotation.Nullable final java.util.function.Consumer<LearningContentsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -212,7 +212,7 @@ public class LearningContentsRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of LearningContent
+     * @return a CompletableFuture of learningContent
      */
     public java.util.concurrent.CompletableFuture<LearningContent> post(@javax.annotation.Nonnull final LearningContent body, @javax.annotation.Nullable final java.util.function.Consumer<LearningContentsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the admin singleton. */
 public class Deployment extends Entity implements Parsable {
     /** Specifies the audience to which content is deployed. */
     private DeploymentAudience _audience;

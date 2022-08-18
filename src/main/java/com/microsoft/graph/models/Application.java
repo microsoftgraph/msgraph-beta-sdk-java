@@ -23,7 +23,7 @@ public class Application extends DirectoryObject implements Parsable {
     private ConnectorGroup _connectorGroup;
     /** The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy. */
     private OffsetDateTime _createdDateTime;
-    /** The createdOnBehalfOf property */
+    /** Supports $filter (eq when counting empty collections). Read-only. */
     private DirectoryObject _createdOnBehalfOf;
     /** The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application. */
     private String _defaultRedirectUri;
@@ -59,7 +59,7 @@ public class Application extends DirectoryObject implements Parsable {
     private OnPremisesPublishing _onPremisesPublishing;
     /** Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app. */
     private OptionalClaims _optionalClaims;
-    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand. */
+    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
     private java.util.List<DirectoryObject> _owners;
     /** Specifies parental control settings for an application. */
     private ParentalControlSettings _parentalControlSettings;
@@ -69,6 +69,8 @@ public class Application extends DirectoryObject implements Parsable {
     private PublicClientApplication _publicClient;
     /** The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith). */
     private String _publisherDomain;
+    /** The requestSignatureVerification property */
+    private RequestSignatureVerification _requestSignatureVerification;
     /** Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le). */
     private java.util.List<RequiredResourceAccess> _requiredResourceAccess;
     /** The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable. */
@@ -172,7 +174,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the createdOnBehalfOf property value. The createdOnBehalfOf property
+     * Gets the createdOnBehalfOf property value. Supports $filter (eq when counting empty collections). Read-only.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -265,6 +267,7 @@ public class Application extends DirectoryObject implements Parsable {
             this.put("passwordCredentials", (n) -> { currentObject.setPasswordCredentials(n.getCollectionOfObjectValues(PasswordCredential::createFromDiscriminatorValue)); });
             this.put("publicClient", (n) -> { currentObject.setPublicClient(n.getObjectValue(PublicClientApplication::createFromDiscriminatorValue)); });
             this.put("publisherDomain", (n) -> { currentObject.setPublisherDomain(n.getStringValue()); });
+            this.put("requestSignatureVerification", (n) -> { currentObject.setRequestSignatureVerification(n.getObjectValue(RequestSignatureVerification::createFromDiscriminatorValue)); });
             this.put("requiredResourceAccess", (n) -> { currentObject.setRequiredResourceAccess(n.getCollectionOfObjectValues(RequiredResourceAccess::createFromDiscriminatorValue)); });
             this.put("samlMetadataUrl", (n) -> { currentObject.setSamlMetadataUrl(n.getStringValue()); });
             this.put("serviceManagementReference", (n) -> { currentObject.setServiceManagementReference(n.getStringValue()); });
@@ -370,7 +373,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._optionalClaims;
     }
     /**
-     * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -408,6 +411,14 @@ public class Application extends DirectoryObject implements Parsable {
     @javax.annotation.Nullable
     public String getPublisherDomain() {
         return this._publisherDomain;
+    }
+    /**
+     * Gets the requestSignatureVerification property value. The requestSignatureVerification property
+     * @return a requestSignatureVerification
+     */
+    @javax.annotation.Nullable
+    public RequestSignatureVerification getRequestSignatureVerification() {
+        return this._requestSignatureVerification;
     }
     /**
      * Gets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).
@@ -559,6 +570,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("passwordCredentials", this.getPasswordCredentials());
         writer.writeObjectValue("publicClient", this.getPublicClient());
         writer.writeStringValue("publisherDomain", this.getPublisherDomain());
+        writer.writeObjectValue("requestSignatureVerification", this.getRequestSignatureVerification());
         writer.writeCollectionOfObjectValues("requiredResourceAccess", this.getRequiredResourceAccess());
         writer.writeStringValue("samlMetadataUrl", this.getSamlMetadataUrl());
         writer.writeStringValue("serviceManagementReference", this.getServiceManagementReference());
@@ -631,7 +643,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the createdOnBehalfOf property value. The createdOnBehalfOf property
+     * Sets the createdOnBehalfOf property value. Supports $filter (eq when counting empty collections). Read-only.
      * @param value Value to set for the createdOnBehalfOf property.
      * @return a void
      */
@@ -775,7 +787,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._optionalClaims = value;
     }
     /**
-     * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param value Value to set for the owners property.
      * @return a void
      */
@@ -813,6 +825,14 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public void setPublisherDomain(@javax.annotation.Nullable final String value) {
         this._publisherDomain = value;
+    }
+    /**
+     * Sets the requestSignatureVerification property value. The requestSignatureVerification property
+     * @param value Value to set for the requestSignatureVerification property.
+     * @return a void
+     */
+    public void setRequestSignatureVerification(@javax.annotation.Nullable final RequestSignatureVerification value) {
+        this._requestSignatureVerification = value;
     }
     /**
      * Sets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).

@@ -3,12 +3,12 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum DeviceManagementReportFileFormat implements ValuedEnum {
-    /** Comma-separated values */
+    /** CSV Format */
     Csv("csv"),
-    /** Portable Document Format */
-    Pdf("pdf");
+    /** JSON Format */
+    Json("json");
     public final String value;
     DeviceManagementReportFileFormat(final String value) {
         this.value = value;
@@ -20,7 +20,7 @@ public enum DeviceManagementReportFileFormat implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "csv": return Csv;
-            case "pdf": return Pdf;
+            case "json": return Json;
             default: return null;
         }
     }

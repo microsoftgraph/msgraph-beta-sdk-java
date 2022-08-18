@@ -16,12 +16,16 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.identity.apiconnectors.ApiConnectorsRequestBuilder;
 import microsoft.graph.identity.apiconnectors.item.IdentityApiConnectorItemRequestBuilder;
+import microsoft.graph.identity.authenticationeventlisteners.AuthenticationEventListenersRequestBuilder;
+import microsoft.graph.identity.authenticationeventlisteners.item.AuthenticationEventListenerItemRequestBuilder;
 import microsoft.graph.identity.b2cuserflows.B2cUserFlowsRequestBuilder;
 import microsoft.graph.identity.b2cuserflows.item.B2cIdentityUserFlowItemRequestBuilder;
 import microsoft.graph.identity.b2xuserflows.B2xUserFlowsRequestBuilder;
 import microsoft.graph.identity.b2xuserflows.item.B2xIdentityUserFlowItemRequestBuilder;
 import microsoft.graph.identity.conditionalaccess.ConditionalAccessRequestBuilder;
 import microsoft.graph.identity.continuousaccessevaluationpolicy.ContinuousAccessEvaluationPolicyRequestBuilder;
+import microsoft.graph.identity.customauthenticationextensions.CustomAuthenticationExtensionsRequestBuilder;
+import microsoft.graph.identity.customauthenticationextensions.item.CustomAuthenticationExtensionItemRequestBuilder;
 import microsoft.graph.identity.identityproviders.IdentityProvidersRequestBuilder;
 import microsoft.graph.identity.identityproviders.item.IdentityProviderBaseItemRequestBuilder;
 import microsoft.graph.identity.userflowattributes.item.IdentityUserFlowAttributeItemRequestBuilder;
@@ -36,6 +40,11 @@ public class IdentityRequestBuilder {
     @javax.annotation.Nonnull
     public ApiConnectorsRequestBuilder apiConnectors() {
         return new ApiConnectorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The authenticationEventListeners property */
+    @javax.annotation.Nonnull
+    public AuthenticationEventListenersRequestBuilder authenticationEventListeners() {
+        return new AuthenticationEventListenersRequestBuilder(pathParameters, requestAdapter);
     }
     /** The b2cUserFlows property */
     @javax.annotation.Nonnull
@@ -56,6 +65,11 @@ public class IdentityRequestBuilder {
     @javax.annotation.Nonnull
     public ContinuousAccessEvaluationPolicyRequestBuilder continuousAccessEvaluationPolicy() {
         return new ContinuousAccessEvaluationPolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The customAuthenticationExtensions property */
+    @javax.annotation.Nonnull
+    public CustomAuthenticationExtensionsRequestBuilder customAuthenticationExtensions() {
+        return new CustomAuthenticationExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The identityProviders property */
     @javax.annotation.Nonnull
@@ -89,6 +103,18 @@ public class IdentityRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("identityApiConnector%2Did", id);
         return new IdentityApiConnectorItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.identity.authenticationEventListeners.item collection
+     * @param id Unique identifier of the item
+     * @return a AuthenticationEventListenerItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AuthenticationEventListenerItemRequestBuilder authenticationEventListeners(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("authenticationEventListener%2Did", id);
+        return new AuthenticationEventListenerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.identity.b2cUserFlows.item collection
@@ -202,6 +228,18 @@ public class IdentityRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.identity.customAuthenticationExtensions.item collection
+     * @param id Unique identifier of the item
+     * @return a CustomAuthenticationExtensionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CustomAuthenticationExtensionItemRequestBuilder customAuthenticationExtensions(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("customAuthenticationExtension%2Did", id);
+        return new CustomAuthenticationExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get identity

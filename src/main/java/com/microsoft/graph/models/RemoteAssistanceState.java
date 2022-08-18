@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum RemoteAssistanceState implements ValuedEnum {
     /** Remote assistance is disabled for the account. With this value, Quick Assist remote assistance sessions are not allowed for the account. */
     Disabled("disabled"),

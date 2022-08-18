@@ -12,7 +12,7 @@ import java.util.Objects;
 public class AccessReviewInstanceDecisionItem extends Entity implements Parsable {
     /** The identifier of the accessReviewInstance parent. Supports $select. Read-only. */
     private String _accessReviewId;
-    /** The identifier of the user who applied the decision. Read-only. */
+    /** The identifier of the user who applied the decision. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. Read-only. */
     private UserIdentity _appliedBy;
     /** The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only. */
     private OffsetDateTime _appliedDateTime;
@@ -38,7 +38,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     private AccessReviewInstanceDecisionItemResource _resource;
     /** A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only. */
     private String _resourceLink;
-    /** The identifier of the reviewer. Supports $select. Read-only. */
+    /** The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only. */
     private UserIdentity _reviewedBy;
     /** The timestamp when the review decision occurred. Supports $select. Read-only. */
     private OffsetDateTime _reviewedDateTime;
@@ -71,7 +71,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this._accessReviewId;
     }
     /**
-     * Gets the appliedBy property value. The identifier of the user who applied the decision. Read-only.
+     * Gets the appliedBy property value. The identifier of the user who applied the decision. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. Read-only.
      * @return a userIdentity
      */
     @javax.annotation.Nullable
@@ -202,7 +202,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this._resourceLink;
     }
     /**
-     * Gets the reviewedBy property value. The identifier of the reviewer. Supports $select. Read-only.
+     * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
      * @return a userIdentity
      */
     @javax.annotation.Nullable
@@ -260,7 +260,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this._accessReviewId = value;
     }
     /**
-     * Sets the appliedBy property value. The identifier of the user who applied the decision. Read-only.
+     * Sets the appliedBy property value. The identifier of the user who applied the decision. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. Read-only.
      * @param value Value to set for the appliedBy property.
      * @return a void
      */
@@ -364,7 +364,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this._resourceLink = value;
     }
     /**
-     * Sets the reviewedBy property value. The identifier of the reviewer. Supports $select. Read-only.
+     * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
      * @param value Value to set for the reviewedBy property.
      * @return a void
      */

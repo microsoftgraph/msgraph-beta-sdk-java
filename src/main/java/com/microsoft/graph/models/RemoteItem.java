@@ -44,7 +44,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     private SharepointIds _sharepointIds;
     /** Size of the remote item. Read-only. */
     private Long _size;
-    /** If the current item is also available as a special folder, this facet is returned. Read-only. */
+    /** The specialFolder property */
     private SpecialFolder _specialFolder;
     /** Video metadata, if the item is a video. Read-only. */
     private Video _video;
@@ -237,7 +237,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
         return this._size;
     }
     /**
-     * Gets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
+     * Gets the specialFolder property value. The specialFolder property
      * @return a specialFolder
      */
     @javax.annotation.Nullable
@@ -434,7 +434,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
         this._size = value;
     }
     /**
-     * Sets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
+     * Sets the specialFolder property value. The specialFolder property
      * @param value Value to set for the specialFolder property.
      * @return a void
      */

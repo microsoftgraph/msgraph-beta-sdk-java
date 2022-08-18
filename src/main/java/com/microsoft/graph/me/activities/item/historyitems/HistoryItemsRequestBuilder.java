@@ -59,7 +59,7 @@ public class HistoryItemsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Get historyItems from me
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class HistoryItemsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Get historyItems from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class HistoryItemsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Get historyItems from me
      * @return a CompletableFuture of ActivityHistoryItemCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ActivityHistoryItemCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class HistoryItemsRequestBuilder {
         }
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Get historyItems from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ActivityHistoryItemCollectionResponse
      */
@@ -155,7 +155,7 @@ public class HistoryItemsRequestBuilder {
         }
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Get historyItems from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ActivityHistoryItemCollectionResponse
@@ -227,7 +227,7 @@ public class HistoryItemsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Optional. NavigationProperty/Containment; navigation property to the activity's historyItems. */
+    /** Get historyItems from me */
     public class HistoryItemsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

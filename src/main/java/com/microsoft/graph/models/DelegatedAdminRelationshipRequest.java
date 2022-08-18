@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class DelegatedAdminRelationshipRequest extends Entity implements Parsable {
     /** The action property */
     private DelegatedAdminRelationshipRequestAction _action;

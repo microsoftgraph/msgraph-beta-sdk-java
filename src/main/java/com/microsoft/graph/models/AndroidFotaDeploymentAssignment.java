@@ -12,6 +12,8 @@ import java.util.Objects;
 public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The display name of the Azure AD security group used for the assignment. */
+    private String _displayName;
     /** A unique identifier assigned to each Android FOTA Assignment entity */
     private String _id;
     /** The OdataType property */
@@ -45,13 +47,22 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
         return this._additionalData;
     }
     /**
+     * Gets the displayName property value. The display name of the Azure AD security group used for the assignment.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDisplayName() {
+        return this._displayName;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidFotaDeploymentAssignment currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
+            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(AndroidFotaDeploymentAssignmentTarget::createFromDiscriminatorValue)); });
@@ -88,6 +99,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("target", this.getTarget());
@@ -100,6 +112,14 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the displayName property value. The display name of the Azure AD security group used for the assignment.
+     * @param value Value to set for the displayName property.
+     * @return a void
+     */
+    public void setDisplayName(@javax.annotation.Nullable final String value) {
+        this._displayName = value;
     }
     /**
      * Sets the id property value. A unique identifier assigned to each Android FOTA Assignment entity

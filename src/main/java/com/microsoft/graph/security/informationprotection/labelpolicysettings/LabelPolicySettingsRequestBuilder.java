@@ -80,7 +80,7 @@ public class LabelPolicySettingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get labelPolicySettings from security
+     * Read the Microsoft Purview Information Protection policy settings for the user or organization.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class LabelPolicySettingsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get labelPolicySettings from security
+     * Read the Microsoft Purview Information Protection policy settings for the user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class LabelPolicySettingsRequestBuilder {
         }
     }
     /**
-     * Get labelPolicySettings from security
+     * Read the Microsoft Purview Information Protection policy settings for the user or organization.
      * @return a CompletableFuture of informationProtectionPolicySetting
      */
     public java.util.concurrent.CompletableFuture<InformationProtectionPolicySetting> get() {
@@ -209,7 +209,7 @@ public class LabelPolicySettingsRequestBuilder {
         }
     }
     /**
-     * Get labelPolicySettings from security
+     * Read the Microsoft Purview Information Protection policy settings for the user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of informationProtectionPolicySetting
      */
@@ -226,7 +226,7 @@ public class LabelPolicySettingsRequestBuilder {
         }
     }
     /**
-     * Get labelPolicySettings from security
+     * Read the Microsoft Purview Information Protection policy settings for the user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of informationProtectionPolicySetting
@@ -313,7 +313,7 @@ public class LabelPolicySettingsRequestBuilder {
         public LabelPolicySettingsRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get labelPolicySettings from security */
+    /** Read the Microsoft Purview Information Protection policy settings for the user or organization. */
     public class LabelPolicySettingsRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

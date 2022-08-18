@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookRangeView extends Entity implements Parsable {
-    /** Represents the cell addresses */
+    /** The cellAddresses property */
     private Json _cellAddresses;
     /** Returns the number of visible columns. Read-only. */
     private Integer _columnCount;
@@ -51,7 +51,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         return new WorkbookRangeView();
     }
     /**
-     * Gets the cellAddresses property value. Represents the cell addresses
+     * Gets the cellAddresses property value. The cellAddresses property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -190,7 +190,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         writer.writeObjectValue("valueTypes", this.getValueTypes());
     }
     /**
-     * Sets the cellAddresses property value. Represents the cell addresses
+     * Sets the cellAddresses property value. The cellAddresses property
      * @param value Value to set for the cellAddresses property.
      * @return a void
      */

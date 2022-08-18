@@ -1,6 +1,5 @@
 package microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -10,9 +9,8 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class LearningContent implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
+public class LearningContent extends Entity implements Parsable {
     /** Keywords, topics, and other tags associated with the learning content. Optional. */
     private java.util.List<String> _additionalTags;
     /** The content web URL for the learning content. Required. */
@@ -41,8 +39,6 @@ public class LearningContent implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** The number of pages of the learning content, for example, 9. Optional. */
     private Integer _numberOfPages;
-    /** The OdataType property */
-    private String _odataType;
     /** The skills tags associated with the learning content. Optional. */
     private java.util.List<String> _skillTags;
     /** The source name of the learning content, such as LinkedIn Learning or Coursera. Optional. */
@@ -56,7 +52,7 @@ public class LearningContent implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     public LearningContent() {
-        this.setAdditionalData(new HashMap<>());
+        super();
         this.setOdataType("#microsoft.graph.learningContent");
     }
     /**
@@ -68,14 +64,6 @@ public class LearningContent implements AdditionalDataHolder, Parsable {
     public static LearningContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LearningContent();
-    }
-    /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
-     */
-    @javax.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
     }
     /**
      * Gets the additionalTags property value. Keywords, topics, and other tags associated with the learning content. Optional.
@@ -140,7 +128,7 @@ public class LearningContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LearningContent currentObject = this;
-        return new HashMap<>(19) {{
+        return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("additionalTags", (n) -> { currentObject.setAdditionalTags(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("contentWebUrl", (n) -> { currentObject.setContentWebUrl(n.getStringValue()); });
             this.put("contributor", (n) -> { currentObject.setContributor(n.getStringValue()); });
@@ -155,7 +143,6 @@ public class LearningContent implements AdditionalDataHolder, Parsable {
             this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("numberOfPages", (n) -> { currentObject.setNumberOfPages(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("skillTags", (n) -> { currentObject.setSkillTags(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("sourceName", (n) -> { currentObject.setSourceName(n.getStringValue()); });
             this.put("thumbnailWebUrl", (n) -> { currentObject.setThumbnailWebUrl(n.getStringValue()); });
@@ -219,14 +206,6 @@ public class LearningContent implements AdditionalDataHolder, Parsable {
         return this._numberOfPages;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Gets the skillTags property value. The skills tags associated with the learning content. Optional.
      * @return a string
      */
@@ -265,6 +244,7 @@ public class LearningContent implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("additionalTags", this.getAdditionalTags());
         writer.writeStringValue("contentWebUrl", this.getContentWebUrl());
         writer.writeStringValue("contributor", this.getContributor());
@@ -279,20 +259,10 @@ public class LearningContent implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("languageTag", this.getLanguageTag());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeIntegerValue("numberOfPages", this.getNumberOfPages());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("skillTags", this.getSkillTags());
         writer.writeStringValue("sourceName", this.getSourceName());
         writer.writeStringValue("thumbnailWebUrl", this.getThumbnailWebUrl());
         writer.writeStringValue("title", this.getTitle());
-        writer.writeAdditionalData(this.getAdditionalData());
-    }
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     * @return a void
-     */
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
     }
     /**
      * Sets the additionalTags property value. Keywords, topics, and other tags associated with the learning content. Optional.
@@ -405,14 +375,6 @@ public class LearningContent implements AdditionalDataHolder, Parsable {
      */
     public void setNumberOfPages(@javax.annotation.Nullable final Integer value) {
         this._numberOfPages = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the skillTags property value. The skills tags associated with the learning content. Optional.

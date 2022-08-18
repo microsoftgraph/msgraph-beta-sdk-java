@@ -52,7 +52,7 @@ public class UserRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The directory user that corresponds to this user.
+     * Get user from education
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class UserRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The directory user that corresponds to this user.
+     * Get user from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class UserRequestBuilder {
         return requestInfo;
     }
     /**
-     * The directory user that corresponds to this user.
+     * Get user from education
      * @return a CompletableFuture of user
      */
     public java.util.concurrent.CompletableFuture<User> get() {
@@ -98,7 +98,7 @@ public class UserRequestBuilder {
         }
     }
     /**
-     * The directory user that corresponds to this user.
+     * Get user from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
      */
@@ -115,7 +115,7 @@ public class UserRequestBuilder {
         }
     }
     /**
-     * The directory user that corresponds to this user.
+     * Get user from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of user
@@ -132,7 +132,7 @@ public class UserRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The directory user that corresponds to this user. */
+    /** Get user from education */
     public class UserRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

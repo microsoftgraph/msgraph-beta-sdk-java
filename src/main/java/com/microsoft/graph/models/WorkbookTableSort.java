@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookTableSort extends Entity implements Parsable {
-    /** Represents the current conditions used to last sort the table. Read-only. */
+    /** The fields property */
     private java.util.List<WorkbookSortField> _fields;
     /** Represents whether the casing impacted the last sort of the table. Read-only. */
     private Boolean _matchCase;
@@ -46,7 +46,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the fields property value. Represents the current conditions used to last sort the table. Read-only.
+     * Gets the fields property value. The fields property
      * @return a workbookSortField
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
         writer.writeStringValue("method", this.getMethod());
     }
     /**
-     * Sets the fields property value. Represents the current conditions used to last sort the table. Read-only.
+     * Sets the fields property value. The fields property
      * @param value Value to set for the fields property.
      * @return a void
      */

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProtectByTemplateAction extends InformationProtectionAction implements Parsable {
-    /** The templateId property */
+    /** The unique identifier for a protection template in Microsoft Purview Information Protection to apply to the content. */
     private String _templateId;
     /**
      * Instantiates a new ProtectByTemplateAction and sets the default values.
@@ -40,7 +40,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
         }};
     }
     /**
-     * Gets the templateId property value. The templateId property
+     * Gets the templateId property value. The unique identifier for a protection template in Microsoft Purview Information Protection to apply to the content.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
         writer.writeStringValue("templateId", this.getTemplateId());
     }
     /**
-     * Sets the templateId property value. The templateId property
+     * Sets the templateId property value. The unique identifier for a protection template in Microsoft Purview Information Protection to apply to the content.
      * @param value Value to set for the templateId property.
      * @return a void
      */

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation implements Parsable {
+public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPresentation implements Parsable {
     /** Localized string value identifying the default choice of the list of items. */
     private GroupPolicyPresentationDropdownListItem _defaultItem;
     /** Represents a set of localized display names and their associated values. */

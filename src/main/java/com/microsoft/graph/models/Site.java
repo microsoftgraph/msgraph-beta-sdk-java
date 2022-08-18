@@ -29,7 +29,7 @@ public class Site extends BaseItem implements Parsable {
     private java.util.List<BaseItem> _items;
     /** The collection of lists under this site. */
     private java.util.List<List> _lists;
-    /** Calls the OneNote service for notebook related operations. */
+    /** The onenote property */
     private Onenote _onenote;
     /** The collection of long running operations for the site. */
     private java.util.List<RichLongRunningOperation> _operations;
@@ -178,7 +178,7 @@ public class Site extends BaseItem implements Parsable {
         return this._lists;
     }
     /**
-     * Gets the onenote property value. Calls the OneNote service for notebook related operations.
+     * Gets the onenote property value. The onenote property
      * @return a onenote
      */
     @javax.annotation.Nullable
@@ -367,7 +367,7 @@ public class Site extends BaseItem implements Parsable {
         this._lists = value;
     }
     /**
-     * Sets the onenote property value. Calls the OneNote service for notebook related operations.
+     * Sets the onenote property value. The onenote property
      * @param value Value to set for the onenote property.
      * @return a void
      */

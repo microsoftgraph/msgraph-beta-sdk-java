@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
+/** Provides operations to manage the compliance singleton. */
 public class Tag extends Entity implements Parsable {
     /** Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group. */
     private ChildSelectability _childSelectability;
@@ -26,7 +27,7 @@ public class Tag extends Entity implements Parsable {
     /** Returns the parent tag of the specified tag. */
     private Tag _parent;
     /**
-     * Instantiates a new Tag and sets the default values.
+     * Instantiates a new tag and sets the default values.
      * @return a void
      */
     public Tag() {
@@ -36,7 +37,7 @@ public class Tag extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Tag
+     * @return a tag
      */
     @javax.annotation.Nonnull
     public static Tag createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

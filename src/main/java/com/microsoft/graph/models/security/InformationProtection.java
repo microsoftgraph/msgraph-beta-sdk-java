@@ -9,9 +9,9 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 public class InformationProtection extends Entity implements Parsable {
-    /** The labelPolicySettings property */
+    /** Read the Microsoft Purview Information Protection policy settings for the user or organization. */
     private InformationProtectionPolicySetting _labelPolicySettings;
-    /** The sensitivityLabels property */
+    /** Read the Microsoft Purview Information Protection labels for the user or organization. */
     private java.util.List<SensitivityLabel> _sensitivityLabels;
     /**
      * Instantiates a new informationProtection and sets the default values.
@@ -44,7 +44,7 @@ public class InformationProtection extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the labelPolicySettings property value. The labelPolicySettings property
+     * Gets the labelPolicySettings property value. Read the Microsoft Purview Information Protection policy settings for the user or organization.
      * @return a informationProtectionPolicySetting
      */
     @javax.annotation.Nullable
@@ -52,7 +52,7 @@ public class InformationProtection extends Entity implements Parsable {
         return this._labelPolicySettings;
     }
     /**
-     * Gets the sensitivityLabels property value. The sensitivityLabels property
+     * Gets the sensitivityLabels property value. Read the Microsoft Purview Information Protection labels for the user or organization.
      * @return a sensitivityLabel
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class InformationProtection extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("sensitivityLabels", this.getSensitivityLabels());
     }
     /**
-     * Sets the labelPolicySettings property value. The labelPolicySettings property
+     * Sets the labelPolicySettings property value. Read the Microsoft Purview Information Protection policy settings for the user or organization.
      * @param value Value to set for the labelPolicySettings property.
      * @return a void
      */
@@ -79,7 +79,7 @@ public class InformationProtection extends Entity implements Parsable {
         this._labelPolicySettings = value;
     }
     /**
-     * Sets the sensitivityLabels property value. The sensitivityLabels property
+     * Sets the sensitivityLabels property value. Read the Microsoft Purview Information Protection labels for the user or organization.
      * @param value Value to set for the sensitivityLabels property.
      * @return a void
      */

@@ -12,13 +12,13 @@ import java.util.Objects;
 public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The failedHealthCheckItems property */
+    /** A list of failed health check items. If the status property is available, this property will be empty. */
     private java.util.List<CloudPcHealthCheckItem> _failedHealthCheckItems;
     /** The OdataType property */
     private String _odataType;
     /** The status property */
     private CloudPcConnectivityStatus _status;
-    /** The updatedDateTime property */
+    /** Datetime when the status was updated. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z. */
     private OffsetDateTime _updatedDateTime;
     /**
      * Instantiates a new cloudPcConnectivityResult and sets the default values.
@@ -47,7 +47,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
         return this._additionalData;
     }
     /**
-     * Gets the failedHealthCheckItems property value. The failedHealthCheckItems property
+     * Gets the failedHealthCheckItems property value. A list of failed health check items. If the status property is available, this property will be empty.
      * @return a cloudPcHealthCheckItem
      */
     @javax.annotation.Nullable
@@ -85,7 +85,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
         return this._status;
     }
     /**
-     * Gets the updatedDateTime property value. The updatedDateTime property
+     * Gets the updatedDateTime property value. Datetime when the status was updated. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
         this._additionalData = value;
     }
     /**
-     * Sets the failedHealthCheckItems property value. The failedHealthCheckItems property
+     * Sets the failedHealthCheckItems property value. A list of failed health check items. If the status property is available, this property will be empty.
      * @param value Value to set for the failedHealthCheckItems property.
      * @return a void
      */
@@ -138,7 +138,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
         this._status = value;
     }
     /**
-     * Sets the updatedDateTime property value. The updatedDateTime property
+     * Sets the updatedDateTime property value. Datetime when the status was updated. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @param value Value to set for the updatedDateTime property.
      * @return a void
      */

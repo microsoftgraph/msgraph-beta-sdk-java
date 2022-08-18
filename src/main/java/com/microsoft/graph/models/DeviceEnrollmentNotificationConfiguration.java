@@ -14,6 +14,8 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     private String _defaultLocale;
     /** Notification Message Template Id */
     private String _notificationMessageTemplateId;
+    /** The list of notification data - */
+    private java.util.List<String> _notificationTemplates;
     /** This enum indicates the platform type for which the enrollment restriction applies. */
     private EnrollmentRestrictionPlatformType _platformType;
     /** This enum indicates the Template type for which the enrollment notification applies. */
@@ -63,6 +65,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
             this.put("brandingOptions", (n) -> { currentObject.setBrandingOptions(n.getEnumValue(EnrollmentNotificationBrandingOptions.class)); });
             this.put("defaultLocale", (n) -> { currentObject.setDefaultLocale(n.getStringValue()); });
             this.put("notificationMessageTemplateId", (n) -> { currentObject.setNotificationMessageTemplateId(n.getStringValue()); });
+            this.put("notificationTemplates", (n) -> { currentObject.setNotificationTemplates(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(EnrollmentRestrictionPlatformType.class)); });
             this.put("templateType", (n) -> { currentObject.setTemplateType(n.getEnumValue(EnrollmentNotificationTemplateType.class)); });
         }};
@@ -74,6 +77,14 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     @javax.annotation.Nullable
     public String getNotificationMessageTemplateId() {
         return this._notificationMessageTemplateId;
+    }
+    /**
+     * Gets the notificationTemplates property value. The list of notification data -
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getNotificationTemplates() {
+        return this._notificationTemplates;
     }
     /**
      * Gets the platformType property value. This enum indicates the platform type for which the enrollment restriction applies.
@@ -102,6 +113,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
         writer.writeEnumValue("brandingOptions", this.getBrandingOptions());
         writer.writeStringValue("defaultLocale", this.getDefaultLocale());
         writer.writeStringValue("notificationMessageTemplateId", this.getNotificationMessageTemplateId());
+        writer.writeCollectionOfPrimitiveValues("notificationTemplates", this.getNotificationTemplates());
         writer.writeEnumValue("platformType", this.getPlatformType());
         writer.writeEnumValue("templateType", this.getTemplateType());
     }
@@ -128,6 +140,14 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      */
     public void setNotificationMessageTemplateId(@javax.annotation.Nullable final String value) {
         this._notificationMessageTemplateId = value;
+    }
+    /**
+     * Sets the notificationTemplates property value. The list of notification data -
+     * @param value Value to set for the notificationTemplates property.
+     * @return a void
+     */
+    public void setNotificationTemplates(@javax.annotation.Nullable final java.util.List<String> value) {
+        this._notificationTemplates = value;
     }
     /**
      * Sets the platformType property value. This enum indicates the platform type for which the enrollment restriction applies.

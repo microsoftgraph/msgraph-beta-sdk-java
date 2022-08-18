@@ -20,7 +20,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     private String _email;
     /** The object identifier of the subject. null if the subject is not yet a user in the tenant. */
     private String _objectId;
-    /** A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier. */
+    /** The onPremisesSecurityIdentifier property */
     private String _onPremisesSecurityIdentifier;
     /** The principal name, if known, of the subject. */
     private String _principalName;
@@ -115,7 +115,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         return this._objectId;
     }
     /**
-     * Gets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
+     * Gets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -214,7 +214,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         this._objectId = value;
     }
     /**
-     * Sets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
+     * Sets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      * @return a void
      */

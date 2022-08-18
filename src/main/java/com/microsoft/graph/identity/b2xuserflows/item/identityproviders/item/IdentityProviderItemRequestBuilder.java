@@ -52,7 +52,7 @@ public class IdentityProviderItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The identity providers included in the user flow.
+     * Get identityProviders from identity
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class IdentityProviderItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The identity providers included in the user flow.
+     * Get identityProviders from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class IdentityProviderItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The identity providers included in the user flow.
+     * Get identityProviders from identity
      * @return a CompletableFuture of identityProvider
      */
     public java.util.concurrent.CompletableFuture<IdentityProvider> get() {
@@ -98,7 +98,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * The identity providers included in the user flow.
+     * Get identityProviders from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityProvider
      */
@@ -115,7 +115,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * The identity providers included in the user flow.
+     * Get identityProviders from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of identityProvider
@@ -132,7 +132,7 @@ public class IdentityProviderItemRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The identity providers included in the user flow. */
+    /** Get identityProviders from identity */
     public class IdentityProviderItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

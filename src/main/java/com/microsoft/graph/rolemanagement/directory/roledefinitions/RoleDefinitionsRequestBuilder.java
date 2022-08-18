@@ -59,7 +59,7 @@ public class RoleDefinitionsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+     * Get roleDefinitions from roleManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RoleDefinitionsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+     * Get roleDefinitions from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class RoleDefinitionsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+     * Get roleDefinitions from roleManagement
      * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinitionCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class RoleDefinitionsRequestBuilder {
         }
     }
     /**
-     * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+     * Get roleDefinitions from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
      */
@@ -155,7 +155,7 @@ public class RoleDefinitionsRequestBuilder {
         }
     }
     /**
-     * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+     * Get roleDefinitions from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
@@ -227,7 +227,7 @@ public class RoleDefinitionsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles. */
+    /** Get roleDefinitions from roleManagement */
     public class RoleDefinitionsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

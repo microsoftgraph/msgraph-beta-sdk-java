@@ -8,11 +8,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class OutlookItem extends Entity implements Parsable {
-    /** The categories associated with the item */
+    /** The categories property */
     private java.util.List<String> _categories;
-    /** Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only. */
+    /** The changeKey property */
     private String _changeKey;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _createdDateTime;
@@ -53,7 +53,7 @@ public class OutlookItem extends Entity implements Parsable {
         return new OutlookItem();
     }
     /**
-     * Gets the categories property value. The categories associated with the item
+     * Gets the categories property value. The categories property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class OutlookItem extends Entity implements Parsable {
         return this._categories;
     }
     /**
-     * Gets the changeKey property value. Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+     * Gets the changeKey property value. The changeKey property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class OutlookItem extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
-     * Sets the categories property value. The categories associated with the item
+     * Sets the categories property value. The categories property
      * @param value Value to set for the categories property.
      * @return a void
      */
@@ -120,7 +120,7 @@ public class OutlookItem extends Entity implements Parsable {
         this._categories = value;
     }
     /**
-     * Sets the changeKey property value. Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+     * Sets the changeKey property value. The changeKey property
      * @param value Value to set for the changeKey property.
      * @return a void
      */

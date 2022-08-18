@@ -80,7 +80,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Schedules for role eligibility operations.
+     * Get roleEligibilitySchedules from roleManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Schedules for role eligibility operations.
+     * Get roleEligibilitySchedules from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder {
         }
     }
     /**
-     * Schedules for role eligibility operations.
+     * Get roleEligibilitySchedules from roleManagement
      * @return a CompletableFuture of unifiedRoleEligibilitySchedule
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> get() {
@@ -209,7 +209,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder {
         }
     }
     /**
-     * Schedules for role eligibility operations.
+     * Get roleEligibilitySchedules from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleEligibilitySchedule
      */
@@ -226,7 +226,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder {
         }
     }
     /**
-     * Schedules for role eligibility operations.
+     * Get roleEligibilitySchedules from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedRoleEligibilitySchedule
@@ -313,7 +313,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder {
         public UnifiedRoleEligibilityScheduleItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Schedules for role eligibility operations. */
+    /** Get roleEligibilitySchedules from roleManagement */
     public class UnifiedRoleEligibilityScheduleItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class GroupPolicyPresentationText extends GroupPolicyPresentation implements Parsable {
+public class GroupPolicyPresentationText extends GroupPolicyUploadedPresentation implements Parsable {
     /**
      * Instantiates a new GroupPolicyPresentationText and sets the default values.
      * @return a void

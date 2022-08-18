@@ -9,25 +9,25 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of activityStatistics entities. */
 public class PrinterBase extends Entity implements Parsable {
-    /** The capabilities of the printer/printerShare. */
+    /** The capabilities property */
     private PrinterCapabilities _capabilities;
-    /** The default print settings of printer/printerShare. */
+    /** The defaults property */
     private PrinterDefaults _defaults;
-    /** The name of the printer/printerShare. */
+    /** The displayName property */
     private String _displayName;
-    /** Whether the printer/printerShare is currently accepting new print jobs. */
+    /** The isAcceptingJobs property */
     private Boolean _isAcceptingJobs;
-    /** The list of jobs that are queued for printing by the printer/printerShare. */
+    /** The jobs property */
     private java.util.List<PrintJob> _jobs;
-    /** The physical and/or organizational location of the printer/printerShare. */
+    /** The location property */
     private PrinterLocation _location;
-    /** The manufacturer of the printer/printerShare. */
+    /** The manufacturer property */
     private String _manufacturer;
-    /** The model name of the printer/printerShare. */
+    /** The model property */
     private String _model;
     /** The name property */
     private String _name;
-    /** The processing status of the printer/printerShare, including any errors. */
+    /** The status property */
     private PrinterStatus _status;
     /**
      * Instantiates a new printerBase and sets the default values.
@@ -56,7 +56,7 @@ public class PrinterBase extends Entity implements Parsable {
         return new PrinterBase();
     }
     /**
-     * Gets the capabilities property value. The capabilities of the printer/printerShare.
+     * Gets the capabilities property value. The capabilities property
      * @return a printerCapabilities
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this._capabilities;
     }
     /**
-     * Gets the defaults property value. The default print settings of printer/printerShare.
+     * Gets the defaults property value. The defaults property
      * @return a printerDefaults
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this._defaults;
     }
     /**
-     * Gets the displayName property value. The name of the printer/printerShare.
+     * Gets the displayName property value. The displayName property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class PrinterBase extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the isAcceptingJobs property value. Whether the printer/printerShare is currently accepting new print jobs.
+     * Gets the isAcceptingJobs property value. The isAcceptingJobs property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -108,7 +108,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this._isAcceptingJobs;
     }
     /**
-     * Gets the jobs property value. The list of jobs that are queued for printing by the printer/printerShare.
+     * Gets the jobs property value. The jobs property
      * @return a printJob
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this._jobs;
     }
     /**
-     * Gets the location property value. The physical and/or organizational location of the printer/printerShare.
+     * Gets the location property value. The location property
      * @return a printerLocation
      */
     @javax.annotation.Nullable
@@ -124,7 +124,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this._location;
     }
     /**
-     * Gets the manufacturer property value. The manufacturer of the printer/printerShare.
+     * Gets the manufacturer property value. The manufacturer property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this._manufacturer;
     }
     /**
-     * Gets the model property value. The model name of the printer/printerShare.
+     * Gets the model property value. The model property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -148,7 +148,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the status property value. The processing status of the printer/printerShare, including any errors.
+     * Gets the status property value. The status property
      * @return a printerStatus
      */
     @javax.annotation.Nullable
@@ -175,7 +175,7 @@ public class PrinterBase extends Entity implements Parsable {
         writer.writeObjectValue("status", this.getStatus());
     }
     /**
-     * Sets the capabilities property value. The capabilities of the printer/printerShare.
+     * Sets the capabilities property value. The capabilities property
      * @param value Value to set for the capabilities property.
      * @return a void
      */
@@ -183,7 +183,7 @@ public class PrinterBase extends Entity implements Parsable {
         this._capabilities = value;
     }
     /**
-     * Sets the defaults property value. The default print settings of printer/printerShare.
+     * Sets the defaults property value. The defaults property
      * @param value Value to set for the defaults property.
      * @return a void
      */
@@ -191,7 +191,7 @@ public class PrinterBase extends Entity implements Parsable {
         this._defaults = value;
     }
     /**
-     * Sets the displayName property value. The name of the printer/printerShare.
+     * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -199,7 +199,7 @@ public class PrinterBase extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the isAcceptingJobs property value. Whether the printer/printerShare is currently accepting new print jobs.
+     * Sets the isAcceptingJobs property value. The isAcceptingJobs property
      * @param value Value to set for the isAcceptingJobs property.
      * @return a void
      */
@@ -207,7 +207,7 @@ public class PrinterBase extends Entity implements Parsable {
         this._isAcceptingJobs = value;
     }
     /**
-     * Sets the jobs property value. The list of jobs that are queued for printing by the printer/printerShare.
+     * Sets the jobs property value. The jobs property
      * @param value Value to set for the jobs property.
      * @return a void
      */
@@ -215,7 +215,7 @@ public class PrinterBase extends Entity implements Parsable {
         this._jobs = value;
     }
     /**
-     * Sets the location property value. The physical and/or organizational location of the printer/printerShare.
+     * Sets the location property value. The location property
      * @param value Value to set for the location property.
      * @return a void
      */
@@ -223,7 +223,7 @@ public class PrinterBase extends Entity implements Parsable {
         this._location = value;
     }
     /**
-     * Sets the manufacturer property value. The manufacturer of the printer/printerShare.
+     * Sets the manufacturer property value. The manufacturer property
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
@@ -231,7 +231,7 @@ public class PrinterBase extends Entity implements Parsable {
         this._manufacturer = value;
     }
     /**
-     * Sets the model property value. The model name of the printer/printerShare.
+     * Sets the model property value. The model property
      * @param value Value to set for the model property.
      * @return a void
      */
@@ -247,7 +247,7 @@ public class PrinterBase extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the status property value. The processing status of the printer/printerShare, including any errors.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

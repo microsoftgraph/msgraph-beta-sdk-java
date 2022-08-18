@@ -128,7 +128,7 @@ public class DirectoryObjectItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Get deletedItems from directory
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -136,7 +136,7 @@ public class DirectoryObjectItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Get deletedItems from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -241,7 +241,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Get deletedItems from directory
      * @return a CompletableFuture of directoryObject
      */
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -257,7 +257,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Get deletedItems from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -274,7 +274,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Get deletedItems from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryObject
@@ -361,7 +361,7 @@ public class DirectoryObjectItemRequestBuilder {
         public DirectoryObjectItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Recently deleted items. Read-only. Nullable. */
+    /** Get deletedItems from directory */
     public class DirectoryObjectItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

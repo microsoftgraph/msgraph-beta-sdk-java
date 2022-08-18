@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable {
-    /** The content stream */
+    /** The content property */
     private byte[] _content;
-    /** The URL for downloading the content */
+    /** The contentUrl property */
     private String _contentUrl;
     /**
      * Instantiates a new OnenoteResource and sets the default values.
@@ -31,7 +31,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
         return new OnenoteResource();
     }
     /**
-     * Gets the content property value. The content stream
+     * Gets the content property value. The content property
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -39,7 +39,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
         return this._content;
     }
     /**
-     * Gets the contentUrl property value. The URL for downloading the content
+     * Gets the contentUrl property value. The contentUrl property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
         writer.writeStringValue("contentUrl", this.getContentUrl());
     }
     /**
-     * Sets the content property value. The content stream
+     * Sets the content property value. The content property
      * @param value Value to set for the content property.
      * @return a void
      */
@@ -78,7 +78,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
         this._content = value;
     }
     /**
-     * Sets the contentUrl property value. The URL for downloading the content
+     * Sets the contentUrl property value. The contentUrl property
      * @param value Value to set for the contentUrl property.
      * @return a void
      */

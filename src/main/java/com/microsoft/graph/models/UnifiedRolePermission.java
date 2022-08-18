@@ -15,7 +15,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _allowedResourceActions;
     /** Optional constraints that must be met for the permission to be effective. */
     private String _condition;
-    /** Set of tasks that may not be performed on a resource. Not yet supported. */
+    /** The excludedResourceActions property */
     private java.util.List<String> _excludedResourceActions;
     /** The OdataType property */
     private String _odataType;
@@ -62,7 +62,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
         return this._condition;
     }
     /**
-     * Gets the excludedResourceActions property value. Set of tasks that may not be performed on a resource. Not yet supported.
+     * Gets the excludedResourceActions property value. The excludedResourceActions property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
         this._condition = value;
     }
     /**
-     * Sets the excludedResourceActions property value. Set of tasks that may not be performed on a resource. Not yet supported.
+     * Sets the excludedResourceActions property value. The excludedResourceActions property
      * @param value Value to set for the excludedResourceActions property.
      * @return a void
      */

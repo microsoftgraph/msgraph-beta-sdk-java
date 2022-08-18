@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class GroupPolicyPresentationListBox extends GroupPolicyPresentation implements Parsable {
+public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentation implements Parsable {
     /** If this option is specified true the user must specify the registry subkey value and the registry subkey name. The list box shows two columns, one for the name and one for the data. The default value is false. */
     private Boolean _explicitValue;
     /** Not yet documented */

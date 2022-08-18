@@ -131,7 +131,7 @@ public class DomainItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get entity from domains by key
+     * Retrieve the properties and relationships of domain object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -139,7 +139,7 @@ public class DomainItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get entity from domains by key
+     * Retrieve the properties and relationships of domain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -268,7 +268,7 @@ public class DomainItemRequestBuilder {
         return new InternalDomainFederationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get entity from domains by key
+     * Retrieve the properties and relationships of domain object.
      * @return a CompletableFuture of domain
      */
     public java.util.concurrent.CompletableFuture<Domain> get() {
@@ -284,7 +284,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Get entity from domains by key
+     * Retrieve the properties and relationships of domain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of domain
      */
@@ -301,7 +301,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Get entity from domains by key
+     * Retrieve the properties and relationships of domain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of domain
@@ -424,7 +424,7 @@ public class DomainItemRequestBuilder {
         public DomainItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get entity from domains by key */
+    /** Retrieve the properties and relationships of domain object. */
     public class DomainItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

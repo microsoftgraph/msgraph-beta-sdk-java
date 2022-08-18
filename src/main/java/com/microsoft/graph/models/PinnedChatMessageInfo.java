@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PinnedChatMessageInfo extends Entity implements Parsable {
     /** Represents details about the chat message that is pinned. */
     private ChatMessage _message;

@@ -17,7 +17,7 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _eventTypes;
     /** The OdataType property */
     private String _odataType;
-    /** The type of risk event detected. */
+    /** The riskEventTypes property */
     private java.util.List<String> _riskEventTypes;
     /**
      * Instantiates a new riskUserActivity and sets the default values.
@@ -84,7 +84,7 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the riskEventTypes property value. The type of risk event detected.
+     * Gets the riskEventTypes property value. The riskEventTypes property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the riskEventTypes property value. The type of risk event detected.
+     * Sets the riskEventTypes property value. The riskEventTypes property
      * @param value Value to set for the riskEventTypes property.
      * @return a void
      */

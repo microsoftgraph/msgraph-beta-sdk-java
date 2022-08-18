@@ -157,7 +157,7 @@ public class EntitlementManagementRequestBuilder {
         return requestInfo;
     }
     /**
-     * Container for roles and assignments for entitlement management resources.
+     * The RbacApplication for Entitlement Management
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -165,7 +165,7 @@ public class EntitlementManagementRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Container for roles and assignments for entitlement management resources.
+     * The RbacApplication for Entitlement Management
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -270,7 +270,7 @@ public class EntitlementManagementRequestBuilder {
         }
     }
     /**
-     * Container for roles and assignments for entitlement management resources.
+     * The RbacApplication for Entitlement Management
      * @return a CompletableFuture of rbacApplication
      */
     public java.util.concurrent.CompletableFuture<RbacApplication> get() {
@@ -286,7 +286,7 @@ public class EntitlementManagementRequestBuilder {
         }
     }
     /**
-     * Container for roles and assignments for entitlement management resources.
+     * The RbacApplication for Entitlement Management
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of rbacApplication
      */
@@ -303,7 +303,7 @@ public class EntitlementManagementRequestBuilder {
         }
     }
     /**
-     * Container for roles and assignments for entitlement management resources.
+     * The RbacApplication for Entitlement Management
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of rbacApplication
@@ -538,7 +538,7 @@ public class EntitlementManagementRequestBuilder {
         public EntitlementManagementRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Container for roles and assignments for entitlement management resources. */
+    /** The RbacApplication for Entitlement Management */
     public class EntitlementManagementRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

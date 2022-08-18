@@ -86,7 +86,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Instances for active role assignments.
+     * Get roleAssignmentScheduleInstances from roleManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Instances for active role assignments.
+     * Get roleAssignmentScheduleInstances from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         }
     }
     /**
-     * Instances for active role assignments.
+     * Get roleAssignmentScheduleInstances from roleManagement
      * @return a CompletableFuture of unifiedRoleAssignmentScheduleInstance
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentScheduleInstance> get() {
@@ -215,7 +215,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         }
     }
     /**
-     * Instances for active role assignments.
+     * Get roleAssignmentScheduleInstances from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleAssignmentScheduleInstance
      */
@@ -232,7 +232,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         }
     }
     /**
-     * Instances for active role assignments.
+     * Get roleAssignmentScheduleInstances from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedRoleAssignmentScheduleInstance
@@ -319,7 +319,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         public UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Instances for active role assignments. */
+    /** Get roleAssignmentScheduleInstances from roleManagement */
     public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

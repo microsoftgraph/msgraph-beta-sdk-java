@@ -13,6 +13,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     private String _description;
     /** The MicrosoftTunnelSite's display name */
     private String _displayName;
+    /** When set to true, certificate pinning will be enforced on connections between the Microsoft Tunnel server and Microsoft Tunnel clients. When set to false, certificate pinning will be disabled. */
+    private Boolean _enableCertificatePinning;
     /** The MicrosoftTunnelSite's Internal Network Access Probe URL */
     private String _internalNetworkProbeUrl;
     /** The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite */
@@ -68,6 +70,14 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return this._displayName;
     }
     /**
+     * Gets the enableCertificatePinning property value. When set to true, certificate pinning will be enforced on connections between the Microsoft Tunnel server and Microsoft Tunnel clients. When set to false, certificate pinning will be disabled.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getEnableCertificatePinning() {
+        return this._enableCertificatePinning;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -77,6 +87,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("enableCertificatePinning", (n) -> { currentObject.setEnableCertificatePinning(n.getBooleanValue()); });
             this.put("internalNetworkProbeUrl", (n) -> { currentObject.setInternalNetworkProbeUrl(n.getStringValue()); });
             this.put("microsoftTunnelConfiguration", (n) -> { currentObject.setMicrosoftTunnelConfiguration(n.getObjectValue(MicrosoftTunnelConfiguration::createFromDiscriminatorValue)); });
             this.put("microsoftTunnelServers", (n) -> { currentObject.setMicrosoftTunnelServers(n.getCollectionOfObjectValues(MicrosoftTunnelServer::createFromDiscriminatorValue)); });
@@ -179,6 +190,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeBooleanValue("enableCertificatePinning", this.getEnableCertificatePinning());
         writer.writeStringValue("internalNetworkProbeUrl", this.getInternalNetworkProbeUrl());
         writer.writeObjectValue("microsoftTunnelConfiguration", this.getMicrosoftTunnelConfiguration());
         writer.writeCollectionOfObjectValues("microsoftTunnelServers", this.getMicrosoftTunnelServers());
@@ -205,6 +217,14 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the enableCertificatePinning property value. When set to true, certificate pinning will be enforced on connections between the Microsoft Tunnel server and Microsoft Tunnel clients. When set to false, certificate pinning will be disabled.
+     * @param value Value to set for the enableCertificatePinning property.
+     * @return a void
+     */
+    public void setEnableCertificatePinning(@javax.annotation.Nullable final Boolean value) {
+        this._enableCertificatePinning = value;
     }
     /**
      * Sets the internalNetworkProbeUrl property value. The MicrosoftTunnelSite's Internal Network Access Probe URL

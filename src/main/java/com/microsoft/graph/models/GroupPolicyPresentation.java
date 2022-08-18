@@ -45,6 +45,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
                 case "#microsoft.graph.groupPolicyPresentationMultiTextBox": return new GroupPolicyPresentationMultiTextBox();
                 case "#microsoft.graph.groupPolicyPresentationText": return new GroupPolicyPresentationText();
                 case "#microsoft.graph.groupPolicyPresentationTextBox": return new GroupPolicyPresentationTextBox();
+                case "#microsoft.graph.groupPolicyUploadedPresentation": return new GroupPolicyUploadedPresentation();
             }
         }
         return new GroupPolicyPresentation();

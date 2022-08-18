@@ -116,7 +116,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * Get roleEligibilityScheduleRequests from roleManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -124,7 +124,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * Get roleEligibilityScheduleRequests from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -229,7 +229,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder {
         }
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * Get roleEligibilityScheduleRequests from roleManagement
      * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequest
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleRequest> get() {
@@ -245,7 +245,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder {
         }
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * Get roleEligibilityScheduleRequests from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequest
      */
@@ -262,7 +262,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder {
         }
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * Get roleEligibilityScheduleRequests from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequest
@@ -349,7 +349,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder {
         public UnifiedRoleEligibilityScheduleRequestItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Requests for role eligibilities for principals through PIM. */
+    /** Get roleEligibilityScheduleRequests from roleManagement */
     public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

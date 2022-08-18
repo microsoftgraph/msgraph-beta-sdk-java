@@ -22,6 +22,8 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     private String _displayName;
     /** The date and time the entity was last modified. */
     private OffsetDateTime _lastModifiedDateTime;
+    /** Group Policy Configuration Ingestion Type */
+    private GroupPolicyConfigurationIngestionType _policyConfigurationIngestionType;
     /** The list of scope tags for the configuration. */
     private java.util.List<String> _roleScopeTagIds;
     /**
@@ -96,6 +98,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("policyConfigurationIngestionType", (n) -> { currentObject.setPolicyConfigurationIngestionType(n.getEnumValue(GroupPolicyConfigurationIngestionType.class)); });
             this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -106,6 +109,14 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this._lastModifiedDateTime;
+    }
+    /**
+     * Gets the policyConfigurationIngestionType property value. Group Policy Configuration Ingestion Type
+     * @return a groupPolicyConfigurationIngestionType
+     */
+    @javax.annotation.Nullable
+    public GroupPolicyConfigurationIngestionType getPolicyConfigurationIngestionType() {
+        return this._policyConfigurationIngestionType;
     }
     /**
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
@@ -129,6 +140,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeEnumValue("policyConfigurationIngestionType", this.getPolicyConfigurationIngestionType());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
     }
     /**
@@ -178,6 +190,14 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the policyConfigurationIngestionType property value. Group Policy Configuration Ingestion Type
+     * @param value Value to set for the policyConfigurationIngestionType property.
+     * @return a void
+     */
+    public void setPolicyConfigurationIngestionType(@javax.annotation.Nullable final GroupPolicyConfigurationIngestionType value) {
+        this._policyConfigurationIngestionType = value;
     }
     /**
      * Sets the roleScopeTagIds property value. The list of scope tags for the configuration.

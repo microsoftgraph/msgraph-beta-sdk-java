@@ -104,7 +104,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get roleAssignments from roleManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -112,7 +112,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get roleAssignments from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get roleAssignments from roleManagement
      * @return a CompletableFuture of unifiedRoleAssignment
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignment> get() {
@@ -233,7 +233,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get roleAssignments from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleAssignment
      */
@@ -250,7 +250,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get roleAssignments from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedRoleAssignment
@@ -337,7 +337,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder {
         public UnifiedRoleAssignmentItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Resource to grant access to users or groups. */
+    /** Get roleAssignments from roleManagement */
     public class UnifiedRoleAssignmentItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

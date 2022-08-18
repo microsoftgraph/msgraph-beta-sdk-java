@@ -10,7 +10,7 @@ import java.util.Objects;
 public class PrinterCreateOperation extends PrintOperation implements Parsable {
     /** The signed certificate created during the registration process. Read-only. */
     private String _certificate;
-    /** The created printer entity. Read-only. */
+    /** The printer property */
     private Printer _printer;
     /**
      * Instantiates a new PrinterCreateOperation and sets the default values.
@@ -51,7 +51,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
         }};
     }
     /**
-     * Gets the printer property value. The created printer entity. Read-only.
+     * Gets the printer property value. The printer property
      * @return a printer
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
         this._certificate = value;
     }
     /**
-     * Sets the printer property value. The created printer entity. Read-only.
+     * Sets the printer property value. The printer property
      * @param value Value to set for the printer property.
      * @return a void
      */

@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Contract extends DirectoryObject implements Parsable {
-    /** Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below. */
+    /** The contractType property */
     private String _contractType;
-    /** The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource. */
+    /** The customerId property */
     private String _customerId;
-    /** A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes. */
+    /** The defaultDomainName property */
     private String _defaultDomainName;
-    /** A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes. */
+    /** The displayName property */
     private String _displayName;
     /**
      * Instantiates a new Contract and sets the default values.
@@ -35,7 +35,7 @@ public class Contract extends DirectoryObject implements Parsable {
         return new Contract();
     }
     /**
-     * Gets the contractType property value. Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
+     * Gets the contractType property value. The contractType property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -43,7 +43,7 @@ public class Contract extends DirectoryObject implements Parsable {
         return this._contractType;
     }
     /**
-     * Gets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
+     * Gets the customerId property value. The customerId property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class Contract extends DirectoryObject implements Parsable {
         return this._customerId;
     }
     /**
-     * Gets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
+     * Gets the defaultDomainName property value. The defaultDomainName property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class Contract extends DirectoryObject implements Parsable {
         return this._defaultDomainName;
     }
     /**
-     * Gets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
+     * Gets the displayName property value. The displayName property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class Contract extends DirectoryObject implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
     }
     /**
-     * Sets the contractType property value. Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
+     * Sets the contractType property value. The contractType property
      * @param value Value to set for the contractType property.
      * @return a void
      */
@@ -102,7 +102,7 @@ public class Contract extends DirectoryObject implements Parsable {
         this._contractType = value;
     }
     /**
-     * Sets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
+     * Sets the customerId property value. The customerId property
      * @param value Value to set for the customerId property.
      * @return a void
      */
@@ -110,7 +110,7 @@ public class Contract extends DirectoryObject implements Parsable {
         this._customerId = value;
     }
     /**
-     * Sets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
+     * Sets the defaultDomainName property value. The defaultDomainName property
      * @param value Value to set for the defaultDomainName property.
      * @return a void
      */
@@ -118,7 +118,7 @@ public class Contract extends DirectoryObject implements Parsable {
         this._defaultDomainName = value;
     }
     /**
-     * Sets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
+     * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */

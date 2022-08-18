@@ -80,7 +80,7 @@ public class BookingCurrencyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get entity from bookingCurrencies by key
+     * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the **id** property, which is the currency code, to specify the currency.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class BookingCurrencyItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get entity from bookingCurrencies by key
+     * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the **id** property, which is the currency code, to specify the currency.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class BookingCurrencyItemRequestBuilder {
         }
     }
     /**
-     * Get entity from bookingCurrencies by key
+     * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the **id** property, which is the currency code, to specify the currency.
      * @return a CompletableFuture of bookingCurrency
      */
     public java.util.concurrent.CompletableFuture<BookingCurrency> get() {
@@ -209,7 +209,7 @@ public class BookingCurrencyItemRequestBuilder {
         }
     }
     /**
-     * Get entity from bookingCurrencies by key
+     * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the **id** property, which is the currency code, to specify the currency.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingCurrency
      */
@@ -226,7 +226,7 @@ public class BookingCurrencyItemRequestBuilder {
         }
     }
     /**
-     * Get entity from bookingCurrencies by key
+     * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the **id** property, which is the currency code, to specify the currency.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of bookingCurrency
@@ -313,7 +313,7 @@ public class BookingCurrencyItemRequestBuilder {
         public BookingCurrencyItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get entity from bookingCurrencies by key */
+    /** Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the **id** property, which is the currency code, to specify the currency. */
     public class BookingCurrencyItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

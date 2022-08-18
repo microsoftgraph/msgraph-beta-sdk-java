@@ -25,7 +25,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     private Long _duration;
     /** 'Four character code' name of the video format. */
     private String _fourCC;
-    /** Frame rate of the video. */
+    /** The frameRate property */
     private Double _frameRate;
     /** Height of the video, in pixels. */
     private Integer _height;
@@ -137,7 +137,7 @@ public class Video implements AdditionalDataHolder, Parsable {
         return this._fourCC;
     }
     /**
-     * Gets the frameRate property value. Frame rate of the video.
+     * Gets the frameRate property value. The frameRate property
      * @return a double
      */
     @javax.annotation.Nullable
@@ -253,7 +253,7 @@ public class Video implements AdditionalDataHolder, Parsable {
         this._fourCC = value;
     }
     /**
-     * Sets the frameRate property value. Frame rate of the video.
+     * Sets the frameRate property value. The frameRate property
      * @param value Value to set for the frameRate property.
      * @return a void
      */

@@ -7,10 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Describes a single artifact for a specific device model. */
 public class ZebraFotaArtifact extends Entity implements Parsable {
     /** The version of the Board Support Package (BSP. E.g.: 01.18.02.00) */
     private String _boardSupportPackageVersion;
+    /** Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021) */
+    private String _description;
     /** Applicable device model (e.g.: TC8300) */
     private String _deviceModel;
     /** Artifact OS version (e.g.: 8.1.0) */
@@ -20,7 +21,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     /** Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>) */
     private String _releaseNotesUrl;
     /**
-     * Instantiates a new zebraFotaArtifact and sets the default values.
+     * Instantiates a new ZebraFotaArtifact and sets the default values.
      * @return a void
      */
     public ZebraFotaArtifact() {
@@ -30,7 +31,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a zebraFotaArtifact
+     * @return a ZebraFotaArtifact
      */
     @javax.annotation.Nonnull
     public static ZebraFotaArtifact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -44,6 +45,14 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     @javax.annotation.Nullable
     public String getBoardSupportPackageVersion() {
         return this._boardSupportPackageVersion;
+    }
+    /**
+     * Gets the description property value. Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021)
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDescription() {
+        return this._description;
     }
     /**
      * Gets the deviceModel property value. Applicable device model (e.g.: TC8300)
@@ -62,6 +71,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         final ZebraFotaArtifact currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("boardSupportPackageVersion", (n) -> { currentObject.setBoardSupportPackageVersion(n.getStringValue()); });
+            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
             this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
             this.put("patchVersion", (n) -> { currentObject.setPatchVersion(n.getStringValue()); });
@@ -101,6 +111,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("boardSupportPackageVersion", this.getBoardSupportPackageVersion());
+        writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("deviceModel", this.getDeviceModel());
         writer.writeStringValue("osVersion", this.getOsVersion());
         writer.writeStringValue("patchVersion", this.getPatchVersion());
@@ -113,6 +124,14 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      */
     public void setBoardSupportPackageVersion(@javax.annotation.Nullable final String value) {
         this._boardSupportPackageVersion = value;
+    }
+    /**
+     * Sets the description property value. Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021)
+     * @param value Value to set for the description property.
+     * @return a void
+     */
+    public void setDescription(@javax.annotation.Nullable final String value) {
+        this._description = value;
     }
     /**
      * Sets the deviceModel property value. Applicable device model (e.g.: TC8300)

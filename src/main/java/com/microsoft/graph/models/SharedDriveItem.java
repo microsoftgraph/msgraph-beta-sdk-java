@@ -20,7 +20,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     private IdentitySet _owner;
     /** Used to access the permission representing the underlying sharing link */
     private Permission _permission;
-    /** Used to access the underlying driveItem. Deprecated -- use driveItem instead. */
+    /** The root property */
     private DriveItem _root;
     /** Used to access the underlying site */
     private Site _site;
@@ -109,7 +109,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
         return this._permission;
     }
     /**
-     * Gets the root property value. Used to access the underlying driveItem. Deprecated -- use driveItem instead.
+     * Gets the root property value. The root property
      * @return a driveItem
      */
     @javax.annotation.Nullable
@@ -190,7 +190,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
         this._permission = value;
     }
     /**
-     * Sets the root property value. Used to access the underlying driveItem. Deprecated -- use driveItem instead.
+     * Sets the root property value. The root property
      * @param value Value to set for the root property.
      * @return a void
      */

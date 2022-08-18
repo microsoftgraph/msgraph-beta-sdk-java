@@ -60,7 +60,7 @@ public class RoleEligibilitySchedulesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Schedules for role eligibility operations.
+     * Get roleEligibilitySchedules from roleManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class RoleEligibilitySchedulesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Schedules for role eligibility operations.
+     * Get roleEligibilitySchedules from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class RoleEligibilitySchedulesRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Schedules for role eligibility operations.
+     * Get roleEligibilitySchedules from roleManagement
      * @return a CompletableFuture of UnifiedRoleEligibilityScheduleCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleCollectionResponse> get() {
@@ -149,7 +149,7 @@ public class RoleEligibilitySchedulesRequestBuilder {
         }
     }
     /**
-     * Schedules for role eligibility operations.
+     * Get roleEligibilitySchedules from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleEligibilityScheduleCollectionResponse
      */
@@ -166,7 +166,7 @@ public class RoleEligibilitySchedulesRequestBuilder {
         }
     }
     /**
-     * Schedules for role eligibility operations.
+     * Get roleEligibilitySchedules from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UnifiedRoleEligibilityScheduleCollectionResponse
@@ -238,7 +238,7 @@ public class RoleEligibilitySchedulesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Schedules for role eligibility operations. */
+    /** Get roleEligibilitySchedules from roleManagement */
     public class RoleEligibilitySchedulesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

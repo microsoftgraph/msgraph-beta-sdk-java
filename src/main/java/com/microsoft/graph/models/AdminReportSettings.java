@@ -11,7 +11,7 @@ public class AdminReportSettings extends Entity implements Parsable {
     /** If set to true, all reports will conceal user information such as usernames, groups, and sites. If false, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required. */
     private Boolean _displayConcealedNames;
     /**
-     * Instantiates a new AdminReportSettings and sets the default values.
+     * Instantiates a new adminReportSettings and sets the default values.
      * @return a void
      */
     public AdminReportSettings() {
@@ -21,7 +21,7 @@ public class AdminReportSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AdminReportSettings
+     * @return a adminReportSettings
      */
     @javax.annotation.Nonnull
     public static AdminReportSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

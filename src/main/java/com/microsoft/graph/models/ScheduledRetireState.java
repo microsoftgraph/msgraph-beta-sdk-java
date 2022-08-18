@@ -8,7 +8,9 @@ public enum ScheduledRetireState implements ValuedEnum {
     /** Cancel retire. */
     CancelRetire("cancelRetire"),
     /** Retire these devices. */
-    ComfirmRetire("comfirmRetire");
+    ConfirmRetire("confirmRetire"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     ScheduledRetireState(final String value) {
         this.value = value;
@@ -20,7 +22,8 @@ public enum ScheduledRetireState implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "cancelRetire": return CancelRetire;
-            case "comfirmRetire": return ComfirmRetire;
+            case "confirmRetire": return ConfirmRetire;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

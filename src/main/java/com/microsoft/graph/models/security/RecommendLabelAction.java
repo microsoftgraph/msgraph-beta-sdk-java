@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RecommendLabelAction extends InformationProtectionAction implements Parsable {
-    /** The actions property */
+    /** Actions to take if the label is accepted by the user. */
     private java.util.List<InformationProtectionAction> _actions;
     /** The actionSource property */
     private ActionSource _actionSource;
-    /** The responsibleSensitiveTypeIds property */
+    /** The sensitive information type GUIDs that caused the recommendation to be given. */
     private java.util.List<String> _responsibleSensitiveTypeIds;
     /** The sensitivityLabelId property */
     private String _sensitivityLabelId;
@@ -35,7 +35,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
         return new RecommendLabelAction();
     }
     /**
-     * Gets the actions property value. The actions property
+     * Gets the actions property value. Actions to take if the label is accepted by the user.
      * @return a informationProtectionAction
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
         }};
     }
     /**
-     * Gets the responsibleSensitiveTypeIds property value. The responsibleSensitiveTypeIds property
+     * Gets the responsibleSensitiveTypeIds property value. The sensitive information type GUIDs that caused the recommendation to be given.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
         writer.writeStringValue("sensitivityLabelId", this.getSensitivityLabelId());
     }
     /**
-     * Sets the actions property value. The actions property
+     * Sets the actions property value. Actions to take if the label is accepted by the user.
      * @param value Value to set for the actions property.
      * @return a void
      */
@@ -110,7 +110,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
         this._actionSource = value;
     }
     /**
-     * Sets the responsibleSensitiveTypeIds property value. The responsibleSensitiveTypeIds property
+     * Sets the responsibleSensitiveTypeIds property value. The sensitive information type GUIDs that caused the recommendation to be given.
      * @param value Value to set for the responsibleSensitiveTypeIds property.
      * @return a void
      */

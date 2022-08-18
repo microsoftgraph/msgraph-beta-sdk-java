@@ -59,7 +59,7 @@ public class TaskDefinitionsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * Get taskDefinitions from print
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TaskDefinitionsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * Get taskDefinitions from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class TaskDefinitionsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * Get taskDefinitions from print
      * @return a CompletableFuture of PrintTaskDefinitionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PrintTaskDefinitionCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class TaskDefinitionsRequestBuilder {
         }
     }
     /**
-     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * Get taskDefinitions from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrintTaskDefinitionCollectionResponse
      */
@@ -155,7 +155,7 @@ public class TaskDefinitionsRequestBuilder {
         }
     }
     /**
-     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * Get taskDefinitions from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PrintTaskDefinitionCollectionResponse
@@ -227,7 +227,7 @@ public class TaskDefinitionsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List of abstract definition for a task that can be triggered when various events occur within Universal Print. */
+    /** Get taskDefinitions from print */
     public class TaskDefinitionsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

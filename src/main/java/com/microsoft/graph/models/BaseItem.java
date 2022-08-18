@@ -11,17 +11,17 @@ import java.util.Objects;
 public class BaseItem extends Entity implements Parsable {
     /** Identity of the user, device, or application which created the item. Read-only. */
     private IdentitySet _createdBy;
-    /** Identity of the user who created the item. Read-only. */
+    /** The createdByUser property */
     private User _createdByUser;
     /** Date and time of item creation. Read-only. */
     private OffsetDateTime _createdDateTime;
-    /** Provides a user-visible description of the item. Optional. */
+    /** The description property */
     private String _description;
     /** ETag for the item. Read-only. */
     private String _eTag;
     /** Identity of the user, device, and application which last modified the item. Read-only. */
     private IdentitySet _lastModifiedBy;
-    /** Identity of the user who last modified the item. Read-only. */
+    /** The lastModifiedByUser property */
     private User _lastModifiedByUser;
     /** Date and time the item was last modified. Read-only. */
     private OffsetDateTime _lastModifiedDateTime;
@@ -71,7 +71,7 @@ public class BaseItem extends Entity implements Parsable {
         return this._createdBy;
     }
     /**
-     * Gets the createdByUser property value. Identity of the user who created the item. Read-only.
+     * Gets the createdByUser property value. The createdByUser property
      * @return a user
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class BaseItem extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the description property value. Provides a user-visible description of the item. Optional.
+     * Gets the description property value. The description property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class BaseItem extends Entity implements Parsable {
         return this._lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedByUser property value. Identity of the user who last modified the item. Read-only.
+     * Gets the lastModifiedByUser property value. The lastModifiedByUser property
      * @return a user
      */
     @javax.annotation.Nullable
@@ -200,7 +200,7 @@ public class BaseItem extends Entity implements Parsable {
         this._createdBy = value;
     }
     /**
-     * Sets the createdByUser property value. Identity of the user who created the item. Read-only.
+     * Sets the createdByUser property value. The createdByUser property
      * @param value Value to set for the createdByUser property.
      * @return a void
      */
@@ -216,7 +216,7 @@ public class BaseItem extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the description property value. Provides a user-visible description of the item. Optional.
+     * Sets the description property value. The description property
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -240,7 +240,7 @@ public class BaseItem extends Entity implements Parsable {
         this._lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedByUser property value. Identity of the user who last modified the item. Read-only.
+     * Sets the lastModifiedByUser property value. The lastModifiedByUser property
      * @param value Value to set for the lastModifiedByUser property.
      * @return a void
      */

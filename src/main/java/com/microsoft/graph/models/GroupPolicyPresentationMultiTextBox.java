@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class GroupPolicyPresentationMultiTextBox extends GroupPolicyPresentation implements Parsable {
+public class GroupPolicyPresentationMultiTextBox extends GroupPolicyUploadedPresentation implements Parsable {
     /** An unsigned integer that specifies the maximum number of text characters. Default value is 1023. */
     private Long _maxLength;
     /** An unsigned integer that specifies the maximum number of strings. Default value is 0. */

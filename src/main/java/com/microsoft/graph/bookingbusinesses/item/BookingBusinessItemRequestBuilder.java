@@ -134,7 +134,7 @@ public class BookingBusinessItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete entity from bookingBusinesses
+     * Delete a bookingBusiness object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -142,7 +142,7 @@ public class BookingBusinessItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete entity from bookingBusinesses
+     * Delete a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class BookingBusinessItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a Microsot Bookings Business.
+     * Get the properties and relationships of a bookingBusiness object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -170,7 +170,7 @@ public class BookingBusinessItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents a Microsot Bookings Business.
+     * Get the properties and relationships of a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -192,7 +192,7 @@ public class BookingBusinessItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update entity in bookingBusinesses
+     * Update the properties of a bookingBusiness object.
      * @param body 
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class BookingBusinessItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update entity in bookingBusinesses
+     * Update the properties of a bookingBusiness object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +248,7 @@ public class BookingBusinessItemRequestBuilder {
         return new BookingCustomQuestionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Delete entity from bookingBusinesses
+     * Delete a bookingBusiness object.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -264,7 +264,7 @@ public class BookingBusinessItemRequestBuilder {
         }
     }
     /**
-     * Delete entity from bookingBusinesses
+     * Delete a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -281,7 +281,7 @@ public class BookingBusinessItemRequestBuilder {
         }
     }
     /**
-     * Delete entity from bookingBusinesses
+     * Delete a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -299,7 +299,7 @@ public class BookingBusinessItemRequestBuilder {
         }
     }
     /**
-     * Represents a Microsot Bookings Business.
+     * Get the properties and relationships of a bookingBusiness object.
      * @return a CompletableFuture of bookingBusiness
      */
     public java.util.concurrent.CompletableFuture<BookingBusiness> get() {
@@ -315,7 +315,7 @@ public class BookingBusinessItemRequestBuilder {
         }
     }
     /**
-     * Represents a Microsot Bookings Business.
+     * Get the properties and relationships of a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingBusiness
      */
@@ -332,7 +332,7 @@ public class BookingBusinessItemRequestBuilder {
         }
     }
     /**
-     * Represents a Microsot Bookings Business.
+     * Get the properties and relationships of a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of bookingBusiness
@@ -350,7 +350,7 @@ public class BookingBusinessItemRequestBuilder {
         }
     }
     /**
-     * Update entity in bookingBusinesses
+     * Update the properties of a bookingBusiness object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -367,7 +367,7 @@ public class BookingBusinessItemRequestBuilder {
         }
     }
     /**
-     * Update entity in bookingBusinesses
+     * Update the properties of a bookingBusiness object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -385,7 +385,7 @@ public class BookingBusinessItemRequestBuilder {
         }
     }
     /**
-     * Update entity in bookingBusinesses
+     * Update the properties of a bookingBusiness object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -443,7 +443,7 @@ public class BookingBusinessItemRequestBuilder {
         public BookingBusinessItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents a Microsot Bookings Business. */
+    /** Get the properties and relationships of a bookingBusiness object. */
     public class BookingBusinessItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

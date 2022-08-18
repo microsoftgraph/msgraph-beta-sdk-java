@@ -17,10 +17,12 @@ import java.util.Objects;
 import microsoft.graph.models.ManagedDevice;
 import microsoft.graph.models.ManagedDeviceCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.users.item.manageddevices.appdiagnosticswithupn.AppDiagnosticsWithUpnRequestBuilder;
 import microsoft.graph.users.item.manageddevices.bulkreprovisioncloudpc.BulkReprovisionCloudPcRequestBuilder;
 import microsoft.graph.users.item.manageddevices.bulkrestorecloudpc.BulkRestoreCloudPcRequestBuilder;
 import microsoft.graph.users.item.manageddevices.bulksetcloudpcreviewstatus.BulkSetCloudPcReviewStatusRequestBuilder;
 import microsoft.graph.users.item.manageddevices.count.CountRequestBuilder;
+import microsoft.graph.users.item.manageddevices.downloadappdiagnostics.DownloadAppDiagnosticsRequestBuilder;
 import microsoft.graph.users.item.manageddevices.executeaction.ExecuteActionRequestBuilder;
 import microsoft.graph.users.item.manageddevices.movedevicestoou.MoveDevicesToOURequestBuilder;
 /** Provides operations to manage the managedDevices property of the microsoft.graph.user entity. */
@@ -45,6 +47,11 @@ public class ManagedDevicesRequestBuilder {
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The downloadAppDiagnostics property */
+    @javax.annotation.Nonnull
+    public DownloadAppDiagnosticsRequestBuilder downloadAppDiagnostics() {
+        return new DownloadAppDiagnosticsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The executeAction property */
     @javax.annotation.Nonnull
     public ExecuteActionRequestBuilder executeAction() {
@@ -61,6 +68,16 @@ public class ManagedDevicesRequestBuilder {
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /**
+     * Provides operations to call the appDiagnostics method.
+     * @param upn Usage: upn='{upn}'
+     * @return a appDiagnosticsWithUpnRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AppDiagnosticsWithUpnRequestBuilder appDiagnosticsWithUpn(@javax.annotation.Nonnull final String upn) {
+        Objects.requireNonNull(upn);
+        return new AppDiagnosticsWithUpnRequestBuilder(pathParameters, requestAdapter, upn);
+    }
     /**
      * Instantiates a new ManagedDevicesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

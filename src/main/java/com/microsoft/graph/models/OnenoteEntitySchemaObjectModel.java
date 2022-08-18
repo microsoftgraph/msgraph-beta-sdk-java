@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel implements Parsable {
-    /** The date and time when the page was created. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /** The createdDateTime property */
     private OffsetDateTime _createdDateTime;
     /**
      * Instantiates a new OnenoteEntitySchemaObjectModel and sets the default values.
@@ -41,7 +41,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
         return new OnenoteEntitySchemaObjectModel();
     }
     /**
-     * Gets the createdDateTime property value. The date and time when the page was created. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
     }
     /**
-     * Sets the createdDateTime property value. The date and time when the page was created. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */

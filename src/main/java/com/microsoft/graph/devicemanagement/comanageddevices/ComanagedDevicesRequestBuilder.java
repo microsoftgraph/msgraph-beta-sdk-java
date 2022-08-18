@@ -14,10 +14,12 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.devicemanagement.comanageddevices.appdiagnosticswithupn.AppDiagnosticsWithUpnRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.bulkreprovisioncloudpc.BulkReprovisionCloudPcRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.bulkrestorecloudpc.BulkRestoreCloudPcRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.bulksetcloudpcreviewstatus.BulkSetCloudPcReviewStatusRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.count.CountRequestBuilder;
+import microsoft.graph.devicemanagement.comanageddevices.downloadappdiagnostics.DownloadAppDiagnosticsRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.executeaction.ExecuteActionRequestBuilder;
 import microsoft.graph.devicemanagement.comanageddevices.movedevicestoou.MoveDevicesToOURequestBuilder;
 import microsoft.graph.models.ManagedDevice;
@@ -45,6 +47,11 @@ public class ComanagedDevicesRequestBuilder {
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The downloadAppDiagnostics property */
+    @javax.annotation.Nonnull
+    public DownloadAppDiagnosticsRequestBuilder downloadAppDiagnostics() {
+        return new DownloadAppDiagnosticsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The executeAction property */
     @javax.annotation.Nonnull
     public ExecuteActionRequestBuilder executeAction() {
@@ -61,6 +68,16 @@ public class ComanagedDevicesRequestBuilder {
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /**
+     * Provides operations to call the appDiagnostics method.
+     * @param upn Usage: upn='{upn}'
+     * @return a appDiagnosticsWithUpnRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AppDiagnosticsWithUpnRequestBuilder appDiagnosticsWithUpn(@javax.annotation.Nonnull final String upn) {
+        Objects.requireNonNull(upn);
+        return new AppDiagnosticsWithUpnRequestBuilder(pathParameters, requestAdapter, upn);
+    }
     /**
      * Instantiates a new ComanagedDevicesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

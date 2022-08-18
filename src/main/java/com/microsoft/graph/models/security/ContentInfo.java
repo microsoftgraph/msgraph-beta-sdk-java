@@ -11,11 +11,11 @@ import java.util.Objects;
 public class ContentInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The contentFormat property */
+    /** The format of the content to be labeled. Possible values are: file, email. */
     private String _contentFormat;
-    /** The identifier property */
+    /** Identifier used for Azure Information Protection Analytics. */
     private String _identifier;
-    /** The metadata property */
+    /** Existing Microsoft Purview Information Protection metadata is passed as key-value pairs, where the key is the MSIP_Label_GUID_PropName. */
     private java.util.List<KeyValuePair> _metadata;
     /** The OdataType property */
     private String _odataType;
@@ -48,7 +48,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the contentFormat property value. The contentFormat property
+     * Gets the contentFormat property value. The format of the content to be labeled. Possible values are: file, email.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the identifier property value. The identifier property
+     * Gets the identifier property value. Identifier used for Azure Information Protection Analytics.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         return this._identifier;
     }
     /**
-     * Gets the metadata property value. The metadata property
+     * Gets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key-value pairs, where the key is the MSIP_Label_GUID_PropName.
      * @return a keyValuePair
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the contentFormat property value. The contentFormat property
+     * Sets the contentFormat property value. The format of the content to be labeled. Possible values are: file, email.
      * @param value Value to set for the contentFormat property.
      * @return a void
      */
@@ -133,7 +133,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         this._contentFormat = value;
     }
     /**
-     * Sets the identifier property value. The identifier property
+     * Sets the identifier property value. Identifier used for Azure Information Protection Analytics.
      * @param value Value to set for the identifier property.
      * @return a void
      */
@@ -141,7 +141,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         this._identifier = value;
     }
     /**
-     * Sets the metadata property value. The metadata property
+     * Sets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key-value pairs, where the key is the MSIP_Label_GUID_PropName.
      * @param value Value to set for the metadata property.
      * @return a void
      */

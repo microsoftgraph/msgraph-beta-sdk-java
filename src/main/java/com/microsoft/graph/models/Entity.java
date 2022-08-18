@@ -195,9 +195,9 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.attributeSet": return new AttributeSet();
                 case "#microsoft.graph.audioRoutingGroup": return new AudioRoutingGroup();
                 case "#microsoft.graph.auditEvent": return new AuditEvent();
-                case "#microsoft.graph.auditLogRoot": return new AuditLogRoot();
                 case "#microsoft.graph.authentication": return new Authentication();
                 case "#microsoft.graph.authenticationContextClassReference": return new AuthenticationContextClassReference();
+                case "#microsoft.graph.authenticationEventListener": return new AuthenticationEventListener();
                 case "#microsoft.graph.authenticationEventsPolicy": return new AuthenticationEventsPolicy();
                 case "#microsoft.graph.authenticationFlowsPolicy": return new AuthenticationFlowsPolicy();
                 case "#microsoft.graph.authenticationListener": return new AuthenticationListener();
@@ -309,6 +309,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.crossTenantAccessPolicyConfigurationDefault": return new CrossTenantAccessPolicyConfigurationDefault();
                 case "#microsoft.graph.currency": return new Currency();
                 case "#microsoft.graph.customAccessPackageWorkflowExtension": return new CustomAccessPackageWorkflowExtension();
+                case "#microsoft.graph.customAuthenticationExtension": return new CustomAuthenticationExtension();
                 case "#microsoft.graph.customCalloutExtension": return new CustomCalloutExtension();
                 case "#microsoft.graph.customer": return new Customer();
                 case "#microsoft.graph.customerPayment": return new CustomerPayment();
@@ -560,6 +561,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.externalConnection": return new ExternalConnection();
                 case "#microsoft.graph.externalConnectors.connectionOperation": return new ConnectionOperation();
                 case "#microsoft.graph.externalConnectors.connectionQuota": return new ConnectionQuota();
+                case "#microsoft.graph.externalConnectors.externalActivity": return new ExternalActivity();
+                case "#microsoft.graph.externalConnectors.externalActivityResult": return new ExternalActivityResult();
                 case "#microsoft.graph.externalConnectors.externalConnection": return new ExternalConnection();
                 case "#microsoft.graph.externalConnectors.externalGroup": return new ExternalGroup();
                 case "#microsoft.graph.externalConnectors.externalItem": return new ExternalItem();
@@ -621,6 +624,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.groupPolicyPresentationValueText": return new GroupPolicyPresentationValueText();
                 case "#microsoft.graph.groupPolicySettingMapping": return new GroupPolicySettingMapping();
                 case "#microsoft.graph.groupPolicyUploadedDefinitionFile": return new GroupPolicyUploadedDefinitionFile();
+                case "#microsoft.graph.groupPolicyUploadedPresentation": return new GroupPolicyUploadedPresentation();
                 case "#microsoft.graph.homeRealmDiscoveryPolicy": return new HomeRealmDiscoveryPolicy();
                 case "#microsoft.graph.hostSecurityProfile": return new HostSecurityProfile();
                 case "#microsoft.graph.identityApiConnector": return new IdentityApiConnector();
@@ -706,6 +710,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.journal": return new Journal();
                 case "#microsoft.graph.journalLine": return new JournalLine();
                 case "#microsoft.graph.languageProficiency": return new LanguageProficiency();
+                case "#microsoft.graph.learningContent": return new LearningContent();
                 case "#microsoft.graph.learningProvider": return new LearningProvider();
                 case "#microsoft.graph.licenseDetails": return new LicenseDetails();
                 case "#microsoft.graph.linkedResource": return new LinkedResource();
@@ -888,6 +893,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.onPremisesAgentGroup": return new OnPremisesAgentGroup();
                 case "#microsoft.graph.onPremisesConditionalAccessSettings": return new OnPremisesConditionalAccessSettings();
                 case "#microsoft.graph.onPremisesPublishingProfile": return new OnPremisesPublishingProfile();
+                case "#microsoft.graph.onTokenIssuanceStartCustomExtension": return new OnTokenIssuanceStartCustomExtension();
+                case "#microsoft.graph.onTokenIssuanceStartListener": return new OnTokenIssuanceStartListener();
                 case "#microsoft.graph.openIdConnectIdentityProvider": return new OpenIdConnectIdentityProvider();
                 case "#microsoft.graph.openIdConnectProvider": return new OpenIdConnectProvider();
                 case "#microsoft.graph.openShift": return new OpenShift();
@@ -898,6 +905,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.organizationalBranding": return new OrganizationalBranding();
                 case "#microsoft.graph.organizationalBrandingLocalization": return new OrganizationalBrandingLocalization();
                 case "#microsoft.graph.organizationalBrandingProperties": return new OrganizationalBrandingProperties();
+                case "#microsoft.graph.organizationalMessageDetail": return new OrganizationalMessageDetail();
+                case "#microsoft.graph.organizationalMessageGuidedContent": return new OrganizationalMessageGuidedContent();
                 case "#microsoft.graph.organizationSettings": return new OrganizationSettings();
                 case "#microsoft.graph.orgContact": return new OrgContact();
                 case "#microsoft.graph.outlookCategory": return new OutlookCategory();
@@ -1181,6 +1190,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.teamsAsyncOperation": return new TeamsAsyncOperation();
                 case "#microsoft.graph.teamsTab": return new TeamsTab();
                 case "#microsoft.graph.teamsTemplate": return new TeamsTemplate();
+                case "#microsoft.graph.teamTemplate": return new TeamTemplate();
+                case "#microsoft.graph.teamTemplateDefinition": return new TeamTemplateDefinition();
                 case "#microsoft.graph.teamwork": return new Teamwork();
                 case "#microsoft.graph.teamworkBot": return new TeamworkBot();
                 case "#microsoft.graph.teamworkDevice": return new TeamworkDevice();

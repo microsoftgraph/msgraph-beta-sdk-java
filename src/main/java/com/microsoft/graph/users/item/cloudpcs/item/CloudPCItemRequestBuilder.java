@@ -23,6 +23,7 @@ import microsoft.graph.users.item.cloudpcs.item.getcloudpclaunchinfo.GetCloudPcL
 import microsoft.graph.users.item.cloudpcs.item.reboot.RebootRequestBuilder;
 import microsoft.graph.users.item.cloudpcs.item.rename.RenameRequestBuilder;
 import microsoft.graph.users.item.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
+import microsoft.graph.users.item.cloudpcs.item.restore.RestoreRequestBuilder;
 import microsoft.graph.users.item.cloudpcs.item.troubleshoot.TroubleshootRequestBuilder;
 /** Provides operations to manage the cloudPCs property of the microsoft.graph.user entity. */
 public class CloudPCItemRequestBuilder {
@@ -55,6 +56,11 @@ public class CloudPCItemRequestBuilder {
     }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The restore property */
+    @javax.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The troubleshoot property */
     @javax.annotation.Nonnull
     public TroubleshootRequestBuilder troubleshoot() {

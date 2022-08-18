@@ -14,7 +14,7 @@ public class User extends DirectoryObject implements Parsable {
     private String _aboutMe;
     /** true if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter (eq, ne, not, and in). */
     private Boolean _accountEnabled;
-    /** The user's activities across devices. Read-only. Nullable. */
+    /** The activities property */
     private java.util.List<UserActivity> _activities;
     /** Sets the age group of the user. Allowed values: null, Minor, NotAdult and Adult. Refer to the legal age group property definitions for further information. Supports $filter (eq, ne, not, and in). */
     private String _ageGroup;
@@ -24,6 +24,8 @@ public class User extends DirectoryObject implements Parsable {
     private UserAnalytics _analytics;
     /** The appConsentRequestsForApproval property */
     private java.util.List<AppConsentRequest> _appConsentRequestsForApproval;
+    /** The appRoleAssignedResources property */
+    private java.util.List<ServicePrincipal> _appRoleAssignedResources;
     /** Represents the app roles a user has been granted for an application. Supports $expand. */
     private java.util.List<AppRoleAssignment> _appRoleAssignments;
     /** The approvals property */
@@ -32,7 +34,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<AssignedLicense> _assignedLicenses;
     /** The plans that are assigned to the user. Read-only. Not nullable.Supports $filter (eq and not). */
     private java.util.List<AssignedPlan> _assignedPlans;
-    /** The authentication methods that are supported for the user. */
+    /** The authentication property */
     private Authentication _authentication;
     /** The authorizationInfo property */
     private AuthorizationInfo _authorizationInfo;
@@ -96,6 +98,8 @@ public class User extends DirectoryObject implements Parsable {
     private OffsetDateTime _employeeHireDate;
     /** The employee identifier assigned to the user by the organization. The maximum length is 16 characters.Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values). */
     private String _employeeId;
+    /** The employeeLeaveDateTime property */
+    private OffsetDateTime _employeeLeaveDateTime;
     /** Represents organization data (e.g. division and costCenter) associated with a user. Supports $filter (eq, ne, not , ge, le, in). */
     private EmployeeOrgData _employeeOrgData;
     /** Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor. Supports $filter (eq, ne, not , ge, le, in, startsWith). */
@@ -146,7 +150,7 @@ public class User extends DirectoryObject implements Parsable {
     private String _legalAgeGroupClassification;
     /** State of license assignments for this user. Read-only. Returned only on $select. */
     private java.util.List<LicenseAssignmentState> _licenseAssignmentStates;
-    /** A collection of this user's license details. Read-only. */
+    /** The licenseDetails property */
     private java.util.List<LicenseDetails> _licenseDetails;
     /** The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property cannot contain accent characters.  NOTE: We do not recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values). */
     private String _mail;
@@ -331,7 +335,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._accountEnabled;
     }
     /**
-     * Gets the activities property value. The user's activities across devices. Read-only. Nullable.
+     * Gets the activities property value. The activities property
      * @return a userActivity
      */
     @javax.annotation.Nullable
@@ -371,6 +375,14 @@ public class User extends DirectoryObject implements Parsable {
         return this._appConsentRequestsForApproval;
     }
     /**
+     * Gets the appRoleAssignedResources property value. The appRoleAssignedResources property
+     * @return a servicePrincipal
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ServicePrincipal> getAppRoleAssignedResources() {
+        return this._appRoleAssignedResources;
+    }
+    /**
      * Gets the appRoleAssignments property value. Represents the app roles a user has been granted for an application. Supports $expand.
      * @return a appRoleAssignment
      */
@@ -403,7 +415,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._assignedPlans;
     }
     /**
-     * Gets the authentication property value. The authentication methods that are supported for the user.
+     * Gets the authentication property value. The authentication property
      * @return a authentication
      */
     @javax.annotation.Nullable
@@ -659,6 +671,14 @@ public class User extends DirectoryObject implements Parsable {
         return this._employeeId;
     }
     /**
+     * Gets the employeeLeaveDateTime property value. The employeeLeaveDateTime property
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getEmployeeLeaveDateTime() {
+        return this._employeeLeaveDateTime;
+    }
+    /**
      * Gets the employeeOrgData property value. Represents organization data (e.g. division and costCenter) associated with a user. Supports $filter (eq, ne, not , ge, le, in).
      * @return a employeeOrgData
      */
@@ -729,6 +749,7 @@ public class User extends DirectoryObject implements Parsable {
             this.put("agreementAcceptances", (n) -> { currentObject.setAgreementAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
             this.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(UserAnalytics::createFromDiscriminatorValue)); });
             this.put("appConsentRequestsForApproval", (n) -> { currentObject.setAppConsentRequestsForApproval(n.getCollectionOfObjectValues(AppConsentRequest::createFromDiscriminatorValue)); });
+            this.put("appRoleAssignedResources", (n) -> { currentObject.setAppRoleAssignedResources(n.getCollectionOfObjectValues(ServicePrincipal::createFromDiscriminatorValue)); });
             this.put("appRoleAssignments", (n) -> { currentObject.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
             this.put("approvals", (n) -> { currentObject.setApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
             this.put("assignedLicenses", (n) -> { currentObject.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
@@ -765,6 +786,7 @@ public class User extends DirectoryObject implements Parsable {
             this.put("drives", (n) -> { currentObject.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
             this.put("employeeHireDate", (n) -> { currentObject.setEmployeeHireDate(n.getOffsetDateTimeValue()); });
             this.put("employeeId", (n) -> { currentObject.setEmployeeId(n.getStringValue()); });
+            this.put("employeeLeaveDateTime", (n) -> { currentObject.setEmployeeLeaveDateTime(n.getOffsetDateTimeValue()); });
             this.put("employeeOrgData", (n) -> { currentObject.setEmployeeOrgData(n.getObjectValue(EmployeeOrgData::createFromDiscriminatorValue)); });
             this.put("employeeType", (n) -> { currentObject.setEmployeeType(n.getStringValue()); });
             this.put("events", (n) -> { currentObject.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
@@ -1012,7 +1034,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._licenseAssignmentStates;
     }
     /**
-     * Gets the licenseDetails property value. A collection of this user's license details. Read-only.
+     * Gets the licenseDetails property value. The licenseDetails property
      * @return a licenseDetails
      */
     @javax.annotation.Nullable
@@ -1626,6 +1648,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("agreementAcceptances", this.getAgreementAcceptances());
         writer.writeObjectValue("analytics", this.getAnalytics());
         writer.writeCollectionOfObjectValues("appConsentRequestsForApproval", this.getAppConsentRequestsForApproval());
+        writer.writeCollectionOfObjectValues("appRoleAssignedResources", this.getAppRoleAssignedResources());
         writer.writeCollectionOfObjectValues("appRoleAssignments", this.getAppRoleAssignments());
         writer.writeCollectionOfObjectValues("approvals", this.getApprovals());
         writer.writeCollectionOfObjectValues("assignedLicenses", this.getAssignedLicenses());
@@ -1662,6 +1685,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("drives", this.getDrives());
         writer.writeOffsetDateTimeValue("employeeHireDate", this.getEmployeeHireDate());
         writer.writeStringValue("employeeId", this.getEmployeeId());
+        writer.writeOffsetDateTimeValue("employeeLeaveDateTime", this.getEmployeeLeaveDateTime());
         writer.writeObjectValue("employeeOrgData", this.getEmployeeOrgData());
         writer.writeStringValue("employeeType", this.getEmployeeType());
         writer.writeCollectionOfObjectValues("events", this.getEvents());
@@ -1780,7 +1804,7 @@ public class User extends DirectoryObject implements Parsable {
         this._accountEnabled = value;
     }
     /**
-     * Sets the activities property value. The user's activities across devices. Read-only. Nullable.
+     * Sets the activities property value. The activities property
      * @param value Value to set for the activities property.
      * @return a void
      */
@@ -1820,6 +1844,14 @@ public class User extends DirectoryObject implements Parsable {
         this._appConsentRequestsForApproval = value;
     }
     /**
+     * Sets the appRoleAssignedResources property value. The appRoleAssignedResources property
+     * @param value Value to set for the appRoleAssignedResources property.
+     * @return a void
+     */
+    public void setAppRoleAssignedResources(@javax.annotation.Nullable final java.util.List<ServicePrincipal> value) {
+        this._appRoleAssignedResources = value;
+    }
+    /**
      * Sets the appRoleAssignments property value. Represents the app roles a user has been granted for an application. Supports $expand.
      * @param value Value to set for the appRoleAssignments property.
      * @return a void
@@ -1852,7 +1884,7 @@ public class User extends DirectoryObject implements Parsable {
         this._assignedPlans = value;
     }
     /**
-     * Sets the authentication property value. The authentication methods that are supported for the user.
+     * Sets the authentication property value. The authentication property
      * @param value Value to set for the authentication property.
      * @return a void
      */
@@ -2108,6 +2140,14 @@ public class User extends DirectoryObject implements Parsable {
         this._employeeId = value;
     }
     /**
+     * Sets the employeeLeaveDateTime property value. The employeeLeaveDateTime property
+     * @param value Value to set for the employeeLeaveDateTime property.
+     * @return a void
+     */
+    public void setEmployeeLeaveDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this._employeeLeaveDateTime = value;
+    }
+    /**
      * Sets the employeeOrgData property value. Represents organization data (e.g. division and costCenter) associated with a user. Supports $filter (eq, ne, not , ge, le, in).
      * @param value Value to set for the employeeOrgData property.
      * @return a void
@@ -2308,7 +2348,7 @@ public class User extends DirectoryObject implements Parsable {
         this._licenseAssignmentStates = value;
     }
     /**
-     * Sets the licenseDetails property value. A collection of this user's license details. Read-only.
+     * Sets the licenseDetails property value. The licenseDetails property
      * @param value Value to set for the licenseDetails property.
      * @return a void
      */

@@ -8,15 +8,18 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the collection of externalConnection entities. */
 public class ExternalItem extends Entity implements Parsable {
     /** An array of access control entries. Each entry specifies the access granted to a user or group. Required. */
     private java.util.List<Acl> _acl;
-    /** A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional. */
+    /** Write-only property. Returns results. */
+    private java.util.List<ExternalActivity> _activities;
+    /** A plain-text representation of the contents of the item. The text in this property is full-text indexed. Optional. */
     private ExternalItemContent _content;
     /** A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required. */
     private Properties _properties;
     /**
-     * Instantiates a new ExternalItem and sets the default values.
+     * Instantiates a new externalItem and sets the default values.
      * @return a void
      */
     public ExternalItem() {
@@ -26,7 +29,7 @@ public class ExternalItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExternalItem
+     * @return a externalItem
      */
     @javax.annotation.Nonnull
     public static ExternalItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +45,15 @@ public class ExternalItem extends Entity implements Parsable {
         return this._acl;
     }
     /**
-     * Gets the content property value. A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
+     * Gets the activities property value. Write-only property. Returns results.
+     * @return a externalActivity
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ExternalActivity> getActivities() {
+        return this._activities;
+    }
+    /**
+     * Gets the content property value. A plain-text representation of the contents of the item. The text in this property is full-text indexed. Optional.
      * @return a externalItemContent
      */
     @javax.annotation.Nullable
@@ -58,6 +69,7 @@ public class ExternalItem extends Entity implements Parsable {
         final ExternalItem currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("acl", (n) -> { currentObject.setAcl(n.getCollectionOfObjectValues(Acl::createFromDiscriminatorValue)); });
+            this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ExternalActivity::createFromDiscriminatorValue)); });
             this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(ExternalItemContent::createFromDiscriminatorValue)); });
             this.put("properties", (n) -> { currentObject.setProperties(n.getObjectValue(Properties::createFromDiscriminatorValue)); });
         }};
@@ -79,6 +91,7 @@ public class ExternalItem extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("acl", this.getAcl());
+        writer.writeCollectionOfObjectValues("activities", this.getActivities());
         writer.writeObjectValue("content", this.getContent());
         writer.writeObjectValue("properties", this.getProperties());
     }
@@ -91,7 +104,15 @@ public class ExternalItem extends Entity implements Parsable {
         this._acl = value;
     }
     /**
-     * Sets the content property value. A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
+     * Sets the activities property value. Write-only property. Returns results.
+     * @param value Value to set for the activities property.
+     * @return a void
+     */
+    public void setActivities(@javax.annotation.Nullable final java.util.List<ExternalActivity> value) {
+        this._activities = value;
+    }
+    /**
+     * Sets the content property value. A plain-text representation of the contents of the item. The text in this property is full-text indexed. Optional.
      * @param value Value to set for the content property.
      * @return a void
      */

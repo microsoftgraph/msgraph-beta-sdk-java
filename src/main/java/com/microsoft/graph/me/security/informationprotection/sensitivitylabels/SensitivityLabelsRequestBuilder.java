@@ -83,7 +83,7 @@ public class SensitivityLabelsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get sensitivityLabels from me
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -91,7 +91,7 @@ public class SensitivityLabelsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get sensitivityLabels from me
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class SensitivityLabelsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get sensitivityLabels from me
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @return a CompletableFuture of SensitivityLabelCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<SensitivityLabelCollectionResponse> get() {
@@ -162,7 +162,7 @@ public class SensitivityLabelsRequestBuilder {
         }
     }
     /**
-     * Get sensitivityLabels from me
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SensitivityLabelCollectionResponse
      */
@@ -179,7 +179,7 @@ public class SensitivityLabelsRequestBuilder {
         }
     }
     /**
-     * Get sensitivityLabels from me
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of SensitivityLabelCollectionResponse
@@ -251,7 +251,7 @@ public class SensitivityLabelsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get sensitivityLabels from me */
+    /** Read the Microsoft Purview Information Protection labels for the user or organization. */
     public class SensitivityLabelsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

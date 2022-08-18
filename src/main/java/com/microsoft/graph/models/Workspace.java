@@ -7,25 +7,25 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Workspace extends Place implements Parsable {
-    /** The building property */
+    /** Specifies the building name or building number that the workspace is in. */
     private String _building;
-    /** The capacity property */
+    /** Specifies the capacity of the workspace. */
     private Integer _capacity;
-    /** The emailAddress property */
+    /** Email address of the workspace. */
     private String _emailAddress;
-    /** The floorLabel property */
+    /** Specifies a descriptive label for the floor, for example, P. */
     private String _floorLabel;
-    /** The floorNumber property */
+    /** Specifies the floor number that the workspace is on. */
     private Integer _floorNumber;
-    /** The isWheelChairAccessible property */
+    /** Specifies whether the workspace is wheelchair accessible. */
     private Boolean _isWheelChairAccessible;
-    /** The label property */
+    /** Specifies a descriptive label for the workspace, for example, a number or name. */
     private String _label;
-    /** The nickname property */
+    /** Specifies a nickname for the workspace, for example, 'quiet workspace'. */
     private String _nickname;
-    /** The tags property */
+    /** Specifies additional features of the workspace, for example, details like the type of view or furniture type. */
     private java.util.List<String> _tags;
     /**
      * Instantiates a new workspace and sets the default values.
@@ -46,7 +46,7 @@ public class Workspace extends Place implements Parsable {
         return new Workspace();
     }
     /**
-     * Gets the building property value. The building property
+     * Gets the building property value. Specifies the building name or building number that the workspace is in.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -54,7 +54,7 @@ public class Workspace extends Place implements Parsable {
         return this._building;
     }
     /**
-     * Gets the capacity property value. The capacity property
+     * Gets the capacity property value. Specifies the capacity of the workspace.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class Workspace extends Place implements Parsable {
         return this._capacity;
     }
     /**
-     * Gets the emailAddress property value. The emailAddress property
+     * Gets the emailAddress property value. Email address of the workspace.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class Workspace extends Place implements Parsable {
         }};
     }
     /**
-     * Gets the floorLabel property value. The floorLabel property
+     * Gets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class Workspace extends Place implements Parsable {
         return this._floorLabel;
     }
     /**
-     * Gets the floorNumber property value. The floorNumber property
+     * Gets the floorNumber property value. Specifies the floor number that the workspace is on.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -105,7 +105,7 @@ public class Workspace extends Place implements Parsable {
         return this._floorNumber;
     }
     /**
-     * Gets the isWheelChairAccessible property value. The isWheelChairAccessible property
+     * Gets the isWheelChairAccessible property value. Specifies whether the workspace is wheelchair accessible.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class Workspace extends Place implements Parsable {
         return this._isWheelChairAccessible;
     }
     /**
-     * Gets the label property value. The label property
+     * Gets the label property value. Specifies a descriptive label for the workspace, for example, a number or name.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class Workspace extends Place implements Parsable {
         return this._label;
     }
     /**
-     * Gets the nickname property value. The nickname property
+     * Gets the nickname property value. Specifies a nickname for the workspace, for example, 'quiet workspace'.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class Workspace extends Place implements Parsable {
         return this._nickname;
     }
     /**
-     * Gets the tags property value. The tags property
+     * Gets the tags property value. Specifies additional features of the workspace, for example, details like the type of view or furniture type.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -155,7 +155,7 @@ public class Workspace extends Place implements Parsable {
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
     }
     /**
-     * Sets the building property value. The building property
+     * Sets the building property value. Specifies the building name or building number that the workspace is in.
      * @param value Value to set for the building property.
      * @return a void
      */
@@ -163,7 +163,7 @@ public class Workspace extends Place implements Parsable {
         this._building = value;
     }
     /**
-     * Sets the capacity property value. The capacity property
+     * Sets the capacity property value. Specifies the capacity of the workspace.
      * @param value Value to set for the capacity property.
      * @return a void
      */
@@ -171,7 +171,7 @@ public class Workspace extends Place implements Parsable {
         this._capacity = value;
     }
     /**
-     * Sets the emailAddress property value. The emailAddress property
+     * Sets the emailAddress property value. Email address of the workspace.
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
@@ -179,7 +179,7 @@ public class Workspace extends Place implements Parsable {
         this._emailAddress = value;
     }
     /**
-     * Sets the floorLabel property value. The floorLabel property
+     * Sets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
      * @param value Value to set for the floorLabel property.
      * @return a void
      */
@@ -187,7 +187,7 @@ public class Workspace extends Place implements Parsable {
         this._floorLabel = value;
     }
     /**
-     * Sets the floorNumber property value. The floorNumber property
+     * Sets the floorNumber property value. Specifies the floor number that the workspace is on.
      * @param value Value to set for the floorNumber property.
      * @return a void
      */
@@ -195,7 +195,7 @@ public class Workspace extends Place implements Parsable {
         this._floorNumber = value;
     }
     /**
-     * Sets the isWheelChairAccessible property value. The isWheelChairAccessible property
+     * Sets the isWheelChairAccessible property value. Specifies whether the workspace is wheelchair accessible.
      * @param value Value to set for the isWheelChairAccessible property.
      * @return a void
      */
@@ -203,7 +203,7 @@ public class Workspace extends Place implements Parsable {
         this._isWheelChairAccessible = value;
     }
     /**
-     * Sets the label property value. The label property
+     * Sets the label property value. Specifies a descriptive label for the workspace, for example, a number or name.
      * @param value Value to set for the label property.
      * @return a void
      */
@@ -211,7 +211,7 @@ public class Workspace extends Place implements Parsable {
         this._label = value;
     }
     /**
-     * Sets the nickname property value. The nickname property
+     * Sets the nickname property value. Specifies a nickname for the workspace, for example, 'quiet workspace'.
      * @param value Value to set for the nickname property.
      * @return a void
      */
@@ -219,7 +219,7 @@ public class Workspace extends Place implements Parsable {
         this._nickname = value;
     }
     /**
-     * Sets the tags property value. The tags property
+     * Sets the tags property value. Specifies additional features of the workspace, for example, details like the type of view or furniture type.
      * @param value Value to set for the tags property.
      * @return a void
      */

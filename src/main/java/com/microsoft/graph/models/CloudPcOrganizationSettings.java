@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcOrganizationSettings extends Entity implements Parsable {
+    /** Specifies whether new Cloud PCs will be automatically enrolled in Microsoft Endpoint Manager(MEM). The default value is false. */
+    private Boolean _enableMEMAutoEnroll;
     /** The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue. */
     private CloudPcOperatingSystem _osVersion;
     /** The account type of the user on provisioned Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue. */
@@ -33,6 +35,14 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
         return new CloudPcOrganizationSettings();
     }
     /**
+     * Gets the enableMEMAutoEnroll property value. Specifies whether new Cloud PCs will be automatically enrolled in Microsoft Endpoint Manager(MEM). The default value is false.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getEnableMEMAutoEnroll() {
+        return this._enableMEMAutoEnroll;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -40,6 +50,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcOrganizationSettings currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("enableMEMAutoEnroll", (n) -> { currentObject.setEnableMEMAutoEnroll(n.getBooleanValue()); });
             this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getEnumValue(CloudPcOperatingSystem.class)); });
             this.put("userAccountType", (n) -> { currentObject.setUserAccountType(n.getEnumValue(CloudPcUserAccountType.class)); });
             this.put("windowsSettings", (n) -> { currentObject.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
@@ -77,9 +88,18 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeBooleanValue("enableMEMAutoEnroll", this.getEnableMEMAutoEnroll());
         writer.writeEnumValue("osVersion", this.getOsVersion());
         writer.writeEnumValue("userAccountType", this.getUserAccountType());
         writer.writeObjectValue("windowsSettings", this.getWindowsSettings());
+    }
+    /**
+     * Sets the enableMEMAutoEnroll property value. Specifies whether new Cloud PCs will be automatically enrolled in Microsoft Endpoint Manager(MEM). The default value is false.
+     * @param value Value to set for the enableMEMAutoEnroll property.
+     * @return a void
+     */
+    public void setEnableMEMAutoEnroll(@javax.annotation.Nullable final Boolean value) {
+        this._enableMEMAutoEnroll = value;
     }
     /**
      * Sets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.

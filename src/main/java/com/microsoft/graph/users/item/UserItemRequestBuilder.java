@@ -24,6 +24,8 @@ import microsoft.graph.users.item.agreementacceptances.item.AgreementAcceptanceI
 import microsoft.graph.users.item.analytics.AnalyticsRequestBuilder;
 import microsoft.graph.users.item.appconsentrequestsforapproval.AppConsentRequestsForApprovalRequestBuilder;
 import microsoft.graph.users.item.appconsentrequestsforapproval.item.AppConsentRequestItemRequestBuilder;
+import microsoft.graph.users.item.approleassignedresources.AppRoleAssignedResourcesRequestBuilder;
+import microsoft.graph.users.item.approleassignedresources.item.ServicePrincipalItemRequestBuilder;
 import microsoft.graph.users.item.approleassignments.AppRoleAssignmentsRequestBuilder;
 import microsoft.graph.users.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder;
 import microsoft.graph.users.item.approvals.ApprovalsRequestBuilder;
@@ -175,6 +177,11 @@ public class UserItemRequestBuilder {
     @javax.annotation.Nonnull
     public AppConsentRequestsForApprovalRequestBuilder appConsentRequestsForApproval() {
         return new AppConsentRequestsForApprovalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The appRoleAssignedResources property */
+    @javax.annotation.Nonnull
+    public AppRoleAssignedResourcesRequestBuilder appRoleAssignedResources() {
+        return new AppRoleAssignedResourcesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The appRoleAssignments property */
     @javax.annotation.Nonnull
@@ -624,6 +631,18 @@ public class UserItemRequestBuilder {
         return new AppConsentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
+     * Gets an item from the Microsoft.Graph.users.item.appRoleAssignedResources.item collection
+     * @param id Unique identifier of the item
+     * @return a ServicePrincipalItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ServicePrincipalItemRequestBuilder appRoleAssignedResources(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("servicePrincipal%2Did", id);
+        return new ServicePrincipalItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Gets an item from the Microsoft.Graph.users.item.appRoleAssignments.item collection
      * @param id Unique identifier of the item
      * @return a AppRoleAssignmentItemRequestBuilder
@@ -759,7 +778,7 @@ public class UserItemRequestBuilder {
         return new ContactItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
+     * Delete entity from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -767,7 +786,7 @@ public class UserItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
+     * Delete entity from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -861,7 +880,7 @@ public class UserItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
+     * Delete entity from users
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -877,7 +896,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
+     * Delete entity from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -894,7 +913,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
+     * Delete entity from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void

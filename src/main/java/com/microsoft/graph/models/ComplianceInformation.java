@@ -11,9 +11,9 @@ import java.util.Objects;
 public class ComplianceInformation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Collection of the certification controls associated with certification */
+    /** The certificationControls property */
     private java.util.List<CertificationControl> _certificationControls;
-    /** Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171) */
+    /** The certificationName property */
     private String _certificationName;
     /** The OdataType property */
     private String _odataType;
@@ -44,7 +44,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the certificationControls property value. Collection of the certification controls associated with certification
+     * Gets the certificationControls property value. The certificationControls property
      * @return a certificationControl
      */
     @javax.annotation.Nullable
@@ -52,7 +52,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
         return this._certificationControls;
     }
     /**
-     * Gets the certificationName property value. Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
+     * Gets the certificationName property value. The certificationName property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the certificationControls property value. Collection of the certification controls associated with certification
+     * Sets the certificationControls property value. The certificationControls property
      * @param value Value to set for the certificationControls property.
      * @return a void
      */
@@ -109,7 +109,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
         this._certificationControls = value;
     }
     /**
-     * Sets the certificationName property value. Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
+     * Sets the certificationName property value. The certificationName property
      * @param value Value to set for the certificationName property.
      * @return a void
      */

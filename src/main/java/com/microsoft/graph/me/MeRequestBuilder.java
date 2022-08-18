@@ -22,6 +22,8 @@ import microsoft.graph.me.agreementacceptances.item.AgreementAcceptanceItemReque
 import microsoft.graph.me.analytics.AnalyticsRequestBuilder;
 import microsoft.graph.me.appconsentrequestsforapproval.AppConsentRequestsForApprovalRequestBuilder;
 import microsoft.graph.me.appconsentrequestsforapproval.item.AppConsentRequestItemRequestBuilder;
+import microsoft.graph.me.approleassignedresources.AppRoleAssignedResourcesRequestBuilder;
+import microsoft.graph.me.approleassignedresources.item.ServicePrincipalItemRequestBuilder;
 import microsoft.graph.me.approleassignments.AppRoleAssignmentsRequestBuilder;
 import microsoft.graph.me.approleassignments.item.AppRoleAssignmentItemRequestBuilder;
 import microsoft.graph.me.approvals.ApprovalsRequestBuilder;
@@ -175,6 +177,11 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public AppConsentRequestsForApprovalRequestBuilder appConsentRequestsForApproval() {
         return new AppConsentRequestsForApprovalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The appRoleAssignedResources property */
+    @javax.annotation.Nonnull
+    public AppRoleAssignedResourcesRequestBuilder appRoleAssignedResources() {
+        return new AppRoleAssignedResourcesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The appRoleAssignments property */
     @javax.annotation.Nonnull
@@ -624,6 +631,18 @@ public class MeRequestBuilder {
         return new AppConsentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
+     * Gets an item from the Microsoft.Graph.me.appRoleAssignedResources.item collection
+     * @param id Unique identifier of the item
+     * @return a ServicePrincipalItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ServicePrincipalItemRequestBuilder appRoleAssignedResources(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("servicePrincipal%2Did", id);
+        return new ServicePrincipalItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Gets an item from the Microsoft.Graph.me.appRoleAssignments.item collection
      * @param id Unique identifier of the item
      * @return a AppRoleAssignmentItemRequestBuilder
@@ -771,7 +790,7 @@ public class MeRequestBuilder {
         return new microsoft.graph.me.createdobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
+     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -779,7 +798,7 @@ public class MeRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
+     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -975,7 +994,7 @@ public class MeRequestBuilder {
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
+     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      * @return a CompletableFuture of user
      */
     public java.util.concurrent.CompletableFuture<User> get() {
@@ -991,7 +1010,7 @@ public class MeRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
+     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
      */
@@ -1008,7 +1027,7 @@ public class MeRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
+     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of user
@@ -1424,7 +1443,7 @@ public class MeRequestBuilder {
         urlTplParams.put("windowsInformationProtectionDeviceRegistration%2Did", id);
         return new WindowsInformationProtectionDeviceRegistrationItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance. */
+    /** Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node. */
     public class MeRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

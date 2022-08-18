@@ -12,7 +12,7 @@ public class Windows extends Entity implements Parsable {
     /** Entity that acts as a container for the functionality of the Windows Update for Business deployment service. Read-only. */
     private Updates _updates;
     /**
-     * Instantiates a new Windows and sets the default values.
+     * Instantiates a new windows and sets the default values.
      * @return a void
      */
     public Windows() {
@@ -22,7 +22,7 @@ public class Windows extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows
+     * @return a windows
      */
     @javax.annotation.Nonnull
     public static Windows createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health app impact entity contains battery usage related information at an app level for the tenant. */
 public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implements Parsable {
     /** Number of active devices for using that app over a 14-day period. Valid values -2147483648 to 2147483647 */
     private Integer _activeDevices;
@@ -21,7 +22,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     /** true if the user had active interaction with the app. */
     private Boolean _isForegroundApp;
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthAppImpact and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBatteryHealthAppImpact and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBatteryHealthAppImpact() {
@@ -31,7 +32,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthAppImpact
+     * @return a userExperienceAnalyticsBatteryHealthAppImpact
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthAppImpact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

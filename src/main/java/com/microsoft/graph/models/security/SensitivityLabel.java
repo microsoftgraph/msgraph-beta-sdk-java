@@ -10,25 +10,25 @@ import java.util.Objects;
 import microsoft.graph.models.Entity;
 /** Provides operations to manage the collection of activityStatistics entities. */
 public class SensitivityLabel extends Entity implements Parsable {
-    /** The color property */
+    /** The color that the UI should display for the label, if configured. */
     private String _color;
-    /** The contentFormats property */
+    /** Returns the supported content formats for the label. */
     private java.util.List<String> _contentFormats;
-    /** The description property */
+    /** The admin-defined description for the label. */
     private String _description;
-    /** The hasProtection property */
+    /** Indicates whether the label has protection actions configured. */
     private Boolean _hasProtection;
-    /** The isActive property */
+    /** Indicates whether the label is active or not. Active labels should be hidden or disabled in the UI. */
     private Boolean _isActive;
-    /** The isAppliable property */
+    /** Indicates whether the label can be applied to content. False if the label is a parent with child labels. */
     private Boolean _isAppliable;
-    /** The name property */
+    /** The plaintext name of the label. */
     private String _name;
-    /** The parent property */
+    /** The parent label associated with a child label. Null if the label has no parent. */
     private SensitivityLabel _parent;
-    /** The sensitivity property */
+    /** The sensitivity value of the label, where lower is less sensitive. */
     private Integer _sensitivity;
-    /** The tooltip property */
+    /** The tooltip that should be displayed for the label in a UI. */
     private String _tooltip;
     /**
      * Instantiates a new sensitivityLabel and sets the default values.
@@ -49,7 +49,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         return new SensitivityLabel();
     }
     /**
-     * Gets the color property value. The color property
+     * Gets the color property value. The color that the UI should display for the label, if configured.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this._color;
     }
     /**
-     * Gets the contentFormats property value. The contentFormats property
+     * Gets the contentFormats property value. Returns the supported content formats for the label.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this._contentFormats;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The admin-defined description for the label.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the hasProtection property value. The hasProtection property
+     * Gets the hasProtection property value. Indicates whether the label has protection actions configured.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this._hasProtection;
     }
     /**
-     * Gets the isActive property value. The isActive property
+     * Gets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in the UI.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this._isActive;
     }
     /**
-     * Gets the isAppliable property value. The isAppliable property
+     * Gets the isAppliable property value. Indicates whether the label can be applied to content. False if the label is a parent with child labels.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this._isAppliable;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The plaintext name of the label.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the parent property value. The parent property
+     * Gets the parent property value. The parent label associated with a child label. Null if the label has no parent.
      * @return a sensitivityLabel
      */
     @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this._parent;
     }
     /**
-     * Gets the sensitivity property value. The sensitivity property
+     * Gets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -141,7 +141,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this._sensitivity;
     }
     /**
-     * Gets the tooltip property value. The tooltip property
+     * Gets the tooltip property value. The tooltip that should be displayed for the label in a UI.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -168,7 +168,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         writer.writeStringValue("tooltip", this.getTooltip());
     }
     /**
-     * Sets the color property value. The color property
+     * Sets the color property value. The color that the UI should display for the label, if configured.
      * @param value Value to set for the color property.
      * @return a void
      */
@@ -176,7 +176,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         this._color = value;
     }
     /**
-     * Sets the contentFormats property value. The contentFormats property
+     * Sets the contentFormats property value. Returns the supported content formats for the label.
      * @param value Value to set for the contentFormats property.
      * @return a void
      */
@@ -184,7 +184,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         this._contentFormats = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The admin-defined description for the label.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -192,7 +192,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the hasProtection property value. The hasProtection property
+     * Sets the hasProtection property value. Indicates whether the label has protection actions configured.
      * @param value Value to set for the hasProtection property.
      * @return a void
      */
@@ -200,7 +200,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         this._hasProtection = value;
     }
     /**
-     * Sets the isActive property value. The isActive property
+     * Sets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in the UI.
      * @param value Value to set for the isActive property.
      * @return a void
      */
@@ -208,7 +208,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         this._isActive = value;
     }
     /**
-     * Sets the isAppliable property value. The isAppliable property
+     * Sets the isAppliable property value. Indicates whether the label can be applied to content. False if the label is a parent with child labels.
      * @param value Value to set for the isAppliable property.
      * @return a void
      */
@@ -216,7 +216,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         this._isAppliable = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The plaintext name of the label.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -224,7 +224,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the parent property value. The parent property
+     * Sets the parent property value. The parent label associated with a child label. Null if the label has no parent.
      * @param value Value to set for the parent property.
      * @return a void
      */
@@ -232,7 +232,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         this._parent = value;
     }
     /**
-     * Sets the sensitivity property value. The sensitivity property
+     * Sets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
      * @param value Value to set for the sensitivity property.
      * @return a void
      */
@@ -240,7 +240,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         this._sensitivity = value;
     }
     /**
-     * Sets the tooltip property value. The tooltip property
+     * Sets the tooltip property value. The tooltip that should be displayed for the label in a UI.
      * @param value Value to set for the tooltip property.
      * @return a void
      */

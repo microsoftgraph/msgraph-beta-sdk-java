@@ -189,6 +189,10 @@ public class DeviceManagement extends Entity implements Parsable {
     private java.util.List<NotificationMessageTemplate> _notificationMessageTemplates;
     /** List of OEM Warranty Statuses */
     private java.util.List<OemWarrantyInformationOnboarding> _oemWarrantyInformationOnboarding;
+    /** A list of OrganizationalMessageDetails */
+    private java.util.List<OrganizationalMessageDetail> _organizationalMessageDetails;
+    /** A list of OrganizationalMessageGuidedContents */
+    private java.util.List<OrganizationalMessageGuidedContent> _organizationalMessageGuidedContents;
     /** The list of device remote action audits with the tenant. */
     private java.util.List<RemoteActionAudit> _remoteActionAudits;
     /** The remote assist partners. */
@@ -939,6 +943,8 @@ public class DeviceManagement extends Entity implements Parsable {
             this.put("ndesConnectors", (n) -> { currentObject.setNdesConnectors(n.getCollectionOfObjectValues(NdesConnector::createFromDiscriminatorValue)); });
             this.put("notificationMessageTemplates", (n) -> { currentObject.setNotificationMessageTemplates(n.getCollectionOfObjectValues(NotificationMessageTemplate::createFromDiscriminatorValue)); });
             this.put("oemWarrantyInformationOnboarding", (n) -> { currentObject.setOemWarrantyInformationOnboarding(n.getCollectionOfObjectValues(OemWarrantyInformationOnboarding::createFromDiscriminatorValue)); });
+            this.put("organizationalMessageDetails", (n) -> { currentObject.setOrganizationalMessageDetails(n.getCollectionOfObjectValues(OrganizationalMessageDetail::createFromDiscriminatorValue)); });
+            this.put("organizationalMessageGuidedContents", (n) -> { currentObject.setOrganizationalMessageGuidedContents(n.getCollectionOfObjectValues(OrganizationalMessageGuidedContent::createFromDiscriminatorValue)); });
             this.put("remoteActionAudits", (n) -> { currentObject.setRemoteActionAudits(n.getCollectionOfObjectValues(RemoteActionAudit::createFromDiscriminatorValue)); });
             this.put("remoteAssistancePartners", (n) -> { currentObject.setRemoteAssistancePartners(n.getCollectionOfObjectValues(RemoteAssistancePartner::createFromDiscriminatorValue)); });
             this.put("remoteAssistanceSettings", (n) -> { currentObject.setRemoteAssistanceSettings(n.getObjectValue(RemoteAssistanceSettings::createFromDiscriminatorValue)); });
@@ -1269,6 +1275,22 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<OemWarrantyInformationOnboarding> getOemWarrantyInformationOnboarding() {
         return this._oemWarrantyInformationOnboarding;
+    }
+    /**
+     * Gets the organizationalMessageDetails property value. A list of OrganizationalMessageDetails
+     * @return a organizationalMessageDetail
+     */
+    @javax.annotation.Nullable
+    public java.util.List<OrganizationalMessageDetail> getOrganizationalMessageDetails() {
+        return this._organizationalMessageDetails;
+    }
+    /**
+     * Gets the organizationalMessageGuidedContents property value. A list of OrganizationalMessageGuidedContents
+     * @return a organizationalMessageGuidedContent
+     */
+    @javax.annotation.Nullable
+    public java.util.List<OrganizationalMessageGuidedContent> getOrganizationalMessageGuidedContents() {
+        return this._organizationalMessageGuidedContents;
     }
     /**
      * Gets the remoteActionAudits property value. The list of device remote action audits with the tenant.
@@ -2016,6 +2038,8 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("ndesConnectors", this.getNdesConnectors());
         writer.writeCollectionOfObjectValues("notificationMessageTemplates", this.getNotificationMessageTemplates());
         writer.writeCollectionOfObjectValues("oemWarrantyInformationOnboarding", this.getOemWarrantyInformationOnboarding());
+        writer.writeCollectionOfObjectValues("organizationalMessageDetails", this.getOrganizationalMessageDetails());
+        writer.writeCollectionOfObjectValues("organizationalMessageGuidedContents", this.getOrganizationalMessageGuidedContents());
         writer.writeCollectionOfObjectValues("remoteActionAudits", this.getRemoteActionAudits());
         writer.writeCollectionOfObjectValues("remoteAssistancePartners", this.getRemoteAssistancePartners());
         writer.writeObjectValue("remoteAssistanceSettings", this.getRemoteAssistanceSettings());
@@ -2817,6 +2841,22 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setOemWarrantyInformationOnboarding(@javax.annotation.Nullable final java.util.List<OemWarrantyInformationOnboarding> value) {
         this._oemWarrantyInformationOnboarding = value;
+    }
+    /**
+     * Sets the organizationalMessageDetails property value. A list of OrganizationalMessageDetails
+     * @param value Value to set for the organizationalMessageDetails property.
+     * @return a void
+     */
+    public void setOrganizationalMessageDetails(@javax.annotation.Nullable final java.util.List<OrganizationalMessageDetail> value) {
+        this._organizationalMessageDetails = value;
+    }
+    /**
+     * Sets the organizationalMessageGuidedContents property value. A list of OrganizationalMessageGuidedContents
+     * @param value Value to set for the organizationalMessageGuidedContents property.
+     * @return a void
+     */
+    public void setOrganizationalMessageGuidedContents(@javax.annotation.Nullable final java.util.List<OrganizationalMessageGuidedContent> value) {
+        this._organizationalMessageGuidedContents = value;
     }
     /**
      * Sets the remoteActionAudits property value. The list of device remote action audits with the tenant.

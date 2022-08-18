@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class GroupPolicyPresentationComboBox extends GroupPolicyPresentation implements Parsable {
+public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresentation implements Parsable {
     /** Localized default string displayed in the combo box. The default value is empty. */
     private String _defaultValue;
     /** An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023. */

@@ -11,9 +11,9 @@ import java.util.Objects;
 public class DowngradeJustification implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The isDowngradeJustified property */
+    /** Indicates whether the downgrade is or is not justified. */
     private Boolean _isDowngradeJustified;
-    /** The justificationMessage property */
+    /** Message that indicates why a downgrade is justified. The message will appear in administrative logs. */
     private String _justificationMessage;
     /** The OdataType property */
     private String _odataType;
@@ -57,7 +57,7 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the isDowngradeJustified property value. The isDowngradeJustified property
+     * Gets the isDowngradeJustified property value. Indicates whether the downgrade is or is not justified.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
         return this._isDowngradeJustified;
     }
     /**
-     * Gets the justificationMessage property value. The justificationMessage property
+     * Gets the justificationMessage property value. Message that indicates why a downgrade is justified. The message will appear in administrative logs.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the isDowngradeJustified property value. The isDowngradeJustified property
+     * Sets the isDowngradeJustified property value. Indicates whether the downgrade is or is not justified.
      * @param value Value to set for the isDowngradeJustified property.
      * @return a void
      */
@@ -109,7 +109,7 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
         this._isDowngradeJustified = value;
     }
     /**
-     * Sets the justificationMessage property value. The justificationMessage property
+     * Sets the justificationMessage property value. Message that indicates why a downgrade is justified. The message will appear in administrative logs.
      * @param value Value to set for the justificationMessage property.
      * @return a void
      */

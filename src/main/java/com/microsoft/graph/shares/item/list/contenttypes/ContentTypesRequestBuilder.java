@@ -72,7 +72,7 @@ public class ContentTypesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The collection of content types present in this list.
+     * Get contentTypes from shares
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -80,7 +80,7 @@ public class ContentTypesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of content types present in this list.
+     * Get contentTypes from shares
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class ContentTypesRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of content types present in this list.
+     * Get contentTypes from shares
      * @return a CompletableFuture of ContentTypeCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ContentTypeCollectionResponse> get() {
@@ -151,7 +151,7 @@ public class ContentTypesRequestBuilder {
         }
     }
     /**
-     * The collection of content types present in this list.
+     * Get contentTypes from shares
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ContentTypeCollectionResponse
      */
@@ -168,7 +168,7 @@ public class ContentTypesRequestBuilder {
         }
     }
     /**
-     * The collection of content types present in this list.
+     * Get contentTypes from shares
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ContentTypeCollectionResponse
@@ -248,7 +248,7 @@ public class ContentTypesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The collection of content types present in this list. */
+    /** Get contentTypes from shares */
     public class ContentTypesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

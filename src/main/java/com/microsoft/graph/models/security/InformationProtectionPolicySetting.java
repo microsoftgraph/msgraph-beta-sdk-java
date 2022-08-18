@@ -11,11 +11,11 @@ import microsoft.graph.models.Entity;
 public class InformationProtectionPolicySetting extends Entity implements Parsable {
     /** The defaultLabelId property */
     private String _defaultLabelId;
-    /** The isDowngradeJustificationRequired property */
+    /** Exposes whether justification input is required on label downgrade. */
     private Boolean _isDowngradeJustificationRequired;
-    /** The isMandatory property */
+    /** Exposes whether mandatory labeling is enabled. */
     private Boolean _isMandatory;
-    /** The moreInfoUrl property */
+    /** Exposes the more information URL that can be configured by the administrator. */
     private String _moreInfoUrl;
     /**
      * Instantiates a new informationProtectionPolicySetting and sets the default values.
@@ -58,7 +58,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
         }};
     }
     /**
-     * Gets the isDowngradeJustificationRequired property value. The isDowngradeJustificationRequired property
+     * Gets the isDowngradeJustificationRequired property value. Exposes whether justification input is required on label downgrade.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
         return this._isDowngradeJustificationRequired;
     }
     /**
-     * Gets the isMandatory property value. The isMandatory property
+     * Gets the isMandatory property value. Exposes whether mandatory labeling is enabled.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
         return this._isMandatory;
     }
     /**
-     * Gets the moreInfoUrl property value. The moreInfoUrl property
+     * Gets the moreInfoUrl property value. Exposes the more information URL that can be configured by the administrator.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
         this._defaultLabelId = value;
     }
     /**
-     * Sets the isDowngradeJustificationRequired property value. The isDowngradeJustificationRequired property
+     * Sets the isDowngradeJustificationRequired property value. Exposes whether justification input is required on label downgrade.
      * @param value Value to set for the isDowngradeJustificationRequired property.
      * @return a void
      */
@@ -111,7 +111,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
         this._isDowngradeJustificationRequired = value;
     }
     /**
-     * Sets the isMandatory property value. The isMandatory property
+     * Sets the isMandatory property value. Exposes whether mandatory labeling is enabled.
      * @param value Value to set for the isMandatory property.
      * @return a void
      */
@@ -119,7 +119,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
         this._isMandatory = value;
     }
     /**
-     * Sets the moreInfoUrl property value. The moreInfoUrl property
+     * Sets the moreInfoUrl property value. Exposes the more information URL that can be configured by the administrator.
      * @param value Value to set for the moreInfoUrl property.
      * @return a void
      */

@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of externalConnection entities. */
 public class Identity extends Entity implements Parsable {
-    /** The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system. */
+    /** The type property */
     private IdentityType _type;
     /**
      * Instantiates a new identity and sets the default values.
@@ -42,7 +42,7 @@ public class Identity extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the type property value. The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
+     * Gets the type property value. The type property
      * @return a identityType
      */
     @javax.annotation.Nullable
@@ -60,7 +60,7 @@ public class Identity extends Entity implements Parsable {
         writer.writeEnumValue("type", this.getType());
     }
     /**
-     * Sets the type property value. The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */

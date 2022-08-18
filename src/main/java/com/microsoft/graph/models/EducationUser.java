@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class EducationUser extends Entity implements Parsable {
     /** True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter. */
     private Boolean _accountEnabled;
@@ -68,7 +68,7 @@ public class EducationUser extends Entity implements Parsable {
     private java.util.List<EducationRubric> _rubrics;
     /** Schools to which the user belongs. Nullable. */
     private java.util.List<EducationSchool> _schools;
-    /** True if the Outlook Global Address List should contain this user; otherwise, false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false. */
+    /** The showInAddressList property */
     private Boolean _showInAddressList;
     /** If the primary role is student, this block will contain student specific data. */
     private EducationStudent _student;
@@ -80,7 +80,7 @@ public class EducationUser extends Entity implements Parsable {
     private EducationTeacher _teacher;
     /** A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter. */
     private String _usageLocation;
-    /** The directory user that corresponds to this user. */
+    /** The user property */
     private User _user;
     /** The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details. */
     private String _userPrincipalName;
@@ -385,7 +385,7 @@ public class EducationUser extends Entity implements Parsable {
         return this._schools;
     }
     /**
-     * Gets the showInAddressList property value. True if the Outlook Global Address List should contain this user; otherwise, false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
+     * Gets the showInAddressList property value. The showInAddressList property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -433,7 +433,7 @@ public class EducationUser extends Entity implements Parsable {
         return this._usageLocation;
     }
     /**
-     * Gets the user property value. The directory user that corresponds to this user.
+     * Gets the user property value. The user property
      * @return a user
      */
     @javax.annotation.Nullable
@@ -736,7 +736,7 @@ public class EducationUser extends Entity implements Parsable {
         this._schools = value;
     }
     /**
-     * Sets the showInAddressList property value. True if the Outlook Global Address List should contain this user; otherwise, false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
+     * Sets the showInAddressList property value. The showInAddressList property
      * @param value Value to set for the showInAddressList property.
      * @return a void
      */
@@ -784,7 +784,7 @@ public class EducationUser extends Entity implements Parsable {
         this._usageLocation = value;
     }
     /**
-     * Sets the user property value. The directory user that corresponds to this user.
+     * Sets the user property value. The user property
      * @param value Value to set for the user property.
      * @return a void
      */

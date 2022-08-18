@@ -14,16 +14,41 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.external.connections.item.items.item.activities.ActivitiesRequestBuilder;
+import microsoft.graph.external.connections.item.items.item.activities.item.ExternalActivityItemRequestBuilder;
+import microsoft.graph.external.connections.item.items.item.addactivities.AddActivitiesRequestBuilder;
 import microsoft.graph.models.externalconnectors.ExternalItem;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity. */
 public class ExternalItemItemRequestBuilder {
+    /** The activities property */
+    @javax.annotation.Nonnull
+    public ActivitiesRequestBuilder activities() {
+        return new ActivitiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The addActivities property */
+    @javax.annotation.Nonnull
+    public AddActivitiesRequestBuilder addActivities() {
+        return new AddActivitiesRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /**
+     * Gets an item from the Microsoft.Graph.external.connections.item.items.item.activities.item collection
+     * @param id Unique identifier of the item
+     * @return a ExternalActivityItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ExternalActivityItemRequestBuilder activities(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("externalActivity%2Did", id);
+        return new ExternalActivityItemRequestBuilder(urlTplParams, requestAdapter);
+    }
     /**
      * Instantiates a new ExternalItemItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

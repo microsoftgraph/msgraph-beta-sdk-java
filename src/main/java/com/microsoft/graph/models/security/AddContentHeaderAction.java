@@ -10,17 +10,17 @@ import java.util.Objects;
 public class AddContentHeaderAction extends InformationProtectionAction implements Parsable {
     /** The alignment property */
     private ContentAlignment _alignment;
-    /** The fontColor property */
+    /** Color of the font to use for the header. */
     private String _fontColor;
-    /** The fontName property */
+    /** Name of the font to use for the header. */
     private String _fontName;
-    /** The fontSize property */
+    /** Font size to use for the header. */
     private Integer _fontSize;
-    /** The margin property */
+    /** The margin of the header from the top of the document. */
     private Integer _margin;
-    /** The text property */
+    /** The contents of the header itself. */
     private String _text;
-    /** The uiElementName property */
+    /** The name of the UI element where the header should be placed. */
     private String _uiElementName;
     /**
      * Instantiates a new AddContentHeaderAction and sets the default values.
@@ -66,7 +66,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         }};
     }
     /**
-     * Gets the fontColor property value. The fontColor property
+     * Gets the fontColor property value. Color of the font to use for the header.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         return this._fontColor;
     }
     /**
-     * Gets the fontName property value. The fontName property
+     * Gets the fontName property value. Name of the font to use for the header.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         return this._fontName;
     }
     /**
-     * Gets the fontSize property value. The fontSize property
+     * Gets the fontSize property value. Font size to use for the header.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         return this._fontSize;
     }
     /**
-     * Gets the margin property value. The margin property
+     * Gets the margin property value. The margin of the header from the top of the document.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         return this._margin;
     }
     /**
-     * Gets the text property value. The text property
+     * Gets the text property value. The contents of the header itself.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         return this._text;
     }
     /**
-     * Gets the uiElementName property value. The uiElementName property
+     * Gets the uiElementName property value. The name of the UI element where the header should be placed.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         this._alignment = value;
     }
     /**
-     * Sets the fontColor property value. The fontColor property
+     * Sets the fontColor property value. Color of the font to use for the header.
      * @param value Value to set for the fontColor property.
      * @return a void
      */
@@ -146,7 +146,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         this._fontColor = value;
     }
     /**
-     * Sets the fontName property value. The fontName property
+     * Sets the fontName property value. Name of the font to use for the header.
      * @param value Value to set for the fontName property.
      * @return a void
      */
@@ -154,7 +154,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         this._fontName = value;
     }
     /**
-     * Sets the fontSize property value. The fontSize property
+     * Sets the fontSize property value. Font size to use for the header.
      * @param value Value to set for the fontSize property.
      * @return a void
      */
@@ -162,7 +162,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         this._fontSize = value;
     }
     /**
-     * Sets the margin property value. The margin property
+     * Sets the margin property value. The margin of the header from the top of the document.
      * @param value Value to set for the margin property.
      * @return a void
      */
@@ -170,7 +170,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         this._margin = value;
     }
     /**
-     * Sets the text property value. The text property
+     * Sets the text property value. The contents of the header itself.
      * @param value Value to set for the text property.
      * @return a void
      */
@@ -178,7 +178,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
         this._text = value;
     }
     /**
-     * Sets the uiElementName property value. The uiElementName property
+     * Sets the uiElementName property value. The name of the UI element where the header should be placed.
      * @param value Value to set for the uiElementName property.
      * @return a void
      */

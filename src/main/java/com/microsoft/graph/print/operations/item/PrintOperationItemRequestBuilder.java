@@ -80,7 +80,7 @@ public class PrintOperationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of print long running operations.
+     * Get operations from print
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class PrintOperationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The list of print long running operations.
+     * Get operations from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class PrintOperationItemRequestBuilder {
         }
     }
     /**
-     * The list of print long running operations.
+     * Get operations from print
      * @return a CompletableFuture of printOperation
      */
     public java.util.concurrent.CompletableFuture<PrintOperation> get() {
@@ -209,7 +209,7 @@ public class PrintOperationItemRequestBuilder {
         }
     }
     /**
-     * The list of print long running operations.
+     * Get operations from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printOperation
      */
@@ -226,7 +226,7 @@ public class PrintOperationItemRequestBuilder {
         }
     }
     /**
-     * The list of print long running operations.
+     * Get operations from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of printOperation
@@ -313,7 +313,7 @@ public class PrintOperationItemRequestBuilder {
         public PrintOperationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The list of print long running operations. */
+    /** Get operations from print */
     public class PrintOperationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

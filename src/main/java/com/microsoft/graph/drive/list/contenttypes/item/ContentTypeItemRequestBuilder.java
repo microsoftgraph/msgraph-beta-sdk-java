@@ -184,7 +184,7 @@ public class ContentTypeItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of content types present in this list.
+     * Get contentTypes from drive
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -192,7 +192,7 @@ public class ContentTypeItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of content types present in this list.
+     * Get contentTypes from drive
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -297,7 +297,7 @@ public class ContentTypeItemRequestBuilder {
         }
     }
     /**
-     * The collection of content types present in this list.
+     * Get contentTypes from drive
      * @return a CompletableFuture of contentType
      */
     public java.util.concurrent.CompletableFuture<ContentType> get() {
@@ -313,7 +313,7 @@ public class ContentTypeItemRequestBuilder {
         }
     }
     /**
-     * The collection of content types present in this list.
+     * Get contentTypes from drive
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentType
      */
@@ -330,7 +330,7 @@ public class ContentTypeItemRequestBuilder {
         }
     }
     /**
-     * The collection of content types present in this list.
+     * Get contentTypes from drive
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of contentType
@@ -425,7 +425,7 @@ public class ContentTypeItemRequestBuilder {
         public ContentTypeItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The collection of content types present in this list. */
+    /** Get contentTypes from drive */
     public class ContentTypeItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

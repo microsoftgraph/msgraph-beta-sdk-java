@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TeamsAppDefinition extends Entity implements Parsable {
     /** A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data. */
     private TeamsAppInstallationScopes _allowedInstallationScopes;
@@ -20,7 +20,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     private TeamsAppIcon _colorIcon;
     /** The createdBy property */
     private IdentitySet _createdBy;
-    /** Verbose description of the application. */
+    /** The description property */
     private String _description;
     /** The name of the app provided by the app developer. */
     private String _displayName;
@@ -95,7 +95,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return this._createdBy;
     }
     /**
-     * Gets the description property value. Verbose description of the application.
+     * Gets the description property value. The description property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -244,7 +244,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         this._createdBy = value;
     }
     /**
-     * Sets the description property value. Verbose description of the application.
+     * Sets the description property value. The description property
      * @param value Value to set for the description property.
      * @return a void
      */

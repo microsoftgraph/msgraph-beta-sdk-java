@@ -27,7 +27,7 @@ public class SecureScore extends Entity implements Parsable {
     private Integer _licensedUserCount;
     /** Tenant maximum possible score on specified date. */
     private Double _maxScore;
-    /** Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required. */
+    /** The vendorInformation property */
     private SecurityVendorInformation _vendorInformation;
     /**
      * Instantiates a new SecureScore and sets the default values.
@@ -140,7 +140,7 @@ public class SecureScore extends Entity implements Parsable {
         return this._maxScore;
     }
     /**
-     * Gets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
+     * Gets the vendorInformation property value. The vendorInformation property
      * @return a securityVendorInformation
      */
     @javax.annotation.Nullable
@@ -239,7 +239,7 @@ public class SecureScore extends Entity implements Parsable {
         this._maxScore = value;
     }
     /**
-     * Sets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
+     * Sets the vendorInformation property value. The vendorInformation property
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */

@@ -22,6 +22,8 @@ import microsoft.graph.teamwork.devices.DevicesRequestBuilder;
 import microsoft.graph.teamwork.devices.item.TeamworkDeviceItemRequestBuilder;
 import microsoft.graph.teamwork.sendactivitynotificationtorecipients.SendActivityNotificationToRecipientsRequestBuilder;
 import microsoft.graph.teamwork.teamsappsettings.TeamsAppSettingsRequestBuilder;
+import microsoft.graph.teamwork.teamtemplates.item.TeamTemplateItemRequestBuilder;
+import microsoft.graph.teamwork.teamtemplates.TeamTemplatesRequestBuilder;
 import microsoft.graph.teamwork.workforceintegrations.item.WorkforceIntegrationItemRequestBuilder;
 import microsoft.graph.teamwork.workforceintegrations.WorkforceIntegrationsRequestBuilder;
 /** Provides operations to manage the teamwork singleton. */
@@ -49,6 +51,11 @@ public class TeamworkRequestBuilder {
     @javax.annotation.Nonnull
     public TeamsAppSettingsRequestBuilder teamsAppSettings() {
         return new TeamsAppSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The teamTemplates property */
+    @javax.annotation.Nonnull
+    public TeamTemplatesRequestBuilder teamTemplates() {
+        return new TeamTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
@@ -275,6 +282,18 @@ public class TeamworkRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item collection
+     * @param id Unique identifier of the item
+     * @return a TeamTemplateItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamTemplateItemRequestBuilder teamTemplates(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("teamTemplate%2Did", id);
+        return new TeamTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.teamwork.workforceIntegrations.item collection

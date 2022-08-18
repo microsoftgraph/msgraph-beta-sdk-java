@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookFormatProtection extends Entity implements Parsable {
-    /** Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting. */
+    /** The formulaHidden property */
     private Boolean _formulaHidden;
-    /** Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting. */
+    /** The locked property */
     private Boolean _locked;
     /**
      * Instantiates a new WorkbookFormatProtection and sets the default values.
@@ -43,7 +43,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the formulaHidden property value. Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
+     * Gets the formulaHidden property value. The formulaHidden property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
         return this._formulaHidden;
     }
     /**
-     * Gets the locked property value. Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
+     * Gets the locked property value. The locked property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
         writer.writeBooleanValue("locked", this.getLocked());
     }
     /**
-     * Sets the formulaHidden property value. Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
+     * Sets the formulaHidden property value. The formulaHidden property
      * @param value Value to set for the formulaHidden property.
      * @return a void
      */
@@ -78,7 +78,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
         this._formulaHidden = value;
     }
     /**
-     * Sets the locked property value. Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
+     * Sets the locked property value. The locked property
      * @param value Value to set for the locked property.
      * @return a void
      */
