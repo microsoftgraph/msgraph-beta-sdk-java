@@ -18,6 +18,7 @@ import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.PermissionScope;
 import com.microsoft.graph.models.SamlSingleSignOnSettings;
+import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.Synchronization;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
@@ -377,6 +378,15 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     @Expose
 	@Nullable
     public java.util.UUID tokenEncryptionKeyId;
+
+    /**
+     * The Verified Publisher.
+     * Specifies the verified publisher of the application which this service principal represents.
+     */
+    @SerializedName(value = "verifiedPublisher", alternate = {"VerifiedPublisher"})
+    @Expose
+	@Nullable
+    public VerifiedPublisher verifiedPublisher;
 
     /**
      * The App Management Policies.

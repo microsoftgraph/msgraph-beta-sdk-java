@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.54.0] - 2022-08-23
+
+### Added
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- VerifiedPublisher property added to ServicePrincipal model. 
+
 ## [0.53.0] - 2022-08-18
 
 ### Added
