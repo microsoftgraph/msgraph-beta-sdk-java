@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ThreatSubmission extends Entity implements Parsable {
     /** Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as. */
     private SubmissionAdminReview _adminReview;

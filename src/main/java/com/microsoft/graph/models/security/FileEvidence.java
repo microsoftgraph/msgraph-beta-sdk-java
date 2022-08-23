@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileEvidence extends AlertEvidence implements Parsable {
-    /** The detectionStatus property */
+    /** The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue. */
     private DetectionStatus _detectionStatus;
-    /** The fileDetails property */
+    /** The file details. */
     private FileDetails _fileDetails;
-    /** The mdeDeviceId property */
+    /** A unique identifier assigned to a device by Microsoft Defender for Endpoint. */
     private String _mdeDeviceId;
     /**
      * Instantiates a new FileEvidence and sets the default values.
@@ -33,7 +33,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
         return new FileEvidence();
     }
     /**
-     * Gets the detectionStatus property value. The detectionStatus property
+     * Gets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
      * @return a detectionStatus
      */
     @javax.annotation.Nullable
@@ -54,7 +54,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
         }};
     }
     /**
-     * Gets the fileDetails property value. The fileDetails property
+     * Gets the fileDetails property value. The file details.
      * @return a fileDetails
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
         return this._fileDetails;
     }
     /**
-     * Gets the mdeDeviceId property value. The mdeDeviceId property
+     * Gets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("mdeDeviceId", this.getMdeDeviceId());
     }
     /**
-     * Sets the detectionStatus property value. The detectionStatus property
+     * Sets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
      * @param value Value to set for the detectionStatus property.
      * @return a void
      */
@@ -90,7 +90,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
         this._detectionStatus = value;
     }
     /**
-     * Sets the fileDetails property value. The fileDetails property
+     * Sets the fileDetails property value. The file details.
      * @param value Value to set for the fileDetails property.
      * @return a void
      */
@@ -98,7 +98,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
         this._fileDetails = value;
     }
     /**
-     * Sets the mdeDeviceId property value. The mdeDeviceId property
+     * Sets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @param value Value to set for the mdeDeviceId property.
      * @return a void
      */

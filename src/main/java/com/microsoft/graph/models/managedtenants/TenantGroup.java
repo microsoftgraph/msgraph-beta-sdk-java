@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class TenantGroup extends Entity implements Parsable {
     /** A flag indicating whether all managed tenant are included in the tenant group. Required. Read-only. */
     private Boolean _allTenantsIncluded;

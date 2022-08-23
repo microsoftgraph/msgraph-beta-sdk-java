@@ -119,6 +119,8 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private java.util.List<TokenLifetimePolicy> _tokenLifetimePolicies;
     /** The transitiveMemberOf property */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
+    /** Specifies the verified publisher of the application which this service principal represents. */
+    private VerifiedPublisher _verifiedPublisher;
     /**
      * Instantiates a new ServicePrincipal and sets the default values.
      * @return a void
@@ -384,6 +386,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
             this.put("tokenIssuancePolicies", (n) -> { currentObject.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
             this.put("tokenLifetimePolicies", (n) -> { currentObject.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
             this.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+            this.put("verifiedPublisher", (n) -> { currentObject.setVerifiedPublisher(n.getObjectValue(VerifiedPublisher::createFromDiscriminatorValue)); });
         }};
     }
     /**
@@ -643,6 +646,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._transitiveMemberOf;
     }
     /**
+     * Gets the verifiedPublisher property value. Specifies the verified publisher of the application which this service principal represents.
+     * @return a verifiedPublisher
+     */
+    @javax.annotation.Nullable
+    public VerifiedPublisher getVerifiedPublisher() {
+        return this._verifiedPublisher;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -705,6 +716,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("tokenIssuancePolicies", this.getTokenIssuancePolicies());
         writer.writeCollectionOfObjectValues("tokenLifetimePolicies", this.getTokenLifetimePolicies());
         writer.writeCollectionOfObjectValues("transitiveMemberOf", this.getTransitiveMemberOf());
+        writer.writeObjectValue("verifiedPublisher", this.getVerifiedPublisher());
     }
     /**
      * Sets the accountEnabled property value. true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in).
@@ -1145,5 +1157,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveMemberOf = value;
+    }
+    /**
+     * Sets the verifiedPublisher property value. Specifies the verified publisher of the application which this service principal represents.
+     * @param value Value to set for the verifiedPublisher property.
+     * @return a void
+     */
+    public void setVerifiedPublisher(@javax.annotation.Nullable final VerifiedPublisher value) {
+        this._verifiedPublisher = value;
     }
 }

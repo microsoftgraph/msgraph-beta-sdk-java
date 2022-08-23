@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum EdgeTelemetryMode implements ValuedEnum {
     /** Default – No telemetry data collected or sent */
     NotConfigured("notConfigured"),

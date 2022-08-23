@@ -12,17 +12,17 @@ import java.util.Objects;
 public class AlertEvidence implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The createdDateTime property */
+    /** The time the evidence was created and added to the alert. */
     private OffsetDateTime _createdDateTime;
     /** The OdataType property */
     private String _odataType;
     /** The remediationStatus property */
     private EvidenceRemediationStatus _remediationStatus;
-    /** The remediationStatusDetails property */
+    /** Details about the remediation status. */
     private String _remediationStatusDetails;
-    /** The roles property */
+    /** The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'. */
     private java.util.List<String> _roles;
-    /** The tags property */
+    /** Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc. */
     private java.util.List<String> _tags;
     /** The verdict property */
     private EvidenceVerdict _verdict;
@@ -73,7 +73,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The time the evidence was created and added to the alert.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this._remediationStatus;
     }
     /**
-     * Gets the remediationStatusDetails property value. The remediationStatusDetails property
+     * Gets the remediationStatusDetails property value. Details about the remediation status.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -122,7 +122,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this._remediationStatusDetails;
     }
     /**
-     * Gets the roles property value. The roles property
+     * Gets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this._roles;
     }
     /**
-     * Gets the tags property value. The tags property
+     * Gets the tags property value. Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -170,7 +170,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The time the evidence was created and added to the alert.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -194,7 +194,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         this._remediationStatus = value;
     }
     /**
-     * Sets the remediationStatusDetails property value. The remediationStatusDetails property
+     * Sets the remediationStatusDetails property value. Details about the remediation status.
      * @param value Value to set for the remediationStatusDetails property.
      * @return a void
      */
@@ -202,7 +202,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         this._remediationStatusDetails = value;
     }
     /**
-     * Sets the roles property value. The roles property
+     * Sets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
      * @param value Value to set for the roles property.
      * @return a void
      */
@@ -210,7 +210,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         this._roles = value;
     }
     /**
-     * Sets the tags property value. The tags property
+     * Sets the tags property value. Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
      * @param value Value to set for the tags property.
      * @return a void
      */

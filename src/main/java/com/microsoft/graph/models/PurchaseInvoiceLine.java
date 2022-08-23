@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class PurchaseInvoiceLine extends Entity implements Parsable {
     /** The account property */
     private Account _account;
@@ -57,7 +58,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
     /** The unitCost property */
     private BigDecimal _unitCost;
     /**
-     * Instantiates a new PurchaseInvoiceLine and sets the default values.
+     * Instantiates a new purchaseInvoiceLine and sets the default values.
      * @return a void
      */
     public PurchaseInvoiceLine() {
@@ -67,7 +68,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PurchaseInvoiceLine
+     * @return a purchaseInvoiceLine
      */
     @javax.annotation.Nonnull
     public static PurchaseInvoiceLine createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -59,7 +59,7 @@ public class SecureScoresRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get secureScores from security
+     * Measurements of tenants’ security posture to help protect them from threats.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SecureScoresRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get secureScores from security
+     * Measurements of tenants’ security posture to help protect them from threats.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class SecureScoresRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get secureScores from security
+     * Measurements of tenants’ security posture to help protect them from threats.
      * @return a CompletableFuture of SecureScoreCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<SecureScoreCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class SecureScoresRequestBuilder {
         }
     }
     /**
-     * Get secureScores from security
+     * Measurements of tenants’ security posture to help protect them from threats.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SecureScoreCollectionResponse
      */
@@ -155,7 +155,7 @@ public class SecureScoresRequestBuilder {
         }
     }
     /**
-     * Get secureScores from security
+     * Measurements of tenants’ security posture to help protect them from threats.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of SecureScoreCollectionResponse
@@ -227,7 +227,7 @@ public class SecureScoresRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get secureScores from security */
+    /** Measurements of tenants’ security posture to help protect them from threats. */
     public class SecureScoresRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

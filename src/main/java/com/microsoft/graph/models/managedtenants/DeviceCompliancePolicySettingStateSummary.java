@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsable {
     /** The number of devices in a conflict state. Optional. Read-only. */
     private Integer _conflictDeviceCount;

@@ -58,7 +58,7 @@ public class AlertsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get alerts from security
+     * The list of related alerts. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class AlertsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get alerts from security
+     * The list of related alerts. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class AlertsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get alerts from security
+     * The list of related alerts. Supports $expand.
      * @return a CompletableFuture of AlertCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AlertCollectionResponse> get() {
@@ -104,7 +104,7 @@ public class AlertsRequestBuilder {
         }
     }
     /**
-     * Get alerts from security
+     * The list of related alerts. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AlertCollectionResponse
      */
@@ -121,7 +121,7 @@ public class AlertsRequestBuilder {
         }
     }
     /**
-     * Get alerts from security
+     * The list of related alerts. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AlertCollectionResponse
@@ -138,7 +138,7 @@ public class AlertsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get alerts from security */
+    /** The list of related alerts. Supports $expand. */
     public class AlertsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

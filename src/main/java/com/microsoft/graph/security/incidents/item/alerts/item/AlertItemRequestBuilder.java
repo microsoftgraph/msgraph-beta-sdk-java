@@ -52,7 +52,7 @@ public class AlertItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get alerts from security
+     * The list of related alerts. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class AlertItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get alerts from security
+     * The list of related alerts. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class AlertItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get alerts from security
+     * The list of related alerts. Supports $expand.
      * @return a CompletableFuture of alert
      */
     public java.util.concurrent.CompletableFuture<Alert> get() {
@@ -98,7 +98,7 @@ public class AlertItemRequestBuilder {
         }
     }
     /**
-     * Get alerts from security
+     * The list of related alerts. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of alert
      */
@@ -115,7 +115,7 @@ public class AlertItemRequestBuilder {
         }
     }
     /**
-     * Get alerts from security
+     * The list of related alerts. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of alert
@@ -132,7 +132,7 @@ public class AlertItemRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get alerts from security */
+    /** The list of related alerts. Supports $expand. */
     public class AlertItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

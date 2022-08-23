@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum WellKnownListName_v2 implements ValuedEnum {
     None("none"),
     DefaultList("defaultList"),

@@ -27,7 +27,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     /** Number of unknown devices */
     private Integer _unknownDeviceCount;
     /**
-     * Instantiates a new AdvancedThreatProtectionOnboardingStateSummary and sets the default values.
+     * Instantiates a new advancedThreatProtectionOnboardingStateSummary and sets the default values.
      * @return a void
      */
     public AdvancedThreatProtectionOnboardingStateSummary() {
@@ -37,7 +37,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AdvancedThreatProtectionOnboardingStateSummary
+     * @return a advancedThreatProtectionOnboardingStateSummary
      */
     @javax.annotation.Nonnull
     public static AdvancedThreatProtectionOnboardingStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

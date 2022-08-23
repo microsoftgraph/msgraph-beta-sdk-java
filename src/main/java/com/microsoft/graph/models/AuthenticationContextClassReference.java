@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
 public class AuthenticationContextClassReference extends Entity implements Parsable {
     /** A short explanation of the policies that are enforced by authenticationContextClassReference. This value should be used to provide secondary text to describe the authentication context class reference when building user facing admin experiences. For example, selection UX. */
     private String _description;
@@ -16,7 +15,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     /** Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it is set to false it should not be shown in admin UX experiences because the value is not currently available for selection. */
     private Boolean _isAvailable;
     /**
-     * Instantiates a new authenticationContextClassReference and sets the default values.
+     * Instantiates a new AuthenticationContextClassReference and sets the default values.
      * @return a void
      */
     public AuthenticationContextClassReference() {
@@ -26,7 +25,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationContextClassReference
+     * @return a AuthenticationContextClassReference
      */
     @javax.annotation.Nonnull
     public static AuthenticationContextClassReference createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

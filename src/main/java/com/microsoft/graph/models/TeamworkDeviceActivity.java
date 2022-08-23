@@ -20,7 +20,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
     /** The UTC date and time when the device activity detail was last modified. */
     private OffsetDateTime _lastModifiedDateTime;
     /**
-     * Instantiates a new TeamworkDeviceActivity and sets the default values.
+     * Instantiates a new teamworkDeviceActivity and sets the default values.
      * @return a void
      */
     public TeamworkDeviceActivity() {
@@ -30,7 +30,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkDeviceActivity
+     * @return a teamworkDeviceActivity
      */
     @javax.annotation.Nonnull
     public static TeamworkDeviceActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

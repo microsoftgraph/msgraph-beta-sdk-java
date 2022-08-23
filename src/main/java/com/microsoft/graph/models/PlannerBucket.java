@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class PlannerBucket extends PlannerDelta implements Parsable {
     /** Name of the bucket. */
     private String _name;

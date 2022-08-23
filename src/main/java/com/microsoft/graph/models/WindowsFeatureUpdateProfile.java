@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Windows Feature Update Profile */
 public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /** The list of group assignments of the profile. */
     private java.util.List<WindowsFeatureUpdateProfileAssignment> _assignments;
@@ -31,7 +30,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /** The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers. */
     private WindowsUpdateRolloutSettings _rolloutSettings;
     /**
-     * Instantiates a new windowsFeatureUpdateProfile and sets the default values.
+     * Instantiates a new WindowsFeatureUpdateProfile and sets the default values.
      * @return a void
      */
     public WindowsFeatureUpdateProfile() {
@@ -41,7 +40,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsFeatureUpdateProfile
+     * @return a WindowsFeatureUpdateProfile
      */
     @javax.annotation.Nonnull
     public static WindowsFeatureUpdateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

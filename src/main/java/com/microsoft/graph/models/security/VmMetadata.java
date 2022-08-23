@@ -15,11 +15,11 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     private VmCloudProvider _cloudProvider;
     /** The OdataType property */
     private String _odataType;
-    /** The resourceId property */
+    /** Unique identifier of the Azure resource. */
     private String _resourceId;
-    /** The subscriptionId property */
+    /** Unique identifier of the Azure subscription the customer tenant belongs to. */
     private String _subscriptionId;
-    /** The vmId property */
+    /** Unique identifier of the virtual machine instance. */
     private String _vmId;
     /**
      * Instantiates a new vmMetadata and sets the default values.
@@ -79,7 +79,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the resourceId property value. The resourceId property
+     * Gets the resourceId property value. Unique identifier of the Azure resource.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
         return this._resourceId;
     }
     /**
-     * Gets the subscriptionId property value. The subscriptionId property
+     * Gets the subscriptionId property value. Unique identifier of the Azure subscription the customer tenant belongs to.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
         return this._subscriptionId;
     }
     /**
-     * Gets the vmId property value. The vmId property
+     * Gets the vmId property value. Unique identifier of the virtual machine instance.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -141,7 +141,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the resourceId property value. The resourceId property
+     * Sets the resourceId property value. Unique identifier of the Azure resource.
      * @param value Value to set for the resourceId property.
      * @return a void
      */
@@ -149,7 +149,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
         this._resourceId = value;
     }
     /**
-     * Sets the subscriptionId property value. The subscriptionId property
+     * Sets the subscriptionId property value. Unique identifier of the Azure subscription the customer tenant belongs to.
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
@@ -157,7 +157,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
         this._subscriptionId = value;
     }
     /**
-     * Sets the vmId property value. The vmId property
+     * Sets the vmId property value. Unique identifier of the virtual machine instance.
      * @param value Value to set for the vmId property.
      * @return a void
      */

@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
-    /** The displayName property */
+    /** The name of the security group. */
     private String _displayName;
-    /** The securityGroupId property */
+    /** Unique identifier of the security group. */
     private String _securityGroupId;
     /**
      * Instantiates a new SecurityGroupEvidence and sets the default values.
@@ -31,7 +31,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
         return new SecurityGroupEvidence();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the security group.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
         }};
     }
     /**
-     * Gets the securityGroupId property value. The securityGroupId property
+     * Gets the securityGroupId property value. Unique identifier of the security group.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("securityGroupId", this.getSecurityGroupId());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the security group.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -78,7 +78,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the securityGroupId property value. The securityGroupId property
+     * Sets the securityGroupId property value. Unique identifier of the security group.
      * @param value Value to set for the securityGroupId property.
      * @return a void
      */

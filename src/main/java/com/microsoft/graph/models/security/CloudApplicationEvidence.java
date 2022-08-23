@@ -8,15 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudApplicationEvidence extends AlertEvidence implements Parsable {
-    /** The appId property */
+    /** Unique identifier of the application. */
     private Long _appId;
-    /** The displayName property */
+    /** Name of the application. */
     private String _displayName;
-    /** The instanceId property */
+    /** Identifier of the instance of the Software as a Service (SaaS) application. */
     private Long _instanceId;
-    /** The instanceName property */
+    /** Name of the instance of the SaaS application. */
     private String _instanceName;
-    /** The saasAppId property */
+    /** The identifier of the SaaS application. */
     private Long _saasAppId;
     /**
      * Instantiates a new CloudApplicationEvidence and sets the default values.
@@ -37,7 +37,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         return new CloudApplicationEvidence();
     }
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. Unique identifier of the application.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -45,7 +45,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         return this._appId;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Name of the application.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         }};
     }
     /**
-     * Gets the instanceId property value. The instanceId property
+     * Gets the instanceId property value. Identifier of the instance of the Software as a Service (SaaS) application.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         return this._instanceId;
     }
     /**
-     * Gets the instanceName property value. The instanceName property
+     * Gets the instanceName property value. Name of the instance of the SaaS application.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         return this._instanceName;
     }
     /**
-     * Gets the saasAppId property value. The saasAppId property
+     * Gets the saasAppId property value. The identifier of the SaaS application.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         writer.writeLongValue("saasAppId", this.getSaasAppId());
     }
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. Unique identifier of the application.
      * @param value Value to set for the appId property.
      * @return a void
      */
@@ -114,7 +114,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         this._appId = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Name of the application.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -122,7 +122,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         this._displayName = value;
     }
     /**
-     * Sets the instanceId property value. The instanceId property
+     * Sets the instanceId property value. Identifier of the instance of the Software as a Service (SaaS) application.
      * @param value Value to set for the instanceId property.
      * @return a void
      */
@@ -130,7 +130,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         this._instanceId = value;
     }
     /**
-     * Sets the instanceName property value. The instanceName property
+     * Sets the instanceName property value. Name of the instance of the SaaS application.
      * @param value Value to set for the instanceName property.
      * @return a void
      */
@@ -138,7 +138,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
         this._instanceName = value;
     }
     /**
-     * Sets the saasAppId property value. The saasAppId property
+     * Sets the saasAppId property value. The identifier of the SaaS application.
      * @param value Value to set for the saasAppId property.
      * @return a void
      */

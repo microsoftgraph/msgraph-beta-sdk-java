@@ -9,35 +9,35 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceEvidence extends AlertEvidence implements Parsable {
-    /** The azureAdDeviceId property */
+    /** A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined. */
     private String _azureAdDeviceId;
-    /** The defenderAvStatus property */
+    /** State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue. */
     private DefenderAvStatus _defenderAvStatus;
-    /** The deviceDnsName property */
+    /** The fully qualified domain name (FQDN) for the device. */
     private String _deviceDnsName;
-    /** The firstSeenDateTime property */
+    /** The date and time when the device was first seen. */
     private OffsetDateTime _firstSeenDateTime;
-    /** The healthStatus property */
+    /** The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue. */
     private DeviceHealthStatus _healthStatus;
-    /** The loggedOnUsers property */
+    /** Users that were logged on the machine during the time of the alert. */
     private java.util.List<LoggedOnUser> _loggedOnUsers;
-    /** The mdeDeviceId property */
+    /** A unique identifier assigned to a device by Microsoft Defender for Endpoint. */
     private String _mdeDeviceId;
-    /** The onboardingStatus property */
+    /** The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue. */
     private OnboardingStatus _onboardingStatus;
-    /** The osBuild property */
+    /** The build version for the operating system the device is running. */
     private Long _osBuild;
-    /** The osPlatform property */
+    /** The operating system platform the device is running. */
     private String _osPlatform;
-    /** The rbacGroupId property */
+    /** The ID of the role-based access control (RBAC) device group. */
     private Integer _rbacGroupId;
-    /** The rbacGroupName property */
+    /** The name of the RBAC device group. */
     private String _rbacGroupName;
-    /** The riskScore property */
+    /** Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue. */
     private DeviceRiskScore _riskScore;
-    /** The version property */
+    /** The version of the operating system platform. */
     private String _version;
-    /** The vmMetadata property */
+    /** Metadata of the virtual machine (VM) on which Microsoft Defender for Endpoint is running. */
     private VmMetadata _vmMetadata;
     /**
      * Instantiates a new DeviceEvidence and sets the default values.
@@ -58,7 +58,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return new DeviceEvidence();
     }
     /**
-     * Gets the azureAdDeviceId property value. The azureAdDeviceId property
+     * Gets the azureAdDeviceId property value. A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._azureAdDeviceId;
     }
     /**
-     * Gets the defenderAvStatus property value. The defenderAvStatus property
+     * Gets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
      * @return a defenderAvStatus
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._defenderAvStatus;
     }
     /**
-     * Gets the deviceDnsName property value. The deviceDnsName property
+     * Gets the deviceDnsName property value. The fully qualified domain name (FQDN) for the device.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         }};
     }
     /**
-     * Gets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Gets the firstSeenDateTime property value. The date and time when the device was first seen.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._firstSeenDateTime;
     }
     /**
-     * Gets the healthStatus property value. The healthStatus property
+     * Gets the healthStatus property value. The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
      * @return a deviceHealthStatus
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._healthStatus;
     }
     /**
-     * Gets the loggedOnUsers property value. The loggedOnUsers property
+     * Gets the loggedOnUsers property value. Users that were logged on the machine during the time of the alert.
      * @return a loggedOnUser
      */
     @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._loggedOnUsers;
     }
     /**
-     * Gets the mdeDeviceId property value. The mdeDeviceId property
+     * Gets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._mdeDeviceId;
     }
     /**
-     * Gets the onboardingStatus property value. The onboardingStatus property
+     * Gets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
      * @return a onboardingStatus
      */
     @javax.annotation.Nullable
@@ -147,7 +147,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._onboardingStatus;
     }
     /**
-     * Gets the osBuild property value. The osBuild property
+     * Gets the osBuild property value. The build version for the operating system the device is running.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -155,7 +155,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._osBuild;
     }
     /**
-     * Gets the osPlatform property value. The osPlatform property
+     * Gets the osPlatform property value. The operating system platform the device is running.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._osPlatform;
     }
     /**
-     * Gets the rbacGroupId property value. The rbacGroupId property
+     * Gets the rbacGroupId property value. The ID of the role-based access control (RBAC) device group.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._rbacGroupId;
     }
     /**
-     * Gets the rbacGroupName property value. The rbacGroupName property
+     * Gets the rbacGroupName property value. The name of the RBAC device group.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._rbacGroupName;
     }
     /**
-     * Gets the riskScore property value. The riskScore property
+     * Gets the riskScore property value. Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
      * @return a deviceRiskScore
      */
     @javax.annotation.Nullable
@@ -187,7 +187,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._riskScore;
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version of the operating system platform.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -195,7 +195,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this._version;
     }
     /**
-     * Gets the vmMetadata property value. The vmMetadata property
+     * Gets the vmMetadata property value. Metadata of the virtual machine (VM) on which Microsoft Defender for Endpoint is running.
      * @return a vmMetadata
      */
     @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         writer.writeObjectValue("vmMetadata", this.getVmMetadata());
     }
     /**
-     * Sets the azureAdDeviceId property value. The azureAdDeviceId property
+     * Sets the azureAdDeviceId property value. A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
      * @param value Value to set for the azureAdDeviceId property.
      * @return a void
      */
@@ -235,7 +235,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._azureAdDeviceId = value;
     }
     /**
-     * Sets the defenderAvStatus property value. The defenderAvStatus property
+     * Sets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
      * @param value Value to set for the defenderAvStatus property.
      * @return a void
      */
@@ -243,7 +243,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._defenderAvStatus = value;
     }
     /**
-     * Sets the deviceDnsName property value. The deviceDnsName property
+     * Sets the deviceDnsName property value. The fully qualified domain name (FQDN) for the device.
      * @param value Value to set for the deviceDnsName property.
      * @return a void
      */
@@ -251,7 +251,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._deviceDnsName = value;
     }
     /**
-     * Sets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Sets the firstSeenDateTime property value. The date and time when the device was first seen.
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
@@ -259,7 +259,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._firstSeenDateTime = value;
     }
     /**
-     * Sets the healthStatus property value. The healthStatus property
+     * Sets the healthStatus property value. The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
@@ -267,7 +267,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._healthStatus = value;
     }
     /**
-     * Sets the loggedOnUsers property value. The loggedOnUsers property
+     * Sets the loggedOnUsers property value. Users that were logged on the machine during the time of the alert.
      * @param value Value to set for the loggedOnUsers property.
      * @return a void
      */
@@ -275,7 +275,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._loggedOnUsers = value;
     }
     /**
-     * Sets the mdeDeviceId property value. The mdeDeviceId property
+     * Sets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @param value Value to set for the mdeDeviceId property.
      * @return a void
      */
@@ -283,7 +283,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._mdeDeviceId = value;
     }
     /**
-     * Sets the onboardingStatus property value. The onboardingStatus property
+     * Sets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
      * @param value Value to set for the onboardingStatus property.
      * @return a void
      */
@@ -291,7 +291,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._onboardingStatus = value;
     }
     /**
-     * Sets the osBuild property value. The osBuild property
+     * Sets the osBuild property value. The build version for the operating system the device is running.
      * @param value Value to set for the osBuild property.
      * @return a void
      */
@@ -299,7 +299,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._osBuild = value;
     }
     /**
-     * Sets the osPlatform property value. The osPlatform property
+     * Sets the osPlatform property value. The operating system platform the device is running.
      * @param value Value to set for the osPlatform property.
      * @return a void
      */
@@ -307,7 +307,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._osPlatform = value;
     }
     /**
-     * Sets the rbacGroupId property value. The rbacGroupId property
+     * Sets the rbacGroupId property value. The ID of the role-based access control (RBAC) device group.
      * @param value Value to set for the rbacGroupId property.
      * @return a void
      */
@@ -315,7 +315,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._rbacGroupId = value;
     }
     /**
-     * Sets the rbacGroupName property value. The rbacGroupName property
+     * Sets the rbacGroupName property value. The name of the RBAC device group.
      * @param value Value to set for the rbacGroupName property.
      * @return a void
      */
@@ -323,7 +323,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._rbacGroupName = value;
     }
     /**
-     * Sets the riskScore property value. The riskScore property
+     * Sets the riskScore property value. Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
      * @param value Value to set for the riskScore property.
      * @return a void
      */
@@ -331,7 +331,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._riskScore = value;
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version of the operating system platform.
      * @param value Value to set for the version property.
      * @return a void
      */
@@ -339,7 +339,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this._version = value;
     }
     /**
-     * Sets the vmMetadata property value. The vmMetadata property
+     * Sets the vmMetadata property value. Metadata of the virtual machine (VM) on which Microsoft Defender for Endpoint is running.
      * @param value Value to set for the vmMetadata property.
      * @return a void
      */

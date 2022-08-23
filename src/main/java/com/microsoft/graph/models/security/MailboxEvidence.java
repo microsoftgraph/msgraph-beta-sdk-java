@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MailboxEvidence extends AlertEvidence implements Parsable {
-    /** The displayName property */
+    /** The name associated with the mailbox. */
     private String _displayName;
-    /** The primaryAddress property */
+    /** The primary email address of the mailbox. */
     private String _primaryAddress;
-    /** The userAccount property */
+    /** The user account of the mailbox. */
     private UserAccount _userAccount;
     /**
      * Instantiates a new MailboxEvidence and sets the default values.
@@ -33,7 +33,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
         return new MailboxEvidence();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name associated with the mailbox.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -54,7 +54,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
         }};
     }
     /**
-     * Gets the primaryAddress property value. The primaryAddress property
+     * Gets the primaryAddress property value. The primary email address of the mailbox.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
         return this._primaryAddress;
     }
     /**
-     * Gets the userAccount property value. The userAccount property
+     * Gets the userAccount property value. The user account of the mailbox.
      * @return a userAccount
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
         writer.writeObjectValue("userAccount", this.getUserAccount());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name associated with the mailbox.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -90,7 +90,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the primaryAddress property value. The primaryAddress property
+     * Sets the primaryAddress property value. The primary email address of the mailbox.
      * @param value Value to set for the primaryAddress property.
      * @return a void
      */
@@ -98,7 +98,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
         this._primaryAddress = value;
     }
     /**
-     * Sets the userAccount property value. The userAccount property
+     * Sets the userAccount property value. The user account of the mailbox.
      * @param value Value to set for the userAccount property.
      * @return a void
      */

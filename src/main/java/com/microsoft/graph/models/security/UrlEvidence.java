@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UrlEvidence extends AlertEvidence implements Parsable {
-    /** The url property */
+    /** The Unique Resource Locator (URL). */
     private String _url;
     /**
      * Instantiates a new UrlEvidence and sets the default values.
@@ -40,7 +40,7 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
         }};
     }
     /**
-     * Gets the url property value. The url property
+     * Gets the url property value. The Unique Resource Locator (URL).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("url", this.getUrl());
     }
     /**
-     * Sets the url property value. The url property
+     * Sets the url property value. The Unique Resource Locator (URL).
      * @param value Value to set for the url property.
      * @return a void
      */

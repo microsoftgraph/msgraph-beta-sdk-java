@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class ListItem extends BaseItem implements Parsable {
     /** The list of recent activities that took place on this item. */
     private java.util.List<ItemActivityOLD> _activities;

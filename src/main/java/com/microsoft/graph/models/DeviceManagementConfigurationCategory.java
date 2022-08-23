@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Device Management Configuration Policy */
 public class DeviceManagementConfigurationCategory extends Entity implements Parsable {
     /** Description of the category header */
     private String _categoryDescription;
@@ -31,7 +32,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     /** Describes which technology this setting can be deployed with */
     private DeviceManagementConfigurationTechnologies _technologies;
     /**
-     * Instantiates a new DeviceManagementConfigurationCategory and sets the default values.
+     * Instantiates a new deviceManagementConfigurationCategory and sets the default values.
      * @return a void
      */
     public DeviceManagementConfigurationCategory() {
@@ -41,7 +42,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationCategory
+     * @return a deviceManagementConfigurationCategory
      */
     @javax.annotation.Nonnull
     public static DeviceManagementConfigurationCategory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

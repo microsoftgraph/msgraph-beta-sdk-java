@@ -8,15 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RegistryValueEvidence extends AlertEvidence implements Parsable {
-    /** The registryHive property */
+    /** Registry hive of the key that the recorded action was applied to. */
     private String _registryHive;
-    /** The registryKey property */
+    /** Registry key that the recorded action was applied to. */
     private String _registryKey;
-    /** The registryValue property */
+    /** Data of the registry value that the recorded action was applied to. */
     private String _registryValue;
-    /** The registryValueName property */
+    /** Name of the registry value that the recorded action was applied to. */
     private String _registryValueName;
-    /** The registryValueType property */
+    /** Data type, such as binary or string, of the registry value that the recorded action was applied to. */
     private String _registryValueType;
     /**
      * Instantiates a new RegistryValueEvidence and sets the default values.
@@ -52,7 +52,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         }};
     }
     /**
-     * Gets the registryHive property value. The registryHive property
+     * Gets the registryHive property value. Registry hive of the key that the recorded action was applied to.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -60,7 +60,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         return this._registryHive;
     }
     /**
-     * Gets the registryKey property value. The registryKey property
+     * Gets the registryKey property value. Registry key that the recorded action was applied to.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         return this._registryKey;
     }
     /**
-     * Gets the registryValue property value. The registryValue property
+     * Gets the registryValue property value. Data of the registry value that the recorded action was applied to.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         return this._registryValue;
     }
     /**
-     * Gets the registryValueName property value. The registryValueName property
+     * Gets the registryValueName property value. Name of the registry value that the recorded action was applied to.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         return this._registryValueName;
     }
     /**
-     * Gets the registryValueType property value. The registryValueType property
+     * Gets the registryValueType property value. Data type, such as binary or string, of the registry value that the recorded action was applied to.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("registryValueType", this.getRegistryValueType());
     }
     /**
-     * Sets the registryHive property value. The registryHive property
+     * Sets the registryHive property value. Registry hive of the key that the recorded action was applied to.
      * @param value Value to set for the registryHive property.
      * @return a void
      */
@@ -114,7 +114,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         this._registryHive = value;
     }
     /**
-     * Sets the registryKey property value. The registryKey property
+     * Sets the registryKey property value. Registry key that the recorded action was applied to.
      * @param value Value to set for the registryKey property.
      * @return a void
      */
@@ -122,7 +122,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         this._registryKey = value;
     }
     /**
-     * Sets the registryValue property value. The registryValue property
+     * Sets the registryValue property value. Data of the registry value that the recorded action was applied to.
      * @param value Value to set for the registryValue property.
      * @return a void
      */
@@ -130,7 +130,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         this._registryValue = value;
     }
     /**
-     * Sets the registryValueName property value. The registryValueName property
+     * Sets the registryValueName property value. Name of the registry value that the recorded action was applied to.
      * @param value Value to set for the registryValueName property.
      * @return a void
      */
@@ -138,7 +138,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         this._registryValueName = value;
     }
     /**
-     * Sets the registryValueType property value. The registryValueType property
+     * Sets the registryValueType property value. Data type, such as binary or string, of the registry value that the recorded action was applied to.
      * @param value Value to set for the registryValueType property.
      * @return a void
      */

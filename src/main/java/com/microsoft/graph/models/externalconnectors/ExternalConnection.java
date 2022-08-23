@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of externalConnection entities. */
 public class ExternalConnection extends Entity implements Parsable {
     /** Collects configurable settings related to activities involving connector content. */
     private ActivitySettings _activitySettings;
@@ -41,7 +40,7 @@ public class ExternalConnection extends Entity implements Parsable {
     /** Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required. */
     private ConnectionState _state;
     /**
-     * Instantiates a new externalConnection and sets the default values.
+     * Instantiates a new ExternalConnection and sets the default values.
      * @return a void
      */
     public ExternalConnection() {
@@ -51,7 +50,7 @@ public class ExternalConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalConnection
+     * @return a ExternalConnection
      */
     @javax.annotation.Nonnull
     public static ExternalConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

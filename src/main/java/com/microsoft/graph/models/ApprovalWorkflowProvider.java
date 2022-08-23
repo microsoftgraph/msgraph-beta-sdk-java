@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of approvalWorkflowProvider entities. */
 public class ApprovalWorkflowProvider extends Entity implements Parsable {
     /** The businessFlows property */
     private java.util.List<BusinessFlow> _businessFlows;
@@ -18,7 +17,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
     /** The policyTemplates property */
     private java.util.List<GovernancePolicyTemplate> _policyTemplates;
     /**
-     * Instantiates a new approvalWorkflowProvider and sets the default values.
+     * Instantiates a new ApprovalWorkflowProvider and sets the default values.
      * @return a void
      */
     public ApprovalWorkflowProvider() {
@@ -28,7 +27,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a approvalWorkflowProvider
+     * @return a ApprovalWorkflowProvider
      */
     @javax.annotation.Nonnull
     public static ApprovalWorkflowProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
