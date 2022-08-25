@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
-    /** The registryHive property */
+    /** Registry hive of the key that the recorded action was applied to. */
     private String _registryHive;
-    /** The registryKey property */
+    /** Registry key that the recorded action was applied to. */
     private String _registryKey;
     /**
      * Instantiates a new RegistryKeyEvidence and sets the default values.
@@ -43,7 +43,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
         }};
     }
     /**
-     * Gets the registryHive property value. The registryHive property
+     * Gets the registryHive property value. Registry hive of the key that the recorded action was applied to.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
         return this._registryHive;
     }
     /**
-     * Gets the registryKey property value. The registryKey property
+     * Gets the registryKey property value. Registry key that the recorded action was applied to.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("registryKey", this.getRegistryKey());
     }
     /**
-     * Sets the registryHive property value. The registryHive property
+     * Sets the registryHive property value. Registry hive of the key that the recorded action was applied to.
      * @param value Value to set for the registryHive property.
      * @return a void
      */
@@ -78,7 +78,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
         this._registryHive = value;
     }
     /**
-     * Sets the registryKey property value. The registryKey property
+     * Sets the registryKey property value. Registry key that the recorded action was applied to.
      * @param value Value to set for the registryKey property.
      * @return a void
      */

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity which represents an OnPrem Ndes connector. */
 public class NdesConnector extends Entity implements Parsable {
     /** The build version of the Ndes Connector. */
     private String _connectorVersion;
@@ -24,7 +25,7 @@ public class NdesConnector extends Entity implements Parsable {
     /** The current status of the Ndes Connector. */
     private NdesConnectorState _state;
     /**
-     * Instantiates a new NdesConnector and sets the default values.
+     * Instantiates a new ndesConnector and sets the default values.
      * @return a void
      */
     public NdesConnector() {
@@ -34,7 +35,7 @@ public class NdesConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a NdesConnector
+     * @return a ndesConnector
      */
     @javax.annotation.Nonnull
     public static NdesConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Singleton entity which represents the Exchange OnPremises policy configured for a tenant. */
 public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements Parsable {
     /** The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization */
     private java.util.List<DeviceManagementExchangeAccessRule> _accessRules;
@@ -19,7 +20,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
     /** Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML. */
     private byte[] _notificationContent;
     /**
-     * Instantiates a new DeviceManagementExchangeOnPremisesPolicy and sets the default values.
+     * Instantiates a new deviceManagementExchangeOnPremisesPolicy and sets the default values.
      * @return a void
      */
     public DeviceManagementExchangeOnPremisesPolicy() {
@@ -29,7 +30,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementExchangeOnPremisesPolicy
+     * @return a deviceManagementExchangeOnPremisesPolicy
      */
     @javax.annotation.Nonnull
     public static DeviceManagementExchangeOnPremisesPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

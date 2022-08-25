@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of externalConnection entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Identity extends Entity implements Parsable {
     /** The type property */
     private IdentityType _type;

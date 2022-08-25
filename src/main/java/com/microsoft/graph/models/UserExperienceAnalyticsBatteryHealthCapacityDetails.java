@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     /** Recorded date time of this capacity details instance. */
     private OffsetDateTime _lastRefreshedDateTime;
     /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthCapacityDetails and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthCapacityDetails and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBatteryHealthCapacityDetails() {
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthCapacityDetails
+     * @return a UserExperienceAnalyticsBatteryHealthCapacityDetails
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthCapacityDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

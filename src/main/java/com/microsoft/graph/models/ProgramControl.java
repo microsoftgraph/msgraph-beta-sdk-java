@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ProgramControl extends Entity implements Parsable {
     /** The controlId of the control, in particular the identifier of an access review. Required on create. */
     private String _controlId;

@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of externalConnection entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ExternalActivity extends Entity implements Parsable {
     /** Represents an identity used to identify who is responsible for the activity. */
     private Identity _performedBy;

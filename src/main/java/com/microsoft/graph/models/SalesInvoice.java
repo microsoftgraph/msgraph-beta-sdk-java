@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class SalesInvoice extends Entity implements Parsable {
     /** The billingPostalAddress property */
     private PostalAddressType _billingPostalAddress;
@@ -88,7 +89,7 @@ public class SalesInvoice extends Entity implements Parsable {
     /** The totalTaxAmount property */
     private BigDecimal _totalTaxAmount;
     /**
-     * Instantiates a new SalesInvoice and sets the default values.
+     * Instantiates a new salesInvoice and sets the default values.
      * @return a void
      */
     public SalesInvoice() {
@@ -98,7 +99,7 @@ public class SalesInvoice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SalesInvoice
+     * @return a salesInvoice
      */
     @javax.annotation.Nonnull
     public static SalesInvoice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

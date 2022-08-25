@@ -9,25 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProcessEvidence extends AlertEvidence implements Parsable {
-    /** The detectionStatus property */
+    /** The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue. */
     private DetectionStatus _detectionStatus;
-    /** The imageFile property */
+    /** Image file details. */
     private FileDetails _imageFile;
-    /** The mdeDeviceId property */
+    /** A unique identifier assigned to a device by Microsoft Defender for Endpoint. */
     private String _mdeDeviceId;
-    /** The parentProcessCreationDateTime property */
+    /** Date and time when the parent of the process was created. */
     private OffsetDateTime _parentProcessCreationDateTime;
-    /** The parentProcessId property */
+    /** Process ID (PID) of the parent process that spawned the process. */
     private Long _parentProcessId;
-    /** The parentProcessImageFile property */
+    /** Parent process image file details. */
     private FileDetails _parentProcessImageFile;
-    /** The processCommandLine property */
+    /** Command line used to create the new process. */
     private String _processCommandLine;
-    /** The processCreationDateTime property */
+    /** Date and time the process was created. */
     private OffsetDateTime _processCreationDateTime;
-    /** The processId property */
+    /** Process ID (PID) of the newly created process. */
     private Long _processId;
-    /** The userAccount property */
+    /** User details of the user that ran the process. */
     private UserAccount _userAccount;
     /**
      * Instantiates a new ProcessEvidence and sets the default values.
@@ -48,7 +48,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         return new ProcessEvidence();
     }
     /**
-     * Gets the detectionStatus property value. The detectionStatus property
+     * Gets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
      * @return a detectionStatus
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         }};
     }
     /**
-     * Gets the imageFile property value. The imageFile property
+     * Gets the imageFile property value. Image file details.
      * @return a fileDetails
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         return this._imageFile;
     }
     /**
-     * Gets the mdeDeviceId property value. The mdeDeviceId property
+     * Gets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -92,7 +92,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         return this._mdeDeviceId;
     }
     /**
-     * Gets the parentProcessCreationDateTime property value. The parentProcessCreationDateTime property
+     * Gets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         return this._parentProcessCreationDateTime;
     }
     /**
-     * Gets the parentProcessId property value. The parentProcessId property
+     * Gets the parentProcessId property value. Process ID (PID) of the parent process that spawned the process.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -108,7 +108,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         return this._parentProcessId;
     }
     /**
-     * Gets the parentProcessImageFile property value. The parentProcessImageFile property
+     * Gets the parentProcessImageFile property value. Parent process image file details.
      * @return a fileDetails
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         return this._parentProcessImageFile;
     }
     /**
-     * Gets the processCommandLine property value. The processCommandLine property
+     * Gets the processCommandLine property value. Command line used to create the new process.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -124,7 +124,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         return this._processCommandLine;
     }
     /**
-     * Gets the processCreationDateTime property value. The processCreationDateTime property
+     * Gets the processCreationDateTime property value. Date and time the process was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         return this._processCreationDateTime;
     }
     /**
-     * Gets the processId property value. The processId property
+     * Gets the processId property value. Process ID (PID) of the newly created process.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -140,7 +140,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         return this._processId;
     }
     /**
-     * Gets the userAccount property value. The userAccount property
+     * Gets the userAccount property value. User details of the user that ran the process.
      * @return a userAccount
      */
     @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         writer.writeObjectValue("userAccount", this.getUserAccount());
     }
     /**
-     * Sets the detectionStatus property value. The detectionStatus property
+     * Sets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
      * @param value Value to set for the detectionStatus property.
      * @return a void
      */
@@ -175,7 +175,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         this._detectionStatus = value;
     }
     /**
-     * Sets the imageFile property value. The imageFile property
+     * Sets the imageFile property value. Image file details.
      * @param value Value to set for the imageFile property.
      * @return a void
      */
@@ -183,7 +183,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         this._imageFile = value;
     }
     /**
-     * Sets the mdeDeviceId property value. The mdeDeviceId property
+     * Sets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @param value Value to set for the mdeDeviceId property.
      * @return a void
      */
@@ -191,7 +191,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         this._mdeDeviceId = value;
     }
     /**
-     * Sets the parentProcessCreationDateTime property value. The parentProcessCreationDateTime property
+     * Sets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created.
      * @param value Value to set for the parentProcessCreationDateTime property.
      * @return a void
      */
@@ -199,7 +199,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         this._parentProcessCreationDateTime = value;
     }
     /**
-     * Sets the parentProcessId property value. The parentProcessId property
+     * Sets the parentProcessId property value. Process ID (PID) of the parent process that spawned the process.
      * @param value Value to set for the parentProcessId property.
      * @return a void
      */
@@ -207,7 +207,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         this._parentProcessId = value;
     }
     /**
-     * Sets the parentProcessImageFile property value. The parentProcessImageFile property
+     * Sets the parentProcessImageFile property value. Parent process image file details.
      * @param value Value to set for the parentProcessImageFile property.
      * @return a void
      */
@@ -215,7 +215,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         this._parentProcessImageFile = value;
     }
     /**
-     * Sets the processCommandLine property value. The processCommandLine property
+     * Sets the processCommandLine property value. Command line used to create the new process.
      * @param value Value to set for the processCommandLine property.
      * @return a void
      */
@@ -223,7 +223,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         this._processCommandLine = value;
     }
     /**
-     * Sets the processCreationDateTime property value. The processCreationDateTime property
+     * Sets the processCreationDateTime property value. Date and time the process was created.
      * @param value Value to set for the processCreationDateTime property.
      * @return a void
      */
@@ -231,7 +231,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         this._processCreationDateTime = value;
     }
     /**
-     * Sets the processId property value. The processId property
+     * Sets the processId property value. Process ID (PID) of the newly created process.
      * @param value Value to set for the processId property.
      * @return a void
      */
@@ -239,7 +239,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         this._processId = value;
     }
     /**
-     * Sets the userAccount property value. The userAccount property
+     * Sets the userAccount property value. User details of the user that ran the process.
      * @param value Value to set for the userAccount property.
      * @return a void
      */

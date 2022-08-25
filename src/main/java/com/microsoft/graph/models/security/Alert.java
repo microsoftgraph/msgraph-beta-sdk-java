@@ -9,49 +9,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Alert extends Entity implements Parsable {
-    /** The actorDisplayName property */
+    /** The adversary or activity group that is associated with this alert. */
     private String _actorDisplayName;
-    /** The alertWebUrl property */
+    /** URL for the alert page in the Microsoft 365 Defender portal. */
     private String _alertWebUrl;
-    /** The assignedTo property */
+    /** Owner of the alert, or null if no owner is assigned. */
     private String _assignedTo;
-    /** The category property */
+    /** The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework. */
     private String _category;
-    /** The classification property */
+    /** Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue. */
     private AlertClassification _classification;
-    /** The comments property */
+    /** Array of comments created by the Security Operations (SecOps) team during the alert management process. */
     private java.util.List<AlertComment> _comments;
-    /** The createdDateTime property */
+    /** Time when Microsoft 365 Defender created the alert. */
     private OffsetDateTime _createdDateTime;
-    /** The description property */
+    /** String value describing each alert. */
     private String _description;
-    /** The detectionSource property */
+    /** Detection technology or sensor that identified the notable component or activity. */
     private DetectionSource _detectionSource;
-    /** The detectorId property */
+    /** The ID of the detector that triggered the alert. */
     private String _detectorId;
-    /** The determination property */
+    /** Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue. */
     private AlertDetermination _determination;
-    /** The evidence property */
+    /** Collection of evidence related to the alert. */
     private java.util.List<AlertEvidence> _evidence;
-    /** The firstActivityDateTime property */
+    /** The earliest activity associated with the alert. */
     private OffsetDateTime _firstActivityDateTime;
-    /** The incidentId property */
+    /** Unique identifier to represent the incident this alert resource is associated with. */
     private String _incidentId;
-    /** The incidentWebUrl property */
+    /** URL for the incident page in the Microsoft 365 Defender portal. */
     private String _incidentWebUrl;
-    /** The lastActivityDateTime property */
+    /** The oldest activity associated with the alert. */
     private OffsetDateTime _lastActivityDateTime;
-    /** The lastUpdateDateTime property */
+    /** Time when the alert was last updated at Microsoft 365 Defender. */
     private OffsetDateTime _lastUpdateDateTime;
-    /** The mitreTechniques property */
+    /** The attack techniques, as aligned with the MITRE ATT&CK framework. */
     private java.util.List<String> _mitreTechniques;
-    /** The providerAlertId property */
+    /** The ID of the alert as it appears in the security provider product that generated the alert. */
     private String _providerAlertId;
-    /** The recommendedActions property */
+    /** Recommended response and remediation actions to take in the event this alert was generated. */
     private String _recommendedActions;
-    /** The resolvedDateTime property */
+    /** Time when the alert was resolved. */
     private OffsetDateTime _resolvedDateTime;
     /** The serviceSource property */
     private ServiceSource _serviceSource;
@@ -59,13 +59,13 @@ public class Alert extends Entity implements Parsable {
     private AlertSeverity _severity;
     /** The status property */
     private AlertStatus _status;
-    /** The tenantId property */
+    /** The Azure Active Directory tenant the alert was created in. */
     private String _tenantId;
-    /** The threatDisplayName property */
+    /** The threat associated with this alert. */
     private String _threatDisplayName;
-    /** The threatFamilyName property */
+    /** Threat family associated with this alert. */
     private String _threatFamilyName;
-    /** The title property */
+    /** Brief identifying string value describing the alert. */
     private String _title;
     /**
      * Instantiates a new alert and sets the default values.
@@ -86,7 +86,7 @@ public class Alert extends Entity implements Parsable {
         return new Alert();
     }
     /**
-     * Gets the actorDisplayName property value. The actorDisplayName property
+     * Gets the actorDisplayName property value. The adversary or activity group that is associated with this alert.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class Alert extends Entity implements Parsable {
         return this._actorDisplayName;
     }
     /**
-     * Gets the alertWebUrl property value. The alertWebUrl property
+     * Gets the alertWebUrl property value. URL for the alert page in the Microsoft 365 Defender portal.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class Alert extends Entity implements Parsable {
         return this._alertWebUrl;
     }
     /**
-     * Gets the assignedTo property value. The assignedTo property
+     * Gets the assignedTo property value. Owner of the alert, or null if no owner is assigned.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class Alert extends Entity implements Parsable {
         return this._assignedTo;
     }
     /**
-     * Gets the category property value. The category property
+     * Gets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class Alert extends Entity implements Parsable {
         return this._category;
     }
     /**
-     * Gets the classification property value. The classification property
+     * Gets the classification property value. Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
      * @return a alertClassification
      */
     @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class Alert extends Entity implements Parsable {
         return this._classification;
     }
     /**
-     * Gets the comments property value. The comments property
+     * Gets the comments property value. Array of comments created by the Security Operations (SecOps) team during the alert management process.
      * @return a alertComment
      */
     @javax.annotation.Nullable
@@ -134,7 +134,7 @@ public class Alert extends Entity implements Parsable {
         return this._comments;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Time when Microsoft 365 Defender created the alert.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -142,7 +142,7 @@ public class Alert extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. String value describing each alert.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -150,7 +150,7 @@ public class Alert extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the detectionSource property value. The detectionSource property
+     * Gets the detectionSource property value. Detection technology or sensor that identified the notable component or activity.
      * @return a detectionSource
      */
     @javax.annotation.Nullable
@@ -158,7 +158,7 @@ public class Alert extends Entity implements Parsable {
         return this._detectionSource;
     }
     /**
-     * Gets the detectorId property value. The detectorId property
+     * Gets the detectorId property value. The ID of the detector that triggered the alert.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class Alert extends Entity implements Parsable {
         return this._detectorId;
     }
     /**
-     * Gets the determination property value. The determination property
+     * Gets the determination property value. Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @return a alertDetermination
      */
     @javax.annotation.Nullable
@@ -174,7 +174,7 @@ public class Alert extends Entity implements Parsable {
         return this._determination;
     }
     /**
-     * Gets the evidence property value. The evidence property
+     * Gets the evidence property value. Collection of evidence related to the alert.
      * @return a alertEvidence
      */
     @javax.annotation.Nullable
@@ -220,7 +220,7 @@ public class Alert extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the firstActivityDateTime property value. The firstActivityDateTime property
+     * Gets the firstActivityDateTime property value. The earliest activity associated with the alert.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -228,7 +228,7 @@ public class Alert extends Entity implements Parsable {
         return this._firstActivityDateTime;
     }
     /**
-     * Gets the incidentId property value. The incidentId property
+     * Gets the incidentId property value. Unique identifier to represent the incident this alert resource is associated with.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -236,7 +236,7 @@ public class Alert extends Entity implements Parsable {
         return this._incidentId;
     }
     /**
-     * Gets the incidentWebUrl property value. The incidentWebUrl property
+     * Gets the incidentWebUrl property value. URL for the incident page in the Microsoft 365 Defender portal.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -244,7 +244,7 @@ public class Alert extends Entity implements Parsable {
         return this._incidentWebUrl;
     }
     /**
-     * Gets the lastActivityDateTime property value. The lastActivityDateTime property
+     * Gets the lastActivityDateTime property value. The oldest activity associated with the alert.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -252,7 +252,7 @@ public class Alert extends Entity implements Parsable {
         return this._lastActivityDateTime;
     }
     /**
-     * Gets the lastUpdateDateTime property value. The lastUpdateDateTime property
+     * Gets the lastUpdateDateTime property value. Time when the alert was last updated at Microsoft 365 Defender.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -260,7 +260,7 @@ public class Alert extends Entity implements Parsable {
         return this._lastUpdateDateTime;
     }
     /**
-     * Gets the mitreTechniques property value. The mitreTechniques property
+     * Gets the mitreTechniques property value. The attack techniques, as aligned with the MITRE ATT&CK framework.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -268,7 +268,7 @@ public class Alert extends Entity implements Parsable {
         return this._mitreTechniques;
     }
     /**
-     * Gets the providerAlertId property value. The providerAlertId property
+     * Gets the providerAlertId property value. The ID of the alert as it appears in the security provider product that generated the alert.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -276,7 +276,7 @@ public class Alert extends Entity implements Parsable {
         return this._providerAlertId;
     }
     /**
-     * Gets the recommendedActions property value. The recommendedActions property
+     * Gets the recommendedActions property value. Recommended response and remediation actions to take in the event this alert was generated.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -284,7 +284,7 @@ public class Alert extends Entity implements Parsable {
         return this._recommendedActions;
     }
     /**
-     * Gets the resolvedDateTime property value. The resolvedDateTime property
+     * Gets the resolvedDateTime property value. Time when the alert was resolved.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -316,7 +316,7 @@ public class Alert extends Entity implements Parsable {
         return this._status;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The Azure Active Directory tenant the alert was created in.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -324,7 +324,7 @@ public class Alert extends Entity implements Parsable {
         return this._tenantId;
     }
     /**
-     * Gets the threatDisplayName property value. The threatDisplayName property
+     * Gets the threatDisplayName property value. The threat associated with this alert.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -332,7 +332,7 @@ public class Alert extends Entity implements Parsable {
         return this._threatDisplayName;
     }
     /**
-     * Gets the threatFamilyName property value. The threatFamilyName property
+     * Gets the threatFamilyName property value. Threat family associated with this alert.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -340,7 +340,7 @@ public class Alert extends Entity implements Parsable {
         return this._threatFamilyName;
     }
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. Brief identifying string value describing the alert.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -385,7 +385,7 @@ public class Alert extends Entity implements Parsable {
         writer.writeStringValue("title", this.getTitle());
     }
     /**
-     * Sets the actorDisplayName property value. The actorDisplayName property
+     * Sets the actorDisplayName property value. The adversary or activity group that is associated with this alert.
      * @param value Value to set for the actorDisplayName property.
      * @return a void
      */
@@ -393,7 +393,7 @@ public class Alert extends Entity implements Parsable {
         this._actorDisplayName = value;
     }
     /**
-     * Sets the alertWebUrl property value. The alertWebUrl property
+     * Sets the alertWebUrl property value. URL for the alert page in the Microsoft 365 Defender portal.
      * @param value Value to set for the alertWebUrl property.
      * @return a void
      */
@@ -401,7 +401,7 @@ public class Alert extends Entity implements Parsable {
         this._alertWebUrl = value;
     }
     /**
-     * Sets the assignedTo property value. The assignedTo property
+     * Sets the assignedTo property value. Owner of the alert, or null if no owner is assigned.
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
@@ -409,7 +409,7 @@ public class Alert extends Entity implements Parsable {
         this._assignedTo = value;
     }
     /**
-     * Sets the category property value. The category property
+     * Sets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework.
      * @param value Value to set for the category property.
      * @return a void
      */
@@ -417,7 +417,7 @@ public class Alert extends Entity implements Parsable {
         this._category = value;
     }
     /**
-     * Sets the classification property value. The classification property
+     * Sets the classification property value. Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
      * @param value Value to set for the classification property.
      * @return a void
      */
@@ -425,7 +425,7 @@ public class Alert extends Entity implements Parsable {
         this._classification = value;
     }
     /**
-     * Sets the comments property value. The comments property
+     * Sets the comments property value. Array of comments created by the Security Operations (SecOps) team during the alert management process.
      * @param value Value to set for the comments property.
      * @return a void
      */
@@ -433,7 +433,7 @@ public class Alert extends Entity implements Parsable {
         this._comments = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Time when Microsoft 365 Defender created the alert.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -441,7 +441,7 @@ public class Alert extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. String value describing each alert.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -449,7 +449,7 @@ public class Alert extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the detectionSource property value. The detectionSource property
+     * Sets the detectionSource property value. Detection technology or sensor that identified the notable component or activity.
      * @param value Value to set for the detectionSource property.
      * @return a void
      */
@@ -457,7 +457,7 @@ public class Alert extends Entity implements Parsable {
         this._detectionSource = value;
     }
     /**
-     * Sets the detectorId property value. The detectorId property
+     * Sets the detectorId property value. The ID of the detector that triggered the alert.
      * @param value Value to set for the detectorId property.
      * @return a void
      */
@@ -465,7 +465,7 @@ public class Alert extends Entity implements Parsable {
         this._detectorId = value;
     }
     /**
-     * Sets the determination property value. The determination property
+     * Sets the determination property value. Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @param value Value to set for the determination property.
      * @return a void
      */
@@ -473,7 +473,7 @@ public class Alert extends Entity implements Parsable {
         this._determination = value;
     }
     /**
-     * Sets the evidence property value. The evidence property
+     * Sets the evidence property value. Collection of evidence related to the alert.
      * @param value Value to set for the evidence property.
      * @return a void
      */
@@ -481,7 +481,7 @@ public class Alert extends Entity implements Parsable {
         this._evidence = value;
     }
     /**
-     * Sets the firstActivityDateTime property value. The firstActivityDateTime property
+     * Sets the firstActivityDateTime property value. The earliest activity associated with the alert.
      * @param value Value to set for the firstActivityDateTime property.
      * @return a void
      */
@@ -489,7 +489,7 @@ public class Alert extends Entity implements Parsable {
         this._firstActivityDateTime = value;
     }
     /**
-     * Sets the incidentId property value. The incidentId property
+     * Sets the incidentId property value. Unique identifier to represent the incident this alert resource is associated with.
      * @param value Value to set for the incidentId property.
      * @return a void
      */
@@ -497,7 +497,7 @@ public class Alert extends Entity implements Parsable {
         this._incidentId = value;
     }
     /**
-     * Sets the incidentWebUrl property value. The incidentWebUrl property
+     * Sets the incidentWebUrl property value. URL for the incident page in the Microsoft 365 Defender portal.
      * @param value Value to set for the incidentWebUrl property.
      * @return a void
      */
@@ -505,7 +505,7 @@ public class Alert extends Entity implements Parsable {
         this._incidentWebUrl = value;
     }
     /**
-     * Sets the lastActivityDateTime property value. The lastActivityDateTime property
+     * Sets the lastActivityDateTime property value. The oldest activity associated with the alert.
      * @param value Value to set for the lastActivityDateTime property.
      * @return a void
      */
@@ -513,7 +513,7 @@ public class Alert extends Entity implements Parsable {
         this._lastActivityDateTime = value;
     }
     /**
-     * Sets the lastUpdateDateTime property value. The lastUpdateDateTime property
+     * Sets the lastUpdateDateTime property value. Time when the alert was last updated at Microsoft 365 Defender.
      * @param value Value to set for the lastUpdateDateTime property.
      * @return a void
      */
@@ -521,7 +521,7 @@ public class Alert extends Entity implements Parsable {
         this._lastUpdateDateTime = value;
     }
     /**
-     * Sets the mitreTechniques property value. The mitreTechniques property
+     * Sets the mitreTechniques property value. The attack techniques, as aligned with the MITRE ATT&CK framework.
      * @param value Value to set for the mitreTechniques property.
      * @return a void
      */
@@ -529,7 +529,7 @@ public class Alert extends Entity implements Parsable {
         this._mitreTechniques = value;
     }
     /**
-     * Sets the providerAlertId property value. The providerAlertId property
+     * Sets the providerAlertId property value. The ID of the alert as it appears in the security provider product that generated the alert.
      * @param value Value to set for the providerAlertId property.
      * @return a void
      */
@@ -537,7 +537,7 @@ public class Alert extends Entity implements Parsable {
         this._providerAlertId = value;
     }
     /**
-     * Sets the recommendedActions property value. The recommendedActions property
+     * Sets the recommendedActions property value. Recommended response and remediation actions to take in the event this alert was generated.
      * @param value Value to set for the recommendedActions property.
      * @return a void
      */
@@ -545,7 +545,7 @@ public class Alert extends Entity implements Parsable {
         this._recommendedActions = value;
     }
     /**
-     * Sets the resolvedDateTime property value. The resolvedDateTime property
+     * Sets the resolvedDateTime property value. Time when the alert was resolved.
      * @param value Value to set for the resolvedDateTime property.
      * @return a void
      */
@@ -577,7 +577,7 @@ public class Alert extends Entity implements Parsable {
         this._status = value;
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The Azure Active Directory tenant the alert was created in.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
@@ -585,7 +585,7 @@ public class Alert extends Entity implements Parsable {
         this._tenantId = value;
     }
     /**
-     * Sets the threatDisplayName property value. The threatDisplayName property
+     * Sets the threatDisplayName property value. The threat associated with this alert.
      * @param value Value to set for the threatDisplayName property.
      * @return a void
      */
@@ -593,7 +593,7 @@ public class Alert extends Entity implements Parsable {
         this._threatDisplayName = value;
     }
     /**
-     * Sets the threatFamilyName property value. The threatFamilyName property
+     * Sets the threatFamilyName property value. Threat family associated with this alert.
      * @param value Value to set for the threatFamilyName property.
      * @return a void
      */
@@ -601,7 +601,7 @@ public class Alert extends Entity implements Parsable {
         this._threatFamilyName = value;
     }
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. Brief identifying string value describing the alert.
      * @param value Value to set for the title property.
      * @return a void
      */

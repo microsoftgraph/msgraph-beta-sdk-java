@@ -18,7 +18,7 @@ import microsoft.graph.models.security.TriggerTypesRoot;
 public class Security extends Entity implements Parsable {
     /** Notifications for suspicious or potential security issues in a customer’s tenant. */
     private java.util.List<Alert> _alerts;
-    /** The alerts_v2 property */
+    /** A collection of alerts in Microsoft 365 Defender. */
     private java.util.List<Alert> _alerts_v2;
     /** Provides tenants capability to launch a simulated and realistic phishing attack and learn from it. */
     private AttackSimulationRoot _attackSimulation;
@@ -32,7 +32,7 @@ public class Security extends Entity implements Parsable {
     private java.util.List<FileSecurityProfile> _fileSecurityProfiles;
     /** The hostSecurityProfiles property */
     private java.util.List<HostSecurityProfile> _hostSecurityProfiles;
-    /** The incidents property */
+    /** A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack. */
     private java.util.List<Incident> _incidents;
     /** The informationProtection property */
     private InformationProtection _informationProtection;
@@ -46,7 +46,7 @@ public class Security extends Entity implements Parsable {
     private java.util.List<ProviderTenantSetting> _providerTenantSettings;
     /** The secureScoreControlProfiles property */
     private java.util.List<SecureScoreControlProfile> _secureScoreControlProfiles;
-    /** The secureScores property */
+    /** Measurements of tenants’ security posture to help protect them from threats. */
     private java.util.List<SecureScore> _secureScores;
     /** The securityActions property */
     private java.util.List<SecurityAction> _securityActions;
@@ -89,7 +89,7 @@ public class Security extends Entity implements Parsable {
         return this._alerts;
     }
     /**
-     * Gets the alerts_v2 property value. The alerts_v2 property
+     * Gets the alerts_v2 property value. A collection of alerts in Microsoft 365 Defender.
      * @return a alert
      */
     @javax.annotation.Nullable
@@ -178,7 +178,7 @@ public class Security extends Entity implements Parsable {
         return this._hostSecurityProfiles;
     }
     /**
-     * Gets the incidents property value. The incidents property
+     * Gets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      * @return a incident
      */
     @javax.annotation.Nullable
@@ -234,7 +234,7 @@ public class Security extends Entity implements Parsable {
         return this._secureScoreControlProfiles;
     }
     /**
-     * Gets the secureScores property value. The secureScores property
+     * Gets the secureScores property value. Measurements of tenants’ security posture to help protect them from threats.
      * @return a secureScore
      */
     @javax.annotation.Nullable
@@ -338,7 +338,7 @@ public class Security extends Entity implements Parsable {
         this._alerts = value;
     }
     /**
-     * Sets the alerts_v2 property value. The alerts_v2 property
+     * Sets the alerts_v2 property value. A collection of alerts in Microsoft 365 Defender.
      * @param value Value to set for the alerts_v2 property.
      * @return a void
      */
@@ -394,7 +394,7 @@ public class Security extends Entity implements Parsable {
         this._hostSecurityProfiles = value;
     }
     /**
-     * Sets the incidents property value. The incidents property
+     * Sets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      * @param value Value to set for the incidents property.
      * @return a void
      */
@@ -450,7 +450,7 @@ public class Security extends Entity implements Parsable {
         this._secureScoreControlProfiles = value;
     }
     /**
-     * Sets the secureScores property value. The secureScores property
+     * Sets the secureScores property value. Measurements of tenants’ security posture to help protect them from threats.
      * @param value Value to set for the secureScores property.
      * @return a void
      */

@@ -9,19 +9,19 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserAccount implements AdditionalDataHolder, Parsable {
-    /** The accountName property */
+    /** The user account's displayed name. */
     private String _accountName;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The azureAdUserId property */
+    /** The user object identifier in Azure AD. */
     private String _azureAdUserId;
-    /** The domainName property */
+    /** The name of the Active Directory domain of which the user is a member. */
     private String _domainName;
     /** The OdataType property */
     private String _odataType;
-    /** The userPrincipalName property */
+    /** The user principal name of the account in Azure AD. */
     private String _userPrincipalName;
-    /** The userSid property */
+    /** The local security identifier of the user account. */
     private String _userSid;
     /**
      * Instantiates a new userAccount and sets the default values.
@@ -42,7 +42,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         return new UserAccount();
     }
     /**
-     * Gets the accountName property value. The accountName property
+     * Gets the accountName property value. The user account's displayed name.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the azureAdUserId property value. The azureAdUserId property
+     * Gets the azureAdUserId property value. The user object identifier in Azure AD.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         return this._azureAdUserId;
     }
     /**
-     * Gets the domainName property value. The domainName property
+     * Gets the domainName property value. The name of the Active Directory domain of which the user is a member.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the userPrincipalName property value. The userPrincipalName property
+     * Gets the userPrincipalName property value. The user principal name of the account in Azure AD.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         return this._userPrincipalName;
     }
     /**
-     * Gets the userSid property value. The userSid property
+     * Gets the userSid property value. The local security identifier of the user account.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accountName property value. The accountName property
+     * Sets the accountName property value. The user account's displayed name.
      * @param value Value to set for the accountName property.
      * @return a void
      */
@@ -145,7 +145,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the azureAdUserId property value. The azureAdUserId property
+     * Sets the azureAdUserId property value. The user object identifier in Azure AD.
      * @param value Value to set for the azureAdUserId property.
      * @return a void
      */
@@ -153,7 +153,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         this._azureAdUserId = value;
     }
     /**
-     * Sets the domainName property value. The domainName property
+     * Sets the domainName property value. The name of the Active Directory domain of which the user is a member.
      * @param value Value to set for the domainName property.
      * @return a void
      */
@@ -169,7 +169,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the userPrincipalName property value. The userPrincipalName property
+     * Sets the userPrincipalName property value. The user principal name of the account in Azure AD.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
@@ -177,7 +177,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         this._userPrincipalName = value;
     }
     /**
-     * Sets the userSid property value. The userSid property
+     * Sets the userSid property value. The local security identifier of the user account.
      * @param value Value to set for the userSid property.
      * @return a void
      */

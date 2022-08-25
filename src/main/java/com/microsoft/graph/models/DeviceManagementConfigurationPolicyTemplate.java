@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Management Configuration Policy Template */
 public class DeviceManagementConfigurationPolicyTemplate extends Entity implements Parsable {
     /** Allow unmanaged setting templates */
     private Boolean _allowUnmanagedSettings;
@@ -34,7 +33,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     /** Template version. Valid values 1 to 2147483647. This property is read-only. */
     private Integer _version;
     /**
-     * Instantiates a new deviceManagementConfigurationPolicyTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationPolicyTemplate and sets the default values.
      * @return a void
      */
     public DeviceManagementConfigurationPolicyTemplate() {
@@ -44,7 +43,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationPolicyTemplate
+     * @return a DeviceManagementConfigurationPolicyTemplate
      */
     @javax.annotation.Nonnull
     public static DeviceManagementConfigurationPolicyTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

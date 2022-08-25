@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserEvidence extends AlertEvidence implements Parsable {
-    /** The userAccount property */
+    /** The user account details. */
     private UserAccount _userAccount;
     /**
      * Instantiates a new UserEvidence and sets the default values.
@@ -40,7 +40,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
         }};
     }
     /**
-     * Gets the userAccount property value. The userAccount property
+     * Gets the userAccount property value. The user account details.
      * @return a userAccount
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
         writer.writeObjectValue("userAccount", this.getUserAccount());
     }
     /**
-     * Sets the userAccount property value. The userAccount property
+     * Sets the userAccount property value. The user account details.
      * @param value Value to set for the userAccount property.
      * @return a void
      */

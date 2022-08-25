@@ -11,23 +11,23 @@ import java.util.Objects;
 public class FileDetails implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The fileName property */
+    /** The name of the file. */
     private String _fileName;
-    /** The filePath property */
+    /** The file path (location) of the file instance. */
     private String _filePath;
-    /** The filePublisher property */
+    /** The publisher of the file. */
     private String _filePublisher;
-    /** The fileSize property */
+    /** The size of the file in bytes. */
     private Long _fileSize;
-    /** The issuer property */
+    /** The certificate authority (CA) that issued the certificate. */
     private String _issuer;
     /** The OdataType property */
     private String _odataType;
-    /** The sha1 property */
+    /** The Sha1 cryptographic hash of the file content. */
     private String _sha1;
-    /** The sha256 property */
+    /** The Sha256 cryptographic hash of the file content. */
     private String _sha256;
-    /** The signer property */
+    /** The signer of the signed file. */
     private String _signer;
     /**
      * Instantiates a new fileDetails and sets the default values.
@@ -75,7 +75,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the fileName property value. The fileName property
+     * Gets the fileName property value. The name of the file.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         return this._fileName;
     }
     /**
-     * Gets the filePath property value. The filePath property
+     * Gets the filePath property value. The file path (location) of the file instance.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -91,7 +91,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         return this._filePath;
     }
     /**
-     * Gets the filePublisher property value. The filePublisher property
+     * Gets the filePublisher property value. The publisher of the file.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         return this._filePublisher;
     }
     /**
-     * Gets the fileSize property value. The fileSize property
+     * Gets the fileSize property value. The size of the file in bytes.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         return this._fileSize;
     }
     /**
-     * Gets the issuer property value. The issuer property
+     * Gets the issuer property value. The certificate authority (CA) that issued the certificate.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the sha1 property value. The sha1 property
+     * Gets the sha1 property value. The Sha1 cryptographic hash of the file content.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         return this._sha1;
     }
     /**
-     * Gets the sha256 property value. The sha256 property
+     * Gets the sha256 property value. The Sha256 cryptographic hash of the file content.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         return this._sha256;
     }
     /**
-     * Gets the signer property value. The signer property
+     * Gets the signer property value. The signer of the signed file.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -173,7 +173,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the fileName property value. The fileName property
+     * Sets the fileName property value. The name of the file.
      * @param value Value to set for the fileName property.
      * @return a void
      */
@@ -181,7 +181,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         this._fileName = value;
     }
     /**
-     * Sets the filePath property value. The filePath property
+     * Sets the filePath property value. The file path (location) of the file instance.
      * @param value Value to set for the filePath property.
      * @return a void
      */
@@ -189,7 +189,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         this._filePath = value;
     }
     /**
-     * Sets the filePublisher property value. The filePublisher property
+     * Sets the filePublisher property value. The publisher of the file.
      * @param value Value to set for the filePublisher property.
      * @return a void
      */
@@ -197,7 +197,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         this._filePublisher = value;
     }
     /**
-     * Sets the fileSize property value. The fileSize property
+     * Sets the fileSize property value. The size of the file in bytes.
      * @param value Value to set for the fileSize property.
      * @return a void
      */
@@ -205,7 +205,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         this._fileSize = value;
     }
     /**
-     * Sets the issuer property value. The issuer property
+     * Sets the issuer property value. The certificate authority (CA) that issued the certificate.
      * @param value Value to set for the issuer property.
      * @return a void
      */
@@ -221,7 +221,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the sha1 property value. The sha1 property
+     * Sets the sha1 property value. The Sha1 cryptographic hash of the file content.
      * @param value Value to set for the sha1 property.
      * @return a void
      */
@@ -229,7 +229,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         this._sha1 = value;
     }
     /**
-     * Sets the sha256 property value. The sha256 property
+     * Sets the sha256 property value. The Sha256 cryptographic hash of the file content.
      * @param value Value to set for the sha256 property.
      * @return a void
      */
@@ -237,7 +237,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
         this._sha256 = value;
     }
     /**
-     * Sets the signer property value. The signer property
+     * Sets the signer property value. The signer of the signed file.
      * @param value Value to set for the signer property.
      * @return a void
      */

@@ -9,11 +9,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LoggedOnUser implements AdditionalDataHolder, Parsable {
-    /** The accountName property */
+    /** User account name of the logged-on user. */
     private String _accountName;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The domainName property */
+    /** User account domain of the logged-on user. */
     private String _domainName;
     /** The OdataType property */
     private String _odataType;
@@ -36,7 +36,7 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
         return new LoggedOnUser();
     }
     /**
-     * Gets the accountName property value. The accountName property
+     * Gets the accountName property value. User account name of the logged-on user.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -52,7 +52,7 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the domainName property value. The domainName property
+     * Gets the domainName property value. User account domain of the logged-on user.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accountName property value. The accountName property
+     * Sets the accountName property value. User account name of the logged-on user.
      * @param value Value to set for the accountName property.
      * @return a void
      */
@@ -109,7 +109,7 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the domainName property value. The domainName property
+     * Sets the domainName property value. User account domain of the logged-on user.
      * @param value Value to set for the domainName property.
      * @return a void
      */

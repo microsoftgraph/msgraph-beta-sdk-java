@@ -59,7 +59,7 @@ public class IncidentsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get incidents from security
+     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class IncidentsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get incidents from security
+     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class IncidentsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get incidents from security
+     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      * @return a CompletableFuture of IncidentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<IncidentCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class IncidentsRequestBuilder {
         }
     }
     /**
-     * Get incidents from security
+     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of IncidentCollectionResponse
      */
@@ -155,7 +155,7 @@ public class IncidentsRequestBuilder {
         }
     }
     /**
-     * Get incidents from security
+     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of IncidentCollectionResponse
@@ -227,7 +227,7 @@ public class IncidentsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get incidents from security */
+    /** A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack. */
     public class IncidentsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

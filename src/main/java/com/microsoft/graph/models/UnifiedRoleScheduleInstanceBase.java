@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable {
     /** Read-only property with details of the app-specific scope when the assignment or role eligibility is scoped to an app. Nullable. */
     private AppScope _appScope;

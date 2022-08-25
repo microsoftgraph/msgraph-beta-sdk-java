@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class TodoTask extends Entity implements Parsable {
     /** A collection of file attachments for the task. */
     private java.util.List<AttachmentBase> _attachments;

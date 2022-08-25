@@ -9,35 +9,35 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Incident extends Entity implements Parsable {
-    /** The alerts property */
+    /** The list of related alerts. Supports $expand. */
     private java.util.List<Alert> _alerts;
-    /** The assignedTo property */
+    /** Owner of the incident, or null if no owner is assigned. Free editable text. */
     private String _assignedTo;
-    /** The classification property */
+    /** The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue. */
     private AlertClassification _classification;
-    /** The comments property */
+    /** Array of comments created by the Security Operations (SecOps) team when the incident is managed. */
     private java.util.List<AlertComment> _comments;
-    /** The createdDateTime property */
+    /** Time when the incident was first created. */
     private OffsetDateTime _createdDateTime;
-    /** The determination property */
+    /** Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue. */
     private AlertDetermination _determination;
-    /** The displayName property */
+    /** The incident name. */
     private String _displayName;
-    /** The incidentWebUrl property */
+    /** The URL for the incident page in the Microsoft 365 Defender portal. */
     private String _incidentWebUrl;
-    /** The lastUpdateDateTime property */
+    /** Time when the incident was last updated. */
     private OffsetDateTime _lastUpdateDateTime;
-    /** The redirectIncidentId property */
+    /** Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected. */
     private String _redirectIncidentId;
     /** The severity property */
     private AlertSeverity _severity;
     /** The status property */
     private IncidentStatus _status;
-    /** The tags property */
+    /** Array of custom tags associated with an incident. */
     private java.util.List<String> _tags;
-    /** The tenantId property */
+    /** The Azure Active Directory tenant in which the alert was created. */
     private String _tenantId;
     /**
      * Instantiates a new incident and sets the default values.
@@ -58,7 +58,7 @@ public class Incident extends Entity implements Parsable {
         return new Incident();
     }
     /**
-     * Gets the alerts property value. The alerts property
+     * Gets the alerts property value. The list of related alerts. Supports $expand.
      * @return a alert
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class Incident extends Entity implements Parsable {
         return this._alerts;
     }
     /**
-     * Gets the assignedTo property value. The assignedTo property
+     * Gets the assignedTo property value. Owner of the incident, or null if no owner is assigned. Free editable text.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class Incident extends Entity implements Parsable {
         return this._assignedTo;
     }
     /**
-     * Gets the classification property value. The classification property
+     * Gets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @return a alertClassification
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class Incident extends Entity implements Parsable {
         return this._classification;
     }
     /**
-     * Gets the comments property value. The comments property
+     * Gets the comments property value. Array of comments created by the Security Operations (SecOps) team when the incident is managed.
      * @return a alertComment
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class Incident extends Entity implements Parsable {
         return this._comments;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Time when the incident was first created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class Incident extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the determination property value. The determination property
+     * Gets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @return a alertDetermination
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class Incident extends Entity implements Parsable {
         return this._determination;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The incident name.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class Incident extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the incidentWebUrl property value. The incidentWebUrl property
+     * Gets the incidentWebUrl property value. The URL for the incident page in the Microsoft 365 Defender portal.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -146,7 +146,7 @@ public class Incident extends Entity implements Parsable {
         return this._incidentWebUrl;
     }
     /**
-     * Gets the lastUpdateDateTime property value. The lastUpdateDateTime property
+     * Gets the lastUpdateDateTime property value. Time when the incident was last updated.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -154,7 +154,7 @@ public class Incident extends Entity implements Parsable {
         return this._lastUpdateDateTime;
     }
     /**
-     * Gets the redirectIncidentId property value. The redirectIncidentId property
+     * Gets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -178,7 +178,7 @@ public class Incident extends Entity implements Parsable {
         return this._status;
     }
     /**
-     * Gets the tags property value. The tags property
+     * Gets the tags property value. Array of custom tags associated with an incident.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class Incident extends Entity implements Parsable {
         return this._tags;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The Azure Active Directory tenant in which the alert was created.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -217,7 +217,7 @@ public class Incident extends Entity implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the alerts property value. The alerts property
+     * Sets the alerts property value. The list of related alerts. Supports $expand.
      * @param value Value to set for the alerts property.
      * @return a void
      */
@@ -225,7 +225,7 @@ public class Incident extends Entity implements Parsable {
         this._alerts = value;
     }
     /**
-     * Sets the assignedTo property value. The assignedTo property
+     * Sets the assignedTo property value. Owner of the incident, or null if no owner is assigned. Free editable text.
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
@@ -233,7 +233,7 @@ public class Incident extends Entity implements Parsable {
         this._assignedTo = value;
     }
     /**
-     * Sets the classification property value. The classification property
+     * Sets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @param value Value to set for the classification property.
      * @return a void
      */
@@ -241,7 +241,7 @@ public class Incident extends Entity implements Parsable {
         this._classification = value;
     }
     /**
-     * Sets the comments property value. The comments property
+     * Sets the comments property value. Array of comments created by the Security Operations (SecOps) team when the incident is managed.
      * @param value Value to set for the comments property.
      * @return a void
      */
@@ -249,7 +249,7 @@ public class Incident extends Entity implements Parsable {
         this._comments = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Time when the incident was first created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -257,7 +257,7 @@ public class Incident extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the determination property value. The determination property
+     * Sets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @param value Value to set for the determination property.
      * @return a void
      */
@@ -265,7 +265,7 @@ public class Incident extends Entity implements Parsable {
         this._determination = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The incident name.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -273,7 +273,7 @@ public class Incident extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the incidentWebUrl property value. The incidentWebUrl property
+     * Sets the incidentWebUrl property value. The URL for the incident page in the Microsoft 365 Defender portal.
      * @param value Value to set for the incidentWebUrl property.
      * @return a void
      */
@@ -281,7 +281,7 @@ public class Incident extends Entity implements Parsable {
         this._incidentWebUrl = value;
     }
     /**
-     * Sets the lastUpdateDateTime property value. The lastUpdateDateTime property
+     * Sets the lastUpdateDateTime property value. Time when the incident was last updated.
      * @param value Value to set for the lastUpdateDateTime property.
      * @return a void
      */
@@ -289,7 +289,7 @@ public class Incident extends Entity implements Parsable {
         this._lastUpdateDateTime = value;
     }
     /**
-     * Sets the redirectIncidentId property value. The redirectIncidentId property
+     * Sets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
      * @param value Value to set for the redirectIncidentId property.
      * @return a void
      */
@@ -313,7 +313,7 @@ public class Incident extends Entity implements Parsable {
         this._status = value;
     }
     /**
-     * Sets the tags property value. The tags property
+     * Sets the tags property value. Array of custom tags associated with an incident.
      * @param value Value to set for the tags property.
      * @return a void
      */
@@ -321,7 +321,7 @@ public class Incident extends Entity implements Parsable {
         this._tags = value;
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The Azure Active Directory tenant in which the alert was created.
      * @param value Value to set for the tenantId property.
      * @return a void
      */

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents a collection of Microsoft Tunnel settings */
 public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     /** Additional settings that may be applied to the server */
     private java.util.List<KeyValuePair> _advancedSettings;
@@ -36,7 +37,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     /** The domains that will be resolved using the provided dns servers */
     private java.util.List<String> _splitDNS;
     /**
-     * Instantiates a new MicrosoftTunnelConfiguration and sets the default values.
+     * Instantiates a new microsoftTunnelConfiguration and sets the default values.
      * @return a void
      */
     public MicrosoftTunnelConfiguration() {
@@ -46,7 +47,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftTunnelConfiguration
+     * @return a microsoftTunnelConfiguration
      */
     @javax.annotation.Nonnull
     public static MicrosoftTunnelConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

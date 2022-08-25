@@ -59,7 +59,7 @@ public class Alerts_v2RequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get alerts_v2 from security
+     * A collection of alerts in Microsoft 365 Defender.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class Alerts_v2RequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get alerts_v2 from security
+     * A collection of alerts in Microsoft 365 Defender.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class Alerts_v2RequestBuilder {
         return requestInfo;
     }
     /**
-     * Get alerts_v2 from security
+     * A collection of alerts in Microsoft 365 Defender.
      * @return a CompletableFuture of AlertCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AlertCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class Alerts_v2RequestBuilder {
         }
     }
     /**
-     * Get alerts_v2 from security
+     * A collection of alerts in Microsoft 365 Defender.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AlertCollectionResponse
      */
@@ -155,7 +155,7 @@ public class Alerts_v2RequestBuilder {
         }
     }
     /**
-     * Get alerts_v2 from security
+     * A collection of alerts in Microsoft 365 Defender.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AlertCollectionResponse
@@ -227,7 +227,7 @@ public class Alerts_v2RequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get alerts_v2 from security */
+    /** A collection of alerts in Microsoft 365 Defender. */
     public class Alerts_v2RequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

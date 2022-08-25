@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
 public class UserCredentialUsageDetails extends Entity implements Parsable {
     /** The authMethod property */
     private UsageAuthMethod _authMethod;
@@ -25,7 +24,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     /** User principal name of the user performing the reset or registration workflow. */
     private String _userPrincipalName;
     /**
-     * Instantiates a new userCredentialUsageDetails and sets the default values.
+     * Instantiates a new UserCredentialUsageDetails and sets the default values.
      * @return a void
      */
     public UserCredentialUsageDetails() {
@@ -35,7 +34,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userCredentialUsageDetails
+     * @return a UserCredentialUsageDetails
      */
     @javax.annotation.Nonnull
     public static UserCredentialUsageDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -11,11 +11,11 @@ import java.util.Objects;
 public class EmailSender implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The displayName property */
+    /** The name of the sender. */
     private String _displayName;
-    /** The domainName property */
+    /** Sender domain. */
     private String _domainName;
-    /** The emailAddress property */
+    /** Sender email address. */
     private String _emailAddress;
     /** The OdataType property */
     private String _odataType;
@@ -46,7 +46,7 @@ public class EmailSender implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the sender.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -54,7 +54,7 @@ public class EmailSender implements AdditionalDataHolder, Parsable {
         return this._displayName;
     }
     /**
-     * Gets the domainName property value. The domainName property
+     * Gets the domainName property value. Sender domain.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class EmailSender implements AdditionalDataHolder, Parsable {
         return this._domainName;
     }
     /**
-     * Gets the emailAddress property value. The emailAddress property
+     * Gets the emailAddress property value. Sender email address.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class EmailSender implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the sender.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -121,7 +121,7 @@ public class EmailSender implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the domainName property value. The domainName property
+     * Sets the domainName property value. Sender domain.
      * @param value Value to set for the domainName property.
      * @return a void
      */
@@ -129,7 +129,7 @@ public class EmailSender implements AdditionalDataHolder, Parsable {
         this._domainName = value;
     }
     /**
-     * Sets the emailAddress property value. The emailAddress property
+     * Sets the emailAddress property value. Sender email address.
      * @param value Value to set for the emailAddress property.
      * @return a void
      */

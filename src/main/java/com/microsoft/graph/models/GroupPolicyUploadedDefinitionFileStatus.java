@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of activityStatistics entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum GroupPolicyUploadedDefinitionFileStatus implements ValuedEnum {
     /** Group Policy uploaded definition file invalid upload status. */
     None("none"),

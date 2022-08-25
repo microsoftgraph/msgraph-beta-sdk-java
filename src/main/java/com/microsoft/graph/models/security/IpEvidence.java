@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IpEvidence extends AlertEvidence implements Parsable {
-    /** The ipAddress property */
+    /** The value of the IP Address, can be either in V4 address or V6 address format. */
     private String _ipAddress;
     /**
      * Instantiates a new IpEvidence and sets the default values.
@@ -40,7 +40,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
         }};
     }
     /**
-     * Gets the ipAddress property value. The ipAddress property
+     * Gets the ipAddress property value. The value of the IP Address, can be either in V4 address or V6 address format.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("ipAddress", this.getIpAddress());
     }
     /**
-     * Sets the ipAddress property value. The ipAddress property
+     * Sets the ipAddress property value. The value of the IP Address, can be either in V4 address or V6 address format.
      * @param value Value to set for the ipAddress property.
      * @return a void
      */

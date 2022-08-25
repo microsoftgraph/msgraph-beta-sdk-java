@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OauthApplicationEvidence extends AlertEvidence implements Parsable {
-    /** The appId property */
+    /** Unique identifier of the application. */
     private String _appId;
-    /** The displayName property */
+    /** Name of the application. */
     private String _displayName;
-    /** The objectId property */
+    /** The unique identifier of the application object in Azure AD. */
     private String _objectId;
-    /** The publisher property */
+    /** The name of the application publisher. */
     private String _publisher;
     /**
      * Instantiates a new OauthApplicationEvidence and sets the default values.
@@ -35,7 +35,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
         return new OauthApplicationEvidence();
     }
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. Unique identifier of the application.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -43,7 +43,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
         return this._appId;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Name of the application.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
         }};
     }
     /**
-     * Gets the objectId property value. The objectId property
+     * Gets the objectId property value. The unique identifier of the application object in Azure AD.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
         return this._objectId;
     }
     /**
-     * Gets the publisher property value. The publisher property
+     * Gets the publisher property value. The name of the application publisher.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
         writer.writeStringValue("publisher", this.getPublisher());
     }
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. Unique identifier of the application.
      * @param value Value to set for the appId property.
      * @return a void
      */
@@ -102,7 +102,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
         this._appId = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Name of the application.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -110,7 +110,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
         this._displayName = value;
     }
     /**
-     * Sets the objectId property value. The objectId property
+     * Sets the objectId property value. The unique identifier of the application object in Azure AD.
      * @param value Value to set for the objectId property.
      * @return a void
      */
@@ -118,7 +118,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
         this._objectId = value;
     }
     /**
-     * Sets the publisher property value. The publisher property
+     * Sets the publisher property value. The name of the application publisher.
      * @param value Value to set for the publisher property.
      * @return a void
      */

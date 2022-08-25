@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics battery health device performance entity contains device level battery information. */
 public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity implements Parsable {
     /** Estimated battery age. Unit in days. Valid values -2147483648 to 2147483647 */
     private Integer _batteryAgeInDays;
@@ -28,7 +27,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     /** The model name of the device. */
     private String _model;
     /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthDevicePerformance and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthDevicePerformance and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBatteryHealthDevicePerformance() {
@@ -38,7 +37,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthDevicePerformance
+     * @return a UserExperienceAnalyticsBatteryHealthDevicePerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthDevicePerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
