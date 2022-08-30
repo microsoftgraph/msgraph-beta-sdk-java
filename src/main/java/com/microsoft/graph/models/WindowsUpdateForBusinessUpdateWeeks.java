@@ -36,6 +36,10 @@ public enum WindowsUpdateForBusinessUpdateWeeks
     */
     EVERY_WEEK,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For WindowsUpdateForBusinessUpdateWeeks values that were not expected from the service
     */
     UNEXPECTED_VALUE

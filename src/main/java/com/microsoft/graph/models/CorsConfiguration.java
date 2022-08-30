@@ -40,7 +40,7 @@ public class CorsConfiguration implements IJsonBackedObject {
 
     /**
      * The Allowed Headers.
-     * 
+     * The request headers that the origin domain may specify on the CORS request. The wildcard character * indicates that any header beginning with the specified prefix is allowed.
      */
     @SerializedName(value = "allowedHeaders", alternate = {"AllowedHeaders"})
     @Expose
@@ -49,7 +49,7 @@ public class CorsConfiguration implements IJsonBackedObject {
 
     /**
      * The Allowed Methods.
-     * 
+     * The HTTP request methods that the origin domain may use for a CORS request.
      */
     @SerializedName(value = "allowedMethods", alternate = {"AllowedMethods"})
     @Expose
@@ -58,7 +58,7 @@ public class CorsConfiguration implements IJsonBackedObject {
 
     /**
      * The Allowed Origins.
-     * 
+     * The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user age sends to the service.
      */
     @SerializedName(value = "allowedOrigins", alternate = {"AllowedOrigins"})
     @Expose
@@ -67,7 +67,7 @@ public class CorsConfiguration implements IJsonBackedObject {
 
     /**
      * The Max Age In Seconds.
-     * 
+     * The maximum amount of time that a browser should cache the response to the preflight OPTIONS request.
      */
     @SerializedName(value = "maxAgeInSeconds", alternate = {"MaxAgeInSeconds"})
     @Expose
@@ -76,7 +76,7 @@ public class CorsConfiguration implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * 
+     * Resource within the application segment for which CORS permissions are granted. / grants permission for whole app segment.
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose

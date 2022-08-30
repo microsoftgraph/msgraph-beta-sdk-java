@@ -160,8 +160,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Workbooks objects
      */
     @Nonnull
-    public DriveItemCollectionRequestBuilder workbooks() {
-        return new DriveItemCollectionRequestBuilder(getServiceRoot() + "/workbooks", this, null);
+    public com.microsoft.graph.requests.DriveItemCollectionRequestBuilder workbooks() {
+        return new com.microsoft.graph.requests.DriveItemCollectionRequestBuilder(getServiceRoot() + "/workbooks", this, null);
     }
 
     /**
@@ -171,8 +171,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Workbooks object
      */
     @Nonnull
-    public DriveItemRequestBuilder workbooks(@Nonnull final String id) {
-        return new DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, this, null);
+    public com.microsoft.graph.requests.DriveItemRequestBuilder workbooks(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, this, null);
     }
 
     /**
@@ -181,8 +181,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Invitations objects
      */
     @Nonnull
-    public InvitationCollectionRequestBuilder invitations() {
-        return new InvitationCollectionRequestBuilder(getServiceRoot() + "/invitations", this, null);
+    public com.microsoft.graph.requests.InvitationCollectionRequestBuilder invitations() {
+        return new com.microsoft.graph.requests.InvitationCollectionRequestBuilder(getServiceRoot() + "/invitations", this, null);
     }
 
     /**
@@ -192,8 +192,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Invitations object
      */
     @Nonnull
-    public InvitationRequestBuilder invitations(@Nonnull final String id) {
-        return new InvitationRequestBuilder(getServiceRoot() + "/invitations/" + id, this, null);
+    public com.microsoft.graph.requests.InvitationRequestBuilder invitations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.InvitationRequestBuilder(getServiceRoot() + "/invitations/" + id, this, null);
     }
 
     /**
@@ -202,8 +202,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Users objects
      */
     @Nonnull
-    public UserCollectionRequestBuilder users() {
-        return new UserCollectionRequestBuilder(getServiceRoot() + "/users", this, null);
+    public com.microsoft.graph.requests.UserCollectionRequestBuilder users() {
+        return new com.microsoft.graph.requests.UserCollectionRequestBuilder(getServiceRoot() + "/users", this, null);
     }
 
     /**
@@ -213,8 +213,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Users object
      */
     @Nonnull
-    public UserRequestBuilder users(@Nonnull final String id) {
-        return new UserRequestBuilder(getServiceRoot() + "/users/" + id, this, null);
+    public com.microsoft.graph.requests.UserRequestBuilder users(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserRequestBuilder(getServiceRoot() + "/users/" + id, this, null);
     }
 
     /**
@@ -223,8 +223,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Activitystatistics objects
      */
     @Nonnull
-    public ActivityStatisticsCollectionRequestBuilder activitystatistics() {
-        return new ActivityStatisticsCollectionRequestBuilder(getServiceRoot() + "/activitystatistics", this, null);
+    public com.microsoft.graph.requests.ActivityStatisticsCollectionRequestBuilder activitystatistics() {
+        return new com.microsoft.graph.requests.ActivityStatisticsCollectionRequestBuilder(getServiceRoot() + "/activitystatistics", this, null);
     }
 
     /**
@@ -234,8 +234,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Activitystatistics object
      */
     @Nonnull
-    public ActivityStatisticsRequestBuilder activitystatistics(@Nonnull final String id) {
-        return new ActivityStatisticsRequestBuilder(getServiceRoot() + "/activitystatistics/" + id, this, null);
+    public com.microsoft.graph.requests.ActivityStatisticsRequestBuilder activitystatistics(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ActivityStatisticsRequestBuilder(getServiceRoot() + "/activitystatistics/" + id, this, null);
     }
 
     /**
@@ -244,8 +244,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of ApplicationTemplates objects
      */
     @Nonnull
-    public ApplicationTemplateCollectionRequestBuilder applicationTemplates() {
-        return new ApplicationTemplateCollectionRequestBuilder(getServiceRoot() + "/applicationTemplates", this, null);
+    public com.microsoft.graph.requests.ApplicationTemplateCollectionRequestBuilder applicationTemplates() {
+        return new com.microsoft.graph.requests.ApplicationTemplateCollectionRequestBuilder(getServiceRoot() + "/applicationTemplates", this, null);
     }
 
     /**
@@ -255,8 +255,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the ApplicationTemplates object
      */
     @Nonnull
-    public ApplicationTemplateRequestBuilder applicationTemplates(@Nonnull final String id) {
-        return new ApplicationTemplateRequestBuilder(getServiceRoot() + "/applicationTemplates/" + id, this, null);
+    public com.microsoft.graph.requests.ApplicationTemplateRequestBuilder applicationTemplates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ApplicationTemplateRequestBuilder(getServiceRoot() + "/applicationTemplates/" + id, this, null);
     }
 
     /**
@@ -265,8 +265,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of ServicePrincipals objects
      */
     @Nonnull
-    public ServicePrincipalCollectionRequestBuilder servicePrincipals() {
-        return new ServicePrincipalCollectionRequestBuilder(getServiceRoot() + "/servicePrincipals", this, null);
+    public com.microsoft.graph.requests.ServicePrincipalCollectionRequestBuilder servicePrincipals() {
+        return new com.microsoft.graph.requests.ServicePrincipalCollectionRequestBuilder(getServiceRoot() + "/servicePrincipals", this, null);
     }
 
     /**
@@ -276,8 +276,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the ServicePrincipals object
      */
     @Nonnull
-    public ServicePrincipalRequestBuilder servicePrincipals(@Nonnull final String id) {
-        return new ServicePrincipalRequestBuilder(getServiceRoot() + "/servicePrincipals/" + id, this, null);
+    public com.microsoft.graph.requests.ServicePrincipalRequestBuilder servicePrincipals(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServicePrincipalRequestBuilder(getServiceRoot() + "/servicePrincipals/" + id, this, null);
     }
 
     /**
@@ -286,8 +286,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of AuthenticationMethodConfigurations objects
      */
     @Nonnull
-    public AuthenticationMethodConfigurationCollectionRequestBuilder authenticationMethodConfigurations() {
-        return new AuthenticationMethodConfigurationCollectionRequestBuilder(getServiceRoot() + "/authenticationMethodConfigurations", this, null);
+    public com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionRequestBuilder authenticationMethodConfigurations() {
+        return new com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionRequestBuilder(getServiceRoot() + "/authenticationMethodConfigurations", this, null);
     }
 
     /**
@@ -297,8 +297,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the AuthenticationMethodConfigurations object
      */
     @Nonnull
-    public AuthenticationMethodConfigurationRequestBuilder authenticationMethodConfigurations(@Nonnull final String id) {
-        return new AuthenticationMethodConfigurationRequestBuilder(getServiceRoot() + "/authenticationMethodConfigurations/" + id, this, null);
+    public com.microsoft.graph.requests.AuthenticationMethodConfigurationRequestBuilder authenticationMethodConfigurations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuthenticationMethodConfigurationRequestBuilder(getServiceRoot() + "/authenticationMethodConfigurations/" + id, this, null);
     }
 
     /**
@@ -307,8 +307,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of BookingBusinesses objects
      */
     @Nonnull
-    public BookingBusinessCollectionRequestBuilder bookingBusinesses() {
-        return new BookingBusinessCollectionRequestBuilder(getServiceRoot() + "/bookingBusinesses", this, null);
+    public com.microsoft.graph.requests.BookingBusinessCollectionRequestBuilder bookingBusinesses() {
+        return new com.microsoft.graph.requests.BookingBusinessCollectionRequestBuilder(getServiceRoot() + "/bookingBusinesses", this, null);
     }
 
     /**
@@ -318,8 +318,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the BookingBusinesses object
      */
     @Nonnull
-    public BookingBusinessRequestBuilder bookingBusinesses(@Nonnull final String id) {
-        return new BookingBusinessRequestBuilder(getServiceRoot() + "/bookingBusinesses/" + id, this, null);
+    public com.microsoft.graph.requests.BookingBusinessRequestBuilder bookingBusinesses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BookingBusinessRequestBuilder(getServiceRoot() + "/bookingBusinesses/" + id, this, null);
     }
 
     /**
@@ -328,8 +328,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of BookingCurrencies objects
      */
     @Nonnull
-    public BookingCurrencyCollectionRequestBuilder bookingCurrencies() {
-        return new BookingCurrencyCollectionRequestBuilder(getServiceRoot() + "/bookingCurrencies", this, null);
+    public com.microsoft.graph.requests.BookingCurrencyCollectionRequestBuilder bookingCurrencies() {
+        return new com.microsoft.graph.requests.BookingCurrencyCollectionRequestBuilder(getServiceRoot() + "/bookingCurrencies", this, null);
     }
 
     /**
@@ -339,8 +339,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the BookingCurrencies object
      */
     @Nonnull
-    public BookingCurrencyRequestBuilder bookingCurrencies(@Nonnull final String id) {
-        return new BookingCurrencyRequestBuilder(getServiceRoot() + "/bookingCurrencies/" + id, this, null);
+    public com.microsoft.graph.requests.BookingCurrencyRequestBuilder bookingCurrencies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BookingCurrencyRequestBuilder(getServiceRoot() + "/bookingCurrencies/" + id, this, null);
     }
 
     /**
@@ -349,8 +349,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Devices objects
      */
     @Nonnull
-    public DeviceCollectionRequestBuilder devices() {
-        return new DeviceCollectionRequestBuilder(getServiceRoot() + "/devices", this, null);
+    public com.microsoft.graph.requests.DeviceCollectionRequestBuilder devices() {
+        return new com.microsoft.graph.requests.DeviceCollectionRequestBuilder(getServiceRoot() + "/devices", this, null);
     }
 
     /**
@@ -360,8 +360,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Devices object
      */
     @Nonnull
-    public DeviceRequestBuilder devices(@Nonnull final String id) {
-        return new DeviceRequestBuilder(getServiceRoot() + "/devices/" + id, this, null);
+    public com.microsoft.graph.requests.DeviceRequestBuilder devices(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceRequestBuilder(getServiceRoot() + "/devices/" + id, this, null);
     }
 
     /**
@@ -372,8 +372,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      */
     @Deprecated
     @Nonnull
-    public IdentityProviderCollectionRequestBuilder identityProviders() {
-        return new IdentityProviderCollectionRequestBuilder(getServiceRoot() + "/identityProviders", this, null);
+    public com.microsoft.graph.requests.IdentityProviderCollectionRequestBuilder identityProviders() {
+        return new com.microsoft.graph.requests.IdentityProviderCollectionRequestBuilder(getServiceRoot() + "/identityProviders", this, null);
     }
 
     /**
@@ -385,8 +385,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      */
     @Deprecated
     @Nonnull
-    public IdentityProviderRequestBuilder identityProviders(@Nonnull final String id) {
-        return new IdentityProviderRequestBuilder(getServiceRoot() + "/identityProviders/" + id, this, null);
+    public com.microsoft.graph.requests.IdentityProviderRequestBuilder identityProviders(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IdentityProviderRequestBuilder(getServiceRoot() + "/identityProviders/" + id, this, null);
     }
 
     /**
@@ -395,8 +395,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of AdministrativeUnits objects
      */
     @Nonnull
-    public AdministrativeUnitCollectionRequestBuilder administrativeUnits() {
-        return new AdministrativeUnitCollectionRequestBuilder(getServiceRoot() + "/administrativeUnits", this, null);
+    public com.microsoft.graph.requests.AdministrativeUnitCollectionRequestBuilder administrativeUnits() {
+        return new com.microsoft.graph.requests.AdministrativeUnitCollectionRequestBuilder(getServiceRoot() + "/administrativeUnits", this, null);
     }
 
     /**
@@ -406,8 +406,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the AdministrativeUnits object
      */
     @Nonnull
-    public AdministrativeUnitRequestBuilder administrativeUnits(@Nonnull final String id) {
-        return new AdministrativeUnitRequestBuilder(getServiceRoot() + "/administrativeUnits/" + id, this, null);
+    public com.microsoft.graph.requests.AdministrativeUnitRequestBuilder administrativeUnits(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AdministrativeUnitRequestBuilder(getServiceRoot() + "/administrativeUnits/" + id, this, null);
     }
 
     /**
@@ -416,8 +416,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of AllowedDataLocations objects
      */
     @Nonnull
-    public AllowedDataLocationCollectionRequestBuilder allowedDataLocations() {
-        return new AllowedDataLocationCollectionRequestBuilder(getServiceRoot() + "/allowedDataLocations", this, null);
+    public com.microsoft.graph.requests.AllowedDataLocationCollectionRequestBuilder allowedDataLocations() {
+        return new com.microsoft.graph.requests.AllowedDataLocationCollectionRequestBuilder(getServiceRoot() + "/allowedDataLocations", this, null);
     }
 
     /**
@@ -427,8 +427,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the AllowedDataLocations object
      */
     @Nonnull
-    public AllowedDataLocationRequestBuilder allowedDataLocations(@Nonnull final String id) {
-        return new AllowedDataLocationRequestBuilder(getServiceRoot() + "/allowedDataLocations/" + id, this, null);
+    public com.microsoft.graph.requests.AllowedDataLocationRequestBuilder allowedDataLocations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AllowedDataLocationRequestBuilder(getServiceRoot() + "/allowedDataLocations/" + id, this, null);
     }
 
     /**
@@ -437,8 +437,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Applications objects
      */
     @Nonnull
-    public ApplicationCollectionRequestBuilder applications() {
-        return new ApplicationCollectionRequestBuilder(getServiceRoot() + "/applications", this, null);
+    public com.microsoft.graph.requests.ApplicationCollectionRequestBuilder applications() {
+        return new com.microsoft.graph.requests.ApplicationCollectionRequestBuilder(getServiceRoot() + "/applications", this, null);
     }
 
     /**
@@ -448,8 +448,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Applications object
      */
     @Nonnull
-    public ApplicationRequestBuilder applications(@Nonnull final String id) {
-        return new ApplicationRequestBuilder(getServiceRoot() + "/applications/" + id, this, null);
+    public com.microsoft.graph.requests.ApplicationRequestBuilder applications(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ApplicationRequestBuilder(getServiceRoot() + "/applications/" + id, this, null);
     }
 
     /**
@@ -458,8 +458,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of AppRoleAssignments objects
      */
     @Nonnull
-    public AppRoleAssignmentCollectionRequestBuilder appRoleAssignments() {
-        return new AppRoleAssignmentCollectionRequestBuilder(getServiceRoot() + "/appRoleAssignments", this, null);
+    public com.microsoft.graph.requests.AppRoleAssignmentCollectionRequestBuilder appRoleAssignments() {
+        return new com.microsoft.graph.requests.AppRoleAssignmentCollectionRequestBuilder(getServiceRoot() + "/appRoleAssignments", this, null);
     }
 
     /**
@@ -469,8 +469,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the AppRoleAssignments object
      */
     @Nonnull
-    public AppRoleAssignmentRequestBuilder appRoleAssignments(@Nonnull final String id) {
-        return new AppRoleAssignmentRequestBuilder(getServiceRoot() + "/appRoleAssignments/" + id, this, null);
+    public com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder appRoleAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder(getServiceRoot() + "/appRoleAssignments/" + id, this, null);
     }
 
     /**
@@ -479,8 +479,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of CertificateBasedAuthConfiguration objects
      */
     @Nonnull
-    public CertificateBasedAuthConfigurationCollectionRequestBuilder certificateBasedAuthConfiguration() {
-        return new CertificateBasedAuthConfigurationCollectionRequestBuilder(getServiceRoot() + "/certificateBasedAuthConfiguration", this, null);
+    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionRequestBuilder certificateBasedAuthConfiguration() {
+        return new com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionRequestBuilder(getServiceRoot() + "/certificateBasedAuthConfiguration", this, null);
     }
 
     /**
@@ -490,8 +490,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the CertificateBasedAuthConfiguration object
      */
     @Nonnull
-    public CertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration(@Nonnull final String id) {
-        return new CertificateBasedAuthConfigurationRequestBuilder(getServiceRoot() + "/certificateBasedAuthConfiguration/" + id, this, null);
+    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CertificateBasedAuthConfigurationRequestBuilder(getServiceRoot() + "/certificateBasedAuthConfiguration/" + id, this, null);
     }
 
     /**
@@ -500,8 +500,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Contacts objects
      */
     @Nonnull
-    public OrgContactCollectionRequestBuilder contacts() {
-        return new OrgContactCollectionRequestBuilder(getServiceRoot() + "/contacts", this, null);
+    public com.microsoft.graph.requests.OrgContactCollectionRequestBuilder contacts() {
+        return new com.microsoft.graph.requests.OrgContactCollectionRequestBuilder(getServiceRoot() + "/contacts", this, null);
     }
 
     /**
@@ -511,8 +511,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Contacts object
      */
     @Nonnull
-    public OrgContactRequestBuilder contacts(@Nonnull final String id) {
-        return new OrgContactRequestBuilder(getServiceRoot() + "/contacts/" + id, this, null);
+    public com.microsoft.graph.requests.OrgContactRequestBuilder contacts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OrgContactRequestBuilder(getServiceRoot() + "/contacts/" + id, this, null);
     }
 
     /**
@@ -521,8 +521,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Contracts objects
      */
     @Nonnull
-    public ContractCollectionRequestBuilder contracts() {
-        return new ContractCollectionRequestBuilder(getServiceRoot() + "/contracts", this, null);
+    public com.microsoft.graph.requests.ContractCollectionRequestBuilder contracts() {
+        return new com.microsoft.graph.requests.ContractCollectionRequestBuilder(getServiceRoot() + "/contracts", this, null);
     }
 
     /**
@@ -532,8 +532,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Contracts object
      */
     @Nonnull
-    public ContractRequestBuilder contracts(@Nonnull final String id) {
-        return new ContractRequestBuilder(getServiceRoot() + "/contracts/" + id, this, null);
+    public com.microsoft.graph.requests.ContractRequestBuilder contracts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ContractRequestBuilder(getServiceRoot() + "/contracts/" + id, this, null);
     }
 
     /**
@@ -542,8 +542,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of DirectoryObjects objects
      */
     @Nonnull
-    public DirectoryObjectCollectionRequestBuilder directoryObjects() {
-        return new DirectoryObjectCollectionRequestBuilder(getServiceRoot() + "/directoryObjects", this, null);
+    public com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder directoryObjects() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder(getServiceRoot() + "/directoryObjects", this, null);
     }
 
     /**
@@ -553,8 +553,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the DirectoryObjects object
      */
     @Nonnull
-    public DirectoryObjectRequestBuilder directoryObjects(@Nonnull final String id) {
-        return new DirectoryObjectRequestBuilder(getServiceRoot() + "/directoryObjects/" + id, this, null);
+    public com.microsoft.graph.requests.DirectoryObjectRequestBuilder directoryObjects(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectRequestBuilder(getServiceRoot() + "/directoryObjects/" + id, this, null);
     }
 
     /**
@@ -563,8 +563,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of DirectoryRoles objects
      */
     @Nonnull
-    public DirectoryRoleCollectionRequestBuilder directoryRoles() {
-        return new DirectoryRoleCollectionRequestBuilder(getServiceRoot() + "/directoryRoles", this, null);
+    public com.microsoft.graph.requests.DirectoryRoleCollectionRequestBuilder directoryRoles() {
+        return new com.microsoft.graph.requests.DirectoryRoleCollectionRequestBuilder(getServiceRoot() + "/directoryRoles", this, null);
     }
 
     /**
@@ -574,8 +574,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the DirectoryRoles object
      */
     @Nonnull
-    public DirectoryRoleRequestBuilder directoryRoles(@Nonnull final String id) {
-        return new DirectoryRoleRequestBuilder(getServiceRoot() + "/directoryRoles/" + id, this, null);
+    public com.microsoft.graph.requests.DirectoryRoleRequestBuilder directoryRoles(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryRoleRequestBuilder(getServiceRoot() + "/directoryRoles/" + id, this, null);
     }
 
     /**
@@ -584,8 +584,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of DirectoryRoleTemplates objects
      */
     @Nonnull
-    public DirectoryRoleTemplateCollectionRequestBuilder directoryRoleTemplates() {
-        return new DirectoryRoleTemplateCollectionRequestBuilder(getServiceRoot() + "/directoryRoleTemplates", this, null);
+    public com.microsoft.graph.requests.DirectoryRoleTemplateCollectionRequestBuilder directoryRoleTemplates() {
+        return new com.microsoft.graph.requests.DirectoryRoleTemplateCollectionRequestBuilder(getServiceRoot() + "/directoryRoleTemplates", this, null);
     }
 
     /**
@@ -595,8 +595,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the DirectoryRoleTemplates object
      */
     @Nonnull
-    public DirectoryRoleTemplateRequestBuilder directoryRoleTemplates(@Nonnull final String id) {
-        return new DirectoryRoleTemplateRequestBuilder(getServiceRoot() + "/directoryRoleTemplates/" + id, this, null);
+    public com.microsoft.graph.requests.DirectoryRoleTemplateRequestBuilder directoryRoleTemplates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryRoleTemplateRequestBuilder(getServiceRoot() + "/directoryRoleTemplates/" + id, this, null);
     }
 
     /**
@@ -605,8 +605,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of DirectorySettingTemplates objects
      */
     @Nonnull
-    public DirectorySettingTemplateCollectionRequestBuilder directorySettingTemplates() {
-        return new DirectorySettingTemplateCollectionRequestBuilder(getServiceRoot() + "/directorySettingTemplates", this, null);
+    public com.microsoft.graph.requests.DirectorySettingTemplateCollectionRequestBuilder directorySettingTemplates() {
+        return new com.microsoft.graph.requests.DirectorySettingTemplateCollectionRequestBuilder(getServiceRoot() + "/directorySettingTemplates", this, null);
     }
 
     /**
@@ -616,8 +616,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the DirectorySettingTemplates object
      */
     @Nonnull
-    public DirectorySettingTemplateRequestBuilder directorySettingTemplates(@Nonnull final String id) {
-        return new DirectorySettingTemplateRequestBuilder(getServiceRoot() + "/directorySettingTemplates/" + id, this, null);
+    public com.microsoft.graph.requests.DirectorySettingTemplateRequestBuilder directorySettingTemplates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectorySettingTemplateRequestBuilder(getServiceRoot() + "/directorySettingTemplates/" + id, this, null);
     }
 
     /**
@@ -626,8 +626,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of DomainDnsRecords objects
      */
     @Nonnull
-    public DomainDnsRecordCollectionRequestBuilder domainDnsRecords() {
-        return new DomainDnsRecordCollectionRequestBuilder(getServiceRoot() + "/domainDnsRecords", this, null);
+    public com.microsoft.graph.requests.DomainDnsRecordCollectionRequestBuilder domainDnsRecords() {
+        return new com.microsoft.graph.requests.DomainDnsRecordCollectionRequestBuilder(getServiceRoot() + "/domainDnsRecords", this, null);
     }
 
     /**
@@ -637,8 +637,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the DomainDnsRecords object
      */
     @Nonnull
-    public DomainDnsRecordRequestBuilder domainDnsRecords(@Nonnull final String id) {
-        return new DomainDnsRecordRequestBuilder(getServiceRoot() + "/domainDnsRecords/" + id, this, null);
+    public com.microsoft.graph.requests.DomainDnsRecordRequestBuilder domainDnsRecords(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DomainDnsRecordRequestBuilder(getServiceRoot() + "/domainDnsRecords/" + id, this, null);
     }
 
     /**
@@ -647,8 +647,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Domains objects
      */
     @Nonnull
-    public DomainCollectionRequestBuilder domains() {
-        return new DomainCollectionRequestBuilder(getServiceRoot() + "/domains", this, null);
+    public com.microsoft.graph.requests.DomainCollectionRequestBuilder domains() {
+        return new com.microsoft.graph.requests.DomainCollectionRequestBuilder(getServiceRoot() + "/domains", this, null);
     }
 
     /**
@@ -658,8 +658,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Domains object
      */
     @Nonnull
-    public DomainRequestBuilder domains(@Nonnull final String id) {
-        return new DomainRequestBuilder(getServiceRoot() + "/domains/" + id, this, null);
+    public com.microsoft.graph.requests.DomainRequestBuilder domains(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DomainRequestBuilder(getServiceRoot() + "/domains/" + id, this, null);
     }
 
     /**
@@ -668,8 +668,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Groups objects
      */
     @Nonnull
-    public GroupCollectionRequestBuilder groups() {
-        return new GroupCollectionRequestBuilder(getServiceRoot() + "/groups", this, null);
+    public com.microsoft.graph.requests.GroupCollectionRequestBuilder groups() {
+        return new com.microsoft.graph.requests.GroupCollectionRequestBuilder(getServiceRoot() + "/groups", this, null);
     }
 
     /**
@@ -679,8 +679,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Groups object
      */
     @Nonnull
-    public GroupRequestBuilder groups(@Nonnull final String id) {
-        return new GroupRequestBuilder(getServiceRoot() + "/groups/" + id, this, null);
+    public com.microsoft.graph.requests.GroupRequestBuilder groups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupRequestBuilder(getServiceRoot() + "/groups/" + id, this, null);
     }
 
     /**
@@ -689,8 +689,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Oauth2PermissionGrants objects
      */
     @Nonnull
-    public OAuth2PermissionGrantCollectionRequestBuilder oauth2PermissionGrants() {
-        return new OAuth2PermissionGrantCollectionRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants", this, null);
+    public com.microsoft.graph.requests.OAuth2PermissionGrantCollectionRequestBuilder oauth2PermissionGrants() {
+        return new com.microsoft.graph.requests.OAuth2PermissionGrantCollectionRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants", this, null);
     }
 
     /**
@@ -700,8 +700,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Oauth2PermissionGrants object
      */
     @Nonnull
-    public OAuth2PermissionGrantRequestBuilder oauth2PermissionGrants(@Nonnull final String id) {
-        return new OAuth2PermissionGrantRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants/" + id, this, null);
+    public com.microsoft.graph.requests.OAuth2PermissionGrantRequestBuilder oauth2PermissionGrants(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OAuth2PermissionGrantRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants/" + id, this, null);
     }
 
     /**
@@ -710,8 +710,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Organization objects
      */
     @Nonnull
-    public OrganizationCollectionRequestBuilder organization() {
-        return new OrganizationCollectionRequestBuilder(getServiceRoot() + "/organization", this, null);
+    public com.microsoft.graph.requests.OrganizationCollectionRequestBuilder organization() {
+        return new com.microsoft.graph.requests.OrganizationCollectionRequestBuilder(getServiceRoot() + "/organization", this, null);
     }
 
     /**
@@ -721,8 +721,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Organization object
      */
     @Nonnull
-    public OrganizationRequestBuilder organization(@Nonnull final String id) {
-        return new OrganizationRequestBuilder(getServiceRoot() + "/organization/" + id, this, null);
+    public com.microsoft.graph.requests.OrganizationRequestBuilder organization(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OrganizationRequestBuilder(getServiceRoot() + "/organization/" + id, this, null);
     }
 
     /**
@@ -731,8 +731,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of PermissionGrants objects
      */
     @Nonnull
-    public ResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
-        return new ResourceSpecificPermissionGrantCollectionRequestBuilder(getServiceRoot() + "/permissionGrants", this, null);
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
+        return new com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder(getServiceRoot() + "/permissionGrants", this, null);
     }
 
     /**
@@ -742,8 +742,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the PermissionGrants object
      */
     @Nonnull
-    public ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id) {
-        return new ResourceSpecificPermissionGrantRequestBuilder(getServiceRoot() + "/permissionGrants/" + id, this, null);
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder(getServiceRoot() + "/permissionGrants/" + id, this, null);
     }
 
     /**
@@ -752,8 +752,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of ScopedRoleMemberships objects
      */
     @Nonnull
-    public ScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberships() {
-        return new ScopedRoleMembershipCollectionRequestBuilder(getServiceRoot() + "/scopedRoleMemberships", this, null);
+    public com.microsoft.graph.requests.ScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberships() {
+        return new com.microsoft.graph.requests.ScopedRoleMembershipCollectionRequestBuilder(getServiceRoot() + "/scopedRoleMemberships", this, null);
     }
 
     /**
@@ -763,8 +763,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the ScopedRoleMemberships object
      */
     @Nonnull
-    public ScopedRoleMembershipRequestBuilder scopedRoleMemberships(@Nonnull final String id) {
-        return new ScopedRoleMembershipRequestBuilder(getServiceRoot() + "/scopedRoleMemberships/" + id, this, null);
+    public com.microsoft.graph.requests.ScopedRoleMembershipRequestBuilder scopedRoleMemberships(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ScopedRoleMembershipRequestBuilder(getServiceRoot() + "/scopedRoleMemberships/" + id, this, null);
     }
 
     /**
@@ -773,8 +773,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Settings objects
      */
     @Nonnull
-    public DirectorySettingCollectionRequestBuilder settings() {
-        return new DirectorySettingCollectionRequestBuilder(getServiceRoot() + "/settings", this, null);
+    public com.microsoft.graph.requests.DirectorySettingCollectionRequestBuilder settings() {
+        return new com.microsoft.graph.requests.DirectorySettingCollectionRequestBuilder(getServiceRoot() + "/settings", this, null);
     }
 
     /**
@@ -784,8 +784,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Settings object
      */
     @Nonnull
-    public DirectorySettingRequestBuilder settings(@Nonnull final String id) {
-        return new DirectorySettingRequestBuilder(getServiceRoot() + "/settings/" + id, this, null);
+    public com.microsoft.graph.requests.DirectorySettingRequestBuilder settings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectorySettingRequestBuilder(getServiceRoot() + "/settings/" + id, this, null);
     }
 
     /**
@@ -794,8 +794,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of SubscribedSkus objects
      */
     @Nonnull
-    public SubscribedSkuCollectionRequestBuilder subscribedSkus() {
-        return new SubscribedSkuCollectionRequestBuilder(getServiceRoot() + "/subscribedSkus", this, null);
+    public com.microsoft.graph.requests.SubscribedSkuCollectionRequestBuilder subscribedSkus() {
+        return new com.microsoft.graph.requests.SubscribedSkuCollectionRequestBuilder(getServiceRoot() + "/subscribedSkus", this, null);
     }
 
     /**
@@ -805,8 +805,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the SubscribedSkus object
      */
     @Nonnull
-    public SubscribedSkuRequestBuilder subscribedSkus(@Nonnull final String id) {
-        return new SubscribedSkuRequestBuilder(getServiceRoot() + "/subscribedSkus/" + id, this, null);
+    public com.microsoft.graph.requests.SubscribedSkuRequestBuilder subscribedSkus(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SubscribedSkuRequestBuilder(getServiceRoot() + "/subscribedSkus/" + id, this, null);
     }
 
     /**
@@ -815,8 +815,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Places objects
      */
     @Nonnull
-    public PlaceCollectionRequestBuilder places() {
-        return new PlaceCollectionRequestBuilder(getServiceRoot() + "/places", this, null);
+    public com.microsoft.graph.requests.PlaceCollectionRequestBuilder places() {
+        return new com.microsoft.graph.requests.PlaceCollectionRequestBuilder(getServiceRoot() + "/places", this, null);
     }
 
     /**
@@ -826,8 +826,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Places object
      */
     @Nonnull
-    public PlaceRequestBuilder places(@Nonnull final String id) {
-        return new PlaceRequestBuilder(getServiceRoot() + "/places/" + id, this, null);
+    public com.microsoft.graph.requests.PlaceRequestBuilder places(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PlaceRequestBuilder(getServiceRoot() + "/places/" + id, this, null);
     }
 
     /**
@@ -836,8 +836,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Drives objects
      */
     @Nonnull
-    public DriveCollectionRequestBuilder drives() {
-        return new DriveCollectionRequestBuilder(getServiceRoot() + "/drives", this, null);
+    public com.microsoft.graph.requests.DriveCollectionRequestBuilder drives() {
+        return new com.microsoft.graph.requests.DriveCollectionRequestBuilder(getServiceRoot() + "/drives", this, null);
     }
 
     /**
@@ -847,8 +847,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Drives object
      */
     @Nonnull
-    public DriveRequestBuilder drives(@Nonnull final String id) {
-        return new DriveRequestBuilder(getServiceRoot() + "/drives/" + id, this, null);
+    public com.microsoft.graph.requests.DriveRequestBuilder drives(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DriveRequestBuilder(getServiceRoot() + "/drives/" + id, this, null);
     }
 
     /**
@@ -857,8 +857,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Shares objects
      */
     @Nonnull
-    public SharedDriveItemCollectionRequestBuilder shares() {
-        return new SharedDriveItemCollectionRequestBuilder(getServiceRoot() + "/shares", this, null);
+    public com.microsoft.graph.requests.SharedDriveItemCollectionRequestBuilder shares() {
+        return new com.microsoft.graph.requests.SharedDriveItemCollectionRequestBuilder(getServiceRoot() + "/shares", this, null);
     }
 
     /**
@@ -868,8 +868,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Shares object
      */
     @Nonnull
-    public SharedDriveItemRequestBuilder shares(@Nonnull final String id) {
-        return new SharedDriveItemRequestBuilder(getServiceRoot() + "/shares/" + id, this, null);
+    public com.microsoft.graph.requests.SharedDriveItemRequestBuilder shares(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SharedDriveItemRequestBuilder(getServiceRoot() + "/shares/" + id, this, null);
     }
 
     /**
@@ -878,8 +878,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Sites objects
      */
     @Nonnull
-    public SiteCollectionRequestBuilder sites() {
-        return new SiteCollectionRequestBuilder(getServiceRoot() + "/sites", this, null);
+    public com.microsoft.graph.requests.SiteCollectionRequestBuilder sites() {
+        return new com.microsoft.graph.requests.SiteCollectionRequestBuilder(getServiceRoot() + "/sites", this, null);
     }
 
     /**
@@ -889,8 +889,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Sites object
      */
     @Nonnull
-    public SiteRequestBuilder sites(@Nonnull final String id) {
-        return new SiteRequestBuilder(getServiceRoot() + "/sites/" + id, this, null);
+    public com.microsoft.graph.requests.SiteRequestBuilder sites(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SiteRequestBuilder(getServiceRoot() + "/sites/" + id, this, null);
     }
 
     /**
@@ -899,8 +899,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of MessageEvents objects
      */
     @Nonnull
-    public MessageEventCollectionRequestBuilder messageEvents() {
-        return new MessageEventCollectionRequestBuilder(getServiceRoot() + "/messageEvents", this, null);
+    public com.microsoft.graph.requests.MessageEventCollectionRequestBuilder messageEvents() {
+        return new com.microsoft.graph.requests.MessageEventCollectionRequestBuilder(getServiceRoot() + "/messageEvents", this, null);
     }
 
     /**
@@ -910,8 +910,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the MessageEvents object
      */
     @Nonnull
-    public MessageEventRequestBuilder messageEvents(@Nonnull final String id) {
-        return new MessageEventRequestBuilder(getServiceRoot() + "/messageEvents/" + id, this, null);
+    public com.microsoft.graph.requests.MessageEventRequestBuilder messageEvents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MessageEventRequestBuilder(getServiceRoot() + "/messageEvents/" + id, this, null);
     }
 
     /**
@@ -920,8 +920,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of MessageRecipients objects
      */
     @Nonnull
-    public MessageRecipientCollectionRequestBuilder messageRecipients() {
-        return new MessageRecipientCollectionRequestBuilder(getServiceRoot() + "/messageRecipients", this, null);
+    public com.microsoft.graph.requests.MessageRecipientCollectionRequestBuilder messageRecipients() {
+        return new com.microsoft.graph.requests.MessageRecipientCollectionRequestBuilder(getServiceRoot() + "/messageRecipients", this, null);
     }
 
     /**
@@ -931,8 +931,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the MessageRecipients object
      */
     @Nonnull
-    public MessageRecipientRequestBuilder messageRecipients(@Nonnull final String id) {
-        return new MessageRecipientRequestBuilder(getServiceRoot() + "/messageRecipients/" + id, this, null);
+    public com.microsoft.graph.requests.MessageRecipientRequestBuilder messageRecipients(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MessageRecipientRequestBuilder(getServiceRoot() + "/messageRecipients/" + id, this, null);
     }
 
     /**
@@ -941,8 +941,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of MessageTraces objects
      */
     @Nonnull
-    public MessageTraceCollectionRequestBuilder messageTraces() {
-        return new MessageTraceCollectionRequestBuilder(getServiceRoot() + "/messageTraces", this, null);
+    public com.microsoft.graph.requests.MessageTraceCollectionRequestBuilder messageTraces() {
+        return new com.microsoft.graph.requests.MessageTraceCollectionRequestBuilder(getServiceRoot() + "/messageTraces", this, null);
     }
 
     /**
@@ -952,8 +952,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the MessageTraces object
      */
     @Nonnull
-    public MessageTraceRequestBuilder messageTraces(@Nonnull final String id) {
-        return new MessageTraceRequestBuilder(getServiceRoot() + "/messageTraces/" + id, this, null);
+    public com.microsoft.graph.requests.MessageTraceRequestBuilder messageTraces(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MessageTraceRequestBuilder(getServiceRoot() + "/messageTraces/" + id, this, null);
     }
 
     /**
@@ -962,8 +962,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of SchemaExtensions objects
      */
     @Nonnull
-    public SchemaExtensionCollectionRequestBuilder schemaExtensions() {
-        return new SchemaExtensionCollectionRequestBuilder(getServiceRoot() + "/schemaExtensions", this, null);
+    public com.microsoft.graph.requests.SchemaExtensionCollectionRequestBuilder schemaExtensions() {
+        return new com.microsoft.graph.requests.SchemaExtensionCollectionRequestBuilder(getServiceRoot() + "/schemaExtensions", this, null);
     }
 
     /**
@@ -973,8 +973,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the SchemaExtensions object
      */
     @Nonnull
-    public SchemaExtensionRequestBuilder schemaExtensions(@Nonnull final String id) {
-        return new SchemaExtensionRequestBuilder(getServiceRoot() + "/schemaExtensions/" + id, this, null);
+    public com.microsoft.graph.requests.SchemaExtensionRequestBuilder schemaExtensions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SchemaExtensionRequestBuilder(getServiceRoot() + "/schemaExtensions/" + id, this, null);
     }
 
     /**
@@ -983,8 +983,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of OnPremisesPublishingProfiles objects
      */
     @Nonnull
-    public OnPremisesPublishingProfileCollectionRequestBuilder onPremisesPublishingProfiles() {
-        return new OnPremisesPublishingProfileCollectionRequestBuilder(getServiceRoot() + "/onPremisesPublishingProfiles", this, null);
+    public com.microsoft.graph.requests.OnPremisesPublishingProfileCollectionRequestBuilder onPremisesPublishingProfiles() {
+        return new com.microsoft.graph.requests.OnPremisesPublishingProfileCollectionRequestBuilder(getServiceRoot() + "/onPremisesPublishingProfiles", this, null);
     }
 
     /**
@@ -994,8 +994,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the OnPremisesPublishingProfiles object
      */
     @Nonnull
-    public OnPremisesPublishingProfileRequestBuilder onPremisesPublishingProfiles(@Nonnull final String id) {
-        return new OnPremisesPublishingProfileRequestBuilder(getServiceRoot() + "/onPremisesPublishingProfiles/" + id, this, null);
+    public com.microsoft.graph.requests.OnPremisesPublishingProfileRequestBuilder onPremisesPublishingProfiles(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OnPremisesPublishingProfileRequestBuilder(getServiceRoot() + "/onPremisesPublishingProfiles/" + id, this, null);
     }
 
     /**
@@ -1004,8 +1004,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of GroupLifecyclePolicies objects
      */
     @Nonnull
-    public GroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies() {
-        return new GroupLifecyclePolicyCollectionRequestBuilder(getServiceRoot() + "/groupLifecyclePolicies", this, null);
+    public com.microsoft.graph.requests.GroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies() {
+        return new com.microsoft.graph.requests.GroupLifecyclePolicyCollectionRequestBuilder(getServiceRoot() + "/groupLifecyclePolicies", this, null);
     }
 
     /**
@@ -1015,8 +1015,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the GroupLifecyclePolicies object
      */
     @Nonnull
-    public GroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(@Nonnull final String id) {
-        return new GroupLifecyclePolicyRequestBuilder(getServiceRoot() + "/groupLifecyclePolicies/" + id, this, null);
+    public com.microsoft.graph.requests.GroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupLifecyclePolicyRequestBuilder(getServiceRoot() + "/groupLifecyclePolicies/" + id, this, null);
     }
 
     /**
@@ -1025,8 +1025,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of FilterOperators objects
      */
     @Nonnull
-    public FilterOperatorSchemaCollectionRequestBuilder filterOperators() {
-        return new FilterOperatorSchemaCollectionRequestBuilder(getServiceRoot() + "/filterOperators", this, null);
+    public com.microsoft.graph.requests.FilterOperatorSchemaCollectionRequestBuilder filterOperators() {
+        return new com.microsoft.graph.requests.FilterOperatorSchemaCollectionRequestBuilder(getServiceRoot() + "/filterOperators", this, null);
     }
 
     /**
@@ -1036,8 +1036,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the FilterOperators object
      */
     @Nonnull
-    public FilterOperatorSchemaRequestBuilder filterOperators(@Nonnull final String id) {
-        return new FilterOperatorSchemaRequestBuilder(getServiceRoot() + "/filterOperators/" + id, this, null);
+    public com.microsoft.graph.requests.FilterOperatorSchemaRequestBuilder filterOperators(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.FilterOperatorSchemaRequestBuilder(getServiceRoot() + "/filterOperators/" + id, this, null);
     }
 
     /**
@@ -1046,8 +1046,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Functions objects
      */
     @Nonnull
-    public AttributeMappingFunctionSchemaCollectionRequestBuilder functions() {
-        return new AttributeMappingFunctionSchemaCollectionRequestBuilder(getServiceRoot() + "/functions", this, null);
+    public com.microsoft.graph.requests.AttributeMappingFunctionSchemaCollectionRequestBuilder functions() {
+        return new com.microsoft.graph.requests.AttributeMappingFunctionSchemaCollectionRequestBuilder(getServiceRoot() + "/functions", this, null);
     }
 
     /**
@@ -1057,8 +1057,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Functions object
      */
     @Nonnull
-    public AttributeMappingFunctionSchemaRequestBuilder functions(@Nonnull final String id) {
-        return new AttributeMappingFunctionSchemaRequestBuilder(getServiceRoot() + "/functions/" + id, this, null);
+    public com.microsoft.graph.requests.AttributeMappingFunctionSchemaRequestBuilder functions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AttributeMappingFunctionSchemaRequestBuilder(getServiceRoot() + "/functions/" + id, this, null);
     }
 
     /**
@@ -1067,8 +1067,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of AccessReviewDecisions objects
      */
     @Nonnull
-    public AccessReviewDecisionCollectionRequestBuilder accessReviewDecisions() {
-        return new AccessReviewDecisionCollectionRequestBuilder(getServiceRoot() + "/accessReviewDecisions", this, null);
+    public com.microsoft.graph.requests.AccessReviewDecisionCollectionRequestBuilder accessReviewDecisions() {
+        return new com.microsoft.graph.requests.AccessReviewDecisionCollectionRequestBuilder(getServiceRoot() + "/accessReviewDecisions", this, null);
     }
 
     /**
@@ -1078,8 +1078,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the AccessReviewDecisions object
      */
     @Nonnull
-    public AccessReviewDecisionRequestBuilder accessReviewDecisions(@Nonnull final String id) {
-        return new AccessReviewDecisionRequestBuilder(getServiceRoot() + "/accessReviewDecisions/" + id, this, null);
+    public com.microsoft.graph.requests.AccessReviewDecisionRequestBuilder accessReviewDecisions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessReviewDecisionRequestBuilder(getServiceRoot() + "/accessReviewDecisions/" + id, this, null);
     }
 
     /**
@@ -1088,8 +1088,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of AccessReviews objects
      */
     @Nonnull
-    public AccessReviewCollectionRequestBuilder accessReviews() {
-        return new AccessReviewCollectionRequestBuilder(getServiceRoot() + "/accessReviews", this, null);
+    public com.microsoft.graph.requests.AccessReviewCollectionRequestBuilder accessReviews() {
+        return new com.microsoft.graph.requests.AccessReviewCollectionRequestBuilder(getServiceRoot() + "/accessReviews", this, null);
     }
 
     /**
@@ -1099,8 +1099,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the AccessReviews object
      */
     @Nonnull
-    public AccessReviewRequestBuilder accessReviews(@Nonnull final String id) {
-        return new AccessReviewRequestBuilder(getServiceRoot() + "/accessReviews/" + id, this, null);
+    public com.microsoft.graph.requests.AccessReviewRequestBuilder accessReviews(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessReviewRequestBuilder(getServiceRoot() + "/accessReviews/" + id, this, null);
     }
 
     /**
@@ -1109,8 +1109,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of ApprovalWorkflowProviders objects
      */
     @Nonnull
-    public ApprovalWorkflowProviderCollectionRequestBuilder approvalWorkflowProviders() {
-        return new ApprovalWorkflowProviderCollectionRequestBuilder(getServiceRoot() + "/approvalWorkflowProviders", this, null);
+    public com.microsoft.graph.requests.ApprovalWorkflowProviderCollectionRequestBuilder approvalWorkflowProviders() {
+        return new com.microsoft.graph.requests.ApprovalWorkflowProviderCollectionRequestBuilder(getServiceRoot() + "/approvalWorkflowProviders", this, null);
     }
 
     /**
@@ -1120,8 +1120,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the ApprovalWorkflowProviders object
      */
     @Nonnull
-    public ApprovalWorkflowProviderRequestBuilder approvalWorkflowProviders(@Nonnull final String id) {
-        return new ApprovalWorkflowProviderRequestBuilder(getServiceRoot() + "/approvalWorkflowProviders/" + id, this, null);
+    public com.microsoft.graph.requests.ApprovalWorkflowProviderRequestBuilder approvalWorkflowProviders(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ApprovalWorkflowProviderRequestBuilder(getServiceRoot() + "/approvalWorkflowProviders/" + id, this, null);
     }
 
     /**
@@ -1130,8 +1130,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of BusinessFlowTemplates objects
      */
     @Nonnull
-    public BusinessFlowTemplateCollectionRequestBuilder businessFlowTemplates() {
-        return new BusinessFlowTemplateCollectionRequestBuilder(getServiceRoot() + "/businessFlowTemplates", this, null);
+    public com.microsoft.graph.requests.BusinessFlowTemplateCollectionRequestBuilder businessFlowTemplates() {
+        return new com.microsoft.graph.requests.BusinessFlowTemplateCollectionRequestBuilder(getServiceRoot() + "/businessFlowTemplates", this, null);
     }
 
     /**
@@ -1141,8 +1141,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the BusinessFlowTemplates object
      */
     @Nonnull
-    public BusinessFlowTemplateRequestBuilder businessFlowTemplates(@Nonnull final String id) {
-        return new BusinessFlowTemplateRequestBuilder(getServiceRoot() + "/businessFlowTemplates/" + id, this, null);
+    public com.microsoft.graph.requests.BusinessFlowTemplateRequestBuilder businessFlowTemplates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BusinessFlowTemplateRequestBuilder(getServiceRoot() + "/businessFlowTemplates/" + id, this, null);
     }
 
     /**
@@ -1151,8 +1151,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of ProgramControls objects
      */
     @Nonnull
-    public ProgramControlCollectionRequestBuilder programControls() {
-        return new ProgramControlCollectionRequestBuilder(getServiceRoot() + "/programControls", this, null);
+    public com.microsoft.graph.requests.ProgramControlCollectionRequestBuilder programControls() {
+        return new com.microsoft.graph.requests.ProgramControlCollectionRequestBuilder(getServiceRoot() + "/programControls", this, null);
     }
 
     /**
@@ -1162,8 +1162,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the ProgramControls object
      */
     @Nonnull
-    public ProgramControlRequestBuilder programControls(@Nonnull final String id) {
-        return new ProgramControlRequestBuilder(getServiceRoot() + "/programControls/" + id, this, null);
+    public com.microsoft.graph.requests.ProgramControlRequestBuilder programControls(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ProgramControlRequestBuilder(getServiceRoot() + "/programControls/" + id, this, null);
     }
 
     /**
@@ -1172,8 +1172,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of ProgramControlTypes objects
      */
     @Nonnull
-    public ProgramControlTypeCollectionRequestBuilder programControlTypes() {
-        return new ProgramControlTypeCollectionRequestBuilder(getServiceRoot() + "/programControlTypes", this, null);
+    public com.microsoft.graph.requests.ProgramControlTypeCollectionRequestBuilder programControlTypes() {
+        return new com.microsoft.graph.requests.ProgramControlTypeCollectionRequestBuilder(getServiceRoot() + "/programControlTypes", this, null);
     }
 
     /**
@@ -1183,8 +1183,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the ProgramControlTypes object
      */
     @Nonnull
-    public ProgramControlTypeRequestBuilder programControlTypes(@Nonnull final String id) {
-        return new ProgramControlTypeRequestBuilder(getServiceRoot() + "/programControlTypes/" + id, this, null);
+    public com.microsoft.graph.requests.ProgramControlTypeRequestBuilder programControlTypes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ProgramControlTypeRequestBuilder(getServiceRoot() + "/programControlTypes/" + id, this, null);
     }
 
     /**
@@ -1193,8 +1193,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Programs objects
      */
     @Nonnull
-    public ProgramCollectionRequestBuilder programs() {
-        return new ProgramCollectionRequestBuilder(getServiceRoot() + "/programs", this, null);
+    public com.microsoft.graph.requests.ProgramCollectionRequestBuilder programs() {
+        return new com.microsoft.graph.requests.ProgramCollectionRequestBuilder(getServiceRoot() + "/programs", this, null);
     }
 
     /**
@@ -1204,8 +1204,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Programs object
      */
     @Nonnull
-    public ProgramRequestBuilder programs(@Nonnull final String id) {
-        return new ProgramRequestBuilder(getServiceRoot() + "/programs/" + id, this, null);
+    public com.microsoft.graph.requests.ProgramRequestBuilder programs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ProgramRequestBuilder(getServiceRoot() + "/programs/" + id, this, null);
     }
 
     /**
@@ -1214,8 +1214,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of AgreementAcceptances objects
      */
     @Nonnull
-    public AgreementAcceptanceCollectionRequestBuilder agreementAcceptances() {
-        return new AgreementAcceptanceCollectionRequestBuilder(getServiceRoot() + "/agreementAcceptances", this, null);
+    public com.microsoft.graph.requests.AgreementAcceptanceCollectionRequestBuilder agreementAcceptances() {
+        return new com.microsoft.graph.requests.AgreementAcceptanceCollectionRequestBuilder(getServiceRoot() + "/agreementAcceptances", this, null);
     }
 
     /**
@@ -1225,8 +1225,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the AgreementAcceptances object
      */
     @Nonnull
-    public AgreementAcceptanceRequestBuilder agreementAcceptances(@Nonnull final String id) {
-        return new AgreementAcceptanceRequestBuilder(getServiceRoot() + "/agreementAcceptances/" + id, this, null);
+    public com.microsoft.graph.requests.AgreementAcceptanceRequestBuilder agreementAcceptances(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AgreementAcceptanceRequestBuilder(getServiceRoot() + "/agreementAcceptances/" + id, this, null);
     }
 
     /**
@@ -1235,8 +1235,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Agreements objects
      */
     @Nonnull
-    public AgreementCollectionRequestBuilder agreements() {
-        return new AgreementCollectionRequestBuilder(getServiceRoot() + "/agreements", this, null);
+    public com.microsoft.graph.requests.AgreementCollectionRequestBuilder agreements() {
+        return new com.microsoft.graph.requests.AgreementCollectionRequestBuilder(getServiceRoot() + "/agreements", this, null);
     }
 
     /**
@@ -1246,8 +1246,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Agreements object
      */
     @Nonnull
-    public AgreementRequestBuilder agreements(@Nonnull final String id) {
-        return new AgreementRequestBuilder(getServiceRoot() + "/agreements/" + id, this, null);
+    public com.microsoft.graph.requests.AgreementRequestBuilder agreements(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AgreementRequestBuilder(getServiceRoot() + "/agreements/" + id, this, null);
     }
 
     /**
@@ -1256,8 +1256,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of RiskDetections objects
      */
     @Nonnull
-    public RiskDetectionCollectionRequestBuilder riskDetections() {
-        return new RiskDetectionCollectionRequestBuilder(getServiceRoot() + "/riskDetections", this, null);
+    public com.microsoft.graph.requests.RiskDetectionCollectionRequestBuilder riskDetections() {
+        return new com.microsoft.graph.requests.RiskDetectionCollectionRequestBuilder(getServiceRoot() + "/riskDetections", this, null);
     }
 
     /**
@@ -1267,8 +1267,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the RiskDetections object
      */
     @Nonnull
-    public RiskDetectionRequestBuilder riskDetections(@Nonnull final String id) {
-        return new RiskDetectionRequestBuilder(getServiceRoot() + "/riskDetections/" + id, this, null);
+    public com.microsoft.graph.requests.RiskDetectionRequestBuilder riskDetections(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RiskDetectionRequestBuilder(getServiceRoot() + "/riskDetections/" + id, this, null);
     }
 
     /**
@@ -1277,8 +1277,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of RiskyUsers objects
      */
     @Nonnull
-    public RiskyUserCollectionRequestBuilder riskyUsers() {
-        return new RiskyUserCollectionRequestBuilder(getServiceRoot() + "/riskyUsers", this, null);
+    public com.microsoft.graph.requests.RiskyUserCollectionRequestBuilder riskyUsers() {
+        return new com.microsoft.graph.requests.RiskyUserCollectionRequestBuilder(getServiceRoot() + "/riskyUsers", this, null);
     }
 
     /**
@@ -1288,8 +1288,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the RiskyUsers object
      */
     @Nonnull
-    public RiskyUserRequestBuilder riskyUsers(@Nonnull final String id) {
-        return new RiskyUserRequestBuilder(getServiceRoot() + "/riskyUsers/" + id, this, null);
+    public com.microsoft.graph.requests.RiskyUserRequestBuilder riskyUsers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RiskyUserRequestBuilder(getServiceRoot() + "/riskyUsers/" + id, this, null);
     }
 
     /**
@@ -1298,8 +1298,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of MobilityManagementPolicies objects
      */
     @Nonnull
-    public MobilityManagementPolicyCollectionRequestBuilder mobilityManagementPolicies() {
-        return new MobilityManagementPolicyCollectionRequestBuilder(getServiceRoot() + "/mobilityManagementPolicies", this, null);
+    public com.microsoft.graph.requests.MobilityManagementPolicyCollectionRequestBuilder mobilityManagementPolicies() {
+        return new com.microsoft.graph.requests.MobilityManagementPolicyCollectionRequestBuilder(getServiceRoot() + "/mobilityManagementPolicies", this, null);
     }
 
     /**
@@ -1309,8 +1309,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the MobilityManagementPolicies object
      */
     @Nonnull
-    public MobilityManagementPolicyRequestBuilder mobilityManagementPolicies(@Nonnull final String id) {
-        return new MobilityManagementPolicyRequestBuilder(getServiceRoot() + "/mobilityManagementPolicies/" + id, this, null);
+    public com.microsoft.graph.requests.MobilityManagementPolicyRequestBuilder mobilityManagementPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobilityManagementPolicyRequestBuilder(getServiceRoot() + "/mobilityManagementPolicies/" + id, this, null);
     }
 
     /**
@@ -1319,8 +1319,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of GovernanceResources objects
      */
     @Nonnull
-    public GovernanceResourceCollectionRequestBuilder governanceResources() {
-        return new GovernanceResourceCollectionRequestBuilder(getServiceRoot() + "/governanceResources", this, null);
+    public com.microsoft.graph.requests.GovernanceResourceCollectionRequestBuilder governanceResources() {
+        return new com.microsoft.graph.requests.GovernanceResourceCollectionRequestBuilder(getServiceRoot() + "/governanceResources", this, null);
     }
 
     /**
@@ -1330,8 +1330,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the GovernanceResources object
      */
     @Nonnull
-    public GovernanceResourceRequestBuilder governanceResources(@Nonnull final String id) {
-        return new GovernanceResourceRequestBuilder(getServiceRoot() + "/governanceResources/" + id, this, null);
+    public com.microsoft.graph.requests.GovernanceResourceRequestBuilder governanceResources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceResourceRequestBuilder(getServiceRoot() + "/governanceResources/" + id, this, null);
     }
 
     /**
@@ -1340,8 +1340,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of GovernanceRoleAssignmentRequests objects
      */
     @Nonnull
-    public GovernanceRoleAssignmentRequestCollectionRequestBuilder governanceRoleAssignmentRequests() {
-        return new GovernanceRoleAssignmentRequestCollectionRequestBuilder(getServiceRoot() + "/governanceRoleAssignmentRequests", this, null);
+    public com.microsoft.graph.requests.GovernanceRoleAssignmentRequestCollectionRequestBuilder governanceRoleAssignmentRequests() {
+        return new com.microsoft.graph.requests.GovernanceRoleAssignmentRequestCollectionRequestBuilder(getServiceRoot() + "/governanceRoleAssignmentRequests", this, null);
     }
 
     /**
@@ -1351,8 +1351,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the GovernanceRoleAssignmentRequests object
      */
     @Nonnull
-    public GovernanceRoleAssignmentRequestRequestBuilder governanceRoleAssignmentRequests(@Nonnull final String id) {
-        return new GovernanceRoleAssignmentRequestRequestBuilder(getServiceRoot() + "/governanceRoleAssignmentRequests/" + id, this, null);
+    public com.microsoft.graph.requests.GovernanceRoleAssignmentRequestRequestBuilder governanceRoleAssignmentRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceRoleAssignmentRequestRequestBuilder(getServiceRoot() + "/governanceRoleAssignmentRequests/" + id, this, null);
     }
 
     /**
@@ -1361,8 +1361,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of GovernanceRoleAssignments objects
      */
     @Nonnull
-    public GovernanceRoleAssignmentCollectionRequestBuilder governanceRoleAssignments() {
-        return new GovernanceRoleAssignmentCollectionRequestBuilder(getServiceRoot() + "/governanceRoleAssignments", this, null);
+    public com.microsoft.graph.requests.GovernanceRoleAssignmentCollectionRequestBuilder governanceRoleAssignments() {
+        return new com.microsoft.graph.requests.GovernanceRoleAssignmentCollectionRequestBuilder(getServiceRoot() + "/governanceRoleAssignments", this, null);
     }
 
     /**
@@ -1372,8 +1372,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the GovernanceRoleAssignments object
      */
     @Nonnull
-    public GovernanceRoleAssignmentRequestBuilder governanceRoleAssignments(@Nonnull final String id) {
-        return new GovernanceRoleAssignmentRequestBuilder(getServiceRoot() + "/governanceRoleAssignments/" + id, this, null);
+    public com.microsoft.graph.requests.GovernanceRoleAssignmentRequestBuilder governanceRoleAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceRoleAssignmentRequestBuilder(getServiceRoot() + "/governanceRoleAssignments/" + id, this, null);
     }
 
     /**
@@ -1382,8 +1382,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of GovernanceRoleDefinitions objects
      */
     @Nonnull
-    public GovernanceRoleDefinitionCollectionRequestBuilder governanceRoleDefinitions() {
-        return new GovernanceRoleDefinitionCollectionRequestBuilder(getServiceRoot() + "/governanceRoleDefinitions", this, null);
+    public com.microsoft.graph.requests.GovernanceRoleDefinitionCollectionRequestBuilder governanceRoleDefinitions() {
+        return new com.microsoft.graph.requests.GovernanceRoleDefinitionCollectionRequestBuilder(getServiceRoot() + "/governanceRoleDefinitions", this, null);
     }
 
     /**
@@ -1393,8 +1393,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the GovernanceRoleDefinitions object
      */
     @Nonnull
-    public GovernanceRoleDefinitionRequestBuilder governanceRoleDefinitions(@Nonnull final String id) {
-        return new GovernanceRoleDefinitionRequestBuilder(getServiceRoot() + "/governanceRoleDefinitions/" + id, this, null);
+    public com.microsoft.graph.requests.GovernanceRoleDefinitionRequestBuilder governanceRoleDefinitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceRoleDefinitionRequestBuilder(getServiceRoot() + "/governanceRoleDefinitions/" + id, this, null);
     }
 
     /**
@@ -1403,8 +1403,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of GovernanceRoleSettings objects
      */
     @Nonnull
-    public GovernanceRoleSettingCollectionRequestBuilder governanceRoleSettings() {
-        return new GovernanceRoleSettingCollectionRequestBuilder(getServiceRoot() + "/governanceRoleSettings", this, null);
+    public com.microsoft.graph.requests.GovernanceRoleSettingCollectionRequestBuilder governanceRoleSettings() {
+        return new com.microsoft.graph.requests.GovernanceRoleSettingCollectionRequestBuilder(getServiceRoot() + "/governanceRoleSettings", this, null);
     }
 
     /**
@@ -1414,8 +1414,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the GovernanceRoleSettings object
      */
     @Nonnull
-    public GovernanceRoleSettingRequestBuilder governanceRoleSettings(@Nonnull final String id) {
-        return new GovernanceRoleSettingRequestBuilder(getServiceRoot() + "/governanceRoleSettings/" + id, this, null);
+    public com.microsoft.graph.requests.GovernanceRoleSettingRequestBuilder governanceRoleSettings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceRoleSettingRequestBuilder(getServiceRoot() + "/governanceRoleSettings/" + id, this, null);
     }
 
     /**
@@ -1424,8 +1424,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of GovernanceSubjects objects
      */
     @Nonnull
-    public GovernanceSubjectCollectionRequestBuilder governanceSubjects() {
-        return new GovernanceSubjectCollectionRequestBuilder(getServiceRoot() + "/governanceSubjects", this, null);
+    public com.microsoft.graph.requests.GovernanceSubjectCollectionRequestBuilder governanceSubjects() {
+        return new com.microsoft.graph.requests.GovernanceSubjectCollectionRequestBuilder(getServiceRoot() + "/governanceSubjects", this, null);
     }
 
     /**
@@ -1435,8 +1435,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the GovernanceSubjects object
      */
     @Nonnull
-    public GovernanceSubjectRequestBuilder governanceSubjects(@Nonnull final String id) {
-        return new GovernanceSubjectRequestBuilder(getServiceRoot() + "/governanceSubjects/" + id, this, null);
+    public com.microsoft.graph.requests.GovernanceSubjectRequestBuilder governanceSubjects(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceSubjectRequestBuilder(getServiceRoot() + "/governanceSubjects/" + id, this, null);
     }
 
     /**
@@ -1445,8 +1445,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of PrivilegedAccess objects
      */
     @Nonnull
-    public PrivilegedAccessCollectionRequestBuilder privilegedAccess() {
-        return new PrivilegedAccessCollectionRequestBuilder(getServiceRoot() + "/privilegedAccess", this, null);
+    public com.microsoft.graph.requests.PrivilegedAccessCollectionRequestBuilder privilegedAccess() {
+        return new com.microsoft.graph.requests.PrivilegedAccessCollectionRequestBuilder(getServiceRoot() + "/privilegedAccess", this, null);
     }
 
     /**
@@ -1456,8 +1456,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the PrivilegedAccess object
      */
     @Nonnull
-    public PrivilegedAccessRequestBuilder privilegedAccess(@Nonnull final String id) {
-        return new PrivilegedAccessRequestBuilder(getServiceRoot() + "/privilegedAccess/" + id, this, null);
+    public com.microsoft.graph.requests.PrivilegedAccessRequestBuilder privilegedAccess(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrivilegedAccessRequestBuilder(getServiceRoot() + "/privilegedAccess/" + id, this, null);
     }
 
     /**
@@ -1466,8 +1466,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of PrivilegedApproval objects
      */
     @Nonnull
-    public PrivilegedApprovalCollectionRequestBuilder privilegedApproval() {
-        return new PrivilegedApprovalCollectionRequestBuilder(getServiceRoot() + "/privilegedApproval", this, null);
+    public com.microsoft.graph.requests.PrivilegedApprovalCollectionRequestBuilder privilegedApproval() {
+        return new com.microsoft.graph.requests.PrivilegedApprovalCollectionRequestBuilder(getServiceRoot() + "/privilegedApproval", this, null);
     }
 
     /**
@@ -1477,8 +1477,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the PrivilegedApproval object
      */
     @Nonnull
-    public PrivilegedApprovalRequestBuilder privilegedApproval(@Nonnull final String id) {
-        return new PrivilegedApprovalRequestBuilder(getServiceRoot() + "/privilegedApproval/" + id, this, null);
+    public com.microsoft.graph.requests.PrivilegedApprovalRequestBuilder privilegedApproval(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrivilegedApprovalRequestBuilder(getServiceRoot() + "/privilegedApproval/" + id, this, null);
     }
 
     /**
@@ -1487,8 +1487,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of PrivilegedOperationEvents objects
      */
     @Nonnull
-    public PrivilegedOperationEventCollectionRequestBuilder privilegedOperationEvents() {
-        return new PrivilegedOperationEventCollectionRequestBuilder(getServiceRoot() + "/privilegedOperationEvents", this, null);
+    public com.microsoft.graph.requests.PrivilegedOperationEventCollectionRequestBuilder privilegedOperationEvents() {
+        return new com.microsoft.graph.requests.PrivilegedOperationEventCollectionRequestBuilder(getServiceRoot() + "/privilegedOperationEvents", this, null);
     }
 
     /**
@@ -1498,8 +1498,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the PrivilegedOperationEvents object
      */
     @Nonnull
-    public PrivilegedOperationEventRequestBuilder privilegedOperationEvents(@Nonnull final String id) {
-        return new PrivilegedOperationEventRequestBuilder(getServiceRoot() + "/privilegedOperationEvents/" + id, this, null);
+    public com.microsoft.graph.requests.PrivilegedOperationEventRequestBuilder privilegedOperationEvents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrivilegedOperationEventRequestBuilder(getServiceRoot() + "/privilegedOperationEvents/" + id, this, null);
     }
 
     /**
@@ -1508,8 +1508,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of PrivilegedRoleAssignmentRequests objects
      */
     @Nonnull
-    public PrivilegedRoleAssignmentRequestCollectionRequestBuilder privilegedRoleAssignmentRequests() {
-        return new PrivilegedRoleAssignmentRequestCollectionRequestBuilder(getServiceRoot() + "/privilegedRoleAssignmentRequests", this, null);
+    public com.microsoft.graph.requests.PrivilegedRoleAssignmentRequestCollectionRequestBuilder privilegedRoleAssignmentRequests() {
+        return new com.microsoft.graph.requests.PrivilegedRoleAssignmentRequestCollectionRequestBuilder(getServiceRoot() + "/privilegedRoleAssignmentRequests", this, null);
     }
 
     /**
@@ -1519,8 +1519,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the PrivilegedRoleAssignmentRequests object
      */
     @Nonnull
-    public PrivilegedRoleAssignmentRequestRequestBuilder privilegedRoleAssignmentRequests(@Nonnull final String id) {
-        return new PrivilegedRoleAssignmentRequestRequestBuilder(getServiceRoot() + "/privilegedRoleAssignmentRequests/" + id, this, null);
+    public com.microsoft.graph.requests.PrivilegedRoleAssignmentRequestRequestBuilder privilegedRoleAssignmentRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrivilegedRoleAssignmentRequestRequestBuilder(getServiceRoot() + "/privilegedRoleAssignmentRequests/" + id, this, null);
     }
 
     /**
@@ -1529,8 +1529,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of PrivilegedRoleAssignments objects
      */
     @Nonnull
-    public PrivilegedRoleAssignmentCollectionRequestBuilder privilegedRoleAssignments() {
-        return new PrivilegedRoleAssignmentCollectionRequestBuilder(getServiceRoot() + "/privilegedRoleAssignments", this, null);
+    public com.microsoft.graph.requests.PrivilegedRoleAssignmentCollectionRequestBuilder privilegedRoleAssignments() {
+        return new com.microsoft.graph.requests.PrivilegedRoleAssignmentCollectionRequestBuilder(getServiceRoot() + "/privilegedRoleAssignments", this, null);
     }
 
     /**
@@ -1540,8 +1540,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the PrivilegedRoleAssignments object
      */
     @Nonnull
-    public PrivilegedRoleAssignmentRequestBuilder privilegedRoleAssignments(@Nonnull final String id) {
-        return new PrivilegedRoleAssignmentRequestBuilder(getServiceRoot() + "/privilegedRoleAssignments/" + id, this, null);
+    public com.microsoft.graph.requests.PrivilegedRoleAssignmentRequestBuilder privilegedRoleAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrivilegedRoleAssignmentRequestBuilder(getServiceRoot() + "/privilegedRoleAssignments/" + id, this, null);
     }
 
     /**
@@ -1550,8 +1550,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of PrivilegedRoles objects
      */
     @Nonnull
-    public PrivilegedRoleCollectionRequestBuilder privilegedRoles() {
-        return new PrivilegedRoleCollectionRequestBuilder(getServiceRoot() + "/privilegedRoles", this, null);
+    public com.microsoft.graph.requests.PrivilegedRoleCollectionRequestBuilder privilegedRoles() {
+        return new com.microsoft.graph.requests.PrivilegedRoleCollectionRequestBuilder(getServiceRoot() + "/privilegedRoles", this, null);
     }
 
     /**
@@ -1561,8 +1561,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the PrivilegedRoles object
      */
     @Nonnull
-    public PrivilegedRoleRequestBuilder privilegedRoles(@Nonnull final String id) {
-        return new PrivilegedRoleRequestBuilder(getServiceRoot() + "/privilegedRoles/" + id, this, null);
+    public com.microsoft.graph.requests.PrivilegedRoleRequestBuilder privilegedRoles(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrivilegedRoleRequestBuilder(getServiceRoot() + "/privilegedRoles/" + id, this, null);
     }
 
     /**
@@ -1571,8 +1571,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of PrivilegedSignupStatus objects
      */
     @Nonnull
-    public PrivilegedSignupStatusCollectionRequestBuilder privilegedSignupStatus() {
-        return new PrivilegedSignupStatusCollectionRequestBuilder(getServiceRoot() + "/privilegedSignupStatus", this, null);
+    public com.microsoft.graph.requests.PrivilegedSignupStatusCollectionRequestBuilder privilegedSignupStatus() {
+        return new com.microsoft.graph.requests.PrivilegedSignupStatusCollectionRequestBuilder(getServiceRoot() + "/privilegedSignupStatus", this, null);
     }
 
     /**
@@ -1582,8 +1582,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the PrivilegedSignupStatus object
      */
     @Nonnull
-    public PrivilegedSignupStatusRequestBuilder privilegedSignupStatus(@Nonnull final String id) {
-        return new PrivilegedSignupStatusRequestBuilder(getServiceRoot() + "/privilegedSignupStatus/" + id, this, null);
+    public com.microsoft.graph.requests.PrivilegedSignupStatusRequestBuilder privilegedSignupStatus(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrivilegedSignupStatusRequestBuilder(getServiceRoot() + "/privilegedSignupStatus/" + id, this, null);
     }
 
     /**
@@ -1592,8 +1592,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Commands objects
      */
     @Nonnull
-    public CommandCollectionRequestBuilder commands() {
-        return new CommandCollectionRequestBuilder(getServiceRoot() + "/commands", this, null);
+    public com.microsoft.graph.requests.CommandCollectionRequestBuilder commands() {
+        return new com.microsoft.graph.requests.CommandCollectionRequestBuilder(getServiceRoot() + "/commands", this, null);
     }
 
     /**
@@ -1603,8 +1603,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Commands object
      */
     @Nonnull
-    public CommandRequestBuilder commands(@Nonnull final String id) {
-        return new CommandRequestBuilder(getServiceRoot() + "/commands/" + id, this, null);
+    public com.microsoft.graph.requests.CommandRequestBuilder commands(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CommandRequestBuilder(getServiceRoot() + "/commands/" + id, this, null);
     }
 
     /**
@@ -1613,8 +1613,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of PayloadResponse objects
      */
     @Nonnull
-    public PayloadResponseCollectionRequestBuilder payloadResponse() {
-        return new PayloadResponseCollectionRequestBuilder(getServiceRoot() + "/payloadResponse", this, null);
+    public com.microsoft.graph.requests.PayloadResponseCollectionRequestBuilder payloadResponse() {
+        return new com.microsoft.graph.requests.PayloadResponseCollectionRequestBuilder(getServiceRoot() + "/payloadResponse", this, null);
     }
 
     /**
@@ -1624,8 +1624,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the PayloadResponse object
      */
     @Nonnull
-    public PayloadResponseRequestBuilder payloadResponse(@Nonnull final String id) {
-        return new PayloadResponseRequestBuilder(getServiceRoot() + "/payloadResponse/" + id, this, null);
+    public com.microsoft.graph.requests.PayloadResponseRequestBuilder payloadResponse(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PayloadResponseRequestBuilder(getServiceRoot() + "/payloadResponse/" + id, this, null);
     }
 
     /**
@@ -1634,8 +1634,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of DataPolicyOperations objects
      */
     @Nonnull
-    public DataPolicyOperationCollectionRequestBuilder dataPolicyOperations() {
-        return new DataPolicyOperationCollectionRequestBuilder(getServiceRoot() + "/dataPolicyOperations", this, null);
+    public com.microsoft.graph.requests.DataPolicyOperationCollectionRequestBuilder dataPolicyOperations() {
+        return new com.microsoft.graph.requests.DataPolicyOperationCollectionRequestBuilder(getServiceRoot() + "/dataPolicyOperations", this, null);
     }
 
     /**
@@ -1645,8 +1645,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the DataPolicyOperations object
      */
     @Nonnull
-    public DataPolicyOperationRequestBuilder dataPolicyOperations(@Nonnull final String id) {
-        return new DataPolicyOperationRequestBuilder(getServiceRoot() + "/dataPolicyOperations/" + id, this, null);
+    public com.microsoft.graph.requests.DataPolicyOperationRequestBuilder dataPolicyOperations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DataPolicyOperationRequestBuilder(getServiceRoot() + "/dataPolicyOperations/" + id, this, null);
     }
 
     /**
@@ -1655,8 +1655,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Subscriptions objects
      */
     @Nonnull
-    public SubscriptionCollectionRequestBuilder subscriptions() {
-        return new SubscriptionCollectionRequestBuilder(getServiceRoot() + "/subscriptions", this, null);
+    public com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder subscriptions() {
+        return new com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder(getServiceRoot() + "/subscriptions", this, null);
     }
 
     /**
@@ -1666,8 +1666,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Subscriptions object
      */
     @Nonnull
-    public SubscriptionRequestBuilder subscriptions(@Nonnull final String id) {
-        return new SubscriptionRequestBuilder(getServiceRoot() + "/subscriptions/" + id, this, null);
+    public com.microsoft.graph.requests.SubscriptionRequestBuilder subscriptions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SubscriptionRequestBuilder(getServiceRoot() + "/subscriptions/" + id, this, null);
     }
 
     /**
@@ -1676,8 +1676,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Connections objects
      */
     @Nonnull
-    public ExternalConnectionCollectionRequestBuilder connections() {
-        return new ExternalConnectionCollectionRequestBuilder(getServiceRoot() + "/connections", this, null);
+    public com.microsoft.graph.externalconnectors.requests.ExternalConnectionCollectionRequestBuilder connections() {
+        return new com.microsoft.graph.externalconnectors.requests.ExternalConnectionCollectionRequestBuilder(getServiceRoot() + "/connections", this, null);
     }
 
     /**
@@ -1687,8 +1687,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Connections object
      */
     @Nonnull
-    public ExternalConnectionRequestBuilder connections(@Nonnull final String id) {
-        return new ExternalConnectionRequestBuilder(getServiceRoot() + "/connections/" + id, this, null);
+    public com.microsoft.graph.externalconnectors.requests.ExternalConnectionRequestBuilder connections(@Nonnull final String id) {
+        return new com.microsoft.graph.externalconnectors.requests.ExternalConnectionRequestBuilder(getServiceRoot() + "/connections/" + id, this, null);
     }
 
     /**
@@ -1697,8 +1697,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Chats objects
      */
     @Nonnull
-    public ChatCollectionRequestBuilder chats() {
-        return new ChatCollectionRequestBuilder(getServiceRoot() + "/chats", this, null);
+    public com.microsoft.graph.requests.ChatCollectionRequestBuilder chats() {
+        return new com.microsoft.graph.requests.ChatCollectionRequestBuilder(getServiceRoot() + "/chats", this, null);
     }
 
     /**
@@ -1708,8 +1708,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Chats object
      */
     @Nonnull
-    public ChatRequestBuilder chats(@Nonnull final String id) {
-        return new ChatRequestBuilder(getServiceRoot() + "/chats/" + id, this, null);
+    public com.microsoft.graph.requests.ChatRequestBuilder chats(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ChatRequestBuilder(getServiceRoot() + "/chats/" + id, this, null);
     }
 
     /**
@@ -1718,8 +1718,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of Teams objects
      */
     @Nonnull
-    public TeamCollectionRequestBuilder teams() {
-        return new TeamCollectionRequestBuilder(getServiceRoot() + "/teams", this, null);
+    public com.microsoft.graph.requests.TeamCollectionRequestBuilder teams() {
+        return new com.microsoft.graph.requests.TeamCollectionRequestBuilder(getServiceRoot() + "/teams", this, null);
     }
 
     /**
@@ -1729,8 +1729,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the Teams object
      */
     @Nonnull
-    public TeamRequestBuilder teams(@Nonnull final String id) {
-        return new TeamRequestBuilder(getServiceRoot() + "/teams/" + id, this, null);
+    public com.microsoft.graph.requests.TeamRequestBuilder teams(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamRequestBuilder(getServiceRoot() + "/teams/" + id, this, null);
     }
 
     /**
@@ -1739,8 +1739,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the collection of TeamsTemplates objects
      */
     @Nonnull
-    public TeamsTemplateCollectionRequestBuilder teamsTemplates() {
-        return new TeamsTemplateCollectionRequestBuilder(getServiceRoot() + "/teamsTemplates", this, null);
+    public com.microsoft.graph.requests.TeamsTemplateCollectionRequestBuilder teamsTemplates() {
+        return new com.microsoft.graph.requests.TeamsTemplateCollectionRequestBuilder(getServiceRoot() + "/teamsTemplates", this, null);
     }
 
     /**
@@ -1750,8 +1750,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return the request builder for the TeamsTemplates object
      */
     @Nonnull
-    public TeamsTemplateRequestBuilder teamsTemplates(@Nonnull final String id) {
-        return new TeamsTemplateRequestBuilder(getServiceRoot() + "/teamsTemplates/" + id, this, null);
+    public com.microsoft.graph.requests.TeamsTemplateRequestBuilder teamsTemplates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamsTemplateRequestBuilder(getServiceRoot() + "/teamsTemplates/" + id, this, null);
     }
 
     /**

@@ -47,6 +47,15 @@ public class ConfigurationManagerClientInformation implements IJsonBackedObject 
     public String clientIdentifier;
 
     /**
+     * The Client Version.
+     * Configuration Manager Client version from SCCM
+     */
+    @SerializedName(value = "clientVersion", alternate = {"ClientVersion"})
+    @Expose
+	@Nullable
+    public String clientVersion;
+
+    /**
      * The Is Blocked.
      * Configuration Manager Client blocked status from SCCM
      */

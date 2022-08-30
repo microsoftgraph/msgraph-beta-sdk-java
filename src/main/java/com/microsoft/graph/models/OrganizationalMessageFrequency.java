@@ -24,6 +24,10 @@ public enum OrganizationalMessageFrequency
     */
     MONTHLY_TWICE,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For OrganizationalMessageFrequency values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -90,7 +90,7 @@ public class DeviceManagementReportsGetZebraFotaDeploymentReportParameterSet {
     @SerializedName(value = "sessionId", alternate = {"SessionId"})
     @Expose
 	@Nullable
-    public Integer sessionId;
+    public String sessionId;
 
     /**
      * The filter.
@@ -242,14 +242,14 @@ public class DeviceManagementReportsGetZebraFotaDeploymentReportParameterSet {
          * The sessionId parameter value
          */
         @Nullable
-        protected Integer sessionId;
+        protected String sessionId;
         /**
          * Sets the SessionId
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public DeviceManagementReportsGetZebraFotaDeploymentReportParameterSetBuilder withSessionId(@Nullable final Integer val) {
+        public DeviceManagementReportsGetZebraFotaDeploymentReportParameterSetBuilder withSessionId(@Nullable final String val) {
             this.sessionId = val;
             return this;
         }

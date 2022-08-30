@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementSettings;
 import com.microsoft.graph.models.IntuneBrand;
 import com.microsoft.graph.models.AdminConsent;
+import com.microsoft.graph.models.DataProcessorServiceForWindowsFeaturesOnboarding;
 import com.microsoft.graph.models.DeviceProtectionOverview;
 import com.microsoft.graph.models.ManagedDeviceCleanupSettings;
 import com.microsoft.graph.models.DeviceManagementSubscriptions;
@@ -269,6 +270,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AdminConsent adminConsent;
+
+    /**
+     * The Data Processor Service For Windows Features Onboarding.
+     * A configuration entity for MEM features that utilize Data Processor Service for Windows (DPSW) data.
+     */
+    @SerializedName(value = "dataProcessorServiceForWindowsFeaturesOnboarding", alternate = {"DataProcessorServiceForWindowsFeaturesOnboarding"})
+    @Expose
+	@Nullable
+    public DataProcessorServiceForWindowsFeaturesOnboarding dataProcessorServiceForWindowsFeaturesOnboarding;
 
     /**
      * The Device Protection Overview.

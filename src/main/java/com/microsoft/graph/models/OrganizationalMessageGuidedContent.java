@@ -51,7 +51,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements IJsonB
 
     /**
      * The Scenario.
-     * Indicates the scenario for the guided content. Possible values are: onboarding, lifecycle.
+     * Indicates the scenario for the guided content. Possible values are: onboarding, lifecycle, unknownFutureValue.
      */
     @SerializedName(value = "scenario", alternate = {"Scenario"})
     @Expose
@@ -60,7 +60,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements IJsonB
 
     /**
      * The Surface.
-     * Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding.
+     * Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue.
      */
     @SerializedName(value = "surface", alternate = {"Surface"})
     @Expose
@@ -69,7 +69,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements IJsonB
 
     /**
      * The Theme.
-     * Indicates the theme for the guided content. Possible values are: update, training, welcomeToWindows.
+     * Indicates the theme for the guided content. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue.
      */
     @SerializedName(value = "theme", alternate = {"Theme"})
     @Expose

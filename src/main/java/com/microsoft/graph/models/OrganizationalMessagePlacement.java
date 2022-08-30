@@ -32,6 +32,10 @@ public enum OrganizationalMessagePlacement
     */
     CARD3,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For OrganizationalMessagePlacement values that were not expected from the service
     */
     UNEXPECTED_VALUE

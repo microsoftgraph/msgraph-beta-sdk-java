@@ -16,9 +16,17 @@ public enum DeviceManagementReportFileFormat
     */
     CSV,
     /**
+    * pdf
+    */
+    PDF,
+    /**
     * json
     */
     JSON,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
     /**
     * For DeviceManagementReportFileFormat values that were not expected from the service
     */

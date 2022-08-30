@@ -30,7 +30,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements IJson
 
     /**
      * The Container Id.
-     * 
+     * Indicates the identifier of the container, for example, a group ID.
      */
     @SerializedName(value = "containerId", alternate = {"ContainerId"})
     @Expose
@@ -39,7 +39,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements IJson
 
     /**
      * The Member Id.
-     * 
+     * Indicates the identifier of the user.
      */
     @SerializedName(value = "memberId", alternate = {"MemberId"})
     @Expose
@@ -48,7 +48,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements IJson
 
     /**
      * The Outlier Container Type.
-     * 
+     * Indicates the type of container. The possible values are: group, unknownFutureValue.
      */
     @SerializedName(value = "outlierContainerType", alternate = {"OutlierContainerType"})
     @Expose
@@ -57,7 +57,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements IJson
 
     /**
      * The Outlier Member Type.
-     * 
+     * Indicates the type of outlier member. The possible values are: user, unknownFutureValue.
      */
     @SerializedName(value = "outlierMemberType", alternate = {"OutlierMemberType"})
     @Expose
@@ -66,7 +66,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements IJson
 
     /**
      * The Container.
-     * 
+     * Navigation link to the container directory object. For example, to a group.
      */
     @SerializedName(value = "container", alternate = {"Container"})
     @Expose
@@ -75,7 +75,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements IJson
 
     /**
      * The Member.
-     * 
+     * Navigation link to a member object. For example, to a user.
      */
     @SerializedName(value = "member", alternate = {"Member"})
     @Expose

@@ -16,6 +16,10 @@ public enum OrganizationalMessageTargetingType
     */
     AAD_GROUP,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For OrganizationalMessageTargetingType values that were not expected from the service
     */
     UNEXPECTED_VALUE
