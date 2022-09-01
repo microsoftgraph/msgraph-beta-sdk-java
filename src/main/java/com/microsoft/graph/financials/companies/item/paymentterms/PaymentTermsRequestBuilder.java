@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.paymentterms;
+package com.microsoft.graph.financials.companies.item.paymentterms;
 
+import com.microsoft.graph.financials.companies.item.paymentterms.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PaymentTerm;
+import com.microsoft.graph.models.PaymentTermCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.paymentterms.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PaymentTerm;
-import microsoft.graph.models.PaymentTermCollectionResponse;
 /** Provides operations to manage the paymentTerms property of the microsoft.graph.company entity. */
 public class PaymentTermsRequestBuilder {
     /** The Count property */

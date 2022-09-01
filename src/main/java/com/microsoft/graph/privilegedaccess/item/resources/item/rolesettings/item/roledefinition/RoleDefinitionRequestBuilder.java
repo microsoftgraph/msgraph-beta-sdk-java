@@ -1,5 +1,9 @@
-package microsoft.graph.privilegedaccess.item.resources.item.rolesettings.item.roledefinition;
+package com.microsoft.graph.privilegedaccess.item.resources.item.rolesettings.item.roledefinition;
 
+import com.microsoft.graph.models.GovernanceRoleDefinition;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.privilegedaccess.item.resources.item.rolesettings.item.roledefinition.resource.ResourceRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.resources.item.rolesettings.item.roledefinition.rolesetting.RoleSettingRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.GovernanceRoleDefinition;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.privilegedaccess.item.resources.item.rolesettings.item.roledefinition.resource.ResourceRequestBuilder;
-import microsoft.graph.privilegedaccess.item.resources.item.rolesettings.item.roledefinition.rolesetting.RoleSettingRequestBuilder;
 /** Provides operations to manage the roleDefinition property of the microsoft.graph.governanceRoleSetting entity. */
 public class RoleDefinitionRequestBuilder {
     /** Path parameters for the request */

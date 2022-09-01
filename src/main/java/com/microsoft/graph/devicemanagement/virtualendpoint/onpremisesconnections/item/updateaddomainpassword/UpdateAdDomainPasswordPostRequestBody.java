@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item.updateaddomainpassword;
+package com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item.updateaddomainpassword;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

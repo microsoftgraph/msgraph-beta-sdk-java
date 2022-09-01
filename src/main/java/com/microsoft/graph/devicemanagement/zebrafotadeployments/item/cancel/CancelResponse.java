@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.zebrafotadeployments.item.cancel;
+package com.microsoft.graph.devicemanagement.zebrafotadeployments.item.cancel;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

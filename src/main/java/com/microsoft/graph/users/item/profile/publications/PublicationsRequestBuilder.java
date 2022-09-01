@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.profile.publications;
+package com.microsoft.graph.users.item.profile.publications;
 
+import com.microsoft.graph.models.ItemPublication;
+import com.microsoft.graph.models.ItemPublicationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.profile.publications.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ItemPublication;
-import microsoft.graph.models.ItemPublicationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.profile.publications.count.CountRequestBuilder;
 /** Provides operations to manage the publications property of the microsoft.graph.profile entity. */
 public class PublicationsRequestBuilder {
     /** The Count property */

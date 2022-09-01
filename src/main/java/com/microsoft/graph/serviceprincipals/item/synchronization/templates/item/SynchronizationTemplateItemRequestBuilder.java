@@ -1,5 +1,8 @@
-package microsoft.graph.serviceprincipals.item.synchronization.templates.item;
+package com.microsoft.graph.serviceprincipals.item.synchronization.templates.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SynchronizationTemplate;
+import com.microsoft.graph.serviceprincipals.item.synchronization.templates.item.schema.SchemaRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SynchronizationTemplate;
-import microsoft.graph.serviceprincipals.item.synchronization.templates.item.schema.SchemaRequestBuilder;
 /** Provides operations to manage the templates property of the microsoft.graph.synchronization entity. */
 public class SynchronizationTemplateItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,14 @@
-package microsoft.graph.identitygovernance.accessreviews;
+package com.microsoft.graph.identitygovernance.accessreviews;
 
+import com.microsoft.graph.identitygovernance.accessreviews.decisions.DecisionsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.DefinitionsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.AccessReviewScheduleDefinitionItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.HistoryDefinitionsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.item.AccessReviewHistoryDefinitionItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.policy.PolicyRequestBuilder;
+import com.microsoft.graph.models.AccessReviewSet;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.accessreviews.decisions.DecisionsRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.DefinitionsRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.AccessReviewScheduleDefinitionItemRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.historydefinitions.HistoryDefinitionsRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.historydefinitions.item.AccessReviewHistoryDefinitionItemRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.policy.PolicyRequestBuilder;
-import microsoft.graph.models.AccessReviewSet;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessReviews property of the microsoft.graph.identityGovernance entity. */
 public class AccessReviewsRequestBuilder {
     /** The decisions property */
@@ -169,7 +169,7 @@ public class AccessReviewsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.decisions.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.decisions.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
      */
@@ -181,7 +181,7 @@ public class AccessReviewsRequestBuilder {
         return new AccessReviewInstanceDecisionItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.definitions.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.definitions.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewScheduleDefinitionItemRequestBuilder
      */
@@ -295,7 +295,7 @@ public class AccessReviewsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.historyDefinitions.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.historyDefinitions.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewHistoryDefinitionItemRequestBuilder
      */

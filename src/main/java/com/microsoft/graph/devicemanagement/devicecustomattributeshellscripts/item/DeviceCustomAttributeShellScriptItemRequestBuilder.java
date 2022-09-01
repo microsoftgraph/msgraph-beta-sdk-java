@@ -1,5 +1,17 @@
-package microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item;
+package com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item;
 
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.assignments.item.DeviceManagementScriptAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.devicerunstates.DeviceRunStatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.devicerunstates.item.DeviceManagementScriptDeviceStateItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.groupassignments.GroupAssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.groupassignments.item.DeviceManagementScriptGroupAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.runsummary.RunSummaryRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.userrunstates.item.DeviceManagementScriptUserStateItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.userrunstates.UserRunStatesRequestBuilder;
+import com.microsoft.graph.models.DeviceCustomAttributeShellScript;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,18 +26,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.assignments.item.DeviceManagementScriptAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.devicerunstates.DeviceRunStatesRequestBuilder;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.devicerunstates.item.DeviceManagementScriptDeviceStateItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.groupassignments.GroupAssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.groupassignments.item.DeviceManagementScriptGroupAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.runsummary.RunSummaryRequestBuilder;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.userrunstates.item.DeviceManagementScriptUserStateItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.userrunstates.UserRunStatesRequestBuilder;
-import microsoft.graph.models.DeviceCustomAttributeShellScript;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceCustomAttributeShellScripts property of the microsoft.graph.deviceManagement entity. */
 public class DeviceCustomAttributeShellScriptItemRequestBuilder {
     /** The assign property */
@@ -65,7 +65,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder {
         return new UserRunStatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementScriptAssignmentItemRequestBuilder
      */
@@ -245,7 +245,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.deviceRunStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.deviceRunStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementScriptDeviceStateItemRequestBuilder
      */
@@ -308,7 +308,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.groupAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.groupAssignments.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementScriptGroupAssignmentItemRequestBuilder
      */
@@ -375,7 +375,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.userRunStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCustomAttributeShellScripts.item.userRunStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementScriptUserStateItemRequestBuilder
      */

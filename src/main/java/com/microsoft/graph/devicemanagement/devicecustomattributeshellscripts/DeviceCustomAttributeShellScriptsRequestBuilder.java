@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.devicecustomattributeshellscripts;
+package com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts;
 
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceCustomAttributeShellScript;
+import com.microsoft.graph.models.DeviceCustomAttributeShellScriptCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceCustomAttributeShellScript;
-import microsoft.graph.models.DeviceCustomAttributeShellScriptCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceCustomAttributeShellScripts property of the microsoft.graph.deviceManagement entity. */
 public class DeviceCustomAttributeShellScriptsRequestBuilder {
     /** The Count property */

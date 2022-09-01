@@ -1,5 +1,9 @@
-package microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.item;
+package com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamworkTag;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.item.members.item.TeamworkTagMemberItemRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.item.members.MembersRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamworkTag;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.item.members.item.TeamworkTagMemberItemRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.item.members.MembersRequestBuilder;
 /** Provides operations to manage the tags property of the microsoft.graph.team entity. */
 public class TeamworkTagItemRequestBuilder {
     /** The members property */
@@ -251,7 +251,7 @@ public class TeamworkTagItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.tags.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.tags.item.members.item collection
      * @param id Unique identifier of the item
      * @return a TeamworkTagMemberItemRequestBuilder
      */

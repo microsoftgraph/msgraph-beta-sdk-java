@@ -1,5 +1,9 @@
-package microsoft.graph.security.attacksimulation.simulationautomations.item;
+package com.microsoft.graph.security.attacksimulation.simulationautomations.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SimulationAutomation;
+import com.microsoft.graph.security.attacksimulation.simulationautomations.item.runs.item.SimulationAutomationRunItemRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.simulationautomations.item.runs.RunsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SimulationAutomation;
-import microsoft.graph.security.attacksimulation.simulationautomations.item.runs.item.SimulationAutomationRunItemRequestBuilder;
-import microsoft.graph.security.attacksimulation.simulationautomations.item.runs.RunsRequestBuilder;
 /** Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity. */
 public class SimulationAutomationItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class SimulationAutomationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.attackSimulation.simulationAutomations.item.runs.item collection
+     * Gets an item from the com.Microsoft.Graph.security.attackSimulation.simulationAutomations.item.runs.item collection
      * @param id Unique identifier of the item
      * @return a SimulationAutomationRunItemRequestBuilder
      */

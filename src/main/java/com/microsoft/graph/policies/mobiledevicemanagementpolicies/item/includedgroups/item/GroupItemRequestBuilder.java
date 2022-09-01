@@ -1,9 +1,9 @@
-package microsoft.graph.policies.mobiledevicemanagementpolicies.item.includedgroups.item;
+package com.microsoft.graph.policies.mobiledevicemanagementpolicies.item.includedgroups.item;
 
+import com.microsoft.graph.policies.mobiledevicemanagementpolicies.item.includedgroups.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.policies.mobiledevicemanagementpolicies.item.includedgroups.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /policies/mobileDeviceManagementPolicies/{mobilityManagementPolicy-id}/includedGroups/{group-id} */
 public class GroupItemRequestBuilder {
     /** Path parameters for the request */

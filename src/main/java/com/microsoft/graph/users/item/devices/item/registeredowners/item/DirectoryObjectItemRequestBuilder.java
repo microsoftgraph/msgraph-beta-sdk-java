@@ -1,12 +1,12 @@
-package microsoft.graph.users.item.devices.item.registeredowners.item;
+package com.microsoft.graph.users.item.devices.item.registeredowners.item;
 
+import com.microsoft.graph.users.item.devices.item.registeredowners.item.endpoint.EndpointRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.registeredowners.item.ref.RefRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.registeredowners.item.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.registeredowners.item.user.UserRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.users.item.devices.item.registeredowners.item.endpoint.EndpointRequestBuilder;
-import microsoft.graph.users.item.devices.item.registeredowners.item.ref.RefRequestBuilder;
-import microsoft.graph.users.item.devices.item.registeredowners.item.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.users.item.devices.item.registeredowners.item.user.UserRequestBuilder;
 /** Builds and executes requests for operations under /users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
     /** The endpoint property */

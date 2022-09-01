@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.appconsentrequestsforapproval.item;
+package com.microsoft.graph.users.item.appconsentrequestsforapproval.item;
 
+import com.microsoft.graph.models.AppConsentRequest;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.appconsentrequestsforapproval.item.userconsentrequests.item.UserConsentRequestItemRequestBuilder;
+import com.microsoft.graph.users.item.appconsentrequestsforapproval.item.userconsentrequests.UserConsentRequestsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AppConsentRequest;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.appconsentrequestsforapproval.item.userconsentrequests.item.UserConsentRequestItemRequestBuilder;
-import microsoft.graph.users.item.appconsentrequestsforapproval.item.userconsentrequests.UserConsentRequestsRequestBuilder;
 /** Provides operations to manage the appConsentRequestsForApproval property of the microsoft.graph.user entity. */
 public class AppConsentRequestItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class AppConsentRequestItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.appConsentRequestsForApproval.item.userConsentRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.appConsentRequestsForApproval.item.userConsentRequests.item collection
      * @param id Unique identifier of the item
      * @return a UserConsentRequestItemRequestBuilder
      */

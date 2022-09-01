@@ -1,5 +1,6 @@
-package microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.uploadnewversion;
+package com.microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.uploadnewversion;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,7 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the uploadNewVersion method. */
 public class UploadNewVersionRequestBuilder {
     /** Path parameters for the request */

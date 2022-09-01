@@ -1,5 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeApp;
+import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeFolderItem;
+import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeManagedFolderReference;
+import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeWeblink;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

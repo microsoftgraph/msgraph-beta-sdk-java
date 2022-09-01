@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.tenantattachrbac.getstate;
+package com.microsoft.graph.devicemanagement.tenantattachrbac.getstate;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TenantAttachRBACState;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TenantAttachRBACState;
 /** Provides operations to call the getState method. */
 public class GetStateRequestBuilder {
     /** Path parameters for the request */

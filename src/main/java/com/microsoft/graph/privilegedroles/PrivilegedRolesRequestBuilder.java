@@ -1,5 +1,9 @@
-package microsoft.graph.privilegedroles;
+package com.microsoft.graph.privilegedroles;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedRole;
+import com.microsoft.graph.models.PrivilegedRoleCollectionResponse;
+import com.microsoft.graph.privilegedroles.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedRole;
-import microsoft.graph.models.PrivilegedRoleCollectionResponse;
-import microsoft.graph.privilegedroles.count.CountRequestBuilder;
 /** Provides operations to manage the collection of privilegedRole entities. */
 public class PrivilegedRolesRequestBuilder {
     /** The Count property */

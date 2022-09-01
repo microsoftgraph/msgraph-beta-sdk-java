@@ -1,5 +1,8 @@
-package microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatecollections;
+package com.microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatecollections;
 
+import com.microsoft.graph.models.managedtenants.ManagementTemplateCollectionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatecollections.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ManagementTemplateCollectionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatecollections.count.CountRequestBuilder;
 /** Provides operations to manage the managementTemplateCollections property of the microsoft.graph.managedTenants.managementTemplate entity. */
 public class ManagementTemplateCollectionsRequestBuilder {
     /** The Count property */

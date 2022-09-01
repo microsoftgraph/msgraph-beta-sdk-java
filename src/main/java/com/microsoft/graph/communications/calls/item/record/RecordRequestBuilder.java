@@ -1,5 +1,7 @@
-package microsoft.graph.communications.calls.item.record;
+package com.microsoft.graph.communications.calls.item.record;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RecordOperation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RecordOperation;
 /** Provides operations to call the record method. */
 public class RecordRequestBuilder {
     /** Path parameters for the request */

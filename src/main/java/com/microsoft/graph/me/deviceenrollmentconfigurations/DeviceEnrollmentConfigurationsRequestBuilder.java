@@ -1,5 +1,11 @@
-package microsoft.graph.me.deviceenrollmentconfigurations;
+package com.microsoft.graph.me.deviceenrollmentconfigurations;
 
+import com.microsoft.graph.me.deviceenrollmentconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.me.deviceenrollmentconfigurations.createenrollmentnotificationconfiguration.CreateEnrollmentNotificationConfigurationRequestBuilder;
+import com.microsoft.graph.me.deviceenrollmentconfigurations.haspayloadlinks.HasPayloadLinksRequestBuilder;
+import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
+import com.microsoft.graph.models.DeviceEnrollmentConfigurationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.deviceenrollmentconfigurations.count.CountRequestBuilder;
-import microsoft.graph.me.deviceenrollmentconfigurations.createenrollmentnotificationconfiguration.CreateEnrollmentNotificationConfigurationRequestBuilder;
-import microsoft.graph.me.deviceenrollmentconfigurations.haspayloadlinks.HasPayloadLinksRequestBuilder;
-import microsoft.graph.models.DeviceEnrollmentConfiguration;
-import microsoft.graph.models.DeviceEnrollmentConfigurationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.user entity. */
 public class DeviceEnrollmentConfigurationsRequestBuilder {
     /** The Count property */

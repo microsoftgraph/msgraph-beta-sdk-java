@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
     /** Recorded date time of this runtime details instance. */
     private OffsetDateTime _lastRefreshedDateTime;
     /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthRuntimeDetails and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthRuntimeDetails and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBatteryHealthRuntimeDetails() {
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthRuntimeDetails
+     * @return a UserExperienceAnalyticsBatteryHealthRuntimeDetails
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthRuntimeDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

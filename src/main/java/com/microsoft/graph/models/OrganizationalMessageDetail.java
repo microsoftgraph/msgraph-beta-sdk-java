@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -15,21 +15,21 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** The date and time of when the message will stop being displayed to clients */
     private OffsetDateTime _endDateTime;
-    /** The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice. */
+    /** The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice, unknownFutureValue. */
     private OrganizationalMessageFrequency _frequency;
     /** The date and time of when the message was last modified */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Indicates the scenario for the message. Possible values are: onboarding, lifecycle. */
+    /** Indicates the scenario for the message. Possible values are: onboarding, lifecycle, unknownFutureValue. */
     private OrganizationalMessageScenario _scenario;
     /** The date and time of when the message will start being displayed to clients */
     private OffsetDateTime _startDateTime;
-    /** Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled. */
+    /** Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled, unknownFutureValue. */
     private OrganizationalMessageStatus _status;
-    /** Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding. */
+    /** Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue. */
     private OrganizationalMessageSurface _surface;
     /** The groups of devices that will receive the message. This also contains a list of excluded groups that will not receive the message regardless of the device being part of an included group */
     private OrganizationalMessageTargeting _targeting;
-    /** Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows. */
+    /** Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue. */
     private OrganizationalMessageTheme _theme;
     /** The statistics containing how the message was interacted with by clients. This includes the number of impressions, clicks, and dismisses from targeted clients. */
     private OrganizationalMessageInsights _userEngagementStatistics;
@@ -101,7 +101,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the frequency property value. The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice.
+     * Gets the frequency property value. The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice, unknownFutureValue.
      * @return a organizationalMessageFrequency
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the scenario property value. Indicates the scenario for the message. Possible values are: onboarding, lifecycle.
+     * Gets the scenario property value. Indicates the scenario for the message. Possible values are: onboarding, lifecycle, unknownFutureValue.
      * @return a organizationalMessageScenario
      */
     @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         return this._startDateTime;
     }
     /**
-     * Gets the status property value. Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled.
+     * Gets the status property value. Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled, unknownFutureValue.
      * @return a organizationalMessageStatus
      */
     @javax.annotation.Nullable
@@ -141,7 +141,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         return this._status;
     }
     /**
-     * Gets the surface property value. Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding.
+     * Gets the surface property value. Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue.
      * @return a organizationalMessageSurface
      */
     @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         return this._targeting;
     }
     /**
-     * Gets the theme property value. Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows.
+     * Gets the theme property value. Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue.
      * @return a organizationalMessageTheme
      */
     @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         this._endDateTime = value;
     }
     /**
-     * Sets the frequency property value. The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice.
+     * Sets the frequency property value. The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice, unknownFutureValue.
      * @param value Value to set for the frequency property.
      * @return a void
      */
@@ -243,7 +243,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the scenario property value. Indicates the scenario for the message. Possible values are: onboarding, lifecycle.
+     * Sets the scenario property value. Indicates the scenario for the message. Possible values are: onboarding, lifecycle, unknownFutureValue.
      * @param value Value to set for the scenario property.
      * @return a void
      */
@@ -259,7 +259,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         this._startDateTime = value;
     }
     /**
-     * Sets the status property value. Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled.
+     * Sets the status property value. Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */
@@ -267,7 +267,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         this._status = value;
     }
     /**
-     * Sets the surface property value. Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding.
+     * Sets the surface property value. Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue.
      * @param value Value to set for the surface property.
      * @return a void
      */
@@ -283,7 +283,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         this._targeting = value;
     }
     /**
-     * Sets the theme property value. Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows.
+     * Sets the theme property value. Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue.
      * @param value Value to set for the theme property.
      * @return a void
      */

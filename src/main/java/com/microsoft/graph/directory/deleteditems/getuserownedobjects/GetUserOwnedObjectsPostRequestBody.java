@@ -1,4 +1,4 @@
-package microsoft.graph.directory.deleteditems.getuserownedobjects;
+package com.microsoft.graph.directory.deleteditems.getuserownedobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

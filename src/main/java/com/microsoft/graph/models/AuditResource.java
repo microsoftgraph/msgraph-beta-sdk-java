@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -12,6 +12,8 @@ import java.util.Objects;
 public class AuditResource implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** Audit resource's type. */
+    private String _auditResourceType;
     /** Display name. */
     private String _displayName;
     /** List of modified properties. */
@@ -49,6 +51,14 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
+     * Gets the auditResourceType property value. Audit resource's type.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getAuditResourceType() {
+        return this._auditResourceType;
+    }
+    /**
      * Gets the displayName property value. Display name.
      * @return a string
      */
@@ -63,7 +73,8 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditResource currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
+            this.put("auditResourceType", (n) -> { currentObject.setAuditResourceType(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("modifiedProperties", (n) -> { currentObject.setModifiedProperties(n.getCollectionOfObjectValues(AuditProperty::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -110,6 +121,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("auditResourceType", this.getAuditResourceType());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("modifiedProperties", this.getModifiedProperties());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -124,6 +136,14 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the auditResourceType property value. Audit resource's type.
+     * @param value Value to set for the auditResourceType property.
+     * @return a void
+     */
+    public void setAuditResourceType(@javax.annotation.Nullable final String value) {
+        this._auditResourceType = value;
     }
     /**
      * Sets the displayName property value. Display name.

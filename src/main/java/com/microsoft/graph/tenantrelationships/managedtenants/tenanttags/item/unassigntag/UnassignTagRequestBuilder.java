@@ -1,5 +1,7 @@
-package microsoft.graph.tenantrelationships.managedtenants.tenanttags.item.unassigntag;
+package com.microsoft.graph.tenantrelationships.managedtenants.tenanttags.item.unassigntag;
 
+import com.microsoft.graph.models.managedtenants.TenantTag;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.TenantTag;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the unassignTag method. */
 public class UnassignTagRequestBuilder {
     /** Path parameters for the request */

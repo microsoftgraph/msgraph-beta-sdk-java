@@ -1,5 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AadUserNotificationRecipient;
+import com.microsoft.graph.models.ChannelMembersNotificationRecipient;
+import com.microsoft.graph.models.ChatMembersNotificationRecipient;
+import com.microsoft.graph.models.TeamMembersNotificationRecipient;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

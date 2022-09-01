@@ -1,5 +1,7 @@
-package microsoft.graph.tenantrelationships.findtenantinformationbydomainnamewithdomainname;
+package com.microsoft.graph.tenantrelationships.findtenantinformationbydomainnamewithdomainname;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TenantInformation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TenantInformation;
 /** Provides operations to call the findTenantInformationByDomainName method. */
 public class FindTenantInformationByDomainNameWithDomainNameRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.security.informationprotection;
+package com.microsoft.graph.users.item.security.informationprotection;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.InformationProtection;
+import com.microsoft.graph.users.item.security.informationprotection.labelpolicysettings.LabelPolicySettingsRequestBuilder;
+import com.microsoft.graph.users.item.security.informationprotection.sensitivitylabels.item.SensitivityLabelItemRequestBuilder;
+import com.microsoft.graph.users.item.security.informationprotection.sensitivitylabels.SensitivityLabelsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.InformationProtection;
-import microsoft.graph.users.item.security.informationprotection.labelpolicysettings.LabelPolicySettingsRequestBuilder;
-import microsoft.graph.users.item.security.informationprotection.sensitivitylabels.item.SensitivityLabelItemRequestBuilder;
-import microsoft.graph.users.item.security.informationprotection.sensitivitylabels.SensitivityLabelsRequestBuilder;
 /** Provides operations to manage the informationProtection property of the microsoft.graph.security.security entity. */
 public class InformationProtectionRequestBuilder {
     /** The labelPolicySettings property */
@@ -312,7 +312,7 @@ public class InformationProtectionRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.security.informationProtection.sensitivityLabels.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.security.informationProtection.sensitivityLabels.item collection
      * @param id Unique identifier of the item
      * @return a SensitivityLabelItemRequestBuilder
      */

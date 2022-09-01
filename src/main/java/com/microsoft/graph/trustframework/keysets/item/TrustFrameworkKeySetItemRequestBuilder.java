@@ -1,5 +1,12 @@
-package microsoft.graph.trustframework.keysets.item;
+package com.microsoft.graph.trustframework.keysets.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TrustFrameworkKeySet;
+import com.microsoft.graph.trustframework.keysets.item.generatekey.GenerateKeyRequestBuilder;
+import com.microsoft.graph.trustframework.keysets.item.getactivekey.GetActiveKeyRequestBuilder;
+import com.microsoft.graph.trustframework.keysets.item.uploadcertificate.UploadCertificateRequestBuilder;
+import com.microsoft.graph.trustframework.keysets.item.uploadpkcs12.UploadPkcs12RequestBuilder;
+import com.microsoft.graph.trustframework.keysets.item.uploadsecret.UploadSecretRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TrustFrameworkKeySet;
-import microsoft.graph.trustframework.keysets.item.generatekey.GenerateKeyRequestBuilder;
-import microsoft.graph.trustframework.keysets.item.getactivekey.GetActiveKeyRequestBuilder;
-import microsoft.graph.trustframework.keysets.item.uploadcertificate.UploadCertificateRequestBuilder;
-import microsoft.graph.trustframework.keysets.item.uploadpkcs12.UploadPkcs12RequestBuilder;
-import microsoft.graph.trustframework.keysets.item.uploadsecret.UploadSecretRequestBuilder;
 /** Provides operations to manage the keySets property of the microsoft.graph.trustFramework entity. */
 public class TrustFrameworkKeySetItemRequestBuilder {
     /** The generateKey property */

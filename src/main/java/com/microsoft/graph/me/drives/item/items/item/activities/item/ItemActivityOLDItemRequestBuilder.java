@@ -1,5 +1,7 @@
-package microsoft.graph.me.drives.item.items.item.activities.item;
+package com.microsoft.graph.me.drives.item.items.item.activities.item;
 
+import com.microsoft.graph.models.ItemActivityOLD;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ItemActivityOLD;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the activities property of the microsoft.graph.driveItem entity. */
 public class ItemActivityOLDItemRequestBuilder {
     /** Path parameters for the request */

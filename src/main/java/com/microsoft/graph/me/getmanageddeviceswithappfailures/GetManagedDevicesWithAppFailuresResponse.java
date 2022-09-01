@@ -1,4 +1,4 @@
-package microsoft.graph.me.getmanageddeviceswithappfailures;
+package com.microsoft.graph.me.getmanageddeviceswithappfailures;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

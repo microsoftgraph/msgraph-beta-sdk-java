@@ -1,5 +1,9 @@
-package microsoft.graph.education.synchronizationprofiles;
+package com.microsoft.graph.education.synchronizationprofiles;
 
+import com.microsoft.graph.education.synchronizationprofiles.count.CountRequestBuilder;
+import com.microsoft.graph.models.EducationSynchronizationProfile;
+import com.microsoft.graph.models.EducationSynchronizationProfileCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.synchronizationprofiles.count.CountRequestBuilder;
-import microsoft.graph.models.EducationSynchronizationProfile;
-import microsoft.graph.models.EducationSynchronizationProfileCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the synchronizationProfiles property of the microsoft.graph.educationRoot entity. */
 public class SynchronizationProfilesRequestBuilder {
     /** The Count property */

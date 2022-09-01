@@ -1,5 +1,10 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AadUserConversationMember;
+import com.microsoft.graph.models.AnonymousGuestConversationMember;
+import com.microsoft.graph.models.MicrosoftAccountUserConversationMember;
+import com.microsoft.graph.models.SkypeForBusinessUserConversationMember;
+import com.microsoft.graph.models.SkypeUserConversationMember;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

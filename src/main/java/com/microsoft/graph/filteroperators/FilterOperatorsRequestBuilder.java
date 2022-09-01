@@ -1,5 +1,9 @@
-package microsoft.graph.filteroperators;
+package com.microsoft.graph.filteroperators;
 
+import com.microsoft.graph.filteroperators.count.CountRequestBuilder;
+import com.microsoft.graph.models.FilterOperatorSchema;
+import com.microsoft.graph.models.FilterOperatorSchemaCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.filteroperators.count.CountRequestBuilder;
-import microsoft.graph.models.FilterOperatorSchema;
-import microsoft.graph.models.FilterOperatorSchemaCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of filterOperatorSchema entities. */
 public class FilterOperatorsRequestBuilder {
     /** The Count property */

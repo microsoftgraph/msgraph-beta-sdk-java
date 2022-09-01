@@ -1,5 +1,11 @@
-package microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.messages.item.replies.item;
+package com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.messages.item.replies.item;
 
+import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.messages.item.replies.item.hostedcontents.HostedContentsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.messages.item.replies.item.hostedcontents.item.ChatMessageHostedContentItemRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.messages.item.replies.item.softdelete.SoftDeleteRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.messages.item.replies.item.undosoftdelete.UndoSoftDeleteRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ChatMessage;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.messages.item.replies.item.hostedcontents.HostedContentsRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.messages.item.replies.item.hostedcontents.item.ChatMessageHostedContentItemRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.messages.item.replies.item.softdelete.SoftDeleteRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.messages.item.replies.item.undosoftdelete.UndoSoftDeleteRequestBuilder;
 /** Provides operations to manage the replies property of the microsoft.graph.chatMessage entity. */
 public class ChatMessageItemRequestBuilder {
     /** The hostedContents property */
@@ -263,7 +263,7 @@ public class ChatMessageItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.channels.item.messages.item.replies.item.hostedContents.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.channels.item.messages.item.replies.item.hostedContents.item collection
      * @param id Unique identifier of the item
      * @return a ChatMessageHostedContentItemRequestBuilder
      */

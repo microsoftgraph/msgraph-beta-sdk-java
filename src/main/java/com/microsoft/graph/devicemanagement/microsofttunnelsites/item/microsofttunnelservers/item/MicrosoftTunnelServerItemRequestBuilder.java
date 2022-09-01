@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.item;
+package com.microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.item;
 
+import com.microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.item.createserverlogcollectionrequest.CreateServerLogCollectionRequestRequestBuilder;
+import com.microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.item.gethealthmetrics.GetHealthMetricsRequestBuilder;
+import com.microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.item.gethealthmetrictimeseries.GetHealthMetricTimeSeriesRequestBuilder;
+import com.microsoft.graph.models.MicrosoftTunnelServer;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.item.createserverlogcollectionrequest.CreateServerLogCollectionRequestRequestBuilder;
-import microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.item.gethealthmetrics.GetHealthMetricsRequestBuilder;
-import microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.item.gethealthmetrictimeseries.GetHealthMetricTimeSeriesRequestBuilder;
-import microsoft.graph.models.MicrosoftTunnelServer;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the microsoftTunnelServers property of the microsoft.graph.microsoftTunnelSite entity. */
 public class MicrosoftTunnelServerItemRequestBuilder {
     /** The createServerLogCollectionRequest property */

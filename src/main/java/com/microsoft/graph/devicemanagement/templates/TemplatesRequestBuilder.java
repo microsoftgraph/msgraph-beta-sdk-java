@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.templates;
+package com.microsoft.graph.devicemanagement.templates;
 
+import com.microsoft.graph.devicemanagement.templates.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.templates.importoffice365deviceconfigurationpolicies.ImportOffice365DeviceConfigurationPoliciesRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementTemplate;
+import com.microsoft.graph.models.DeviceManagementTemplateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.templates.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.templates.importoffice365deviceconfigurationpolicies.ImportOffice365DeviceConfigurationPoliciesRequestBuilder;
-import microsoft.graph.models.DeviceManagementTemplate;
-import microsoft.graph.models.DeviceManagementTemplateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the templates property of the microsoft.graph.deviceManagement entity. */
 public class TemplatesRequestBuilder {
     /** The Count property */

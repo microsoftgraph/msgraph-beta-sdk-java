@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.grouppolicydefinitionfiles.item;
+package com.microsoft.graph.devicemanagement.grouppolicydefinitionfiles.item;
 
+import com.microsoft.graph.devicemanagement.grouppolicydefinitionfiles.item.definitions.DefinitionsRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicydefinitionfiles.item.definitions.item.GroupPolicyDefinitionItemRequestBuilder;
+import com.microsoft.graph.models.GroupPolicyDefinitionFile;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.grouppolicydefinitionfiles.item.definitions.DefinitionsRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicydefinitionfiles.item.definitions.item.GroupPolicyDefinitionItemRequestBuilder;
-import microsoft.graph.models.GroupPolicyDefinitionFile;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groupPolicyDefinitionFiles property of the microsoft.graph.deviceManagement entity. */
 public class GroupPolicyDefinitionFileItemRequestBuilder {
     /** The definitions property */
@@ -149,7 +149,7 @@ public class GroupPolicyDefinitionFileItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyDefinitionFiles.item.definitions.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.groupPolicyDefinitionFiles.item.definitions.item collection
      * @param id Unique identifier of the item
      * @return a GroupPolicyDefinitionItemRequestBuilder
      */

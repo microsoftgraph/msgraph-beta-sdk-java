@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.accessreviews.decisions.item.instance.stages.item.decisions.item;
+package com.microsoft.graph.identitygovernance.accessreviews.decisions.item.instance.stages.item.decisions.item;
 
+import com.microsoft.graph.identitygovernance.accessreviews.decisions.item.instance.stages.item.decisions.item.insights.InsightsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.decisions.item.instance.stages.item.decisions.item.insights.item.GovernanceInsightItemRequestBuilder;
+import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.accessreviews.decisions.item.instance.stages.item.decisions.item.insights.InsightsRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.decisions.item.instance.stages.item.decisions.item.insights.item.GovernanceInsightItemRequestBuilder;
-import microsoft.graph.models.AccessReviewInstanceDecisionItem;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity. */
 public class AccessReviewInstanceDecisionItemItemRequestBuilder {
     /** The insights property */
@@ -251,7 +251,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.decisions.item.instance.stages.item.decisions.item.insights.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.decisions.item.instance.stages.item.decisions.item.insights.item collection
      * @param id Unique identifier of the item
      * @return a GovernanceInsightItemRequestBuilder
      */

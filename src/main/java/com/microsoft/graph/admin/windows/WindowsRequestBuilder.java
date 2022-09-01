@@ -1,5 +1,8 @@
-package microsoft.graph.admin.windows;
+package com.microsoft.graph.admin.windows;
 
+import com.microsoft.graph.admin.windows.updates.UpdatesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.windowsupdates.Windows;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.windows.updates.UpdatesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.windowsupdates.Windows;
 /** Provides operations to manage the windows property of the microsoft.graph.admin entity. */
 public class WindowsRequestBuilder {
     /** Path parameters for the request */

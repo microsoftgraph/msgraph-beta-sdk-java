@@ -1,5 +1,9 @@
-package microsoft.graph.directory.customsecurityattributedefinitions.item;
+package com.microsoft.graph.directory.customsecurityattributedefinitions.item;
 
+import com.microsoft.graph.directory.customsecurityattributedefinitions.item.allowedvalues.AllowedValuesRequestBuilder;
+import com.microsoft.graph.directory.customsecurityattributedefinitions.item.allowedvalues.item.AllowedValueItemRequestBuilder;
+import com.microsoft.graph.models.CustomSecurityAttributeDefinition;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.customsecurityattributedefinitions.item.allowedvalues.AllowedValuesRequestBuilder;
-import microsoft.graph.directory.customsecurityattributedefinitions.item.allowedvalues.item.AllowedValueItemRequestBuilder;
-import microsoft.graph.models.CustomSecurityAttributeDefinition;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customSecurityAttributeDefinitions property of the microsoft.graph.directory entity. */
 public class CustomSecurityAttributeDefinitionItemRequestBuilder {
     /** The allowedValues property */
@@ -32,7 +32,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.directory.customSecurityAttributeDefinitions.item.allowedValues.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.customSecurityAttributeDefinitions.item.allowedValues.item collection
      * @param id Unique identifier of the item
      * @return a AllowedValueItemRequestBuilder
      */

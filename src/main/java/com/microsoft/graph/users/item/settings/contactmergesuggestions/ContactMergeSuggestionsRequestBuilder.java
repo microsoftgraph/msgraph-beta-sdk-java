@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.settings.contactmergesuggestions;
+package com.microsoft.graph.users.item.settings.contactmergesuggestions;
 
+import com.microsoft.graph.models.ContactMergeSuggestions;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ContactMergeSuggestions;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the contactMergeSuggestions property of the microsoft.graph.userSettings entity. */
 public class ContactMergeSuggestionsRequestBuilder {
     /** Path parameters for the request */

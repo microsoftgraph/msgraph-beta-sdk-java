@@ -1,5 +1,6 @@
-package microsoft.graph.print.reports.getoffice365groupsactivityfilecountswithperiod;
+package com.microsoft.graph.print.reports.getoffice365groupsactivityfilecountswithperiod;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,7 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the getOffice365GroupsActivityFileCounts method. */
 public class GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder {
     /** Path parameters for the request */

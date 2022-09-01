@@ -1,5 +1,13 @@
-package microsoft.graph.admin.windows.updates.updatableassets;
+package com.microsoft.graph.admin.windows.updates.updatableassets;
 
+import com.microsoft.graph.admin.windows.updates.updatableassets.count.CountRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.updatableassets.enrollassets.EnrollAssetsRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.updatableassets.enrollassetsbyid.EnrollAssetsByIdRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.updatableassets.unenrollassets.UnenrollAssetsRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.updatableassets.unenrollassetsbyid.UnenrollAssetsByIdRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.windowsupdates.UpdatableAsset;
+import com.microsoft.graph.models.windowsupdates.UpdatableAssetCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.windows.updates.updatableassets.count.CountRequestBuilder;
-import microsoft.graph.admin.windows.updates.updatableassets.enrollassets.EnrollAssetsRequestBuilder;
-import microsoft.graph.admin.windows.updates.updatableassets.enrollassetsbyid.EnrollAssetsByIdRequestBuilder;
-import microsoft.graph.admin.windows.updates.updatableassets.unenrollassets.UnenrollAssetsRequestBuilder;
-import microsoft.graph.admin.windows.updates.updatableassets.unenrollassetsbyid.UnenrollAssetsByIdRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.windowsupdates.UpdatableAsset;
-import microsoft.graph.models.windowsupdates.UpdatableAssetCollectionResponse;
 /** Provides operations to manage the updatableAssets property of the microsoft.graph.windowsUpdates.updates entity. */
 public class UpdatableAssetsRequestBuilder {
     /** The Count property */

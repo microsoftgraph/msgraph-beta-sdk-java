@@ -1,5 +1,8 @@
-package microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.coloricon.hostedcontent;
+package com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.coloricon.hostedcontent;
 
+import com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.coloricon.hostedcontent.value.ContentRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamworkHostedContent;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.coloricon.hostedcontent.value.ContentRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamworkHostedContent;
 /** Provides operations to manage the hostedContent property of the microsoft.graph.teamsAppIcon entity. */
 public class HostedContentRequestBuilder {
     /** The Content property */

@@ -1,5 +1,18 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DeviceCompliancePolicyPolicySetItem;
+import com.microsoft.graph.models.DeviceConfigurationPolicySetItem;
+import com.microsoft.graph.models.DeviceManagementConfigurationPolicyPolicySetItem;
+import com.microsoft.graph.models.DeviceManagementScriptPolicySetItem;
+import com.microsoft.graph.models.EnrollmentRestrictionsConfigurationPolicySetItem;
+import com.microsoft.graph.models.IosLobAppProvisioningConfigurationPolicySetItem;
+import com.microsoft.graph.models.ManagedAppProtectionPolicySetItem;
+import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationPolicySetItem;
+import com.microsoft.graph.models.MdmWindowsInformationProtectionPolicyPolicySetItem;
+import com.microsoft.graph.models.MobileAppPolicySetItem;
+import com.microsoft.graph.models.TargetedManagedAppConfigurationPolicySetItem;
+import com.microsoft.graph.models.Windows10EnrollmentCompletionPageConfigurationPolicySetItem;
+import com.microsoft.graph.models.WindowsAutopilotDeploymentProfilePolicySetItem;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

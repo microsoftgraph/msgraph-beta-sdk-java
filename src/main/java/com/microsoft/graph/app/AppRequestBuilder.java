@@ -1,5 +1,11 @@
-package microsoft.graph.app;
+package com.microsoft.graph.app;
 
+import com.microsoft.graph.app.calls.CallsRequestBuilder;
+import com.microsoft.graph.app.calls.item.CallItemRequestBuilder;
+import com.microsoft.graph.app.onlinemeetings.item.OnlineMeetingItemRequestBuilder;
+import com.microsoft.graph.app.onlinemeetings.OnlineMeetingsRequestBuilder;
+import com.microsoft.graph.models.CommsApplication;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.app.calls.CallsRequestBuilder;
-import microsoft.graph.app.calls.item.CallItemRequestBuilder;
-import microsoft.graph.app.onlinemeetings.item.OnlineMeetingItemRequestBuilder;
-import microsoft.graph.app.onlinemeetings.OnlineMeetingsRequestBuilder;
-import microsoft.graph.models.CommsApplication;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the commsApplication singleton. */
 public class AppRequestBuilder {
     /** The calls property */
@@ -39,7 +39,7 @@ public class AppRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.app.calls.item collection
+     * Gets an item from the com.Microsoft.Graph.app.calls.item collection
      * @param id Unique identifier of the item
      * @return a CallItemRequestBuilder
      */
@@ -191,7 +191,7 @@ public class AppRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.app.onlineMeetings.item collection
+     * Gets an item from the com.Microsoft.Graph.app.onlineMeetings.item collection
      * @param id Unique identifier of the item
      * @return a OnlineMeetingItemRequestBuilder
      */

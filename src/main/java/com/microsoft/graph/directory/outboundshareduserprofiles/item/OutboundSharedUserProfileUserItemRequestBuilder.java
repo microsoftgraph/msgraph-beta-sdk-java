@@ -1,5 +1,9 @@
-package microsoft.graph.directory.outboundshareduserprofiles.item;
+package com.microsoft.graph.directory.outboundshareduserprofiles.item;
 
+import com.microsoft.graph.directory.outboundshareduserprofiles.item.tenants.item.TenantReferenceTenantItemRequestBuilder;
+import com.microsoft.graph.directory.outboundshareduserprofiles.item.tenants.TenantsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OutboundSharedUserProfile;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.outboundshareduserprofiles.item.tenants.item.TenantReferenceTenantItemRequestBuilder;
-import microsoft.graph.directory.outboundshareduserprofiles.item.tenants.TenantsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OutboundSharedUserProfile;
 /** Provides operations to manage the outboundSharedUserProfiles property of the microsoft.graph.directory entity. */
 public class OutboundSharedUserProfileUserItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.outboundSharedUserProfiles.item.tenants.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.outboundSharedUserProfiles.item.tenants.item collection
      * @param id Unique identifier of the item
      * @return a TenantReferenceTenantItemRequestBuilder
      */

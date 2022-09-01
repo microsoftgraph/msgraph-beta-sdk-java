@@ -1,5 +1,12 @@
-package microsoft.graph.rolemanagement.cloudpc.roleassignments.item;
+package com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleAssignmentMultiple;
+import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.appscopes.AppScopesRequestBuilder;
+import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.appscopes.item.AppScopeItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.directoryscopes.DirectoryScopesRequestBuilder;
+import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals.PrincipalsRequestBuilder;
+import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.roledefinition.RoleDefinitionRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleAssignmentMultiple;
-import microsoft.graph.rolemanagement.cloudpc.roleassignments.item.appscopes.AppScopesRequestBuilder;
-import microsoft.graph.rolemanagement.cloudpc.roleassignments.item.appscopes.item.AppScopeItemRequestBuilder;
-import microsoft.graph.rolemanagement.cloudpc.roleassignments.item.directoryscopes.DirectoryScopesRequestBuilder;
-import microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals.PrincipalsRequestBuilder;
-import microsoft.graph.rolemanagement.cloudpc.roleassignments.item.roledefinition.RoleDefinitionRequestBuilder;
 /** Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplicationMultiple entity. */
 public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
     /** The appScopes property */
@@ -50,7 +50,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.cloudPC.roleAssignments.item.appScopes.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.cloudPC.roleAssignments.item.appScopes.item collection
      * @param id Unique identifier of the item
      * @return a AppScopeItemRequestBuilder
      */
@@ -230,16 +230,16 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.cloudPC.roleAssignments.item.directoryScopes.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.cloudPC.roleAssignments.item.directoryScopes.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.rolemanagement.cloudpc.roleassignments.item.directoryscopes.item.DirectoryObjectItemRequestBuilder directoryScopes(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.directoryscopes.item.DirectoryObjectItemRequestBuilder directoryScopes(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.rolemanagement.cloudpc.roleassignments.item.directoryscopes.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.directoryscopes.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get roleAssignments from roleManagement
@@ -348,16 +348,16 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.cloudPC.roleAssignments.item.principals.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.cloudPC.roleAssignments.item.principals.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals.item.DirectoryObjectItemRequestBuilder principals(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals.item.DirectoryObjectItemRequestBuilder principals(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class UnifiedRoleAssignmentMultipleItemRequestBuilderDeleteRequestConfiguration {

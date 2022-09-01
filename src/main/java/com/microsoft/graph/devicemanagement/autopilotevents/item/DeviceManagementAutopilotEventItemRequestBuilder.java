@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.autopilotevents.item;
+package com.microsoft.graph.devicemanagement.autopilotevents.item;
 
+import com.microsoft.graph.devicemanagement.autopilotevents.item.policystatusdetails.item.DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.autopilotevents.item.policystatusdetails.PolicyStatusDetailsRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementAutopilotEvent;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.autopilotevents.item.policystatusdetails.item.DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder;
-import microsoft.graph.devicemanagement.autopilotevents.item.policystatusdetails.PolicyStatusDetailsRequestBuilder;
-import microsoft.graph.models.DeviceManagementAutopilotEvent;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the autopilotEvents property of the microsoft.graph.deviceManagement entity. */
 public class DeviceManagementAutopilotEventItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class DeviceManagementAutopilotEventItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.autopilotEvents.item.policyStatusDetails.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.autopilotEvents.item.policyStatusDetails.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder
      */

@@ -1,5 +1,9 @@
-package microsoft.graph.onpremisespublishingprofiles.item.connectors.item;
+package com.microsoft.graph.onpremisespublishingprofiles.item.connectors.item;
 
+import com.microsoft.graph.models.Connector;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectors.item.memberof.item.ConnectorGroupItemRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectors.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Connector;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.onpremisespublishingprofiles.item.connectors.item.memberof.item.ConnectorGroupItemRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.connectors.item.memberof.MemberOfRequestBuilder;
 /** Provides operations to manage the connectors property of the microsoft.graph.onPremisesPublishingProfile entity. */
 public class ConnectorItemRequestBuilder {
     /** The memberOf property */
@@ -251,7 +251,7 @@ public class ConnectorItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.connectors.item.memberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.connectors.item.memberOf.item collection
      * @param id Unique identifier of the item
      * @return a ConnectorGroupItemRequestBuilder
      */

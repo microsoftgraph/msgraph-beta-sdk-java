@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item.metricdevices.item;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item.metricdevices.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDevice;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDevice;
 /** Provides operations to manage the metricDevices property of the microsoft.graph.userExperienceAnalyticsWorkFromAnywhereMetric entity. */
 public class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder {
     /** Path parameters for the request */

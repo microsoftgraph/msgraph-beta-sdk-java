@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.haspayloadlinks;
+package com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.haspayloadlinks;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

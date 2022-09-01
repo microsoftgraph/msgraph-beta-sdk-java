@@ -1,5 +1,7 @@
-package microsoft.graph.search.acronyms.item;
+package com.microsoft.graph.search.acronyms.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.search.Acronym;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.search.Acronym;
 /** Provides operations to manage the acronyms property of the microsoft.graph.searchEntity entity. */
 public class AcronymItemRequestBuilder {
     /** Path parameters for the request */

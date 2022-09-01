@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.runsummary;
+package com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.runsummary;
 
+import com.microsoft.graph.models.DeviceManagementScriptRunSummary;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceManagementScriptRunSummary;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the runSummary property of the microsoft.graph.deviceCustomAttributeShellScript entity. */
 public class RunSummaryRequestBuilder {
     /** Path parameters for the request */

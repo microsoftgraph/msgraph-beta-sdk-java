@@ -1,5 +1,10 @@
-package microsoft.graph.me.planner.all;
+package com.microsoft.graph.me.planner.all;
 
+import com.microsoft.graph.me.planner.all.count.CountRequestBuilder;
+import com.microsoft.graph.me.planner.all.delta.DeltaRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerDelta;
+import com.microsoft.graph.models.PlannerDeltaCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.planner.all.count.CountRequestBuilder;
-import microsoft.graph.me.planner.all.delta.DeltaRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerDelta;
-import microsoft.graph.models.PlannerDeltaCollectionResponse;
 /** Provides operations to manage the all property of the microsoft.graph.plannerUser entity. */
 public class AllRequestBuilder {
     /** The Count property */

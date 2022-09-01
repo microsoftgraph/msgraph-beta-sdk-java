@@ -1,5 +1,11 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.Windows10CertificateProfileBase;
+import com.microsoft.graph.models.Windows10ImportedPFXCertificateProfile;
+import com.microsoft.graph.models.Windows10PkcsCertificateProfile;
+import com.microsoft.graph.models.Windows81CertificateProfileBase;
+import com.microsoft.graph.models.Windows81SCEPCertificateProfile;
+import com.microsoft.graph.models.WindowsPhone81ImportedPFXCertificateProfile;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

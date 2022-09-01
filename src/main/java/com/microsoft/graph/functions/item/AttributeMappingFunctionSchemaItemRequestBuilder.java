@@ -1,5 +1,7 @@
-package microsoft.graph.functions.item;
+package com.microsoft.graph.functions.item;
 
+import com.microsoft.graph.models.AttributeMappingFunctionSchema;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AttributeMappingFunctionSchema;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of attributeMappingFunctionSchema entities. */
 public class AttributeMappingFunctionSchemaItemRequestBuilder {
     /** Path parameters for the request */

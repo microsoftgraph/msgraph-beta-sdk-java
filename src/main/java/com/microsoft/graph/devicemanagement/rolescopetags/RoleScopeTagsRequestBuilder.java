@@ -1,5 +1,11 @@
-package microsoft.graph.devicemanagement.rolescopetags;
+package com.microsoft.graph.devicemanagement.rolescopetags;
 
+import com.microsoft.graph.devicemanagement.rolescopetags.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.rolescopetags.getrolescopetagsbyid.GetRoleScopeTagsByIdRequestBuilder;
+import com.microsoft.graph.devicemanagement.rolescopetags.hascustomrolescopetag.HasCustomRoleScopeTagRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RoleScopeTag;
+import com.microsoft.graph.models.RoleScopeTagCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.rolescopetags.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.rolescopetags.getrolescopetagsbyid.GetRoleScopeTagsByIdRequestBuilder;
-import microsoft.graph.devicemanagement.rolescopetags.hascustomrolescopetag.HasCustomRoleScopeTagRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RoleScopeTag;
-import microsoft.graph.models.RoleScopeTagCollectionResponse;
 /** Provides operations to manage the roleScopeTags property of the microsoft.graph.deviceManagement entity. */
 public class RoleScopeTagsRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.education.synchronizationprofiles.item.uploadurl;
+package com.microsoft.graph.education.synchronizationprofiles.item.uploadurl;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

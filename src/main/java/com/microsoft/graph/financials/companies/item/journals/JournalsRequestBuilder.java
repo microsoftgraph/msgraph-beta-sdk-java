@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.journals;
+package com.microsoft.graph.financials.companies.item.journals;
 
+import com.microsoft.graph.financials.companies.item.journals.count.CountRequestBuilder;
+import com.microsoft.graph.models.Journal;
+import com.microsoft.graph.models.JournalCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.journals.count.CountRequestBuilder;
-import microsoft.graph.models.Journal;
-import microsoft.graph.models.JournalCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the journals property of the microsoft.graph.company entity. */
 public class JournalsRequestBuilder {
     /** The Count property */

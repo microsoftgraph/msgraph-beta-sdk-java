@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.insights.item;
+package com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.insights.item;
 
+import com.microsoft.graph.models.GovernanceInsight;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.GovernanceInsight;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the insights property of the microsoft.graph.accessReviewInstanceDecisionItem entity. */
 public class GovernanceInsightItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,7 @@
-package microsoft.graph.dataclassification.classifytext;
+package com.microsoft.graph.dataclassification.classifytext;
 
+import com.microsoft.graph.models.MlClassificationMatchTolerance;
+import com.microsoft.graph.models.SensitiveTypeScope;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MlClassificationMatchTolerance;
-import microsoft.graph.models.SensitiveTypeScope;
 /** Provides operations to call the classifyText method. */
 public class ClassifyTextPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

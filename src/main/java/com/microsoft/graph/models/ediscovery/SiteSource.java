@@ -1,5 +1,6 @@
-package microsoft.graph.models.ediscovery;
+package com.microsoft.graph.models.ediscovery;
 
+import com.microsoft.graph.models.Site;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Site;
 public class SiteSource extends DataSource implements Parsable {
     /** The site property */
     private Site _site;

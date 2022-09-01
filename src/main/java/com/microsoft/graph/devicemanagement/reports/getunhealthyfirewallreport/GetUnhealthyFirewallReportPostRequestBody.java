@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getunhealthyfirewallreport;
+package com.microsoft.graph.devicemanagement.reports.getunhealthyfirewallreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

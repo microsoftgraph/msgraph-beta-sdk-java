@@ -1,5 +1,9 @@
-package microsoft.graph.me.outlook.taskgroups;
+package com.microsoft.graph.me.outlook.taskgroups;
 
+import com.microsoft.graph.me.outlook.taskgroups.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OutlookTaskGroup;
+import com.microsoft.graph.models.OutlookTaskGroupCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.outlook.taskgroups.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OutlookTaskGroup;
-import microsoft.graph.models.OutlookTaskGroupCollectionResponse;
 /** Provides operations to manage the taskGroups property of the microsoft.graph.outlookUser entity. */
 public class TaskGroupsRequestBuilder {
     /** The Count property */

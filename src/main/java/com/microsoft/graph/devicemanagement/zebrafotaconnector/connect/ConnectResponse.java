@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.zebrafotaconnector.connect;
+package com.microsoft.graph.devicemanagement.zebrafotaconnector.connect;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

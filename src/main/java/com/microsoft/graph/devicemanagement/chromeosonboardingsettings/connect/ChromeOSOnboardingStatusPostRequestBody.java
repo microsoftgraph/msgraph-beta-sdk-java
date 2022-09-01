@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.chromeosonboardingsettings.connect;
+package com.microsoft.graph.devicemanagement.chromeosonboardingsettings.connect;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

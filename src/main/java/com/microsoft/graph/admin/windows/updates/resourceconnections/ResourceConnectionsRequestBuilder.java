@@ -1,5 +1,9 @@
-package microsoft.graph.admin.windows.updates.resourceconnections;
+package com.microsoft.graph.admin.windows.updates.resourceconnections;
 
+import com.microsoft.graph.admin.windows.updates.resourceconnections.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.windowsupdates.ResourceConnection;
+import com.microsoft.graph.models.windowsupdates.ResourceConnectionCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.windows.updates.resourceconnections.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.windowsupdates.ResourceConnection;
-import microsoft.graph.models.windowsupdates.ResourceConnectionCollectionResponse;
 /** Provides operations to manage the resourceConnections property of the microsoft.graph.windowsUpdates.updates entity. */
 public class ResourceConnectionsRequestBuilder {
     /** The Count property */

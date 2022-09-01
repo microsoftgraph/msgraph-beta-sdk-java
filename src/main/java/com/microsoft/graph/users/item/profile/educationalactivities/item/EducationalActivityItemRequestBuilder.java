@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.profile.educationalactivities.item;
+package com.microsoft.graph.users.item.profile.educationalactivities.item;
 
+import com.microsoft.graph.models.EducationalActivity;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.EducationalActivity;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the educationalActivities property of the microsoft.graph.profile entity. */
 public class EducationalActivityItemRequestBuilder {
     /** Path parameters for the request */

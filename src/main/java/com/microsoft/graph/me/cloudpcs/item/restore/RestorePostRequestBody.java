@@ -1,4 +1,4 @@
-package microsoft.graph.me.cloudpcs.item.restore;
+package com.microsoft.graph.me.cloudpcs.item.restore;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

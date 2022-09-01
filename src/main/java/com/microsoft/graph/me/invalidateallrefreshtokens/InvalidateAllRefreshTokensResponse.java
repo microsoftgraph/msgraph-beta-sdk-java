@@ -1,4 +1,4 @@
-package microsoft.graph.me.invalidateallrefreshtokens;
+package com.microsoft.graph.me.invalidateallrefreshtokens;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

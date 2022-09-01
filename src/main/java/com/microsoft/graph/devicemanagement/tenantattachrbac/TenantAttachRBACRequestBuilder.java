@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.tenantattachrbac;
+package com.microsoft.graph.devicemanagement.tenantattachrbac;
 
+import com.microsoft.graph.devicemanagement.tenantattachrbac.enable.EnableRequestBuilder;
+import com.microsoft.graph.devicemanagement.tenantattachrbac.getstate.GetStateRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TenantAttachRBAC;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.tenantattachrbac.enable.EnableRequestBuilder;
-import microsoft.graph.devicemanagement.tenantattachrbac.getstate.GetStateRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TenantAttachRBAC;
 /** Provides operations to manage the tenantAttachRBAC property of the microsoft.graph.deviceManagement entity. */
 public class TenantAttachRBACRequestBuilder {
     /** The enable property */

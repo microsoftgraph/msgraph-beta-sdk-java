@@ -1,5 +1,6 @@
-package microsoft.graph.me.manageddevices.item.triggerconfigurationmanageraction;
+package com.microsoft.graph.me.manageddevices.item.triggerconfigurationmanageraction;
 
+import com.microsoft.graph.models.ConfigurationManagerAction;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ConfigurationManagerAction;
 /** Provides operations to call the triggerConfigurationManagerAction method. */
 public class TriggerConfigurationManagerActionPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

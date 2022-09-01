@@ -1,4 +1,4 @@
-package microsoft.graph.models.ediscovery;
+package com.microsoft.graph.models.ediscovery;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

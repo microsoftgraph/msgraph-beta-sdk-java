@@ -1,5 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DepEnrollmentBaseProfile;
+import com.microsoft.graph.models.DepEnrollmentProfile;
+import com.microsoft.graph.models.DepIOSEnrollmentProfile;
+import com.microsoft.graph.models.DepMacOSEnrollmentProfile;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

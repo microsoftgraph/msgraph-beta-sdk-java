@@ -1,5 +1,7 @@
-package microsoft.graph.me.settings.regionalandlanguagesettings;
+package com.microsoft.graph.me.settings.regionalandlanguagesettings;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RegionalAndLanguageSettings;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RegionalAndLanguageSettings;
 /** Provides operations to manage the regionalAndLanguageSettings property of the microsoft.graph.userSettings entity. */
 public class RegionalAndLanguageSettingsRequestBuilder {
     /** Path parameters for the request */

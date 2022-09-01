@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.planner.rosterplans;
+package com.microsoft.graph.users.item.planner.rosterplans;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerPlanCollectionResponse;
+import com.microsoft.graph.users.item.planner.rosterplans.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerPlanCollectionResponse;
-import microsoft.graph.users.item.planner.rosterplans.count.CountRequestBuilder;
 /** Provides operations to manage the rosterPlans property of the microsoft.graph.plannerUser entity. */
 public class RosterPlansRequestBuilder {
     /** The Count property */

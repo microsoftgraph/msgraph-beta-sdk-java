@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.profile.notes;
+package com.microsoft.graph.users.item.profile.notes;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PersonAnnotation;
+import com.microsoft.graph.models.PersonAnnotationCollectionResponse;
+import com.microsoft.graph.users.item.profile.notes.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PersonAnnotation;
-import microsoft.graph.models.PersonAnnotationCollectionResponse;
-import microsoft.graph.users.item.profile.notes.count.CountRequestBuilder;
 /** Provides operations to manage the notes property of the microsoft.graph.profile entity. */
 public class NotesRequestBuilder {
     /** The Count property */

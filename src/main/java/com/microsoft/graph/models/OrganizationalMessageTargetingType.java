@@ -1,12 +1,14 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum OrganizationalMessageTargetingType implements ValuedEnum {
     /** Indicates that client devices are targeted by their AAD group */
-    AadGroup("aadGroup");
+    AadGroup("aadGroup"),
+    /** UnknownFutureValue, Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     OrganizationalMessageTargetingType(final String value) {
         this.value = value;
@@ -18,6 +20,7 @@ public enum OrganizationalMessageTargetingType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "aadGroup": return AadGroup;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

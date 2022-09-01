@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.windowsupdatecatalogitems;
+package com.microsoft.graph.devicemanagement.windowsupdatecatalogitems;
 
+import com.microsoft.graph.devicemanagement.windowsupdatecatalogitems.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsUpdateCatalogItem;
+import com.microsoft.graph.models.WindowsUpdateCatalogItemCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.windowsupdatecatalogitems.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsUpdateCatalogItem;
-import microsoft.graph.models.WindowsUpdateCatalogItemCollectionResponse;
 /** Provides operations to manage the windowsUpdateCatalogItems property of the microsoft.graph.deviceManagement entity. */
 public class WindowsUpdateCatalogItemsRequestBuilder {
     /** The Count property */

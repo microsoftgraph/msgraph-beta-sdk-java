@@ -1,4 +1,4 @@
-package microsoft.graph.privilegedroleassignments.item.makepermanent;
+package com.microsoft.graph.privilegedroleassignments.item.makepermanent;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

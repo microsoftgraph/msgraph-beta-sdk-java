@@ -1,5 +1,10 @@
-package microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item;
+package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryReviewSetQuery;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.applytags.ApplyTagsRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.export.ExportRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.run.RunRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryReviewSetQuery;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.applytags.ApplyTagsRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.export.ExportRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.run.RunRequestBuilder;
 /** Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity. */
 public class EdiscoveryReviewSetQueryItemRequestBuilder {
     /** The applyTags property */

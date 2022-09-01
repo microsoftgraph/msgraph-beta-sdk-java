@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.intunebrandingprofiles.item;
+package com.microsoft.graph.devicemanagement.intunebrandingprofiles.item;
 
+import com.microsoft.graph.devicemanagement.intunebrandingprofiles.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.intunebrandingprofiles.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.intunebrandingprofiles.item.assignments.item.IntuneBrandingProfileAssignmentItemRequestBuilder;
+import com.microsoft.graph.models.IntuneBrandingProfile;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.intunebrandingprofiles.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.intunebrandingprofiles.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.intunebrandingprofiles.item.assignments.item.IntuneBrandingProfileAssignmentItemRequestBuilder;
-import microsoft.graph.models.IntuneBrandingProfile;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the intuneBrandingProfiles property of the microsoft.graph.deviceManagement entity. */
 public class IntuneBrandingProfileItemRequestBuilder {
     /** The assign property */
@@ -38,7 +38,7 @@ public class IntuneBrandingProfileItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.intuneBrandingProfiles.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.intuneBrandingProfiles.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a IntuneBrandingProfileAssignmentItemRequestBuilder
      */

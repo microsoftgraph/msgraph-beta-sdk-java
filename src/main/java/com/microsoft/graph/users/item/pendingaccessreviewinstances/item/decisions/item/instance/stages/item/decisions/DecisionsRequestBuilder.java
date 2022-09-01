@@ -1,5 +1,11 @@
-package microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions;
+package com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions;
 
+import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
+import com.microsoft.graph.models.AccessReviewInstanceDecisionItemCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.recordalldecisions.RecordAllDecisionsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AccessReviewInstanceDecisionItem;
-import microsoft.graph.models.AccessReviewInstanceDecisionItemCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.count.CountRequestBuilder;
-import microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
-import microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.recordalldecisions.RecordAllDecisionsRequestBuilder;
 /** Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity. */
 public class DecisionsRequestBuilder {
     /** The Count property */

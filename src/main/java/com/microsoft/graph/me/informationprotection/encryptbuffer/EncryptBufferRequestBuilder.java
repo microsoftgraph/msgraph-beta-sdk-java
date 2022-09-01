@@ -1,5 +1,7 @@
-package microsoft.graph.me.informationprotection.encryptbuffer;
+package com.microsoft.graph.me.informationprotection.encryptbuffer;
 
+import com.microsoft.graph.models.BufferEncryptionResult;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.BufferEncryptionResult;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the encryptBuffer method. */
 public class EncryptBufferRequestBuilder {
     /** Path parameters for the request */

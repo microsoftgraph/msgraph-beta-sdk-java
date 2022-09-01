@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.devicebootperformancemetrics;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.devicebootperformancemetrics;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsCategory;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsCategory;
 /** Provides operations to manage the deviceBootPerformanceMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity. */
 public class DeviceBootPerformanceMetricsRequestBuilder {
     /** Path parameters for the request */

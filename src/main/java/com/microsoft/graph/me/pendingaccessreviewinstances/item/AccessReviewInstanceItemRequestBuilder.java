@@ -1,5 +1,20 @@
-package microsoft.graph.me.pendingaccessreviewinstances.item;
+package com.microsoft.graph.me.pendingaccessreviewinstances.item;
 
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.acceptrecommendations.AcceptRecommendationsRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.applydecisions.ApplyDecisionsRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.batchrecorddecisions.BatchRecordDecisionsRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.contactedreviewers.ContactedReviewersRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.contactedreviewers.item.AccessReviewReviewerItemRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.decisions.DecisionsRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.definition.DefinitionRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.resetdecisions.ResetDecisionsRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.sendreminder.SendReminderRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.stages.item.AccessReviewStageItemRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.stages.StagesRequestBuilder;
+import com.microsoft.graph.me.pendingaccessreviewinstances.item.stop.StopRequestBuilder;
+import com.microsoft.graph.models.AccessReviewInstance;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,21 +29,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.pendingaccessreviewinstances.item.acceptrecommendations.AcceptRecommendationsRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.applydecisions.ApplyDecisionsRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.batchrecorddecisions.BatchRecordDecisionsRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.contactedreviewers.ContactedReviewersRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.contactedreviewers.item.AccessReviewReviewerItemRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.decisions.DecisionsRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.definition.DefinitionRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.resetdecisions.ResetDecisionsRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.sendreminder.SendReminderRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.stages.item.AccessReviewStageItemRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.stages.StagesRequestBuilder;
-import microsoft.graph.me.pendingaccessreviewinstances.item.stop.StopRequestBuilder;
-import microsoft.graph.models.AccessReviewInstance;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the pendingAccessReviewInstances property of the microsoft.graph.user entity. */
 public class AccessReviewInstanceItemRequestBuilder {
     /** The acceptRecommendations property */
@@ -115,7 +115,7 @@ public class AccessReviewInstanceItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.pendingAccessReviewInstances.item.contactedReviewers.item collection
+     * Gets an item from the com.Microsoft.Graph.me.pendingAccessReviewInstances.item.contactedReviewers.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewReviewerItemRequestBuilder
      */
@@ -217,7 +217,7 @@ public class AccessReviewInstanceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.pendingAccessReviewInstances.item.decisions.item collection
+     * Gets an item from the com.Microsoft.Graph.me.pendingAccessReviewInstances.item.decisions.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
      */
@@ -386,7 +386,7 @@ public class AccessReviewInstanceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.pendingAccessReviewInstances.item.stages.item collection
+     * Gets an item from the com.Microsoft.Graph.me.pendingAccessReviewInstances.item.stages.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewStageItemRequestBuilder
      */

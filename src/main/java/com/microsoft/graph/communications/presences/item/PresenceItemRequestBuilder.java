@@ -1,5 +1,11 @@
-package microsoft.graph.communications.presences.item;
+package com.microsoft.graph.communications.presences.item;
 
+import com.microsoft.graph.communications.presences.item.clearpresence.ClearPresenceRequestBuilder;
+import com.microsoft.graph.communications.presences.item.clearuserpreferredpresence.ClearUserPreferredPresenceRequestBuilder;
+import com.microsoft.graph.communications.presences.item.setpresence.SetPresenceRequestBuilder;
+import com.microsoft.graph.communications.presences.item.setuserpreferredpresence.SetUserPreferredPresenceRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Presence;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.communications.presences.item.clearpresence.ClearPresenceRequestBuilder;
-import microsoft.graph.communications.presences.item.clearuserpreferredpresence.ClearUserPreferredPresenceRequestBuilder;
-import microsoft.graph.communications.presences.item.setpresence.SetPresenceRequestBuilder;
-import microsoft.graph.communications.presences.item.setuserpreferredpresence.SetUserPreferredPresenceRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Presence;
 /** Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity. */
 public class PresenceItemRequestBuilder {
     /** The clearPresence property */

@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.comanageddevices.movedevicestoou;
+package com.microsoft.graph.devicemanagement.comanageddevices.movedevicestoou;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

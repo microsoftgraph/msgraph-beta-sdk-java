@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.comanageddevices.item.activatedeviceesim;
+package com.microsoft.graph.devicemanagement.comanageddevices.item.activatedeviceesim;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

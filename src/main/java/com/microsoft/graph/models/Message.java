@@ -1,5 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.CalendarSharingMessage;
+import com.microsoft.graph.models.EventMessage;
+import com.microsoft.graph.models.EventMessageRequest;
+import com.microsoft.graph.models.EventMessageResponse;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

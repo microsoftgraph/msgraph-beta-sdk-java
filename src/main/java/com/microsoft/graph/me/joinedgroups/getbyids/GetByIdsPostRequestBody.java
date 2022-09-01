@@ -1,4 +1,4 @@
-package microsoft.graph.me.joinedgroups.getbyids;
+package com.microsoft.graph.me.joinedgroups.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

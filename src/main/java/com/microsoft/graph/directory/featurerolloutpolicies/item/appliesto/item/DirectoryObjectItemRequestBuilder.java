@@ -1,9 +1,9 @@
-package microsoft.graph.directory.featurerolloutpolicies.item.appliesto.item;
+package com.microsoft.graph.directory.featurerolloutpolicies.item.appliesto.item;
 
+import com.microsoft.graph.directory.featurerolloutpolicies.item.appliesto.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.directory.featurerolloutpolicies.item.appliesto.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /directory/featureRolloutPolicies/{featureRolloutPolicy-id}/appliesTo/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
     /** Path parameters for the request */

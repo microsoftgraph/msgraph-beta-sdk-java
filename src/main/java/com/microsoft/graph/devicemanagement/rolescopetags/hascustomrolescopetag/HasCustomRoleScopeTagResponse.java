@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.rolescopetags.hascustomrolescopetag;
+package com.microsoft.graph.devicemanagement.rolescopetags.hascustomrolescopetag;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

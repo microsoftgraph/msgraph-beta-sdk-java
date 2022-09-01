@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsbaselines;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsBaseline;
+import com.microsoft.graph.models.UserExperienceAnalyticsBaselineCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsBaseline;
-import microsoft.graph.models.UserExperienceAnalyticsBaselineCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsBaselines property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsBaselinesRequestBuilder {
     /** The Count property */

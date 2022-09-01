@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.grouppolicyconfigurations.item.definitionvalues.item;
+package com.microsoft.graph.devicemanagement.grouppolicyconfigurations.item.definitionvalues.item;
 
+import com.microsoft.graph.devicemanagement.grouppolicyconfigurations.item.definitionvalues.item.definition.DefinitionRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicyconfigurations.item.definitionvalues.item.presentationvalues.item.GroupPolicyPresentationValueItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicyconfigurations.item.definitionvalues.item.presentationvalues.PresentationValuesRequestBuilder;
+import com.microsoft.graph.models.GroupPolicyDefinitionValue;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.grouppolicyconfigurations.item.definitionvalues.item.definition.DefinitionRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicyconfigurations.item.definitionvalues.item.presentationvalues.item.GroupPolicyPresentationValueItemRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicyconfigurations.item.definitionvalues.item.presentationvalues.PresentationValuesRequestBuilder;
-import microsoft.graph.models.GroupPolicyDefinitionValue;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the definitionValues property of the microsoft.graph.groupPolicyConfiguration entity. */
 public class GroupPolicyDefinitionValueItemRequestBuilder {
     /** The definition property */
@@ -312,7 +312,7 @@ public class GroupPolicyDefinitionValueItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyConfigurations.item.definitionValues.item.presentationValues.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.groupPolicyConfigurations.item.definitionValues.item.presentationValues.item collection
      * @param id Unique identifier of the item
      * @return a GroupPolicyPresentationValueItemRequestBuilder
      */

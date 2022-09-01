@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles;
+package com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles;
 
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.haspayloadlinks.HasPayloadLinksRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsAutopilotDeploymentProfile;
+import com.microsoft.graph.models.WindowsAutopilotDeploymentProfileCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.haspayloadlinks.HasPayloadLinksRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsAutopilotDeploymentProfile;
-import microsoft.graph.models.WindowsAutopilotDeploymentProfileCollectionResponse;
 /** Provides operations to manage the windowsAutopilotDeploymentProfiles property of the microsoft.graph.deviceManagement entity. */
 public class WindowsAutopilotDeploymentProfilesRequestBuilder {
     /** The Count property */

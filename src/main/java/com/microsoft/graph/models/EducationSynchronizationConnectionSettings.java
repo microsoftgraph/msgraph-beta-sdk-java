@@ -1,5 +1,7 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.EducationSynchronizationOAuth1ConnectionSettings;
+import com.microsoft.graph.models.EducationSynchronizationOAuth2ClientCredentialsConnectionSettings;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

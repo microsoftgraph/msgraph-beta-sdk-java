@@ -1,4 +1,4 @@
-package microsoft.graph.me.chats.item.permissiongrants.item.checkmemberobjects;
+package com.microsoft.graph.me.chats.item.permissiongrants.item.checkmemberobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

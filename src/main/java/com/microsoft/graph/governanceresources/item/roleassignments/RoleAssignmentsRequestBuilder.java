@@ -1,5 +1,10 @@
-package microsoft.graph.governanceresources.item.roleassignments;
+package com.microsoft.graph.governanceresources.item.roleassignments;
 
+import com.microsoft.graph.governanceresources.item.roleassignments.count.CountRequestBuilder;
+import com.microsoft.graph.governanceresources.item.roleassignments.export.ExportRequestBuilder;
+import com.microsoft.graph.models.GovernanceRoleAssignment;
+import com.microsoft.graph.models.GovernanceRoleAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.governanceresources.item.roleassignments.count.CountRequestBuilder;
-import microsoft.graph.governanceresources.item.roleassignments.export.ExportRequestBuilder;
-import microsoft.graph.models.GovernanceRoleAssignment;
-import microsoft.graph.models.GovernanceRoleAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the roleAssignments property of the microsoft.graph.governanceResource entity. */
 public class RoleAssignmentsRequestBuilder {
     /** The Count property */

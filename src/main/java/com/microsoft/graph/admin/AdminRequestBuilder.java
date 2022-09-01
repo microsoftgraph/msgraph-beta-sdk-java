@@ -1,5 +1,11 @@
-package microsoft.graph.admin;
+package com.microsoft.graph.admin;
 
+import com.microsoft.graph.admin.reportsettings.ReportSettingsRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.ServiceAnnouncementRequestBuilder;
+import com.microsoft.graph.admin.sharepoint.SharepointRequestBuilder;
+import com.microsoft.graph.admin.windows.WindowsRequestBuilder;
+import com.microsoft.graph.models.Admin;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.reportsettings.ReportSettingsRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.ServiceAnnouncementRequestBuilder;
-import microsoft.graph.admin.sharepoint.SharepointRequestBuilder;
-import microsoft.graph.admin.windows.WindowsRequestBuilder;
-import microsoft.graph.models.Admin;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the admin singleton. */
 public class AdminRequestBuilder {
     /** Path parameters for the request */

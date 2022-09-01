@@ -1,5 +1,13 @@
-package microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item;
+package com.microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item;
 
+import com.microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.assignments.item.WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.deploysummary.DeploySummaryRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.devicestatuses.DeviceStatusesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.devicestatuses.item.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicy;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.assign.AssignRequestBuilder;
-import microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.assignments.item.WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.deploysummary.DeploySummaryRequestBuilder;
-import microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.devicestatuses.DeviceStatusesRequestBuilder;
-import microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.item.devicestatuses.item.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicy;
 /** Provides operations to manage the wdacSupplementalPolicies property of the microsoft.graph.deviceAppManagement entity. */
 public class WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilder {
     /** The assign property */
@@ -51,7 +51,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuild
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.wdacSupplementalPolicies.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.wdacSupplementalPolicies.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRequestBuilder
      */
@@ -231,7 +231,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuild
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.wdacSupplementalPolicies.item.deviceStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.wdacSupplementalPolicies.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
      * @return a WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusItemRequestBuilder
      */

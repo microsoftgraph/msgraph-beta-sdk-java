@@ -1,5 +1,12 @@
-package microsoft.graph.directoryroles;
+package com.microsoft.graph.directoryroles;
 
+import com.microsoft.graph.directoryroles.delta.DeltaRequestBuilder;
+import com.microsoft.graph.directoryroles.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.directoryroles.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
+import com.microsoft.graph.directoryroles.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.DirectoryRole;
+import com.microsoft.graph.models.DirectoryRoleCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,21 +21,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directoryroles.count.CountRequestBuilder;
-import microsoft.graph.directoryroles.delta.DeltaRequestBuilder;
-import microsoft.graph.directoryroles.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.directoryroles.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
-import microsoft.graph.directoryroles.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.DirectoryRole;
-import microsoft.graph.models.DirectoryRoleCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of directoryRole entities. */
 public class DirectoryRolesRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /** The getByIds property */
     @javax.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
@@ -59,7 +53,7 @@ public class DirectoryRolesRequestBuilder {
     public DirectoryRolesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/directoryRoles{?%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directoryRoles{?%24search,%24orderby,%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -71,7 +65,7 @@ public class DirectoryRolesRequestBuilder {
      * @return a void
      */
     public DirectoryRolesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/directoryRoles{?%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directoryRoles{?%24search,%24orderby,%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -256,18 +250,6 @@ public class DirectoryRolesRequestBuilder {
     }
     /** List the directory roles that are activated in the tenant. This operation only returns roles that have been activated. A role becomes activated when an admin activates the role using the Activate directoryRole API. Not all built-in roles are initially activated.  When assigning a role using the Azure portal, the role activation step is implicitly done on the admin's behalf. To get the full list of roles that are available in Azure AD, use List directoryRoleTemplates. */
     public class DirectoryRolesRequestBuilderGetQueryParameters {
-        /** Include count of items */
-        @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
-        public Boolean count;
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
-        /** Filter items by property values */
-        @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
-        public String filter;
         /** Order items by property values */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
@@ -280,10 +262,6 @@ public class DirectoryRolesRequestBuilder {
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
-        @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
-        public Integer skip;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class DirectoryRolesRequestBuilderGetRequestConfiguration {

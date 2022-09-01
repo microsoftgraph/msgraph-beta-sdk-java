@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails;
+package com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails;
 
+import com.microsoft.graph.models.DelegatedAdminServiceManagementDetail;
+import com.microsoft.graph.models.DelegatedAdminServiceManagementDetailCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DelegatedAdminServiceManagementDetail;
-import microsoft.graph.models.DelegatedAdminServiceManagementDetailCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails.count.CountRequestBuilder;
 /** Provides operations to manage the serviceManagementDetails property of the microsoft.graph.delegatedAdminCustomer entity. */
 public class ServiceManagementDetailsRequestBuilder {
     /** The Count property */

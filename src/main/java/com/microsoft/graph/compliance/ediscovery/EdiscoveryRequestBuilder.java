@@ -1,5 +1,9 @@
-package microsoft.graph.compliance.ediscovery;
+package com.microsoft.graph.compliance.ediscovery;
 
+import com.microsoft.graph.compliance.ediscovery.cases.CasesRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.CaseItemRequestBuilder;
+import com.microsoft.graph.models.ediscovery.Ediscoveryroot;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.CasesRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.CaseItemRequestBuilder;
-import microsoft.graph.models.ediscovery.Ediscoveryroot;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the ediscovery property of the microsoft.graph.compliance entity. */
 public class EdiscoveryRequestBuilder {
     /** The cases property */
@@ -32,7 +32,7 @@ public class EdiscoveryRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item collection
      * @param id Unique identifier of the item
      * @return a CaseItemRequestBuilder
      */

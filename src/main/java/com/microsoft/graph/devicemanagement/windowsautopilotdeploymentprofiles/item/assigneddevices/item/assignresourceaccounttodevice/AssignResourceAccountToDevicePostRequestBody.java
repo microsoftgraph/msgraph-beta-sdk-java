@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.assignresourceaccounttodevice;
+package com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.assignresourceaccounttodevice;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

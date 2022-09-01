@@ -1,5 +1,7 @@
-package microsoft.graph.security.labels.retentionlabels.item.retentioneventtype;
+package com.microsoft.graph.security.labels.retentionlabels.item.retentioneventtype;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.RetentionEventType;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.RetentionEventType;
 /** Provides operations to manage the retentionEventType property of the microsoft.graph.security.retentionLabel entity. */
 public class RetentionEventTypeRequestBuilder {
     /** Path parameters for the request */

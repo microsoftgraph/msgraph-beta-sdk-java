@@ -1,4 +1,4 @@
-package microsoft.graph.teamwork.deletedteams.item.channels.item.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname;
+package com.microsoft.graph.teamwork.deletedteams.item.channels.item.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

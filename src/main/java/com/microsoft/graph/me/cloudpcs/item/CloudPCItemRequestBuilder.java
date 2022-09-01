@@ -1,5 +1,16 @@
-package microsoft.graph.me.cloudpcs.item;
+package com.microsoft.graph.me.cloudpcs.item;
 
+import com.microsoft.graph.me.cloudpcs.item.changeuseraccounttype.ChangeUserAccountTypeRequestBuilder;
+import com.microsoft.graph.me.cloudpcs.item.endgraceperiod.EndGracePeriodRequestBuilder;
+import com.microsoft.graph.me.cloudpcs.item.getcloudpcconnectivityhistory.GetCloudPcConnectivityHistoryRequestBuilder;
+import com.microsoft.graph.me.cloudpcs.item.getcloudpclaunchinfo.GetCloudPcLaunchInfoRequestBuilder;
+import com.microsoft.graph.me.cloudpcs.item.reboot.RebootRequestBuilder;
+import com.microsoft.graph.me.cloudpcs.item.rename.RenameRequestBuilder;
+import com.microsoft.graph.me.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
+import com.microsoft.graph.me.cloudpcs.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.me.cloudpcs.item.troubleshoot.TroubleshootRequestBuilder;
+import com.microsoft.graph.models.CloudPC;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.cloudpcs.item.changeuseraccounttype.ChangeUserAccountTypeRequestBuilder;
-import microsoft.graph.me.cloudpcs.item.endgraceperiod.EndGracePeriodRequestBuilder;
-import microsoft.graph.me.cloudpcs.item.getcloudpcconnectivityhistory.GetCloudPcConnectivityHistoryRequestBuilder;
-import microsoft.graph.me.cloudpcs.item.getcloudpclaunchinfo.GetCloudPcLaunchInfoRequestBuilder;
-import microsoft.graph.me.cloudpcs.item.reboot.RebootRequestBuilder;
-import microsoft.graph.me.cloudpcs.item.rename.RenameRequestBuilder;
-import microsoft.graph.me.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
-import microsoft.graph.me.cloudpcs.item.restore.RestoreRequestBuilder;
-import microsoft.graph.me.cloudpcs.item.troubleshoot.TroubleshootRequestBuilder;
-import microsoft.graph.models.CloudPC;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the cloudPCs property of the microsoft.graph.user entity. */
 public class CloudPCItemRequestBuilder {
     /** The changeUserAccountType property */

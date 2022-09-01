@@ -1,5 +1,13 @@
-package microsoft.graph.me.outlook.taskgroups.item.taskfolders.item;
+package com.microsoft.graph.me.outlook.taskgroups.item.taskfolders.item;
 
+import com.microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.tasks.item.OutlookTaskItemRequestBuilder;
+import com.microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.tasks.TasksRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OutlookTaskFolder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.tasks.item.OutlookTaskItemRequestBuilder;
-import microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.tasks.TasksRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OutlookTaskFolder;
 /** Provides operations to manage the taskFolders property of the microsoft.graph.outlookTaskGroup entity. */
 public class OutlookTaskFolderItemRequestBuilder {
     /** The multiValueExtendedProperties property */
@@ -265,7 +265,7 @@ public class OutlookTaskFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.outlook.taskGroups.item.taskFolders.item.multiValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.me.outlook.taskGroups.item.taskFolders.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -332,7 +332,7 @@ public class OutlookTaskFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.outlook.taskGroups.item.taskFolders.item.singleValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.me.outlook.taskGroups.item.taskFolders.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -344,7 +344,7 @@ public class OutlookTaskFolderItemRequestBuilder {
         return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.outlook.taskGroups.item.taskFolders.item.tasks.item collection
+     * Gets an item from the com.Microsoft.Graph.me.outlook.taskGroups.item.taskFolders.item.tasks.item collection
      * @param id Unique identifier of the item
      * @return a OutlookTaskItemRequestBuilder
      */

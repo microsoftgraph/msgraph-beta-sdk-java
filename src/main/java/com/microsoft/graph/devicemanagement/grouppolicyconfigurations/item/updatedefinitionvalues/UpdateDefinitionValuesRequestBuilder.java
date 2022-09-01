@@ -1,5 +1,6 @@
-package microsoft.graph.devicemanagement.grouppolicyconfigurations.item.updatedefinitionvalues;
+package com.microsoft.graph.devicemanagement.grouppolicyconfigurations.item.updatedefinitionvalues;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,7 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the updateDefinitionValues method. */
 public class UpdateDefinitionValuesRequestBuilder {
     /** Path parameters for the request */

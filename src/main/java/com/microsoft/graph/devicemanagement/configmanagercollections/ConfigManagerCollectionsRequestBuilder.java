@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.configmanagercollections;
+package com.microsoft.graph.devicemanagement.configmanagercollections;
 
+import com.microsoft.graph.devicemanagement.configmanagercollections.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.configmanagercollections.getpolicysummarywithpolicyid.GetPolicySummaryWithPolicyIdRequestBuilder;
+import com.microsoft.graph.models.ConfigManagerCollection;
+import com.microsoft.graph.models.ConfigManagerCollectionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.configmanagercollections.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.configmanagercollections.getpolicysummarywithpolicyid.GetPolicySummaryWithPolicyIdRequestBuilder;
-import microsoft.graph.models.ConfigManagerCollection;
-import microsoft.graph.models.ConfigManagerCollectionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the configManagerCollections property of the microsoft.graph.deviceManagement entity. */
 public class ConfigManagerCollectionsRequestBuilder {
     /** The Count property */

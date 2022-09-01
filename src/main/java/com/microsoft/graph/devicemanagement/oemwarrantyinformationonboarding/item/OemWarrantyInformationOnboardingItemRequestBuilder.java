@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.oemwarrantyinformationonboarding.item;
+package com.microsoft.graph.devicemanagement.oemwarrantyinformationonboarding.item;
 
+import com.microsoft.graph.devicemanagement.oemwarrantyinformationonboarding.item.disable.DisableRequestBuilder;
+import com.microsoft.graph.devicemanagement.oemwarrantyinformationonboarding.item.enable.EnableRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OemWarrantyInformationOnboarding;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.oemwarrantyinformationonboarding.item.disable.DisableRequestBuilder;
-import microsoft.graph.devicemanagement.oemwarrantyinformationonboarding.item.enable.EnableRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OemWarrantyInformationOnboarding;
 /** Provides operations to manage the oemWarrantyInformationOnboarding property of the microsoft.graph.deviceManagement entity. */
 public class OemWarrantyInformationOnboardingItemRequestBuilder {
     /** The disable property */

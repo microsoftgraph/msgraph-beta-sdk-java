@@ -1,9 +1,9 @@
-package microsoft.graph.onpremisespublishingprofiles.item.publishedresources.item.agentgroups.item;
+package com.microsoft.graph.onpremisespublishingprofiles.item.publishedresources.item.agentgroups.item;
 
+import com.microsoft.graph.onpremisespublishingprofiles.item.publishedresources.item.agentgroups.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.onpremisespublishingprofiles.item.publishedresources.item.agentgroups.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /onPremisesPublishingProfiles/{onPremisesPublishingProfile-id}/publishedResources/{publishedResource-id}/agentGroups/{onPremisesAgentGroup-id} */
 public class OnPremisesAgentGroupItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,11 @@
-package microsoft.graph.privilegedaccess.item.resources.item.roleassignments.item;
+package com.microsoft.graph.privilegedaccess.item.resources.item.roleassignments.item;
 
+import com.microsoft.graph.models.GovernanceRoleAssignment;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.privilegedaccess.item.resources.item.roleassignments.item.linkedeligibleroleassignment.LinkedEligibleRoleAssignmentRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.resources.item.roleassignments.item.resource.ResourceRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.resources.item.roleassignments.item.roledefinition.RoleDefinitionRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.resources.item.roleassignments.item.subject.SubjectRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.GovernanceRoleAssignment;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.privilegedaccess.item.resources.item.roleassignments.item.linkedeligibleroleassignment.LinkedEligibleRoleAssignmentRequestBuilder;
-import microsoft.graph.privilegedaccess.item.resources.item.roleassignments.item.resource.ResourceRequestBuilder;
-import microsoft.graph.privilegedaccess.item.resources.item.roleassignments.item.roledefinition.RoleDefinitionRequestBuilder;
-import microsoft.graph.privilegedaccess.item.resources.item.roleassignments.item.subject.SubjectRequestBuilder;
 /** Provides operations to manage the roleAssignments property of the microsoft.graph.governanceResource entity. */
 public class GovernanceRoleAssignmentItemRequestBuilder {
     /** The linkedEligibleRoleAssignment property */

@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.workfromanywheremetrics;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.workfromanywheremetrics;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsCategory;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsCategory;
 /** Provides operations to manage the workFromAnywhereMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity. */
 public class WorkFromAnywhereMetricsRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.threatsubmission.emailthreats;
+package com.microsoft.graph.threatsubmission.emailthreats;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EmailThreatSubmission;
+import com.microsoft.graph.models.security.EmailThreatSubmissionCollectionResponse;
+import com.microsoft.graph.threatsubmission.emailthreats.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EmailThreatSubmission;
-import microsoft.graph.models.security.EmailThreatSubmissionCollectionResponse;
-import microsoft.graph.threatsubmission.emailthreats.count.CountRequestBuilder;
 /** Provides operations to manage the emailThreats property of the microsoft.graph.security.threatSubmissionRoot entity. */
 public class EmailThreatsRequestBuilder {
     /** The Count property */

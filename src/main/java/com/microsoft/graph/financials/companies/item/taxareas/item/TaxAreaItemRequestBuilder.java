@@ -1,5 +1,7 @@
-package microsoft.graph.financials.companies.item.taxareas.item;
+package com.microsoft.graph.financials.companies.item.taxareas.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TaxArea;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TaxArea;
 /** Provides operations to manage the taxAreas property of the microsoft.graph.company entity. */
 public class TaxAreaItemRequestBuilder {
     /** Path parameters for the request */

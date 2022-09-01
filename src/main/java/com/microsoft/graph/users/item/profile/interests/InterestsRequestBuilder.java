@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.profile.interests;
+package com.microsoft.graph.users.item.profile.interests;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PersonInterest;
+import com.microsoft.graph.models.PersonInterestCollectionResponse;
+import com.microsoft.graph.users.item.profile.interests.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PersonInterest;
-import microsoft.graph.models.PersonInterestCollectionResponse;
-import microsoft.graph.users.item.profile.interests.count.CountRequestBuilder;
 /** Provides operations to manage the interests property of the microsoft.graph.profile entity. */
 public class InterestsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,6 @@
-package microsoft.graph.deviceappmanagement.iosmanagedappprotections.haspayloadlinks;
+package com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.haspayloadlinks;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,7 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the hasPayloadLinks method. */
 public class HasPayloadLinksRequestBuilder {
     /** Path parameters for the request */

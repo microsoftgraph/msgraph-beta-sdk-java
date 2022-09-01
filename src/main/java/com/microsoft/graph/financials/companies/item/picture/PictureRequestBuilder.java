@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.picture;
+package com.microsoft.graph.financials.companies.item.picture;
 
+import com.microsoft.graph.financials.companies.item.picture.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Picture;
+import com.microsoft.graph.models.PictureCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.picture.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Picture;
-import microsoft.graph.models.PictureCollectionResponse;
 /** Provides operations to manage the picture property of the microsoft.graph.company entity. */
 public class PictureRequestBuilder {
     /** The Count property */

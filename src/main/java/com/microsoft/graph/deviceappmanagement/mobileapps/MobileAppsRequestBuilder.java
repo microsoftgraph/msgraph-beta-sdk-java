@@ -1,5 +1,15 @@
-package microsoft.graph.deviceappmanagement.mobileapps;
+package com.microsoft.graph.deviceappmanagement.mobileapps;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.getmobileappcountwithstatus.GetMobileAppCountWithStatusRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.gettopmobileappswithstatuswithcount.GetTopMobileAppsWithStatusWithCountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.haspayloadlinks.HasPayloadLinksRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.managedmobilelobapp.ManagedMobileLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.mobilelobapp.MobileLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.validatexml.ValidateXmlRequestBuilder;
+import com.microsoft.graph.models.MobileApp;
+import com.microsoft.graph.models.MobileAppCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileapps.count.CountRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.getmobileappcountwithstatus.GetMobileAppCountWithStatusRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.gettopmobileappswithstatuswithcount.GetTopMobileAppsWithStatusWithCountRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.haspayloadlinks.HasPayloadLinksRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.managedmobilelobapp.ManagedMobileLobAppRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.mobilelobapp.MobileLobAppRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.validatexml.ValidateXmlRequestBuilder;
-import microsoft.graph.models.MobileApp;
-import microsoft.graph.models.MobileAppCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity. */
 public class MobileAppsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,12 @@
-package microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item;
+package com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item;
 
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.AssignedDevicesRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.WindowsAutopilotDeviceIdentityItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assignments.item.WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsAutopilotDeploymentProfile;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.AssignedDevicesRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.WindowsAutopilotDeviceIdentityItemRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assignments.item.WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsAutopilotDeploymentProfile;
 /** Provides operations to manage the windowsAutopilotDeploymentProfiles property of the microsoft.graph.deviceManagement entity. */
 public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     /** The assign property */
@@ -45,7 +45,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.windowsAutopilotDeploymentProfiles.item.assignedDevices.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.windowsAutopilotDeploymentProfiles.item.assignedDevices.item collection
      * @param id Unique identifier of the item
      * @return a WindowsAutopilotDeviceIdentityItemRequestBuilder
      */
@@ -57,7 +57,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
         return new WindowsAutopilotDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.windowsAutopilotDeploymentProfiles.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.windowsAutopilotDeploymentProfiles.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilder
      */

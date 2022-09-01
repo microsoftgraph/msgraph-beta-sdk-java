@@ -1,5 +1,13 @@
-package microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item;
+package com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item;
 
+import com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.assignments.item.DeviceManagementConfigurationPolicyAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.createcopy.CreateCopyRequestBuilder;
+import com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.settings.item.DeviceManagementConfigurationSettingItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.settings.SettingsRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementConfigurationPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.assignments.item.DeviceManagementConfigurationPolicyAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.createcopy.CreateCopyRequestBuilder;
-import microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.settings.item.DeviceManagementConfigurationSettingItemRequestBuilder;
-import microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.settings.SettingsRequestBuilder;
-import microsoft.graph.models.DeviceManagementConfigurationPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the referencingConfigurationPolicies property of the microsoft.graph.deviceManagementReusablePolicySetting entity. */
 public class DeviceManagementConfigurationPolicyItemRequestBuilder {
     /** The assign property */
@@ -51,7 +51,7 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.reusablePolicySettings.item.referencingConfigurationPolicies.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.reusablePolicySettings.item.referencingConfigurationPolicies.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementConfigurationPolicyAssignmentItemRequestBuilder
      */
@@ -337,7 +337,7 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.reusablePolicySettings.item.referencingConfigurationPolicies.item.settings.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.reusablePolicySettings.item.referencingConfigurationPolicies.item.settings.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementConfigurationSettingItemRequestBuilder
      */

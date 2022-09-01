@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -11,6 +11,8 @@ import java.util.Objects;
 public class CertificateConnectorDetails extends Entity implements Parsable {
     /** Connector name (set during enrollment). */
     private String _connectorName;
+    /** Version of the connector installed. */
+    private String _connectorVersion;
     /** Date/time when this connector was enrolled. */
     private OffsetDateTime _enrollmentDateTime;
     /** Date/time when this connector last connected to the service. */
@@ -44,6 +46,14 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
         return this._connectorName;
     }
     /**
+     * Gets the connectorVersion property value. Version of the connector installed.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getConnectorVersion() {
+        return this._connectorVersion;
+    }
+    /**
      * Gets the enrollmentDateTime property value. Date/time when this connector was enrolled.
      * @return a OffsetDateTime
      */
@@ -60,6 +70,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
         final CertificateConnectorDetails currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("connectorName", (n) -> { currentObject.setConnectorName(n.getStringValue()); });
+            this.put("connectorVersion", (n) -> { currentObject.setConnectorVersion(n.getStringValue()); });
             this.put("enrollmentDateTime", (n) -> { currentObject.setEnrollmentDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastCheckinDateTime", (n) -> { currentObject.setLastCheckinDateTime(n.getOffsetDateTimeValue()); });
             this.put("machineName", (n) -> { currentObject.setMachineName(n.getStringValue()); });
@@ -90,6 +101,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("connectorName", this.getConnectorName());
+        writer.writeStringValue("connectorVersion", this.getConnectorVersion());
         writer.writeOffsetDateTimeValue("enrollmentDateTime", this.getEnrollmentDateTime());
         writer.writeOffsetDateTimeValue("lastCheckinDateTime", this.getLastCheckinDateTime());
         writer.writeStringValue("machineName", this.getMachineName());
@@ -101,6 +113,14 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      */
     public void setConnectorName(@javax.annotation.Nullable final String value) {
         this._connectorName = value;
+    }
+    /**
+     * Sets the connectorVersion property value. Version of the connector installed.
+     * @param value Value to set for the connectorVersion property.
+     * @return a void
+     */
+    public void setConnectorVersion(@javax.annotation.Nullable final String value) {
+        this._connectorVersion = value;
     }
     /**
      * Sets the enrollmentDateTime property value. Date/time when this connector was enrolled.

@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
@@ -10,7 +10,11 @@ public enum OrganizationalMessageTheme implements ValuedEnum {
     /** Indicates the Training theme */
     Training("training"),
     /** Indicates the Welcome to Windows theme */
-    WelcomeToWindows("welcomeToWindows");
+    WelcomeToWindows("welcomeToWindows"),
+    /** Indicates the Explore */
+    Explore("explore"),
+    /** UnknownFutureValue, Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     OrganizationalMessageTheme(final String value) {
         this.value = value;
@@ -24,6 +28,8 @@ public enum OrganizationalMessageTheme implements ValuedEnum {
             case "update": return Update;
             case "training": return Training;
             case "welcomeToWindows": return WelcomeToWindows;
+            case "explore": return Explore;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

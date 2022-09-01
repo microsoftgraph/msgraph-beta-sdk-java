@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsdevicescores;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicescores;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicescores.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScores;
+import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScoresCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsdevicescores.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsDeviceScores;
-import microsoft.graph.models.UserExperienceAnalyticsDeviceScoresCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsDeviceScores property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsDeviceScoresRequestBuilder {
     /** The Count property */

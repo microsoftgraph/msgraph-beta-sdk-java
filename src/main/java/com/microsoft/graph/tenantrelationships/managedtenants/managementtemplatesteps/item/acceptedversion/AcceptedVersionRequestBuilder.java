@@ -1,5 +1,7 @@
-package microsoft.graph.tenantrelationships.managedtenants.managementtemplatesteps.item.acceptedversion;
+package com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatesteps.item.acceptedversion;
 
+import com.microsoft.graph.models.managedtenants.ManagementTemplateStepVersion;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ManagementTemplateStepVersion;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the acceptedVersion property of the microsoft.graph.managedTenants.managementTemplateStep entity. */
 public class AcceptedVersionRequestBuilder {
     /** Path parameters for the request */

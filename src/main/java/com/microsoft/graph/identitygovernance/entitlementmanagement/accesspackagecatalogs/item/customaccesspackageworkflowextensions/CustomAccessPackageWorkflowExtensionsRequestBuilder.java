@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.customaccesspackageworkflowextensions;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.customaccesspackageworkflowextensions;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.customaccesspackageworkflowextensions.count.CountRequestBuilder;
+import com.microsoft.graph.models.CustomAccessPackageWorkflowExtension;
+import com.microsoft.graph.models.CustomAccessPackageWorkflowExtensionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.customaccesspackageworkflowextensions.count.CountRequestBuilder;
-import microsoft.graph.models.CustomAccessPackageWorkflowExtension;
-import microsoft.graph.models.CustomAccessPackageWorkflowExtensionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customAccessPackageWorkflowExtensions property of the microsoft.graph.accessPackageCatalog entity. */
 public class CustomAccessPackageWorkflowExtensionsRequestBuilder {
     /** The Count property */

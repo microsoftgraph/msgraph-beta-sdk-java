@@ -1,5 +1,9 @@
-package microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods;
+package com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods;
 
+import com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
+import com.microsoft.graph.models.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
-import microsoft.graph.models.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse;
 /** Provides operations to manage the passwordlessMicrosoftAuthenticatorMethods property of the microsoft.graph.authentication entity. */
 public class PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder {
     /** The Count property */

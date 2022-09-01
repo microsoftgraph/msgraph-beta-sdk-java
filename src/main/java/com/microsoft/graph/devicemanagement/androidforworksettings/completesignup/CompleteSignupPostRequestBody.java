@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.androidforworksettings.completesignup;
+package com.microsoft.graph.devicemanagement.androidforworksettings.completesignup;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

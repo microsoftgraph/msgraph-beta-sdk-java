@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.comanageddevices.item.logcollectionrequests.item.createdownloadurl;
+package com.microsoft.graph.devicemanagement.comanageddevices.item.logcollectionrequests.item.createdownloadurl;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.manageddevices.item.resizecloudpc;
+package com.microsoft.graph.devicemanagement.manageddevices.item.resizecloudpc;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

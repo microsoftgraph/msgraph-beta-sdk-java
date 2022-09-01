@@ -1,5 +1,77 @@
-package microsoft.graph.financials.companies.item;
+package com.microsoft.graph.financials.companies.item;
 
+import com.microsoft.graph.financials.companies.item.accounts.AccountsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.accounts.item.AccountItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.agedaccountspayable.AgedAccountsPayableRequestBuilder;
+import com.microsoft.graph.financials.companies.item.agedaccountspayable.item.AgedAccountsPayableItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.agedaccountsreceivable.AgedAccountsReceivableRequestBuilder;
+import com.microsoft.graph.financials.companies.item.agedaccountsreceivable.item.AgedAccountsReceivableItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.companyinformation.CompanyInformationRequestBuilder;
+import com.microsoft.graph.financials.companies.item.companyinformation.item.CompanyInformationItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.countriesregions.CountriesRegionsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.countriesregions.item.CountryRegionItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.currencies.CurrenciesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.currencies.item.CurrencyItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.customerpaymentjournals.CustomerPaymentJournalsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.customerpaymentjournals.item.CustomerPaymentJournalItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.customerpayments.CustomerPaymentsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.customerpayments.item.CustomerPaymentItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.customers.CustomersRequestBuilder;
+import com.microsoft.graph.financials.companies.item.customers.item.CustomerItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.dimensions.DimensionsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.dimensions.item.DimensionItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.dimensionvalues.DimensionValuesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.dimensionvalues.item.DimensionValueItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.employees.EmployeesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.employees.item.EmployeeItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.generalledgerentries.GeneralLedgerEntriesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.generalledgerentries.item.GeneralLedgerEntryItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.itemcategories.item.ItemCategoryItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.itemcategories.ItemCategoriesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.items.item.ItemItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.items.ItemsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.journallines.item.JournalLineItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.journallines.JournalLinesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.journals.item.JournalItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.journals.JournalsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.paymentmethods.item.PaymentMethodItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.paymentmethods.PaymentMethodsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.paymentterms.item.PaymentTermItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.paymentterms.PaymentTermsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.picture.item.PictureItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.picture.PictureRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoicelines.item.PurchaseInvoiceLineItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoicelines.PurchaseInvoiceLinesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.PurchaseInvoiceItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.PurchaseInvoicesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salescreditmemolines.item.SalesCreditMemoLineItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salescreditmemolines.SalesCreditMemoLinesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salescreditmemos.item.SalesCreditMemoItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salescreditmemos.SalesCreditMemosRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoicelines.item.SalesInvoiceLineItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoicelines.SalesInvoiceLinesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.SalesInvoiceItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.SalesInvoicesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesorderlines.item.SalesOrderLineItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesorderlines.SalesOrderLinesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesorders.item.SalesOrderItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesorders.SalesOrdersRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotelines.item.SalesQuoteLineItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotelines.SalesQuoteLinesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotes.item.SalesQuoteItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotes.SalesQuotesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.shipmentmethods.item.ShipmentMethodItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.shipmentmethods.ShipmentMethodsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.taxareas.item.TaxAreaItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.taxareas.TaxAreasRequestBuilder;
+import com.microsoft.graph.financials.companies.item.taxgroups.item.TaxGroupItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.taxgroups.TaxGroupsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.unitsofmeasure.item.UnitOfMeasureItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.unitsofmeasure.UnitsOfMeasureRequestBuilder;
+import com.microsoft.graph.financials.companies.item.vendors.item.VendorItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.vendors.VendorsRequestBuilder;
+import com.microsoft.graph.models.Company;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,78 +86,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.accounts.AccountsRequestBuilder;
-import microsoft.graph.financials.companies.item.accounts.item.AccountItemRequestBuilder;
-import microsoft.graph.financials.companies.item.agedaccountspayable.AgedAccountsPayableRequestBuilder;
-import microsoft.graph.financials.companies.item.agedaccountspayable.item.AgedAccountsPayableItemRequestBuilder;
-import microsoft.graph.financials.companies.item.agedaccountsreceivable.AgedAccountsReceivableRequestBuilder;
-import microsoft.graph.financials.companies.item.agedaccountsreceivable.item.AgedAccountsReceivableItemRequestBuilder;
-import microsoft.graph.financials.companies.item.companyinformation.CompanyInformationRequestBuilder;
-import microsoft.graph.financials.companies.item.companyinformation.item.CompanyInformationItemRequestBuilder;
-import microsoft.graph.financials.companies.item.countriesregions.CountriesRegionsRequestBuilder;
-import microsoft.graph.financials.companies.item.countriesregions.item.CountryRegionItemRequestBuilder;
-import microsoft.graph.financials.companies.item.currencies.CurrenciesRequestBuilder;
-import microsoft.graph.financials.companies.item.currencies.item.CurrencyItemRequestBuilder;
-import microsoft.graph.financials.companies.item.customerpaymentjournals.CustomerPaymentJournalsRequestBuilder;
-import microsoft.graph.financials.companies.item.customerpaymentjournals.item.CustomerPaymentJournalItemRequestBuilder;
-import microsoft.graph.financials.companies.item.customerpayments.CustomerPaymentsRequestBuilder;
-import microsoft.graph.financials.companies.item.customerpayments.item.CustomerPaymentItemRequestBuilder;
-import microsoft.graph.financials.companies.item.customers.CustomersRequestBuilder;
-import microsoft.graph.financials.companies.item.customers.item.CustomerItemRequestBuilder;
-import microsoft.graph.financials.companies.item.dimensions.DimensionsRequestBuilder;
-import microsoft.graph.financials.companies.item.dimensions.item.DimensionItemRequestBuilder;
-import microsoft.graph.financials.companies.item.dimensionvalues.DimensionValuesRequestBuilder;
-import microsoft.graph.financials.companies.item.dimensionvalues.item.DimensionValueItemRequestBuilder;
-import microsoft.graph.financials.companies.item.employees.EmployeesRequestBuilder;
-import microsoft.graph.financials.companies.item.employees.item.EmployeeItemRequestBuilder;
-import microsoft.graph.financials.companies.item.generalledgerentries.GeneralLedgerEntriesRequestBuilder;
-import microsoft.graph.financials.companies.item.generalledgerentries.item.GeneralLedgerEntryItemRequestBuilder;
-import microsoft.graph.financials.companies.item.itemcategories.item.ItemCategoryItemRequestBuilder;
-import microsoft.graph.financials.companies.item.itemcategories.ItemCategoriesRequestBuilder;
-import microsoft.graph.financials.companies.item.items.item.ItemItemRequestBuilder;
-import microsoft.graph.financials.companies.item.items.ItemsRequestBuilder;
-import microsoft.graph.financials.companies.item.journallines.item.JournalLineItemRequestBuilder;
-import microsoft.graph.financials.companies.item.journallines.JournalLinesRequestBuilder;
-import microsoft.graph.financials.companies.item.journals.item.JournalItemRequestBuilder;
-import microsoft.graph.financials.companies.item.journals.JournalsRequestBuilder;
-import microsoft.graph.financials.companies.item.paymentmethods.item.PaymentMethodItemRequestBuilder;
-import microsoft.graph.financials.companies.item.paymentmethods.PaymentMethodsRequestBuilder;
-import microsoft.graph.financials.companies.item.paymentterms.item.PaymentTermItemRequestBuilder;
-import microsoft.graph.financials.companies.item.paymentterms.PaymentTermsRequestBuilder;
-import microsoft.graph.financials.companies.item.picture.item.PictureItemRequestBuilder;
-import microsoft.graph.financials.companies.item.picture.PictureRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoicelines.item.PurchaseInvoiceLineItemRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoicelines.PurchaseInvoiceLinesRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.PurchaseInvoiceItemRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoices.PurchaseInvoicesRequestBuilder;
-import microsoft.graph.financials.companies.item.salescreditmemolines.item.SalesCreditMemoLineItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salescreditmemolines.SalesCreditMemoLinesRequestBuilder;
-import microsoft.graph.financials.companies.item.salescreditmemos.item.SalesCreditMemoItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salescreditmemos.SalesCreditMemosRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoicelines.item.SalesInvoiceLineItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoicelines.SalesInvoiceLinesRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.item.SalesInvoiceItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.SalesInvoicesRequestBuilder;
-import microsoft.graph.financials.companies.item.salesorderlines.item.SalesOrderLineItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salesorderlines.SalesOrderLinesRequestBuilder;
-import microsoft.graph.financials.companies.item.salesorders.item.SalesOrderItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salesorders.SalesOrdersRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotelines.item.SalesQuoteLineItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotelines.SalesQuoteLinesRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotes.item.SalesQuoteItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotes.SalesQuotesRequestBuilder;
-import microsoft.graph.financials.companies.item.shipmentmethods.item.ShipmentMethodItemRequestBuilder;
-import microsoft.graph.financials.companies.item.shipmentmethods.ShipmentMethodsRequestBuilder;
-import microsoft.graph.financials.companies.item.taxareas.item.TaxAreaItemRequestBuilder;
-import microsoft.graph.financials.companies.item.taxareas.TaxAreasRequestBuilder;
-import microsoft.graph.financials.companies.item.taxgroups.item.TaxGroupItemRequestBuilder;
-import microsoft.graph.financials.companies.item.taxgroups.TaxGroupsRequestBuilder;
-import microsoft.graph.financials.companies.item.unitsofmeasure.item.UnitOfMeasureItemRequestBuilder;
-import microsoft.graph.financials.companies.item.unitsofmeasure.UnitsOfMeasureRequestBuilder;
-import microsoft.graph.financials.companies.item.vendors.item.VendorItemRequestBuilder;
-import microsoft.graph.financials.companies.item.vendors.VendorsRequestBuilder;
-import microsoft.graph.models.Company;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the companies property of the microsoft.graph.financials entity. */
 public class CompanyItemRequestBuilder {
     /** The accounts property */
@@ -270,7 +270,7 @@ public class CompanyItemRequestBuilder {
         return new VendorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.accounts.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.accounts.item collection
      * @param id Unique identifier of the item
      * @return a AccountItemRequestBuilder
      */
@@ -282,7 +282,7 @@ public class CompanyItemRequestBuilder {
         return new AccountItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.agedAccountsPayable.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.agedAccountsPayable.item collection
      * @param id Unique identifier of the item
      * @return a AgedAccountsPayableItemRequestBuilder
      */
@@ -294,7 +294,7 @@ public class CompanyItemRequestBuilder {
         return new AgedAccountsPayableItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.agedAccountsReceivable.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.agedAccountsReceivable.item collection
      * @param id Unique identifier of the item
      * @return a AgedAccountsReceivableItemRequestBuilder
      */
@@ -306,7 +306,7 @@ public class CompanyItemRequestBuilder {
         return new AgedAccountsReceivableItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.companyInformation.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.companyInformation.item collection
      * @param id Unique identifier of the item
      * @return a CompanyInformationItemRequestBuilder
      */
@@ -345,7 +345,7 @@ public class CompanyItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.countriesRegions.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.countriesRegions.item collection
      * @param id Unique identifier of the item
      * @return a CountryRegionItemRequestBuilder
      */
@@ -387,7 +387,7 @@ public class CompanyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.currencies.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.currencies.item collection
      * @param id Unique identifier of the item
      * @return a CurrencyItemRequestBuilder
      */
@@ -399,7 +399,7 @@ public class CompanyItemRequestBuilder {
         return new CurrencyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.customerPaymentJournals.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.customerPaymentJournals.item collection
      * @param id Unique identifier of the item
      * @return a CustomerPaymentJournalItemRequestBuilder
      */
@@ -411,7 +411,7 @@ public class CompanyItemRequestBuilder {
         return new CustomerPaymentJournalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.customerPayments.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.customerPayments.item collection
      * @param id Unique identifier of the item
      * @return a CustomerPaymentItemRequestBuilder
      */
@@ -423,7 +423,7 @@ public class CompanyItemRequestBuilder {
         return new CustomerPaymentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.customers.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.customers.item collection
      * @param id Unique identifier of the item
      * @return a CustomerItemRequestBuilder
      */
@@ -435,7 +435,7 @@ public class CompanyItemRequestBuilder {
         return new CustomerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.dimensions.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.dimensions.item collection
      * @param id Unique identifier of the item
      * @return a DimensionItemRequestBuilder
      */
@@ -447,7 +447,7 @@ public class CompanyItemRequestBuilder {
         return new DimensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.dimensionValues.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.dimensionValues.item collection
      * @param id Unique identifier of the item
      * @return a DimensionValueItemRequestBuilder
      */
@@ -459,7 +459,7 @@ public class CompanyItemRequestBuilder {
         return new DimensionValueItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.employees.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.employees.item collection
      * @param id Unique identifier of the item
      * @return a EmployeeItemRequestBuilder
      */
@@ -471,7 +471,7 @@ public class CompanyItemRequestBuilder {
         return new EmployeeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.generalLedgerEntries.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.generalLedgerEntries.item collection
      * @param id Unique identifier of the item
      * @return a GeneralLedgerEntryItemRequestBuilder
      */
@@ -534,7 +534,7 @@ public class CompanyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.itemCategories.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.itemCategories.item collection
      * @param id Unique identifier of the item
      * @return a ItemCategoryItemRequestBuilder
      */
@@ -546,7 +546,7 @@ public class CompanyItemRequestBuilder {
         return new ItemCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.items.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.items.item collection
      * @param id Unique identifier of the item
      * @return a ItemItemRequestBuilder
      */
@@ -558,7 +558,7 @@ public class CompanyItemRequestBuilder {
         return new ItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.journalLines.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.journalLines.item collection
      * @param id Unique identifier of the item
      * @return a JournalLineItemRequestBuilder
      */
@@ -570,7 +570,7 @@ public class CompanyItemRequestBuilder {
         return new JournalLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.journals.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.journals.item collection
      * @param id Unique identifier of the item
      * @return a JournalItemRequestBuilder
      */
@@ -582,7 +582,7 @@ public class CompanyItemRequestBuilder {
         return new JournalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.paymentMethods.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.paymentMethods.item collection
      * @param id Unique identifier of the item
      * @return a PaymentMethodItemRequestBuilder
      */
@@ -594,7 +594,7 @@ public class CompanyItemRequestBuilder {
         return new PaymentMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.paymentTerms.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.paymentTerms.item collection
      * @param id Unique identifier of the item
      * @return a PaymentTermItemRequestBuilder
      */
@@ -606,7 +606,7 @@ public class CompanyItemRequestBuilder {
         return new PaymentTermItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.picture.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.picture.item collection
      * @param id Unique identifier of the item
      * @return a PictureItemRequestBuilder
      */
@@ -618,7 +618,7 @@ public class CompanyItemRequestBuilder {
         return new PictureItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.purchaseInvoiceLines.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.purchaseInvoiceLines.item collection
      * @param id Unique identifier of the item
      * @return a PurchaseInvoiceLineItemRequestBuilder
      */
@@ -630,7 +630,7 @@ public class CompanyItemRequestBuilder {
         return new PurchaseInvoiceLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.purchaseInvoices.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.purchaseInvoices.item collection
      * @param id Unique identifier of the item
      * @return a PurchaseInvoiceItemRequestBuilder
      */
@@ -642,7 +642,7 @@ public class CompanyItemRequestBuilder {
         return new PurchaseInvoiceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesCreditMemoLines.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesCreditMemoLines.item collection
      * @param id Unique identifier of the item
      * @return a SalesCreditMemoLineItemRequestBuilder
      */
@@ -654,7 +654,7 @@ public class CompanyItemRequestBuilder {
         return new SalesCreditMemoLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesCreditMemos.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesCreditMemos.item collection
      * @param id Unique identifier of the item
      * @return a SalesCreditMemoItemRequestBuilder
      */
@@ -666,7 +666,7 @@ public class CompanyItemRequestBuilder {
         return new SalesCreditMemoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesInvoiceLines.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesInvoiceLines.item collection
      * @param id Unique identifier of the item
      * @return a SalesInvoiceLineItemRequestBuilder
      */
@@ -678,7 +678,7 @@ public class CompanyItemRequestBuilder {
         return new SalesInvoiceLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesInvoices.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesInvoices.item collection
      * @param id Unique identifier of the item
      * @return a SalesInvoiceItemRequestBuilder
      */
@@ -690,7 +690,7 @@ public class CompanyItemRequestBuilder {
         return new SalesInvoiceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesOrderLines.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesOrderLines.item collection
      * @param id Unique identifier of the item
      * @return a SalesOrderLineItemRequestBuilder
      */
@@ -702,7 +702,7 @@ public class CompanyItemRequestBuilder {
         return new SalesOrderLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesOrders.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesOrders.item collection
      * @param id Unique identifier of the item
      * @return a SalesOrderItemRequestBuilder
      */
@@ -714,7 +714,7 @@ public class CompanyItemRequestBuilder {
         return new SalesOrderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesQuoteLines.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesQuoteLines.item collection
      * @param id Unique identifier of the item
      * @return a SalesQuoteLineItemRequestBuilder
      */
@@ -726,7 +726,7 @@ public class CompanyItemRequestBuilder {
         return new SalesQuoteLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesQuotes.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesQuotes.item collection
      * @param id Unique identifier of the item
      * @return a SalesQuoteItemRequestBuilder
      */
@@ -738,7 +738,7 @@ public class CompanyItemRequestBuilder {
         return new SalesQuoteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.shipmentMethods.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.shipmentMethods.item collection
      * @param id Unique identifier of the item
      * @return a ShipmentMethodItemRequestBuilder
      */
@@ -750,7 +750,7 @@ public class CompanyItemRequestBuilder {
         return new ShipmentMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.taxAreas.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.taxAreas.item collection
      * @param id Unique identifier of the item
      * @return a TaxAreaItemRequestBuilder
      */
@@ -762,7 +762,7 @@ public class CompanyItemRequestBuilder {
         return new TaxAreaItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.taxGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.taxGroups.item collection
      * @param id Unique identifier of the item
      * @return a TaxGroupItemRequestBuilder
      */
@@ -774,7 +774,7 @@ public class CompanyItemRequestBuilder {
         return new TaxGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.unitsOfMeasure.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.unitsOfMeasure.item collection
      * @param id Unique identifier of the item
      * @return a UnitOfMeasureItemRequestBuilder
      */
@@ -786,7 +786,7 @@ public class CompanyItemRequestBuilder {
         return new UnitOfMeasureItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.vendors.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.vendors.item collection
      * @param id Unique identifier of the item
      * @return a VendorItemRequestBuilder
      */

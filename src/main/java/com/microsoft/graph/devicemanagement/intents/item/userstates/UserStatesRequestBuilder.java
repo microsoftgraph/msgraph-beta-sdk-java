@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.intents.item.userstates;
+package com.microsoft.graph.devicemanagement.intents.item.userstates;
 
+import com.microsoft.graph.devicemanagement.intents.item.userstates.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementIntentUserState;
+import com.microsoft.graph.models.DeviceManagementIntentUserStateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.intents.item.userstates.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementIntentUserState;
-import microsoft.graph.models.DeviceManagementIntentUserStateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userStates property of the microsoft.graph.deviceManagementIntent entity. */
 public class UserStatesRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.haspayloadlinks;
+package com.microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.haspayloadlinks;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

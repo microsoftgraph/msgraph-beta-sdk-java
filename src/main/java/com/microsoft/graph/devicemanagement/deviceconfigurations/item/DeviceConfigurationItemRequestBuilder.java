@@ -1,5 +1,23 @@
-package microsoft.graph.devicemanagement.deviceconfigurations.item;
+package com.microsoft.graph.devicemanagement.deviceconfigurations.item;
 
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignedaccessmultimodeprofiles.AssignedAccessMultiModeProfilesRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.item.DeviceConfigurationAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicesettingstatesummaries.DeviceSettingStateSummariesRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicesettingstatesummaries.item.SettingStateDeviceSummaryItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicestatuses.DeviceStatusesRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicestatuses.item.DeviceConfigurationDeviceStatusItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicestatusoverview.DeviceStatusOverviewRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.getomasettingplaintextvaluewithsecretreferencevalueid.GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.groupassignments.GroupAssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.groupassignments.item.DeviceConfigurationGroupAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses.item.DeviceConfigurationUserStatusItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses.UserStatusesRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.userstatusoverview.UserStatusOverviewRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.windowsprivacyaccesscontrols.WindowsPrivacyAccessControlsRequestBuilder;
+import com.microsoft.graph.models.DeviceConfiguration;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,24 +32,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.assignedaccessmultimodeprofiles.AssignedAccessMultiModeProfilesRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.item.DeviceConfigurationAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.devicesettingstatesummaries.DeviceSettingStateSummariesRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.devicesettingstatesummaries.item.SettingStateDeviceSummaryItemRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.devicestatuses.DeviceStatusesRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.devicestatuses.item.DeviceConfigurationDeviceStatusItemRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.devicestatusoverview.DeviceStatusOverviewRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.getomasettingplaintextvaluewithsecretreferencevalueid.GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.groupassignments.GroupAssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.groupassignments.item.DeviceConfigurationGroupAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses.item.DeviceConfigurationUserStatusItemRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses.UserStatusesRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.userstatusoverview.UserStatusOverviewRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.windowsprivacyaccesscontrols.WindowsPrivacyAccessControlsRequestBuilder;
-import microsoft.graph.models.DeviceConfiguration;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceConfigurations property of the microsoft.graph.deviceManagement entity. */
 public class DeviceConfigurationItemRequestBuilder {
     /** The assign property */
@@ -91,7 +91,7 @@ public class DeviceConfigurationItemRequestBuilder {
         return new WindowsPrivacyAccessControlsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a DeviceConfigurationAssignmentItemRequestBuilder
      */
@@ -271,7 +271,7 @@ public class DeviceConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item.deviceSettingStateSummaries.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceConfigurations.item.deviceSettingStateSummaries.item collection
      * @param id Unique identifier of the item
      * @return a SettingStateDeviceSummaryItemRequestBuilder
      */
@@ -283,7 +283,7 @@ public class DeviceConfigurationItemRequestBuilder {
         return new SettingStateDeviceSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item.deviceStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceConfigurations.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
      * @return a DeviceConfigurationDeviceStatusItemRequestBuilder
      */
@@ -356,7 +356,7 @@ public class DeviceConfigurationItemRequestBuilder {
         return new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(pathParameters, requestAdapter, secretReferenceValueId);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item.groupAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceConfigurations.item.groupAssignments.item collection
      * @param id Unique identifier of the item
      * @return a DeviceConfigurationGroupAssignmentItemRequestBuilder
      */
@@ -423,7 +423,7 @@ public class DeviceConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item.userStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceConfigurations.item.userStatuses.item collection
      * @param id Unique identifier of the item
      * @return a DeviceConfigurationUserStatusItemRequestBuilder
      */

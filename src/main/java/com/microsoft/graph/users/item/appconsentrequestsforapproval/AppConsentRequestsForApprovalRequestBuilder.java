@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.appconsentrequestsforapproval;
+package com.microsoft.graph.users.item.appconsentrequestsforapproval;
 
+import com.microsoft.graph.models.AppConsentRequest;
+import com.microsoft.graph.models.AppConsentRequestCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.appconsentrequestsforapproval.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.appconsentrequestsforapproval.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AppConsentRequest;
-import microsoft.graph.models.AppConsentRequestCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.appconsentrequestsforapproval.count.CountRequestBuilder;
-import microsoft.graph.users.item.appconsentrequestsforapproval.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 /** Provides operations to manage the appConsentRequestsForApproval property of the microsoft.graph.user entity. */
 public class AppConsentRequestsForApprovalRequestBuilder {
     /** The Count property */

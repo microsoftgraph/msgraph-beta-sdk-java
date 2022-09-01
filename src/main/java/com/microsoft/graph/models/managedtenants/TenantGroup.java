@@ -1,5 +1,6 @@
-package microsoft.graph.models.managedtenants;
+package com.microsoft.graph.models.managedtenants;
 
+import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,8 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class TenantGroup extends Entity implements Parsable {
     /** A flag indicating whether all managed tenant are included in the tenant group. Required. Read-only. */
     private Boolean _allTenantsIncluded;

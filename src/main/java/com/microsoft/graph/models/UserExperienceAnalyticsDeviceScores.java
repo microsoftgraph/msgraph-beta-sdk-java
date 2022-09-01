@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics device scores entity consolidates the various endpoint analytics scores. */
 public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsable {
     /** The user experience analytics device app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _appReliabilityScore;
@@ -28,7 +27,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     /** The user experience analytics device work From anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _workFromAnywhereScore;
     /**
-     * Instantiates a new userExperienceAnalyticsDeviceScores and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceScores and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsDeviceScores() {
@@ -38,7 +37,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceScores
+     * @return a UserExperienceAnalyticsDeviceScores
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceScores createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

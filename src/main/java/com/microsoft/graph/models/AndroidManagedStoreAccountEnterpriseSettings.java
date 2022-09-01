@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -34,7 +34,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     /** Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted' */
     private java.util.List<String> _targetGroupIds;
     /**
-     * Instantiates a new androidManagedStoreAccountEnterpriseSettings and sets the default values.
+     * Instantiates a new AndroidManagedStoreAccountEnterpriseSettings and sets the default values.
      * @return a void
      */
     public AndroidManagedStoreAccountEnterpriseSettings() {
@@ -44,7 +44,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedStoreAccountEnterpriseSettings
+     * @return a AndroidManagedStoreAccountEnterpriseSettings
      */
     @javax.annotation.Nonnull
     public static AndroidManagedStoreAccountEnterpriseSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -1,5 +1,11 @@
-package microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item;
+package com.microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item;
 
+import com.microsoft.graph.models.managedtenants.ManagementTemplate;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatecollections.item.ManagementTemplateCollectionItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatecollections.ManagementTemplateCollectionsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatesteps.item.ManagementTemplateStepItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatesteps.ManagementTemplateStepsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ManagementTemplate;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatecollections.item.ManagementTemplateCollectionItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatecollections.ManagementTemplateCollectionsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatesteps.item.ManagementTemplateStepItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.managementtemplatesteps.ManagementTemplateStepsRequestBuilder;
 /** Provides operations to manage the managementTemplates property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class ManagementTemplateItemRequestBuilder {
     /** The managementTemplateCollections property */
@@ -258,7 +258,7 @@ public class ManagementTemplateItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplates.item.managementTemplateCollections.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementTemplates.item.managementTemplateCollections.item collection
      * @param id Unique identifier of the item
      * @return a ManagementTemplateCollectionItemRequestBuilder
      */
@@ -270,7 +270,7 @@ public class ManagementTemplateItemRequestBuilder {
         return new ManagementTemplateCollectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplates.item.managementTemplateSteps.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementTemplates.item.managementTemplateSteps.item collection
      * @param id Unique identifier of the item
      * @return a ManagementTemplateStepItemRequestBuilder
      */

@@ -1,5 +1,7 @@
-package microsoft.graph.identity.customauthenticationextensions.validateauthenticationconfiguration;
+package com.microsoft.graph.identity.customauthenticationextensions.validateauthenticationconfiguration;
 
+import com.microsoft.graph.models.CustomExtensionAuthenticationConfiguration;
+import com.microsoft.graph.models.CustomExtensionEndpointConfiguration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CustomExtensionAuthenticationConfiguration;
-import microsoft.graph.models.CustomExtensionEndpointConfiguration;
 /** Provides operations to call the validateAuthenticationConfiguration method. */
 public class ValidateAuthenticationConfigurationPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

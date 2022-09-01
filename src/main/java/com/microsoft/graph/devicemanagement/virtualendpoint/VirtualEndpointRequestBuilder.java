@@ -1,5 +1,31 @@
-package microsoft.graph.devicemanagement.virtualendpoint;
+package com.microsoft.graph.devicemanagement.virtualendpoint;
 
+import com.microsoft.graph.devicemanagement.virtualendpoint.auditevents.AuditEventsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.auditevents.item.CloudPcAuditEventItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.CloudPCsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.CloudPCItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.deviceimages.DeviceImagesRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.deviceimages.item.CloudPcDeviceImageItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.externalpartnersettings.ExternalPartnerSettingsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.externalpartnersettings.item.CloudPcExternalPartnerSettingItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.galleryimages.GalleryImagesRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.galleryimages.item.CloudPcGalleryImageItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.geteffectivepermissions.GetEffectivePermissionsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item.CloudPcOnPremisesConnectionItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.OnPremisesConnectionsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.organizationsettings.OrganizationSettingsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.CloudPcProvisioningPolicyItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.ProvisioningPoliciesRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.serviceplans.item.CloudPcServicePlanItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.serviceplans.ServicePlansRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.snapshots.item.CloudPcSnapshotItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.snapshots.SnapshotsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.supportedregions.item.CloudPcSupportedRegionItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.supportedregions.SupportedRegionsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.usersettings.item.CloudPcUserSettingItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.usersettings.UserSettingsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.VirtualEndpoint;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,32 +40,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.virtualendpoint.auditevents.AuditEventsRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.auditevents.item.CloudPcAuditEventItemRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.CloudPCsRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.CloudPCItemRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.deviceimages.DeviceImagesRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.deviceimages.item.CloudPcDeviceImageItemRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.externalpartnersettings.ExternalPartnerSettingsRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.externalpartnersettings.item.CloudPcExternalPartnerSettingItemRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.galleryimages.GalleryImagesRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.galleryimages.item.CloudPcGalleryImageItemRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.geteffectivepermissions.GetEffectivePermissionsRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item.CloudPcOnPremisesConnectionItemRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.OnPremisesConnectionsRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.organizationsettings.OrganizationSettingsRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.CloudPcProvisioningPolicyItemRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.ProvisioningPoliciesRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.serviceplans.item.CloudPcServicePlanItemRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.serviceplans.ServicePlansRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.snapshots.item.CloudPcSnapshotItemRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.snapshots.SnapshotsRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.supportedregions.item.CloudPcSupportedRegionItemRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.supportedregions.SupportedRegionsRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.usersettings.item.CloudPcUserSettingItemRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.usersettings.UserSettingsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.VirtualEndpoint;
 /** Provides operations to manage the virtualEndpoint property of the microsoft.graph.deviceManagement entity. */
 public class VirtualEndpointRequestBuilder {
     /** The auditEvents property */
@@ -109,7 +109,7 @@ public class VirtualEndpointRequestBuilder {
         return new UserSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.auditEvents.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.auditEvents.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcAuditEventItemRequestBuilder
      */
@@ -121,7 +121,7 @@ public class VirtualEndpointRequestBuilder {
         return new CloudPcAuditEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.cloudPCs.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.cloudPCs.item collection
      * @param id Unique identifier of the item
      * @return a CloudPCItemRequestBuilder
      */
@@ -301,7 +301,7 @@ public class VirtualEndpointRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.deviceImages.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.deviceImages.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcDeviceImageItemRequestBuilder
      */
@@ -313,7 +313,7 @@ public class VirtualEndpointRequestBuilder {
         return new CloudPcDeviceImageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.externalPartnerSettings.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.externalPartnerSettings.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcExternalPartnerSettingItemRequestBuilder
      */
@@ -325,7 +325,7 @@ public class VirtualEndpointRequestBuilder {
         return new CloudPcExternalPartnerSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.galleryImages.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.galleryImages.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcGalleryImageItemRequestBuilder
      */
@@ -396,7 +396,7 @@ public class VirtualEndpointRequestBuilder {
         return new GetEffectivePermissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.onPremisesConnections.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.onPremisesConnections.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcOnPremisesConnectionItemRequestBuilder
      */
@@ -463,7 +463,7 @@ public class VirtualEndpointRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.provisioningPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.provisioningPolicies.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcProvisioningPolicyItemRequestBuilder
      */
@@ -475,7 +475,7 @@ public class VirtualEndpointRequestBuilder {
         return new CloudPcProvisioningPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.servicePlans.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.servicePlans.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcServicePlanItemRequestBuilder
      */
@@ -487,7 +487,7 @@ public class VirtualEndpointRequestBuilder {
         return new CloudPcServicePlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.snapshots.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.snapshots.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcSnapshotItemRequestBuilder
      */
@@ -499,7 +499,7 @@ public class VirtualEndpointRequestBuilder {
         return new CloudPcSnapshotItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.supportedRegions.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.supportedRegions.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcSupportedRegionItemRequestBuilder
      */
@@ -511,7 +511,7 @@ public class VirtualEndpointRequestBuilder {
         return new CloudPcSupportedRegionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.virtualEndpoint.userSettings.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.userSettings.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcUserSettingItemRequestBuilder
      */

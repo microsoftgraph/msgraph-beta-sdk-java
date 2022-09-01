@@ -1,5 +1,7 @@
-package microsoft.graph.policies.deviceregistrationpolicy;
+package com.microsoft.graph.policies.deviceregistrationpolicy;
 
+import com.microsoft.graph.models.DeviceRegistrationPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceRegistrationPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceRegistrationPolicy property of the microsoft.graph.policyRoot entity. */
 public class DeviceRegistrationPolicyRequestBuilder {
     /** Path parameters for the request */

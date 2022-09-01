@@ -1,5 +1,9 @@
-package microsoft.graph.security.attacksimulation.simulations;
+package com.microsoft.graph.security.attacksimulation.simulations;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Simulation;
+import com.microsoft.graph.models.SimulationCollectionResponse;
+import com.microsoft.graph.security.attacksimulation.simulations.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Simulation;
-import microsoft.graph.models.SimulationCollectionResponse;
-import microsoft.graph.security.attacksimulation.simulations.count.CountRequestBuilder;
 /** Provides operations to manage the simulations property of the microsoft.graph.attackSimulationRoot entity. */
 public class SimulationsRequestBuilder {
     /** The Count property */

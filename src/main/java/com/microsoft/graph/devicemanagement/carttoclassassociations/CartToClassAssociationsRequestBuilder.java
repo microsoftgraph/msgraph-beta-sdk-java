@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.carttoclassassociations;
+package com.microsoft.graph.devicemanagement.carttoclassassociations;
 
+import com.microsoft.graph.devicemanagement.carttoclassassociations.count.CountRequestBuilder;
+import com.microsoft.graph.models.CartToClassAssociation;
+import com.microsoft.graph.models.CartToClassAssociationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.carttoclassassociations.count.CountRequestBuilder;
-import microsoft.graph.models.CartToClassAssociation;
-import microsoft.graph.models.CartToClassAssociationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the cartToClassAssociations property of the microsoft.graph.deviceManagement entity. */
 public class CartToClassAssociationsRequestBuilder {
     /** The Count property */

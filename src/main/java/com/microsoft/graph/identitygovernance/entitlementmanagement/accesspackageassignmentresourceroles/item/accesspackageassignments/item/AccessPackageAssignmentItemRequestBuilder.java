@@ -1,5 +1,7 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentresourceroles.item.accesspackageassignments.item;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentresourceroles.item.accesspackageassignments.item;
 
+import com.microsoft.graph.models.AccessPackageAssignment;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AccessPackageAssignment;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageAssignments property of the microsoft.graph.accessPackageAssignmentResourceRole entity. */
 public class AccessPackageAssignmentItemRequestBuilder {
     /** Path parameters for the request */

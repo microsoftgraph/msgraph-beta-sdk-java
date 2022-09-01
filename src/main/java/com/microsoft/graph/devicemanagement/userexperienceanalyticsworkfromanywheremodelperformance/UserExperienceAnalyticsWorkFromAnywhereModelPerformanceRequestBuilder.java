@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremodelperformance;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremodelperformance;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremodelperformance.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereModelPerformance;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremodelperformance.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereModelPerformance;
-import microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereModelPerformance property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder {
     /** The Count property */

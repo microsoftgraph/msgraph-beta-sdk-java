@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getquiettimepolicyusersreport;
+package com.microsoft.graph.devicemanagement.reports.getquiettimepolicyusersreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

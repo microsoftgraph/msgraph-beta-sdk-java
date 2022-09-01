@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getunhealthydefenderagentsreport;
+package com.microsoft.graph.devicemanagement.reports.getunhealthydefenderagentsreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

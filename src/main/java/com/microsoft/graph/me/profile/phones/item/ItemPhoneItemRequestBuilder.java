@@ -1,5 +1,7 @@
-package microsoft.graph.me.profile.phones.item;
+package com.microsoft.graph.me.profile.phones.item;
 
+import com.microsoft.graph.models.ItemPhone;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ItemPhone;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the phones property of the microsoft.graph.profile entity. */
 public class ItemPhoneItemRequestBuilder {
     /** Path parameters for the request */

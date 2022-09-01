@@ -1,5 +1,45 @@
-package microsoft.graph.users.item.profile;
+package com.microsoft.graph.users.item.profile;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Profile;
+import com.microsoft.graph.users.item.profile.account.AccountRequestBuilder;
+import com.microsoft.graph.users.item.profile.account.item.UserAccountInformationItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.addresses.AddressesRequestBuilder;
+import com.microsoft.graph.users.item.profile.addresses.item.ItemAddressItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.anniversaries.AnniversariesRequestBuilder;
+import com.microsoft.graph.users.item.profile.anniversaries.item.PersonAnnualEventItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.awards.AwardsRequestBuilder;
+import com.microsoft.graph.users.item.profile.awards.item.PersonAwardItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.certifications.CertificationsRequestBuilder;
+import com.microsoft.graph.users.item.profile.certifications.item.PersonCertificationItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.educationalactivities.EducationalActivitiesRequestBuilder;
+import com.microsoft.graph.users.item.profile.educationalactivities.item.EducationalActivityItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.emails.EmailsRequestBuilder;
+import com.microsoft.graph.users.item.profile.emails.item.ItemEmailItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.interests.InterestsRequestBuilder;
+import com.microsoft.graph.users.item.profile.interests.item.PersonInterestItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.languages.item.LanguageProficiencyItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.languages.LanguagesRequestBuilder;
+import com.microsoft.graph.users.item.profile.names.item.PersonNameItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.names.NamesRequestBuilder;
+import com.microsoft.graph.users.item.profile.notes.item.PersonAnnotationItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.notes.NotesRequestBuilder;
+import com.microsoft.graph.users.item.profile.patents.item.ItemPatentItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.patents.PatentsRequestBuilder;
+import com.microsoft.graph.users.item.profile.phones.item.ItemPhoneItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.phones.PhonesRequestBuilder;
+import com.microsoft.graph.users.item.profile.positions.item.WorkPositionItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.positions.PositionsRequestBuilder;
+import com.microsoft.graph.users.item.profile.projects.item.ProjectParticipationItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.projects.ProjectsRequestBuilder;
+import com.microsoft.graph.users.item.profile.publications.item.ItemPublicationItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.publications.PublicationsRequestBuilder;
+import com.microsoft.graph.users.item.profile.skills.item.SkillProficiencyItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.skills.SkillsRequestBuilder;
+import com.microsoft.graph.users.item.profile.webaccounts.item.WebAccountItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.webaccounts.WebAccountsRequestBuilder;
+import com.microsoft.graph.users.item.profile.websites.item.PersonWebsiteItemRequestBuilder;
+import com.microsoft.graph.users.item.profile.websites.WebsitesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,46 +54,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Profile;
-import microsoft.graph.users.item.profile.account.AccountRequestBuilder;
-import microsoft.graph.users.item.profile.account.item.UserAccountInformationItemRequestBuilder;
-import microsoft.graph.users.item.profile.addresses.AddressesRequestBuilder;
-import microsoft.graph.users.item.profile.addresses.item.ItemAddressItemRequestBuilder;
-import microsoft.graph.users.item.profile.anniversaries.AnniversariesRequestBuilder;
-import microsoft.graph.users.item.profile.anniversaries.item.PersonAnnualEventItemRequestBuilder;
-import microsoft.graph.users.item.profile.awards.AwardsRequestBuilder;
-import microsoft.graph.users.item.profile.awards.item.PersonAwardItemRequestBuilder;
-import microsoft.graph.users.item.profile.certifications.CertificationsRequestBuilder;
-import microsoft.graph.users.item.profile.certifications.item.PersonCertificationItemRequestBuilder;
-import microsoft.graph.users.item.profile.educationalactivities.EducationalActivitiesRequestBuilder;
-import microsoft.graph.users.item.profile.educationalactivities.item.EducationalActivityItemRequestBuilder;
-import microsoft.graph.users.item.profile.emails.EmailsRequestBuilder;
-import microsoft.graph.users.item.profile.emails.item.ItemEmailItemRequestBuilder;
-import microsoft.graph.users.item.profile.interests.InterestsRequestBuilder;
-import microsoft.graph.users.item.profile.interests.item.PersonInterestItemRequestBuilder;
-import microsoft.graph.users.item.profile.languages.item.LanguageProficiencyItemRequestBuilder;
-import microsoft.graph.users.item.profile.languages.LanguagesRequestBuilder;
-import microsoft.graph.users.item.profile.names.item.PersonNameItemRequestBuilder;
-import microsoft.graph.users.item.profile.names.NamesRequestBuilder;
-import microsoft.graph.users.item.profile.notes.item.PersonAnnotationItemRequestBuilder;
-import microsoft.graph.users.item.profile.notes.NotesRequestBuilder;
-import microsoft.graph.users.item.profile.patents.item.ItemPatentItemRequestBuilder;
-import microsoft.graph.users.item.profile.patents.PatentsRequestBuilder;
-import microsoft.graph.users.item.profile.phones.item.ItemPhoneItemRequestBuilder;
-import microsoft.graph.users.item.profile.phones.PhonesRequestBuilder;
-import microsoft.graph.users.item.profile.positions.item.WorkPositionItemRequestBuilder;
-import microsoft.graph.users.item.profile.positions.PositionsRequestBuilder;
-import microsoft.graph.users.item.profile.projects.item.ProjectParticipationItemRequestBuilder;
-import microsoft.graph.users.item.profile.projects.ProjectsRequestBuilder;
-import microsoft.graph.users.item.profile.publications.item.ItemPublicationItemRequestBuilder;
-import microsoft.graph.users.item.profile.publications.PublicationsRequestBuilder;
-import microsoft.graph.users.item.profile.skills.item.SkillProficiencyItemRequestBuilder;
-import microsoft.graph.users.item.profile.skills.SkillsRequestBuilder;
-import microsoft.graph.users.item.profile.webaccounts.item.WebAccountItemRequestBuilder;
-import microsoft.graph.users.item.profile.webaccounts.WebAccountsRequestBuilder;
-import microsoft.graph.users.item.profile.websites.item.PersonWebsiteItemRequestBuilder;
-import microsoft.graph.users.item.profile.websites.WebsitesRequestBuilder;
 /** Provides operations to manage the profile property of the microsoft.graph.user entity. */
 public class ProfileRequestBuilder {
     /** The account property */
@@ -158,7 +158,7 @@ public class ProfileRequestBuilder {
         return new WebsitesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.account.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.account.item collection
      * @param id Unique identifier of the item
      * @return a UserAccountInformationItemRequestBuilder
      */
@@ -170,7 +170,7 @@ public class ProfileRequestBuilder {
         return new UserAccountInformationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.addresses.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.addresses.item collection
      * @param id Unique identifier of the item
      * @return a ItemAddressItemRequestBuilder
      */
@@ -182,7 +182,7 @@ public class ProfileRequestBuilder {
         return new ItemAddressItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.anniversaries.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.anniversaries.item collection
      * @param id Unique identifier of the item
      * @return a PersonAnnualEventItemRequestBuilder
      */
@@ -194,7 +194,7 @@ public class ProfileRequestBuilder {
         return new PersonAnnualEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.awards.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.awards.item collection
      * @param id Unique identifier of the item
      * @return a PersonAwardItemRequestBuilder
      */
@@ -206,7 +206,7 @@ public class ProfileRequestBuilder {
         return new PersonAwardItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.certifications.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.certifications.item collection
      * @param id Unique identifier of the item
      * @return a PersonCertificationItemRequestBuilder
      */
@@ -386,7 +386,7 @@ public class ProfileRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.educationalActivities.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.educationalActivities.item collection
      * @param id Unique identifier of the item
      * @return a EducationalActivityItemRequestBuilder
      */
@@ -398,7 +398,7 @@ public class ProfileRequestBuilder {
         return new EducationalActivityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.emails.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.emails.item collection
      * @param id Unique identifier of the item
      * @return a ItemEmailItemRequestBuilder
      */
@@ -461,7 +461,7 @@ public class ProfileRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.interests.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.interests.item collection
      * @param id Unique identifier of the item
      * @return a PersonInterestItemRequestBuilder
      */
@@ -473,7 +473,7 @@ public class ProfileRequestBuilder {
         return new PersonInterestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.languages.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.languages.item collection
      * @param id Unique identifier of the item
      * @return a LanguageProficiencyItemRequestBuilder
      */
@@ -485,7 +485,7 @@ public class ProfileRequestBuilder {
         return new LanguageProficiencyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.names.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.names.item collection
      * @param id Unique identifier of the item
      * @return a PersonNameItemRequestBuilder
      */
@@ -497,7 +497,7 @@ public class ProfileRequestBuilder {
         return new PersonNameItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.notes.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.notes.item collection
      * @param id Unique identifier of the item
      * @return a PersonAnnotationItemRequestBuilder
      */
@@ -564,7 +564,7 @@ public class ProfileRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.patents.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.patents.item collection
      * @param id Unique identifier of the item
      * @return a ItemPatentItemRequestBuilder
      */
@@ -576,7 +576,7 @@ public class ProfileRequestBuilder {
         return new ItemPatentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.phones.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.phones.item collection
      * @param id Unique identifier of the item
      * @return a ItemPhoneItemRequestBuilder
      */
@@ -588,7 +588,7 @@ public class ProfileRequestBuilder {
         return new ItemPhoneItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.positions.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.positions.item collection
      * @param id Unique identifier of the item
      * @return a WorkPositionItemRequestBuilder
      */
@@ -600,7 +600,7 @@ public class ProfileRequestBuilder {
         return new WorkPositionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.projects.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.projects.item collection
      * @param id Unique identifier of the item
      * @return a ProjectParticipationItemRequestBuilder
      */
@@ -612,7 +612,7 @@ public class ProfileRequestBuilder {
         return new ProjectParticipationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.publications.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.publications.item collection
      * @param id Unique identifier of the item
      * @return a ItemPublicationItemRequestBuilder
      */
@@ -624,7 +624,7 @@ public class ProfileRequestBuilder {
         return new ItemPublicationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.skills.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.skills.item collection
      * @param id Unique identifier of the item
      * @return a SkillProficiencyItemRequestBuilder
      */
@@ -636,7 +636,7 @@ public class ProfileRequestBuilder {
         return new SkillProficiencyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.webAccounts.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.webAccounts.item collection
      * @param id Unique identifier of the item
      * @return a WebAccountItemRequestBuilder
      */
@@ -648,7 +648,7 @@ public class ProfileRequestBuilder {
         return new WebAccountItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.profile.websites.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.profile.websites.item collection
      * @param id Unique identifier of the item
      * @return a PersonWebsiteItemRequestBuilder
      */

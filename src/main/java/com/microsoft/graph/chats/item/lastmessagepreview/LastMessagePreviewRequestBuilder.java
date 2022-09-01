@@ -1,5 +1,7 @@
-package microsoft.graph.chats.item.lastmessagepreview;
+package com.microsoft.graph.chats.item.lastmessagepreview;
 
+import com.microsoft.graph.models.ChatMessageInfo;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ChatMessageInfo;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the lastMessagePreview property of the microsoft.graph.chat entity. */
 public class LastMessagePreviewRequestBuilder {
     /** Path parameters for the request */

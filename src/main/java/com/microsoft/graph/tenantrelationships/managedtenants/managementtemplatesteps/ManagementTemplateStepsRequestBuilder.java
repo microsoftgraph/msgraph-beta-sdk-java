@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.managedtenants.managementtemplatesteps;
+package com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatesteps;
 
+import com.microsoft.graph.models.managedtenants.ManagementTemplateStep;
+import com.microsoft.graph.models.managedtenants.ManagementTemplateStepCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatesteps.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ManagementTemplateStep;
-import microsoft.graph.models.managedtenants.ManagementTemplateStepCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplatesteps.count.CountRequestBuilder;
 /** Provides operations to manage the managementTemplateSteps property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class ManagementTemplateStepsRequestBuilder {
     /** The Count property */

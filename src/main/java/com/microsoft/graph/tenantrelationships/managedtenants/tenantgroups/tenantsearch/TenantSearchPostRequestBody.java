@@ -1,4 +1,4 @@
-package microsoft.graph.tenantrelationships.managedtenants.tenantgroups.tenantsearch;
+package com.microsoft.graph.tenantrelationships.managedtenants.tenantgroups.tenantsearch;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

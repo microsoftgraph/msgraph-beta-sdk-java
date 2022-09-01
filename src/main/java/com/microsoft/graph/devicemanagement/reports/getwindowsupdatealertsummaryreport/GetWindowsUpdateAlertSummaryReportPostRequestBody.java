@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getwindowsupdatealertsummaryreport;
+package com.microsoft.graph.devicemanagement.reports.getwindowsupdatealertsummaryreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.deviceconfigurations.gettargetedusersanddevices;
+package com.microsoft.graph.devicemanagement.deviceconfigurations.gettargetedusersanddevices;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

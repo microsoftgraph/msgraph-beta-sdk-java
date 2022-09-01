@@ -1,5 +1,17 @@
-package microsoft.graph.onpremisespublishingprofiles.item;
+package com.microsoft.graph.onpremisespublishingprofiles.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnPremisesPublishingProfile;
+import com.microsoft.graph.onpremisespublishingprofiles.item.agentgroups.AgentGroupsRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.OnPremisesAgentGroupItemRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.agents.AgentsRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.agents.item.OnPremisesAgentItemRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.ConnectorGroupsRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.ConnectorGroupItemRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectors.ConnectorsRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectors.item.ConnectorItemRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.publishedresources.item.PublishedResourceItemRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.publishedresources.PublishedResourcesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,18 +26,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnPremisesPublishingProfile;
-import microsoft.graph.onpremisespublishingprofiles.item.agentgroups.AgentGroupsRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.OnPremisesAgentGroupItemRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.agents.AgentsRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.agents.item.OnPremisesAgentItemRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.ConnectorGroupsRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.ConnectorGroupItemRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.connectors.ConnectorsRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.connectors.item.ConnectorItemRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.publishedresources.item.PublishedResourceItemRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.publishedresources.PublishedResourcesRequestBuilder;
 /** Provides operations to manage the collection of onPremisesPublishingProfile entities. */
 public class OnPremisesPublishingProfileItemRequestBuilder {
     /** The agentGroups property */
@@ -60,7 +60,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.agentGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.agentGroups.item collection
      * @param id Unique identifier of the item
      * @return a OnPremisesAgentGroupItemRequestBuilder
      */
@@ -72,7 +72,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         return new OnPremisesAgentGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.agents.item collection
+     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.agents.item collection
      * @param id Unique identifier of the item
      * @return a OnPremisesAgentItemRequestBuilder
      */
@@ -84,7 +84,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         return new OnPremisesAgentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.connectorGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.connectorGroups.item collection
      * @param id Unique identifier of the item
      * @return a ConnectorGroupItemRequestBuilder
      */
@@ -96,7 +96,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         return new ConnectorGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.connectors.item collection
+     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.connectors.item collection
      * @param id Unique identifier of the item
      * @return a ConnectorItemRequestBuilder
      */
@@ -382,7 +382,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.publishedResources.item collection
+     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.publishedResources.item collection
      * @param id Unique identifier of the item
      * @return a PublishedResourceItemRequestBuilder
      */

@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.managedtenants.conditionalaccesspolicycoverages;
+package com.microsoft.graph.tenantrelationships.managedtenants.conditionalaccesspolicycoverages;
 
+import com.microsoft.graph.models.managedtenants.ConditionalAccessPolicyCoverage;
+import com.microsoft.graph.models.managedtenants.ConditionalAccessPolicyCoverageCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.conditionalaccesspolicycoverages.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ConditionalAccessPolicyCoverage;
-import microsoft.graph.models.managedtenants.ConditionalAccessPolicyCoverageCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.conditionalaccesspolicycoverages.count.CountRequestBuilder;
 /** Provides operations to manage the conditionalAccessPolicyCoverages property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class ConditionalAccessPolicyCoveragesRequestBuilder {
     /** The Count property */

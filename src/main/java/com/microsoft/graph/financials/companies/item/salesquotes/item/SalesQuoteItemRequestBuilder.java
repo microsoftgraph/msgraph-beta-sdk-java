@@ -1,5 +1,15 @@
-package microsoft.graph.financials.companies.item.salesquotes.item;
+package com.microsoft.graph.financials.companies.item.salesquotes.item;
 
+import com.microsoft.graph.financials.companies.item.salesquotes.item.currency.CurrencyRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotes.item.customer.CustomerRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotes.item.makeinvoice.MakeInvoiceRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotes.item.paymentterm.PaymentTermRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotes.item.salesquotelines.item.SalesQuoteLineItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotes.item.salesquotelines.SalesQuoteLinesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotes.item.send.SendRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotes.item.shipmentmethod.ShipmentMethodRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SalesQuote;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salesquotes.item.currency.CurrencyRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotes.item.customer.CustomerRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotes.item.makeinvoice.MakeInvoiceRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotes.item.paymentterm.PaymentTermRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotes.item.salesquotelines.item.SalesQuoteLineItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotes.item.salesquotelines.SalesQuoteLinesRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotes.item.send.SendRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotes.item.shipmentmethod.ShipmentMethodRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SalesQuote;
 /** Provides operations to manage the salesQuotes property of the microsoft.graph.company entity. */
 public class SalesQuoteItemRequestBuilder {
     /** The currency property */
@@ -263,7 +263,7 @@ public class SalesQuoteItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesQuotes.item.salesQuoteLines.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesQuotes.item.salesQuoteLines.item collection
      * @param id Unique identifier of the item
      * @return a SalesQuoteLineItemRequestBuilder
      */

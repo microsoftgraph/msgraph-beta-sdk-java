@@ -1,5 +1,6 @@
-package microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.run;
+package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.run;
 
+import com.microsoft.graph.models.security.EdiscoveryFile;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.security.EdiscoveryFile;
 /** Provides operations to call the run method. */
 public class RunResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.salescreditmemolines.item;
+package com.microsoft.graph.financials.companies.item.salescreditmemolines.item;
 
+import com.microsoft.graph.financials.companies.item.salescreditmemolines.item.account.AccountRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salescreditmemolines.item.item.ItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SalesCreditMemoLine;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salescreditmemolines.item.account.AccountRequestBuilder;
-import microsoft.graph.financials.companies.item.salescreditmemolines.item.item.ItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SalesCreditMemoLine;
 /** Provides operations to manage the salesCreditMemoLines property of the microsoft.graph.company entity. */
 public class SalesCreditMemoLineItemRequestBuilder {
     /** The account property */

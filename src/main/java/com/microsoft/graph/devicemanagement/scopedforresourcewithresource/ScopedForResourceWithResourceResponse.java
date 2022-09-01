@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.scopedforresourcewithresource;
+package com.microsoft.graph.devicemanagement.scopedforresourcewithresource;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

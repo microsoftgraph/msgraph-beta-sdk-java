@@ -1,5 +1,6 @@
-package microsoft.graph.devicemanagement.templates.item.migratableto.importoffice365deviceconfigurationpolicies;
+package com.microsoft.graph.devicemanagement.templates.item.migratableto.importoffice365deviceconfigurationpolicies;
 
+import com.microsoft.graph.models.DeviceManagementIntent;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceManagementIntent;
 /** Provides operations to call the importOffice365DeviceConfigurationPolicies method. */
 public class ImportOffice365DeviceConfigurationPoliciesResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

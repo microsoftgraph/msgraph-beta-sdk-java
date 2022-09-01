@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getdeviceinstallstatusreport;
+package com.microsoft.graph.devicemanagement.reports.getdeviceinstallstatusreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

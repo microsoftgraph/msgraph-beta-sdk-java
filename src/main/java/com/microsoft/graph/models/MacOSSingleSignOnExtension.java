@@ -1,5 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.MacOSAzureAdSingleSignOnExtension;
+import com.microsoft.graph.models.MacOSCredentialSingleSignOnExtension;
+import com.microsoft.graph.models.MacOSKerberosSingleSignOnExtension;
+import com.microsoft.graph.models.MacOSRedirectSingleSignOnExtension;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

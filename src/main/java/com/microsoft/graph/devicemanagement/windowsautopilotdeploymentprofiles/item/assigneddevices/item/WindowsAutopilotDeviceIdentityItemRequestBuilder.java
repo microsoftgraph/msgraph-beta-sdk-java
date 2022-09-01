@@ -1,5 +1,14 @@
-package microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item;
+package com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item;
 
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.assignresourceaccounttodevice.AssignResourceAccountToDeviceRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.assignusertodevice.AssignUserToDeviceRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.deploymentprofile.DeploymentProfileRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.intendeddeploymentprofile.IntendedDeploymentProfileRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.unassignresourceaccountfromdevice.UnassignResourceAccountFromDeviceRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.unassignuserfromdevice.UnassignUserFromDeviceRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.updatedeviceproperties.UpdateDevicePropertiesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.assignresourceaccounttodevice.AssignResourceAccountToDeviceRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.assignusertodevice.AssignUserToDeviceRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.deploymentprofile.DeploymentProfileRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.intendeddeploymentprofile.IntendedDeploymentProfileRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.unassignresourceaccountfromdevice.UnassignResourceAccountFromDeviceRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.unassignuserfromdevice.UnassignUserFromDeviceRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.updatedeviceproperties.UpdateDevicePropertiesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsAutopilotDeviceIdentity;
 /** Provides operations to manage the assignedDevices property of the microsoft.graph.windowsAutopilotDeploymentProfile entity. */
 public class WindowsAutopilotDeviceIdentityItemRequestBuilder {
     /** The assignResourceAccountToDevice property */

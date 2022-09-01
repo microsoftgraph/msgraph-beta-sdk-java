@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.androidmanagedstoreaccountenterprisesettings.approveapps;
+package com.microsoft.graph.devicemanagement.androidmanagedstoreaccountenterprisesettings.approveapps;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

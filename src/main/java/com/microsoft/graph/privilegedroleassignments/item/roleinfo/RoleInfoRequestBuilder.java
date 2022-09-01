@@ -1,5 +1,13 @@
-package microsoft.graph.privilegedroleassignments.item.roleinfo;
+package com.microsoft.graph.privilegedroleassignments.item.roleinfo;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedRole;
+import com.microsoft.graph.privilegedroleassignments.item.roleinfo.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.privilegedroleassignments.item.roleinfo.assignments.item.PrivilegedRoleAssignmentItemRequestBuilder;
+import com.microsoft.graph.privilegedroleassignments.item.roleinfo.selfactivate.SelfActivateRequestBuilder;
+import com.microsoft.graph.privilegedroleassignments.item.roleinfo.selfdeactivate.SelfDeactivateRequestBuilder;
+import com.microsoft.graph.privilegedroleassignments.item.roleinfo.settings.SettingsRequestBuilder;
+import com.microsoft.graph.privilegedroleassignments.item.roleinfo.summary.SummaryRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedRole;
-import microsoft.graph.privilegedroleassignments.item.roleinfo.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.privilegedroleassignments.item.roleinfo.assignments.item.PrivilegedRoleAssignmentItemRequestBuilder;
-import microsoft.graph.privilegedroleassignments.item.roleinfo.selfactivate.SelfActivateRequestBuilder;
-import microsoft.graph.privilegedroleassignments.item.roleinfo.selfdeactivate.SelfDeactivateRequestBuilder;
-import microsoft.graph.privilegedroleassignments.item.roleinfo.settings.SettingsRequestBuilder;
-import microsoft.graph.privilegedroleassignments.item.roleinfo.summary.SummaryRequestBuilder;
 /** Provides operations to manage the roleInfo property of the microsoft.graph.privilegedRoleAssignment entity. */
 public class RoleInfoRequestBuilder {
     /** The assignments property */
@@ -56,7 +56,7 @@ public class RoleInfoRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.privilegedRoleAssignments.item.roleInfo.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.privilegedRoleAssignments.item.roleInfo.assignments.item collection
      * @param id Unique identifier of the item
      * @return a PrivilegedRoleAssignmentItemRequestBuilder
      */

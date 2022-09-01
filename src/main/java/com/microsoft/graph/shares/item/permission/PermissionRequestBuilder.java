@@ -1,5 +1,9 @@
-package microsoft.graph.shares.item.permission;
+package com.microsoft.graph.shares.item.permission;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Permission;
+import com.microsoft.graph.shares.item.permission.grant.GrantRequestBuilder;
+import com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Permission;
-import microsoft.graph.shares.item.permission.grant.GrantRequestBuilder;
-import microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder;
 /** Provides operations to manage the permission property of the microsoft.graph.sharedDriveItem entity. */
 public class PermissionRequestBuilder {
     /** The grant property */

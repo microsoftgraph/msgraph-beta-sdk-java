@@ -1,5 +1,7 @@
-package microsoft.graph.informationprotection.verifysignature;
+package com.microsoft.graph.informationprotection.verifysignature;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.VerificationResult;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.VerificationResult;
 /** Provides operations to call the verifySignature method. */
 public class VerifySignatureRequestBuilder {
     /** Path parameters for the request */

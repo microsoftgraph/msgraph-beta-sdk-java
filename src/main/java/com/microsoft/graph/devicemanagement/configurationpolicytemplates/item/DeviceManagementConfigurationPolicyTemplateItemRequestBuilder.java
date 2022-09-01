@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.configurationpolicytemplates.item;
+package com.microsoft.graph.devicemanagement.configurationpolicytemplates.item;
 
+import com.microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.item.DeviceManagementConfigurationSettingTemplateItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.SettingTemplatesRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementConfigurationPolicyTemplate;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.item.DeviceManagementConfigurationSettingTemplateItemRequestBuilder;
-import microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.SettingTemplatesRequestBuilder;
-import microsoft.graph.models.DeviceManagementConfigurationPolicyTemplate;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the configurationPolicyTemplates property of the microsoft.graph.deviceManagement entity. */
 public class DeviceManagementConfigurationPolicyTemplateItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class DeviceManagementConfigurationPolicyTemplateItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.configurationPolicyTemplates.item.settingTemplates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.configurationPolicyTemplates.item.settingTemplates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementConfigurationSettingTemplateItemRequestBuilder
      */

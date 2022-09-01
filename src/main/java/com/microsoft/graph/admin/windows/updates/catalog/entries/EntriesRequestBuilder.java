@@ -1,5 +1,9 @@
-package microsoft.graph.admin.windows.updates.catalog.entries;
+package com.microsoft.graph.admin.windows.updates.catalog.entries;
 
+import com.microsoft.graph.admin.windows.updates.catalog.entries.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.windowsupdates.CatalogEntry;
+import com.microsoft.graph.models.windowsupdates.CatalogEntryCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.windows.updates.catalog.entries.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.windowsupdates.CatalogEntry;
-import microsoft.graph.models.windowsupdates.CatalogEntryCollectionResponse;
 /** Provides operations to manage the entries property of the microsoft.graph.windowsUpdates.catalog entity. */
 public class EntriesRequestBuilder {
     /** The Count property */

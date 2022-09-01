@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.cloudpcs;
+package com.microsoft.graph.users.item.cloudpcs;
 
+import com.microsoft.graph.models.CloudPC;
+import com.microsoft.graph.models.CloudPCCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.cloudpcs.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CloudPC;
-import microsoft.graph.models.CloudPCCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.cloudpcs.count.CountRequestBuilder;
 /** Provides operations to manage the cloudPCs property of the microsoft.graph.user entity. */
 public class CloudPCsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.templates.item.categories.item.recommendedsettings;
+package com.microsoft.graph.devicemanagement.templates.item.categories.item.recommendedsettings;
 
+import com.microsoft.graph.devicemanagement.templates.item.categories.item.recommendedsettings.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementSettingInstance;
+import com.microsoft.graph.models.DeviceManagementSettingInstanceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.templates.item.categories.item.recommendedsettings.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementSettingInstance;
-import microsoft.graph.models.DeviceManagementSettingInstanceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the recommendedSettings property of the microsoft.graph.deviceManagementTemplateSettingCategory entity. */
 public class RecommendedSettingsRequestBuilder {
     /** The Count property */

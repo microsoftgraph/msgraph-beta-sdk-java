@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.grouppolicymigrationreports;
+package com.microsoft.graph.devicemanagement.grouppolicymigrationreports;
 
+import com.microsoft.graph.devicemanagement.grouppolicymigrationreports.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicymigrationreports.createmigrationreport.CreateMigrationReportRequestBuilder;
+import com.microsoft.graph.models.GroupPolicyMigrationReport;
+import com.microsoft.graph.models.GroupPolicyMigrationReportCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.grouppolicymigrationreports.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicymigrationreports.createmigrationreport.CreateMigrationReportRequestBuilder;
-import microsoft.graph.models.GroupPolicyMigrationReport;
-import microsoft.graph.models.GroupPolicyMigrationReportCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groupPolicyMigrationReports property of the microsoft.graph.deviceManagement entity. */
 public class GroupPolicyMigrationReportsRequestBuilder {
     /** The Count property */

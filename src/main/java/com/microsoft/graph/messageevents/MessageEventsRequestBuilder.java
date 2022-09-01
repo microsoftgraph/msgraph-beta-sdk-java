@@ -1,5 +1,9 @@
-package microsoft.graph.messageevents;
+package com.microsoft.graph.messageevents;
 
+import com.microsoft.graph.messageevents.count.CountRequestBuilder;
+import com.microsoft.graph.models.MessageEvent;
+import com.microsoft.graph.models.MessageEventCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.messageevents.count.CountRequestBuilder;
-import microsoft.graph.models.MessageEvent;
-import microsoft.graph.models.MessageEventCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of messageEvent entities. */
 public class MessageEventsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,8 @@
-package microsoft.graph.rolemanagement.devicemanagement.roledefinitions.item.inheritspermissionsfrom.item;
+package com.microsoft.graph.rolemanagement.devicemanagement.roledefinitions.item.inheritspermissionsfrom.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleDefinition;
+import com.microsoft.graph.rolemanagement.devicemanagement.roledefinitions.item.inheritspermissionsfrom.item.assignedprincipalswithtransitivewithdirectoryscopetypewithdirectoryscopeid.AssignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeIdRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleDefinition;
-import microsoft.graph.rolemanagement.devicemanagement.roledefinitions.item.inheritspermissionsfrom.item.assignedprincipalswithtransitivewithdirectoryscopetypewithdirectoryscopeid.AssignedPrincipalsWithTransitiveWithDirectoryScopeTypeWithDirectoryScopeIdRequestBuilder;
 /** Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity. */
 public class UnifiedRoleDefinitionItemRequestBuilder {
     /** Path parameters for the request */

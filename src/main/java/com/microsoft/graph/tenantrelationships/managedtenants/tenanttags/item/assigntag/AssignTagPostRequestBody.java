@@ -1,4 +1,4 @@
-package microsoft.graph.tenantrelationships.managedtenants.tenanttags.item.assigntag;
+package com.microsoft.graph.tenantrelationships.managedtenants.tenanttags.item.assigntag;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

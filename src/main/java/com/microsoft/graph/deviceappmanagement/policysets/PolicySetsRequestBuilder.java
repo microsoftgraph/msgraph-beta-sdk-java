@@ -1,5 +1,10 @@
-package microsoft.graph.deviceappmanagement.policysets;
+package com.microsoft.graph.deviceappmanagement.policysets;
 
+import com.microsoft.graph.deviceappmanagement.policysets.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.policysets.getpolicysets.GetPolicySetsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PolicySet;
+import com.microsoft.graph.models.PolicySetCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.policysets.count.CountRequestBuilder;
-import microsoft.graph.deviceappmanagement.policysets.getpolicysets.GetPolicySetsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PolicySet;
-import microsoft.graph.models.PolicySetCollectionResponse;
 /** Provides operations to manage the policySets property of the microsoft.graph.deviceAppManagement entity. */
 public class PolicySetsRequestBuilder {
     /** The Count property */

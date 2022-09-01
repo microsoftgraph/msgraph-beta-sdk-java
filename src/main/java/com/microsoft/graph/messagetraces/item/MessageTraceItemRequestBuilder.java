@@ -1,5 +1,9 @@
-package microsoft.graph.messagetraces.item;
+package com.microsoft.graph.messagetraces.item;
 
+import com.microsoft.graph.messagetraces.item.recipients.item.MessageRecipientItemRequestBuilder;
+import com.microsoft.graph.messagetraces.item.recipients.RecipientsRequestBuilder;
+import com.microsoft.graph.models.MessageTrace;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.messagetraces.item.recipients.item.MessageRecipientItemRequestBuilder;
-import microsoft.graph.messagetraces.item.recipients.RecipientsRequestBuilder;
-import microsoft.graph.models.MessageTrace;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of messageTrace entities. */
 public class MessageTraceItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class MessageTraceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.messageTraces.item.recipients.item collection
+     * Gets an item from the com.Microsoft.Graph.messageTraces.item.recipients.item collection
      * @param id Unique identifier of the item
      * @return a MessageRecipientItemRequestBuilder
      */

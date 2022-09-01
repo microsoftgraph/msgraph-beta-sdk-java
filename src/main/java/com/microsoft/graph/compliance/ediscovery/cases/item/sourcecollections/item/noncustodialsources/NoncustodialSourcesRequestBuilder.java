@@ -1,5 +1,8 @@
-package microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.noncustodialsources;
+package com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.noncustodialsources;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.noncustodialsources.count.CountRequestBuilder;
+import com.microsoft.graph.models.ediscovery.NoncustodialDataSourceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.noncustodialsources.count.CountRequestBuilder;
-import microsoft.graph.models.ediscovery.NoncustodialDataSourceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the noncustodialSources property of the microsoft.graph.ediscovery.sourceCollection entity. */
 public class NoncustodialSourcesRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.trustframework.keysets;
+package com.microsoft.graph.trustframework.keysets;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TrustFrameworkKeySet;
+import com.microsoft.graph.models.TrustFrameworkKeySetCollectionResponse;
+import com.microsoft.graph.trustframework.keysets.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TrustFrameworkKeySet;
-import microsoft.graph.models.TrustFrameworkKeySetCollectionResponse;
-import microsoft.graph.trustframework.keysets.count.CountRequestBuilder;
 /** Provides operations to manage the keySets property of the microsoft.graph.trustFramework entity. */
 public class KeySetsRequestBuilder {
     /** The Count property */

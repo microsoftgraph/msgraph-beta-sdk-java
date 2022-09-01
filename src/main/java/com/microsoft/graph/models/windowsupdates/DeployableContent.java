@@ -1,5 +1,10 @@
-package microsoft.graph.models.windowsupdates;
+package com.microsoft.graph.models.windowsupdates;
 
+import com.microsoft.graph.models.windowsupdates.ExpeditedQualityUpdateReference;
+import com.microsoft.graph.models.windowsupdates.FeatureUpdateReference;
+import com.microsoft.graph.models.windowsupdates.QualityUpdateReference;
+import com.microsoft.graph.models.windowsupdates.SoftwareUpdateReference;
+import com.microsoft.graph.models.windowsupdates.WindowsUpdateReference;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

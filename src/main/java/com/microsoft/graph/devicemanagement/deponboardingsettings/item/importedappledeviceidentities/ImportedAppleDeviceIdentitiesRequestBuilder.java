@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.deponboardingsettings.item.importedappledeviceidentities;
+package com.microsoft.graph.devicemanagement.deponboardingsettings.item.importedappledeviceidentities;
 
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.importedappledeviceidentities.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.importedappledeviceidentities.importappledeviceidentitylist.ImportAppleDeviceIdentityListRequestBuilder;
+import com.microsoft.graph.models.ImportedAppleDeviceIdentity;
+import com.microsoft.graph.models.ImportedAppleDeviceIdentityCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.importedappledeviceidentities.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.importedappledeviceidentities.importappledeviceidentitylist.ImportAppleDeviceIdentityListRequestBuilder;
-import microsoft.graph.models.ImportedAppleDeviceIdentity;
-import microsoft.graph.models.ImportedAppleDeviceIdentityCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the importedAppleDeviceIdentities property of the microsoft.graph.depOnboardingSetting entity. */
 public class ImportedAppleDeviceIdentitiesRequestBuilder {
     /** The Count property */

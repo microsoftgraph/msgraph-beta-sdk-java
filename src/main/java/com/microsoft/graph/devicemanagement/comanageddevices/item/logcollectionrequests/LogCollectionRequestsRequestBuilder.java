@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.comanageddevices.item.logcollectionrequests;
+package com.microsoft.graph.devicemanagement.comanageddevices.item.logcollectionrequests;
 
+import com.microsoft.graph.devicemanagement.comanageddevices.item.logcollectionrequests.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceLogCollectionResponse;
+import com.microsoft.graph.models.DeviceLogCollectionResponseCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.comanageddevices.item.logcollectionrequests.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceLogCollectionResponse;
-import microsoft.graph.models.DeviceLogCollectionResponseCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the logCollectionRequests property of the microsoft.graph.managedDevice entity. */
 public class LogCollectionRequestsRequestBuilder {
     /** The Count property */

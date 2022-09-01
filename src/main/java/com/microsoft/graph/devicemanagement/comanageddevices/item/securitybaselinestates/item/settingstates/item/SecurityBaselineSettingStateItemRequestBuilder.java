@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.comanageddevices.item.securitybaselinestates.item.settingstates.item;
+package com.microsoft.graph.devicemanagement.comanageddevices.item.securitybaselinestates.item.settingstates.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SecurityBaselineSettingState;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SecurityBaselineSettingState;
 /** Provides operations to manage the settingStates property of the microsoft.graph.securityBaselineState entity. */
 public class SecurityBaselineSettingStateItemRequestBuilder {
     /** Path parameters for the request */

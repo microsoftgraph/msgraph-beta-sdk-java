@@ -1,5 +1,8 @@
-package microsoft.graph.financials.companies.item.companyinformation.item;
+package com.microsoft.graph.financials.companies.item.companyinformation.item;
 
+import com.microsoft.graph.financials.companies.item.companyinformation.item.picture.PictureRequestBuilder;
+import com.microsoft.graph.models.CompanyInformation;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.companyinformation.item.picture.PictureRequestBuilder;
-import microsoft.graph.models.CompanyInformation;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the companyInformation property of the microsoft.graph.company entity. */
 public class CompanyInformationItemRequestBuilder {
     /** Path parameters for the request */

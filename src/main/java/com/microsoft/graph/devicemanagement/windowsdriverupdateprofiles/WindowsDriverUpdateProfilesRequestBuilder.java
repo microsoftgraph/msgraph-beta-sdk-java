@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.windowsdriverupdateprofiles;
+package com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles;
 
+import com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsDriverUpdateProfile;
+import com.microsoft.graph.models.WindowsDriverUpdateProfileCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.windowsdriverupdateprofiles.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsDriverUpdateProfile;
-import microsoft.graph.models.WindowsDriverUpdateProfileCollectionResponse;
 /** Provides operations to manage the windowsDriverUpdateProfiles property of the microsoft.graph.deviceManagement entity. */
 public class WindowsDriverUpdateProfilesRequestBuilder {
     /** The Count property */

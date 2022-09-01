@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.certificateconnectordetails.item;
+package com.microsoft.graph.devicemanagement.certificateconnectordetails.item;
 
+import com.microsoft.graph.devicemanagement.certificateconnectordetails.item.gethealthmetrics.GetHealthMetricsRequestBuilder;
+import com.microsoft.graph.devicemanagement.certificateconnectordetails.item.gethealthmetrictimeseries.GetHealthMetricTimeSeriesRequestBuilder;
+import com.microsoft.graph.models.CertificateConnectorDetails;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.certificateconnectordetails.item.gethealthmetrics.GetHealthMetricsRequestBuilder;
-import microsoft.graph.devicemanagement.certificateconnectordetails.item.gethealthmetrictimeseries.GetHealthMetricTimeSeriesRequestBuilder;
-import microsoft.graph.models.CertificateConnectorDetails;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the certificateConnectorDetails property of the microsoft.graph.deviceManagement entity. */
 public class CertificateConnectorDetailsItemRequestBuilder {
     /** The getHealthMetrics property */

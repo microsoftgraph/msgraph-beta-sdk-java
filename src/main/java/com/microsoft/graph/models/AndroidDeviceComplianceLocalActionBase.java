@@ -1,5 +1,7 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AndroidDeviceComplianceLocalActionLockDevice;
+import com.microsoft.graph.models.AndroidDeviceComplianceLocalActionLockDeviceWithPasscode;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

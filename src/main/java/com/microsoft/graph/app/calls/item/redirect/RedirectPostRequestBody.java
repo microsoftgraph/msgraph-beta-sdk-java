@@ -1,5 +1,7 @@
-package microsoft.graph.app.calls.item.redirect;
+package com.microsoft.graph.app.calls.item.redirect;
 
+import com.microsoft.graph.models.CallDisposition;
+import com.microsoft.graph.models.InvitationParticipantInfo;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CallDisposition;
-import microsoft.graph.models.InvitationParticipantInfo;
 /** Provides operations to call the redirect method. */
 public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

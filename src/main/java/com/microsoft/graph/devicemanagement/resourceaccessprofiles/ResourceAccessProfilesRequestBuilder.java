@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.resourceaccessprofiles;
+package com.microsoft.graph.devicemanagement.resourceaccessprofiles;
 
+import com.microsoft.graph.devicemanagement.resourceaccessprofiles.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.resourceaccessprofiles.querybyplatformtype.QueryByPlatformTypeRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementResourceAccessProfileBase;
+import com.microsoft.graph.models.DeviceManagementResourceAccessProfileBaseCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.resourceaccessprofiles.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.resourceaccessprofiles.querybyplatformtype.QueryByPlatformTypeRequestBuilder;
-import microsoft.graph.models.DeviceManagementResourceAccessProfileBase;
-import microsoft.graph.models.DeviceManagementResourceAccessProfileBaseCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the resourceAccessProfiles property of the microsoft.graph.deviceManagement entity. */
 public class ResourceAccessProfilesRequestBuilder {
     /** The Count property */

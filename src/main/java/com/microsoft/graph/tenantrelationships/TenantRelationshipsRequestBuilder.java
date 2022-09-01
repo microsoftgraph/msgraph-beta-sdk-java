@@ -1,5 +1,14 @@
-package microsoft.graph.tenantrelationships;
+package com.microsoft.graph.tenantrelationships;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TenantRelationship;
+import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.DelegatedAdminCustomersRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item.DelegatedAdminCustomerItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.DelegatedAdminRelationshipsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.DelegatedAdminRelationshipItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.findtenantinformationbydomainnamewithdomainname.FindTenantInformationByDomainNameWithDomainNameRequestBuilder;
+import com.microsoft.graph.tenantrelationships.findtenantinformationbytenantidwithtenantid.FindTenantInformationByTenantIdWithTenantIdRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.ManagedTenantsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TenantRelationship;
-import microsoft.graph.tenantrelationships.delegatedadmincustomers.DelegatedAdminCustomersRequestBuilder;
-import microsoft.graph.tenantrelationships.delegatedadmincustomers.item.DelegatedAdminCustomerItemRequestBuilder;
-import microsoft.graph.tenantrelationships.delegatedadminrelationships.DelegatedAdminRelationshipsRequestBuilder;
-import microsoft.graph.tenantrelationships.delegatedadminrelationships.item.DelegatedAdminRelationshipItemRequestBuilder;
-import microsoft.graph.tenantrelationships.findtenantinformationbydomainnamewithdomainname.FindTenantInformationByDomainNameWithDomainNameRequestBuilder;
-import microsoft.graph.tenantrelationships.findtenantinformationbytenantidwithtenantid.FindTenantInformationByTenantIdWithTenantIdRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.ManagedTenantsRequestBuilder;
 /** Provides operations to manage the tenantRelationship singleton. */
 public class TenantRelationshipsRequestBuilder {
     /** The delegatedAdminCustomers property */
@@ -136,7 +136,7 @@ public class TenantRelationshipsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.delegatedAdminCustomers.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.delegatedAdminCustomers.item collection
      * @param id Unique identifier of the item
      * @return a DelegatedAdminCustomerItemRequestBuilder
      */
@@ -148,7 +148,7 @@ public class TenantRelationshipsRequestBuilder {
         return new DelegatedAdminCustomerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.delegatedAdminRelationships.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.delegatedAdminRelationships.item collection
      * @param id Unique identifier of the item
      * @return a DelegatedAdminRelationshipItemRequestBuilder
      */

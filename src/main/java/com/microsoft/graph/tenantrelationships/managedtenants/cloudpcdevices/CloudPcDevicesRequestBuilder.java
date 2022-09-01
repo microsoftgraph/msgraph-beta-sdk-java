@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.managedtenants.cloudpcdevices;
+package com.microsoft.graph.tenantrelationships.managedtenants.cloudpcdevices;
 
+import com.microsoft.graph.models.managedtenants.CloudPcDevice;
+import com.microsoft.graph.models.managedtenants.CloudPcDeviceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.cloudpcdevices.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.CloudPcDevice;
-import microsoft.graph.models.managedtenants.CloudPcDeviceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.cloudpcdevices.count.CountRequestBuilder;
 /** Provides operations to manage the cloudPcDevices property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class CloudPcDevicesRequestBuilder {
     /** The Count property */

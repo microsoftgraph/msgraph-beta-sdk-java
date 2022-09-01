@@ -1,5 +1,6 @@
-package microsoft.graph.deviceappmanagement.mobileapps.haspayloadlinks;
+package com.microsoft.graph.deviceappmanagement.mobileapps.haspayloadlinks;
 
+import com.microsoft.graph.models.HasPayloadLinkResultItem;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.HasPayloadLinkResultItem;
 /** Provides operations to call the hasPayloadLinks method. */
 public class HasPayloadLinksResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

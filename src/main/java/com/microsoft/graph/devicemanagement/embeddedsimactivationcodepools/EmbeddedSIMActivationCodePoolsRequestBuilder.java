@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.embeddedsimactivationcodepools;
+package com.microsoft.graph.devicemanagement.embeddedsimactivationcodepools;
 
+import com.microsoft.graph.devicemanagement.embeddedsimactivationcodepools.count.CountRequestBuilder;
+import com.microsoft.graph.models.EmbeddedSIMActivationCodePool;
+import com.microsoft.graph.models.EmbeddedSIMActivationCodePoolCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.embeddedsimactivationcodepools.count.CountRequestBuilder;
-import microsoft.graph.models.EmbeddedSIMActivationCodePool;
-import microsoft.graph.models.EmbeddedSIMActivationCodePoolCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the embeddedSIMActivationCodePools property of the microsoft.graph.deviceManagement entity. */
 public class EmbeddedSIMActivationCodePoolsRequestBuilder {
     /** The Count property */

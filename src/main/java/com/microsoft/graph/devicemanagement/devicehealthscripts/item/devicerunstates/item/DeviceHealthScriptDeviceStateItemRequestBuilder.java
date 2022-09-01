@@ -1,5 +1,8 @@
-package microsoft.graph.devicemanagement.devicehealthscripts.item.devicerunstates.item;
+package com.microsoft.graph.devicemanagement.devicehealthscripts.item.devicerunstates.item;
 
+import com.microsoft.graph.devicemanagement.devicehealthscripts.item.devicerunstates.item.manageddevice.ManagedDeviceRequestBuilder;
+import com.microsoft.graph.models.DeviceHealthScriptDeviceState;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicehealthscripts.item.devicerunstates.item.manageddevice.ManagedDeviceRequestBuilder;
-import microsoft.graph.models.DeviceHealthScriptDeviceState;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceRunStates property of the microsoft.graph.deviceHealthScript entity. */
 public class DeviceHealthScriptDeviceStateItemRequestBuilder {
     /** The managedDevice property */

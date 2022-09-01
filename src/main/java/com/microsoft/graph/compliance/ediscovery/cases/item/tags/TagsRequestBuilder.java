@@ -1,5 +1,10 @@
-package microsoft.graph.compliance.ediscovery.cases.item.tags;
+package com.microsoft.graph.compliance.ediscovery.cases.item.tags;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.tags.ashierarchy.AsHierarchyRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.tags.count.CountRequestBuilder;
+import com.microsoft.graph.models.ediscovery.Tag;
+import com.microsoft.graph.models.ediscovery.TagCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.tags.ashierarchy.AsHierarchyRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.tags.count.CountRequestBuilder;
-import microsoft.graph.models.ediscovery.Tag;
-import microsoft.graph.models.ediscovery.TagCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the tags property of the microsoft.graph.ediscovery.case entity. */
 public class TagsRequestBuilder {
     /** The Count property */

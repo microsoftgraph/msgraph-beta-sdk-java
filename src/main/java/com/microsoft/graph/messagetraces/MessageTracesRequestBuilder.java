@@ -1,5 +1,9 @@
-package microsoft.graph.messagetraces;
+package com.microsoft.graph.messagetraces;
 
+import com.microsoft.graph.messagetraces.count.CountRequestBuilder;
+import com.microsoft.graph.models.MessageTrace;
+import com.microsoft.graph.models.MessageTraceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.messagetraces.count.CountRequestBuilder;
-import microsoft.graph.models.MessageTrace;
-import microsoft.graph.models.MessageTraceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of messageTrace entities. */
 public class MessageTracesRequestBuilder {
     /** The Count property */

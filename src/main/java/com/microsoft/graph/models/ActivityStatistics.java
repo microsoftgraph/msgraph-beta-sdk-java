@@ -1,5 +1,10 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.CallActivityStatistics;
+import com.microsoft.graph.models.ChatActivityStatistics;
+import com.microsoft.graph.models.EmailActivityStatistics;
+import com.microsoft.graph.models.FocusActivityStatistics;
+import com.microsoft.graph.models.MeetingActivityStatistics;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

@@ -1,5 +1,10 @@
-package microsoft.graph.applications.item.synchronization.jobs;
+package com.microsoft.graph.applications.item.synchronization.jobs;
 
+import com.microsoft.graph.applications.item.synchronization.jobs.count.CountRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.jobs.validatecredentials.ValidateCredentialsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SynchronizationJob;
+import com.microsoft.graph.models.SynchronizationJobCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.item.synchronization.jobs.count.CountRequestBuilder;
-import microsoft.graph.applications.item.synchronization.jobs.validatecredentials.ValidateCredentialsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SynchronizationJob;
-import microsoft.graph.models.SynchronizationJobCollectionResponse;
 /** Provides operations to manage the jobs property of the microsoft.graph.synchronization entity. */
 public class JobsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,11 @@
-package microsoft.graph.planner.rosters.item;
+package com.microsoft.graph.planner.rosters.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerRoster;
+import com.microsoft.graph.planner.rosters.item.members.item.PlannerRosterMemberItemRequestBuilder;
+import com.microsoft.graph.planner.rosters.item.members.MembersRequestBuilder;
+import com.microsoft.graph.planner.rosters.item.plans.item.PlannerPlanItemRequestBuilder;
+import com.microsoft.graph.planner.rosters.item.plans.PlansRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerRoster;
-import microsoft.graph.planner.rosters.item.members.item.PlannerRosterMemberItemRequestBuilder;
-import microsoft.graph.planner.rosters.item.members.MembersRequestBuilder;
-import microsoft.graph.planner.rosters.item.plans.item.PlannerPlanItemRequestBuilder;
-import microsoft.graph.planner.rosters.item.plans.PlansRequestBuilder;
 /** Provides operations to manage the rosters property of the microsoft.graph.planner entity. */
 public class PlannerRosterItemRequestBuilder {
     /** The members property */
@@ -258,7 +258,7 @@ public class PlannerRosterItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.planner.rosters.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.planner.rosters.item.members.item collection
      * @param id Unique identifier of the item
      * @return a PlannerRosterMemberItemRequestBuilder
      */
@@ -325,7 +325,7 @@ public class PlannerRosterItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.planner.rosters.item.plans.item collection
+     * Gets an item from the com.Microsoft.Graph.planner.rosters.item.plans.item collection
      * @param id Unique identifier of the item
      * @return a PlannerPlanItemRequestBuilder
      */

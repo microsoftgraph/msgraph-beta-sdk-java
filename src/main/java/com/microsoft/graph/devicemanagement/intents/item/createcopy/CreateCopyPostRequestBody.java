@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.intents.item.createcopy;
+package com.microsoft.graph.devicemanagement.intents.item.createcopy;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

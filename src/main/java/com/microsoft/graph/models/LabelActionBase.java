@@ -1,5 +1,15 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AddFooter;
+import com.microsoft.graph.models.AddHeader;
+import com.microsoft.graph.models.AddWatermark;
+import com.microsoft.graph.models.EncryptContent;
+import com.microsoft.graph.models.EncryptWithTemplate;
+import com.microsoft.graph.models.EncryptWithUserDefinedRights;
+import com.microsoft.graph.models.MarkContent;
+import com.microsoft.graph.models.ProtectGroup;
+import com.microsoft.graph.models.ProtectOnlineMeetingAction;
+import com.microsoft.graph.models.ProtectSite;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 public class SecurityReportsRoot extends Entity implements Parsable {
     /**
-     * Instantiates a new SecurityReportsRoot and sets the default values.
+     * Instantiates a new securityReportsRoot and sets the default values.
      * @return a void
      */
     public SecurityReportsRoot() {
@@ -19,7 +19,7 @@ public class SecurityReportsRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecurityReportsRoot
+     * @return a securityReportsRoot
      */
     @javax.annotation.Nonnull
     public static SecurityReportsRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

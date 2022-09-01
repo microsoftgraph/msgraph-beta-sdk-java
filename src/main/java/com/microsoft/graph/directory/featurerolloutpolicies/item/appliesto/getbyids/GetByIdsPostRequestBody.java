@@ -1,4 +1,4 @@
-package microsoft.graph.directory.featurerolloutpolicies.item.appliesto.getbyids;
+package com.microsoft.graph.directory.featurerolloutpolicies.item.appliesto.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,9 @@
-package microsoft.graph.security.labels.retentionlabels.item.dispositionreviewstages;
+package com.microsoft.graph.security.labels.retentionlabels.item.dispositionreviewstages;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.DispositionReviewStage;
+import com.microsoft.graph.models.security.DispositionReviewStageCollectionResponse;
+import com.microsoft.graph.security.labels.retentionlabels.item.dispositionreviewstages.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.DispositionReviewStage;
-import microsoft.graph.models.security.DispositionReviewStageCollectionResponse;
-import microsoft.graph.security.labels.retentionlabels.item.dispositionreviewstages.count.CountRequestBuilder;
 /** Provides operations to manage the dispositionReviewStages property of the microsoft.graph.security.retentionLabel entity. */
 public class DispositionReviewStagesRequestBuilder {
     /** The Count property */

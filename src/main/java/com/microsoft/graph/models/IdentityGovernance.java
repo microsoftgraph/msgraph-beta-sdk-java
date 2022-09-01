@@ -1,5 +1,6 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.identitygovernance.LifecycleWorkflowsContainer;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -17,6 +18,8 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     private AppConsentApprovalRoute _appConsent;
     /** The entitlementManagement property */
     private EntitlementManagement _entitlementManagement;
+    /** The lifecycleWorkflows property */
+    private LifecycleWorkflowsContainer _lifecycleWorkflows;
     /** The OdataType property */
     private String _odataType;
     /** The termsOfUse property */
@@ -78,13 +81,22 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityGovernance currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("accessReviews", (n) -> { currentObject.setAccessReviews(n.getObjectValue(AccessReviewSet::createFromDiscriminatorValue)); });
             this.put("appConsent", (n) -> { currentObject.setAppConsent(n.getObjectValue(AppConsentApprovalRoute::createFromDiscriminatorValue)); });
             this.put("entitlementManagement", (n) -> { currentObject.setEntitlementManagement(n.getObjectValue(EntitlementManagement::createFromDiscriminatorValue)); });
+            this.put("lifecycleWorkflows", (n) -> { currentObject.setLifecycleWorkflows(n.getObjectValue(LifecycleWorkflowsContainer::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("termsOfUse", (n) -> { currentObject.setTermsOfUse(n.getObjectValue(TermsOfUseContainer::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the lifecycleWorkflows property value. The lifecycleWorkflows property
+     * @return a lifecycleWorkflowsContainer
+     */
+    @javax.annotation.Nullable
+    public LifecycleWorkflowsContainer getLifecycleWorkflows() {
+        return this._lifecycleWorkflows;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -112,6 +124,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("accessReviews", this.getAccessReviews());
         writer.writeObjectValue("appConsent", this.getAppConsent());
         writer.writeObjectValue("entitlementManagement", this.getEntitlementManagement());
+        writer.writeObjectValue("lifecycleWorkflows", this.getLifecycleWorkflows());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("termsOfUse", this.getTermsOfUse());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -147,6 +160,14 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     public void setEntitlementManagement(@javax.annotation.Nullable final EntitlementManagement value) {
         this._entitlementManagement = value;
+    }
+    /**
+     * Sets the lifecycleWorkflows property value. The lifecycleWorkflows property
+     * @param value Value to set for the lifecycleWorkflows property.
+     * @return a void
+     */
+    public void setLifecycleWorkflows(@javax.annotation.Nullable final LifecycleWorkflowsContainer value) {
+        this._lifecycleWorkflows = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property

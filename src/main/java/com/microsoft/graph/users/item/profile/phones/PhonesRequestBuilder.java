@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.profile.phones;
+package com.microsoft.graph.users.item.profile.phones;
 
+import com.microsoft.graph.models.ItemPhone;
+import com.microsoft.graph.models.ItemPhoneCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.profile.phones.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ItemPhone;
-import microsoft.graph.models.ItemPhoneCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.profile.phones.count.CountRequestBuilder;
 /** Provides operations to manage the phones property of the microsoft.graph.profile entity. */
 public class PhonesRequestBuilder {
     /** The Count property */

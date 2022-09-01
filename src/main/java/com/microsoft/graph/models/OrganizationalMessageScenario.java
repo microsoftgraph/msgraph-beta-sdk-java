@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
@@ -8,7 +8,9 @@ public enum OrganizationalMessageScenario implements ValuedEnum {
     /** Indicates onboarding scenario */
     Onboarding("onboarding"),
     /** Indicates lifecycle scenario */
-    Lifecycle("lifecycle");
+    Lifecycle("lifecycle"),
+    /** UnknownFutureValue, Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     OrganizationalMessageScenario(final String value) {
         this.value = value;
@@ -21,6 +23,7 @@ public enum OrganizationalMessageScenario implements ValuedEnum {
         switch(searchValue) {
             case "onboarding": return Onboarding;
             case "lifecycle": return Lifecycle;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

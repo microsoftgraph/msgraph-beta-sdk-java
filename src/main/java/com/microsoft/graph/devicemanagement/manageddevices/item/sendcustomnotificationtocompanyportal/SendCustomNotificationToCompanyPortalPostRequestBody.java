@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.manageddevices.item.sendcustomnotificationtocompanyportal;
+package com.microsoft.graph.devicemanagement.manageddevices.item.sendcustomnotificationtocompanyportal;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,15 @@
-package microsoft.graph.me.planner;
+package com.microsoft.graph.me.planner;
 
+import com.microsoft.graph.me.planner.all.AllRequestBuilder;
+import com.microsoft.graph.me.planner.all.item.PlannerDeltaItemRequestBuilder;
+import com.microsoft.graph.me.planner.favoriteplans.FavoritePlansRequestBuilder;
+import com.microsoft.graph.me.planner.plans.PlansRequestBuilder;
+import com.microsoft.graph.me.planner.recentplans.RecentPlansRequestBuilder;
+import com.microsoft.graph.me.planner.rosterplans.RosterPlansRequestBuilder;
+import com.microsoft.graph.me.planner.tasks.item.PlannerTaskItemRequestBuilder;
+import com.microsoft.graph.me.planner.tasks.TasksRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerUser;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.planner.all.AllRequestBuilder;
-import microsoft.graph.me.planner.all.item.PlannerDeltaItemRequestBuilder;
-import microsoft.graph.me.planner.favoriteplans.FavoritePlansRequestBuilder;
-import microsoft.graph.me.planner.plans.PlansRequestBuilder;
-import microsoft.graph.me.planner.recentplans.RecentPlansRequestBuilder;
-import microsoft.graph.me.planner.rosterplans.RosterPlansRequestBuilder;
-import microsoft.graph.me.planner.tasks.item.PlannerTaskItemRequestBuilder;
-import microsoft.graph.me.planner.tasks.TasksRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerUser;
 /** Provides operations to manage the planner property of the microsoft.graph.user entity. */
 public class PlannerRequestBuilder {
     /** The all property */
@@ -63,7 +63,7 @@ public class PlannerRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.me.planner.all.item collection
+     * Gets an item from the com.Microsoft.Graph.me.planner.all.item collection
      * @param id Unique identifier of the item
      * @return a PlannerDeltaItemRequestBuilder
      */
@@ -243,16 +243,16 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.planner.favoritePlans.item collection
+     * Gets an item from the com.Microsoft.Graph.me.planner.favoritePlans.item collection
      * @param id Unique identifier of the item
      * @return a PlannerPlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.planner.favoriteplans.item.PlannerPlanItemRequestBuilder favoritePlans(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.planner.favoriteplans.item.PlannerPlanItemRequestBuilder favoritePlans(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("plannerPlan%2Did", id);
-        return new microsoft.graph.me.planner.favoriteplans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.planner.favoriteplans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Selective Planner services available to the user. Read-only. Nullable.
@@ -361,43 +361,43 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.planner.plans.item collection
+     * Gets an item from the com.Microsoft.Graph.me.planner.plans.item collection
      * @param id Unique identifier of the item
      * @return a PlannerPlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.planner.plans.item.PlannerPlanItemRequestBuilder plans(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.planner.plans.item.PlannerPlanItemRequestBuilder plans(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("plannerPlan%2Did", id);
-        return new microsoft.graph.me.planner.plans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.planner.plans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.planner.recentPlans.item collection
+     * Gets an item from the com.Microsoft.Graph.me.planner.recentPlans.item collection
      * @param id Unique identifier of the item
      * @return a PlannerPlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.planner.recentplans.item.PlannerPlanItemRequestBuilder recentPlans(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.planner.recentplans.item.PlannerPlanItemRequestBuilder recentPlans(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("plannerPlan%2Did", id);
-        return new microsoft.graph.me.planner.recentplans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.planner.recentplans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.planner.rosterPlans.item collection
+     * Gets an item from the com.Microsoft.Graph.me.planner.rosterPlans.item collection
      * @param id Unique identifier of the item
      * @return a PlannerPlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.planner.rosterplans.item.PlannerPlanItemRequestBuilder rosterPlans(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.planner.rosterplans.item.PlannerPlanItemRequestBuilder rosterPlans(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("plannerPlan%2Did", id);
-        return new microsoft.graph.me.planner.rosterplans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.planner.rosterplans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.planner.tasks.item collection
+     * Gets an item from the com.Microsoft.Graph.me.planner.tasks.item collection
      * @param id Unique identifier of the item
      * @return a PlannerTaskItemRequestBuilder
      */

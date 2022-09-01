@@ -1,5 +1,9 @@
-package microsoft.graph.compliance.ediscovery.cases.item.operations;
+package com.microsoft.graph.compliance.ediscovery.cases.item.operations;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.operations.count.CountRequestBuilder;
+import com.microsoft.graph.models.ediscovery.CaseOperation;
+import com.microsoft.graph.models.ediscovery.CaseOperationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.operations.count.CountRequestBuilder;
-import microsoft.graph.models.ediscovery.CaseOperation;
-import microsoft.graph.models.ediscovery.CaseOperationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the operations property of the microsoft.graph.ediscovery.case entity. */
 public class OperationsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,12 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.WindowsKioskActiveDirectoryGroup;
+import com.microsoft.graph.models.WindowsKioskAutologon;
+import com.microsoft.graph.models.WindowsKioskAzureADGroup;
+import com.microsoft.graph.models.WindowsKioskAzureADUser;
+import com.microsoft.graph.models.WindowsKioskLocalGroup;
+import com.microsoft.graph.models.WindowsKioskLocalUser;
+import com.microsoft.graph.models.WindowsKioskVisitor;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

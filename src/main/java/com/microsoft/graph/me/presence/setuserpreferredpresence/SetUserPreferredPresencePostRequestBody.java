@@ -1,4 +1,4 @@
-package microsoft.graph.me.presence.setuserpreferredpresence;
+package com.microsoft.graph.me.presence.setuserpreferredpresence;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

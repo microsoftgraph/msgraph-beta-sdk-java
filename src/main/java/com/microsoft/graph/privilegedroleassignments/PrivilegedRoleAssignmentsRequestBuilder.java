@@ -1,5 +1,10 @@
-package microsoft.graph.privilegedroleassignments;
+package com.microsoft.graph.privilegedroleassignments;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedRoleAssignment;
+import com.microsoft.graph.models.PrivilegedRoleAssignmentCollectionResponse;
+import com.microsoft.graph.privilegedroleassignments.count.CountRequestBuilder;
+import com.microsoft.graph.privilegedroleassignments.my.MyRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedRoleAssignment;
-import microsoft.graph.models.PrivilegedRoleAssignmentCollectionResponse;
-import microsoft.graph.privilegedroleassignments.count.CountRequestBuilder;
-import microsoft.graph.privilegedroleassignments.my.MyRequestBuilder;
 /** Provides operations to manage the collection of privilegedRoleAssignment entities. */
 public class PrivilegedRoleAssignmentsRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.organization.item.activateservice;
+package com.microsoft.graph.organization.item.activateservice;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,13 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.security.Alert;
+import com.microsoft.graph.models.security.CasesRoot;
+import com.microsoft.graph.models.security.Incident;
+import com.microsoft.graph.models.security.InformationProtection;
+import com.microsoft.graph.models.security.LabelsRoot;
+import com.microsoft.graph.models.security.ThreatSubmissionRoot;
+import com.microsoft.graph.models.security.TriggersRoot;
+import com.microsoft.graph.models.security.TriggerTypesRoot;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,14 +15,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.security.Alert;
-import microsoft.graph.models.security.CasesRoot;
-import microsoft.graph.models.security.Incident;
-import microsoft.graph.models.security.InformationProtection;
-import microsoft.graph.models.security.LabelsRoot;
-import microsoft.graph.models.security.ThreatSubmissionRoot;
-import microsoft.graph.models.security.TriggersRoot;
-import microsoft.graph.models.security.TriggerTypesRoot;
 public class Security extends Entity implements Parsable {
     /** Notifications for suspicious or potential security issues in a customer’s tenant. */
     private java.util.List<Alert> _alerts;

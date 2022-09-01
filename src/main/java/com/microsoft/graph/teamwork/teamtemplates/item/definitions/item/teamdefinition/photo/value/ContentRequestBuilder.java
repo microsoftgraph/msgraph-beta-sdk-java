@@ -1,5 +1,6 @@
-package microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.photo.value;
+package com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.photo.value;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -14,7 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the media for the teamwork entity. */
 public class ContentRequestBuilder {
     /** Path parameters for the request */

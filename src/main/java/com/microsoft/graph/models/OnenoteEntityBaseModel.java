@@ -1,5 +1,12 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.Notebook;
+import com.microsoft.graph.models.OnenoteEntityHierarchyModel;
+import com.microsoft.graph.models.OnenoteEntitySchemaObjectModel;
+import com.microsoft.graph.models.OnenotePage;
+import com.microsoft.graph.models.OnenoteResource;
+import com.microsoft.graph.models.OnenoteSection;
+import com.microsoft.graph.models.SectionGroup;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +14,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class OnenoteEntityBaseModel extends Entity implements Parsable {
     /** The self property */
     private String _self;

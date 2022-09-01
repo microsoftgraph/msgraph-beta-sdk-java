@@ -1,5 +1,15 @@
-package microsoft.graph.me.tasks.alltasks.item;
+package com.microsoft.graph.me.tasks.alltasks.item;
 
+import com.microsoft.graph.me.tasks.alltasks.item.checklistitems.ChecklistItemsRequestBuilder;
+import com.microsoft.graph.me.tasks.alltasks.item.checklistitems.item.ChecklistItemItemRequestBuilder;
+import com.microsoft.graph.me.tasks.alltasks.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.me.tasks.alltasks.item.extensions.item.ExtensionItemRequestBuilder;
+import com.microsoft.graph.me.tasks.alltasks.item.linkedresources.item.LinkedResource_v2ItemRequestBuilder;
+import com.microsoft.graph.me.tasks.alltasks.item.linkedresources.LinkedResourcesRequestBuilder;
+import com.microsoft.graph.me.tasks.alltasks.item.move.MoveRequestBuilder;
+import com.microsoft.graph.me.tasks.alltasks.item.parentlist.ParentListRequestBuilder;
+import com.microsoft.graph.models.BaseTask;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.tasks.alltasks.item.checklistitems.ChecklistItemsRequestBuilder;
-import microsoft.graph.me.tasks.alltasks.item.checklistitems.item.ChecklistItemItemRequestBuilder;
-import microsoft.graph.me.tasks.alltasks.item.extensions.ExtensionsRequestBuilder;
-import microsoft.graph.me.tasks.alltasks.item.extensions.item.ExtensionItemRequestBuilder;
-import microsoft.graph.me.tasks.alltasks.item.linkedresources.item.LinkedResource_v2ItemRequestBuilder;
-import microsoft.graph.me.tasks.alltasks.item.linkedresources.LinkedResourcesRequestBuilder;
-import microsoft.graph.me.tasks.alltasks.item.move.MoveRequestBuilder;
-import microsoft.graph.me.tasks.alltasks.item.parentlist.ParentListRequestBuilder;
-import microsoft.graph.models.BaseTask;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the alltasks property of the microsoft.graph.tasks entity. */
 public class BaseTaskItemRequestBuilder {
     /** The checklistItems property */
@@ -58,7 +58,7 @@ public class BaseTaskItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.me.tasks.alltasks.item.checklistItems.item collection
+     * Gets an item from the com.Microsoft.Graph.me.tasks.alltasks.item.checklistItems.item collection
      * @param id Unique identifier of the item
      * @return a ChecklistItemItemRequestBuilder
      */
@@ -238,7 +238,7 @@ public class BaseTaskItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.tasks.alltasks.item.extensions.item collection
+     * Gets an item from the com.Microsoft.Graph.me.tasks.alltasks.item.extensions.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -301,7 +301,7 @@ public class BaseTaskItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.tasks.alltasks.item.linkedResources.item collection
+     * Gets an item from the com.Microsoft.Graph.me.tasks.alltasks.item.linkedResources.item collection
      * @param id Unique identifier of the item
      * @return a LinkedResource_v2ItemRequestBuilder
      */

@@ -1,5 +1,7 @@
-package microsoft.graph.policies.serviceprincipalcreationpolicies.item.includes.item;
+package com.microsoft.graph.policies.serviceprincipalcreationpolicies.item.includes.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServicePrincipalCreationConditionSet;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServicePrincipalCreationConditionSet;
 /** Provides operations to manage the includes property of the microsoft.graph.servicePrincipalCreationPolicy entity. */
 public class ServicePrincipalCreationConditionSetItemRequestBuilder {
     /** Path parameters for the request */

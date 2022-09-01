@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.salesquotes;
+package com.microsoft.graph.financials.companies.item.salesquotes;
 
+import com.microsoft.graph.financials.companies.item.salesquotes.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SalesQuote;
+import com.microsoft.graph.models.SalesQuoteCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salesquotes.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SalesQuote;
-import microsoft.graph.models.SalesQuoteCollectionResponse;
 /** Provides operations to manage the salesQuotes property of the microsoft.graph.company entity. */
 public class SalesQuotesRequestBuilder {
     /** The Count property */

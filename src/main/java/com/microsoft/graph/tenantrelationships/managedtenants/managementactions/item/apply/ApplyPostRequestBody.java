@@ -1,4 +1,4 @@
-package microsoft.graph.tenantrelationships.managedtenants.managementactions.item.apply;
+package com.microsoft.graph.tenantrelationships.managedtenants.managementactions.item.apply;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

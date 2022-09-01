@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.managedtenants.windowsprotectionstates;
+package com.microsoft.graph.tenantrelationships.managedtenants.windowsprotectionstates;
 
+import com.microsoft.graph.models.managedtenants.WindowsProtectionState;
+import com.microsoft.graph.models.managedtenants.WindowsProtectionStateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.windowsprotectionstates.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.WindowsProtectionState;
-import microsoft.graph.models.managedtenants.WindowsProtectionStateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.windowsprotectionstates.count.CountRequestBuilder;
 /** Provides operations to manage the windowsProtectionStates property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class WindowsProtectionStatesRequestBuilder {
     /** The Count property */

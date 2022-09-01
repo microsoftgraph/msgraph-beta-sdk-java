@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.delegatedadmincustomers;
+package com.microsoft.graph.tenantrelationships.delegatedadmincustomers;
 
+import com.microsoft.graph.models.DelegatedAdminCustomer;
+import com.microsoft.graph.models.DelegatedAdminCustomerCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DelegatedAdminCustomer;
-import microsoft.graph.models.DelegatedAdminCustomerCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.delegatedadmincustomers.count.CountRequestBuilder;
 /** Provides operations to manage the delegatedAdminCustomers property of the microsoft.graph.tenantRelationship entity. */
 public class DelegatedAdminCustomersRequestBuilder {
     /** The Count property */

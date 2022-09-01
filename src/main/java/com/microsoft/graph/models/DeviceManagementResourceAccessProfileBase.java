@@ -1,5 +1,10 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.Windows10XCertificateProfile;
+import com.microsoft.graph.models.Windows10XSCEPCertificateProfile;
+import com.microsoft.graph.models.Windows10XTrustedRootCertificate;
+import com.microsoft.graph.models.Windows10XVpnConfiguration;
+import com.microsoft.graph.models.Windows10XWifiConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

@@ -1,5 +1,6 @@
-package microsoft.graph.applications.item.synchronization.jobs.item.provisionondemand;
+package com.microsoft.graph.applications.item.synchronization.jobs.item.provisionondemand;
 
+import com.microsoft.graph.models.SynchronizationJobApplicationParameters;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.SynchronizationJobApplicationParameters;
 /** Provides operations to call the provisionOnDemand method. */
 public class StringKeyStringValuePairPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

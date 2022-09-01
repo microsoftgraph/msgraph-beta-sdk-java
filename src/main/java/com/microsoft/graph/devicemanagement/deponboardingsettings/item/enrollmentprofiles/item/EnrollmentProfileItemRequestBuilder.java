@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item;
+package com.microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item;
 
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item.exportmobileconfig.ExportMobileConfigRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item.setdefaultprofile.SetDefaultProfileRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item.updatedeviceprofileassignment.UpdateDeviceProfileAssignmentRequestBuilder;
+import com.microsoft.graph.models.EnrollmentProfile;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item.exportmobileconfig.ExportMobileConfigRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item.setdefaultprofile.SetDefaultProfileRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item.updatedeviceprofileassignment.UpdateDeviceProfileAssignmentRequestBuilder;
-import microsoft.graph.models.EnrollmentProfile;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the enrollmentProfiles property of the microsoft.graph.depOnboardingSetting entity. */
 public class EnrollmentProfileItemRequestBuilder {
     /** Path parameters for the request */

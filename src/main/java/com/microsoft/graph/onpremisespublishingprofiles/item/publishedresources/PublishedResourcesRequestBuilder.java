@@ -1,5 +1,9 @@
-package microsoft.graph.onpremisespublishingprofiles.item.publishedresources;
+package com.microsoft.graph.onpremisespublishingprofiles.item.publishedresources;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PublishedResource;
+import com.microsoft.graph.models.PublishedResourceCollectionResponse;
+import com.microsoft.graph.onpremisespublishingprofiles.item.publishedresources.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PublishedResource;
-import microsoft.graph.models.PublishedResourceCollectionResponse;
-import microsoft.graph.onpremisespublishingprofiles.item.publishedresources.count.CountRequestBuilder;
 /** Provides operations to manage the publishedResources property of the microsoft.graph.onPremisesPublishingProfile entity. */
 public class PublishedResourcesRequestBuilder {
     /** The Count property */

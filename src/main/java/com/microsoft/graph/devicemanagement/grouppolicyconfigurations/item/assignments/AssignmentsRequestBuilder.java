@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.grouppolicyconfigurations.item.assignments;
+package com.microsoft.graph.devicemanagement.grouppolicyconfigurations.item.assignments;
 
+import com.microsoft.graph.devicemanagement.grouppolicyconfigurations.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.GroupPolicyConfigurationAssignment;
+import com.microsoft.graph.models.GroupPolicyConfigurationAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.grouppolicyconfigurations.item.assignments.count.CountRequestBuilder;
-import microsoft.graph.models.GroupPolicyConfigurationAssignment;
-import microsoft.graph.models.GroupPolicyConfigurationAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignments property of the microsoft.graph.groupPolicyConfiguration entity. */
 public class AssignmentsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.mobileapptroubleshootingevents.item.applogcollectionrequests;
+package com.microsoft.graph.users.item.mobileapptroubleshootingevents.item.applogcollectionrequests;
 
+import com.microsoft.graph.models.AppLogCollectionRequest;
+import com.microsoft.graph.models.AppLogCollectionRequestCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.mobileapptroubleshootingevents.item.applogcollectionrequests.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AppLogCollectionRequest;
-import microsoft.graph.models.AppLogCollectionRequestCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.mobileapptroubleshootingevents.item.applogcollectionrequests.count.CountRequestBuilder;
 /** Provides operations to manage the appLogCollectionRequests property of the microsoft.graph.mobileAppTroubleshootingEvent entity. */
 public class AppLogCollectionRequestsRequestBuilder {
     /** The Count property */

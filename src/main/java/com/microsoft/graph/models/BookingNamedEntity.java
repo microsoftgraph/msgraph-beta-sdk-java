@@ -1,5 +1,10 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.BookingBusiness;
+import com.microsoft.graph.models.BookingCustomer;
+import com.microsoft.graph.models.BookingPerson;
+import com.microsoft.graph.models.BookingService;
+import com.microsoft.graph.models.BookingStaffMember;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

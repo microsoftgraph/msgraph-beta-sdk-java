@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.managedtenants.managementintents;
+package com.microsoft.graph.tenantrelationships.managedtenants.managementintents;
 
+import com.microsoft.graph.models.managedtenants.ManagementIntent;
+import com.microsoft.graph.models.managedtenants.ManagementIntentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementintents.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ManagementIntent;
-import microsoft.graph.models.managedtenants.ManagementIntentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.managementintents.count.CountRequestBuilder;
 /** Provides operations to manage the managementIntents property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class ManagementIntentsRequestBuilder {
     /** The Count property */

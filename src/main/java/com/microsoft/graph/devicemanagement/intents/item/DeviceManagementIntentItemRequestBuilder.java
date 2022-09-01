@@ -1,5 +1,26 @@
-package microsoft.graph.devicemanagement.intents.item;
+package com.microsoft.graph.devicemanagement.intents.item;
 
+import com.microsoft.graph.devicemanagement.intents.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.assignments.item.DeviceManagementIntentAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.categories.item.DeviceManagementIntentSettingCategoryItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.comparewithtemplateid.CompareWithTemplateIdRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.createcopy.CreateCopyRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.devicesettingstatesummaries.DeviceSettingStateSummariesRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.devicesettingstatesummaries.item.DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.devicestates.DeviceStatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.devicestates.item.DeviceManagementIntentDeviceStateItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.devicestatesummary.DeviceStateSummaryRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.migratetotemplate.MigrateToTemplateRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.settings.item.DeviceManagementSettingInstanceItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.settings.SettingsRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.updatesettings.UpdateSettingsRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.userstates.item.DeviceManagementIntentUserStateItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.userstates.UserStatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.userstatesummary.UserStateSummaryRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementIntent;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,27 +35,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.intents.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.assignments.item.DeviceManagementIntentAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.categories.CategoriesRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.categories.item.DeviceManagementIntentSettingCategoryItemRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.comparewithtemplateid.CompareWithTemplateIdRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.createcopy.CreateCopyRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.devicesettingstatesummaries.DeviceSettingStateSummariesRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.devicesettingstatesummaries.item.DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.devicestates.DeviceStatesRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.devicestates.item.DeviceManagementIntentDeviceStateItemRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.devicestatesummary.DeviceStateSummaryRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.migratetotemplate.MigrateToTemplateRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.settings.item.DeviceManagementSettingInstanceItemRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.settings.SettingsRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.updatesettings.UpdateSettingsRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.userstates.item.DeviceManagementIntentUserStateItemRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.userstates.UserStatesRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.userstatesummary.UserStateSummaryRequestBuilder;
-import microsoft.graph.models.DeviceManagementIntent;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the intents property of the microsoft.graph.deviceManagement entity. */
 public class DeviceManagementIntentItemRequestBuilder {
     /** The assign property */
@@ -104,7 +104,7 @@ public class DeviceManagementIntentItemRequestBuilder {
         return new UserStateSummaryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.intents.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementIntentAssignmentItemRequestBuilder
      */
@@ -116,7 +116,7 @@ public class DeviceManagementIntentItemRequestBuilder {
         return new DeviceManagementIntentAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.categories.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.intents.item.categories.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementIntentSettingCategoryItemRequestBuilder
      */
@@ -306,7 +306,7 @@ public class DeviceManagementIntentItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.deviceSettingStateSummaries.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.intents.item.deviceSettingStateSummaries.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder
      */
@@ -318,7 +318,7 @@ public class DeviceManagementIntentItemRequestBuilder {
         return new DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.deviceStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.intents.item.deviceStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementIntentDeviceStateItemRequestBuilder
      */
@@ -436,7 +436,7 @@ public class DeviceManagementIntentItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.settings.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.intents.item.settings.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementSettingInstanceItemRequestBuilder
      */
@@ -448,7 +448,7 @@ public class DeviceManagementIntentItemRequestBuilder {
         return new DeviceManagementSettingInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.userStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.intents.item.userStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementIntentUserStateItemRequestBuilder
      */

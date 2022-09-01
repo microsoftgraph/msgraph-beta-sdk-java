@@ -1,4 +1,4 @@
-package microsoft.graph.dataclassification.exactmatchdatastores.item.lookup;
+package com.microsoft.graph.dataclassification.exactmatchdatastores.item.lookup;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,4 +1,4 @@
-package microsoft.graph.directory.impactedresources.item.postpone;
+package com.microsoft.graph.directory.impactedresources.item.postpone;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

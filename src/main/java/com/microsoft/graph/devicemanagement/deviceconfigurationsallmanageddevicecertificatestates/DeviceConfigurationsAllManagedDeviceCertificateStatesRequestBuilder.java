@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.deviceconfigurationsallmanageddevicecertificatestates;
+package com.microsoft.graph.devicemanagement.deviceconfigurationsallmanageddevicecertificatestates;
 
+import com.microsoft.graph.devicemanagement.deviceconfigurationsallmanageddevicecertificatestates.count.CountRequestBuilder;
+import com.microsoft.graph.models.ManagedAllDeviceCertificateState;
+import com.microsoft.graph.models.ManagedAllDeviceCertificateStateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.deviceconfigurationsallmanageddevicecertificatestates.count.CountRequestBuilder;
-import microsoft.graph.models.ManagedAllDeviceCertificateState;
-import microsoft.graph.models.ManagedAllDeviceCertificateStateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceConfigurationsAllManagedDeviceCertificateStates property of the microsoft.graph.deviceManagement entity. */
 public class DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder {
     /** The Count property */

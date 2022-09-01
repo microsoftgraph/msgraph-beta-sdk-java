@@ -1,5 +1,8 @@
-package microsoft.graph.me.security;
+package com.microsoft.graph.me.security;
 
+import com.microsoft.graph.me.security.informationprotection.InformationProtectionRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.Security;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.security.informationprotection.InformationProtectionRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.Security;
 /** Provides operations to manage the security property of the microsoft.graph.user entity. */
 public class SecurityRequestBuilder {
     /** The informationProtection property */

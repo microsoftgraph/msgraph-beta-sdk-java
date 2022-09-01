@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.compliancepolicies.item.scheduledactionsforrule;
+package com.microsoft.graph.devicemanagement.compliancepolicies.item.scheduledactionsforrule;
 
+import com.microsoft.graph.devicemanagement.compliancepolicies.item.scheduledactionsforrule.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementComplianceScheduledActionForRule;
+import com.microsoft.graph.models.DeviceManagementComplianceScheduledActionForRuleCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.compliancepolicies.item.scheduledactionsforrule.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementComplianceScheduledActionForRule;
-import microsoft.graph.models.DeviceManagementComplianceScheduledActionForRuleCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceManagementCompliancePolicy entity. */
 public class ScheduledActionsForRuleRequestBuilder {
     /** The Count property */

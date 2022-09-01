@@ -1,5 +1,13 @@
-package microsoft.graph.users.item.informationprotection.policy.labels;
+package com.microsoft.graph.users.item.informationprotection.policy.labels;
 
+import com.microsoft.graph.models.InformationProtectionLabel;
+import com.microsoft.graph.models.InformationProtectionLabelCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.informationprotection.policy.labels.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.informationprotection.policy.labels.evaluateapplication.EvaluateApplicationRequestBuilder;
+import com.microsoft.graph.users.item.informationprotection.policy.labels.evaluateclassificationresults.EvaluateClassificationResultsRequestBuilder;
+import com.microsoft.graph.users.item.informationprotection.policy.labels.evaluateremoval.EvaluateRemovalRequestBuilder;
+import com.microsoft.graph.users.item.informationprotection.policy.labels.extractlabel.ExtractLabelRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.InformationProtectionLabel;
-import microsoft.graph.models.InformationProtectionLabelCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.informationprotection.policy.labels.count.CountRequestBuilder;
-import microsoft.graph.users.item.informationprotection.policy.labels.evaluateapplication.EvaluateApplicationRequestBuilder;
-import microsoft.graph.users.item.informationprotection.policy.labels.evaluateclassificationresults.EvaluateClassificationResultsRequestBuilder;
-import microsoft.graph.users.item.informationprotection.policy.labels.evaluateremoval.EvaluateRemovalRequestBuilder;
-import microsoft.graph.users.item.informationprotection.policy.labels.extractlabel.ExtractLabelRequestBuilder;
 /** Provides operations to manage the labels property of the microsoft.graph.informationProtectionPolicy entity. */
 public class LabelsRequestBuilder {
     /** The Count property */

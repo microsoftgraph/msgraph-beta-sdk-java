@@ -1,5 +1,12 @@
-package microsoft.graph.users.item.devices.item.registeredowners;
+package com.microsoft.graph.users.item.devices.item.registeredowners;
 
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.devices.item.registeredowners.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.registeredowners.endpoint.EndpointRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.registeredowners.ref.RefRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.registeredowners.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.registeredowners.user.UserRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.devices.item.registeredowners.count.CountRequestBuilder;
-import microsoft.graph.users.item.devices.item.registeredowners.endpoint.EndpointRequestBuilder;
-import microsoft.graph.users.item.devices.item.registeredowners.ref.RefRequestBuilder;
-import microsoft.graph.users.item.devices.item.registeredowners.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.users.item.devices.item.registeredowners.user.UserRequestBuilder;
 /** Provides operations to manage the registeredOwners property of the microsoft.graph.device entity. */
 public class RegisteredOwnersRequestBuilder {
     /** The Count property */

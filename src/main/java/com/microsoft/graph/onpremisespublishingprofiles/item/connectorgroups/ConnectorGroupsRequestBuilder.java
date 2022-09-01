@@ -1,5 +1,9 @@
-package microsoft.graph.onpremisespublishingprofiles.item.connectorgroups;
+package com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups;
 
+import com.microsoft.graph.models.ConnectorGroup;
+import com.microsoft.graph.models.ConnectorGroupCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ConnectorGroup;
-import microsoft.graph.models.ConnectorGroupCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.count.CountRequestBuilder;
 /** Provides operations to manage the connectorGroups property of the microsoft.graph.onPremisesPublishingProfile entity. */
 public class ConnectorGroupsRequestBuilder {
     /** The Count property */

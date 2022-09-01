@@ -1,4 +1,4 @@
-package microsoft.graph.directorysettingtemplates.validateproperties;
+package com.microsoft.graph.directorysettingtemplates.validateproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

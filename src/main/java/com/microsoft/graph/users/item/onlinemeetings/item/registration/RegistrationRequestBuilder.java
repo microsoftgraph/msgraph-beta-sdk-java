@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.onlinemeetings.item.registration;
+package com.microsoft.graph.users.item.onlinemeetings.item.registration;
 
+import com.microsoft.graph.models.MeetingRegistration;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.onlinemeetings.item.registration.customquestions.CustomQuestionsRequestBuilder;
+import com.microsoft.graph.users.item.onlinemeetings.item.registration.customquestions.item.MeetingRegistrationQuestionItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MeetingRegistration;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.onlinemeetings.item.registration.customquestions.CustomQuestionsRequestBuilder;
-import microsoft.graph.users.item.onlinemeetings.item.registration.customquestions.item.MeetingRegistrationQuestionItemRequestBuilder;
 /** Provides operations to manage the registration property of the microsoft.graph.onlineMeeting entity. */
 public class RegistrationRequestBuilder {
     /** The customQuestions property */
@@ -149,7 +149,7 @@ public class RegistrationRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.onlineMeetings.item.registration.customQuestions.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.onlineMeetings.item.registration.customQuestions.item collection
      * @param id Unique identifier of the item
      * @return a MeetingRegistrationQuestionItemRequestBuilder
      */

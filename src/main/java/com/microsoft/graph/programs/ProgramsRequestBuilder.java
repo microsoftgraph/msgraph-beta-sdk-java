@@ -1,5 +1,9 @@
-package microsoft.graph.programs;
+package com.microsoft.graph.programs;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Program;
+import com.microsoft.graph.models.ProgramCollectionResponse;
+import com.microsoft.graph.programs.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Program;
-import microsoft.graph.models.ProgramCollectionResponse;
-import microsoft.graph.programs.count.CountRequestBuilder;
 /** Provides operations to manage the collection of program entities. */
 public class ProgramsRequestBuilder {
     /** The Count property */

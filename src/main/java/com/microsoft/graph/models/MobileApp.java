@@ -1,5 +1,42 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AndroidForWorkApp;
+import com.microsoft.graph.models.AndroidLobApp;
+import com.microsoft.graph.models.AndroidManagedStoreApp;
+import com.microsoft.graph.models.AndroidManagedStoreWebApp;
+import com.microsoft.graph.models.AndroidStoreApp;
+import com.microsoft.graph.models.IosiPadOSWebClip;
+import com.microsoft.graph.models.IosLobApp;
+import com.microsoft.graph.models.IosStoreApp;
+import com.microsoft.graph.models.IosVppApp;
+import com.microsoft.graph.models.MacOSDmgApp;
+import com.microsoft.graph.models.MacOSLobApp;
+import com.microsoft.graph.models.MacOSMdatpApp;
+import com.microsoft.graph.models.MacOSMicrosoftEdgeApp;
+import com.microsoft.graph.models.MacOSOfficeSuiteApp;
+import com.microsoft.graph.models.MacOsVppApp;
+import com.microsoft.graph.models.ManagedAndroidLobApp;
+import com.microsoft.graph.models.ManagedAndroidStoreApp;
+import com.microsoft.graph.models.ManagedApp;
+import com.microsoft.graph.models.ManagedIOSLobApp;
+import com.microsoft.graph.models.ManagedIOSStoreApp;
+import com.microsoft.graph.models.ManagedMobileLobApp;
+import com.microsoft.graph.models.MicrosoftStoreForBusinessApp;
+import com.microsoft.graph.models.MobileLobApp;
+import com.microsoft.graph.models.OfficeSuiteApp;
+import com.microsoft.graph.models.WebApp;
+import com.microsoft.graph.models.Win32LobApp;
+import com.microsoft.graph.models.WindowsAppX;
+import com.microsoft.graph.models.WindowsMicrosoftEdgeApp;
+import com.microsoft.graph.models.WindowsMobileMSI;
+import com.microsoft.graph.models.WindowsPhone81AppX;
+import com.microsoft.graph.models.WindowsPhone81AppXBundle;
+import com.microsoft.graph.models.WindowsPhone81StoreApp;
+import com.microsoft.graph.models.WindowsPhoneXAP;
+import com.microsoft.graph.models.WindowsStoreApp;
+import com.microsoft.graph.models.WindowsUniversalAppX;
+import com.microsoft.graph.models.WindowsWebApp;
+import com.microsoft.graph.models.WinGetApp;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -115,6 +152,7 @@ public class MobileApp extends Entity implements Parsable {
                 case "#microsoft.graph.windowsStoreApp": return new WindowsStoreApp();
                 case "#microsoft.graph.windowsUniversalAppX": return new WindowsUniversalAppX();
                 case "#microsoft.graph.windowsWebApp": return new WindowsWebApp();
+                case "#microsoft.graph.winGetApp": return new WinGetApp();
             }
         }
         return new MobileApp();

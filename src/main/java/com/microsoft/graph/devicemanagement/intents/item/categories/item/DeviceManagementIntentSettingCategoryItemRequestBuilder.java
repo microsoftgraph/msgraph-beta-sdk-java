@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.intents.item.categories.item;
+package com.microsoft.graph.devicemanagement.intents.item.categories.item;
 
+import com.microsoft.graph.devicemanagement.intents.item.categories.item.settings.item.DeviceManagementSettingInstanceItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.intents.item.categories.item.settings.SettingsRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementIntentSettingCategory;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.intents.item.categories.item.settings.item.DeviceManagementSettingInstanceItemRequestBuilder;
-import microsoft.graph.devicemanagement.intents.item.categories.item.settings.SettingsRequestBuilder;
-import microsoft.graph.models.DeviceManagementIntentSettingCategory;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the categories property of the microsoft.graph.deviceManagementIntent entity. */
 public class DeviceManagementIntentSettingCategoryItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class DeviceManagementIntentSettingCategoryItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.intents.item.categories.item.settings.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.intents.item.categories.item.settings.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementSettingInstanceItemRequestBuilder
      */

@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.deviceconfigurationuserstatesummaries;
+package com.microsoft.graph.devicemanagement.deviceconfigurationuserstatesummaries;
 
+import com.microsoft.graph.models.DeviceConfigurationUserStateSummary;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceConfigurationUserStateSummary;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceConfigurationUserStateSummaries property of the microsoft.graph.deviceManagement entity. */
 public class DeviceConfigurationUserStateSummariesRequestBuilder {
     /** Path parameters for the request */

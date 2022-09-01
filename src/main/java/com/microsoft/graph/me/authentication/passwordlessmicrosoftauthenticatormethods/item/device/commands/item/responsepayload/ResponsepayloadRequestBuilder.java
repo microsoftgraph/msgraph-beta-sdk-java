@@ -1,5 +1,7 @@
-package microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.commands.item.responsepayload;
+package com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.commands.item.responsepayload;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PayloadResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PayloadResponse;
 /** Provides operations to manage the responsepayload property of the microsoft.graph.command entity. */
 public class ResponsepayloadRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,6 @@
-package microsoft.graph.connections.item.items.item.addactivities;
+package com.microsoft.graph.connections.item.items.item.addactivities;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,7 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the addActivities method. */
 public class AddActivitiesRequestBuilder {
     /** Path parameters for the request */

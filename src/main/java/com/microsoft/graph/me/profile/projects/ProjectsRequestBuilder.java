@@ -1,5 +1,9 @@
-package microsoft.graph.me.profile.projects;
+package com.microsoft.graph.me.profile.projects;
 
+import com.microsoft.graph.me.profile.projects.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ProjectParticipation;
+import com.microsoft.graph.models.ProjectParticipationCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.profile.projects.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ProjectParticipation;
-import microsoft.graph.models.ProjectParticipationCollectionResponse;
 /** Provides operations to manage the projects property of the microsoft.graph.profile entity. */
 public class ProjectsRequestBuilder {
     /** The Count property */

@@ -1,9 +1,9 @@
-package microsoft.graph.models.managedtenants;
+package com.microsoft.graph.models.managedtenants;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum TenantOnboardingEligibilityReason implements ValuedEnum {
     None("none"),
     ContractType("contractType"),

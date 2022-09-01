@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.autopilotevents.item.policystatusdetails;
+package com.microsoft.graph.devicemanagement.autopilotevents.item.policystatusdetails;
 
+import com.microsoft.graph.devicemanagement.autopilotevents.item.policystatusdetails.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementAutopilotPolicyStatusDetail;
+import com.microsoft.graph.models.DeviceManagementAutopilotPolicyStatusDetailCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.autopilotevents.item.policystatusdetails.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementAutopilotPolicyStatusDetail;
-import microsoft.graph.models.DeviceManagementAutopilotPolicyStatusDetailCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the policyStatusDetails property of the microsoft.graph.deviceManagementAutopilotEvent entity. */
 public class PolicyStatusDetailsRequestBuilder {
     /** The Count property */

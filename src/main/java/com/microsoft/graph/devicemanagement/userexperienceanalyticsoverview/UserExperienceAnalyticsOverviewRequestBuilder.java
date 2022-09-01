@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsoverview;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsoverview;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsOverview;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsOverview;
 /** Provides operations to manage the userExperienceAnalyticsOverview property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsOverviewRequestBuilder {
     /** Path parameters for the request */

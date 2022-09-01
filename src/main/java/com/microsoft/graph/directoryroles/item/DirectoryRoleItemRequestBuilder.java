@@ -1,5 +1,16 @@
-package microsoft.graph.directoryroles.item;
+package com.microsoft.graph.directoryroles.item;
 
+import com.microsoft.graph.directoryroles.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.directoryroles.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.directoryroles.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.directoryroles.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.directoryroles.item.members.item.DirectoryObjectItemRequestBuilder;
+import com.microsoft.graph.directoryroles.item.members.MembersRequestBuilder;
+import com.microsoft.graph.directoryroles.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.directoryroles.item.scopedmembers.item.ScopedRoleMembershipItemRequestBuilder;
+import com.microsoft.graph.directoryroles.item.scopedmembers.ScopedMembersRequestBuilder;
+import com.microsoft.graph.models.DirectoryRole;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directoryroles.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.directoryroles.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.directoryroles.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.directoryroles.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.directoryroles.item.members.item.DirectoryObjectItemRequestBuilder;
-import microsoft.graph.directoryroles.item.members.MembersRequestBuilder;
-import microsoft.graph.directoryroles.item.restore.RestoreRequestBuilder;
-import microsoft.graph.directoryroles.item.scopedmembers.item.ScopedRoleMembershipItemRequestBuilder;
-import microsoft.graph.directoryroles.item.scopedmembers.ScopedMembersRequestBuilder;
-import microsoft.graph.models.DirectoryRole;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of directoryRole entities. */
 public class DirectoryRoleItemRequestBuilder {
     /** The checkMemberGroups property */
@@ -77,7 +77,7 @@ public class DirectoryRoleItemRequestBuilder {
     public DirectoryRoleItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/directoryRoles/{directoryRole%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directoryRoles/{directoryRole%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -89,7 +89,7 @@ public class DirectoryRoleItemRequestBuilder {
      * @return a void
      */
     public DirectoryRoleItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/directoryRoles/{directoryRole%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directoryRoles/{directoryRole%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -288,7 +288,7 @@ public class DirectoryRoleItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.directoryRoles.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.directoryRoles.item.members.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -355,7 +355,7 @@ public class DirectoryRoleItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.directoryRoles.item.scopedMembers.item collection
+     * Gets an item from the com.Microsoft.Graph.directoryRoles.item.scopedMembers.item collection
      * @param id Unique identifier of the item
      * @return a ScopedRoleMembershipItemRequestBuilder
      */
@@ -383,10 +383,6 @@ public class DirectoryRoleItemRequestBuilder {
     }
     /** Retrieve the properties of a directoryRole object. You can use both the object ID and template ID of the **directoryRole** with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Azure portal. For details, see Role template IDs. */
     public class DirectoryRoleItemRequestBuilderGetQueryParameters {
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable

@@ -1,5 +1,9 @@
-package microsoft.graph.compliance.ediscovery.cases.item.custodians.item.usersources;
+package com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.usersources;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.usersources.count.CountRequestBuilder;
+import com.microsoft.graph.models.ediscovery.UserSource;
+import com.microsoft.graph.models.ediscovery.UserSourceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.usersources.count.CountRequestBuilder;
-import microsoft.graph.models.ediscovery.UserSource;
-import microsoft.graph.models.ediscovery.UserSourceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userSources property of the microsoft.graph.ediscovery.custodian entity. */
 public class UserSourcesRequestBuilder {
     /** The Count property */

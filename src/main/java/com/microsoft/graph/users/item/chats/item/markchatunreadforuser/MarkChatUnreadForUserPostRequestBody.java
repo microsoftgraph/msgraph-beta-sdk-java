@@ -1,5 +1,6 @@
-package microsoft.graph.users.item.chats.item.markchatunreadforuser;
+package com.microsoft.graph.users.item.chats.item.markchatunreadforuser;
 
+import com.microsoft.graph.models.TeamworkUserIdentity;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -9,7 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.TeamworkUserIdentity;
 /** Provides operations to call the markChatUnreadForUser method. */
 public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

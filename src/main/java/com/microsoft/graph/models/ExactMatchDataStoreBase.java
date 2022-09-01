@@ -1,5 +1,6 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.ExactMatchDataStore;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ExactMatchDataStoreBase extends Entity implements Parsable {
     /** The columns property */
     private java.util.List<ExactDataMatchStoreColumn> _columns;
@@ -18,7 +20,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     /** The displayName property */
     private String _displayName;
     /**
-     * Instantiates a new ExactMatchDataStoreBase and sets the default values.
+     * Instantiates a new exactMatchDataStoreBase and sets the default values.
      * @return a void
      */
     public ExactMatchDataStoreBase() {
@@ -28,7 +30,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExactMatchDataStoreBase
+     * @return a exactMatchDataStoreBase
      */
     @javax.annotation.Nonnull
     public static ExactMatchDataStoreBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

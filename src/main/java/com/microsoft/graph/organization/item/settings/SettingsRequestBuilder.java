@@ -1,5 +1,12 @@
-package microsoft.graph.organization.item.settings;
+package com.microsoft.graph.organization.item.settings;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OrganizationSettings;
+import com.microsoft.graph.organization.item.settings.iteminsights.ItemInsightsRequestBuilder;
+import com.microsoft.graph.organization.item.settings.microsoftapplicationdataaccess.MicrosoftApplicationDataAccessRequestBuilder;
+import com.microsoft.graph.organization.item.settings.peopleinsights.PeopleInsightsRequestBuilder;
+import com.microsoft.graph.organization.item.settings.profilecardproperties.item.ProfileCardPropertyItemRequestBuilder;
+import com.microsoft.graph.organization.item.settings.profilecardproperties.ProfileCardPropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OrganizationSettings;
-import microsoft.graph.organization.item.settings.iteminsights.ItemInsightsRequestBuilder;
-import microsoft.graph.organization.item.settings.microsoftapplicationdataaccess.MicrosoftApplicationDataAccessRequestBuilder;
-import microsoft.graph.organization.item.settings.peopleinsights.PeopleInsightsRequestBuilder;
-import microsoft.graph.organization.item.settings.profilecardproperties.item.ProfileCardPropertyItemRequestBuilder;
-import microsoft.graph.organization.item.settings.profilecardproperties.ProfileCardPropertiesRequestBuilder;
 /** Provides operations to manage the settings property of the microsoft.graph.organization entity. */
 public class SettingsRequestBuilder {
     /** The itemInsights property */
@@ -324,7 +324,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.organization.item.settings.profileCardProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.organization.item.settings.profileCardProperties.item collection
      * @param id Unique identifier of the item
      * @return a ProfileCardPropertyItemRequestBuilder
      */

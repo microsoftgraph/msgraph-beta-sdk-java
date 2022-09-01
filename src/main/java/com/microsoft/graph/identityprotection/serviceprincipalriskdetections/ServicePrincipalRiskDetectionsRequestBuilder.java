@@ -1,5 +1,9 @@
-package microsoft.graph.identityprotection.serviceprincipalriskdetections;
+package com.microsoft.graph.identityprotection.serviceprincipalriskdetections;
 
+import com.microsoft.graph.identityprotection.serviceprincipalriskdetections.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServicePrincipalRiskDetection;
+import com.microsoft.graph.models.ServicePrincipalRiskDetectionCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identityprotection.serviceprincipalriskdetections.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServicePrincipalRiskDetection;
-import microsoft.graph.models.ServicePrincipalRiskDetectionCollectionResponse;
 /** Provides operations to manage the servicePrincipalRiskDetections property of the microsoft.graph.identityProtectionRoot entity. */
 public class ServicePrincipalRiskDetectionsRequestBuilder {
     /** The Count property */

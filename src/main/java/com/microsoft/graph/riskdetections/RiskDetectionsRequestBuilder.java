@@ -1,5 +1,8 @@
-package microsoft.graph.riskdetections;
+package com.microsoft.graph.riskdetections;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RiskDetection;
+import com.microsoft.graph.models.RiskDetectionCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RiskDetection;
-import microsoft.graph.models.RiskDetectionCollectionResponse;
 /** Provides operations to manage the collection of riskDetection entities. */
 public class RiskDetectionsRequestBuilder {
     /** Path parameters for the request */

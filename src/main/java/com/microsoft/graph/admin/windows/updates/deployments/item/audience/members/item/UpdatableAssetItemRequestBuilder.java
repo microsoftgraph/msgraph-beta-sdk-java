@@ -1,5 +1,11 @@
-package microsoft.graph.admin.windows.updates.deployments.item.audience.members.item;
+package com.microsoft.graph.admin.windows.updates.deployments.item.audience.members.item;
 
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.addmembers.AddMembersRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.addmembersbyid.AddMembersByIdRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.removemembers.RemoveMembersRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.removemembersbyid.RemoveMembersByIdRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.windowsupdates.UpdatableAsset;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.addmembers.AddMembersRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.addmembersbyid.AddMembersByIdRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.removemembers.RemoveMembersRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.removemembersbyid.RemoveMembersByIdRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.windowsupdates.UpdatableAsset;
 /** Provides operations to manage the members property of the microsoft.graph.windowsUpdates.deploymentAudience entity. */
 public class UpdatableAssetItemRequestBuilder {
     /** The addMembers property */

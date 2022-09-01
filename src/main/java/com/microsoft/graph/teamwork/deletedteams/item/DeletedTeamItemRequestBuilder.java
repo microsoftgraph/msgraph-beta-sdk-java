@@ -1,5 +1,9 @@
-package microsoft.graph.teamwork.deletedteams.item;
+package com.microsoft.graph.teamwork.deletedteams.item;
 
+import com.microsoft.graph.models.DeletedTeam;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.teamwork.deletedteams.item.channels.ChannelsRequestBuilder;
+import com.microsoft.graph.teamwork.deletedteams.item.channels.item.ChannelItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeletedTeam;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.teamwork.deletedteams.item.channels.ChannelsRequestBuilder;
-import microsoft.graph.teamwork.deletedteams.item.channels.item.ChannelItemRequestBuilder;
 /** Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity. */
 public class DeletedTeamItemRequestBuilder {
     /** The channels property */
@@ -32,7 +32,7 @@ public class DeletedTeamItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.deletedTeams.item.channels.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.deletedTeams.item.channels.item collection
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */

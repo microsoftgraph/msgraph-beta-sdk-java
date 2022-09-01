@@ -1,5 +1,19 @@
-package microsoft.graph.devicemanagement.deponboardingsettings.item;
+package com.microsoft.graph.devicemanagement.deponboardingsettings.item;
 
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.defaultiosenrollmentprofile.DefaultIosEnrollmentProfileRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.defaultmacosenrollmentprofile.DefaultMacOsEnrollmentProfileRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.EnrollmentProfilesRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item.EnrollmentProfileItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.generateencryptionpublickey.GenerateEncryptionPublicKeyRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.getencryptionpublickey.GetEncryptionPublicKeyRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.importedappledeviceidentities.ImportedAppleDeviceIdentitiesRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.importedappledeviceidentities.item.ImportedAppleDeviceIdentityItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.shareforschooldatasyncservice.ShareForSchoolDataSyncServiceRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.syncwithappledeviceenrollmentprogram.SyncWithAppleDeviceEnrollmentProgramRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.unshareforschooldatasyncservice.UnshareForSchoolDataSyncServiceRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.uploaddeptoken.UploadDepTokenRequestBuilder;
+import com.microsoft.graph.models.DepOnboardingSetting;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,20 +28,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.defaultiosenrollmentprofile.DefaultIosEnrollmentProfileRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.defaultmacosenrollmentprofile.DefaultMacOsEnrollmentProfileRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.EnrollmentProfilesRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item.EnrollmentProfileItemRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.generateencryptionpublickey.GenerateEncryptionPublicKeyRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.getencryptionpublickey.GetEncryptionPublicKeyRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.importedappledeviceidentities.ImportedAppleDeviceIdentitiesRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.importedappledeviceidentities.item.ImportedAppleDeviceIdentityItemRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.shareforschooldatasyncservice.ShareForSchoolDataSyncServiceRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.syncwithappledeviceenrollmentprogram.SyncWithAppleDeviceEnrollmentProgramRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.unshareforschooldatasyncservice.UnshareForSchoolDataSyncServiceRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.uploaddeptoken.UploadDepTokenRequestBuilder;
-import microsoft.graph.models.DepOnboardingSetting;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the depOnboardingSettings property of the microsoft.graph.deviceManagement entity. */
 public class DepOnboardingSettingItemRequestBuilder {
     /** The defaultIosEnrollmentProfile property */
@@ -250,7 +250,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.depOnboardingSettings.item.enrollmentProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.depOnboardingSettings.item.enrollmentProfiles.item collection
      * @param id Unique identifier of the item
      * @return a EnrollmentProfileItemRequestBuilder
      */
@@ -321,7 +321,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         return new GetEncryptionPublicKeyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.depOnboardingSettings.item.importedAppleDeviceIdentities.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.depOnboardingSettings.item.importedAppleDeviceIdentities.item collection
      * @param id Unique identifier of the item
      * @return a ImportedAppleDeviceIdentityItemRequestBuilder
      */

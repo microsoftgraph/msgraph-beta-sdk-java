@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.virtualendpoint.supportedregions;
+package com.microsoft.graph.devicemanagement.virtualendpoint.supportedregions;
 
+import com.microsoft.graph.devicemanagement.virtualendpoint.supportedregions.count.CountRequestBuilder;
+import com.microsoft.graph.models.CloudPcSupportedRegion;
+import com.microsoft.graph.models.CloudPcSupportedRegionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.virtualendpoint.supportedregions.count.CountRequestBuilder;
-import microsoft.graph.models.CloudPcSupportedRegion;
-import microsoft.graph.models.CloudPcSupportedRegionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the supportedRegions property of the microsoft.graph.virtualEndpoint entity. */
 public class SupportedRegionsRequestBuilder {
     /** The Count property */

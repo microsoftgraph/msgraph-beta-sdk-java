@@ -1,4 +1,4 @@
-package microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.applyhold;
+package com.microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.applyhold;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

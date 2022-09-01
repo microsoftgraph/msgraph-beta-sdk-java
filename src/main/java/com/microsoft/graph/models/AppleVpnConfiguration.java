@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.IosikEv2VpnConfiguration;
+import com.microsoft.graph.models.IosVpnConfiguration;
+import com.microsoft.graph.models.MacOSVpnConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

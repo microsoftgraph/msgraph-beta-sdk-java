@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.events.item.exceptionoccurrences.item.accept;
+package com.microsoft.graph.users.item.events.item.exceptionoccurrences.item.accept;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

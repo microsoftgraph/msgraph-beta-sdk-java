@@ -1,5 +1,7 @@
-package microsoft.graph.informationprotection.policy.labels.item;
+package com.microsoft.graph.informationprotection.policy.labels.item;
 
+import com.microsoft.graph.models.InformationProtectionLabel;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.InformationProtectionLabel;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the labels property of the microsoft.graph.informationProtectionPolicy entity. */
 public class InformationProtectionLabelItemRequestBuilder {
     /** Path parameters for the request */

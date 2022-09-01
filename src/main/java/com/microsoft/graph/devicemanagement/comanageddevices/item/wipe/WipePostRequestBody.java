@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.comanageddevices.item.wipe;
+package com.microsoft.graph.devicemanagement.comanageddevices.item.wipe;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

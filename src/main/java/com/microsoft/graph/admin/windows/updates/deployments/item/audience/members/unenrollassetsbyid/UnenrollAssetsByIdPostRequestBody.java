@@ -1,5 +1,6 @@
-package microsoft.graph.admin.windows.updates.deployments.item.audience.members.unenrollassetsbyid;
+package com.microsoft.graph.admin.windows.updates.deployments.item.audience.members.unenrollassetsbyid;
 
+import com.microsoft.graph.models.windowsupdates.UpdateCategory;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.windowsupdates.UpdateCategory;
 /** Provides operations to call the unenrollAssetsById method. */
 public class UnenrollAssetsByIdPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

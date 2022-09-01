@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages.ref.RefRequestBuilder;
+import com.microsoft.graph.models.AccessPackageCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages.count.CountRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages.ref.RefRequestBuilder;
-import microsoft.graph.models.AccessPackageCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the incompatibleAccessPackages property of the microsoft.graph.accessPackage entity. */
 public class IncompatibleAccessPackagesRequestBuilder {
     /** The Count property */

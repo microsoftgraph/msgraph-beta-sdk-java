@@ -1,4 +1,4 @@
-package microsoft.graph.identityprotection.riskyserviceprincipals.confirmcompromised;
+package com.microsoft.graph.identityprotection.riskyserviceprincipals.confirmcompromised;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

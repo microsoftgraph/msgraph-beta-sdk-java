@@ -1,4 +1,4 @@
-package microsoft.graph.me.manageddevices.item.setdevicename;
+package com.microsoft.graph.me.manageddevices.item.setdevicename;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

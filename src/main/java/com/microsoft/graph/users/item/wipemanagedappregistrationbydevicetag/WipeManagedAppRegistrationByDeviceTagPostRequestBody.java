@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.wipemanagedappregistrationbydevicetag;
+package com.microsoft.graph.users.item.wipemanagedappregistrationbydevicetag;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

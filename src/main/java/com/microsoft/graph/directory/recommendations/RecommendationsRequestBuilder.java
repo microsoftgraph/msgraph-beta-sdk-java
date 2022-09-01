@@ -1,5 +1,9 @@
-package microsoft.graph.directory.recommendations;
+package com.microsoft.graph.directory.recommendations;
 
+import com.microsoft.graph.directory.recommendations.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Recommendation;
+import com.microsoft.graph.models.RecommendationCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.recommendations.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Recommendation;
-import microsoft.graph.models.RecommendationCollectionResponse;
 /** Provides operations to manage the recommendations property of the microsoft.graph.directory entity. */
 public class RecommendationsRequestBuilder {
     /** The Count property */

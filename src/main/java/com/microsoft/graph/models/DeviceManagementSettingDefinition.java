@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DeviceManagementAbstractComplexSettingDefinition;
+import com.microsoft.graph.models.DeviceManagementCollectionSettingDefinition;
+import com.microsoft.graph.models.DeviceManagementComplexSettingDefinition;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

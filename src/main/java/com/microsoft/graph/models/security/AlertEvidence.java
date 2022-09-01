@@ -1,5 +1,19 @@
-package microsoft.graph.models.security;
+package com.microsoft.graph.models.security;
 
+import com.microsoft.graph.models.security.AnalyzedMessageEvidence;
+import com.microsoft.graph.models.security.CloudApplicationEvidence;
+import com.microsoft.graph.models.security.DeviceEvidence;
+import com.microsoft.graph.models.security.FileEvidence;
+import com.microsoft.graph.models.security.IpEvidence;
+import com.microsoft.graph.models.security.MailboxEvidence;
+import com.microsoft.graph.models.security.MailClusterEvidence;
+import com.microsoft.graph.models.security.OauthApplicationEvidence;
+import com.microsoft.graph.models.security.ProcessEvidence;
+import com.microsoft.graph.models.security.RegistryKeyEvidence;
+import com.microsoft.graph.models.security.RegistryValueEvidence;
+import com.microsoft.graph.models.security.SecurityGroupEvidence;
+import com.microsoft.graph.models.security.UrlEvidence;
+import com.microsoft.graph.models.security.UserEvidence;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

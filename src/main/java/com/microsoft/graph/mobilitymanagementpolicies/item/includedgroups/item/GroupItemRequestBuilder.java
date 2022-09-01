@@ -1,9 +1,9 @@
-package microsoft.graph.mobilitymanagementpolicies.item.includedgroups.item;
+package com.microsoft.graph.mobilitymanagementpolicies.item.includedgroups.item;
 
+import com.microsoft.graph.mobilitymanagementpolicies.item.includedgroups.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.mobilitymanagementpolicies.item.includedgroups.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /mobilityManagementPolicies/{mobilityManagementPolicy-id}/includedGroups/{group-id} */
 public class GroupItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.compliancesettings;
+package com.microsoft.graph.devicemanagement.compliancesettings;
 
+import com.microsoft.graph.devicemanagement.compliancesettings.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingDefinition;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingDefinitionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.compliancesettings.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementConfigurationSettingDefinition;
-import microsoft.graph.models.DeviceManagementConfigurationSettingDefinitionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the complianceSettings property of the microsoft.graph.deviceManagement entity. */
 public class ComplianceSettingsRequestBuilder {
     /** The Count property */

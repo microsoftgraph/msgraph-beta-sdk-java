@@ -1,5 +1,7 @@
-package microsoft.graph.financials.companies.item.salesinvoices.item.currency;
+package com.microsoft.graph.financials.companies.item.salesinvoices.item.currency;
 
+import com.microsoft.graph.models.Currency;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Currency;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the currency property of the microsoft.graph.salesInvoice entity. */
 public class CurrencyRequestBuilder {
     /** Path parameters for the request */

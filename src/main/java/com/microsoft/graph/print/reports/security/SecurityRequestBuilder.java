@@ -1,5 +1,10 @@
-package microsoft.graph.print.reports.security;
+package com.microsoft.graph.print.reports.security;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SecurityReportsRoot;
+import com.microsoft.graph.print.reports.security.getattacksimulationrepeatoffenders.GetAttackSimulationRepeatOffendersRequestBuilder;
+import com.microsoft.graph.print.reports.security.getattacksimulationsimulationusercoverage.GetAttackSimulationSimulationUserCoverageRequestBuilder;
+import com.microsoft.graph.print.reports.security.getattacksimulationtrainingusercoverage.GetAttackSimulationTrainingUserCoverageRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SecurityReportsRoot;
-import microsoft.graph.print.reports.security.getattacksimulationrepeatoffenders.GetAttackSimulationRepeatOffendersRequestBuilder;
-import microsoft.graph.print.reports.security.getattacksimulationsimulationusercoverage.GetAttackSimulationSimulationUserCoverageRequestBuilder;
-import microsoft.graph.print.reports.security.getattacksimulationtrainingusercoverage.GetAttackSimulationTrainingUserCoverageRequestBuilder;
 /** Provides operations to manage the security property of the microsoft.graph.reportRoot entity. */
 public class SecurityRequestBuilder {
     /** Path parameters for the request */

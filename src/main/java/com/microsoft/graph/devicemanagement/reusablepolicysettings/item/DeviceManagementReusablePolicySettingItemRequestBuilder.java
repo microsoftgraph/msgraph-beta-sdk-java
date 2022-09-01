@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.reusablepolicysettings.item;
+package com.microsoft.graph.devicemanagement.reusablepolicysettings.item;
 
+import com.microsoft.graph.devicemanagement.reusablepolicysettings.item.clone.CloneRequestBuilder;
+import com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.DeviceManagementConfigurationPolicyItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.ReferencingConfigurationPoliciesRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementReusablePolicySetting;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.reusablepolicysettings.item.clone.CloneRequestBuilder;
-import microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.DeviceManagementConfigurationPolicyItemRequestBuilder;
-import microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.ReferencingConfigurationPoliciesRequestBuilder;
-import microsoft.graph.models.DeviceManagementReusablePolicySetting;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the reusablePolicySettings property of the microsoft.graph.deviceManagement entity. */
 public class DeviceManagementReusablePolicySettingItemRequestBuilder {
     /** The clone property */
@@ -312,7 +312,7 @@ public class DeviceManagementReusablePolicySettingItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.reusablePolicySettings.item.referencingConfigurationPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.reusablePolicySettings.item.referencingConfigurationPolicies.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementConfigurationPolicyItemRequestBuilder
      */

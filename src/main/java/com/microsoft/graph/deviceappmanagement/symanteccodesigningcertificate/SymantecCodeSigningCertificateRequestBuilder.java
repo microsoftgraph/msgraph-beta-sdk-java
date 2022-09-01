@@ -1,5 +1,7 @@
-package microsoft.graph.deviceappmanagement.symanteccodesigningcertificate;
+package com.microsoft.graph.deviceappmanagement.symanteccodesigningcertificate;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SymantecCodeSigningCertificate;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SymantecCodeSigningCertificate;
 /** Provides operations to manage the symantecCodeSigningCertificate property of the microsoft.graph.deviceAppManagement entity. */
 public class SymantecCodeSigningCertificateRequestBuilder {
     /** Path parameters for the request */

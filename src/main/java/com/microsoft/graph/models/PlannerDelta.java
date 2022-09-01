@@ -1,5 +1,14 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.PlannerAssignedToTaskBoardTaskFormat;
+import com.microsoft.graph.models.PlannerBucket;
+import com.microsoft.graph.models.PlannerBucketTaskBoardTaskFormat;
+import com.microsoft.graph.models.PlannerPlan;
+import com.microsoft.graph.models.PlannerPlanDetails;
+import com.microsoft.graph.models.PlannerProgressTaskBoardTaskFormat;
+import com.microsoft.graph.models.PlannerTask;
+import com.microsoft.graph.models.PlannerTaskDetails;
+import com.microsoft.graph.models.PlannerUser;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

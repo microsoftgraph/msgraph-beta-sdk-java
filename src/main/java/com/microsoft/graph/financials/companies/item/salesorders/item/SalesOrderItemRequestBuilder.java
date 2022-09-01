@@ -1,5 +1,12 @@
-package microsoft.graph.financials.companies.item.salesorders.item;
+package com.microsoft.graph.financials.companies.item.salesorders.item;
 
+import com.microsoft.graph.financials.companies.item.salesorders.item.currency.CurrencyRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesorders.item.customer.CustomerRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesorders.item.paymentterm.PaymentTermRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesorders.item.salesorderlines.item.SalesOrderLineItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesorders.item.salesorderlines.SalesOrderLinesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SalesOrder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salesorders.item.currency.CurrencyRequestBuilder;
-import microsoft.graph.financials.companies.item.salesorders.item.customer.CustomerRequestBuilder;
-import microsoft.graph.financials.companies.item.salesorders.item.paymentterm.PaymentTermRequestBuilder;
-import microsoft.graph.financials.companies.item.salesorders.item.salesorderlines.item.SalesOrderLineItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salesorders.item.salesorderlines.SalesOrderLinesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SalesOrder;
 /** Provides operations to manage the salesOrders property of the microsoft.graph.company entity. */
 public class SalesOrderItemRequestBuilder {
     /** The currency property */
@@ -245,7 +245,7 @@ public class SalesOrderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesOrders.item.salesOrderLines.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesOrders.item.salesOrderLines.item collection
      * @param id Unique identifier of the item
      * @return a SalesOrderLineItemRequestBuilder
      */

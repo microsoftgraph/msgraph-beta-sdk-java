@@ -1,5 +1,9 @@
-package microsoft.graph.identity.authenticationeventlisteners;
+package com.microsoft.graph.identity.authenticationeventlisteners;
 
+import com.microsoft.graph.identity.authenticationeventlisteners.count.CountRequestBuilder;
+import com.microsoft.graph.models.AuthenticationEventListener;
+import com.microsoft.graph.models.AuthenticationEventListenerCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.authenticationeventlisteners.count.CountRequestBuilder;
-import microsoft.graph.models.AuthenticationEventListener;
-import microsoft.graph.models.AuthenticationEventListenerCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the authenticationEventListeners property of the microsoft.graph.identityContainer entity. */
 public class AuthenticationEventListenersRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.batchrecorddecisions;
+package com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.batchrecorddecisions;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

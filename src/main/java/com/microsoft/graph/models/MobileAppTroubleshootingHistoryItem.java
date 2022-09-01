@@ -1,5 +1,10 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.MobileAppTroubleshootingAppPolicyCreationHistory;
+import com.microsoft.graph.models.MobileAppTroubleshootingAppStateHistory;
+import com.microsoft.graph.models.MobileAppTroubleshootingAppTargetHistory;
+import com.microsoft.graph.models.MobileAppTroubleshootingAppUpdateHistory;
+import com.microsoft.graph.models.MobileAppTroubleshootingDeviceCheckinHistory;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

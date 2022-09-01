@@ -1,5 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AccessReviewInactiveUsersQueryScope;
+import com.microsoft.graph.models.AccessReviewQueryScope;
+import com.microsoft.graph.models.AccessReviewReviewerScope;
+import com.microsoft.graph.models.PrincipalResourceMembershipsScope;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

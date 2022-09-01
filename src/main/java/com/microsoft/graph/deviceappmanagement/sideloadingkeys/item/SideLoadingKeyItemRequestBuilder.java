@@ -1,5 +1,7 @@
-package microsoft.graph.deviceappmanagement.sideloadingkeys.item;
+package com.microsoft.graph.deviceappmanagement.sideloadingkeys.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SideLoadingKey;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SideLoadingKey;
 /** Provides operations to manage the sideLoadingKeys property of the microsoft.graph.deviceAppManagement entity. */
 public class SideLoadingKeyItemRequestBuilder {
     /** Path parameters for the request */

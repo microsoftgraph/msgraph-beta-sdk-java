@@ -1,5 +1,17 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AndroidCompliancePolicy;
+import com.microsoft.graph.models.AndroidDeviceOwnerCompliancePolicy;
+import com.microsoft.graph.models.AndroidForWorkCompliancePolicy;
+import com.microsoft.graph.models.AndroidWorkProfileCompliancePolicy;
+import com.microsoft.graph.models.AospDeviceOwnerCompliancePolicy;
+import com.microsoft.graph.models.DefaultDeviceCompliancePolicy;
+import com.microsoft.graph.models.IosCompliancePolicy;
+import com.microsoft.graph.models.MacOSCompliancePolicy;
+import com.microsoft.graph.models.Windows10CompliancePolicy;
+import com.microsoft.graph.models.Windows10MobileCompliancePolicy;
+import com.microsoft.graph.models.Windows81CompliancePolicy;
+import com.microsoft.graph.models.WindowsPhone81CompliancePolicy;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

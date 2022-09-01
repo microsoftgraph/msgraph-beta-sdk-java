@@ -1,5 +1,11 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.GroupPolicyPresentationValueBoolean;
+import com.microsoft.graph.models.GroupPolicyPresentationValueDecimal;
+import com.microsoft.graph.models.GroupPolicyPresentationValueList;
+import com.microsoft.graph.models.GroupPolicyPresentationValueLongDecimal;
+import com.microsoft.graph.models.GroupPolicyPresentationValueMultiText;
+import com.microsoft.graph.models.GroupPolicyPresentationValueText;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

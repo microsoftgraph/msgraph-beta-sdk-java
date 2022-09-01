@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.applepushnotificationcertificate;
+package com.microsoft.graph.devicemanagement.applepushnotificationcertificate;
 
+import com.microsoft.graph.devicemanagement.applepushnotificationcertificate.downloadapplepushnotificationcertificatesigningrequest.DownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
+import com.microsoft.graph.devicemanagement.applepushnotificationcertificate.generateapplepushnotificationcertificatesigningrequest.GenerateApplePushNotificationCertificateSigningRequestRequestBuilder;
+import com.microsoft.graph.models.ApplePushNotificationCertificate;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.applepushnotificationcertificate.downloadapplepushnotificationcertificatesigningrequest.DownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
-import microsoft.graph.devicemanagement.applepushnotificationcertificate.generateapplepushnotificationcertificatesigningrequest.GenerateApplePushNotificationCertificateSigningRequestRequestBuilder;
-import microsoft.graph.models.ApplePushNotificationCertificate;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the applePushNotificationCertificate property of the microsoft.graph.deviceManagement entity. */
 public class ApplePushNotificationCertificateRequestBuilder {
     /** The generateApplePushNotificationCertificateSigningRequest property */

@@ -1,5 +1,12 @@
-package microsoft.graph.governanceroleassignmentrequests.item;
+package com.microsoft.graph.governanceroleassignmentrequests.item;
 
+import com.microsoft.graph.governanceroleassignmentrequests.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.governanceroleassignmentrequests.item.resource.ResourceRequestBuilder;
+import com.microsoft.graph.governanceroleassignmentrequests.item.roledefinition.RoleDefinitionRequestBuilder;
+import com.microsoft.graph.governanceroleassignmentrequests.item.subject.SubjectRequestBuilder;
+import com.microsoft.graph.governanceroleassignmentrequests.item.updaterequest.UpdateRequestRequestBuilder;
+import com.microsoft.graph.models.GovernanceRoleAssignmentRequest;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.governanceroleassignmentrequests.item.cancel.CancelRequestBuilder;
-import microsoft.graph.governanceroleassignmentrequests.item.resource.ResourceRequestBuilder;
-import microsoft.graph.governanceroleassignmentrequests.item.roledefinition.RoleDefinitionRequestBuilder;
-import microsoft.graph.governanceroleassignmentrequests.item.subject.SubjectRequestBuilder;
-import microsoft.graph.governanceroleassignmentrequests.item.updaterequest.UpdateRequestRequestBuilder;
-import microsoft.graph.models.GovernanceRoleAssignmentRequest;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of governanceRoleAssignmentRequest entities. */
 public class GovernanceRoleAssignmentRequestItemRequestBuilder {
     /** The cancel property */

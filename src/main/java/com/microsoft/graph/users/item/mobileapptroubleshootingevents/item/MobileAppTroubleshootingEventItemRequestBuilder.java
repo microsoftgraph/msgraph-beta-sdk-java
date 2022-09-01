@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.mobileapptroubleshootingevents.item;
+package com.microsoft.graph.users.item.mobileapptroubleshootingevents.item;
 
+import com.microsoft.graph.models.MobileAppTroubleshootingEvent;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.mobileapptroubleshootingevents.item.applogcollectionrequests.AppLogCollectionRequestsRequestBuilder;
+import com.microsoft.graph.users.item.mobileapptroubleshootingevents.item.applogcollectionrequests.item.AppLogCollectionRequestItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MobileAppTroubleshootingEvent;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.mobileapptroubleshootingevents.item.applogcollectionrequests.AppLogCollectionRequestsRequestBuilder;
-import microsoft.graph.users.item.mobileapptroubleshootingevents.item.applogcollectionrequests.item.AppLogCollectionRequestItemRequestBuilder;
 /** Provides operations to manage the mobileAppTroubleshootingEvents property of the microsoft.graph.user entity. */
 public class MobileAppTroubleshootingEventItemRequestBuilder {
     /** The appLogCollectionRequests property */
@@ -32,7 +32,7 @@ public class MobileAppTroubleshootingEventItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.users.item.mobileAppTroubleshootingEvents.item.appLogCollectionRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.mobileAppTroubleshootingEvents.item.appLogCollectionRequests.item collection
      * @param id Unique identifier of the item
      * @return a AppLogCollectionRequestItemRequestBuilder
      */

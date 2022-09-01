@@ -1,5 +1,12 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource.accesspackageresourceenvironment.AccessPackageResourceEnvironmentRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource.accesspackageresourceroles.AccessPackageResourceRolesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource.accesspackageresourceroles.item.AccessPackageResourceRoleItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource.accesspackageresourcescopes.AccessPackageResourceScopesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource.accesspackageresourcescopes.item.AccessPackageResourceScopeItemRequestBuilder;
+import com.microsoft.graph.models.AccessPackageResource;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource.accesspackageresourceenvironment.AccessPackageResourceEnvironmentRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource.accesspackageresourceroles.AccessPackageResourceRolesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource.accesspackageresourceroles.item.AccessPackageResourceRoleItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource.accesspackageresourcescopes.AccessPackageResourceScopesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.accesspackageresourcescope.accesspackageresource.accesspackageresourcescopes.item.AccessPackageResourceScopeItemRequestBuilder;
-import microsoft.graph.models.AccessPackageResource;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageResource property of the microsoft.graph.accessPackageResourceScope entity. */
 public class AccessPackageResourceRequestBuilder {
     /** The accessPackageResourceEnvironment property */
@@ -45,7 +45,7 @@ public class AccessPackageResourceRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageResourceRoleScopes.item.accessPackageResourceScope.accessPackageResource.accessPackageResourceRoles.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageResourceRoleScopes.item.accessPackageResourceScope.accessPackageResource.accessPackageResourceRoles.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageResourceRoleItemRequestBuilder
      */
@@ -57,7 +57,7 @@ public class AccessPackageResourceRequestBuilder {
         return new AccessPackageResourceRoleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageResourceRoleScopes.item.accessPackageResourceScope.accessPackageResource.accessPackageResourceScopes.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageResourceRoleScopes.item.accessPackageResourceScope.accessPackageResource.accessPackageResourceScopes.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageResourceScopeItemRequestBuilder
      */

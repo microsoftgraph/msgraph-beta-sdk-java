@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** CartToClassAssociation for associating device carts with classrooms. */
 public class CartToClassAssociation extends Entity implements Parsable {
     /** Identifiers of classrooms to be associated with device carts. */
     private java.util.List<String> _classroomIds;
@@ -24,7 +25,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     /** Version of the CartToClassAssociation. */
     private Integer _version;
     /**
-     * Instantiates a new CartToClassAssociation and sets the default values.
+     * Instantiates a new cartToClassAssociation and sets the default values.
      * @return a void
      */
     public CartToClassAssociation() {
@@ -34,7 +35,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CartToClassAssociation
+     * @return a cartToClassAssociation
      */
     @javax.annotation.Nonnull
     public static CartToClassAssociation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

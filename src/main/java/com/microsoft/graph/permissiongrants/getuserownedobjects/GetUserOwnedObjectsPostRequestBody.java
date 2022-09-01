@@ -1,4 +1,4 @@
-package microsoft.graph.permissiongrants.getuserownedobjects;
+package com.microsoft.graph.permissiongrants.getuserownedobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

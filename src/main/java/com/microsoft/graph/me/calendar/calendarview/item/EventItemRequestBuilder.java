@@ -1,5 +1,25 @@
-package microsoft.graph.me.calendar.calendarview.item;
+package com.microsoft.graph.me.calendar.calendarview.item;
 
+import com.microsoft.graph.me.calendar.calendarview.item.accept.AcceptRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.attachments.AttachmentsRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.attachments.item.AttachmentItemRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.calendar.CalendarRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.decline.DeclineRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.dismissreminder.DismissReminderRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.exceptionoccurrences.ExceptionOccurrencesRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.extensions.item.ExtensionItemRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.forward.ForwardRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.instances.InstancesRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.snoozereminder.SnoozeReminderRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
+import com.microsoft.graph.models.Event;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,26 +34,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.calendar.calendarview.item.accept.AcceptRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.attachments.AttachmentsRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.attachments.item.AttachmentItemRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.calendar.CalendarRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.cancel.CancelRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.decline.DeclineRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.dismissreminder.DismissReminderRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.exceptionoccurrences.ExceptionOccurrencesRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.extensions.ExtensionsRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.extensions.item.ExtensionItemRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.forward.ForwardRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.instances.InstancesRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.snoozereminder.SnoozeReminderRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
-import microsoft.graph.models.Event;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the calendarView property of the microsoft.graph.calendar entity. */
 public class EventItemRequestBuilder {
     /** The accept property */
@@ -113,7 +113,7 @@ public class EventItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.me.calendar.calendarView.item.attachments.item collection
+     * Gets an item from the com.Microsoft.Graph.me.calendar.calendarView.item.attachments.item collection
      * @param id Unique identifier of the item
      * @return a AttachmentItemRequestBuilder
      */
@@ -293,19 +293,19 @@ public class EventItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.calendar.calendarView.item.exceptionOccurrences.item collection
+     * Gets an item from the com.Microsoft.Graph.me.calendar.calendarView.item.exceptionOccurrences.item collection
      * @param id Unique identifier of the item
      * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.calendar.calendarview.item.exceptionoccurrences.item.EventItemRequestBuilder exceptionOccurrences(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.calendar.calendarview.item.exceptionoccurrences.item.EventItemRequestBuilder exceptionOccurrences(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("event%2Did1", id);
-        return new microsoft.graph.me.calendar.calendarview.item.exceptionoccurrences.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.calendar.calendarview.item.exceptionoccurrences.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.calendar.calendarView.item.extensions.item collection
+     * Gets an item from the com.Microsoft.Graph.me.calendar.calendarView.item.extensions.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -368,19 +368,19 @@ public class EventItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.calendar.calendarView.item.instances.item collection
+     * Gets an item from the com.Microsoft.Graph.me.calendar.calendarView.item.instances.item collection
      * @param id Unique identifier of the item
      * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.calendar.calendarview.item.instances.item.EventItemRequestBuilder instances(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.calendar.calendarview.item.instances.item.EventItemRequestBuilder instances(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("event%2Did1", id);
-        return new microsoft.graph.me.calendar.calendarview.item.instances.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.calendar.calendarview.item.instances.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.calendar.calendarView.item.multiValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.me.calendar.calendarView.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -447,7 +447,7 @@ public class EventItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.calendar.calendarView.item.singleValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.me.calendar.calendarView.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */

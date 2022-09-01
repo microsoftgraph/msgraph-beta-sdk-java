@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getcertificatesreport;
+package com.microsoft.graph.devicemanagement.reports.getcertificatesreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

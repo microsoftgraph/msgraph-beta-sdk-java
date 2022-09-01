@@ -1,5 +1,23 @@
-package microsoft.graph.deviceappmanagement.mobileapps.item;
+package com.microsoft.graph.deviceappmanagement.mobileapps.item;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments.item.MobileAppAssignmentItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.categories.item.MobileAppCategoryItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.devicestatuses.DeviceStatusesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.devicestatuses.item.MobileAppInstallStatusItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.getrelatedappstateswithuserprincipalnamewithdeviceid.GetRelatedAppStatesWithUserPrincipalNameWithDeviceIdRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.installsummary.InstallSummaryRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.managedmobilelobapp.ManagedMobileLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.mobilelobapp.MobileLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.relationships.item.MobileAppRelationshipItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.relationships.RelationshipsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.updaterelationships.UpdateRelationshipsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.item.UserAppInstallStatusItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.UserStatusesRequestBuilder;
+import com.microsoft.graph.models.MobileApp;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,24 +32,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileapps.item.assign.AssignRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.assignments.item.MobileAppAssignmentItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.categories.CategoriesRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.categories.item.MobileAppCategoryItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.devicestatuses.DeviceStatusesRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.devicestatuses.item.MobileAppInstallStatusItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.getrelatedappstateswithuserprincipalnamewithdeviceid.GetRelatedAppStatesWithUserPrincipalNameWithDeviceIdRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.installsummary.InstallSummaryRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.managedmobilelobapp.ManagedMobileLobAppRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.mobilelobapp.MobileLobAppRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.relationships.item.MobileAppRelationshipItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.relationships.RelationshipsRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.updaterelationships.UpdateRelationshipsRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.item.UserAppInstallStatusItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.UserStatusesRequestBuilder;
-import microsoft.graph.models.MobileApp;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity. */
 public class MobileAppItemRequestBuilder {
     /** The assign property */
@@ -91,7 +91,7 @@ public class MobileAppItemRequestBuilder {
         return new UserStatusesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a MobileAppAssignmentItemRequestBuilder
      */
@@ -103,7 +103,7 @@ public class MobileAppItemRequestBuilder {
         return new MobileAppAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.categories.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item.categories.item collection
      * @param id Unique identifier of the item
      * @return a MobileAppCategoryItemRequestBuilder
      */
@@ -283,7 +283,7 @@ public class MobileAppItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.deviceStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
      * @return a MobileAppInstallStatusItemRequestBuilder
      */
@@ -413,7 +413,7 @@ public class MobileAppItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.relationships.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item.relationships.item collection
      * @param id Unique identifier of the item
      * @return a MobileAppRelationshipItemRequestBuilder
      */
@@ -425,7 +425,7 @@ public class MobileAppItemRequestBuilder {
         return new MobileAppRelationshipItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.userStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item.userStatuses.item collection
      * @param id Unique identifier of the item
      * @return a UserAppInstallStatusItemRequestBuilder
      */

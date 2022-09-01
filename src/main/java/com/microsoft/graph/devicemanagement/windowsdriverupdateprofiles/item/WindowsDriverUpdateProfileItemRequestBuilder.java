@@ -1,5 +1,14 @@
-package microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item;
+package com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item;
 
+import com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.assignments.item.WindowsDriverUpdateProfileAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.driverinventories.DriverInventoriesRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.driverinventories.item.WindowsDriverUpdateInventoryItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.executeaction.ExecuteActionRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.syncinventory.SyncInventoryRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsDriverUpdateProfile;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.assignments.item.WindowsDriverUpdateProfileAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.driverinventories.DriverInventoriesRequestBuilder;
-import microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.driverinventories.item.WindowsDriverUpdateInventoryItemRequestBuilder;
-import microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.executeaction.ExecuteActionRequestBuilder;
-import microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.syncinventory.SyncInventoryRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsDriverUpdateProfile;
 /** Provides operations to manage the windowsDriverUpdateProfiles property of the microsoft.graph.deviceManagement entity. */
 public class WindowsDriverUpdateProfileItemRequestBuilder {
     /** The assign property */
@@ -57,7 +57,7 @@ public class WindowsDriverUpdateProfileItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.windowsDriverUpdateProfiles.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.windowsDriverUpdateProfiles.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a WindowsDriverUpdateProfileAssignmentItemRequestBuilder
      */
@@ -237,7 +237,7 @@ public class WindowsDriverUpdateProfileItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.windowsDriverUpdateProfiles.item.driverInventories.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.windowsDriverUpdateProfiles.item.driverInventories.item collection
      * @param id Unique identifier of the item
      * @return a WindowsDriverUpdateInventoryItemRequestBuilder
      */

@@ -1,5 +1,13 @@
-package microsoft.graph.devicemanagement.templates.item.migratableto.item;
+package com.microsoft.graph.devicemanagement.templates.item.migratableto.item;
 
+import com.microsoft.graph.devicemanagement.templates.item.migratableto.item.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.devicemanagement.templates.item.migratableto.item.categories.item.DeviceManagementTemplateSettingCategoryItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.templates.item.migratableto.item.comparewithtemplateid.CompareWithTemplateIdRequestBuilder;
+import com.microsoft.graph.devicemanagement.templates.item.migratableto.item.createinstance.CreateInstanceRequestBuilder;
+import com.microsoft.graph.devicemanagement.templates.item.migratableto.item.settings.item.DeviceManagementSettingInstanceItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.templates.item.migratableto.item.settings.SettingsRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementTemplate;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.templates.item.migratableto.item.categories.CategoriesRequestBuilder;
-import microsoft.graph.devicemanagement.templates.item.migratableto.item.categories.item.DeviceManagementTemplateSettingCategoryItemRequestBuilder;
-import microsoft.graph.devicemanagement.templates.item.migratableto.item.comparewithtemplateid.CompareWithTemplateIdRequestBuilder;
-import microsoft.graph.devicemanagement.templates.item.migratableto.item.createinstance.CreateInstanceRequestBuilder;
-import microsoft.graph.devicemanagement.templates.item.migratableto.item.settings.item.DeviceManagementSettingInstanceItemRequestBuilder;
-import microsoft.graph.devicemanagement.templates.item.migratableto.item.settings.SettingsRequestBuilder;
-import microsoft.graph.models.DeviceManagementTemplate;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the migratableTo property of the microsoft.graph.deviceManagementTemplate entity. */
 public class DeviceManagementTemplateItemRequestBuilder {
     /** The categories property */
@@ -46,7 +46,7 @@ public class DeviceManagementTemplateItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.templates.item.migratableTo.item.categories.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.templates.item.migratableTo.item.categories.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementTemplateSettingCategoryItemRequestBuilder
      */
@@ -342,7 +342,7 @@ public class DeviceManagementTemplateItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.templates.item.migratableTo.item.settings.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.templates.item.migratableTo.item.settings.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementSettingInstanceItemRequestBuilder
      */

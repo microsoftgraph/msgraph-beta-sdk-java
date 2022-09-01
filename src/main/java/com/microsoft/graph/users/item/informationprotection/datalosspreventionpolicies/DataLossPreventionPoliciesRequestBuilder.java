@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.informationprotection.datalosspreventionpolicies;
+package com.microsoft.graph.users.item.informationprotection.datalosspreventionpolicies;
 
+import com.microsoft.graph.models.DataLossPreventionPolicy;
+import com.microsoft.graph.models.DataLossPreventionPolicyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.informationprotection.datalosspreventionpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.informationprotection.datalosspreventionpolicies.evaluate.EvaluateRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DataLossPreventionPolicy;
-import microsoft.graph.models.DataLossPreventionPolicyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.informationprotection.datalosspreventionpolicies.count.CountRequestBuilder;
-import microsoft.graph.users.item.informationprotection.datalosspreventionpolicies.evaluate.EvaluateRequestBuilder;
 /** Provides operations to manage the dataLossPreventionPolicies property of the microsoft.graph.informationProtection entity. */
 public class DataLossPreventionPoliciesRequestBuilder {
     /** The Count property */

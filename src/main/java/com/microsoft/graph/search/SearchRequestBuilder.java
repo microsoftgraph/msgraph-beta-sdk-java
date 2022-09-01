@@ -1,5 +1,14 @@
-package microsoft.graph.search;
+package com.microsoft.graph.search;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SearchEntity;
+import com.microsoft.graph.search.acronyms.AcronymsRequestBuilder;
+import com.microsoft.graph.search.acronyms.item.AcronymItemRequestBuilder;
+import com.microsoft.graph.search.bookmarks.BookmarksRequestBuilder;
+import com.microsoft.graph.search.bookmarks.item.BookmarkItemRequestBuilder;
+import com.microsoft.graph.search.qnas.item.QnaItemRequestBuilder;
+import com.microsoft.graph.search.qnas.QnasRequestBuilder;
+import com.microsoft.graph.search.query.QueryRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SearchEntity;
-import microsoft.graph.search.acronyms.AcronymsRequestBuilder;
-import microsoft.graph.search.acronyms.item.AcronymItemRequestBuilder;
-import microsoft.graph.search.bookmarks.BookmarksRequestBuilder;
-import microsoft.graph.search.bookmarks.item.BookmarkItemRequestBuilder;
-import microsoft.graph.search.qnas.item.QnaItemRequestBuilder;
-import microsoft.graph.search.qnas.QnasRequestBuilder;
-import microsoft.graph.search.query.QueryRequestBuilder;
 /** Provides operations to manage the searchEntity singleton. */
 public class SearchRequestBuilder {
     /** The acronyms property */
@@ -52,7 +52,7 @@ public class SearchRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.search.acronyms.item collection
+     * Gets an item from the com.Microsoft.Graph.search.acronyms.item collection
      * @param id Unique identifier of the item
      * @return a AcronymItemRequestBuilder
      */
@@ -64,7 +64,7 @@ public class SearchRequestBuilder {
         return new AcronymItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.search.bookmarks.item collection
+     * Gets an item from the com.Microsoft.Graph.search.bookmarks.item collection
      * @param id Unique identifier of the item
      * @return a BookmarkItemRequestBuilder
      */
@@ -271,7 +271,7 @@ public class SearchRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.search.qnas.item collection
+     * Gets an item from the com.Microsoft.Graph.search.qnas.item collection
      * @param id Unique identifier of the item
      * @return a QnaItemRequestBuilder
      */

@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.profile.awards;
+package com.microsoft.graph.users.item.profile.awards;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PersonAward;
+import com.microsoft.graph.models.PersonAwardCollectionResponse;
+import com.microsoft.graph.users.item.profile.awards.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PersonAward;
-import microsoft.graph.models.PersonAwardCollectionResponse;
-import microsoft.graph.users.item.profile.awards.count.CountRequestBuilder;
 /** Provides operations to manage the awards property of the microsoft.graph.profile entity. */
 public class AwardsRequestBuilder {
     /** The Count property */

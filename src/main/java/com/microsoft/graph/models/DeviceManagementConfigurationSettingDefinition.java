@@ -1,5 +1,12 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DeviceManagementConfigurationChoiceSettingCollectionDefinition;
+import com.microsoft.graph.models.DeviceManagementConfigurationChoiceSettingDefinition;
+import com.microsoft.graph.models.DeviceManagementConfigurationRedirectSettingDefinition;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingGroupCollectionDefinition;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingGroupDefinition;
+import com.microsoft.graph.models.DeviceManagementConfigurationSimpleSettingCollectionDefinition;
+import com.microsoft.graph.models.DeviceManagementConfigurationSimpleSettingDefinition;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +14,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class DeviceManagementConfigurationSettingDefinition extends Entity implements Parsable {
     /** The accessTypes property */
     private DeviceManagementConfigurationSettingAccessTypes _accessTypes;

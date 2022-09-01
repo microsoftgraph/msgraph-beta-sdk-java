@@ -1,5 +1,8 @@
-package microsoft.graph.devicemanagement.exchangeonpremisespolicy;
+package com.microsoft.graph.devicemanagement.exchangeonpremisespolicy;
 
+import com.microsoft.graph.devicemanagement.exchangeonpremisespolicy.conditionalaccesssettings.ConditionalAccessSettingsRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementExchangeOnPremisesPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.exchangeonpremisespolicy.conditionalaccesssettings.ConditionalAccessSettingsRequestBuilder;
-import microsoft.graph.models.DeviceManagementExchangeOnPremisesPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the exchangeOnPremisesPolicy property of the microsoft.graph.deviceManagement entity. */
 public class ExchangeOnPremisesPolicyRequestBuilder {
     /** The conditionalAccessSettings property */

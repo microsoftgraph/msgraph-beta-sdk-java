@@ -1,5 +1,7 @@
-package microsoft.graph.me.profile.anniversaries.item;
+package com.microsoft.graph.me.profile.anniversaries.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PersonAnnualEvent;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PersonAnnualEvent;
 /** Provides operations to manage the anniversaries property of the microsoft.graph.profile entity. */
 public class PersonAnnualEventItemRequestBuilder {
     /** Path parameters for the request */

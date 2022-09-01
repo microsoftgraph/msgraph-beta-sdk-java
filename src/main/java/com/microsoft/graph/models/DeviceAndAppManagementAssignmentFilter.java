@@ -1,5 +1,6 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.PayloadCompatibleAssignmentFilter;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A class containing the properties used for Assignment Filter. */
 public class DeviceAndAppManagementAssignmentFilter extends Entity implements Parsable {
     /** Creation time of the Assignment Filter. */
     private OffsetDateTime _createdDateTime;
@@ -24,7 +26,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     /** Rule definition of the Assignment Filter. */
     private String _rule;
     /**
-     * Instantiates a new DeviceAndAppManagementAssignmentFilter and sets the default values.
+     * Instantiates a new deviceAndAppManagementAssignmentFilter and sets the default values.
      * @return a void
      */
     public DeviceAndAppManagementAssignmentFilter() {
@@ -34,7 +36,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceAndAppManagementAssignmentFilter
+     * @return a deviceAndAppManagementAssignmentFilter
      */
     @javax.annotation.Nonnull
     public static DeviceAndAppManagementAssignmentFilter createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

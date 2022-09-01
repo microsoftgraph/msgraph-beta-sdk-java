@@ -1,5 +1,9 @@
-package microsoft.graph.directory.inboundshareduserprofiles;
+package com.microsoft.graph.directory.inboundshareduserprofiles;
 
+import com.microsoft.graph.directory.inboundshareduserprofiles.count.CountRequestBuilder;
+import com.microsoft.graph.models.InboundSharedUserProfile;
+import com.microsoft.graph.models.InboundSharedUserProfileCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.inboundshareduserprofiles.count.CountRequestBuilder;
-import microsoft.graph.models.InboundSharedUserProfile;
-import microsoft.graph.models.InboundSharedUserProfileCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the inboundSharedUserProfiles property of the microsoft.graph.directory entity. */
 public class InboundSharedUserProfilesRequestBuilder {
     /** The Count property */

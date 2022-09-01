@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,9 +8,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Enrollment Profile used to enroll Android Enterprise devices using Google's Cloud Management. */
 public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsable {
     /** Tenant GUID the enrollment profile belongs to. */
     private String _accountId;
+    /** Boolean that indicates that the Wi-Fi network should be configured during device provisioning. When set to TRUE, device provisioning will use Wi-Fi related properties to automatically connect to Wi-Fi networks. When set to FALSE or undefined, other Wi-Fi related properties will be ignored. Default value is TRUE. Returned by default. */
+    private Boolean _configureWifi;
     /** Date time the enrollment profile was created. */
     private OffsetDateTime _createdDateTime;
     /** Description for the enrollment profile. */
@@ -48,7 +51,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     /** String that contains the wi-fi login ssid */
     private String _wifiSsid;
     /**
-     * Instantiates a new AndroidDeviceOwnerEnrollmentProfile and sets the default values.
+     * Instantiates a new androidDeviceOwnerEnrollmentProfile and sets the default values.
      * @return a void
      */
     public AndroidDeviceOwnerEnrollmentProfile() {
@@ -58,7 +61,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidDeviceOwnerEnrollmentProfile
+     * @return a androidDeviceOwnerEnrollmentProfile
      */
     @javax.annotation.Nonnull
     public static AndroidDeviceOwnerEnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -72,6 +75,14 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     @javax.annotation.Nullable
     public String getAccountId() {
         return this._accountId;
+    }
+    /**
+     * Gets the configureWifi property value. Boolean that indicates that the Wi-Fi network should be configured during device provisioning. When set to TRUE, device provisioning will use Wi-Fi related properties to automatically connect to Wi-Fi networks. When set to FALSE or undefined, other Wi-Fi related properties will be ignored. Default value is TRUE. Returned by default.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getConfigureWifi() {
+        return this._configureWifi;
     }
     /**
      * Gets the createdDateTime property value. Date time the enrollment profile was created.
@@ -138,6 +149,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         final AndroidDeviceOwnerEnrollmentProfile currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("accountId", (n) -> { currentObject.setAccountId(n.getStringValue()); });
+            this.put("configureWifi", (n) -> { currentObject.setConfigureWifi(n.getBooleanValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -255,6 +267,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("accountId", this.getAccountId());
+        writer.writeBooleanValue("configureWifi", this.getConfigureWifi());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -281,6 +294,14 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      */
     public void setAccountId(@javax.annotation.Nullable final String value) {
         this._accountId = value;
+    }
+    /**
+     * Sets the configureWifi property value. Boolean that indicates that the Wi-Fi network should be configured during device provisioning. When set to TRUE, device provisioning will use Wi-Fi related properties to automatically connect to Wi-Fi networks. When set to FALSE or undefined, other Wi-Fi related properties will be ignored. Default value is TRUE. Returned by default.
+     * @param value Value to set for the configureWifi property.
+     * @return a void
+     */
+    public void setConfigureWifi(@javax.annotation.Nullable final Boolean value) {
+        this._configureWifi = value;
     }
     /**
      * Sets the createdDateTime property value. Date time the enrollment profile was created.

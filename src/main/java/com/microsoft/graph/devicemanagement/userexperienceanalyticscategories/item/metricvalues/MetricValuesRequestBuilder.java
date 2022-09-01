@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticscategories.item.metricvalues;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticscategories.item.metricvalues;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticscategories.item.metricvalues.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsMetric;
+import com.microsoft.graph.models.UserExperienceAnalyticsMetricCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticscategories.item.metricvalues.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsMetric;
-import microsoft.graph.models.UserExperienceAnalyticsMetricCollectionResponse;
 /** Provides operations to manage the metricValues property of the microsoft.graph.userExperienceAnalyticsCategory entity. */
 public class MetricValuesRequestBuilder {
     /** The Count property */

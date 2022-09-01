@@ -1,5 +1,10 @@
-package microsoft.graph.app.calls;
+package com.microsoft.graph.app.calls;
 
+import com.microsoft.graph.app.calls.count.CountRequestBuilder;
+import com.microsoft.graph.app.calls.logteleconferencedevicequality.LogTeleconferenceDeviceQualityRequestBuilder;
+import com.microsoft.graph.models.Call;
+import com.microsoft.graph.models.CallCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.app.calls.count.CountRequestBuilder;
-import microsoft.graph.app.calls.logteleconferencedevicequality.LogTeleconferenceDeviceQualityRequestBuilder;
-import microsoft.graph.models.Call;
-import microsoft.graph.models.CallCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the calls property of the microsoft.graph.commsApplication entity. */
 public class CallsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,7 @@
-package microsoft.graph.me.chats.item.pinnedmessages.item.message;
+package com.microsoft.graph.me.chats.item.pinnedmessages.item.message;
 
+import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ChatMessage;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the message property of the microsoft.graph.pinnedChatMessageInfo entity. */
 public class MessageRequestBuilder {
     /** Path parameters for the request */

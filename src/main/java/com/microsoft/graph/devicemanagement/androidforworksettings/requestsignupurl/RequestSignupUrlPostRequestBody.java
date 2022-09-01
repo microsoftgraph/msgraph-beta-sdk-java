@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.androidforworksettings.requestsignupurl;
+package com.microsoft.graph.devicemanagement.androidforworksettings.requestsignupurl;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

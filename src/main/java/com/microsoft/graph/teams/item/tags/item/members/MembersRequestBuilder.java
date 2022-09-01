@@ -1,5 +1,9 @@
-package microsoft.graph.teams.item.tags.item.members;
+package com.microsoft.graph.teams.item.tags.item.members;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamworkTagMember;
+import com.microsoft.graph.models.TeamworkTagMemberCollectionResponse;
+import com.microsoft.graph.teams.item.tags.item.members.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamworkTagMember;
-import microsoft.graph.models.TeamworkTagMemberCollectionResponse;
-import microsoft.graph.teams.item.tags.item.members.count.CountRequestBuilder;
 /** Provides operations to manage the members property of the microsoft.graph.teamworkTag entity. */
 public class MembersRequestBuilder {
     /** The Count property */

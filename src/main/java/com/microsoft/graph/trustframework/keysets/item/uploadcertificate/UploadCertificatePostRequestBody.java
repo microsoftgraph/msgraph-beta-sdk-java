@@ -1,4 +1,4 @@
-package microsoft.graph.trustframework.keysets.item.uploadcertificate;
+package com.microsoft.graph.trustframework.keysets.item.uploadcertificate;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

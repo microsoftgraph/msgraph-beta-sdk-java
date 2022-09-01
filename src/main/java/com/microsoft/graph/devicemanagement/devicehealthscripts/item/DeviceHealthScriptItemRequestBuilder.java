@@ -1,5 +1,16 @@
-package microsoft.graph.devicemanagement.devicehealthscripts.item;
+package com.microsoft.graph.devicemanagement.devicehealthscripts.item;
 
+import com.microsoft.graph.devicemanagement.devicehealthscripts.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicehealthscripts.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicehealthscripts.item.assignments.item.DeviceHealthScriptAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicehealthscripts.item.devicerunstates.DeviceRunStatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicehealthscripts.item.devicerunstates.item.DeviceHealthScriptDeviceStateItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicehealthscripts.item.getglobalscripthighestavailableversion.GetGlobalScriptHighestAvailableVersionRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicehealthscripts.item.getremediationhistory.GetRemediationHistoryRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicehealthscripts.item.runsummary.RunSummaryRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicehealthscripts.item.updateglobalscript.UpdateGlobalScriptRequestBuilder;
+import com.microsoft.graph.models.DeviceHealthScript;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicehealthscripts.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.devicehealthscripts.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.devicehealthscripts.item.assignments.item.DeviceHealthScriptAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicehealthscripts.item.devicerunstates.DeviceRunStatesRequestBuilder;
-import microsoft.graph.devicemanagement.devicehealthscripts.item.devicerunstates.item.DeviceHealthScriptDeviceStateItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicehealthscripts.item.getglobalscripthighestavailableversion.GetGlobalScriptHighestAvailableVersionRequestBuilder;
-import microsoft.graph.devicemanagement.devicehealthscripts.item.getremediationhistory.GetRemediationHistoryRequestBuilder;
-import microsoft.graph.devicemanagement.devicehealthscripts.item.runsummary.RunSummaryRequestBuilder;
-import microsoft.graph.devicemanagement.devicehealthscripts.item.updateglobalscript.UpdateGlobalScriptRequestBuilder;
-import microsoft.graph.models.DeviceHealthScript;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceHealthScripts property of the microsoft.graph.deviceManagement entity. */
 public class DeviceHealthScriptItemRequestBuilder {
     /** The assign property */
@@ -64,7 +64,7 @@ public class DeviceHealthScriptItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceHealthScripts.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceHealthScripts.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a DeviceHealthScriptAssignmentItemRequestBuilder
      */
@@ -244,7 +244,7 @@ public class DeviceHealthScriptItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceHealthScripts.item.deviceRunStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceHealthScripts.item.deviceRunStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceHealthScriptDeviceStateItemRequestBuilder
      */

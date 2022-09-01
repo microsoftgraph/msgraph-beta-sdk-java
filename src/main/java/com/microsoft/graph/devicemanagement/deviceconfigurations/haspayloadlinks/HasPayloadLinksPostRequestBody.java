@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.deviceconfigurations.haspayloadlinks;
+package com.microsoft.graph.devicemanagement.deviceconfigurations.haspayloadlinks;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,7 @@
-package microsoft.graph.identity.userflows.item;
+package com.microsoft.graph.identity.userflows.item;
 
+import com.microsoft.graph.models.IdentityUserFlow;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.IdentityUserFlow;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userFlows property of the microsoft.graph.identityContainer entity. */
 public class IdentityUserFlowItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,6 @@
-package microsoft.graph.reports.getoffice365groupsactivityfilecountswithperiod;
+package com.microsoft.graph.reports.getoffice365groupsactivityfilecountswithperiod;
 
+import com.microsoft.graph.models.Office365GroupsActivityFileCounts;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Office365GroupsActivityFileCounts;
 /** Provides operations to call the getOffice365GroupsActivityFileCounts method. */
 public class GetOffice365GroupsActivityFileCountsWithPeriodResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

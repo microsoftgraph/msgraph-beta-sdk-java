@@ -1,5 +1,9 @@
-package microsoft.graph.dataclassification.classifyfilejobs;
+package com.microsoft.graph.dataclassification.classifyfilejobs;
 
+import com.microsoft.graph.dataclassification.classifyfilejobs.count.CountRequestBuilder;
+import com.microsoft.graph.models.JobResponseBase;
+import com.microsoft.graph.models.JobResponseBaseCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.dataclassification.classifyfilejobs.count.CountRequestBuilder;
-import microsoft.graph.models.JobResponseBase;
-import microsoft.graph.models.JobResponseBaseCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the classifyFileJobs property of the microsoft.graph.dataClassificationService entity. */
 public class ClassifyFileJobsRequestBuilder {
     /** The Count property */

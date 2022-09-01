@@ -1,5 +1,9 @@
-package microsoft.graph.teamwork.teamtemplates.item;
+package com.microsoft.graph.teamwork.teamtemplates.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamTemplate;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.DefinitionsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.TeamTemplateDefinitionItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamTemplate;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.DefinitionsRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.TeamTemplateDefinitionItemRequestBuilder;
 /** Provides operations to manage the teamTemplates property of the microsoft.graph.teamwork entity. */
 public class TeamTemplateItemRequestBuilder {
     /** The definitions property */
@@ -149,7 +149,7 @@ public class TeamTemplateItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item collection
      * @param id Unique identifier of the item
      * @return a TeamTemplateDefinitionItemRequestBuilder
      */

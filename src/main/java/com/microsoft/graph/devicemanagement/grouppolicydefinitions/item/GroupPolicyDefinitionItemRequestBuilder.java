@@ -1,5 +1,13 @@
-package microsoft.graph.devicemanagement.grouppolicydefinitions.item;
+package com.microsoft.graph.devicemanagement.grouppolicydefinitions.item;
 
+import com.microsoft.graph.devicemanagement.grouppolicydefinitions.item.category.CategoryRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicydefinitions.item.definitionfile.DefinitionFileRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicydefinitions.item.nextversiondefinition.NextVersionDefinitionRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicydefinitions.item.presentations.item.GroupPolicyPresentationItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicydefinitions.item.presentations.PresentationsRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicydefinitions.item.previousversiondefinition.PreviousVersionDefinitionRequestBuilder;
+import com.microsoft.graph.models.GroupPolicyDefinition;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.grouppolicydefinitions.item.category.CategoryRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicydefinitions.item.definitionfile.DefinitionFileRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicydefinitions.item.nextversiondefinition.NextVersionDefinitionRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicydefinitions.item.presentations.item.GroupPolicyPresentationItemRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicydefinitions.item.presentations.PresentationsRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicydefinitions.item.previousversiondefinition.PreviousVersionDefinitionRequestBuilder;
-import microsoft.graph.models.GroupPolicyDefinition;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groupPolicyDefinitions property of the microsoft.graph.deviceManagement entity. */
 public class GroupPolicyDefinitionItemRequestBuilder {
     /** The category property */
@@ -330,7 +330,7 @@ public class GroupPolicyDefinitionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyDefinitions.item.presentations.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.groupPolicyDefinitions.item.presentations.item collection
      * @param id Unique identifier of the item
      * @return a GroupPolicyPresentationItemRequestBuilder
      */

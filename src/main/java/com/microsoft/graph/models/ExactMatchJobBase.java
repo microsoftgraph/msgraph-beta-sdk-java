@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.ExactMatchLookupJob;
+import com.microsoft.graph.models.ExactMatchSession;
+import com.microsoft.graph.models.ExactMatchSessionBase;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

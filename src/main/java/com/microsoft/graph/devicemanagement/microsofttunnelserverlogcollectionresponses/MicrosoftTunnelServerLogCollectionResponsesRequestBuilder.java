@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.microsofttunnelserverlogcollectionresponses;
+package com.microsoft.graph.devicemanagement.microsofttunnelserverlogcollectionresponses;
 
+import com.microsoft.graph.devicemanagement.microsofttunnelserverlogcollectionresponses.count.CountRequestBuilder;
+import com.microsoft.graph.models.MicrosoftTunnelServerLogCollectionResponse;
+import com.microsoft.graph.models.MicrosoftTunnelServerLogCollectionResponseCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.microsofttunnelserverlogcollectionresponses.count.CountRequestBuilder;
-import microsoft.graph.models.MicrosoftTunnelServerLogCollectionResponse;
-import microsoft.graph.models.MicrosoftTunnelServerLogCollectionResponseCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the microsoftTunnelServerLogCollectionResponses property of the microsoft.graph.deviceManagement entity. */
 public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.me.approvals.item;
+package com.microsoft.graph.me.approvals.item;
 
+import com.microsoft.graph.me.approvals.item.steps.item.ApprovalStepItemRequestBuilder;
+import com.microsoft.graph.me.approvals.item.steps.StepsRequestBuilder;
+import com.microsoft.graph.models.Approval;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.approvals.item.steps.item.ApprovalStepItemRequestBuilder;
-import microsoft.graph.me.approvals.item.steps.StepsRequestBuilder;
-import microsoft.graph.models.Approval;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the approvals property of the microsoft.graph.user entity. */
 public class ApprovalItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class ApprovalItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.approvals.item.steps.item collection
+     * Gets an item from the com.Microsoft.Graph.me.approvals.item.steps.item collection
      * @param id Unique identifier of the item
      * @return a ApprovalStepItemRequestBuilder
      */

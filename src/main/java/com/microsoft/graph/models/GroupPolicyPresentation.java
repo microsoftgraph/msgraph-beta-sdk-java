@@ -1,5 +1,15 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.GroupPolicyPresentationCheckBox;
+import com.microsoft.graph.models.GroupPolicyPresentationComboBox;
+import com.microsoft.graph.models.GroupPolicyPresentationDecimalTextBox;
+import com.microsoft.graph.models.GroupPolicyPresentationDropdownList;
+import com.microsoft.graph.models.GroupPolicyPresentationListBox;
+import com.microsoft.graph.models.GroupPolicyPresentationLongDecimalTextBox;
+import com.microsoft.graph.models.GroupPolicyPresentationMultiTextBox;
+import com.microsoft.graph.models.GroupPolicyPresentationText;
+import com.microsoft.graph.models.GroupPolicyPresentationTextBox;
+import com.microsoft.graph.models.GroupPolicyUploadedPresentation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

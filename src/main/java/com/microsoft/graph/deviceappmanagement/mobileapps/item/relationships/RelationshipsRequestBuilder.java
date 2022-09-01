@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.mobileapps.item.relationships;
+package com.microsoft.graph.deviceappmanagement.mobileapps.item.relationships;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.relationships.count.CountRequestBuilder;
+import com.microsoft.graph.models.MobileAppRelationship;
+import com.microsoft.graph.models.MobileAppRelationshipCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileapps.item.relationships.count.CountRequestBuilder;
-import microsoft.graph.models.MobileAppRelationship;
-import microsoft.graph.models.MobileAppRelationshipCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the relationships property of the microsoft.graph.mobileApp entity. */
 public class RelationshipsRequestBuilder {
     /** The Count property */

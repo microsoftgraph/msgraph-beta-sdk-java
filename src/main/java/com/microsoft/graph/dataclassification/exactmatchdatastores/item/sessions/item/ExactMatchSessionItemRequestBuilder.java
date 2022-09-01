@@ -1,5 +1,11 @@
-package microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item;
+package com.microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item;
 
+import com.microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item.commit.CommitRequestBuilder;
+import com.microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item.renew.RenewRequestBuilder;
+import com.microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item.uploadagent.UploadAgentRequestBuilder;
+import com.microsoft.graph.models.ExactMatchSession;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item.cancel.CancelRequestBuilder;
-import microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item.commit.CommitRequestBuilder;
-import microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item.renew.RenewRequestBuilder;
-import microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item.uploadagent.UploadAgentRequestBuilder;
-import microsoft.graph.models.ExactMatchSession;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the sessions property of the microsoft.graph.exactMatchDataStore entity. */
 public class ExactMatchSessionItemRequestBuilder {
     /** The cancel property */

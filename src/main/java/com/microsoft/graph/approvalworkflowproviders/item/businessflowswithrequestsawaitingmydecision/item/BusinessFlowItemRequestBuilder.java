@@ -1,5 +1,8 @@
-package microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item;
+package com.microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item;
 
+import com.microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.recorddecisions.RecordDecisionsRequestBuilder;
+import com.microsoft.graph.models.BusinessFlow;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.recorddecisions.RecordDecisionsRequestBuilder;
-import microsoft.graph.models.BusinessFlow;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the businessFlowsWithRequestsAwaitingMyDecision property of the microsoft.graph.approvalWorkflowProvider entity. */
 public class BusinessFlowItemRequestBuilder {
     /** Path parameters for the request */

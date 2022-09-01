@@ -1,5 +1,11 @@
-package microsoft.graph.devicemanagement.microsofttunnelsites.item;
+package com.microsoft.graph.devicemanagement.microsofttunnelsites.item;
 
+import com.microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelconfiguration.MicrosoftTunnelConfigurationRequestBuilder;
+import com.microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.item.MicrosoftTunnelServerItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.MicrosoftTunnelServersRequestBuilder;
+import com.microsoft.graph.devicemanagement.microsofttunnelsites.item.requestupgrade.RequestUpgradeRequestBuilder;
+import com.microsoft.graph.models.MicrosoftTunnelSite;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelconfiguration.MicrosoftTunnelConfigurationRequestBuilder;
-import microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.item.MicrosoftTunnelServerItemRequestBuilder;
-import microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelservers.MicrosoftTunnelServersRequestBuilder;
-import microsoft.graph.devicemanagement.microsofttunnelsites.item.requestupgrade.RequestUpgradeRequestBuilder;
-import microsoft.graph.models.MicrosoftTunnelSite;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the microsoftTunnelSites property of the microsoft.graph.deviceManagement entity. */
 public class MicrosoftTunnelSiteItemRequestBuilder {
     /** The microsoftTunnelConfiguration property */
@@ -263,7 +263,7 @@ public class MicrosoftTunnelSiteItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.microsoftTunnelSites.item.microsoftTunnelServers.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.microsoftTunnelSites.item.microsoftTunnelServers.item collection
      * @param id Unique identifier of the item
      * @return a MicrosoftTunnelServerItemRequestBuilder
      */

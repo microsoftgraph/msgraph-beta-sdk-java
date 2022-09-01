@@ -1,4 +1,4 @@
-package microsoft.graph.deviceappmanagement.mobileapps.getmobileappcountwithstatus;
+package com.microsoft.graph.deviceappmanagement.mobileapps.getmobileappcountwithstatus;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,6 @@
-package microsoft.graph.users.item.manageddevices.item.createdevicelogcollectionrequest;
+package com.microsoft.graph.users.item.manageddevices.item.createdevicelogcollectionrequest;
 
+import com.microsoft.graph.models.DeviceLogCollectionRequest;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceLogCollectionRequest;
 /** Provides operations to call the createDeviceLogCollectionRequest method. */
 public class CreateDeviceLogCollectionRequestPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -15,7 +15,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
     /** The metric values for the user experience analytics operating system regression. */
     private java.util.List<UserExperienceAnalyticsMetric> _operatingSystemRegression;
     /**
-     * Instantiates a new userExperienceAnalyticsRegressionSummary and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsRegressionSummary and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsRegressionSummary() {
@@ -25,7 +25,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsRegressionSummary
+     * @return a UserExperienceAnalyticsRegressionSummary
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsRegressionSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

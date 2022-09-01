@@ -1,5 +1,16 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AndroidLobApp;
+import com.microsoft.graph.models.IosLobApp;
+import com.microsoft.graph.models.MacOSDmgApp;
+import com.microsoft.graph.models.MacOSLobApp;
+import com.microsoft.graph.models.Win32LobApp;
+import com.microsoft.graph.models.WindowsAppX;
+import com.microsoft.graph.models.WindowsMobileMSI;
+import com.microsoft.graph.models.WindowsPhone81AppX;
+import com.microsoft.graph.models.WindowsPhone81AppXBundle;
+import com.microsoft.graph.models.WindowsPhoneXAP;
+import com.microsoft.graph.models.WindowsUniversalAppX;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.advancedthreatprotectiononboardingstatesummary.advancedthreatprotectiononboardingdevicesettingstates.item;
+package com.microsoft.graph.devicemanagement.advancedthreatprotectiononboardingstatesummary.advancedthreatprotectiononboardingdevicesettingstates.item;
 
+import com.microsoft.graph.models.AdvancedThreatProtectionOnboardingDeviceSettingState;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AdvancedThreatProtectionOnboardingDeviceSettingState;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the advancedThreatProtectionOnboardingDeviceSettingStates property of the microsoft.graph.advancedThreatProtectionOnboardingStateSummary entity. */
 public class AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,7 @@
-package microsoft.graph.identity.b2cuserflows.item.userflowidentityproviders.item;
+package com.microsoft.graph.identity.b2cuserflows.item.userflowidentityproviders.item;
 
+import com.microsoft.graph.models.IdentityProviderBase;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.IdentityProviderBase;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userFlowIdentityProviders property of the microsoft.graph.b2cIdentityUserFlow entity. */
 public class IdentityProviderBaseItemRequestBuilder {
     /** Path parameters for the request */

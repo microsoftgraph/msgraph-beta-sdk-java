@@ -1,5 +1,10 @@
-package microsoft.graph.dataclassification.exactmatchdatastores.item;
+package com.microsoft.graph.dataclassification.exactmatchdatastores.item;
 
+import com.microsoft.graph.dataclassification.exactmatchdatastores.item.lookup.LookupRequestBuilder;
+import com.microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item.ExactMatchSessionItemRequestBuilder;
+import com.microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.SessionsRequestBuilder;
+import com.microsoft.graph.models.ExactMatchDataStore;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.dataclassification.exactmatchdatastores.item.lookup.LookupRequestBuilder;
-import microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.item.ExactMatchSessionItemRequestBuilder;
-import microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.SessionsRequestBuilder;
-import microsoft.graph.models.ExactMatchDataStore;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the exactMatchDataStores property of the microsoft.graph.dataClassificationService entity. */
 public class ExactMatchDataStoreItemRequestBuilder {
     /** The lookup property */
@@ -312,7 +312,7 @@ public class ExactMatchDataStoreItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.dataClassification.exactMatchDataStores.item.sessions.item collection
+     * Gets an item from the com.Microsoft.Graph.dataClassification.exactMatchDataStores.item.sessions.item collection
      * @param id Unique identifier of the item
      * @return a ExactMatchSessionItemRequestBuilder
      */

@@ -1,5 +1,11 @@
-package microsoft.graph.identityprotection.riskyserviceprincipals;
+package com.microsoft.graph.identityprotection.riskyserviceprincipals;
 
+import com.microsoft.graph.identityprotection.riskyserviceprincipals.confirmcompromised.ConfirmCompromisedRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyserviceprincipals.count.CountRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyserviceprincipals.dismiss.DismissRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RiskyServicePrincipal;
+import com.microsoft.graph.models.RiskyServicePrincipalCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identityprotection.riskyserviceprincipals.confirmcompromised.ConfirmCompromisedRequestBuilder;
-import microsoft.graph.identityprotection.riskyserviceprincipals.count.CountRequestBuilder;
-import microsoft.graph.identityprotection.riskyserviceprincipals.dismiss.DismissRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RiskyServicePrincipal;
-import microsoft.graph.models.RiskyServicePrincipalCollectionResponse;
 /** Provides operations to manage the riskyServicePrincipals property of the microsoft.graph.identityProtectionRoot entity. */
 public class RiskyServicePrincipalsRequestBuilder {
     /** The confirmCompromised property */

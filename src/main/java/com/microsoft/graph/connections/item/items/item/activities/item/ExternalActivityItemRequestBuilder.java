@@ -1,5 +1,8 @@
-package microsoft.graph.connections.item.items.item.activities.item;
+package com.microsoft.graph.connections.item.items.item.activities.item;
 
+import com.microsoft.graph.connections.item.items.item.activities.item.performedby.PerformedByRequestBuilder;
+import com.microsoft.graph.models.externalconnectors.ExternalActivity;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.connections.item.items.item.activities.item.performedby.PerformedByRequestBuilder;
-import microsoft.graph.models.externalconnectors.ExternalActivity;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the activities property of the microsoft.graph.externalConnectors.externalItem entity. */
 public class ExternalActivityItemRequestBuilder {
     /** Path parameters for the request */

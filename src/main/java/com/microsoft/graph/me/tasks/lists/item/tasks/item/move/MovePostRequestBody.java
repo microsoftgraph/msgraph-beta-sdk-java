@@ -1,4 +1,4 @@
-package microsoft.graph.me.tasks.lists.item.tasks.item.move;
+package com.microsoft.graph.me.tasks.lists.item.tasks.item.move;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

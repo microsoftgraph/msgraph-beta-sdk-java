@@ -1,4 +1,4 @@
-package microsoft.graph.directorysettingtemplates.item.getmembergroups;
+package com.microsoft.graph.directorysettingtemplates.item.getmembergroups;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

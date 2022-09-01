@@ -1,5 +1,12 @@
-package microsoft.graph.directoryroletemplates.item;
+package com.microsoft.graph.directoryroletemplates.item;
 
+import com.microsoft.graph.directoryroletemplates.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.directoryroletemplates.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.directoryroletemplates.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.directoryroletemplates.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.directoryroletemplates.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.models.DirectoryRoleTemplate;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directoryroletemplates.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.directoryroletemplates.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.directoryroletemplates.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.directoryroletemplates.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.directoryroletemplates.item.restore.RestoreRequestBuilder;
-import microsoft.graph.models.DirectoryRoleTemplate;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of directoryRoleTemplate entities. */
 public class DirectoryRoleTemplateItemRequestBuilder {
     /** The checkMemberGroups property */
@@ -63,7 +63,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
     public DirectoryRoleTemplateItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/directoryRoleTemplates/{directoryRoleTemplate%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directoryRoleTemplates/{directoryRoleTemplate%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -75,7 +75,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
      * @return a void
      */
     public DirectoryRoleTemplateItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/directoryRoleTemplates/{directoryRoleTemplate%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directoryRoleTemplates/{directoryRoleTemplate%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -345,10 +345,6 @@ public class DirectoryRoleTemplateItemRequestBuilder {
     }
     /** Retrieve the properties and relationships of a directoryroletemplate object. */
     public class DirectoryRoleTemplateItemRequestBuilderGetQueryParameters {
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable

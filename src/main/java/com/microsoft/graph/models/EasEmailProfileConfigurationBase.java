@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.IosEasEmailProfileConfiguration;
+import com.microsoft.graph.models.Windows10EasEmailProfileConfiguration;
+import com.microsoft.graph.models.WindowsPhoneEASEmailProfileConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.devicecompliancescripts;
+package com.microsoft.graph.devicemanagement.devicecompliancescripts;
 
+import com.microsoft.graph.devicemanagement.devicecompliancescripts.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceComplianceScript;
+import com.microsoft.graph.models.DeviceComplianceScriptCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecompliancescripts.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceComplianceScript;
-import microsoft.graph.models.DeviceComplianceScriptCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceComplianceScripts property of the microsoft.graph.deviceManagement entity. */
 public class DeviceComplianceScriptsRequestBuilder {
     /** The Count property */

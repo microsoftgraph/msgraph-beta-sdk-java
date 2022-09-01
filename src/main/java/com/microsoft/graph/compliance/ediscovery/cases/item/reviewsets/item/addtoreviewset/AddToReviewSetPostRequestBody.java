@@ -1,5 +1,7 @@
-package microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.addtoreviewset;
+package com.microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.addtoreviewset;
 
+import com.microsoft.graph.models.ediscovery.AdditionalDataOptions;
+import com.microsoft.graph.models.ediscovery.SourceCollection;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ediscovery.AdditionalDataOptions;
-import microsoft.graph.models.ediscovery.SourceCollection;
 /** Provides operations to call the addToReviewSet method. */
 public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

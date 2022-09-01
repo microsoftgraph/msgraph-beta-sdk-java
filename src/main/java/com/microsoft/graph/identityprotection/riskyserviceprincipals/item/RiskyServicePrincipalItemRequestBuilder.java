@@ -1,5 +1,9 @@
-package microsoft.graph.identityprotection.riskyserviceprincipals.item;
+package com.microsoft.graph.identityprotection.riskyserviceprincipals.item;
 
+import com.microsoft.graph.identityprotection.riskyserviceprincipals.item.history.HistoryRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyserviceprincipals.item.history.item.RiskyServicePrincipalHistoryItemItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RiskyServicePrincipal;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identityprotection.riskyserviceprincipals.item.history.HistoryRequestBuilder;
-import microsoft.graph.identityprotection.riskyserviceprincipals.item.history.item.RiskyServicePrincipalHistoryItemItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RiskyServicePrincipal;
 /** Provides operations to manage the riskyServicePrincipals property of the microsoft.graph.identityProtectionRoot entity. */
 public class RiskyServicePrincipalItemRequestBuilder {
     /** The history property */
@@ -251,7 +251,7 @@ public class RiskyServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityProtection.riskyServicePrincipals.item.history.item collection
+     * Gets an item from the com.Microsoft.Graph.identityProtection.riskyServicePrincipals.item.history.item collection
      * @param id Unique identifier of the item
      * @return a RiskyServicePrincipalHistoryItemItemRequestBuilder
      */

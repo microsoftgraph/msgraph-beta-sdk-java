@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.dimensions.item.dimensionvalues;
+package com.microsoft.graph.financials.companies.item.dimensions.item.dimensionvalues;
 
+import com.microsoft.graph.financials.companies.item.dimensions.item.dimensionvalues.count.CountRequestBuilder;
+import com.microsoft.graph.models.DimensionValue;
+import com.microsoft.graph.models.DimensionValueCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.dimensions.item.dimensionvalues.count.CountRequestBuilder;
-import microsoft.graph.models.DimensionValue;
-import microsoft.graph.models.DimensionValueCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the dimensionValues property of the microsoft.graph.dimension entity. */
 public class DimensionValuesRequestBuilder {
     /** The Count property */

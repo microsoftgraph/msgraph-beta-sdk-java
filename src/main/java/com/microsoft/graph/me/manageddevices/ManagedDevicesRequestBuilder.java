@@ -1,5 +1,16 @@
-package microsoft.graph.me.manageddevices;
+package com.microsoft.graph.me.manageddevices;
 
+import com.microsoft.graph.me.manageddevices.appdiagnosticswithupn.AppDiagnosticsWithUpnRequestBuilder;
+import com.microsoft.graph.me.manageddevices.bulkreprovisioncloudpc.BulkReprovisionCloudPcRequestBuilder;
+import com.microsoft.graph.me.manageddevices.bulkrestorecloudpc.BulkRestoreCloudPcRequestBuilder;
+import com.microsoft.graph.me.manageddevices.bulksetcloudpcreviewstatus.BulkSetCloudPcReviewStatusRequestBuilder;
+import com.microsoft.graph.me.manageddevices.count.CountRequestBuilder;
+import com.microsoft.graph.me.manageddevices.downloadappdiagnostics.DownloadAppDiagnosticsRequestBuilder;
+import com.microsoft.graph.me.manageddevices.executeaction.ExecuteActionRequestBuilder;
+import com.microsoft.graph.me.manageddevices.movedevicestoou.MoveDevicesToOURequestBuilder;
+import com.microsoft.graph.models.ManagedDevice;
+import com.microsoft.graph.models.ManagedDeviceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.manageddevices.appdiagnosticswithupn.AppDiagnosticsWithUpnRequestBuilder;
-import microsoft.graph.me.manageddevices.bulkreprovisioncloudpc.BulkReprovisionCloudPcRequestBuilder;
-import microsoft.graph.me.manageddevices.bulkrestorecloudpc.BulkRestoreCloudPcRequestBuilder;
-import microsoft.graph.me.manageddevices.bulksetcloudpcreviewstatus.BulkSetCloudPcReviewStatusRequestBuilder;
-import microsoft.graph.me.manageddevices.count.CountRequestBuilder;
-import microsoft.graph.me.manageddevices.downloadappdiagnostics.DownloadAppDiagnosticsRequestBuilder;
-import microsoft.graph.me.manageddevices.executeaction.ExecuteActionRequestBuilder;
-import microsoft.graph.me.manageddevices.movedevicestoou.MoveDevicesToOURequestBuilder;
-import microsoft.graph.models.ManagedDevice;
-import microsoft.graph.models.ManagedDeviceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedDevices property of the microsoft.graph.user entity. */
 public class ManagedDevicesRequestBuilder {
     /** The bulkReprovisionCloudPc property */

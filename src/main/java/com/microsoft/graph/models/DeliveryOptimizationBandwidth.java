@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DeliveryOptimizationBandwidthAbsolute;
+import com.microsoft.graph.models.DeliveryOptimizationBandwidthHoursWithPercentage;
+import com.microsoft.graph.models.DeliveryOptimizationBandwidthPercentage;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

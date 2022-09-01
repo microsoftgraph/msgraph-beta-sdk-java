@@ -1,5 +1,7 @@
-package microsoft.graph.me.security.informationprotection.sensitivitylabels.item.parent;
+package com.microsoft.graph.me.security.informationprotection.sensitivitylabels.item.parent;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.SensitivityLabel;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.SensitivityLabel;
 /** Provides operations to manage the parent property of the microsoft.graph.security.sensitivityLabel entity. */
 public class ParentRequestBuilder {
     /** Path parameters for the request */

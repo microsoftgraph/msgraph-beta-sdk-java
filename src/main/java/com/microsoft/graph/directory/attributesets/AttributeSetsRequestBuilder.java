@@ -1,5 +1,9 @@
-package microsoft.graph.directory.attributesets;
+package com.microsoft.graph.directory.attributesets;
 
+import com.microsoft.graph.directory.attributesets.count.CountRequestBuilder;
+import com.microsoft.graph.models.AttributeSet;
+import com.microsoft.graph.models.AttributeSetCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.attributesets.count.CountRequestBuilder;
-import microsoft.graph.models.AttributeSet;
-import microsoft.graph.models.AttributeSetCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the attributeSets property of the microsoft.graph.directory entity. */
 public class AttributeSetsRequestBuilder {
     /** The Count property */

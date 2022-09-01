@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Zebra FOTA deployment entity that describes settings, deployment device groups required to create a FOTA deployment, and deployment status. */
 public class ZebraFotaDeployment extends Entity implements Parsable {
     /** Collection of Android FOTA Assignment */
     private java.util.List<AndroidFotaDeploymentAssignment> _deploymentAssignments;
@@ -19,7 +20,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     /** A human readable name of the deployment. */
     private String _displayName;
     /**
-     * Instantiates a new ZebraFotaDeployment and sets the default values.
+     * Instantiates a new zebraFotaDeployment and sets the default values.
      * @return a void
      */
     public ZebraFotaDeployment() {
@@ -29,7 +30,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ZebraFotaDeployment
+     * @return a zebraFotaDeployment
      */
     @javax.annotation.Nonnull
     public static ZebraFotaDeployment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

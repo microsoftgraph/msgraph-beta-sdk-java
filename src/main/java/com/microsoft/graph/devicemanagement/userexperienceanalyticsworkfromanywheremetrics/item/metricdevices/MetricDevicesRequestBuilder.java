@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item.metricdevices;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item.metricdevices;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item.metricdevices.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDevice;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item.metricdevices.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDevice;
-import microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse;
 /** Provides operations to manage the metricDevices property of the microsoft.graph.userExperienceAnalyticsWorkFromAnywhereMetric entity. */
 public class MetricDevicesRequestBuilder {
     /** The Count property */

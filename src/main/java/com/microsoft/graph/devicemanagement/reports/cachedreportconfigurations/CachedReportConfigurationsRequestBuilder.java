@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.reports.cachedreportconfigurations;
+package com.microsoft.graph.devicemanagement.reports.cachedreportconfigurations;
 
+import com.microsoft.graph.devicemanagement.reports.cachedreportconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementCachedReportConfiguration;
+import com.microsoft.graph.models.DeviceManagementCachedReportConfigurationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.reports.cachedreportconfigurations.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementCachedReportConfiguration;
-import microsoft.graph.models.DeviceManagementCachedReportConfigurationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the cachedReportConfigurations property of the microsoft.graph.deviceManagementReports entity. */
 public class CachedReportConfigurationsRequestBuilder {
     /** The Count property */

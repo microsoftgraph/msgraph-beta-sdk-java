@@ -1,5 +1,11 @@
-package microsoft.graph.security.cases.ediscoverycases.item.legalholds.item;
+package com.microsoft.graph.security.cases.ediscoverycases.item.legalholds.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryHoldPolicy;
+import com.microsoft.graph.security.cases.ediscoverycases.item.legalholds.item.sitesources.item.SiteSourceItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.legalholds.item.sitesources.SiteSourcesRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.legalholds.item.usersources.item.UserSourceItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.legalholds.item.usersources.UserSourcesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryHoldPolicy;
-import microsoft.graph.security.cases.ediscoverycases.item.legalholds.item.sitesources.item.SiteSourceItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.legalholds.item.sitesources.SiteSourcesRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.legalholds.item.usersources.item.UserSourceItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.legalholds.item.usersources.UserSourcesRequestBuilder;
 /** Provides operations to manage the legalHolds property of the microsoft.graph.security.ediscoveryCase entity. */
 public class EdiscoveryHoldPolicyItemRequestBuilder {
     /** Path parameters for the request */
@@ -313,7 +313,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.legalHolds.item.siteSources.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.legalHolds.item.siteSources.item collection
      * @param id Unique identifier of the item
      * @return a SiteSourceItemRequestBuilder
      */
@@ -325,7 +325,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder {
         return new SiteSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.legalHolds.item.userSources.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.legalHolds.item.userSources.item collection
      * @param id Unique identifier of the item
      * @return a UserSourceItemRequestBuilder
      */

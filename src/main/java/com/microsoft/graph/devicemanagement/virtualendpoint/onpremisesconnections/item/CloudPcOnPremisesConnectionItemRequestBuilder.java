@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item;
+package com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item;
 
+import com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item.runhealthchecks.RunHealthChecksRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item.updateaddomainpassword.UpdateAdDomainPasswordRequestBuilder;
+import com.microsoft.graph.models.CloudPcOnPremisesConnection;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item.runhealthchecks.RunHealthChecksRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item.updateaddomainpassword.UpdateAdDomainPasswordRequestBuilder;
-import microsoft.graph.models.CloudPcOnPremisesConnection;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the onPremisesConnections property of the microsoft.graph.virtualEndpoint entity. */
 public class CloudPcOnPremisesConnectionItemRequestBuilder {
     /** Path parameters for the request */

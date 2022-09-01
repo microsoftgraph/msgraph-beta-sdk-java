@@ -1,5 +1,7 @@
-package microsoft.graph.models.windowsupdates;
+package com.microsoft.graph.models.windowsupdates;
 
+import com.microsoft.graph.models.windowsupdates.FeatureUpdateCatalogEntry;
+import com.microsoft.graph.models.windowsupdates.QualityUpdateCatalogEntry;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

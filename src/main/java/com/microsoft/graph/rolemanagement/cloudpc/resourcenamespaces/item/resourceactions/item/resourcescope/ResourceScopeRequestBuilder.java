@@ -1,5 +1,7 @@
-package microsoft.graph.rolemanagement.cloudpc.resourcenamespaces.item.resourceactions.item.resourcescope;
+package com.microsoft.graph.rolemanagement.cloudpc.resourcenamespaces.item.resourceactions.item.resourcescope;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRbacResourceScope;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRbacResourceScope;
 /** Provides operations to manage the resourceScope property of the microsoft.graph.unifiedRbacResourceAction entity. */
 public class ResourceScopeRequestBuilder {
     /** Path parameters for the request */

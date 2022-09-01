@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies;
+package com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies;
 
+import com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementConfigurationPolicy;
+import com.microsoft.graph.models.DeviceManagementConfigurationPolicyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementConfigurationPolicy;
-import microsoft.graph.models.DeviceManagementConfigurationPolicyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the referencingConfigurationPolicies property of the microsoft.graph.deviceManagementReusablePolicySetting entity. */
 public class ReferencingConfigurationPoliciesRequestBuilder {
     /** The Count property */

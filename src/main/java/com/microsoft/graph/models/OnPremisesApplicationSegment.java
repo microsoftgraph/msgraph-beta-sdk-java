@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -11,13 +11,13 @@ import java.util.Objects;
 public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The alternateUrl property */
+    /** If you're configuring a traffic manager in front of multiple App Proxy application segments, contains the user-friendly URL that will point to the traffic manager. */
     private String _alternateUrl;
-    /** The corsConfigurations property */
+    /** CORS Rule definition for a particular application segment. */
     private java.util.List<CorsConfiguration> _corsConfigurations;
-    /** The externalUrl property */
+    /** The published external URL for the application segment; for example, https://intranet.contoso.com./ */
     private String _externalUrl;
-    /** The internalUrl property */
+    /** The internal URL of the application segment; for example, https://intranet/. */
     private String _internalUrl;
     /** The OdataType property */
     private String _odataType;
@@ -48,7 +48,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         return this._additionalData;
     }
     /**
-     * Gets the alternateUrl property value. The alternateUrl property
+     * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy application segments, contains the user-friendly URL that will point to the traffic manager.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -56,7 +56,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         return this._alternateUrl;
     }
     /**
-     * Gets the corsConfigurations property value. The corsConfigurations property
+     * Gets the corsConfigurations property value. CORS Rule definition for a particular application segment.
      * @return a corsConfiguration
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         return this._corsConfigurations;
     }
     /**
-     * Gets the externalUrl property value. The externalUrl property
+     * Gets the externalUrl property value. The published external URL for the application segment; for example, https://intranet.contoso.com./
      * @return a string
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         }};
     }
     /**
-     * Gets the internalUrl property value. The internalUrl property
+     * Gets the internalUrl property value. The internal URL of the application segment; for example, https://intranet/.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         this._additionalData = value;
     }
     /**
-     * Sets the alternateUrl property value. The alternateUrl property
+     * Sets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy application segments, contains the user-friendly URL that will point to the traffic manager.
      * @param value Value to set for the alternateUrl property.
      * @return a void
      */
@@ -133,7 +133,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         this._alternateUrl = value;
     }
     /**
-     * Sets the corsConfigurations property value. The corsConfigurations property
+     * Sets the corsConfigurations property value. CORS Rule definition for a particular application segment.
      * @param value Value to set for the corsConfigurations property.
      * @return a void
      */
@@ -141,7 +141,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         this._corsConfigurations = value;
     }
     /**
-     * Sets the externalUrl property value. The externalUrl property
+     * Sets the externalUrl property value. The published external URL for the application segment; for example, https://intranet.contoso.com./
      * @param value Value to set for the externalUrl property.
      * @return a void
      */
@@ -149,7 +149,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         this._externalUrl = value;
     }
     /**
-     * Sets the internalUrl property value. The internalUrl property
+     * Sets the internalUrl property value. The internal URL of the application segment; for example, https://intranet/.
      * @param value Value to set for the internalUrl property.
      * @return a void
      */

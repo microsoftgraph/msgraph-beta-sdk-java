@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.templates.item.createinstance;
+package com.microsoft.graph.devicemanagement.templates.item.createinstance;
 
+import com.microsoft.graph.models.DeviceManagementIntent;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceManagementIntent;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the createInstance method. */
 public class CreateInstanceRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,11 @@
-package microsoft.graph.admin.windows.updates.deployments.item.audience;
+package com.microsoft.graph.admin.windows.updates.deployments.item.audience;
 
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.ExclusionsRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.members.MembersRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.updateaudience.UpdateAudienceRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.updateaudiencebyid.UpdateAudienceByIdRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.windowsupdates.DeploymentAudience;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.ExclusionsRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.members.MembersRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.updateaudience.UpdateAudienceRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.updateaudiencebyid.UpdateAudienceByIdRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.windowsupdates.DeploymentAudience;
 /** Provides operations to manage the audience property of the microsoft.graph.windowsUpdates.deployment entity. */
 public class AudienceRequestBuilder {
     /** The exclusions property */
@@ -217,16 +217,16 @@ public class AudienceRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.admin.windows.updates.deployments.item.audience.exclusions.item collection
+     * Gets an item from the com.Microsoft.Graph.admin.windows.updates.deployments.item.audience.exclusions.item collection
      * @param id Unique identifier of the item
      * @return a UpdatableAssetItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.item.UpdatableAssetItemRequestBuilder exclusions(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.item.UpdatableAssetItemRequestBuilder exclusions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("updatableAsset%2Did", id);
-        return new microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.item.UpdatableAssetItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.item.UpdatableAssetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Specifies the audience to which content is deployed.
@@ -280,16 +280,16 @@ public class AudienceRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.admin.windows.updates.deployments.item.audience.members.item collection
+     * Gets an item from the com.Microsoft.Graph.admin.windows.updates.deployments.item.audience.members.item collection
      * @param id Unique identifier of the item
      * @return a UpdatableAssetItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.UpdatableAssetItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.UpdatableAssetItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("updatableAsset%2Did", id);
-        return new microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.UpdatableAssetItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.UpdatableAssetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property audience in admin

@@ -1,5 +1,9 @@
-package microsoft.graph.governanceroleassignmentrequests;
+package com.microsoft.graph.governanceroleassignmentrequests;
 
+import com.microsoft.graph.governanceroleassignmentrequests.count.CountRequestBuilder;
+import com.microsoft.graph.models.GovernanceRoleAssignmentRequest;
+import com.microsoft.graph.models.GovernanceRoleAssignmentRequestCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.governanceroleassignmentrequests.count.CountRequestBuilder;
-import microsoft.graph.models.GovernanceRoleAssignmentRequest;
-import microsoft.graph.models.GovernanceRoleAssignmentRequestCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of governanceRoleAssignmentRequest entities. */
 public class GovernanceRoleAssignmentRequestsRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity which represents a connection to Mobile threat defense partner. */
 public class MobileThreatDefenseConnector extends Entity implements Parsable {
     /** For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune */
     private Boolean _allowPartnerToCollectIOSApplicationMetadata;
@@ -43,8 +44,10 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     private Boolean _windowsDeviceBlockedOnMissingPartnerData;
     /** For Windows, get or set whether data from the data sync partner should be used during compliance evaluations */
     private Boolean _windowsEnabled;
+    /** When TRUE, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector for Windows. When FALSE, Intune will not use device risk details sent over this connector during app protection policies calculation for policies with a Device Threat Level configured. Existing devices that are not compliant due to risk levels obtained from this connector will also become compliant. */
+    private Boolean _windowsMobileApplicationManagementEnabled;
     /**
-     * Instantiates a new MobileThreatDefenseConnector and sets the default values.
+     * Instantiates a new mobileThreatDefenseConnector and sets the default values.
      * @return a void
      */
     public MobileThreatDefenseConnector() {
@@ -54,7 +57,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileThreatDefenseConnector
+     * @return a mobileThreatDefenseConnector
      */
     @javax.annotation.Nonnull
     public static MobileThreatDefenseConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -126,6 +129,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
             this.put("partnerUnsupportedOsVersionBlocked", (n) -> { currentObject.setPartnerUnsupportedOsVersionBlocked(n.getBooleanValue()); });
             this.put("windowsDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setWindowsDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
             this.put("windowsEnabled", (n) -> { currentObject.setWindowsEnabled(n.getBooleanValue()); });
+            this.put("windowsMobileApplicationManagementEnabled", (n) -> { currentObject.setWindowsMobileApplicationManagementEnabled(n.getBooleanValue()); });
         }};
     }
     /**
@@ -225,6 +229,14 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         return this._windowsEnabled;
     }
     /**
+     * Gets the windowsMobileApplicationManagementEnabled property value. When TRUE, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector for Windows. When FALSE, Intune will not use device risk details sent over this connector during app protection policies calculation for policies with a Device Threat Level configured. Existing devices that are not compliant due to risk levels obtained from this connector will also become compliant.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getWindowsMobileApplicationManagementEnabled() {
+        return this._windowsMobileApplicationManagementEnabled;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -249,6 +261,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         writer.writeBooleanValue("partnerUnsupportedOsVersionBlocked", this.getPartnerUnsupportedOsVersionBlocked());
         writer.writeBooleanValue("windowsDeviceBlockedOnMissingPartnerData", this.getWindowsDeviceBlockedOnMissingPartnerData());
         writer.writeBooleanValue("windowsEnabled", this.getWindowsEnabled());
+        writer.writeBooleanValue("windowsMobileApplicationManagementEnabled", this.getWindowsMobileApplicationManagementEnabled());
     }
     /**
      * Sets the allowPartnerToCollectIOSApplicationMetadata property value. For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune
@@ -385,5 +398,13 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      */
     public void setWindowsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._windowsEnabled = value;
+    }
+    /**
+     * Sets the windowsMobileApplicationManagementEnabled property value. When TRUE, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector for Windows. When FALSE, Intune will not use device risk details sent over this connector during app protection policies calculation for policies with a Device Threat Level configured. Existing devices that are not compliant due to risk levels obtained from this connector will also become compliant.
+     * @param value Value to set for the windowsMobileApplicationManagementEnabled property.
+     * @return a void
+     */
+    public void setWindowsMobileApplicationManagementEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._windowsMobileApplicationManagementEnabled = value;
     }
 }

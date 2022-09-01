@@ -1,5 +1,7 @@
-package microsoft.graph.organization.item.settings.peopleinsights;
+package com.microsoft.graph.organization.item.settings.peopleinsights;
 
+import com.microsoft.graph.models.InsightsSettings;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.InsightsSettings;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the peopleInsights property of the microsoft.graph.organizationSettings entity. */
 public class PeopleInsightsRequestBuilder {
     /** Path parameters for the request */

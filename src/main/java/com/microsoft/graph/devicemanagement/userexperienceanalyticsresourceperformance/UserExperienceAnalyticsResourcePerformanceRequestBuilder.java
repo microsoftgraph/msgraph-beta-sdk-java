@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsresourceperformance;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsresourceperformance;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsresourceperformance.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsresourceperformance.summarizedeviceresourceperformancewithsummarizeby.SummarizeDeviceResourcePerformanceWithSummarizeByRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsResourcePerformance;
+import com.microsoft.graph.models.UserExperienceAnalyticsResourcePerformanceCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsresourceperformance.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsresourceperformance.summarizedeviceresourceperformancewithsummarizeby.SummarizeDeviceResourcePerformanceWithSummarizeByRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsResourcePerformance;
-import microsoft.graph.models.UserExperienceAnalyticsResourcePerformanceCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsResourcePerformance property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsResourcePerformanceRequestBuilder {
     /** The Count property */

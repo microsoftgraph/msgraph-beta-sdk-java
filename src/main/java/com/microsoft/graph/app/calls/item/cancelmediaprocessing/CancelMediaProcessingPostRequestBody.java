@@ -1,4 +1,4 @@
-package microsoft.graph.app.calls.item.cancelmediaprocessing;
+package com.microsoft.graph.app.calls.item.cancelmediaprocessing;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

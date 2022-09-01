@@ -1,5 +1,13 @@
-package microsoft.graph.financials.companies.item.salescreditmemos.item.customer;
+package com.microsoft.graph.financials.companies.item.salescreditmemos.item.customer;
 
+import com.microsoft.graph.financials.companies.item.salescreditmemos.item.customer.currency.CurrencyRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salescreditmemos.item.customer.paymentmethod.PaymentMethodRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salescreditmemos.item.customer.paymentterm.PaymentTermRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salescreditmemos.item.customer.picture.item.PictureItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salescreditmemos.item.customer.picture.PictureRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salescreditmemos.item.customer.shipmentmethod.ShipmentMethodRequestBuilder;
+import com.microsoft.graph.models.Customer;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salescreditmemos.item.customer.currency.CurrencyRequestBuilder;
-import microsoft.graph.financials.companies.item.salescreditmemos.item.customer.paymentmethod.PaymentMethodRequestBuilder;
-import microsoft.graph.financials.companies.item.salescreditmemos.item.customer.paymentterm.PaymentTermRequestBuilder;
-import microsoft.graph.financials.companies.item.salescreditmemos.item.customer.picture.item.PictureItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salescreditmemos.item.customer.picture.PictureRequestBuilder;
-import microsoft.graph.financials.companies.item.salescreditmemos.item.customer.shipmentmethod.ShipmentMethodRequestBuilder;
-import microsoft.graph.models.Customer;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customer property of the microsoft.graph.salesCreditMemo entity. */
 public class CustomerRequestBuilder {
     /** The currency property */
@@ -330,7 +330,7 @@ public class CustomerRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesCreditMemos.item.customer.picture.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesCreditMemos.item.customer.picture.item collection
      * @param id Unique identifier of the item
      * @return a PictureItemRequestBuilder
      */

@@ -1,5 +1,29 @@
-package microsoft.graph.directory;
+package com.microsoft.graph.directory;
 
+import com.microsoft.graph.directory.administrativeunits.AdministrativeUnitsRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.AdministrativeUnitItemRequestBuilder;
+import com.microsoft.graph.directory.attributesets.AttributeSetsRequestBuilder;
+import com.microsoft.graph.directory.attributesets.item.AttributeSetItemRequestBuilder;
+import com.microsoft.graph.directory.customsecurityattributedefinitions.CustomSecurityAttributeDefinitionsRequestBuilder;
+import com.microsoft.graph.directory.customsecurityattributedefinitions.item.CustomSecurityAttributeDefinitionItemRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.DeletedItemsRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.DirectoryObjectItemRequestBuilder;
+import com.microsoft.graph.directory.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
+import com.microsoft.graph.directory.featurerolloutpolicies.item.FeatureRolloutPolicyItemRequestBuilder;
+import com.microsoft.graph.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
+import com.microsoft.graph.directory.federationconfigurations.item.IdentityProviderBaseItemRequestBuilder;
+import com.microsoft.graph.directory.impactedresources.ImpactedResourcesRequestBuilder;
+import com.microsoft.graph.directory.impactedresources.item.RecommendationResourceItemRequestBuilder;
+import com.microsoft.graph.directory.inboundshareduserprofiles.InboundSharedUserProfilesRequestBuilder;
+import com.microsoft.graph.directory.inboundshareduserprofiles.item.InboundSharedUserProfileUserItemRequestBuilder;
+import com.microsoft.graph.directory.outboundshareduserprofiles.item.OutboundSharedUserProfileUserItemRequestBuilder;
+import com.microsoft.graph.directory.outboundshareduserprofiles.OutboundSharedUserProfilesRequestBuilder;
+import com.microsoft.graph.directory.recommendations.item.RecommendationItemRequestBuilder;
+import com.microsoft.graph.directory.recommendations.RecommendationsRequestBuilder;
+import com.microsoft.graph.directory.sharedemaildomains.item.SharedEmailDomainItemRequestBuilder;
+import com.microsoft.graph.directory.sharedemaildomains.SharedEmailDomainsRequestBuilder;
+import com.microsoft.graph.models.Directory;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,30 +38,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.administrativeunits.AdministrativeUnitsRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.AdministrativeUnitItemRequestBuilder;
-import microsoft.graph.directory.attributesets.AttributeSetsRequestBuilder;
-import microsoft.graph.directory.attributesets.item.AttributeSetItemRequestBuilder;
-import microsoft.graph.directory.customsecurityattributedefinitions.CustomSecurityAttributeDefinitionsRequestBuilder;
-import microsoft.graph.directory.customsecurityattributedefinitions.item.CustomSecurityAttributeDefinitionItemRequestBuilder;
-import microsoft.graph.directory.deleteditems.DeletedItemsRequestBuilder;
-import microsoft.graph.directory.deleteditems.item.DirectoryObjectItemRequestBuilder;
-import microsoft.graph.directory.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
-import microsoft.graph.directory.featurerolloutpolicies.item.FeatureRolloutPolicyItemRequestBuilder;
-import microsoft.graph.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
-import microsoft.graph.directory.federationconfigurations.item.IdentityProviderBaseItemRequestBuilder;
-import microsoft.graph.directory.impactedresources.ImpactedResourcesRequestBuilder;
-import microsoft.graph.directory.impactedresources.item.RecommendationResourceItemRequestBuilder;
-import microsoft.graph.directory.inboundshareduserprofiles.InboundSharedUserProfilesRequestBuilder;
-import microsoft.graph.directory.inboundshareduserprofiles.item.InboundSharedUserProfileUserItemRequestBuilder;
-import microsoft.graph.directory.outboundshareduserprofiles.item.OutboundSharedUserProfileUserItemRequestBuilder;
-import microsoft.graph.directory.outboundshareduserprofiles.OutboundSharedUserProfilesRequestBuilder;
-import microsoft.graph.directory.recommendations.item.RecommendationItemRequestBuilder;
-import microsoft.graph.directory.recommendations.RecommendationsRequestBuilder;
-import microsoft.graph.directory.sharedemaildomains.item.SharedEmailDomainItemRequestBuilder;
-import microsoft.graph.directory.sharedemaildomains.SharedEmailDomainsRequestBuilder;
-import microsoft.graph.models.Directory;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the directory singleton. */
 public class DirectoryRequestBuilder {
     /** The administrativeUnits property */
@@ -102,7 +102,7 @@ public class DirectoryRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.directory.administrativeUnits.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.administrativeUnits.item collection
      * @param id Unique identifier of the item
      * @return a AdministrativeUnitItemRequestBuilder
      */
@@ -114,7 +114,7 @@ public class DirectoryRequestBuilder {
         return new AdministrativeUnitItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.attributeSets.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.attributeSets.item collection
      * @param id Unique identifier of the item
      * @return a AttributeSetItemRequestBuilder
      */
@@ -215,7 +215,7 @@ public class DirectoryRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.customSecurityAttributeDefinitions.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.customSecurityAttributeDefinitions.item collection
      * @param id Unique identifier of the item
      * @return a CustomSecurityAttributeDefinitionItemRequestBuilder
      */
@@ -227,7 +227,7 @@ public class DirectoryRequestBuilder {
         return new CustomSecurityAttributeDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.deletedItems.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.deletedItems.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -239,7 +239,7 @@ public class DirectoryRequestBuilder {
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.featureRolloutPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.featureRolloutPolicies.item collection
      * @param id Unique identifier of the item
      * @return a FeatureRolloutPolicyItemRequestBuilder
      */
@@ -251,7 +251,7 @@ public class DirectoryRequestBuilder {
         return new FeatureRolloutPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.federationConfigurations.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.federationConfigurations.item collection
      * @param id Unique identifier of the item
      * @return a IdentityProviderBaseItemRequestBuilder
      */
@@ -314,7 +314,7 @@ public class DirectoryRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.impactedResources.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.impactedResources.item collection
      * @param id Unique identifier of the item
      * @return a RecommendationResourceItemRequestBuilder
      */
@@ -326,7 +326,7 @@ public class DirectoryRequestBuilder {
         return new RecommendationResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.inboundSharedUserProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.inboundSharedUserProfiles.item collection
      * @param id Unique identifier of the item
      * @return a InboundSharedUserProfileUserItemRequestBuilder
      */
@@ -338,7 +338,7 @@ public class DirectoryRequestBuilder {
         return new InboundSharedUserProfileUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.outboundSharedUserProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.outboundSharedUserProfiles.item collection
      * @param id Unique identifier of the item
      * @return a OutboundSharedUserProfileUserItemRequestBuilder
      */
@@ -405,7 +405,7 @@ public class DirectoryRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.recommendations.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.recommendations.item collection
      * @param id Unique identifier of the item
      * @return a RecommendationItemRequestBuilder
      */
@@ -417,7 +417,7 @@ public class DirectoryRequestBuilder {
         return new RecommendationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.sharedEmailDomains.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.sharedEmailDomains.item collection
      * @param id Unique identifier of the item
      * @return a SharedEmailDomainItemRequestBuilder
      */

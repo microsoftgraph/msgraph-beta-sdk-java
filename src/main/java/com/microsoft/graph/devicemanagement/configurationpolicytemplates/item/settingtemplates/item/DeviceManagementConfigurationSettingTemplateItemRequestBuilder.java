@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.item;
+package com.microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.item;
 
+import com.microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.item.settingdefinitions.item.DeviceManagementConfigurationSettingDefinitionItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.item.settingdefinitions.SettingDefinitionsRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingTemplate;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.item.settingdefinitions.item.DeviceManagementConfigurationSettingDefinitionItemRequestBuilder;
-import microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.item.settingdefinitions.SettingDefinitionsRequestBuilder;
-import microsoft.graph.models.DeviceManagementConfigurationSettingTemplate;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the settingTemplates property of the microsoft.graph.deviceManagementConfigurationPolicyTemplate entity. */
 public class DeviceManagementConfigurationSettingTemplateItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class DeviceManagementConfigurationSettingTemplateItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.configurationPolicyTemplates.item.settingTemplates.item.settingDefinitions.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.configurationPolicyTemplates.item.settingTemplates.item.settingDefinitions.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementConfigurationSettingDefinitionItemRequestBuilder
      */

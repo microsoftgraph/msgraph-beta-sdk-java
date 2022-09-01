@@ -1,12 +1,12 @@
-package microsoft.graph.serviceprincipals.item.owners.item;
+package com.microsoft.graph.serviceprincipals.item.owners.item;
 
+import com.microsoft.graph.serviceprincipals.item.owners.item.endpoint.EndpointRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.owners.item.ref.RefRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.owners.item.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.owners.item.user.UserRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.serviceprincipals.item.owners.item.endpoint.EndpointRequestBuilder;
-import microsoft.graph.serviceprincipals.item.owners.item.ref.RefRequestBuilder;
-import microsoft.graph.serviceprincipals.item.owners.item.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.serviceprincipals.item.owners.item.user.UserRequestBuilder;
 /** Builds and executes requests for operations under /servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
     /** The endpoint property */

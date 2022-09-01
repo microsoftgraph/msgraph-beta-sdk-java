@@ -1,5 +1,12 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.additionalaccess.AdditionalAccessRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.additionalaccesswithaccesspackageidwithincompatibleaccesspackageid.AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.models.AccessPackageAssignment;
+import com.microsoft.graph.models.AccessPackageAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.additionalaccess.AdditionalAccessRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.additionalaccesswithaccesspackageidwithincompatibleaccesspackageid.AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.count.CountRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
-import microsoft.graph.models.AccessPackageAssignment;
-import microsoft.graph.models.AccessPackageAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageAssignments property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageAssignmentsRequestBuilder {
     /** The Count property */

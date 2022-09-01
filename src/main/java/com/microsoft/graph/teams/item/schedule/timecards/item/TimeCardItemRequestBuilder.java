@@ -1,5 +1,11 @@
-package microsoft.graph.teams.item.schedule.timecards.item;
+package com.microsoft.graph.teams.item.schedule.timecards.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TimeCard;
+import com.microsoft.graph.teams.item.schedule.timecards.item.clockout.ClockOutRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.timecards.item.confirm.ConfirmRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.timecards.item.endbreak.EndBreakRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.timecards.item.startbreak.StartBreakRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TimeCard;
-import microsoft.graph.teams.item.schedule.timecards.item.clockout.ClockOutRequestBuilder;
-import microsoft.graph.teams.item.schedule.timecards.item.confirm.ConfirmRequestBuilder;
-import microsoft.graph.teams.item.schedule.timecards.item.endbreak.EndBreakRequestBuilder;
-import microsoft.graph.teams.item.schedule.timecards.item.startbreak.StartBreakRequestBuilder;
 /** Provides operations to manage the timeCards property of the microsoft.graph.schedule entity. */
 public class TimeCardItemRequestBuilder {
     /** The clockOut property */

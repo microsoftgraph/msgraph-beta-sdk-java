@@ -1,5 +1,9 @@
-package microsoft.graph.employeeexperience.learningproviders.item;
+package com.microsoft.graph.employeeexperience.learningproviders.item;
 
+import com.microsoft.graph.employeeexperience.learningproviders.item.learningcontents.item.LearningContentItemRequestBuilder;
+import com.microsoft.graph.employeeexperience.learningproviders.item.learningcontents.LearningContentsRequestBuilder;
+import com.microsoft.graph.models.LearningProvider;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.employeeexperience.learningproviders.item.learningcontents.item.LearningContentItemRequestBuilder;
-import microsoft.graph.employeeexperience.learningproviders.item.learningcontents.LearningContentsRequestBuilder;
-import microsoft.graph.models.LearningProvider;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the learningProviders property of the microsoft.graph.employeeExperience entity. */
 public class LearningProviderItemRequestBuilder {
     /** The learningContents property */
@@ -251,7 +251,7 @@ public class LearningProviderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.employeeExperience.learningProviders.item.learningContents.item collection
+     * Gets an item from the com.Microsoft.Graph.employeeExperience.learningProviders.item.learningContents.item collection
      * @param id Unique identifier of the item
      * @return a LearningContentItemRequestBuilder
      */

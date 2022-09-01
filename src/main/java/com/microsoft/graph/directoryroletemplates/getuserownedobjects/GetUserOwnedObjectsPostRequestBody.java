@@ -1,4 +1,4 @@
-package microsoft.graph.directoryroletemplates.getuserownedobjects;
+package com.microsoft.graph.directoryroletemplates.getuserownedobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

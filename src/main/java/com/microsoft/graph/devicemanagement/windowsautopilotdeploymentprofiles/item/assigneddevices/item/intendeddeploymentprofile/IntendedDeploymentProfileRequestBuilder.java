@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.intendeddeploymentprofile;
+package com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.intendeddeploymentprofile;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsAutopilotDeploymentProfile;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsAutopilotDeploymentProfile;
 /** Provides operations to manage the intendedDeploymentProfile property of the microsoft.graph.windowsAutopilotDeviceIdentity entity. */
 public class IntendedDeploymentProfileRequestBuilder {
     /** Path parameters for the request */

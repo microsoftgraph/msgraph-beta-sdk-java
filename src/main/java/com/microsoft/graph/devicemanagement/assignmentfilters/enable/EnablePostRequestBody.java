@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.assignmentfilters.enable;
+package com.microsoft.graph.devicemanagement.assignmentfilters.enable;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

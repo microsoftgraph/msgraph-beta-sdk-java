@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections;
+package com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections;
 
+import com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.count.CountRequestBuilder;
+import com.microsoft.graph.models.CloudPcOnPremisesConnection;
+import com.microsoft.graph.models.CloudPcOnPremisesConnectionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.count.CountRequestBuilder;
-import microsoft.graph.models.CloudPcOnPremisesConnection;
-import microsoft.graph.models.CloudPcOnPremisesConnectionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the onPremisesConnections property of the microsoft.graph.virtualEndpoint entity. */
 public class OnPremisesConnectionsRequestBuilder {
     /** The Count property */

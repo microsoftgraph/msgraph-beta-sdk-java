@@ -1,5 +1,7 @@
-package microsoft.graph.privilegedroles.item.summary;
+package com.microsoft.graph.privilegedroles.item.summary;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedRoleSummary;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedRoleSummary;
 /** Provides operations to manage the summary property of the microsoft.graph.privilegedRole entity. */
 public class SummaryRequestBuilder {
     /** Path parameters for the request */

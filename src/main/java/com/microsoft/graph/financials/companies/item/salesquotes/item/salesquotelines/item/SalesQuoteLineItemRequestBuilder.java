@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.salesquotes.item.salesquotelines.item;
+package com.microsoft.graph.financials.companies.item.salesquotes.item.salesquotelines.item;
 
+import com.microsoft.graph.financials.companies.item.salesquotes.item.salesquotelines.item.account.AccountRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesquotes.item.salesquotelines.item.item.ItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SalesQuoteLine;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salesquotes.item.salesquotelines.item.account.AccountRequestBuilder;
-import microsoft.graph.financials.companies.item.salesquotes.item.salesquotelines.item.item.ItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SalesQuoteLine;
 /** Provides operations to manage the salesQuoteLines property of the microsoft.graph.salesQuote entity. */
 public class SalesQuoteLineItemRequestBuilder {
     /** The account property */

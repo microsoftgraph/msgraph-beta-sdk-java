@@ -1,5 +1,7 @@
-package microsoft.graph.me.manageddevices.item.users;
+package com.microsoft.graph.me.manageddevices.item.users;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserCollectionResponse;
 /** Provides operations to manage the users property of the microsoft.graph.managedDevice entity. */
 public class UsersRequestBuilder {
     /** Path parameters for the request */

@@ -1,4 +1,4 @@
-package microsoft.graph.app.calls.item.addlargegalleryview;
+package com.microsoft.graph.app.calls.item.addlargegalleryview;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

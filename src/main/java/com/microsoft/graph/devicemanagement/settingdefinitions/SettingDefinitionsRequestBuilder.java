@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.settingdefinitions;
+package com.microsoft.graph.devicemanagement.settingdefinitions;
 
+import com.microsoft.graph.devicemanagement.settingdefinitions.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementSettingDefinition;
+import com.microsoft.graph.models.DeviceManagementSettingDefinitionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.settingdefinitions.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementSettingDefinition;
-import microsoft.graph.models.DeviceManagementSettingDefinitionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the settingDefinitions property of the microsoft.graph.deviceManagement entity. */
 public class SettingDefinitionsRequestBuilder {
     /** The Count property */

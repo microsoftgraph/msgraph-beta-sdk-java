@@ -1,5 +1,8 @@
-package microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.applications.item;
+package com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.applications.item;
 
+import com.microsoft.graph.models.Application;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.applications.item.logo.LogoRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Application;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.applications.item.logo.LogoRequestBuilder;
 /** Provides operations to manage the applications property of the microsoft.graph.connectorGroup entity. */
 public class ApplicationItemRequestBuilder {
     /** The logo property */

@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -11,7 +11,7 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
     /** The user experience analytics insights. */
     private java.util.List<UserExperienceAnalyticsInsight> _insights;
     /**
-     * Instantiates a new userExperienceAnalyticsOverview and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsOverview and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsOverview() {
@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsOverview
+     * @return a UserExperienceAnalyticsOverview
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsOverview createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

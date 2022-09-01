@@ -1,5 +1,8 @@
-package microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals;
+package com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals;
 
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals.count.CountRequestBuilder;
 /** Provides operations to manage the principals property of the microsoft.graph.unifiedRoleAssignmentMultiple entity. */
 public class PrincipalsRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.informationprotection.verifysignature;
+package com.microsoft.graph.informationprotection.verifysignature;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

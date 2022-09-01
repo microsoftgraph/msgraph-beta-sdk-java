@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.purchaseinvoices.item.purchaseinvoicelines;
+package com.microsoft.graph.financials.companies.item.purchaseinvoices.item.purchaseinvoicelines;
 
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.purchaseinvoicelines.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PurchaseInvoiceLine;
+import com.microsoft.graph.models.PurchaseInvoiceLineCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.purchaseinvoicelines.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PurchaseInvoiceLine;
-import microsoft.graph.models.PurchaseInvoiceLineCollectionResponse;
 /** Provides operations to manage the purchaseInvoiceLines property of the microsoft.graph.purchaseInvoice entity. */
 public class PurchaseInvoiceLinesRequestBuilder {
     /** The Count property */

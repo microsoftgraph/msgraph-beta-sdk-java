@@ -1,5 +1,12 @@
-package microsoft.graph.applications.item.synchronization.templates.item.schema;
+package com.microsoft.graph.applications.item.synchronization.templates.item.schema;
 
+import com.microsoft.graph.applications.item.synchronization.templates.item.schema.directories.DirectoriesRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.templates.item.schema.directories.item.DirectoryDefinitionItemRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.templates.item.schema.filteroperators.FilterOperatorsRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.templates.item.schema.functions.FunctionsRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.templates.item.schema.parseexpression.ParseExpressionRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SynchronizationSchema;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.item.synchronization.templates.item.schema.directories.DirectoriesRequestBuilder;
-import microsoft.graph.applications.item.synchronization.templates.item.schema.directories.item.DirectoryDefinitionItemRequestBuilder;
-import microsoft.graph.applications.item.synchronization.templates.item.schema.filteroperators.FilterOperatorsRequestBuilder;
-import microsoft.graph.applications.item.synchronization.templates.item.schema.functions.FunctionsRequestBuilder;
-import microsoft.graph.applications.item.synchronization.templates.item.schema.parseexpression.ParseExpressionRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SynchronizationSchema;
 /** Provides operations to manage the schema property of the microsoft.graph.synchronizationTemplate entity. */
 public class SchemaRequestBuilder {
     /** The directories property */
@@ -208,7 +208,7 @@ public class SchemaRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.applications.item.synchronization.templates.item.schema.directories.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item.synchronization.templates.item.schema.directories.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryDefinitionItemRequestBuilder
      */

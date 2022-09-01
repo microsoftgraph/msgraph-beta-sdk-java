@@ -1,4 +1,4 @@
-package microsoft.graph.directory.recommendations.item.postpone;
+package com.microsoft.graph.directory.recommendations.item.postpone;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

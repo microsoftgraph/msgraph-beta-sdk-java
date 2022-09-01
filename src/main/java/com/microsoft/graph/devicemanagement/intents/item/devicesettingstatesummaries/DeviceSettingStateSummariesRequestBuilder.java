@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.intents.item.devicesettingstatesummaries;
+package com.microsoft.graph.devicemanagement.intents.item.devicesettingstatesummaries;
 
+import com.microsoft.graph.devicemanagement.intents.item.devicesettingstatesummaries.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementIntentDeviceSettingStateSummary;
+import com.microsoft.graph.models.DeviceManagementIntentDeviceSettingStateSummaryCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.intents.item.devicesettingstatesummaries.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementIntentDeviceSettingStateSummary;
-import microsoft.graph.models.DeviceManagementIntentDeviceSettingStateSummaryCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceManagementIntent entity. */
 public class DeviceSettingStateSummariesRequestBuilder {
     /** The Count property */

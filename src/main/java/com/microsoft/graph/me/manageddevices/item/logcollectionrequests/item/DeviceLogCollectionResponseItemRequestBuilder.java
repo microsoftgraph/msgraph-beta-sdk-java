@@ -1,5 +1,8 @@
-package microsoft.graph.me.manageddevices.item.logcollectionrequests.item;
+package com.microsoft.graph.me.manageddevices.item.logcollectionrequests.item;
 
+import com.microsoft.graph.me.manageddevices.item.logcollectionrequests.item.createdownloadurl.CreateDownloadUrlRequestBuilder;
+import com.microsoft.graph.models.DeviceLogCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.manageddevices.item.logcollectionrequests.item.createdownloadurl.CreateDownloadUrlRequestBuilder;
-import microsoft.graph.models.DeviceLogCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the logCollectionRequests property of the microsoft.graph.managedDevice entity. */
 public class DeviceLogCollectionResponseItemRequestBuilder {
     /** The createDownloadUrl property */

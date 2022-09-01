@@ -1,5 +1,6 @@
-package microsoft.graph.reports.getsharepointsiteusagepageswithperiod;
+package com.microsoft.graph.reports.getsharepointsiteusagepageswithperiod;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -14,7 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the getSharePointSiteUsagePages method. */
 public class GetSharePointSiteUsagePagesWithPeriodRequestBuilder {
     /** Path parameters for the request */

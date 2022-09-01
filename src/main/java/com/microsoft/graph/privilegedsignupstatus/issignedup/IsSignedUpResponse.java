@@ -1,4 +1,4 @@
-package microsoft.graph.privilegedsignupstatus.issignedup;
+package com.microsoft.graph.privilegedsignupstatus.issignedup;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

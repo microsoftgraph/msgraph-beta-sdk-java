@@ -1,5 +1,7 @@
-package microsoft.graph.identityprotection.serviceprincipalriskdetections.item;
+package com.microsoft.graph.identityprotection.serviceprincipalriskdetections.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServicePrincipalRiskDetection;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServicePrincipalRiskDetection;
 /** Provides operations to manage the servicePrincipalRiskDetections property of the microsoft.graph.identityProtectionRoot entity. */
 public class ServicePrincipalRiskDetectionItemRequestBuilder {
     /** Path parameters for the request */

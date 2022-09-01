@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.deponboardingsettings.item.defaultmacosenrollmentprofile;
+package com.microsoft.graph.devicemanagement.deponboardingsettings.item.defaultmacosenrollmentprofile;
 
+import com.microsoft.graph.models.DepMacOSEnrollmentProfile;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DepMacOSEnrollmentProfile;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the defaultMacOsEnrollmentProfile property of the microsoft.graph.depOnboardingSetting entity. */
 public class DefaultMacOsEnrollmentProfileRequestBuilder {
     /** Path parameters for the request */

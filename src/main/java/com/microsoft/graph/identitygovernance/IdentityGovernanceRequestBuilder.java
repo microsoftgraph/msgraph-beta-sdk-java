@@ -1,5 +1,12 @@
-package microsoft.graph.identitygovernance;
+package com.microsoft.graph.identitygovernance;
 
+import com.microsoft.graph.identitygovernance.accessreviews.AccessReviewsRequestBuilder;
+import com.microsoft.graph.identitygovernance.appconsent.AppConsentRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.EntitlementManagementRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.LifecycleWorkflowsRequestBuilder;
+import com.microsoft.graph.identitygovernance.termsofuse.TermsOfUseRequestBuilder;
+import com.microsoft.graph.models.IdentityGovernance;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.accessreviews.AccessReviewsRequestBuilder;
-import microsoft.graph.identitygovernance.appconsent.AppConsentRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.EntitlementManagementRequestBuilder;
-import microsoft.graph.identitygovernance.termsofuse.TermsOfUseRequestBuilder;
-import microsoft.graph.models.IdentityGovernance;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the identityGovernance singleton. */
 public class IdentityGovernanceRequestBuilder {
     /** The accessReviews property */
@@ -36,6 +37,11 @@ public class IdentityGovernanceRequestBuilder {
     @javax.annotation.Nonnull
     public EntitlementManagementRequestBuilder entitlementManagement() {
         return new EntitlementManagementRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The lifecycleWorkflows property */
+    @javax.annotation.Nonnull
+    public LifecycleWorkflowsRequestBuilder lifecycleWorkflows() {
+        return new LifecycleWorkflowsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;

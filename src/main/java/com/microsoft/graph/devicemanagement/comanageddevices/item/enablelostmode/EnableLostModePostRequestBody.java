@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.comanageddevices.item.enablelostmode;
+package com.microsoft.graph.devicemanagement.comanageddevices.item.enablelostmode;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

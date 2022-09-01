@@ -1,5 +1,14 @@
-package microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item;
+package com.microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item;
 
+import com.microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.addlanguagefiles.AddLanguageFilesRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.grouppolicyoperations.GroupPolicyOperationsRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.grouppolicyoperations.item.GroupPolicyOperationItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.remove.RemoveRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.removelanguagefiles.RemoveLanguageFilesRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.updatelanguagefiles.UpdateLanguageFilesRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.uploadnewversion.UploadNewVersionRequestBuilder;
+import com.microsoft.graph.models.GroupPolicyUploadedDefinitionFile;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.addlanguagefiles.AddLanguageFilesRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.grouppolicyoperations.GroupPolicyOperationsRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.grouppolicyoperations.item.GroupPolicyOperationItemRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.remove.RemoveRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.removelanguagefiles.RemoveLanguageFilesRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.updatelanguagefiles.UpdateLanguageFilesRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.item.uploadnewversion.UploadNewVersionRequestBuilder;
-import microsoft.graph.models.GroupPolicyUploadedDefinitionFile;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groupPolicyUploadedDefinitionFiles property of the microsoft.graph.deviceManagement entity. */
 public class GroupPolicyUploadedDefinitionFileItemRequestBuilder {
     /** The addLanguageFiles property */
@@ -281,7 +281,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyUploadedDefinitionFiles.item.groupPolicyOperations.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.groupPolicyUploadedDefinitionFiles.item.groupPolicyOperations.item collection
      * @param id Unique identifier of the item
      * @return a GroupPolicyOperationItemRequestBuilder
      */

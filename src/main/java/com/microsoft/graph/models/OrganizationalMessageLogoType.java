@@ -1,12 +1,14 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum OrganizationalMessageLogoType implements ValuedEnum {
     /** Indicates that logo is a png file */
-    Png("png");
+    Png("png"),
+    /** UnknownFutureValue, Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     OrganizationalMessageLogoType(final String value) {
         this.value = value;
@@ -18,6 +20,7 @@ public enum OrganizationalMessageLogoType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "png": return Png;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

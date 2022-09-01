@@ -1,5 +1,9 @@
-package microsoft.graph.security.usersecurityprofiles;
+package com.microsoft.graph.security.usersecurityprofiles;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserSecurityProfile;
+import com.microsoft.graph.models.UserSecurityProfileCollectionResponse;
+import com.microsoft.graph.security.usersecurityprofiles.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserSecurityProfile;
-import microsoft.graph.models.UserSecurityProfileCollectionResponse;
-import microsoft.graph.security.usersecurityprofiles.count.CountRequestBuilder;
 /** Provides operations to manage the userSecurityProfiles property of the microsoft.graph.security entity. */
 public class UserSecurityProfilesRequestBuilder {
     /** The Count property */

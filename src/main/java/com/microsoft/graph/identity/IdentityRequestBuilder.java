@@ -1,5 +1,25 @@
-package microsoft.graph.identity;
+package com.microsoft.graph.identity;
 
+import com.microsoft.graph.identity.apiconnectors.ApiConnectorsRequestBuilder;
+import com.microsoft.graph.identity.apiconnectors.item.IdentityApiConnectorItemRequestBuilder;
+import com.microsoft.graph.identity.authenticationeventlisteners.AuthenticationEventListenersRequestBuilder;
+import com.microsoft.graph.identity.authenticationeventlisteners.item.AuthenticationEventListenerItemRequestBuilder;
+import com.microsoft.graph.identity.b2cuserflows.B2cUserFlowsRequestBuilder;
+import com.microsoft.graph.identity.b2cuserflows.item.B2cIdentityUserFlowItemRequestBuilder;
+import com.microsoft.graph.identity.b2xuserflows.B2xUserFlowsRequestBuilder;
+import com.microsoft.graph.identity.b2xuserflows.item.B2xIdentityUserFlowItemRequestBuilder;
+import com.microsoft.graph.identity.conditionalaccess.ConditionalAccessRequestBuilder;
+import com.microsoft.graph.identity.continuousaccessevaluationpolicy.ContinuousAccessEvaluationPolicyRequestBuilder;
+import com.microsoft.graph.identity.customauthenticationextensions.CustomAuthenticationExtensionsRequestBuilder;
+import com.microsoft.graph.identity.customauthenticationextensions.item.CustomAuthenticationExtensionItemRequestBuilder;
+import com.microsoft.graph.identity.identityproviders.IdentityProvidersRequestBuilder;
+import com.microsoft.graph.identity.identityproviders.item.IdentityProviderBaseItemRequestBuilder;
+import com.microsoft.graph.identity.userflowattributes.item.IdentityUserFlowAttributeItemRequestBuilder;
+import com.microsoft.graph.identity.userflowattributes.UserFlowAttributesRequestBuilder;
+import com.microsoft.graph.identity.userflows.item.IdentityUserFlowItemRequestBuilder;
+import com.microsoft.graph.identity.userflows.UserFlowsRequestBuilder;
+import com.microsoft.graph.models.IdentityContainer;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,26 +34,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.apiconnectors.ApiConnectorsRequestBuilder;
-import microsoft.graph.identity.apiconnectors.item.IdentityApiConnectorItemRequestBuilder;
-import microsoft.graph.identity.authenticationeventlisteners.AuthenticationEventListenersRequestBuilder;
-import microsoft.graph.identity.authenticationeventlisteners.item.AuthenticationEventListenerItemRequestBuilder;
-import microsoft.graph.identity.b2cuserflows.B2cUserFlowsRequestBuilder;
-import microsoft.graph.identity.b2cuserflows.item.B2cIdentityUserFlowItemRequestBuilder;
-import microsoft.graph.identity.b2xuserflows.B2xUserFlowsRequestBuilder;
-import microsoft.graph.identity.b2xuserflows.item.B2xIdentityUserFlowItemRequestBuilder;
-import microsoft.graph.identity.conditionalaccess.ConditionalAccessRequestBuilder;
-import microsoft.graph.identity.continuousaccessevaluationpolicy.ContinuousAccessEvaluationPolicyRequestBuilder;
-import microsoft.graph.identity.customauthenticationextensions.CustomAuthenticationExtensionsRequestBuilder;
-import microsoft.graph.identity.customauthenticationextensions.item.CustomAuthenticationExtensionItemRequestBuilder;
-import microsoft.graph.identity.identityproviders.IdentityProvidersRequestBuilder;
-import microsoft.graph.identity.identityproviders.item.IdentityProviderBaseItemRequestBuilder;
-import microsoft.graph.identity.userflowattributes.item.IdentityUserFlowAttributeItemRequestBuilder;
-import microsoft.graph.identity.userflowattributes.UserFlowAttributesRequestBuilder;
-import microsoft.graph.identity.userflows.item.IdentityUserFlowItemRequestBuilder;
-import microsoft.graph.identity.userflows.UserFlowsRequestBuilder;
-import microsoft.graph.models.IdentityContainer;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the identityContainer singleton. */
 public class IdentityRequestBuilder {
     /** The apiConnectors property */
@@ -93,7 +93,7 @@ public class IdentityRequestBuilder {
         return new UserFlowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.apiConnectors.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.apiConnectors.item collection
      * @param id Unique identifier of the item
      * @return a IdentityApiConnectorItemRequestBuilder
      */
@@ -105,7 +105,7 @@ public class IdentityRequestBuilder {
         return new IdentityApiConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.authenticationEventListeners.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.authenticationEventListeners.item collection
      * @param id Unique identifier of the item
      * @return a AuthenticationEventListenerItemRequestBuilder
      */
@@ -117,7 +117,7 @@ public class IdentityRequestBuilder {
         return new AuthenticationEventListenerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.b2cUserFlows.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.b2cUserFlows.item collection
      * @param id Unique identifier of the item
      * @return a B2cIdentityUserFlowItemRequestBuilder
      */
@@ -129,7 +129,7 @@ public class IdentityRequestBuilder {
         return new B2cIdentityUserFlowItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.b2xUserFlows.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item collection
      * @param id Unique identifier of the item
      * @return a B2xIdentityUserFlowItemRequestBuilder
      */
@@ -230,7 +230,7 @@ public class IdentityRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.customAuthenticationExtensions.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.customAuthenticationExtensions.item collection
      * @param id Unique identifier of the item
      * @return a CustomAuthenticationExtensionItemRequestBuilder
      */
@@ -293,7 +293,7 @@ public class IdentityRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.identityProviders.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.identityProviders.item collection
      * @param id Unique identifier of the item
      * @return a IdentityProviderBaseItemRequestBuilder
      */
@@ -360,7 +360,7 @@ public class IdentityRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.userFlowAttributes.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.userFlowAttributes.item collection
      * @param id Unique identifier of the item
      * @return a IdentityUserFlowAttributeItemRequestBuilder
      */
@@ -372,7 +372,7 @@ public class IdentityRequestBuilder {
         return new IdentityUserFlowAttributeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.userFlows.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.userFlows.item collection
      * @param id Unique identifier of the item
      * @return a IdentityUserFlowItemRequestBuilder
      */

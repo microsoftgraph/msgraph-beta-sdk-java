@@ -1,5 +1,9 @@
-package microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files;
+package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryFile;
+import com.microsoft.graph.models.security.EdiscoveryFileCollectionResponse;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryFile;
-import microsoft.graph.models.security.EdiscoveryFileCollectionResponse;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.count.CountRequestBuilder;
 /** Provides operations to manage the files property of the microsoft.graph.security.ediscoveryReviewSet entity. */
 public class FilesRequestBuilder {
     /** The Count property */

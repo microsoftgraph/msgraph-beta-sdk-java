@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.managedtenants.tenanttags.item;
+package com.microsoft.graph.tenantrelationships.managedtenants.tenanttags.item;
 
+import com.microsoft.graph.models.managedtenants.TenantTag;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenanttags.item.assigntag.AssignTagRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenanttags.item.unassigntag.UnassignTagRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.TenantTag;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.tenanttags.item.assigntag.AssignTagRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenanttags.item.unassigntag.UnassignTagRequestBuilder;
 /** Provides operations to manage the tenantTags property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class TenantTagItemRequestBuilder {
     /** The assignTag property */

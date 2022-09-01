@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelconfiguration;
+package com.microsoft.graph.devicemanagement.microsofttunnelsites.item.microsofttunnelconfiguration;
 
+import com.microsoft.graph.models.MicrosoftTunnelConfiguration;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MicrosoftTunnelConfiguration;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the microsoftTunnelConfiguration property of the microsoft.graph.microsoftTunnelSite entity. */
 public class MicrosoftTunnelConfigurationRequestBuilder {
     /** Path parameters for the request */

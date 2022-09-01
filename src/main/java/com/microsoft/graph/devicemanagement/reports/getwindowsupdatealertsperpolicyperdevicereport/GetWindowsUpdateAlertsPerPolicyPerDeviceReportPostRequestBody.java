@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getwindowsupdatealertsperpolicyperdevicereport;
+package com.microsoft.graph.devicemanagement.reports.getwindowsupdatealertsperpolicyperdevicereport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

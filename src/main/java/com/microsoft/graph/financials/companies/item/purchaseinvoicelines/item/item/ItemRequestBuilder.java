@@ -1,5 +1,10 @@
-package microsoft.graph.financials.companies.item.purchaseinvoicelines.item.item;
+package com.microsoft.graph.financials.companies.item.purchaseinvoicelines.item.item;
 
+import com.microsoft.graph.financials.companies.item.purchaseinvoicelines.item.item.itemcategory.ItemCategoryRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoicelines.item.item.picture.item.PictureItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoicelines.item.item.picture.PictureRequestBuilder;
+import com.microsoft.graph.models.Item;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.purchaseinvoicelines.item.item.itemcategory.ItemCategoryRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoicelines.item.item.picture.item.PictureItemRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoicelines.item.item.picture.PictureRequestBuilder;
-import microsoft.graph.models.Item;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the item property of the microsoft.graph.purchaseInvoiceLine entity. */
 public class ItemRequestBuilder {
     /** The itemCategory property */
@@ -312,7 +312,7 @@ public class ItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.purchaseInvoiceLines.item.item.picture.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.purchaseInvoiceLines.item.item.picture.item collection
      * @param id Unique identifier of the item
      * @return a PictureItemRequestBuilder
      */

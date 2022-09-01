@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -20,7 +20,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     /** Status message for the current profile's synchronization stage. */
     private String _statusMessage;
     /**
-     * Instantiates a new EducationSynchronizationProfileStatus and sets the default values.
+     * Instantiates a new educationSynchronizationProfileStatus and sets the default values.
      * @return a void
      */
     public EducationSynchronizationProfileStatus() {
@@ -30,7 +30,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationSynchronizationProfileStatus
+     * @return a educationSynchronizationProfileStatus
      */
     @javax.annotation.Nonnull
     public static EducationSynchronizationProfileStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

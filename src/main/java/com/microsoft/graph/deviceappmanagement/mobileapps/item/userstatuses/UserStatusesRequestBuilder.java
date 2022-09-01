@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses;
+package com.microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserAppInstallStatus;
+import com.microsoft.graph.models.UserAppInstallStatusCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserAppInstallStatus;
-import microsoft.graph.models.UserAppInstallStatusCollectionResponse;
 /** Provides operations to manage the userStatuses property of the microsoft.graph.mobileApp entity. */
 public class UserStatusesRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.me.outlook.taskgroups.item;
+package com.microsoft.graph.me.outlook.taskgroups.item;
 
+import com.microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.OutlookTaskFolderItemRequestBuilder;
+import com.microsoft.graph.me.outlook.taskgroups.item.taskfolders.TaskFoldersRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OutlookTaskGroup;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.outlook.taskgroups.item.taskfolders.item.OutlookTaskFolderItemRequestBuilder;
-import microsoft.graph.me.outlook.taskgroups.item.taskfolders.TaskFoldersRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OutlookTaskGroup;
 /** Provides operations to manage the taskGroups property of the microsoft.graph.outlookUser entity. */
 public class OutlookTaskGroupItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class OutlookTaskGroupItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.outlook.taskGroups.item.taskFolders.item collection
+     * Gets an item from the com.Microsoft.Graph.me.outlook.taskGroups.item.taskFolders.item collection
      * @param id Unique identifier of the item
      * @return a OutlookTaskFolderItemRequestBuilder
      */

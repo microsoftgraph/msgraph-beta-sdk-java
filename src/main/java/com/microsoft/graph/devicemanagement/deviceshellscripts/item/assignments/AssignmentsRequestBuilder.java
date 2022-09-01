@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.deviceshellscripts.item.assignments;
+package com.microsoft.graph.devicemanagement.deviceshellscripts.item.assignments;
 
+import com.microsoft.graph.devicemanagement.deviceshellscripts.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementScriptAssignment;
+import com.microsoft.graph.models.DeviceManagementScriptAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.deviceshellscripts.item.assignments.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementScriptAssignment;
-import microsoft.graph.models.DeviceManagementScriptAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignments property of the microsoft.graph.deviceShellScript entity. */
 public class AssignmentsRequestBuilder {
     /** The Count property */

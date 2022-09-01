@@ -1,5 +1,11 @@
-package microsoft.graph.devicemanagement.chromeosonboardingsettings;
+package com.microsoft.graph.devicemanagement.chromeosonboardingsettings;
 
+import com.microsoft.graph.devicemanagement.chromeosonboardingsettings.connect.ConnectRequestBuilder;
+import com.microsoft.graph.devicemanagement.chromeosonboardingsettings.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.chromeosonboardingsettings.disconnect.DisconnectRequestBuilder;
+import com.microsoft.graph.models.ChromeOSOnboardingSettings;
+import com.microsoft.graph.models.ChromeOSOnboardingSettingsCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.chromeosonboardingsettings.connect.ConnectRequestBuilder;
-import microsoft.graph.devicemanagement.chromeosonboardingsettings.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.chromeosonboardingsettings.disconnect.DisconnectRequestBuilder;
-import microsoft.graph.models.ChromeOSOnboardingSettings;
-import microsoft.graph.models.ChromeOSOnboardingSettingsCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the chromeOSOnboardingSettings property of the microsoft.graph.deviceManagement entity. */
 public class ChromeOSOnboardingSettingsRequestBuilder {
     /** The connect property */

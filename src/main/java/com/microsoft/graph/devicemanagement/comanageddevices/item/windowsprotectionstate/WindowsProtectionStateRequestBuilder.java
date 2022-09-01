@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.comanageddevices.item.windowsprotectionstate;
+package com.microsoft.graph.devicemanagement.comanageddevices.item.windowsprotectionstate;
 
+import com.microsoft.graph.devicemanagement.comanageddevices.item.windowsprotectionstate.detectedmalwarestate.DetectedMalwareStateRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.item.windowsprotectionstate.detectedmalwarestate.item.WindowsDeviceMalwareStateItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsProtectionState;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.comanageddevices.item.windowsprotectionstate.detectedmalwarestate.DetectedMalwareStateRequestBuilder;
-import microsoft.graph.devicemanagement.comanageddevices.item.windowsprotectionstate.detectedmalwarestate.item.WindowsDeviceMalwareStateItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsProtectionState;
 /** Provides operations to manage the windowsProtectionState property of the microsoft.graph.managedDevice entity. */
 public class WindowsProtectionStateRequestBuilder {
     /** The detectedMalwareState property */
@@ -200,7 +200,7 @@ public class WindowsProtectionStateRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.comanagedDevices.item.windowsProtectionState.detectedMalwareState.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.comanagedDevices.item.windowsProtectionState.detectedMalwareState.item collection
      * @param id Unique identifier of the item
      * @return a WindowsDeviceMalwareStateItemRequestBuilder
      */

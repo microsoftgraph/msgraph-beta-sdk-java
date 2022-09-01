@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.profile.educationalactivities;
+package com.microsoft.graph.users.item.profile.educationalactivities;
 
+import com.microsoft.graph.models.EducationalActivity;
+import com.microsoft.graph.models.EducationalActivityCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.profile.educationalactivities.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.EducationalActivity;
-import microsoft.graph.models.EducationalActivityCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.profile.educationalactivities.count.CountRequestBuilder;
 /** Provides operations to manage the educationalActivities property of the microsoft.graph.profile entity. */
 public class EducationalActivitiesRequestBuilder {
     /** The Count property */

@@ -1,5 +1,12 @@
-package microsoft.graph.organization.item.branding.localizations.item;
+package com.microsoft.graph.organization.item.branding.localizations.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OrganizationalBrandingLocalization;
+import com.microsoft.graph.organization.item.branding.localizations.item.backgroundimage.BackgroundImageRequestBuilder;
+import com.microsoft.graph.organization.item.branding.localizations.item.bannerlogo.BannerLogoRequestBuilder;
+import com.microsoft.graph.organization.item.branding.localizations.item.favicon.FaviconRequestBuilder;
+import com.microsoft.graph.organization.item.branding.localizations.item.squarelogo.SquareLogoRequestBuilder;
+import com.microsoft.graph.organization.item.branding.localizations.item.squarelogodark.SquareLogoDarkRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OrganizationalBrandingLocalization;
-import microsoft.graph.organization.item.branding.localizations.item.backgroundimage.BackgroundImageRequestBuilder;
-import microsoft.graph.organization.item.branding.localizations.item.bannerlogo.BannerLogoRequestBuilder;
-import microsoft.graph.organization.item.branding.localizations.item.favicon.FaviconRequestBuilder;
-import microsoft.graph.organization.item.branding.localizations.item.squarelogo.SquareLogoRequestBuilder;
-import microsoft.graph.organization.item.branding.localizations.item.squarelogodark.SquareLogoDarkRequestBuilder;
 /** Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity. */
 public class OrganizationalBrandingLocalizationItemRequestBuilder {
     /** The backgroundImage property */

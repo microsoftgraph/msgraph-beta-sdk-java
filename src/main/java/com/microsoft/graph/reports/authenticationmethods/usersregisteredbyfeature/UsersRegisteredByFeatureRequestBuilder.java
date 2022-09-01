@@ -1,5 +1,7 @@
-package microsoft.graph.reports.authenticationmethods.usersregisteredbyfeature;
+package com.microsoft.graph.reports.authenticationmethods.usersregisteredbyfeature;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserRegistrationFeatureSummary;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserRegistrationFeatureSummary;
 /** Provides operations to call the usersRegisteredByFeature method. */
 public class UsersRegisteredByFeatureRequestBuilder {
     /** Path parameters for the request */

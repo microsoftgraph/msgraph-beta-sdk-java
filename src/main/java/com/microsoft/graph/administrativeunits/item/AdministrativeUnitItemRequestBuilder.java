@@ -1,5 +1,18 @@
-package microsoft.graph.administrativeunits.item;
+package com.microsoft.graph.administrativeunits.item;
 
+import com.microsoft.graph.administrativeunits.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.administrativeunits.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.administrativeunits.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.administrativeunits.item.extensions.item.ExtensionItemRequestBuilder;
+import com.microsoft.graph.administrativeunits.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.administrativeunits.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.administrativeunits.item.members.item.DirectoryObjectItemRequestBuilder;
+import com.microsoft.graph.administrativeunits.item.members.MembersRequestBuilder;
+import com.microsoft.graph.administrativeunits.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.administrativeunits.item.scopedrolemembers.item.ScopedRoleMembershipItemRequestBuilder;
+import com.microsoft.graph.administrativeunits.item.scopedrolemembers.ScopedRoleMembersRequestBuilder;
+import com.microsoft.graph.models.AdministrativeUnit;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.administrativeunits.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.administrativeunits.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.administrativeunits.item.extensions.ExtensionsRequestBuilder;
-import microsoft.graph.administrativeunits.item.extensions.item.ExtensionItemRequestBuilder;
-import microsoft.graph.administrativeunits.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.administrativeunits.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.administrativeunits.item.members.item.DirectoryObjectItemRequestBuilder;
-import microsoft.graph.administrativeunits.item.members.MembersRequestBuilder;
-import microsoft.graph.administrativeunits.item.restore.RestoreRequestBuilder;
-import microsoft.graph.administrativeunits.item.scopedrolemembers.item.ScopedRoleMembershipItemRequestBuilder;
-import microsoft.graph.administrativeunits.item.scopedrolemembers.ScopedRoleMembersRequestBuilder;
-import microsoft.graph.models.AdministrativeUnit;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of administrativeUnit entities. */
 public class AdministrativeUnitItemRequestBuilder {
     /** The checkMemberGroups property */
@@ -84,7 +84,7 @@ public class AdministrativeUnitItemRequestBuilder {
     public AdministrativeUnitItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/administrativeUnits/{administrativeUnit%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/administrativeUnits/{administrativeUnit%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -96,7 +96,7 @@ public class AdministrativeUnitItemRequestBuilder {
      * @return a void
      */
     public AdministrativeUnitItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/administrativeUnits/{administrativeUnit%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/administrativeUnits/{administrativeUnit%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -244,7 +244,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.administrativeUnits.item.extensions.item collection
+     * Gets an item from the com.Microsoft.Graph.administrativeUnits.item.extensions.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -307,7 +307,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.administrativeUnits.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.administrativeUnits.item.members.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -374,7 +374,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.administrativeUnits.item.scopedRoleMembers.item collection
+     * Gets an item from the com.Microsoft.Graph.administrativeUnits.item.scopedRoleMembers.item collection
      * @param id Unique identifier of the item
      * @return a ScopedRoleMembershipItemRequestBuilder
      */
@@ -402,10 +402,6 @@ public class AdministrativeUnitItemRequestBuilder {
     }
     /** Retrieve the properties and relationships of an administrativeUnit object. Since the **administrativeUnit** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **administrativeUnit** instance. */
     public class AdministrativeUnitItemRequestBuilderGetQueryParameters {
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable

@@ -1,5 +1,8 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.subjects.item;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.subjects.item;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.subjects.item.connectedorganization.ConnectedOrganizationRequestBuilder;
+import com.microsoft.graph.models.AccessPackageSubject;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.subjects.item.connectedorganization.ConnectedOrganizationRequestBuilder;
-import microsoft.graph.models.AccessPackageSubject;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the subjects property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageSubjectItemRequestBuilder {
     /** The connectedOrganization property */

@@ -1,5 +1,6 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsresourceperformance.summarizedeviceresourceperformancewithsummarizeby;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsresourceperformance.summarizedeviceresourceperformancewithsummarizeby;
 
+import com.microsoft.graph.models.UserExperienceAnalyticsResourcePerformance;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.UserExperienceAnalyticsResourcePerformance;
 /** Provides operations to call the summarizeDeviceResourcePerformance method. */
 public class SummarizeDeviceResourcePerformanceWithSummarizeByResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

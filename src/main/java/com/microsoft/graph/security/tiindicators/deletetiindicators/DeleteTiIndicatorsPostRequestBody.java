@@ -1,4 +1,4 @@
-package microsoft.graph.security.tiindicators.deletetiindicators;
+package com.microsoft.graph.security.tiindicators.deletetiindicators;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

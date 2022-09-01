@@ -1,5 +1,12 @@
-package microsoft.graph.security.subjectrightsrequests.item;
+package com.microsoft.graph.security.subjectrightsrequests.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SubjectRightsRequest;
+import com.microsoft.graph.security.subjectrightsrequests.item.getfinalattachment.GetFinalAttachmentRequestBuilder;
+import com.microsoft.graph.security.subjectrightsrequests.item.getfinalreport.GetFinalReportRequestBuilder;
+import com.microsoft.graph.security.subjectrightsrequests.item.notes.item.AuthoredNoteItemRequestBuilder;
+import com.microsoft.graph.security.subjectrightsrequests.item.notes.NotesRequestBuilder;
+import com.microsoft.graph.security.subjectrightsrequests.item.team.TeamRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SubjectRightsRequest;
-import microsoft.graph.security.subjectrightsrequests.item.getfinalattachment.GetFinalAttachmentRequestBuilder;
-import microsoft.graph.security.subjectrightsrequests.item.getfinalreport.GetFinalReportRequestBuilder;
-import microsoft.graph.security.subjectrightsrequests.item.notes.item.AuthoredNoteItemRequestBuilder;
-import microsoft.graph.security.subjectrightsrequests.item.notes.NotesRequestBuilder;
-import microsoft.graph.security.subjectrightsrequests.item.team.TeamRequestBuilder;
 /** Provides operations to manage the subjectRightsRequests property of the microsoft.graph.security entity. */
 public class SubjectRightsRequestItemRequestBuilder {
     /** The notes property */
@@ -275,7 +275,7 @@ public class SubjectRightsRequestItemRequestBuilder {
         return new GetFinalReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.subjectRightsRequests.item.notes.item collection
+     * Gets an item from the com.Microsoft.Graph.security.subjectRightsRequests.item.notes.item collection
      * @param id Unique identifier of the item
      * @return a AuthoredNoteItemRequestBuilder
      */

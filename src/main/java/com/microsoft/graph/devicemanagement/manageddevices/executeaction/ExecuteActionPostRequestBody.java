@@ -1,5 +1,6 @@
-package microsoft.graph.devicemanagement.manageddevices.executeaction;
+package com.microsoft.graph.devicemanagement.manageddevices.executeaction;
 
+import com.microsoft.graph.models.ManagedDeviceRemoteAction;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ManagedDeviceRemoteAction;
 /** Provides operations to call the executeAction method. */
 public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsable {
     /** The actionName property */

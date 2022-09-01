@@ -1,5 +1,12 @@
-package microsoft.graph.serviceprincipals;
+package com.microsoft.graph.serviceprincipals;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServicePrincipal;
+import com.microsoft.graph.models.ServicePrincipalCollectionResponse;
+import com.microsoft.graph.serviceprincipals.delta.DeltaRequestBuilder;
+import com.microsoft.graph.serviceprincipals.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,21 +21,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServicePrincipal;
-import microsoft.graph.models.ServicePrincipalCollectionResponse;
-import microsoft.graph.serviceprincipals.count.CountRequestBuilder;
-import microsoft.graph.serviceprincipals.delta.DeltaRequestBuilder;
-import microsoft.graph.serviceprincipals.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.serviceprincipals.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
-import microsoft.graph.serviceprincipals.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the collection of servicePrincipal entities. */
 public class ServicePrincipalsRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /** The getByIds property */
     @javax.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
@@ -59,7 +53,7 @@ public class ServicePrincipalsRequestBuilder {
     public ServicePrincipalsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/servicePrincipals{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/servicePrincipals{?%24top,%24search,%24orderby,%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -71,7 +65,7 @@ public class ServicePrincipalsRequestBuilder {
      * @return a void
      */
     public ServicePrincipalsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/servicePrincipals{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/servicePrincipals{?%24top,%24search,%24orderby,%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -256,18 +250,6 @@ public class ServicePrincipalsRequestBuilder {
     }
     /** Retrieve a list of servicePrincipal objects. */
     public class ServicePrincipalsRequestBuilderGetQueryParameters {
-        /** Include count of items */
-        @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
-        public Boolean count;
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
-        /** Filter items by property values */
-        @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
-        public String filter;
         /** Order items by property values */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
@@ -280,10 +262,6 @@ public class ServicePrincipalsRequestBuilder {
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
-        @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
-        public Integer skip;
         /** Show only the first n items */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable

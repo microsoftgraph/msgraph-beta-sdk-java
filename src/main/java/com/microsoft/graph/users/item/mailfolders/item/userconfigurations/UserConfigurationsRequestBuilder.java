@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.mailfolders.item.userconfigurations;
+package com.microsoft.graph.users.item.mailfolders.item.userconfigurations;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserConfiguration;
+import com.microsoft.graph.models.UserConfigurationCollectionResponse;
+import com.microsoft.graph.users.item.mailfolders.item.userconfigurations.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserConfiguration;
-import microsoft.graph.models.UserConfigurationCollectionResponse;
-import microsoft.graph.users.item.mailfolders.item.userconfigurations.count.CountRequestBuilder;
 /** Provides operations to manage the userConfigurations property of the microsoft.graph.mailFolder entity. */
 public class UserConfigurationsRequestBuilder {
     /** The Count property */

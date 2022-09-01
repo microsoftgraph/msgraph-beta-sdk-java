@@ -1,5 +1,7 @@
-package microsoft.graph.security.runhuntingquery;
+package com.microsoft.graph.security.runhuntingquery;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.HuntingQueryResults;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.HuntingQueryResults;
 /** Provides operations to call the runHuntingQuery method. */
 public class RunHuntingQueryRequestBuilder {
     /** Path parameters for the request */

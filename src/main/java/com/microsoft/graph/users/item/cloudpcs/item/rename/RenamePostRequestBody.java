@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.cloudpcs.item.rename;
+package com.microsoft.graph.users.item.cloudpcs.item.rename;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

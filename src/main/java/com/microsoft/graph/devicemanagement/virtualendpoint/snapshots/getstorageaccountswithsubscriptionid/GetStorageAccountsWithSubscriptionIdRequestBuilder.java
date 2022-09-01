@@ -1,5 +1,6 @@
-package microsoft.graph.devicemanagement.virtualendpoint.snapshots.getstorageaccountswithsubscriptionid;
+package com.microsoft.graph.devicemanagement.virtualendpoint.snapshots.getstorageaccountswithsubscriptionid;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,7 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the getStorageAccounts method. */
 public class GetStorageAccountsWithSubscriptionIdRequestBuilder {
     /** Path parameters for the request */

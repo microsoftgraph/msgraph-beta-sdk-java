@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.ismanagedappuserblocked;
+package com.microsoft.graph.users.item.ismanagedappuserblocked;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

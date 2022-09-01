@@ -1,4 +1,4 @@
-package microsoft.graph.privilegedaccess.item.resources.register;
+package com.microsoft.graph.privilegedaccess.item.resources.register;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

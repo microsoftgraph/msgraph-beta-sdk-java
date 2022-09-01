@@ -1,5 +1,11 @@
-package microsoft.graph.users.item.deviceenrollmentconfigurations.item;
+package com.microsoft.graph.users.item.deviceenrollmentconfigurations.item;
 
+import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.deviceenrollmentconfigurations.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.users.item.deviceenrollmentconfigurations.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.users.item.deviceenrollmentconfigurations.item.assignments.item.EnrollmentConfigurationAssignmentItemRequestBuilder;
+import com.microsoft.graph.users.item.deviceenrollmentconfigurations.item.setpriority.SetPriorityRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceEnrollmentConfiguration;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.deviceenrollmentconfigurations.item.assign.AssignRequestBuilder;
-import microsoft.graph.users.item.deviceenrollmentconfigurations.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.users.item.deviceenrollmentconfigurations.item.assignments.item.EnrollmentConfigurationAssignmentItemRequestBuilder;
-import microsoft.graph.users.item.deviceenrollmentconfigurations.item.setpriority.SetPriorityRequestBuilder;
 /** Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.user entity. */
 public class DeviceEnrollmentConfigurationItemRequestBuilder {
     /** The assign property */
@@ -44,7 +44,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.users.item.deviceEnrollmentConfigurations.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.deviceEnrollmentConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a EnrollmentConfigurationAssignmentItemRequestBuilder
      */

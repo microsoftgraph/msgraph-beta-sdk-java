@@ -1,5 +1,9 @@
-package microsoft.graph.security.filesecurityprofiles;
+package com.microsoft.graph.security.filesecurityprofiles;
 
+import com.microsoft.graph.models.FileSecurityProfile;
+import com.microsoft.graph.models.FileSecurityProfileCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.security.filesecurityprofiles.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.FileSecurityProfile;
-import microsoft.graph.models.FileSecurityProfileCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.security.filesecurityprofiles.count.CountRequestBuilder;
 /** Provides operations to manage the fileSecurityProfiles property of the microsoft.graph.security entity. */
 public class FileSecurityProfilesRequestBuilder {
     /** The Count property */

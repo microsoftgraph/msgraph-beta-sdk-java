@@ -1,5 +1,9 @@
-package microsoft.graph.applications.item.appmanagementpolicies;
+package com.microsoft.graph.applications.item.appmanagementpolicies;
 
+import com.microsoft.graph.applications.item.appmanagementpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.applications.item.appmanagementpolicies.ref.RefRequestBuilder;
+import com.microsoft.graph.models.AppManagementPolicyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.item.appmanagementpolicies.count.CountRequestBuilder;
-import microsoft.graph.applications.item.appmanagementpolicies.ref.RefRequestBuilder;
-import microsoft.graph.models.AppManagementPolicyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the appManagementPolicies property of the microsoft.graph.application entity. */
 public class AppManagementPoliciesRequestBuilder {
     /** The Count property */

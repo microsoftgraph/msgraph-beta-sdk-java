@@ -1,5 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.Win32LobAppFileSystemDetection;
+import com.microsoft.graph.models.Win32LobAppPowerShellScriptDetection;
+import com.microsoft.graph.models.Win32LobAppProductCodeDetection;
+import com.microsoft.graph.models.Win32LobAppRegistryDetection;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

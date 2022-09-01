@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.organizationalmessagedetails;
+package com.microsoft.graph.devicemanagement.organizationalmessagedetails;
 
+import com.microsoft.graph.devicemanagement.organizationalmessagedetails.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OrganizationalMessageDetail;
+import com.microsoft.graph.models.OrganizationalMessageDetailCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.organizationalmessagedetails.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OrganizationalMessageDetail;
-import microsoft.graph.models.OrganizationalMessageDetailCollectionResponse;
 /** Provides operations to manage the organizationalMessageDetails property of the microsoft.graph.deviceManagement entity. */
 public class OrganizationalMessageDetailsRequestBuilder {
     /** The Count property */

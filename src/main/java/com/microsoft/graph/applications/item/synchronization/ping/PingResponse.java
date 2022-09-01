@@ -1,4 +1,4 @@
-package microsoft.graph.applications.item.synchronization.ping;
+package com.microsoft.graph.applications.item.synchronization.ping;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

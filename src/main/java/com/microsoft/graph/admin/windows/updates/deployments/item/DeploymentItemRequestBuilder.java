@@ -1,5 +1,8 @@
-package microsoft.graph.admin.windows.updates.deployments.item;
+package com.microsoft.graph.admin.windows.updates.deployments.item;
 
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.AudienceRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.windowsupdates.Deployment;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.AudienceRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.windowsupdates.Deployment;
 /** Provides operations to manage the deployments property of the microsoft.graph.windowsUpdates.updates entity. */
 public class DeploymentItemRequestBuilder {
     /** The audience property */

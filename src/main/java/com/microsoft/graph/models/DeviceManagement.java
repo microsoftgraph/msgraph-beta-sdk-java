@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -71,6 +71,8 @@ public class DeviceManagement extends Entity implements Parsable {
     private java.util.List<DeviceManagementConfigurationPolicyTemplate> _configurationPolicyTemplates;
     /** List of all ConfigurationSettings */
     private java.util.List<DeviceManagementConfigurationSettingDefinition> _configurationSettings;
+    /** A configuration entity for MEM features that utilize Data Processor Service for Windows (DPSW) data. */
+    private DataProcessorServiceForWindowsFeaturesOnboarding _dataProcessorServiceForWindowsFeaturesOnboarding;
     /** Data sharing consents. */
     private java.util.List<DataSharingConsent> _dataSharingConsents;
     /** This collections of multiple DEP tokens per-tenant. */
@@ -622,6 +624,14 @@ public class DeviceManagement extends Entity implements Parsable {
         return this._configurationSettings;
     }
     /**
+     * Gets the dataProcessorServiceForWindowsFeaturesOnboarding property value. A configuration entity for MEM features that utilize Data Processor Service for Windows (DPSW) data.
+     * @return a dataProcessorServiceForWindowsFeaturesOnboarding
+     */
+    @javax.annotation.Nullable
+    public DataProcessorServiceForWindowsFeaturesOnboarding getDataProcessorServiceForWindowsFeaturesOnboarding() {
+        return this._dataProcessorServiceForWindowsFeaturesOnboarding;
+    }
+    /**
      * Gets the dataSharingConsents property value. Data sharing consents.
      * @return a dataSharingConsent
      */
@@ -884,6 +894,7 @@ public class DeviceManagement extends Entity implements Parsable {
             this.put("configurationPolicies", (n) -> { currentObject.setConfigurationPolicies(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicy::createFromDiscriminatorValue)); });
             this.put("configurationPolicyTemplates", (n) -> { currentObject.setConfigurationPolicyTemplates(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicyTemplate::createFromDiscriminatorValue)); });
             this.put("configurationSettings", (n) -> { currentObject.setConfigurationSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
+            this.put("dataProcessorServiceForWindowsFeaturesOnboarding", (n) -> { currentObject.setDataProcessorServiceForWindowsFeaturesOnboarding(n.getObjectValue(DataProcessorServiceForWindowsFeaturesOnboarding::createFromDiscriminatorValue)); });
             this.put("dataSharingConsents", (n) -> { currentObject.setDataSharingConsents(n.getCollectionOfObjectValues(DataSharingConsent::createFromDiscriminatorValue)); });
             this.put("depOnboardingSettings", (n) -> { currentObject.setDepOnboardingSettings(n.getCollectionOfObjectValues(DepOnboardingSetting::createFromDiscriminatorValue)); });
             this.put("derivedCredentials", (n) -> { currentObject.setDerivedCredentials(n.getCollectionOfObjectValues(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
@@ -1979,6 +1990,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("configurationPolicies", this.getConfigurationPolicies());
         writer.writeCollectionOfObjectValues("configurationPolicyTemplates", this.getConfigurationPolicyTemplates());
         writer.writeCollectionOfObjectValues("configurationSettings", this.getConfigurationSettings());
+        writer.writeObjectValue("dataProcessorServiceForWindowsFeaturesOnboarding", this.getDataProcessorServiceForWindowsFeaturesOnboarding());
         writer.writeCollectionOfObjectValues("dataSharingConsents", this.getDataSharingConsents());
         writer.writeCollectionOfObjectValues("depOnboardingSettings", this.getDepOnboardingSettings());
         writer.writeCollectionOfObjectValues("derivedCredentials", this.getDerivedCredentials());
@@ -2369,6 +2381,14 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setConfigurationSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
         this._configurationSettings = value;
+    }
+    /**
+     * Sets the dataProcessorServiceForWindowsFeaturesOnboarding property value. A configuration entity for MEM features that utilize Data Processor Service for Windows (DPSW) data.
+     * @param value Value to set for the dataProcessorServiceForWindowsFeaturesOnboarding property.
+     * @return a void
+     */
+    public void setDataProcessorServiceForWindowsFeaturesOnboarding(@javax.annotation.Nullable final DataProcessorServiceForWindowsFeaturesOnboarding value) {
+        this._dataProcessorServiceForWindowsFeaturesOnboarding = value;
     }
     /**
      * Sets the dataSharingConsents property value. Data sharing consents.

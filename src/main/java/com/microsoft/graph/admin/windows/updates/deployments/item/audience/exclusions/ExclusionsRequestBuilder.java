@@ -1,5 +1,13 @@
-package microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions;
+package com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions;
 
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.count.CountRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.enrollassets.EnrollAssetsRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.enrollassetsbyid.EnrollAssetsByIdRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.unenrollassets.UnenrollAssetsRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.unenrollassetsbyid.UnenrollAssetsByIdRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.windowsupdates.UpdatableAsset;
+import com.microsoft.graph.models.windowsupdates.UpdatableAssetCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.count.CountRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.enrollassets.EnrollAssetsRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.enrollassetsbyid.EnrollAssetsByIdRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.unenrollassets.UnenrollAssetsRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.unenrollassetsbyid.UnenrollAssetsByIdRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.windowsupdates.UpdatableAsset;
-import microsoft.graph.models.windowsupdates.UpdatableAssetCollectionResponse;
 /** Provides operations to manage the exclusions property of the microsoft.graph.windowsUpdates.deploymentAudience entity. */
 public class ExclusionsRequestBuilder {
     /** The Count property */

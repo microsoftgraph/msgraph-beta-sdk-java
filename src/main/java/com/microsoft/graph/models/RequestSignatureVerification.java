@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -11,9 +11,9 @@ import java.util.Objects;
 public class RequestSignatureVerification implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The allowedWeakAlgorithms property */
+    /** Specifies whether this application accepts weak algorithms.  The possible values are: rsaSha1, unknownFutureValue. */
     private WeakAlgorithms _allowedWeakAlgorithms;
-    /** The isSignedRequestRequired property */
+    /** Specifies whether signed authentication requests for this application should be required. */
     private Boolean _isSignedRequestRequired;
     /** The OdataType property */
     private String _odataType;
@@ -44,7 +44,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
         return this._additionalData;
     }
     /**
-     * Gets the allowedWeakAlgorithms property value. The allowedWeakAlgorithms property
+     * Gets the allowedWeakAlgorithms property value. Specifies whether this application accepts weak algorithms.  The possible values are: rsaSha1, unknownFutureValue.
      * @return a weakAlgorithms
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
         }};
     }
     /**
-     * Gets the isSignedRequestRequired property value. The isSignedRequestRequired property
+     * Gets the isSignedRequestRequired property value. Specifies whether signed authentication requests for this application should be required.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
         this._additionalData = value;
     }
     /**
-     * Sets the allowedWeakAlgorithms property value. The allowedWeakAlgorithms property
+     * Sets the allowedWeakAlgorithms property value. Specifies whether this application accepts weak algorithms.  The possible values are: rsaSha1, unknownFutureValue.
      * @param value Value to set for the allowedWeakAlgorithms property.
      * @return a void
      */
@@ -109,7 +109,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
         this._allowedWeakAlgorithms = value;
     }
     /**
-     * Sets the isSignedRequestRequired property value. The isSignedRequestRequired property
+     * Sets the isSignedRequestRequired property value. Specifies whether signed authentication requests for this application should be required.
      * @param value Value to set for the isSignedRequestRequired property.
      * @return a void
      */

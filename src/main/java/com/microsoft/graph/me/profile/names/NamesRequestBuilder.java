@@ -1,5 +1,9 @@
-package microsoft.graph.me.profile.names;
+package com.microsoft.graph.me.profile.names;
 
+import com.microsoft.graph.me.profile.names.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PersonName;
+import com.microsoft.graph.models.PersonNameCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.profile.names.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PersonName;
-import microsoft.graph.models.PersonNameCollectionResponse;
 /** Provides operations to manage the names property of the microsoft.graph.profile entity. */
 public class NamesRequestBuilder {
     /** The Count property */

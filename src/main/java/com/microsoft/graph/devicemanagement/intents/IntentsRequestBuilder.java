@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.intents;
+package com.microsoft.graph.devicemanagement.intents;
 
+import com.microsoft.graph.devicemanagement.intents.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementIntent;
+import com.microsoft.graph.models.DeviceManagementIntentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.intents.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementIntent;
-import microsoft.graph.models.DeviceManagementIntentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the intents property of the microsoft.graph.deviceManagement entity. */
 public class IntentsRequestBuilder {
     /** The Count property */

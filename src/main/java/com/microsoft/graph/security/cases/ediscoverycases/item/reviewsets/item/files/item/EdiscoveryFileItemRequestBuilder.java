@@ -1,5 +1,12 @@
-package microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item;
+package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryFile;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.content.ContentRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.custodian.CustodianRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.extractedtextcontent.ExtractedTextContentRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.tags.item.EdiscoveryReviewTagItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.tags.TagsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryFile;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.content.ContentRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.custodian.CustodianRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.extractedtextcontent.ExtractedTextContentRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.tags.item.EdiscoveryReviewTagItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.tags.TagsRequestBuilder;
 /** Provides operations to manage the files property of the microsoft.graph.security.ediscoveryReviewSet entity. */
 public class EdiscoveryFileItemRequestBuilder {
     /** The content property */
@@ -324,7 +324,7 @@ public class EdiscoveryFileItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item.files.item.tags.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item.files.item.tags.item collection
      * @param id Unique identifier of the item
      * @return a EdiscoveryReviewTagItemRequestBuilder
      */

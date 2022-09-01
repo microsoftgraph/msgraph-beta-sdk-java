@@ -1,5 +1,7 @@
-package microsoft.graph.applications.item.synchronization.jobs.item.provisionondemand;
+package com.microsoft.graph.applications.item.synchronization.jobs.item.provisionondemand;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.StringKeyStringValuePair;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.StringKeyStringValuePair;
 /** Provides operations to call the provisionOnDemand method. */
 public class ProvisionOnDemandRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsremoteconnection.item;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsremoteconnection.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsRemoteConnection;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsRemoteConnection;
 /** Provides operations to manage the userExperienceAnalyticsRemoteConnection property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsRemoteConnectionItemRequestBuilder {
     /** Path parameters for the request */

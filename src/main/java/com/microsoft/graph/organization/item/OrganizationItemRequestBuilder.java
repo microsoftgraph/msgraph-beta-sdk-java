@@ -1,5 +1,20 @@
-package microsoft.graph.organization.item;
+package com.microsoft.graph.organization.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Organization;
+import com.microsoft.graph.organization.item.activateservice.ActivateServiceRequestBuilder;
+import com.microsoft.graph.organization.item.branding.BrandingRequestBuilder;
+import com.microsoft.graph.organization.item.certificatebasedauthconfiguration.CertificateBasedAuthConfigurationRequestBuilder;
+import com.microsoft.graph.organization.item.certificatebasedauthconfiguration.item.CertificateBasedAuthConfigurationItemRequestBuilder;
+import com.microsoft.graph.organization.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.organization.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.organization.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.organization.item.extensions.item.ExtensionItemRequestBuilder;
+import com.microsoft.graph.organization.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.organization.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.organization.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.organization.item.setmobiledevicemanagementauthority.SetMobileDeviceManagementAuthorityRequestBuilder;
+import com.microsoft.graph.organization.item.settings.SettingsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,21 +29,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Organization;
-import microsoft.graph.organization.item.activateservice.ActivateServiceRequestBuilder;
-import microsoft.graph.organization.item.branding.BrandingRequestBuilder;
-import microsoft.graph.organization.item.certificatebasedauthconfiguration.CertificateBasedAuthConfigurationRequestBuilder;
-import microsoft.graph.organization.item.certificatebasedauthconfiguration.item.CertificateBasedAuthConfigurationItemRequestBuilder;
-import microsoft.graph.organization.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.organization.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.organization.item.extensions.ExtensionsRequestBuilder;
-import microsoft.graph.organization.item.extensions.item.ExtensionItemRequestBuilder;
-import microsoft.graph.organization.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.organization.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.organization.item.restore.RestoreRequestBuilder;
-import microsoft.graph.organization.item.setmobiledevicemanagementauthority.SetMobileDeviceManagementAuthorityRequestBuilder;
-import microsoft.graph.organization.item.settings.SettingsRequestBuilder;
 /** Provides operations to manage the collection of organization entities. */
 public class OrganizationItemRequestBuilder {
     /** The activateService property */
@@ -93,7 +93,7 @@ public class OrganizationItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.organization.item.certificateBasedAuthConfiguration.item collection
+     * Gets an item from the com.Microsoft.Graph.organization.item.certificateBasedAuthConfiguration.item collection
      * @param id Unique identifier of the item
      * @return a CertificateBasedAuthConfigurationItemRequestBuilder
      */
@@ -113,7 +113,7 @@ public class OrganizationItemRequestBuilder {
     public OrganizationItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/organization/{organization%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/organization/{organization%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -125,7 +125,7 @@ public class OrganizationItemRequestBuilder {
      * @return a void
      */
     public OrganizationItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/organization/{organization%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/organization/{organization%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -273,7 +273,7 @@ public class OrganizationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.organization.item.extensions.item collection
+     * Gets an item from the com.Microsoft.Graph.organization.item.extensions.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -407,10 +407,6 @@ public class OrganizationItemRequestBuilder {
     }
     /** Get the properties and relationships of the currently authenticated organization. Since the **organization** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **organization** instance. */
     public class OrganizationItemRequestBuilderGetQueryParameters {
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable

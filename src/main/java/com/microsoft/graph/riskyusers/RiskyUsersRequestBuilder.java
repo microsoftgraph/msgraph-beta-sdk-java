@@ -1,5 +1,11 @@
-package microsoft.graph.riskyusers;
+package com.microsoft.graph.riskyusers;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RiskyUser;
+import com.microsoft.graph.models.RiskyUserCollectionResponse;
+import com.microsoft.graph.riskyusers.confirmcompromised.ConfirmCompromisedRequestBuilder;
+import com.microsoft.graph.riskyusers.count.CountRequestBuilder;
+import com.microsoft.graph.riskyusers.dismiss.DismissRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RiskyUser;
-import microsoft.graph.models.RiskyUserCollectionResponse;
-import microsoft.graph.riskyusers.confirmcompromised.ConfirmCompromisedRequestBuilder;
-import microsoft.graph.riskyusers.count.CountRequestBuilder;
-import microsoft.graph.riskyusers.dismiss.DismissRequestBuilder;
 /** Provides operations to manage the collection of riskyUser entities. */
 public class RiskyUsersRequestBuilder {
     /** The confirmCompromised property */

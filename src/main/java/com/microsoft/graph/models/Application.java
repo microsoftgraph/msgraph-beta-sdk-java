@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -69,7 +69,7 @@ public class Application extends DirectoryObject implements Parsable {
     private PublicClientApplication _publicClient;
     /** The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith). */
     private String _publisherDomain;
-    /** The requestSignatureVerification property */
+    /** Specifies whether this application requires Azure AD to verify the signed authentication requests. */
     private RequestSignatureVerification _requestSignatureVerification;
     /** Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le). */
     private java.util.List<RequiredResourceAccess> _requiredResourceAccess;
@@ -413,7 +413,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._publisherDomain;
     }
     /**
-     * Gets the requestSignatureVerification property value. The requestSignatureVerification property
+     * Gets the requestSignatureVerification property value. Specifies whether this application requires Azure AD to verify the signed authentication requests.
      * @return a requestSignatureVerification
      */
     @javax.annotation.Nullable
@@ -827,7 +827,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._publisherDomain = value;
     }
     /**
-     * Sets the requestSignatureVerification property value. The requestSignatureVerification property
+     * Sets the requestSignatureVerification property value. Specifies whether this application requires Azure AD to verify the signed authentication requests.
      * @param value Value to set for the requestSignatureVerification property.
      * @return a void
      */

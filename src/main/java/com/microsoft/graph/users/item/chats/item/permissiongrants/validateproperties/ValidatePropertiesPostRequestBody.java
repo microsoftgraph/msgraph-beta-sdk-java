@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.chats.item.permissiongrants.validateproperties;
+package com.microsoft.graph.users.item.chats.item.permissiongrants.validateproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

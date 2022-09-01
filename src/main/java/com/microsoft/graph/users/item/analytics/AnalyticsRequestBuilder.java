@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.analytics;
+package com.microsoft.graph.users.item.analytics;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserAnalytics;
+import com.microsoft.graph.users.item.analytics.activitystatistics.ActivityStatisticsRequestBuilder;
+import com.microsoft.graph.users.item.analytics.activitystatistics.item.ActivityStatisticsItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserAnalytics;
-import microsoft.graph.users.item.analytics.activitystatistics.ActivityStatisticsRequestBuilder;
-import microsoft.graph.users.item.analytics.activitystatistics.item.ActivityStatisticsItemRequestBuilder;
 /** Provides operations to manage the analytics property of the microsoft.graph.user entity. */
 public class AnalyticsRequestBuilder {
     /** The activityStatistics property */
@@ -32,7 +32,7 @@ public class AnalyticsRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.users.item.analytics.activityStatistics.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.analytics.activityStatistics.item collection
      * @param id Unique identifier of the item
      * @return a ActivityStatisticsItemRequestBuilder
      */

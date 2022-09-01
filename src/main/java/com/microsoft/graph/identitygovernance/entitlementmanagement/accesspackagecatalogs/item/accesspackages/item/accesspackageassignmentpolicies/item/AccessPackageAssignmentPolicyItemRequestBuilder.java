@@ -1,5 +1,11 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.accesspackage.AccessPackageRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.accesspackagecatalog.AccessPackageCatalogRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.customextensionhandlers.CustomExtensionHandlersRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.customextensionhandlers.item.CustomExtensionHandlerItemRequestBuilder;
+import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.accesspackage.AccessPackageRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.accesspackagecatalog.AccessPackageCatalogRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.customextensionhandlers.CustomExtensionHandlersRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.customextensionhandlers.item.CustomExtensionHandlerItemRequestBuilder;
-import microsoft.graph.models.AccessPackageAssignmentPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageAssignmentPolicies property of the microsoft.graph.accessPackage entity. */
 public class AccessPackageAssignmentPolicyItemRequestBuilder {
     /** The accessPackage property */
@@ -161,7 +161,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageCatalogs.item.accessPackages.item.accessPackageAssignmentPolicies.item.customExtensionHandlers.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageCatalogs.item.accessPackages.item.accessPackageAssignmentPolicies.item.customExtensionHandlers.item collection
      * @param id Unique identifier of the item
      * @return a CustomExtensionHandlerItemRequestBuilder
      */

@@ -1,5 +1,12 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.accesspackage.AccessPackageRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.accesspackageassignment.AccessPackageAssignmentRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.reprocess.ReprocessRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.requestor.RequestorRequestBuilder;
+import com.microsoft.graph.models.AccessPackageAssignmentRequest;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.accesspackage.AccessPackageRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.accesspackageassignment.AccessPackageAssignmentRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.cancel.CancelRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.reprocess.ReprocessRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.requestor.RequestorRequestBuilder;
-import microsoft.graph.models.AccessPackageAssignmentRequest;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageAssignmentRequests property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageAssignmentRequestItemRequestBuilder {
     /** The accessPackage property */

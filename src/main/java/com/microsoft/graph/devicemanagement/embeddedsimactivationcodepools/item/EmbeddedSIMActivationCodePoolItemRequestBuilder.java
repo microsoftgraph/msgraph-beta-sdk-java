@@ -1,5 +1,12 @@
-package microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item;
+package com.microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item;
 
+import com.microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item.assignments.item.EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item.devicestates.DeviceStatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item.devicestates.item.EmbeddedSIMDeviceStateItemRequestBuilder;
+import com.microsoft.graph.models.EmbeddedSIMActivationCodePool;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item.assignments.item.EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item.devicestates.DeviceStatesRequestBuilder;
-import microsoft.graph.devicemanagement.embeddedsimactivationcodepools.item.devicestates.item.EmbeddedSIMDeviceStateItemRequestBuilder;
-import microsoft.graph.models.EmbeddedSIMActivationCodePool;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the embeddedSIMActivationCodePools property of the microsoft.graph.deviceManagement entity. */
 public class EmbeddedSIMActivationCodePoolItemRequestBuilder {
     /** The assign property */
@@ -45,7 +45,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.embeddedSIMActivationCodePools.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.embeddedSIMActivationCodePools.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder
      */
@@ -225,7 +225,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.embeddedSIMActivationCodePools.item.deviceStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.embeddedSIMActivationCodePools.item.deviceStates.item collection
      * @param id Unique identifier of the item
      * @return a EmbeddedSIMDeviceStateItemRequestBuilder
      */

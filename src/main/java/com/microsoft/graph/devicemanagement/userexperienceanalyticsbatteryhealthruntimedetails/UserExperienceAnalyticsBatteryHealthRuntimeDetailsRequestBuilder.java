@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthruntimedetails;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthruntimedetails;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthRuntimeDetails;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsBatteryHealthRuntimeDetails;
 /** Provides operations to manage the userExperienceAnalyticsBatteryHealthRuntimeDetails property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,8 @@
-package microsoft.graph.deviceappmanagement.mobileapps.item.devicestatuses.item;
+package com.microsoft.graph.deviceappmanagement.mobileapps.item.devicestatuses.item;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.devicestatuses.item.app.AppRequestBuilder;
+import com.microsoft.graph.models.MobileAppInstallStatus;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileapps.item.devicestatuses.item.app.AppRequestBuilder;
-import microsoft.graph.models.MobileAppInstallStatus;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceStatuses property of the microsoft.graph.mobileApp entity. */
 public class MobileAppInstallStatusItemRequestBuilder {
     /** The app property */

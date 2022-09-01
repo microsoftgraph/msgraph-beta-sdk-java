@@ -1,5 +1,9 @@
-package microsoft.graph.riskyusers.item;
+package com.microsoft.graph.riskyusers.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RiskyUser;
+import com.microsoft.graph.riskyusers.item.history.HistoryRequestBuilder;
+import com.microsoft.graph.riskyusers.item.history.item.RiskyUserHistoryItemItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RiskyUser;
-import microsoft.graph.riskyusers.item.history.HistoryRequestBuilder;
-import microsoft.graph.riskyusers.item.history.item.RiskyUserHistoryItemItemRequestBuilder;
 /** Provides operations to manage the collection of riskyUser entities. */
 public class RiskyUserItemRequestBuilder {
     /** The history property */
@@ -251,7 +251,7 @@ public class RiskyUserItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.riskyUsers.item.history.item collection
+     * Gets an item from the com.Microsoft.Graph.riskyUsers.item.history.item collection
      * @param id Unique identifier of the item
      * @return a RiskyUserHistoryItemItemRequestBuilder
      */

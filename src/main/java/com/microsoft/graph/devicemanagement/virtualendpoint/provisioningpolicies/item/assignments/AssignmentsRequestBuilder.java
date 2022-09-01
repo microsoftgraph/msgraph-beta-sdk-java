@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments;
+package com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments;
 
+import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignment;
+import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.count.CountRequestBuilder;
-import microsoft.graph.models.CloudPcProvisioningPolicyAssignment;
-import microsoft.graph.models.CloudPcProvisioningPolicyAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignments property of the microsoft.graph.cloudPcProvisioningPolicy entity. */
 public class AssignmentsRequestBuilder {
     /** The Count property */

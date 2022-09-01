@@ -1,5 +1,11 @@
-package microsoft.graph.devicemanagement.virtualendpoint.snapshots;
+package com.microsoft.graph.devicemanagement.virtualendpoint.snapshots;
 
+import com.microsoft.graph.devicemanagement.virtualendpoint.snapshots.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.snapshots.getstorageaccountswithsubscriptionid.GetStorageAccountsWithSubscriptionIdRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.snapshots.getsubscriptions.GetSubscriptionsRequestBuilder;
+import com.microsoft.graph.models.CloudPcSnapshot;
+import com.microsoft.graph.models.CloudPcSnapshotCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.virtualendpoint.snapshots.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.snapshots.getstorageaccountswithsubscriptionid.GetStorageAccountsWithSubscriptionIdRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.snapshots.getsubscriptions.GetSubscriptionsRequestBuilder;
-import microsoft.graph.models.CloudPcSnapshot;
-import microsoft.graph.models.CloudPcSnapshotCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the snapshots property of the microsoft.graph.virtualEndpoint entity. */
 public class SnapshotsRequestBuilder {
     /** The Count property */

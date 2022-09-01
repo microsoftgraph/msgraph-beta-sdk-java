@@ -1,5 +1,12 @@
-package microsoft.graph.directoryobjects.item;
+package com.microsoft.graph.directoryobjects.item;
 
+import com.microsoft.graph.directoryobjects.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.directoryobjects.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.directoryobjects.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.directoryobjects.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.directoryobjects.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directoryobjects.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.directoryobjects.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.directoryobjects.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.directoryobjects.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.directoryobjects.item.restore.RestoreRequestBuilder;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of directoryObject entities. */
 public class DirectoryObjectItemRequestBuilder {
     /** The checkMemberGroups property */
@@ -63,7 +63,7 @@ public class DirectoryObjectItemRequestBuilder {
     public DirectoryObjectItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/directoryObjects/{directoryObject%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directoryObjects/{directoryObject%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -75,7 +75,7 @@ public class DirectoryObjectItemRequestBuilder {
      * @return a void
      */
     public DirectoryObjectItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/directoryObjects/{directoryObject%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directoryObjects/{directoryObject%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -345,10 +345,6 @@ public class DirectoryObjectItemRequestBuilder {
     }
     /** Retrieve the properties and relationships of a directoryObject object. */
     public class DirectoryObjectItemRequestBuilderGetQueryParameters {
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable

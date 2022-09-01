@@ -1,5 +1,9 @@
-package microsoft.graph.privilegedaccess;
+package com.microsoft.graph.privilegedaccess;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedAccess;
+import com.microsoft.graph.models.PrivilegedAccessCollectionResponse;
+import com.microsoft.graph.privilegedaccess.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedAccess;
-import microsoft.graph.models.PrivilegedAccessCollectionResponse;
-import microsoft.graph.privilegedaccess.count.CountRequestBuilder;
 /** Provides operations to manage the collection of privilegedAccess entities. */
 public class PrivilegedAccessRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.rolescopetags.item.assignments;
+package com.microsoft.graph.devicemanagement.rolescopetags.item.assignments;
 
+import com.microsoft.graph.devicemanagement.rolescopetags.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RoleScopeTagAutoAssignment;
+import com.microsoft.graph.models.RoleScopeTagAutoAssignmentCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.rolescopetags.item.assignments.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RoleScopeTagAutoAssignment;
-import microsoft.graph.models.RoleScopeTagAutoAssignmentCollectionResponse;
 /** Provides operations to manage the assignments property of the microsoft.graph.roleScopeTag entity. */
 public class AssignmentsRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.privilegedroleassignments.item.roleinfo.selfactivate;
+package com.microsoft.graph.privilegedroleassignments.item.roleinfo.selfactivate;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

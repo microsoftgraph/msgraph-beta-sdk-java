@@ -1,4 +1,4 @@
-package microsoft.graph.users.validatepassword;
+package com.microsoft.graph.users.validatepassword;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

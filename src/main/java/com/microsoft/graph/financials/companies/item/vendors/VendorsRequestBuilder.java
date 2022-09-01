@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.vendors;
+package com.microsoft.graph.financials.companies.item.vendors;
 
+import com.microsoft.graph.financials.companies.item.vendors.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Vendor;
+import com.microsoft.graph.models.VendorCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.vendors.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Vendor;
-import microsoft.graph.models.VendorCollectionResponse;
 /** Provides operations to manage the vendors property of the microsoft.graph.company entity. */
 public class VendorsRequestBuilder {
     /** The Count property */

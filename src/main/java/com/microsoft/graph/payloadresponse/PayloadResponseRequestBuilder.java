@@ -1,5 +1,9 @@
-package microsoft.graph.payloadresponse;
+package com.microsoft.graph.payloadresponse;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PayloadResponse;
+import com.microsoft.graph.models.PayloadResponseCollectionResponse;
+import com.microsoft.graph.payloadresponse.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PayloadResponse;
-import microsoft.graph.models.PayloadResponseCollectionResponse;
-import microsoft.graph.payloadresponse.count.CountRequestBuilder;
 /** Provides operations to manage the collection of payloadResponse entities. */
 public class PayloadResponseRequestBuilder {
     /** The Count property */

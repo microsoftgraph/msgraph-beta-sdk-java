@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Device Management Configuration Policy */
 public class DeviceManagementConfigurationPolicy extends Entity implements Parsable {
     /** Policy assignments */
     private java.util.List<DeviceManagementConfigurationPolicyAssignment> _assignments;
@@ -36,7 +37,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     /** Template reference information */
     private DeviceManagementConfigurationPolicyTemplateReference _templateReference;
     /**
-     * Instantiates a new DeviceManagementConfigurationPolicy and sets the default values.
+     * Instantiates a new deviceManagementConfigurationPolicy and sets the default values.
      * @return a void
      */
     public DeviceManagementConfigurationPolicy() {
@@ -46,7 +47,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationPolicy
+     * @return a deviceManagementConfigurationPolicy
      */
     @javax.annotation.Nonnull
     public static DeviceManagementConfigurationPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

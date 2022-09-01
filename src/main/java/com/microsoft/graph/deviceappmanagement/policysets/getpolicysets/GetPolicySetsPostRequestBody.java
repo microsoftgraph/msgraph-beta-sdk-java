@@ -1,4 +1,4 @@
-package microsoft.graph.deviceappmanagement.policysets.getpolicysets;
+package com.microsoft.graph.deviceappmanagement.policysets.getpolicysets;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

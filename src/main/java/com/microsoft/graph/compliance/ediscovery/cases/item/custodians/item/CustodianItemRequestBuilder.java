@@ -1,5 +1,18 @@
-package microsoft.graph.compliance.ediscovery.cases.item.custodians.item;
+package com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.activate.ActivateRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.applyhold.ApplyHoldRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.release.ReleaseRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.removehold.RemoveHoldRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.sitesources.item.SiteSourceItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.sitesources.SiteSourcesRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.unifiedgroupsources.item.UnifiedGroupSourceItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.unifiedgroupsources.UnifiedGroupSourcesRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.updateindex.UpdateIndexRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.usersources.item.UserSourceItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.usersources.UserSourcesRequestBuilder;
+import com.microsoft.graph.models.ediscovery.Custodian;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.activate.ActivateRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.applyhold.ApplyHoldRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.release.ReleaseRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.removehold.RemoveHoldRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.sitesources.item.SiteSourceItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.sitesources.SiteSourcesRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.unifiedgroupsources.item.UnifiedGroupSourceItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.unifiedgroupsources.UnifiedGroupSourcesRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.updateindex.UpdateIndexRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.usersources.item.UserSourceItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.usersources.UserSourcesRequestBuilder;
-import microsoft.graph.models.ediscovery.Custodian;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the custodians property of the microsoft.graph.ediscovery.case entity. */
 public class CustodianItemRequestBuilder {
     /** The activate property */
@@ -350,7 +350,7 @@ public class CustodianItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item.siteSources.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item.siteSources.item collection
      * @param id Unique identifier of the item
      * @return a SiteSourceItemRequestBuilder
      */
@@ -362,7 +362,7 @@ public class CustodianItemRequestBuilder {
         return new SiteSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item.unifiedGroupSources.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item.unifiedGroupSources.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedGroupSourceItemRequestBuilder
      */
@@ -374,7 +374,7 @@ public class CustodianItemRequestBuilder {
         return new UnifiedGroupSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item.userSources.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item.userSources.item collection
      * @param id Unique identifier of the item
      * @return a UserSourceItemRequestBuilder
      */

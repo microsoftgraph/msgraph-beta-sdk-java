@@ -1,5 +1,8 @@
-package microsoft.graph.devicemanagement.zebrafotadeployments.item;
+package com.microsoft.graph.devicemanagement.zebrafotadeployments.item;
 
+import com.microsoft.graph.devicemanagement.zebrafotadeployments.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ZebraFotaDeployment;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.zebrafotadeployments.item.cancel.CancelRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ZebraFotaDeployment;
 /** Provides operations to manage the zebraFotaDeployments property of the microsoft.graph.deviceManagement entity. */
 public class ZebraFotaDeploymentItemRequestBuilder {
     /** The cancel property */

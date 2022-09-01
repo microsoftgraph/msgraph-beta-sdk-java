@@ -1,5 +1,11 @@
-package microsoft.graph.devicemanagement.androidforworksettings;
+package com.microsoft.graph.devicemanagement.androidforworksettings;
 
+import com.microsoft.graph.devicemanagement.androidforworksettings.completesignup.CompleteSignupRequestBuilder;
+import com.microsoft.graph.devicemanagement.androidforworksettings.requestsignupurl.RequestSignupUrlRequestBuilder;
+import com.microsoft.graph.devicemanagement.androidforworksettings.syncapps.SyncAppsRequestBuilder;
+import com.microsoft.graph.devicemanagement.androidforworksettings.unbind.UnbindRequestBuilder;
+import com.microsoft.graph.models.AndroidForWorkSettings;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.androidforworksettings.completesignup.CompleteSignupRequestBuilder;
-import microsoft.graph.devicemanagement.androidforworksettings.requestsignupurl.RequestSignupUrlRequestBuilder;
-import microsoft.graph.devicemanagement.androidforworksettings.syncapps.SyncAppsRequestBuilder;
-import microsoft.graph.devicemanagement.androidforworksettings.unbind.UnbindRequestBuilder;
-import microsoft.graph.models.AndroidForWorkSettings;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the androidForWorkSettings property of the microsoft.graph.deviceManagement entity. */
 public class AndroidForWorkSettingsRequestBuilder {
     /** The completeSignup property */

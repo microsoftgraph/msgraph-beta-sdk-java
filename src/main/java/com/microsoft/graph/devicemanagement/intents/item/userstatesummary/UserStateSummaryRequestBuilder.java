@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.intents.item.userstatesummary;
+package com.microsoft.graph.devicemanagement.intents.item.userstatesummary;
 
+import com.microsoft.graph.models.DeviceManagementIntentUserStateSummary;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceManagementIntentUserStateSummary;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userStateSummary property of the microsoft.graph.deviceManagementIntent entity. */
 public class UserStateSummaryRequestBuilder {
     /** Path parameters for the request */

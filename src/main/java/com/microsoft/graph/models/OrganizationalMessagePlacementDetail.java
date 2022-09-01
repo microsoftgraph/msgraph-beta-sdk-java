@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -14,7 +14,7 @@ public class OrganizationalMessagePlacementDetail implements AdditionalDataHolde
     private Map<String, Object> _additionalData;
     /** The OdataType property */
     private String _odataType;
-    /** Indicates the name of the placement. Possible values are: default, card0, card1, card2, card3. */
+    /** Indicates the name of the placement. Possible values are: default, card0, card1, card2, card3, unknownFutureValue. */
     private OrganizationalMessagePlacement _placement;
     /** The list of different variants that can be displayed for this placement */
     private java.util.List<OrganizationalMessageVariant> _variants;
@@ -66,7 +66,7 @@ public class OrganizationalMessagePlacementDetail implements AdditionalDataHolde
         return this._odataType;
     }
     /**
-     * Gets the placement property value. Indicates the name of the placement. Possible values are: default, card0, card1, card2, card3.
+     * Gets the placement property value. Indicates the name of the placement. Possible values are: default, card0, card1, card2, card3, unknownFutureValue.
      * @return a organizationalMessagePlacement
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class OrganizationalMessagePlacementDetail implements AdditionalDataHolde
         this._odataType = value;
     }
     /**
-     * Sets the placement property value. Indicates the name of the placement. Possible values are: default, card0, card1, card2, card3.
+     * Sets the placement property value. Indicates the name of the placement. Possible values are: default, card0, card1, card2, card3, unknownFutureValue.
      * @param value Value to set for the placement property.
      * @return a void
      */

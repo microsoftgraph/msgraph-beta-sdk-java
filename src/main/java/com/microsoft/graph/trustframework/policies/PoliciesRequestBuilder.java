@@ -1,5 +1,9 @@
-package microsoft.graph.trustframework.policies;
+package com.microsoft.graph.trustframework.policies;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TrustFrameworkPolicy;
+import com.microsoft.graph.models.TrustFrameworkPolicyCollectionResponse;
+import com.microsoft.graph.trustframework.policies.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TrustFrameworkPolicy;
-import microsoft.graph.models.TrustFrameworkPolicyCollectionResponse;
-import microsoft.graph.trustframework.policies.count.CountRequestBuilder;
 /** Provides operations to manage the policies property of the microsoft.graph.trustFramework entity. */
 public class PoliciesRequestBuilder {
     /** The Count property */

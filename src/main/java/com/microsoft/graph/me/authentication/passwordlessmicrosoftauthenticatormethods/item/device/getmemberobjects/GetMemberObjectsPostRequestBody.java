@@ -1,4 +1,4 @@
-package microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.getmemberobjects;
+package com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.getmemberobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

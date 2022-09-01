@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.ndesconnectors;
+package com.microsoft.graph.devicemanagement.ndesconnectors;
 
+import com.microsoft.graph.devicemanagement.ndesconnectors.count.CountRequestBuilder;
+import com.microsoft.graph.models.NdesConnector;
+import com.microsoft.graph.models.NdesConnectorCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.ndesconnectors.count.CountRequestBuilder;
-import microsoft.graph.models.NdesConnector;
-import microsoft.graph.models.NdesConnectorCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the ndesConnectors property of the microsoft.graph.deviceManagement entity. */
 public class NdesConnectorsRequestBuilder {
     /** The Count property */

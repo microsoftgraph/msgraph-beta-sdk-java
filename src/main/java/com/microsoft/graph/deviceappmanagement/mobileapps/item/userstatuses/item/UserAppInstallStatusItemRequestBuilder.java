@@ -1,5 +1,10 @@
-package microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.item;
+package com.microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.item;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.item.app.AppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.item.devicestatuses.DeviceStatusesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.item.devicestatuses.item.MobileAppInstallStatusItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserAppInstallStatus;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.item.app.AppRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.item.devicestatuses.DeviceStatusesRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.userstatuses.item.devicestatuses.item.MobileAppInstallStatusItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserAppInstallStatus;
 /** Provides operations to manage the userStatuses property of the microsoft.graph.mobileApp entity. */
 public class UserAppInstallStatusItemRequestBuilder {
     /** The app property */
@@ -206,7 +206,7 @@ public class UserAppInstallStatusItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.userStatuses.item.deviceStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item.userStatuses.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
      * @return a MobileAppInstallStatusItemRequestBuilder
      */

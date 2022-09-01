@@ -1,5 +1,13 @@
-package microsoft.graph.directory.recommendations.item;
+package com.microsoft.graph.directory.recommendations.item;
 
+import com.microsoft.graph.directory.recommendations.item.complete.CompleteRequestBuilder;
+import com.microsoft.graph.directory.recommendations.item.dismiss.DismissRequestBuilder;
+import com.microsoft.graph.directory.recommendations.item.impactedresources.ImpactedResourcesRequestBuilder;
+import com.microsoft.graph.directory.recommendations.item.impactedresources.item.RecommendationResourceItemRequestBuilder;
+import com.microsoft.graph.directory.recommendations.item.postpone.PostponeRequestBuilder;
+import com.microsoft.graph.directory.recommendations.item.reactivate.ReactivateRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Recommendation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.recommendations.item.complete.CompleteRequestBuilder;
-import microsoft.graph.directory.recommendations.item.dismiss.DismissRequestBuilder;
-import microsoft.graph.directory.recommendations.item.impactedresources.ImpactedResourcesRequestBuilder;
-import microsoft.graph.directory.recommendations.item.impactedresources.item.RecommendationResourceItemRequestBuilder;
-import microsoft.graph.directory.recommendations.item.postpone.PostponeRequestBuilder;
-import microsoft.graph.directory.recommendations.item.reactivate.ReactivateRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Recommendation;
 /** Provides operations to manage the recommendations property of the microsoft.graph.directory entity. */
 public class RecommendationItemRequestBuilder {
     /** The complete property */
@@ -275,7 +275,7 @@ public class RecommendationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.recommendations.item.impactedResources.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.recommendations.item.impactedResources.item collection
      * @param id Unique identifier of the item
      * @return a RecommendationResourceItemRequestBuilder
      */

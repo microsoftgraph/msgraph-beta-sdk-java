@@ -1,4 +1,4 @@
-package microsoft.graph.serviceprincipals.item.getpasswordsinglesignoncredentials;
+package com.microsoft.graph.serviceprincipals.item.getpasswordsinglesignoncredentials;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

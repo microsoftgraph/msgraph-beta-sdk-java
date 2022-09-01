@@ -1,5 +1,10 @@
-package microsoft.graph.me.tasks.alltasks;
+package com.microsoft.graph.me.tasks.alltasks;
 
+import com.microsoft.graph.me.tasks.alltasks.count.CountRequestBuilder;
+import com.microsoft.graph.me.tasks.alltasks.delta.DeltaRequestBuilder;
+import com.microsoft.graph.models.BaseTask;
+import com.microsoft.graph.models.BaseTaskCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.tasks.alltasks.count.CountRequestBuilder;
-import microsoft.graph.me.tasks.alltasks.delta.DeltaRequestBuilder;
-import microsoft.graph.models.BaseTask;
-import microsoft.graph.models.BaseTaskCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the alltasks property of the microsoft.graph.tasks entity. */
 public class AlltasksRequestBuilder {
     /** The Count property */

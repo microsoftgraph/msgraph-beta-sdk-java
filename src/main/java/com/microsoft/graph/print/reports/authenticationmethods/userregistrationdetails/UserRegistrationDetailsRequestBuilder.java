@@ -1,5 +1,9 @@
-package microsoft.graph.print.reports.authenticationmethods.userregistrationdetails;
+package com.microsoft.graph.print.reports.authenticationmethods.userregistrationdetails;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserRegistrationDetails;
+import com.microsoft.graph.models.UserRegistrationDetailsCollectionResponse;
+import com.microsoft.graph.print.reports.authenticationmethods.userregistrationdetails.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserRegistrationDetails;
-import microsoft.graph.models.UserRegistrationDetailsCollectionResponse;
-import microsoft.graph.print.reports.authenticationmethods.userregistrationdetails.count.CountRequestBuilder;
 /** Provides operations to manage the userRegistrationDetails property of the microsoft.graph.authenticationMethodsRoot entity. */
 public class UserRegistrationDetailsRequestBuilder {
     /** The Count property */
