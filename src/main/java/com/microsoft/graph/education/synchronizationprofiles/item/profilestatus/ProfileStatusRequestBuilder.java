@@ -1,5 +1,7 @@
-package microsoft.graph.education.synchronizationprofiles.item.profilestatus;
+package com.microsoft.graph.education.synchronizationprofiles.item.profilestatus;
 
+import com.microsoft.graph.models.EducationSynchronizationProfileStatus;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.EducationSynchronizationProfileStatus;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the profileStatus property of the microsoft.graph.educationSynchronizationProfile entity. */
 public class ProfileStatusRequestBuilder {
     /** Path parameters for the request */

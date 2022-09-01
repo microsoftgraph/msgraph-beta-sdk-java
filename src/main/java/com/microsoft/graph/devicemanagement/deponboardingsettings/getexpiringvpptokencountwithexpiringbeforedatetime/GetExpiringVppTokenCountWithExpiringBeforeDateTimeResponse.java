@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.deponboardingsettings.getexpiringvpptokencountwithexpiringbeforedatetime;
+package com.microsoft.graph.devicemanagement.deponboardingsettings.getexpiringvpptokencountwithexpiringbeforedatetime;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

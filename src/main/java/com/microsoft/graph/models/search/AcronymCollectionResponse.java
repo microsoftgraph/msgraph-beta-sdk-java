@@ -1,4 +1,4 @@
-package microsoft.graph.models.search;
+package com.microsoft.graph.models.search;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

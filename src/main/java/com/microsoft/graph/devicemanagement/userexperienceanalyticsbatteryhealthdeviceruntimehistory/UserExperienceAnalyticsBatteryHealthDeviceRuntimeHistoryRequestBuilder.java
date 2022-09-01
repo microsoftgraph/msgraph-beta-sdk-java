@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthdeviceruntimehistory;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthdeviceruntimehistory;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthdeviceruntimehistory.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthdeviceruntimehistory.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory;
-import microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder {
     /** The Count property */

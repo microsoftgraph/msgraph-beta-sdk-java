@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.virtualendpoint.galleryimages.item;
+package com.microsoft.graph.devicemanagement.virtualendpoint.galleryimages.item;
 
+import com.microsoft.graph.models.CloudPcGalleryImage;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CloudPcGalleryImage;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the galleryImages property of the microsoft.graph.virtualEndpoint entity. */
 public class CloudPcGalleryImageItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,10 @@
-package microsoft.graph.security.labels.retentionlabels.item;
+package com.microsoft.graph.security.labels.retentionlabels.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.RetentionLabel;
+import com.microsoft.graph.security.labels.retentionlabels.item.dispositionreviewstages.DispositionReviewStagesRequestBuilder;
+import com.microsoft.graph.security.labels.retentionlabels.item.dispositionreviewstages.item.DispositionReviewStageItemRequestBuilder;
+import com.microsoft.graph.security.labels.retentionlabels.item.retentioneventtype.RetentionEventTypeRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.RetentionLabel;
-import microsoft.graph.security.labels.retentionlabels.item.dispositionreviewstages.DispositionReviewStagesRequestBuilder;
-import microsoft.graph.security.labels.retentionlabels.item.dispositionreviewstages.item.DispositionReviewStageItemRequestBuilder;
-import microsoft.graph.security.labels.retentionlabels.item.retentioneventtype.RetentionEventTypeRequestBuilder;
 /** Provides operations to manage the retentionLabels property of the microsoft.graph.security.labelsRoot entity. */
 public class RetentionLabelItemRequestBuilder {
     /** The dispositionReviewStages property */
@@ -206,7 +206,7 @@ public class RetentionLabelItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.labels.retentionLabels.item.dispositionReviewStages.item collection
+     * Gets an item from the com.Microsoft.Graph.security.labels.retentionLabels.item.dispositionReviewStages.item collection
      * @param id Unique identifier of the item
      * @return a DispositionReviewStageItemRequestBuilder
      */

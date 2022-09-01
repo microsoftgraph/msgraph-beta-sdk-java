@@ -1,5 +1,25 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.EducationalActivity;
+import com.microsoft.graph.models.ItemAddress;
+import com.microsoft.graph.models.ItemEmail;
+import com.microsoft.graph.models.ItemPatent;
+import com.microsoft.graph.models.ItemPhone;
+import com.microsoft.graph.models.ItemPublication;
+import com.microsoft.graph.models.LanguageProficiency;
+import com.microsoft.graph.models.PersonAnnotation;
+import com.microsoft.graph.models.PersonAnnualEvent;
+import com.microsoft.graph.models.PersonAward;
+import com.microsoft.graph.models.PersonCertification;
+import com.microsoft.graph.models.PersonInterest;
+import com.microsoft.graph.models.PersonName;
+import com.microsoft.graph.models.PersonResponsibility;
+import com.microsoft.graph.models.PersonWebsite;
+import com.microsoft.graph.models.ProjectParticipation;
+import com.microsoft.graph.models.SkillProficiency;
+import com.microsoft.graph.models.UserAccountInformation;
+import com.microsoft.graph.models.WebAccount;
+import com.microsoft.graph.models.WorkPosition;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

@@ -1,4 +1,4 @@
-package microsoft.graph.me.deviceenrollmentconfigurations.item.setpriority;
+package com.microsoft.graph.me.deviceenrollmentconfigurations.item.setpriority;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

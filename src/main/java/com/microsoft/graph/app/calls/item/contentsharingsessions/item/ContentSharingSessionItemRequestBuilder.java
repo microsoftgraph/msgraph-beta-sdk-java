@@ -1,5 +1,7 @@
-package microsoft.graph.app.calls.item.contentsharingsessions.item;
+package com.microsoft.graph.app.calls.item.contentsharingsessions.item;
 
+import com.microsoft.graph.models.ContentSharingSession;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ContentSharingSession;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity. */
 public class ContentSharingSessionItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,11 @@
-package microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources;
+package com.microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.applyhold.ApplyHoldRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.count.CountRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.removehold.RemoveHoldRequestBuilder;
+import com.microsoft.graph.models.ediscovery.NoncustodialDataSource;
+import com.microsoft.graph.models.ediscovery.NoncustodialDataSourceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.applyhold.ApplyHoldRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.count.CountRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.removehold.RemoveHoldRequestBuilder;
-import microsoft.graph.models.ediscovery.NoncustodialDataSource;
-import microsoft.graph.models.ediscovery.NoncustodialDataSourceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the noncustodialDataSources property of the microsoft.graph.ediscovery.case entity. */
 public class NoncustodialDataSourcesRequestBuilder {
     /** The applyHold property */

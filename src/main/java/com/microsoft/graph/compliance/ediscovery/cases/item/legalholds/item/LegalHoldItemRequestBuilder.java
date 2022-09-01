@@ -1,5 +1,13 @@
-package microsoft.graph.compliance.ediscovery.cases.item.legalholds.item;
+package com.microsoft.graph.compliance.ediscovery.cases.item.legalholds.item;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.sitesources.item.SiteSourceItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.sitesources.SiteSourcesRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.unifiedgroupsources.item.UnifiedGroupSourceItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.unifiedgroupsources.UnifiedGroupSourcesRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.usersources.item.UserSourceItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.usersources.UserSourcesRequestBuilder;
+import com.microsoft.graph.models.ediscovery.LegalHold;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.sitesources.item.SiteSourceItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.sitesources.SiteSourcesRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.unifiedgroupsources.item.UnifiedGroupSourceItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.unifiedgroupsources.UnifiedGroupSourcesRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.usersources.item.UserSourceItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.usersources.UserSourcesRequestBuilder;
-import microsoft.graph.models.ediscovery.LegalHold;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the legalHolds property of the microsoft.graph.ediscovery.case entity. */
 public class LegalHoldItemRequestBuilder {
     /** Path parameters for the request */
@@ -320,7 +320,7 @@ public class LegalHoldItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item.siteSources.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item.siteSources.item collection
      * @param id Unique identifier of the item
      * @return a SiteSourceItemRequestBuilder
      */
@@ -332,7 +332,7 @@ public class LegalHoldItemRequestBuilder {
         return new SiteSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item.unifiedGroupSources.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item.unifiedGroupSources.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedGroupSourceItemRequestBuilder
      */
@@ -344,7 +344,7 @@ public class LegalHoldItemRequestBuilder {
         return new UnifiedGroupSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item.userSources.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item.userSources.item collection
      * @param id Unique identifier of the item
      * @return a UserSourceItemRequestBuilder
      */

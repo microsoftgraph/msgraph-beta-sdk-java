@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.devices.item.getmemberobjects;
+package com.microsoft.graph.users.item.devices.item.getmemberobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

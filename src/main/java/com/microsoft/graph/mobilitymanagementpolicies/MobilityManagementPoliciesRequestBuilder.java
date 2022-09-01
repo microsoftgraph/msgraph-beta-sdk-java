@@ -1,5 +1,9 @@
-package microsoft.graph.mobilitymanagementpolicies;
+package com.microsoft.graph.mobilitymanagementpolicies;
 
+import com.microsoft.graph.mobilitymanagementpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.models.MobilityManagementPolicy;
+import com.microsoft.graph.models.MobilityManagementPolicyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.mobilitymanagementpolicies.count.CountRequestBuilder;
-import microsoft.graph.models.MobilityManagementPolicy;
-import microsoft.graph.models.MobilityManagementPolicyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of mobilityManagementPolicy entities. */
 public class MobilityManagementPoliciesRequestBuilder {
     /** The Count property */

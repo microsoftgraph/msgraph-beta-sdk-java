@@ -1,4 +1,4 @@
-package microsoft.graph.chats.item.permissiongrants.getbyids;
+package com.microsoft.graph.chats.item.permissiongrants.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

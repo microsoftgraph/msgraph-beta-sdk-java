@@ -1,5 +1,9 @@
-package microsoft.graph.programcontroltypes;
+package com.microsoft.graph.programcontroltypes;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ProgramControlType;
+import com.microsoft.graph.models.ProgramControlTypeCollectionResponse;
+import com.microsoft.graph.programcontroltypes.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ProgramControlType;
-import microsoft.graph.models.ProgramControlTypeCollectionResponse;
-import microsoft.graph.programcontroltypes.count.CountRequestBuilder;
 /** Provides operations to manage the collection of programControlType entities. */
 public class ProgramControlTypesRequestBuilder {
     /** The Count property */

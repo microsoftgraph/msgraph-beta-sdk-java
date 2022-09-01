@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -16,6 +16,8 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     private String _applicationDisplayName;
     /** AAD Application Id. */
     private String _applicationId;
+    /** Actor Type. */
+    private String _auditActorType;
     /** IPAddress. */
     private String _ipAddress;
     /** The OdataType property */
@@ -79,15 +81,24 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
         return this._applicationId;
     }
     /**
+     * Gets the auditActorType property value. Actor Type.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getAuditActorType() {
+        return this._auditActorType;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditActor currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<>(13) {{
             this.put("applicationDisplayName", (n) -> { currentObject.setApplicationDisplayName(n.getStringValue()); });
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
+            this.put("auditActorType", (n) -> { currentObject.setAuditActorType(n.getStringValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("remoteTenantId", (n) -> { currentObject.setRemoteTenantId(n.getStringValue()); });
@@ -189,6 +200,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationDisplayName", this.getApplicationDisplayName());
         writer.writeStringValue("applicationId", this.getApplicationId());
+        writer.writeStringValue("auditActorType", this.getAuditActorType());
         writer.writeStringValue("ipAddress", this.getIpAddress());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("remoteTenantId", this.getRemoteTenantId());
@@ -224,6 +236,14 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     public void setApplicationId(@javax.annotation.Nullable final String value) {
         this._applicationId = value;
+    }
+    /**
+     * Sets the auditActorType property value. Actor Type.
+     * @param value Value to set for the auditActorType property.
+     * @return a void
+     */
+    public void setAuditActorType(@javax.annotation.Nullable final String value) {
+        this._auditActorType = value;
     }
     /**
      * Sets the ipAddress property value. IPAddress.

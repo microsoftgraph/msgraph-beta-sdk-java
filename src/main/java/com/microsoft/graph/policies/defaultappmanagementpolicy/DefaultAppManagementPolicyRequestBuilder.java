@@ -1,5 +1,7 @@
-package microsoft.graph.policies.defaultappmanagementpolicy;
+package com.microsoft.graph.policies.defaultappmanagementpolicy;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TenantAppManagementPolicy;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TenantAppManagementPolicy;
 /** Provides operations to manage the defaultAppManagementPolicy property of the microsoft.graph.policyRoot entity. */
 public class DefaultAppManagementPolicyRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.privilegedaccess.item.roledefinitions;
+package com.microsoft.graph.privilegedaccess.item.roledefinitions;
 
+import com.microsoft.graph.models.GovernanceRoleDefinition;
+import com.microsoft.graph.models.GovernanceRoleDefinitionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.privilegedaccess.item.roledefinitions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.GovernanceRoleDefinition;
-import microsoft.graph.models.GovernanceRoleDefinitionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.privilegedaccess.item.roledefinitions.count.CountRequestBuilder;
 /** Provides operations to manage the roleDefinitions property of the microsoft.graph.privilegedAccess entity. */
 public class RoleDefinitionsRequestBuilder {
     /** The Count property */

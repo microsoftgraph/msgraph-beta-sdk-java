@@ -1,5 +1,13 @@
-package microsoft.graph.tenantrelationships.delegatedadminrelationships.item;
+package com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item;
 
+import com.microsoft.graph.models.DelegatedAdminRelationship;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments.AccessAssignmentsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments.item.DelegatedAdminAccessAssignmentItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.operations.item.DelegatedAdminRelationshipOperationItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.requests.item.DelegatedAdminRelationshipRequestItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.requests.RequestsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DelegatedAdminRelationship;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments.AccessAssignmentsRequestBuilder;
-import microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments.item.DelegatedAdminAccessAssignmentItemRequestBuilder;
-import microsoft.graph.tenantrelationships.delegatedadminrelationships.item.operations.item.DelegatedAdminRelationshipOperationItemRequestBuilder;
-import microsoft.graph.tenantrelationships.delegatedadminrelationships.item.operations.OperationsRequestBuilder;
-import microsoft.graph.tenantrelationships.delegatedadminrelationships.item.requests.item.DelegatedAdminRelationshipRequestItemRequestBuilder;
-import microsoft.graph.tenantrelationships.delegatedadminrelationships.item.requests.RequestsRequestBuilder;
 /** Provides operations to manage the delegatedAdminRelationships property of the microsoft.graph.tenantRelationship entity. */
 public class DelegatedAdminRelationshipItemRequestBuilder {
     /** The accessAssignments property */
@@ -46,7 +46,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.delegatedAdminRelationships.item.accessAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.delegatedAdminRelationships.item.accessAssignments.item collection
      * @param id Unique identifier of the item
      * @return a DelegatedAdminAccessAssignmentItemRequestBuilder
      */
@@ -277,7 +277,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.delegatedAdminRelationships.item.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.delegatedAdminRelationships.item.operations.item collection
      * @param id Unique identifier of the item
      * @return a DelegatedAdminRelationshipOperationItemRequestBuilder
      */
@@ -344,7 +344,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.delegatedAdminRelationships.item.requests.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.delegatedAdminRelationships.item.requests.item collection
      * @param id Unique identifier of the item
      * @return a DelegatedAdminRelationshipRequestItemRequestBuilder
      */

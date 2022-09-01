@@ -1,0 +1,69 @@
+package com.microsoft.graph.models.identitygovernance;
+
+import com.microsoft.graph.models.CustomExtensionData;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class CustomTaskExtensionCallbackData extends CustomExtensionData implements Parsable {
+    /** The operationStatus property */
+    private CustomTaskExtensionOperationStatus _operationStatus;
+    /**
+     * Instantiates a new CustomTaskExtensionCallbackData and sets the default values.
+     * @return a void
+     */
+    public CustomTaskExtensionCallbackData() {
+        super();
+        this.setOdataType("#microsoft.graph.identityGovernance.customTaskExtensionCallbackData");
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a CustomTaskExtensionCallbackData
+     */
+    @javax.annotation.Nonnull
+    public static CustomTaskExtensionCallbackData createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new CustomTaskExtensionCallbackData();
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final CustomTaskExtensionCallbackData currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("operationStatus", (n) -> { currentObject.setOperationStatus(n.getEnumValue(CustomTaskExtensionOperationStatus.class)); });
+        }};
+    }
+    /**
+     * Gets the operationStatus property value. The operationStatus property
+     * @return a customTaskExtensionOperationStatus
+     */
+    @javax.annotation.Nullable
+    public CustomTaskExtensionOperationStatus getOperationStatus() {
+        return this._operationStatus;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeEnumValue("operationStatus", this.getOperationStatus());
+    }
+    /**
+     * Sets the operationStatus property value. The operationStatus property
+     * @param value Value to set for the operationStatus property.
+     * @return a void
+     */
+    public void setOperationStatus(@javax.annotation.Nullable final CustomTaskExtensionOperationStatus value) {
+        this._operationStatus = value;
+    }
+}

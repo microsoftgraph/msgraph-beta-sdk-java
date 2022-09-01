@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.summarizedeviceregressionperformancewithsummarizeby;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.summarizedeviceregressionperformancewithsummarizeby;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
 /** Provides operations to call the summarizeDeviceRegressionPerformance method. */
 public class SummarizeDeviceRegressionPerformanceWithSummarizeByRequestBuilder {
     /** Path parameters for the request */

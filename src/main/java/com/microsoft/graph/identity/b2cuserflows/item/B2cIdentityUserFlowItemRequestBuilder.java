@@ -1,5 +1,15 @@
-package microsoft.graph.identity.b2cuserflows.item;
+package com.microsoft.graph.identity.b2cuserflows.item;
 
+import com.microsoft.graph.identity.b2cuserflows.item.identityproviders.IdentityProvidersRequestBuilder;
+import com.microsoft.graph.identity.b2cuserflows.item.identityproviders.item.IdentityProviderItemRequestBuilder;
+import com.microsoft.graph.identity.b2cuserflows.item.languages.item.UserFlowLanguageConfigurationItemRequestBuilder;
+import com.microsoft.graph.identity.b2cuserflows.item.languages.LanguagesRequestBuilder;
+import com.microsoft.graph.identity.b2cuserflows.item.userattributeassignments.item.IdentityUserFlowAttributeAssignmentItemRequestBuilder;
+import com.microsoft.graph.identity.b2cuserflows.item.userattributeassignments.UserAttributeAssignmentsRequestBuilder;
+import com.microsoft.graph.identity.b2cuserflows.item.userflowidentityproviders.item.IdentityProviderBaseItemRequestBuilder;
+import com.microsoft.graph.identity.b2cuserflows.item.userflowidentityproviders.UserFlowIdentityProvidersRequestBuilder;
+import com.microsoft.graph.models.B2cIdentityUserFlow;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.b2cuserflows.item.identityproviders.IdentityProvidersRequestBuilder;
-import microsoft.graph.identity.b2cuserflows.item.identityproviders.item.IdentityProviderItemRequestBuilder;
-import microsoft.graph.identity.b2cuserflows.item.languages.item.UserFlowLanguageConfigurationItemRequestBuilder;
-import microsoft.graph.identity.b2cuserflows.item.languages.LanguagesRequestBuilder;
-import microsoft.graph.identity.b2cuserflows.item.userattributeassignments.item.IdentityUserFlowAttributeAssignmentItemRequestBuilder;
-import microsoft.graph.identity.b2cuserflows.item.userattributeassignments.UserAttributeAssignmentsRequestBuilder;
-import microsoft.graph.identity.b2cuserflows.item.userflowidentityproviders.item.IdentityProviderBaseItemRequestBuilder;
-import microsoft.graph.identity.b2cuserflows.item.userflowidentityproviders.UserFlowIdentityProvidersRequestBuilder;
-import microsoft.graph.models.B2cIdentityUserFlow;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the b2cUserFlows property of the microsoft.graph.identityContainer entity. */
 public class B2cIdentityUserFlowItemRequestBuilder {
     /** The identityProviders property */
@@ -272,7 +272,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.b2cUserFlows.item.identityProviders.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.b2cUserFlows.item.identityProviders.item collection
      * @param id Unique identifier of the item
      * @return a IdentityProviderItemRequestBuilder
      */
@@ -284,7 +284,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         return new IdentityProviderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.b2cUserFlows.item.languages.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.b2cUserFlows.item.languages.item collection
      * @param id Unique identifier of the item
      * @return a UserFlowLanguageConfigurationItemRequestBuilder
      */
@@ -351,7 +351,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.b2cUserFlows.item.userAttributeAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.b2cUserFlows.item.userAttributeAssignments.item collection
      * @param id Unique identifier of the item
      * @return a IdentityUserFlowAttributeAssignmentItemRequestBuilder
      */
@@ -363,7 +363,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         return new IdentityUserFlowAttributeAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.b2cUserFlows.item.userFlowIdentityProviders.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.b2cUserFlows.item.userFlowIdentityProviders.item collection
      * @param id Unique identifier of the item
      * @return a IdentityProviderBaseItemRequestBuilder
      */

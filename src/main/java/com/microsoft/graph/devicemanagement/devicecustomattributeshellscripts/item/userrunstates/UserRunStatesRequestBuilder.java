@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.userrunstates;
+package com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.userrunstates;
 
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.userrunstates.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementScriptUserState;
+import com.microsoft.graph.models.DeviceManagementScriptUserStateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.userrunstates.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementScriptUserState;
-import microsoft.graph.models.DeviceManagementScriptUserStateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userRunStates property of the microsoft.graph.deviceCustomAttributeShellScript entity. */
 public class UserRunStatesRequestBuilder {
     /** The Count property */

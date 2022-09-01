@@ -1,5 +1,6 @@
-package microsoft.graph.tenantrelationships.managedtenants.tenantgroups.tenantsearch;
+package com.microsoft.graph.tenantrelationships.managedtenants.tenantgroups.tenantsearch;
 
+import com.microsoft.graph.models.managedtenants.TenantGroup;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.TenantGroup;
 /** Provides operations to call the tenantSearch method. */
 public class TenantSearchResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

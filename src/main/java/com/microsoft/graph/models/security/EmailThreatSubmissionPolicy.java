@@ -1,5 +1,6 @@
-package microsoft.graph.models.security;
+package com.microsoft.graph.models.security;
 
+import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
 /** Provides operations to manage the collection of accessReview entities. */
 public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
     /** Specifies the email address of the sender from which email notifications will be sent to end users to inform them whether an email is spam, phish or clean. The default value is null. Optional for creation. */

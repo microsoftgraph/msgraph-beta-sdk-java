@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item;
+package com.microsoft.graph.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
+import com.microsoft.graph.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item.device.DeviceRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
-import microsoft.graph.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item.device.DeviceRequestBuilder;
 /** Provides operations to manage the passwordlessMicrosoftAuthenticatorMethods property of the microsoft.graph.authentication entity. */
 public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder {
     /** The device property */

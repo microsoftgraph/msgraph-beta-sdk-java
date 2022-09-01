@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.profile.websites;
+package com.microsoft.graph.users.item.profile.websites;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PersonWebsite;
+import com.microsoft.graph.models.PersonWebsiteCollectionResponse;
+import com.microsoft.graph.users.item.profile.websites.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PersonWebsite;
-import microsoft.graph.models.PersonWebsiteCollectionResponse;
-import microsoft.graph.users.item.profile.websites.count.CountRequestBuilder;
 /** Provides operations to manage the websites property of the microsoft.graph.profile entity. */
 public class WebsitesRequestBuilder {
     /** The Count property */

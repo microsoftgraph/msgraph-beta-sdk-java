@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.manageddevices.item.playlostmodesound;
+package com.microsoft.graph.devicemanagement.manageddevices.item.playlostmodesound;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,9 @@
-package microsoft.graph.messagetraces.item.recipients;
+package com.microsoft.graph.messagetraces.item.recipients;
 
+import com.microsoft.graph.messagetraces.item.recipients.count.CountRequestBuilder;
+import com.microsoft.graph.models.MessageRecipient;
+import com.microsoft.graph.models.MessageRecipientCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.messagetraces.item.recipients.count.CountRequestBuilder;
-import microsoft.graph.models.MessageRecipient;
-import microsoft.graph.models.MessageRecipientCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the recipients property of the microsoft.graph.messageTrace entity. */
 public class RecipientsRequestBuilder {
     /** The Count property */

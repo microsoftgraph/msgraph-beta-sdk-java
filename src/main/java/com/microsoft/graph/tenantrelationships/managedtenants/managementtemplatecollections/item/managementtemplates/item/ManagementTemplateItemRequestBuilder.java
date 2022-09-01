@@ -1,5 +1,7 @@
-package microsoft.graph.tenantrelationships.managedtenants.managementtemplatecollections.item.managementtemplates.item;
+package com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatecollections.item.managementtemplates.item;
 
+import com.microsoft.graph.models.managedtenants.ManagementTemplate;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ManagementTemplate;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managementTemplates property of the microsoft.graph.managedTenants.managementTemplateCollection entity. */
 public class ManagementTemplateItemRequestBuilder {
     /** Path parameters for the request */

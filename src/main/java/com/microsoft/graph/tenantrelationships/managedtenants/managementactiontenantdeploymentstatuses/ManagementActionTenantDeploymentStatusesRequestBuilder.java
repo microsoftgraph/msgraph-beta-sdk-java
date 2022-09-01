@@ -1,5 +1,10 @@
-package microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses;
+package com.microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses;
 
+import com.microsoft.graph.models.managedtenants.ManagementActionTenantDeploymentStatus;
+import com.microsoft.graph.models.managedtenants.ManagementActionTenantDeploymentStatusCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses.changedeploymentstatus.ChangeDeploymentStatusRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ManagementActionTenantDeploymentStatus;
-import microsoft.graph.models.managedtenants.ManagementActionTenantDeploymentStatusCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses.changedeploymentstatus.ChangeDeploymentStatusRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses.count.CountRequestBuilder;
 /** Provides operations to manage the managementActionTenantDeploymentStatuses property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class ManagementActionTenantDeploymentStatusesRequestBuilder {
     /** The changeDeploymentStatus property */

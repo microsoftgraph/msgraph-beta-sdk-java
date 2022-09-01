@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
@@ -12,7 +12,9 @@ public enum WindowsUpdateNotificationDisplayOption implements ValuedEnum {
     /** Turn off all notifications, excluding restart warnings. */
     RestartWarningsOnly("restartWarningsOnly"),
     /** Turn off all notifications, including restart warnings. */
-    DisableAllNotifications("disableAllNotifications");
+    DisableAllNotifications("disableAllNotifications"),
+    /** Evolvable enum member */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsUpdateNotificationDisplayOption(final String value) {
         this.value = value;
@@ -27,6 +29,7 @@ public enum WindowsUpdateNotificationDisplayOption implements ValuedEnum {
             case "defaultNotifications": return DefaultNotifications;
             case "restartWarningsOnly": return RestartWarningsOnly;
             case "disableAllNotifications": return DisableAllNotifications;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

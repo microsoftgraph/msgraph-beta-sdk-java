@@ -1,5 +1,15 @@
-package microsoft.graph.teamwork.devices.item;
+package com.microsoft.graph.teamwork.devices.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamworkDevice;
+import com.microsoft.graph.teamwork.devices.item.activity.ActivityRequestBuilder;
+import com.microsoft.graph.teamwork.devices.item.configuration.ConfigurationRequestBuilder;
+import com.microsoft.graph.teamwork.devices.item.health.HealthRequestBuilder;
+import com.microsoft.graph.teamwork.devices.item.operations.item.TeamworkDeviceOperationItemRequestBuilder;
+import com.microsoft.graph.teamwork.devices.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.teamwork.devices.item.restart.RestartRequestBuilder;
+import com.microsoft.graph.teamwork.devices.item.rundiagnostics.RunDiagnosticsRequestBuilder;
+import com.microsoft.graph.teamwork.devices.item.updatesoftware.UpdateSoftwareRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamworkDevice;
-import microsoft.graph.teamwork.devices.item.activity.ActivityRequestBuilder;
-import microsoft.graph.teamwork.devices.item.configuration.ConfigurationRequestBuilder;
-import microsoft.graph.teamwork.devices.item.health.HealthRequestBuilder;
-import microsoft.graph.teamwork.devices.item.operations.item.TeamworkDeviceOperationItemRequestBuilder;
-import microsoft.graph.teamwork.devices.item.operations.OperationsRequestBuilder;
-import microsoft.graph.teamwork.devices.item.restart.RestartRequestBuilder;
-import microsoft.graph.teamwork.devices.item.rundiagnostics.RunDiagnosticsRequestBuilder;
-import microsoft.graph.teamwork.devices.item.updatesoftware.UpdateSoftwareRequestBuilder;
 /** Provides operations to manage the devices property of the microsoft.graph.teamwork entity. */
 public class TeamworkDeviceItemRequestBuilder {
     /** The activity property */
@@ -287,7 +287,7 @@ public class TeamworkDeviceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.devices.item.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.devices.item.operations.item collection
      * @param id Unique identifier of the item
      * @return a TeamworkDeviceOperationItemRequestBuilder
      */

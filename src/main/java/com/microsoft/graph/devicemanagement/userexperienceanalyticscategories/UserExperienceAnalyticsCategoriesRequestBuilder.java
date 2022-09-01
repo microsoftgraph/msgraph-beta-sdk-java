@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticscategories;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticscategories;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticscategories.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsCategory;
+import com.microsoft.graph.models.UserExperienceAnalyticsCategoryCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticscategories.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsCategory;
-import microsoft.graph.models.UserExperienceAnalyticsCategoryCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsCategories property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsCategoriesRequestBuilder {
     /** The Count property */

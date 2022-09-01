@@ -1,5 +1,13 @@
-package microsoft.graph.reports.authenticationmethods;
+package com.microsoft.graph.reports.authenticationmethods;
 
+import com.microsoft.graph.models.AuthenticationMethodsRoot;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.reports.authenticationmethods.userregistrationdetails.item.UserRegistrationDetailsItemRequestBuilder;
+import com.microsoft.graph.reports.authenticationmethods.userregistrationdetails.UserRegistrationDetailsRequestBuilder;
+import com.microsoft.graph.reports.authenticationmethods.usersregisteredbyfeature.UsersRegisteredByFeatureRequestBuilder;
+import com.microsoft.graph.reports.authenticationmethods.usersregisteredbyfeaturewithincludedusertypeswithincludeduserroles.UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder;
+import com.microsoft.graph.reports.authenticationmethods.usersregisteredbymethod.UsersRegisteredByMethodRequestBuilder;
+import com.microsoft.graph.reports.authenticationmethods.usersregisteredbymethodwithincludedusertypeswithincludeduserroles.UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AuthenticationMethodsRoot;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.reports.authenticationmethods.userregistrationdetails.item.UserRegistrationDetailsItemRequestBuilder;
-import microsoft.graph.reports.authenticationmethods.userregistrationdetails.UserRegistrationDetailsRequestBuilder;
-import microsoft.graph.reports.authenticationmethods.usersregisteredbyfeature.UsersRegisteredByFeatureRequestBuilder;
-import microsoft.graph.reports.authenticationmethods.usersregisteredbyfeaturewithincludedusertypeswithincludeduserroles.UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder;
-import microsoft.graph.reports.authenticationmethods.usersregisteredbymethod.UsersRegisteredByMethodRequestBuilder;
-import microsoft.graph.reports.authenticationmethods.usersregisteredbymethodwithincludedusertypeswithincludeduserroles.UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder;
 /** Provides operations to manage the authenticationMethods property of the microsoft.graph.reportRoot entity. */
 public class AuthenticationMethodsRequestBuilder {
     /** Path parameters for the request */
@@ -310,7 +310,7 @@ public class AuthenticationMethodsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.reports.authenticationMethods.userRegistrationDetails.item collection
+     * Gets an item from the com.Microsoft.Graph.reports.authenticationMethods.userRegistrationDetails.item collection
      * @param id Unique identifier of the item
      * @return a UserRegistrationDetailsItemRequestBuilder
      */

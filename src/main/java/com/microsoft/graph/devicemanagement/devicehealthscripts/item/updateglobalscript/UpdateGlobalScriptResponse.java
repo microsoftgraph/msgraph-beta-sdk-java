@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.devicehealthscripts.item.updateglobalscript;
+package com.microsoft.graph.devicemanagement.devicehealthscripts.item.updateglobalscript;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

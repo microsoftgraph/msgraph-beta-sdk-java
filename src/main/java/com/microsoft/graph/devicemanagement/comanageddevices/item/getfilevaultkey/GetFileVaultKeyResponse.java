@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.comanageddevices.item.getfilevaultkey;
+package com.microsoft.graph.devicemanagement.comanageddevices.item.getfilevaultkey;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

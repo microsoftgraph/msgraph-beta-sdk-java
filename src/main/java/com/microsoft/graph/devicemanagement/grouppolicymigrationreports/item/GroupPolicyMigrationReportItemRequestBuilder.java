@@ -1,5 +1,11 @@
-package microsoft.graph.devicemanagement.grouppolicymigrationreports.item;
+package com.microsoft.graph.devicemanagement.grouppolicymigrationreports.item;
 
+import com.microsoft.graph.devicemanagement.grouppolicymigrationreports.item.grouppolicysettingmappings.GroupPolicySettingMappingsRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicymigrationreports.item.grouppolicysettingmappings.item.GroupPolicySettingMappingItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicymigrationreports.item.unsupportedgrouppolicyextensions.item.UnsupportedGroupPolicyExtensionItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.grouppolicymigrationreports.item.unsupportedgrouppolicyextensions.UnsupportedGroupPolicyExtensionsRequestBuilder;
+import com.microsoft.graph.models.GroupPolicyMigrationReport;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.grouppolicymigrationreports.item.grouppolicysettingmappings.GroupPolicySettingMappingsRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicymigrationreports.item.grouppolicysettingmappings.item.GroupPolicySettingMappingItemRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicymigrationreports.item.unsupportedgrouppolicyextensions.item.UnsupportedGroupPolicyExtensionItemRequestBuilder;
-import microsoft.graph.devicemanagement.grouppolicymigrationreports.item.unsupportedgrouppolicyextensions.UnsupportedGroupPolicyExtensionsRequestBuilder;
-import microsoft.graph.models.GroupPolicyMigrationReport;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groupPolicyMigrationReports property of the microsoft.graph.deviceManagement entity. */
 public class GroupPolicyMigrationReportItemRequestBuilder {
     /** The groupPolicySettingMappings property */
@@ -258,7 +258,7 @@ public class GroupPolicyMigrationReportItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyMigrationReports.item.groupPolicySettingMappings.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.groupPolicyMigrationReports.item.groupPolicySettingMappings.item collection
      * @param id Unique identifier of the item
      * @return a GroupPolicySettingMappingItemRequestBuilder
      */
@@ -325,7 +325,7 @@ public class GroupPolicyMigrationReportItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.groupPolicyMigrationReports.item.unsupportedGroupPolicyExtensions.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.groupPolicyMigrationReports.item.unsupportedGroupPolicyExtensions.item collection
      * @param id Unique identifier of the item
      * @return a UnsupportedGroupPolicyExtensionItemRequestBuilder
      */

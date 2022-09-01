@@ -1,4 +1,4 @@
-package microsoft.graph.deviceappmanagement.androidmanagedappprotections.haspayloadlinks;
+package com.microsoft.graph.deviceappmanagement.androidmanagedappprotections.haspayloadlinks;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

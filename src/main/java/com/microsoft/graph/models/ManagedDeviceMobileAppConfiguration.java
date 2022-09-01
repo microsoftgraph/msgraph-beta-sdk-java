@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AndroidForWorkMobileAppConfiguration;
+import com.microsoft.graph.models.AndroidManagedStoreAppConfiguration;
+import com.microsoft.graph.models.IosMobileAppConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

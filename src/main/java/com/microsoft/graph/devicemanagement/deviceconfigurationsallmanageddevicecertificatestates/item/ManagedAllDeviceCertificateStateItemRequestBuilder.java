@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.deviceconfigurationsallmanageddevicecertificatestates.item;
+package com.microsoft.graph.devicemanagement.deviceconfigurationsallmanageddevicecertificatestates.item;
 
+import com.microsoft.graph.models.ManagedAllDeviceCertificateState;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ManagedAllDeviceCertificateState;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceConfigurationsAllManagedDeviceCertificateStates property of the microsoft.graph.deviceManagement entity. */
 public class ManagedAllDeviceCertificateStateItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.paymentmethods;
+package com.microsoft.graph.financials.companies.item.paymentmethods;
 
+import com.microsoft.graph.financials.companies.item.paymentmethods.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PaymentMethod;
+import com.microsoft.graph.models.PaymentMethodCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.paymentmethods.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PaymentMethod;
-import microsoft.graph.models.PaymentMethodCollectionResponse;
 /** Provides operations to manage the paymentMethods property of the microsoft.graph.company entity. */
 public class PaymentMethodsRequestBuilder {
     /** The Count property */

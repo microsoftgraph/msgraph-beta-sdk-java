@@ -1,5 +1,8 @@
-package microsoft.graph.financials.companies.item.salescreditmemolines.item.item.picture.item;
+package com.microsoft.graph.financials.companies.item.salescreditmemolines.item.item.picture.item;
 
+import com.microsoft.graph.financials.companies.item.salescreditmemolines.item.item.picture.item.content.ContentRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Picture;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salescreditmemolines.item.item.picture.item.content.ContentRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Picture;
 /** Provides operations to manage the picture property of the microsoft.graph.item entity. */
 public class PictureItemRequestBuilder {
     /** The content property */

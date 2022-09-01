@@ -1,5 +1,7 @@
-package microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.custodiansources.item;
+package com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.custodiansources.item;
 
+import com.microsoft.graph.models.ediscovery.DataSource;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ediscovery.DataSource;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the custodianSources property of the microsoft.graph.ediscovery.sourceCollection entity. */
 public class DataSourceItemRequestBuilder {
     /** Path parameters for the request */

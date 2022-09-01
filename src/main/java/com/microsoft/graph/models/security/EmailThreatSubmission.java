@@ -1,5 +1,7 @@
-package microsoft.graph.models.security;
+package com.microsoft.graph.models.security;
 
+import com.microsoft.graph.models.security.EmailContentThreatSubmission;
+import com.microsoft.graph.models.security.EmailUrlThreatSubmission;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

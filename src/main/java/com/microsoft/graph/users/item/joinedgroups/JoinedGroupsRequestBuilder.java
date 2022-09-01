@@ -1,5 +1,13 @@
-package microsoft.graph.users.item.joinedgroups;
+package com.microsoft.graph.users.item.joinedgroups;
 
+import com.microsoft.graph.models.Group;
+import com.microsoft.graph.models.GroupCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.joinedgroups.delta.DeltaRequestBuilder;
+import com.microsoft.graph.users.item.joinedgroups.evaluatedynamicmembership.EvaluateDynamicMembershipRequestBuilder;
+import com.microsoft.graph.users.item.joinedgroups.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.users.item.joinedgroups.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
+import com.microsoft.graph.users.item.joinedgroups.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Group;
-import microsoft.graph.models.GroupCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.joinedgroups.delta.DeltaRequestBuilder;
-import microsoft.graph.users.item.joinedgroups.evaluatedynamicmembership.EvaluateDynamicMembershipRequestBuilder;
-import microsoft.graph.users.item.joinedgroups.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.users.item.joinedgroups.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
-import microsoft.graph.users.item.joinedgroups.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the joinedGroups property of the microsoft.graph.user entity. */
 public class JoinedGroupsRequestBuilder {
     /** The evaluateDynamicMembership property */

@@ -1,4 +1,4 @@
-package microsoft.graph.governanceresources.item.roleassignments.export;
+package com.microsoft.graph.governanceresources.item.roleassignments.export;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

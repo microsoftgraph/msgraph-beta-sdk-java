@@ -1,5 +1,9 @@
-package microsoft.graph.teamwork.teamtemplates.item.definitions;
+package com.microsoft.graph.teamwork.teamtemplates.item.definitions;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamTemplateDefinition;
+import com.microsoft.graph.models.TeamTemplateDefinitionCollectionResponse;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamTemplateDefinition;
-import microsoft.graph.models.TeamTemplateDefinitionCollectionResponse;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.count.CountRequestBuilder;
 /** Provides operations to manage the definitions property of the microsoft.graph.teamTemplate entity. */
 public class DefinitionsRequestBuilder {
     /** The Count property */

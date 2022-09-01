@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.profile.languages;
+package com.microsoft.graph.users.item.profile.languages;
 
+import com.microsoft.graph.models.LanguageProficiency;
+import com.microsoft.graph.models.LanguageProficiencyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.profile.languages.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.LanguageProficiency;
-import microsoft.graph.models.LanguageProficiencyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.profile.languages.count.CountRequestBuilder;
 /** Provides operations to manage the languages property of the microsoft.graph.profile entity. */
 public class LanguagesRequestBuilder {
     /** The Count property */

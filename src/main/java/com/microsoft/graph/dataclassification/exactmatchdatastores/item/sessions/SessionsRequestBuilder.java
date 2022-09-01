@@ -1,5 +1,9 @@
-package microsoft.graph.dataclassification.exactmatchdatastores.item.sessions;
+package com.microsoft.graph.dataclassification.exactmatchdatastores.item.sessions;
 
+import com.microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.count.CountRequestBuilder;
+import com.microsoft.graph.models.ExactMatchSession;
+import com.microsoft.graph.models.ExactMatchSessionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.dataclassification.exactmatchdatastores.item.sessions.count.CountRequestBuilder;
-import microsoft.graph.models.ExactMatchSession;
-import microsoft.graph.models.ExactMatchSessionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the sessions property of the microsoft.graph.exactMatchDataStore entity. */
 public class SessionsRequestBuilder {
     /** The Count property */

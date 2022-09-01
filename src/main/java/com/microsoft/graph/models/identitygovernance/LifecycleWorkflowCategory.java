@@ -1,0 +1,27 @@
+package com.microsoft.graph.models.identitygovernance;
+
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
+
+/** Provides operations to manage the collection of accessReview entities. */
+public enum LifecycleWorkflowCategory implements ValuedEnum {
+    Joiner("joiner"),
+    Leaver("leaver"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    LifecycleWorkflowCategory(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static LifecycleWorkflowCategory forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "joiner": return Joiner;
+            case "leaver": return Leaver;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
+}

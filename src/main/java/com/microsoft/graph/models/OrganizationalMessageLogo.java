@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -12,7 +12,7 @@ import java.util.Objects;
 public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png. */
+    /** The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png, unknownFutureValue. */
     private OrganizationalMessageLogoType _contentType;
     /** The binary contents of the logo. This is null when logoCdnUrl is used to send the logo */
     private byte[] _logo;
@@ -47,7 +47,7 @@ public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable
         return this._additionalData;
     }
     /**
-     * Gets the contentType property value. The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png.
+     * Gets the contentType property value. The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png, unknownFutureValue.
      * @return a organizationalMessageLogoType
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable
         this._additionalData = value;
     }
     /**
-     * Sets the contentType property value. The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png.
+     * Sets the contentType property value. The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png, unknownFutureValue.
      * @param value Value to set for the contentType property.
      * @return a void
      */

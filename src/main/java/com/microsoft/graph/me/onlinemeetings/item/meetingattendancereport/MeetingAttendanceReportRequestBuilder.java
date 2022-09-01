@@ -1,5 +1,9 @@
-package microsoft.graph.me.onlinemeetings.item.meetingattendancereport;
+package com.microsoft.graph.me.onlinemeetings.item.meetingattendancereport;
 
+import com.microsoft.graph.me.onlinemeetings.item.meetingattendancereport.attendancerecords.AttendanceRecordsRequestBuilder;
+import com.microsoft.graph.me.onlinemeetings.item.meetingattendancereport.attendancerecords.item.AttendanceRecordItemRequestBuilder;
+import com.microsoft.graph.models.MeetingAttendanceReport;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.onlinemeetings.item.meetingattendancereport.attendancerecords.AttendanceRecordsRequestBuilder;
-import microsoft.graph.me.onlinemeetings.item.meetingattendancereport.attendancerecords.item.AttendanceRecordItemRequestBuilder;
-import microsoft.graph.models.MeetingAttendanceReport;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the meetingAttendanceReport property of the microsoft.graph.onlineMeeting entity. */
 public class MeetingAttendanceReportRequestBuilder {
     /** The attendanceRecords property */
@@ -32,7 +32,7 @@ public class MeetingAttendanceReportRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.me.onlineMeetings.item.meetingAttendanceReport.attendanceRecords.item collection
+     * Gets an item from the com.Microsoft.Graph.me.onlineMeetings.item.meetingAttendanceReport.attendanceRecords.item collection
      * @param id Unique identifier of the item
      * @return a AttendanceRecordItemRequestBuilder
      */

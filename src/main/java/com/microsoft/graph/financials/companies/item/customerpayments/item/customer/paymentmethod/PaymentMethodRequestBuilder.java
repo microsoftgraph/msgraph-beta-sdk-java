@@ -1,5 +1,7 @@
-package microsoft.graph.financials.companies.item.customerpayments.item.customer.paymentmethod;
+package com.microsoft.graph.financials.companies.item.customerpayments.item.customer.paymentmethod;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PaymentMethod;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PaymentMethod;
 /** Provides operations to manage the paymentMethod property of the microsoft.graph.customer entity. */
 public class PaymentMethodRequestBuilder {
     /** Path parameters for the request */

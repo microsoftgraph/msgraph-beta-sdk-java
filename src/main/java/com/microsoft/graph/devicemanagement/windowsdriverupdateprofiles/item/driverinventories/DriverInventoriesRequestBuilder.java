@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.driverinventories;
+package com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.driverinventories;
 
+import com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.driverinventories.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsDriverUpdateInventory;
+import com.microsoft.graph.models.WindowsDriverUpdateInventoryCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.driverinventories.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsDriverUpdateInventory;
-import microsoft.graph.models.WindowsDriverUpdateInventoryCollectionResponse;
 /** Provides operations to manage the driverInventories property of the microsoft.graph.windowsDriverUpdateProfile entity. */
 public class DriverInventoriesRequestBuilder {
     /** The Count property */

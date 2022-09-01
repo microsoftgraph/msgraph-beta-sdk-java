@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.salescreditmemos;
+package com.microsoft.graph.financials.companies.item.salescreditmemos;
 
+import com.microsoft.graph.financials.companies.item.salescreditmemos.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SalesCreditMemo;
+import com.microsoft.graph.models.SalesCreditMemoCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salescreditmemos.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SalesCreditMemo;
-import microsoft.graph.models.SalesCreditMemoCollectionResponse;
 /** Provides operations to manage the salesCreditMemos property of the microsoft.graph.company entity. */
 public class SalesCreditMemosRequestBuilder {
     /** The Count property */

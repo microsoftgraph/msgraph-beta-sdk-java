@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.intents.item.categories;
+package com.microsoft.graph.devicemanagement.intents.item.categories;
 
+import com.microsoft.graph.devicemanagement.intents.item.categories.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementIntentSettingCategory;
+import com.microsoft.graph.models.DeviceManagementIntentSettingCategoryCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.intents.item.categories.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementIntentSettingCategory;
-import microsoft.graph.models.DeviceManagementIntentSettingCategoryCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the categories property of the microsoft.graph.deviceManagementIntent entity. */
 public class CategoriesRequestBuilder {
     /** The Count property */

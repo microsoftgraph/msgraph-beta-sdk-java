@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item.categorysummaries.item.updatestatesummaries.item;
+package com.microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item.categorysummaries.item.updatestatesummaries.item;
 
+import com.microsoft.graph.models.MacOSSoftwareUpdateStateSummary;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MacOSSoftwareUpdateStateSummary;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the updateStateSummaries property of the microsoft.graph.macOSSoftwareUpdateCategorySummary entity. */
 public class MacOSSoftwareUpdateStateSummaryItemRequestBuilder {
     /** Path parameters for the request */

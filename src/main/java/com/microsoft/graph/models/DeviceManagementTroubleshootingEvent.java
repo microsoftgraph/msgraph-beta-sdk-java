@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AppleVppTokenTroubleshootingEvent;
+import com.microsoft.graph.models.EnrollmentTroubleshootingEvent;
+import com.microsoft.graph.models.MobileAppTroubleshootingEvent;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

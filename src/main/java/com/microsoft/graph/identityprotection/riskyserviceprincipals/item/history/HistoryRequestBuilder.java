@@ -1,5 +1,9 @@
-package microsoft.graph.identityprotection.riskyserviceprincipals.item.history;
+package com.microsoft.graph.identityprotection.riskyserviceprincipals.item.history;
 
+import com.microsoft.graph.identityprotection.riskyserviceprincipals.item.history.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RiskyServicePrincipalHistoryItem;
+import com.microsoft.graph.models.RiskyServicePrincipalHistoryItemCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identityprotection.riskyserviceprincipals.item.history.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RiskyServicePrincipalHistoryItem;
-import microsoft.graph.models.RiskyServicePrincipalHistoryItemCollectionResponse;
 /** Provides operations to manage the history property of the microsoft.graph.riskyServicePrincipal entity. */
 public class HistoryRequestBuilder {
     /** The Count property */

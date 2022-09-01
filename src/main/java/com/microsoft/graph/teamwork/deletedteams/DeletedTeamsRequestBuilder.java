@@ -1,5 +1,10 @@
-package microsoft.graph.teamwork.deletedteams;
+package com.microsoft.graph.teamwork.deletedteams;
 
+import com.microsoft.graph.models.DeletedTeam;
+import com.microsoft.graph.models.DeletedTeamCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.teamwork.deletedteams.count.CountRequestBuilder;
+import com.microsoft.graph.teamwork.deletedteams.getallmessages.GetAllMessagesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeletedTeam;
-import microsoft.graph.models.DeletedTeamCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.teamwork.deletedteams.count.CountRequestBuilder;
-import microsoft.graph.teamwork.deletedteams.getallmessages.GetAllMessagesRequestBuilder;
 /** Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity. */
 public class DeletedTeamsRequestBuilder {
     /** The Count property */

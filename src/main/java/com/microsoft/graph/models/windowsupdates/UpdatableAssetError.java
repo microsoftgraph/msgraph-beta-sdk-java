@@ -1,5 +1,6 @@
-package microsoft.graph.models.windowsupdates;
+package com.microsoft.graph.models.windowsupdates;
 
+import com.microsoft.graph.models.windowsupdates.AzureADDeviceRegistrationError;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

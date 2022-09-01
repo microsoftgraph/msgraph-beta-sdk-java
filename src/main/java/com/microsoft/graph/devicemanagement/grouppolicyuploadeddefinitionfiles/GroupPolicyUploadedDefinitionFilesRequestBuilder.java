@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles;
+package com.microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles;
 
+import com.microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.count.CountRequestBuilder;
+import com.microsoft.graph.models.GroupPolicyUploadedDefinitionFile;
+import com.microsoft.graph.models.GroupPolicyUploadedDefinitionFileCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.grouppolicyuploadeddefinitionfiles.count.CountRequestBuilder;
-import microsoft.graph.models.GroupPolicyUploadedDefinitionFile;
-import microsoft.graph.models.GroupPolicyUploadedDefinitionFileCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groupPolicyUploadedDefinitionFiles property of the microsoft.graph.deviceManagement entity. */
 public class GroupPolicyUploadedDefinitionFilesRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.devicehealthscripts.item.getglobalscripthighestavailableversion;
+package com.microsoft.graph.devicemanagement.devicehealthscripts.item.getglobalscripthighestavailableversion;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

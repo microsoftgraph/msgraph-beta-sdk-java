@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.managedtenants.credentialuserregistrationssummaries;
+package com.microsoft.graph.tenantrelationships.managedtenants.credentialuserregistrationssummaries;
 
+import com.microsoft.graph.models.managedtenants.CredentialUserRegistrationsSummary;
+import com.microsoft.graph.models.managedtenants.CredentialUserRegistrationsSummaryCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.credentialuserregistrationssummaries.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.CredentialUserRegistrationsSummary;
-import microsoft.graph.models.managedtenants.CredentialUserRegistrationsSummaryCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.credentialuserregistrationssummaries.count.CountRequestBuilder;
 /** Provides operations to manage the credentialUserRegistrationsSummaries property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class CredentialUserRegistrationsSummariesRequestBuilder {
     /** The Count property */

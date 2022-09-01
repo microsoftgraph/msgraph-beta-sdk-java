@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.comanagementeligibledevices;
+package com.microsoft.graph.devicemanagement.comanagementeligibledevices;
 
+import com.microsoft.graph.devicemanagement.comanagementeligibledevices.count.CountRequestBuilder;
+import com.microsoft.graph.models.ComanagementEligibleDevice;
+import com.microsoft.graph.models.ComanagementEligibleDeviceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.comanagementeligibledevices.count.CountRequestBuilder;
-import microsoft.graph.models.ComanagementEligibleDevice;
-import microsoft.graph.models.ComanagementEligibleDeviceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the comanagementEligibleDevices property of the microsoft.graph.deviceManagement entity. */
 public class ComanagementEligibleDevicesRequestBuilder {
     /** The Count property */

@@ -1,5 +1,17 @@
-package microsoft.graph.privilegedaccess.item;
+package com.microsoft.graph.privilegedaccess.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedAccess;
+import com.microsoft.graph.privilegedaccess.item.resources.item.GovernanceResourceItemRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.resources.ResourcesRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.roleassignmentrequests.item.GovernanceRoleAssignmentRequestItemRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.roleassignmentrequests.RoleAssignmentRequestsRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.roleassignments.item.GovernanceRoleAssignmentItemRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.roleassignments.RoleAssignmentsRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.roledefinitions.item.GovernanceRoleDefinitionItemRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.roledefinitions.RoleDefinitionsRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.rolesettings.item.GovernanceRoleSettingItemRequestBuilder;
+import com.microsoft.graph.privilegedaccess.item.rolesettings.RoleSettingsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,18 +26,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedAccess;
-import microsoft.graph.privilegedaccess.item.resources.item.GovernanceResourceItemRequestBuilder;
-import microsoft.graph.privilegedaccess.item.resources.ResourcesRequestBuilder;
-import microsoft.graph.privilegedaccess.item.roleassignmentrequests.item.GovernanceRoleAssignmentRequestItemRequestBuilder;
-import microsoft.graph.privilegedaccess.item.roleassignmentrequests.RoleAssignmentRequestsRequestBuilder;
-import microsoft.graph.privilegedaccess.item.roleassignments.item.GovernanceRoleAssignmentItemRequestBuilder;
-import microsoft.graph.privilegedaccess.item.roleassignments.RoleAssignmentsRequestBuilder;
-import microsoft.graph.privilegedaccess.item.roledefinitions.item.GovernanceRoleDefinitionItemRequestBuilder;
-import microsoft.graph.privilegedaccess.item.roledefinitions.RoleDefinitionsRequestBuilder;
-import microsoft.graph.privilegedaccess.item.rolesettings.item.GovernanceRoleSettingItemRequestBuilder;
-import microsoft.graph.privilegedaccess.item.rolesettings.RoleSettingsRequestBuilder;
 /** Provides operations to manage the collection of privilegedAccess entities. */
 public class PrivilegedAccessItemRequestBuilder {
     /** Path parameters for the request */
@@ -334,7 +334,7 @@ public class PrivilegedAccessItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.privilegedAccess.item.resources.item collection
+     * Gets an item from the com.Microsoft.Graph.privilegedAccess.item.resources.item collection
      * @param id Unique identifier of the item
      * @return a GovernanceResourceItemRequestBuilder
      */
@@ -346,7 +346,7 @@ public class PrivilegedAccessItemRequestBuilder {
         return new GovernanceResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.privilegedAccess.item.roleAssignmentRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.privilegedAccess.item.roleAssignmentRequests.item collection
      * @param id Unique identifier of the item
      * @return a GovernanceRoleAssignmentRequestItemRequestBuilder
      */
@@ -358,7 +358,7 @@ public class PrivilegedAccessItemRequestBuilder {
         return new GovernanceRoleAssignmentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.privilegedAccess.item.roleAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.privilegedAccess.item.roleAssignments.item collection
      * @param id Unique identifier of the item
      * @return a GovernanceRoleAssignmentItemRequestBuilder
      */
@@ -370,7 +370,7 @@ public class PrivilegedAccessItemRequestBuilder {
         return new GovernanceRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.privilegedAccess.item.roleDefinitions.item collection
+     * Gets an item from the com.Microsoft.Graph.privilegedAccess.item.roleDefinitions.item collection
      * @param id Unique identifier of the item
      * @return a GovernanceRoleDefinitionItemRequestBuilder
      */
@@ -382,7 +382,7 @@ public class PrivilegedAccessItemRequestBuilder {
         return new GovernanceRoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.privilegedAccess.item.roleSettings.item collection
+     * Gets an item from the com.Microsoft.Graph.privilegedAccess.item.roleSettings.item collection
      * @param id Unique identifier of the item
      * @return a GovernanceRoleSettingItemRequestBuilder
      */

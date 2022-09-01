@@ -1,5 +1,9 @@
-package microsoft.graph.rolemanagement.entitlementmanagement.resourcenamespaces.item.resourceactions;
+package com.microsoft.graph.rolemanagement.entitlementmanagement.resourcenamespaces.item.resourceactions;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRbacResourceAction;
+import com.microsoft.graph.models.UnifiedRbacResourceActionCollectionResponse;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.resourcenamespaces.item.resourceactions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRbacResourceAction;
-import microsoft.graph.models.UnifiedRbacResourceActionCollectionResponse;
-import microsoft.graph.rolemanagement.entitlementmanagement.resourcenamespaces.item.resourceactions.count.CountRequestBuilder;
 /** Provides operations to manage the resourceActions property of the microsoft.graph.unifiedRbacResourceNamespace entity. */
 public class ResourceActionsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item.categorysummaries;
+package com.microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item.categorysummaries;
 
+import com.microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item.categorysummaries.count.CountRequestBuilder;
+import com.microsoft.graph.models.MacOSSoftwareUpdateCategorySummary;
+import com.microsoft.graph.models.MacOSSoftwareUpdateCategorySummaryCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item.categorysummaries.count.CountRequestBuilder;
-import microsoft.graph.models.MacOSSoftwareUpdateCategorySummary;
-import microsoft.graph.models.MacOSSoftwareUpdateCategorySummaryCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the categorySummaries property of the microsoft.graph.macOSSoftwareUpdateAccountSummary entity. */
 public class CategorySummariesRequestBuilder {
     /** The Count property */

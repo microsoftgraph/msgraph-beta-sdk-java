@@ -1,5 +1,7 @@
-package microsoft.graph.models.security;
+package com.microsoft.graph.models.security;
 
+import com.microsoft.graph.models.security.RetentionDurationForever;
+import com.microsoft.graph.models.security.RetentionDurationInDays;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

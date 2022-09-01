@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.salesinvoices;
+package com.microsoft.graph.financials.companies.item.salesinvoices;
 
+import com.microsoft.graph.financials.companies.item.salesinvoices.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SalesInvoice;
+import com.microsoft.graph.models.SalesInvoiceCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salesinvoices.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SalesInvoice;
-import microsoft.graph.models.SalesInvoiceCollectionResponse;
 /** Provides operations to manage the salesInvoices property of the microsoft.graph.company entity. */
 public class SalesInvoicesRequestBuilder {
     /** The Count property */

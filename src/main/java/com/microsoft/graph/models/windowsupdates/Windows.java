@@ -1,5 +1,6 @@
-package microsoft.graph.models.windowsupdates;
+package com.microsoft.graph.models.windowsupdates;
 
+import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
 public class Windows extends Entity implements Parsable {
     /** Entity that acts as a container for the functionality of the Windows Update for Business deployment service. Read-only. */
     private Updates _updates;

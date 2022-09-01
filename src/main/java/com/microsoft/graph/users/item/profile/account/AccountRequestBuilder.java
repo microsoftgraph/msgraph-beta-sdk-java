@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.profile.account;
+package com.microsoft.graph.users.item.profile.account;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserAccountInformation;
+import com.microsoft.graph.models.UserAccountInformationCollectionResponse;
+import com.microsoft.graph.users.item.profile.account.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserAccountInformation;
-import microsoft.graph.models.UserAccountInformationCollectionResponse;
-import microsoft.graph.users.item.profile.account.count.CountRequestBuilder;
 /** Provides operations to manage the account property of the microsoft.graph.profile entity. */
 public class AccountRequestBuilder {
     /** The Count property */

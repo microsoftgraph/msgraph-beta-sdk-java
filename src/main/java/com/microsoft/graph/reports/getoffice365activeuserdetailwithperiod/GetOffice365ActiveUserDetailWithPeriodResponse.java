@@ -1,5 +1,6 @@
-package microsoft.graph.reports.getoffice365activeuserdetailwithperiod;
+package com.microsoft.graph.reports.getoffice365activeuserdetailwithperiod;
 
+import com.microsoft.graph.models.Office365ActiveUserDetail;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Office365ActiveUserDetail;
 /** Provides operations to call the getOffice365ActiveUserDetail method. */
 public class GetOffice365ActiveUserDetailWithPeriodResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

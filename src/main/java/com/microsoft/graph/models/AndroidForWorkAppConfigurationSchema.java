@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Schema describing an Android for Work application's custom configurations. */
 public class AndroidForWorkAppConfigurationSchema extends Entity implements Parsable {
     /** UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app */
     private byte[] _exampleJson;
     /** Collection of items each representing a named configuration option in the schema */
     private java.util.List<AndroidForWorkAppConfigurationSchemaItem> _schemaItems;
     /**
-     * Instantiates a new androidForWorkAppConfigurationSchema and sets the default values.
+     * Instantiates a new AndroidForWorkAppConfigurationSchema and sets the default values.
      * @return a void
      */
     public AndroidForWorkAppConfigurationSchema() {
@@ -24,7 +23,7 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkAppConfigurationSchema
+     * @return a AndroidForWorkAppConfigurationSchema
      */
     @javax.annotation.Nonnull
     public static AndroidForWorkAppConfigurationSchema createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

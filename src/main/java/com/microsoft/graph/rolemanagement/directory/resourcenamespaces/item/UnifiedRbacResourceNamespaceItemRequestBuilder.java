@@ -1,5 +1,10 @@
-package microsoft.graph.rolemanagement.directory.resourcenamespaces.item;
+package com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRbacResourceNamespace;
+import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item.importresourceactions.ImportResourceActionsRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item.resourceactions.item.UnifiedRbacResourceActionItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item.resourceactions.ResourceActionsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRbacResourceNamespace;
-import microsoft.graph.rolemanagement.directory.resourcenamespaces.item.importresourceactions.ImportResourceActionsRequestBuilder;
-import microsoft.graph.rolemanagement.directory.resourcenamespaces.item.resourceactions.item.UnifiedRbacResourceActionItemRequestBuilder;
-import microsoft.graph.rolemanagement.directory.resourcenamespaces.item.resourceactions.ResourceActionsRequestBuilder;
 /** Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity. */
 public class UnifiedRbacResourceNamespaceItemRequestBuilder {
     /** The importResourceActions property */
@@ -312,7 +312,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.directory.resourceNamespaces.item.resourceActions.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.resourceNamespaces.item.resourceActions.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRbacResourceActionItemRequestBuilder
      */

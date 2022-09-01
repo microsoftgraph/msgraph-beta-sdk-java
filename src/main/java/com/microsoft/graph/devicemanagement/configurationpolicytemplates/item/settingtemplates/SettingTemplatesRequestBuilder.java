@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates;
+package com.microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates;
 
+import com.microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingTemplate;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingTemplateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.configurationpolicytemplates.item.settingtemplates.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementConfigurationSettingTemplate;
-import microsoft.graph.models.DeviceManagementConfigurationSettingTemplateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the settingTemplates property of the microsoft.graph.deviceManagementConfigurationPolicyTemplate entity. */
 public class SettingTemplatesRequestBuilder {
     /** The Count property */

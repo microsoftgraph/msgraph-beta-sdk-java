@@ -1,5 +1,7 @@
-package microsoft.graph.informationprotection.datalosspreventionpolicies.evaluate;
+package com.microsoft.graph.informationprotection.datalosspreventionpolicies.evaluate;
 
+import com.microsoft.graph.models.DlpEvaluationInput;
+import com.microsoft.graph.models.DlpNotification;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DlpEvaluationInput;
-import microsoft.graph.models.DlpNotification;
 /** Provides operations to call the evaluate method. */
 public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

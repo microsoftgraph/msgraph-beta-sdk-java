@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.policysets.item.assignments;
+package com.microsoft.graph.deviceappmanagement.policysets.item.assignments;
 
+import com.microsoft.graph.deviceappmanagement.policysets.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PolicySetAssignment;
+import com.microsoft.graph.models.PolicySetAssignmentCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.policysets.item.assignments.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PolicySetAssignment;
-import microsoft.graph.models.PolicySetAssignmentCollectionResponse;
 /** Provides operations to manage the assignments property of the microsoft.graph.policySet entity. */
 public class AssignmentsRequestBuilder {
     /** The Count property */

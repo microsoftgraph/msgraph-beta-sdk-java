@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DeviceHealthScriptBooleanParameter;
+import com.microsoft.graph.models.DeviceHealthScriptIntegerParameter;
+import com.microsoft.graph.models.DeviceHealthScriptStringParameter;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

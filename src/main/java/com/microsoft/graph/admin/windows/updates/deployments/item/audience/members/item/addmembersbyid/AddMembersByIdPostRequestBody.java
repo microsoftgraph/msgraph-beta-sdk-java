@@ -1,4 +1,4 @@
-package microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.addmembersbyid;
+package com.microsoft.graph.admin.windows.updates.deployments.item.audience.members.item.addmembersbyid;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

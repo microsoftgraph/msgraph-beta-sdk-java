@@ -1,5 +1,6 @@
-package microsoft.graph.applications.item.synchronization.jobs.validatecredentials;
+package com.microsoft.graph.applications.item.synchronization.jobs.validatecredentials;
 
+import com.microsoft.graph.models.SynchronizationSecretKeyStringValuePair;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.SynchronizationSecretKeyStringValuePair;
 /** Provides operations to call the validateCredentials method. */
 public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

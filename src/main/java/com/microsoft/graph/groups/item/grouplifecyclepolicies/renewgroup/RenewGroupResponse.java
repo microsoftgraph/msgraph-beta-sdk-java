@@ -1,4 +1,4 @@
-package microsoft.graph.groups.item.grouplifecyclepolicies.renewgroup;
+package com.microsoft.graph.groups.item.grouplifecyclepolicies.renewgroup;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

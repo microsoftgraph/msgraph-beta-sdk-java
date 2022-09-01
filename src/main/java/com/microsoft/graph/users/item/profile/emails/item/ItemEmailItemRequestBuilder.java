@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.profile.emails.item;
+package com.microsoft.graph.users.item.profile.emails.item;
 
+import com.microsoft.graph.models.ItemEmail;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ItemEmail;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the emails property of the microsoft.graph.profile entity. */
 public class ItemEmailItemRequestBuilder {
     /** Path parameters for the request */

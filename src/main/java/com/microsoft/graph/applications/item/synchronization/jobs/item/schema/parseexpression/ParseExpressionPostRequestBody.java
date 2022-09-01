@@ -1,5 +1,7 @@
-package microsoft.graph.applications.item.synchronization.jobs.item.schema.parseexpression;
+package com.microsoft.graph.applications.item.synchronization.jobs.item.schema.parseexpression;
 
+import com.microsoft.graph.models.AttributeDefinition;
+import com.microsoft.graph.models.ExpressionInputObject;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AttributeDefinition;
-import microsoft.graph.models.ExpressionInputObject;
 /** Provides operations to call the parseExpression method. */
 public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

@@ -1,5 +1,9 @@
-package microsoft.graph.identity.b2cuserflows.item.identityproviders;
+package com.microsoft.graph.identity.b2cuserflows.item.identityproviders;
 
+import com.microsoft.graph.identity.b2cuserflows.item.identityproviders.count.CountRequestBuilder;
+import com.microsoft.graph.identity.b2cuserflows.item.identityproviders.ref.RefRequestBuilder;
+import com.microsoft.graph.models.IdentityProviderCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.b2cuserflows.item.identityproviders.count.CountRequestBuilder;
-import microsoft.graph.identity.b2cuserflows.item.identityproviders.ref.RefRequestBuilder;
-import microsoft.graph.models.IdentityProviderCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the identityProviders property of the microsoft.graph.b2cIdentityUserFlow entity. */
 public class IdentityProvidersRequestBuilder {
     /** The Count property */

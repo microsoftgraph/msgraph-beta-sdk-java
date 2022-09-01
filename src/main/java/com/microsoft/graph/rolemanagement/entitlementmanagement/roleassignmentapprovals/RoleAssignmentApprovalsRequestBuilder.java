@@ -1,5 +1,10 @@
-package microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentapprovals;
+package com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentapprovals;
 
+import com.microsoft.graph.models.Approval;
+import com.microsoft.graph.models.ApprovalCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentapprovals.count.CountRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentapprovals.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Approval;
-import microsoft.graph.models.ApprovalCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentapprovals.count.CountRequestBuilder;
-import microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentapprovals.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 /** Provides operations to manage the roleAssignmentApprovals property of the microsoft.graph.rbacApplication entity. */
 public class RoleAssignmentApprovalsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item;
+package com.microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item;
 
+import com.microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item.categorysummaries.CategorySummariesRequestBuilder;
+import com.microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item.categorysummaries.item.MacOSSoftwareUpdateCategorySummaryItemRequestBuilder;
+import com.microsoft.graph.models.MacOSSoftwareUpdateAccountSummary;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item.categorysummaries.CategorySummariesRequestBuilder;
-import microsoft.graph.devicemanagement.macossoftwareupdateaccountsummaries.item.categorysummaries.item.MacOSSoftwareUpdateCategorySummaryItemRequestBuilder;
-import microsoft.graph.models.MacOSSoftwareUpdateAccountSummary;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the macOSSoftwareUpdateAccountSummaries property of the microsoft.graph.deviceManagement entity. */
 public class MacOSSoftwareUpdateAccountSummaryItemRequestBuilder {
     /** The categorySummaries property */
@@ -32,7 +32,7 @@ public class MacOSSoftwareUpdateAccountSummaryItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.macOSSoftwareUpdateAccountSummaries.item.categorySummaries.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.macOSSoftwareUpdateAccountSummaries.item.categorySummaries.item collection
      * @param id Unique identifier of the item
      * @return a MacOSSoftwareUpdateCategorySummaryItemRequestBuilder
      */

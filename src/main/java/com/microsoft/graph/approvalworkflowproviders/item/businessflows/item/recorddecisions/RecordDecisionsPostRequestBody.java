@@ -1,4 +1,4 @@
-package microsoft.graph.approvalworkflowproviders.item.businessflows.item.recorddecisions;
+package com.microsoft.graph.approvalworkflowproviders.item.businessflows.item.recorddecisions;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

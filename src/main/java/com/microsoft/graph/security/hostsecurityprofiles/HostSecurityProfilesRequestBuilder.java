@@ -1,5 +1,9 @@
-package microsoft.graph.security.hostsecurityprofiles;
+package com.microsoft.graph.security.hostsecurityprofiles;
 
+import com.microsoft.graph.models.HostSecurityProfile;
+import com.microsoft.graph.models.HostSecurityProfileCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.security.hostsecurityprofiles.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.HostSecurityProfile;
-import microsoft.graph.models.HostSecurityProfileCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.security.hostsecurityprofiles.count.CountRequestBuilder;
 /** Provides operations to manage the hostSecurityProfiles property of the microsoft.graph.security entity. */
 public class HostSecurityProfilesRequestBuilder {
     /** The Count property */

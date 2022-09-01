@@ -1,5 +1,11 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.manufacturerregression.ManufacturerRegressionRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.modelregression.ModelRegressionRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.operatingsystemregression.OperatingSystemRegressionRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.summarizedeviceregressionperformancewithsummarizeby.SummarizeDeviceRegressionPerformanceWithSummarizeByRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.manufacturerregression.ManufacturerRegressionRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.modelregression.ModelRegressionRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.operatingsystemregression.OperatingSystemRegressionRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.summarizedeviceregressionperformancewithsummarizeby.SummarizeDeviceRegressionPerformanceWithSummarizeByRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
 /** Provides operations to manage the userExperienceAnalyticsRegressionSummary property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsRegressionSummaryRequestBuilder {
     /** The manufacturerRegression property */
@@ -263,40 +263,40 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsRegressionSummary.manufacturerRegression.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.userExperienceAnalyticsRegressionSummary.manufacturerRegression.item collection
      * @param id Unique identifier of the item
      * @return a UserExperienceAnalyticsMetricItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.manufacturerregression.item.UserExperienceAnalyticsMetricItemRequestBuilder manufacturerRegression(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.manufacturerregression.item.UserExperienceAnalyticsMetricItemRequestBuilder manufacturerRegression(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userExperienceAnalyticsMetric%2Did", id);
-        return new microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.manufacturerregression.item.UserExperienceAnalyticsMetricItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.manufacturerregression.item.UserExperienceAnalyticsMetricItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsRegressionSummary.modelRegression.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.userExperienceAnalyticsRegressionSummary.modelRegression.item collection
      * @param id Unique identifier of the item
      * @return a UserExperienceAnalyticsMetricItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.modelregression.item.UserExperienceAnalyticsMetricItemRequestBuilder modelRegression(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.modelregression.item.UserExperienceAnalyticsMetricItemRequestBuilder modelRegression(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userExperienceAnalyticsMetric%2Did", id);
-        return new microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.modelregression.item.UserExperienceAnalyticsMetricItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.modelregression.item.UserExperienceAnalyticsMetricItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsRegressionSummary.operatingSystemRegression.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.userExperienceAnalyticsRegressionSummary.operatingSystemRegression.item collection
      * @param id Unique identifier of the item
      * @return a UserExperienceAnalyticsMetricItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.operatingsystemregression.item.UserExperienceAnalyticsMetricItemRequestBuilder operatingSystemRegression(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.operatingsystemregression.item.UserExperienceAnalyticsMetricItemRequestBuilder operatingSystemRegression(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userExperienceAnalyticsMetric%2Did", id);
-        return new microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.operatingsystemregression.item.UserExperienceAnalyticsMetricItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.operatingsystemregression.item.UserExperienceAnalyticsMetricItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property userExperienceAnalyticsRegressionSummary in deviceManagement

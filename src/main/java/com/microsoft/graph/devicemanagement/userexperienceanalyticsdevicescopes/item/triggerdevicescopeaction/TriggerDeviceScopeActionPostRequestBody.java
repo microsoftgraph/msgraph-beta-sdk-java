@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsdevicescopes.item.triggerdevicescopeaction;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicescopes.item.triggerdevicescopeaction;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

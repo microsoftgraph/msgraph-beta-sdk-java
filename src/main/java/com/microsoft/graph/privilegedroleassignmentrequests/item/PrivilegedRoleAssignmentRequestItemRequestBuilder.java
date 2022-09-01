@@ -1,5 +1,9 @@
-package microsoft.graph.privilegedroleassignmentrequests.item;
+package com.microsoft.graph.privilegedroleassignmentrequests.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedRoleAssignmentRequest;
+import com.microsoft.graph.privilegedroleassignmentrequests.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.privilegedroleassignmentrequests.item.roleinfo.RoleInfoRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedRoleAssignmentRequest;
-import microsoft.graph.privilegedroleassignmentrequests.item.cancel.CancelRequestBuilder;
-import microsoft.graph.privilegedroleassignmentrequests.item.roleinfo.RoleInfoRequestBuilder;
 /** Provides operations to manage the collection of privilegedRoleAssignmentRequest entities. */
 public class PrivilegedRoleAssignmentRequestItemRequestBuilder {
     /** The cancel property */

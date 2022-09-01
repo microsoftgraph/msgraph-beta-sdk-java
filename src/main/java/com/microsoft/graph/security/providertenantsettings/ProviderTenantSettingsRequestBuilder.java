@@ -1,5 +1,9 @@
-package microsoft.graph.security.providertenantsettings;
+package com.microsoft.graph.security.providertenantsettings;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ProviderTenantSetting;
+import com.microsoft.graph.models.ProviderTenantSettingCollectionResponse;
+import com.microsoft.graph.security.providertenantsettings.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ProviderTenantSetting;
-import microsoft.graph.models.ProviderTenantSettingCollectionResponse;
-import microsoft.graph.security.providertenantsettings.count.CountRequestBuilder;
 /** Provides operations to manage the providerTenantSettings property of the microsoft.graph.security entity. */
 public class ProviderTenantSettingsRequestBuilder {
     /** The Count property */

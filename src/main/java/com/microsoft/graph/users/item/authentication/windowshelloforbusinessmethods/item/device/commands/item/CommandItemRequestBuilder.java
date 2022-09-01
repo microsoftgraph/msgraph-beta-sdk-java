@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.commands.item;
+package com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.commands.item;
 
+import com.microsoft.graph.models.Command;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.commands.item.responsepayload.ResponsepayloadRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Command;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.commands.item.responsepayload.ResponsepayloadRequestBuilder;
 /** Provides operations to manage the commands property of the microsoft.graph.device entity. */
 public class CommandItemRequestBuilder {
     /** Path parameters for the request */

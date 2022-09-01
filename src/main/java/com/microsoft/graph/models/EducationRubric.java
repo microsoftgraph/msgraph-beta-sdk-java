@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -28,7 +28,7 @@ public class EducationRubric extends Entity implements Parsable {
     /** The collection of qualities making up this rubric. */
     private java.util.List<RubricQuality> _qualities;
     /**
-     * Instantiates a new educationRubric and sets the default values.
+     * Instantiates a new EducationRubric and sets the default values.
      * @return a void
      */
     public EducationRubric() {
@@ -38,7 +38,7 @@ public class EducationRubric extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationRubric
+     * @return a EducationRubric
      */
     @javax.annotation.Nonnull
     public static EducationRubric createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.cloudpcs.item.reprovision;
+package com.microsoft.graph.users.item.cloudpcs.item.reprovision;
 
+import com.microsoft.graph.models.CloudPcOperatingSystem;
+import com.microsoft.graph.models.CloudPcUserAccountType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CloudPcOperatingSystem;
-import microsoft.graph.models.CloudPcUserAccountType;
 /** Provides operations to call the reprovision method. */
 public class ReprovisionPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

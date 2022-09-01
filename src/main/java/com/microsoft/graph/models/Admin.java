@@ -1,5 +1,7 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.tenantadmin.Sharepoint;
+import com.microsoft.graph.models.windowsupdates.Windows;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.tenantadmin.Sharepoint;
-import microsoft.graph.models.windowsupdates.Windows;
 public class Admin implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;

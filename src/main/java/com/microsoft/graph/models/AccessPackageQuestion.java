@@ -1,5 +1,7 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AccessPackageMultipleChoiceQuestion;
+import com.microsoft.graph.models.AccessPackageTextInputQuestion;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

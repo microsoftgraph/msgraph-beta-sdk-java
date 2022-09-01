@@ -1,4 +1,4 @@
-package microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.recorddecisions;
+package com.microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.recorddecisions;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

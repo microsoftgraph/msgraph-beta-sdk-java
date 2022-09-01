@@ -1,5 +1,11 @@
-package microsoft.graph.security.attacksimulation;
+package com.microsoft.graph.security.attacksimulation;
 
+import com.microsoft.graph.models.AttackSimulationRoot;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.security.attacksimulation.simulationautomations.item.SimulationAutomationItemRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.simulationautomations.SimulationAutomationsRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.simulations.item.SimulationItemRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.simulations.SimulationsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AttackSimulationRoot;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.security.attacksimulation.simulationautomations.item.SimulationAutomationItemRequestBuilder;
-import microsoft.graph.security.attacksimulation.simulationautomations.SimulationAutomationsRequestBuilder;
-import microsoft.graph.security.attacksimulation.simulations.item.SimulationItemRequestBuilder;
-import microsoft.graph.security.attacksimulation.simulations.SimulationsRequestBuilder;
 /** Provides operations to manage the attackSimulation property of the microsoft.graph.security entity. */
 public class AttackSimulationRequestBuilder {
     /** Path parameters for the request */
@@ -313,7 +313,7 @@ public class AttackSimulationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.attackSimulation.simulationAutomations.item collection
+     * Gets an item from the com.Microsoft.Graph.security.attackSimulation.simulationAutomations.item collection
      * @param id Unique identifier of the item
      * @return a SimulationAutomationItemRequestBuilder
      */
@@ -325,7 +325,7 @@ public class AttackSimulationRequestBuilder {
         return new SimulationAutomationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.attackSimulation.simulations.item collection
+     * Gets an item from the com.Microsoft.Graph.security.attackSimulation.simulations.item collection
      * @param id Unique identifier of the item
      * @return a SimulationItemRequestBuilder
      */

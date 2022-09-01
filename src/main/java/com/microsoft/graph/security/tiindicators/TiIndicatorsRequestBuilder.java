@@ -1,5 +1,13 @@
-package microsoft.graph.security.tiindicators;
+package com.microsoft.graph.security.tiindicators;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TiIndicator;
+import com.microsoft.graph.models.TiIndicatorCollectionResponse;
+import com.microsoft.graph.security.tiindicators.count.CountRequestBuilder;
+import com.microsoft.graph.security.tiindicators.deletetiindicators.DeleteTiIndicatorsRequestBuilder;
+import com.microsoft.graph.security.tiindicators.deletetiindicatorsbyexternalid.DeleteTiIndicatorsByExternalIdRequestBuilder;
+import com.microsoft.graph.security.tiindicators.submittiindicators.SubmitTiIndicatorsRequestBuilder;
+import com.microsoft.graph.security.tiindicators.updatetiindicators.UpdateTiIndicatorsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TiIndicator;
-import microsoft.graph.models.TiIndicatorCollectionResponse;
-import microsoft.graph.security.tiindicators.count.CountRequestBuilder;
-import microsoft.graph.security.tiindicators.deletetiindicators.DeleteTiIndicatorsRequestBuilder;
-import microsoft.graph.security.tiindicators.deletetiindicatorsbyexternalid.DeleteTiIndicatorsByExternalIdRequestBuilder;
-import microsoft.graph.security.tiindicators.submittiindicators.SubmitTiIndicatorsRequestBuilder;
-import microsoft.graph.security.tiindicators.updatetiindicators.UpdateTiIndicatorsRequestBuilder;
 /** Provides operations to manage the tiIndicators property of the microsoft.graph.security entity. */
 public class TiIndicatorsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,34 @@
-package microsoft.graph.identitygovernance.entitlementmanagement;
+package com.microsoft.graph.identitygovernance.entitlementmanagement;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.AccessPackageAssignmentApprovalsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.ApprovalItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentpolicies.AccessPackageAssignmentPoliciesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentpolicies.item.AccessPackageAssignmentPolicyItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.AccessPackageAssignmentRequestsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.AccessPackageAssignmentRequestItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentresourceroles.AccessPackageAssignmentResourceRolesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentresourceroles.item.AccessPackageAssignmentResourceRoleItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.AccessPackageAssignmentsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.AccessPackageAssignmentItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.AccessPackageCatalogsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.AccessPackageCatalogItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourceenvironments.AccessPackageResourceEnvironmentsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourceenvironments.item.AccessPackageResourceEnvironmentItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.AccessPackageResourceRequestsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.item.AccessPackageResourceRequestItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerolescopes.AccessPackageResourceRoleScopesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerolescopes.item.AccessPackageResourceRoleScopeItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresources.AccessPackageResourcesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresources.item.AccessPackageResourceItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.AccessPackagesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.AccessPackageItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.ConnectedOrganizationItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.subjects.item.AccessPackageSubjectItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.subjects.SubjectsRequestBuilder;
+import com.microsoft.graph.models.EntitlementManagement;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,35 +43,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.AccessPackageAssignmentApprovalsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.ApprovalItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentpolicies.AccessPackageAssignmentPoliciesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentpolicies.item.AccessPackageAssignmentPolicyItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.AccessPackageAssignmentRequestsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.AccessPackageAssignmentRequestItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentresourceroles.AccessPackageAssignmentResourceRolesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentresourceroles.item.AccessPackageAssignmentResourceRoleItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.AccessPackageAssignmentsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.AccessPackageAssignmentItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.AccessPackageCatalogsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.AccessPackageCatalogItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourceenvironments.AccessPackageResourceEnvironmentsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourceenvironments.item.AccessPackageResourceEnvironmentItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.AccessPackageResourceRequestsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.item.AccessPackageResourceRequestItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerolescopes.AccessPackageResourceRoleScopesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerolescopes.item.AccessPackageResourceRoleScopeItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresources.AccessPackageResourcesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresources.item.AccessPackageResourceItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.AccessPackagesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.AccessPackageItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.ConnectedOrganizationItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.subjects.item.AccessPackageSubjectItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.subjects.SubjectsRequestBuilder;
-import microsoft.graph.models.EntitlementManagement;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity. */
 public class EntitlementManagementRequestBuilder {
     /** The accessPackageAssignmentApprovals property */
@@ -122,7 +122,7 @@ public class EntitlementManagementRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item collection
      * @param id Unique identifier of the item
      * @return a ApprovalItemRequestBuilder
      */
@@ -134,7 +134,7 @@ public class EntitlementManagementRequestBuilder {
         return new ApprovalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentPolicies.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageAssignmentPolicyItemRequestBuilder
      */
@@ -146,7 +146,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageAssignmentPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentRequests.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageAssignmentRequestItemRequestBuilder
      */
@@ -158,7 +158,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageAssignmentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentResourceRoles.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentResourceRoles.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageAssignmentResourceRoleItemRequestBuilder
      */
@@ -170,7 +170,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageAssignmentResourceRoleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageAssignmentItemRequestBuilder
      */
@@ -182,7 +182,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageCatalogs.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageCatalogs.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageCatalogItemRequestBuilder
      */
@@ -194,7 +194,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageCatalogItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceEnvironments.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceEnvironments.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageResourceEnvironmentItemRequestBuilder
      */
@@ -206,7 +206,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageResourceEnvironmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceRequests.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageResourceRequestItemRequestBuilder
      */
@@ -218,7 +218,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageResourceRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceRoleScopes.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceRoleScopes.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageResourceRoleScopeItemRequestBuilder
      */
@@ -230,7 +230,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageResourceRoleScopeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResources.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResources.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageResourceItemRequestBuilder
      */
@@ -242,7 +242,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageItemRequestBuilder
      */
@@ -254,7 +254,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item collection
      * @param id Unique identifier of the item
      * @return a ConnectedOrganizationItemRequestBuilder
      */
@@ -540,7 +540,7 @@ public class EntitlementManagementRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.subjects.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.subjects.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageSubjectItemRequestBuilder
      */

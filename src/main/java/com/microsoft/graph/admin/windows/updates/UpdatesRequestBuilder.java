@@ -1,5 +1,14 @@
-package microsoft.graph.admin.windows.updates;
+package com.microsoft.graph.admin.windows.updates;
 
+import com.microsoft.graph.admin.windows.updates.catalog.CatalogRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.DeploymentsRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.DeploymentItemRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.resourceconnections.item.ResourceConnectionItemRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.resourceconnections.ResourceConnectionsRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.updatableassets.item.UpdatableAssetItemRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.updatableassets.UpdatableAssetsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.windowsupdates.Updates;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.windows.updates.catalog.CatalogRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.DeploymentsRequestBuilder;
-import microsoft.graph.admin.windows.updates.deployments.item.DeploymentItemRequestBuilder;
-import microsoft.graph.admin.windows.updates.resourceconnections.item.ResourceConnectionItemRequestBuilder;
-import microsoft.graph.admin.windows.updates.resourceconnections.ResourceConnectionsRequestBuilder;
-import microsoft.graph.admin.windows.updates.updatableassets.item.UpdatableAssetItemRequestBuilder;
-import microsoft.graph.admin.windows.updates.updatableassets.UpdatableAssetsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.windowsupdates.Updates;
 /** Provides operations to manage the updates property of the microsoft.graph.windowsUpdates.windows entity. */
 public class UpdatesRequestBuilder {
     /** The catalog property */
@@ -220,7 +220,7 @@ public class UpdatesRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.admin.windows.updates.deployments.item collection
+     * Gets an item from the com.Microsoft.Graph.admin.windows.updates.deployments.item collection
      * @param id Unique identifier of the item
      * @return a DeploymentItemRequestBuilder
      */
@@ -338,7 +338,7 @@ public class UpdatesRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.admin.windows.updates.resourceConnections.item collection
+     * Gets an item from the com.Microsoft.Graph.admin.windows.updates.resourceConnections.item collection
      * @param id Unique identifier of the item
      * @return a ResourceConnectionItemRequestBuilder
      */
@@ -350,7 +350,7 @@ public class UpdatesRequestBuilder {
         return new ResourceConnectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.admin.windows.updates.updatableAssets.item collection
+     * Gets an item from the com.Microsoft.Graph.admin.windows.updates.updatableAssets.item collection
      * @param id Unique identifier of the item
      * @return a UpdatableAssetItemRequestBuilder
      */

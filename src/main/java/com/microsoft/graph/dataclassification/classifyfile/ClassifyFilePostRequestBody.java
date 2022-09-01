@@ -1,4 +1,4 @@
-package microsoft.graph.dataclassification.classifyfile;
+package com.microsoft.graph.dataclassification.classifyfile;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

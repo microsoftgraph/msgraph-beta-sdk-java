@@ -1,5 +1,7 @@
-package microsoft.graph.external.connections.item.quota;
+package com.microsoft.graph.external.connections.item.quota;
 
+import com.microsoft.graph.models.externalconnectors.ConnectionQuota;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.externalconnectors.ConnectionQuota;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the quota property of the microsoft.graph.externalConnectors.externalConnection entity. */
 public class QuotaRequestBuilder {
     /** Path parameters for the request */

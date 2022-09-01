@@ -1,5 +1,9 @@
-package microsoft.graph.security.threatsubmission.filethreats;
+package com.microsoft.graph.security.threatsubmission.filethreats;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.FileThreatSubmission;
+import com.microsoft.graph.models.security.FileThreatSubmissionCollectionResponse;
+import com.microsoft.graph.security.threatsubmission.filethreats.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.FileThreatSubmission;
-import microsoft.graph.models.security.FileThreatSubmissionCollectionResponse;
-import microsoft.graph.security.threatsubmission.filethreats.count.CountRequestBuilder;
 /** Provides operations to manage the fileThreats property of the microsoft.graph.security.threatSubmissionRoot entity. */
 public class FileThreatsRequestBuilder {
     /** The Count property */

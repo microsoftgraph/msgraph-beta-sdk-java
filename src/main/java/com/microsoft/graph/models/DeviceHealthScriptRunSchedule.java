@@ -1,5 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DeviceHealthScriptDailySchedule;
+import com.microsoft.graph.models.DeviceHealthScriptHourlySchedule;
+import com.microsoft.graph.models.DeviceHealthScriptRunOnceSchedule;
+import com.microsoft.graph.models.DeviceHealthScriptTimeSchedule;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

@@ -1,5 +1,11 @@
-package microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item;
+package com.microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.addtoreviewset.AddToReviewSetRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.export.ExportRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.queries.item.ReviewSetQueryItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.queries.QueriesRequestBuilder;
+import com.microsoft.graph.models.ediscovery.ReviewSet;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.addtoreviewset.AddToReviewSetRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.export.ExportRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.queries.item.ReviewSetQueryItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.queries.QueriesRequestBuilder;
-import microsoft.graph.models.ediscovery.ReviewSet;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the reviewSets property of the microsoft.graph.ediscovery.case entity. */
 public class ReviewSetItemRequestBuilder {
     /** The addToReviewSet property */
@@ -318,7 +318,7 @@ public class ReviewSetItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.reviewSets.item.queries.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.reviewSets.item.queries.item collection
      * @param id Unique identifier of the item
      * @return a ReviewSetQueryItemRequestBuilder
      */

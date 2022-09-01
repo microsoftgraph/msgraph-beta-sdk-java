@@ -1,5 +1,9 @@
-package microsoft.graph.admin.windows.updates.catalog;
+package com.microsoft.graph.admin.windows.updates.catalog;
 
+import com.microsoft.graph.admin.windows.updates.catalog.entries.EntriesRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.catalog.entries.item.CatalogEntryItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.windowsupdates.Catalog;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.windows.updates.catalog.entries.EntriesRequestBuilder;
-import microsoft.graph.admin.windows.updates.catalog.entries.item.CatalogEntryItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.windowsupdates.Catalog;
 /** Provides operations to manage the catalog property of the microsoft.graph.windowsUpdates.updates entity. */
 public class CatalogRequestBuilder {
     /** The entries property */
@@ -200,7 +200,7 @@ public class CatalogRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.admin.windows.updates.catalog.entries.item collection
+     * Gets an item from the com.Microsoft.Graph.admin.windows.updates.catalog.entries.item collection
      * @param id Unique identifier of the item
      * @return a CatalogEntryItemRequestBuilder
      */

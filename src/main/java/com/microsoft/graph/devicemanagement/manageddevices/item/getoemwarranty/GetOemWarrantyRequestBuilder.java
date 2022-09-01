@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.manageddevices.item.getoemwarranty;
+package com.microsoft.graph.devicemanagement.manageddevices.item.getoemwarranty;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OemWarranty;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OemWarranty;
 /** Provides operations to call the getOemWarranty method. */
 public class GetOemWarrantyRequestBuilder {
     /** Path parameters for the request */

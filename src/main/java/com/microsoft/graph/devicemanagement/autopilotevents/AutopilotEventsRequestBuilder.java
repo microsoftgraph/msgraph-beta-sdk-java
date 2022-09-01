@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.autopilotevents;
+package com.microsoft.graph.devicemanagement.autopilotevents;
 
+import com.microsoft.graph.devicemanagement.autopilotevents.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementAutopilotEvent;
+import com.microsoft.graph.models.DeviceManagementAutopilotEventCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.autopilotevents.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementAutopilotEvent;
-import microsoft.graph.models.DeviceManagementAutopilotEventCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the autopilotEvents property of the microsoft.graph.deviceManagement entity. */
 public class AutopilotEventsRequestBuilder {
     /** The Count property */

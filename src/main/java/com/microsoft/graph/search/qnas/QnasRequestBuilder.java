@@ -1,5 +1,9 @@
-package microsoft.graph.search.qnas;
+package com.microsoft.graph.search.qnas;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.search.Qna;
+import com.microsoft.graph.models.search.QnaCollectionResponse;
+import com.microsoft.graph.search.qnas.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.search.Qna;
-import microsoft.graph.models.search.QnaCollectionResponse;
-import microsoft.graph.search.qnas.count.CountRequestBuilder;
 /** Provides operations to manage the qnas property of the microsoft.graph.searchEntity entity. */
 public class QnasRequestBuilder {
     /** The Count property */

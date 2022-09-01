@@ -1,5 +1,8 @@
-package microsoft.graph.applications.item.connectorgroup;
+package com.microsoft.graph.applications.item.connectorgroup;
 
+import com.microsoft.graph.applications.item.connectorgroup.ref.RefRequestBuilder;
+import com.microsoft.graph.models.ConnectorGroup;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.item.connectorgroup.ref.RefRequestBuilder;
-import microsoft.graph.models.ConnectorGroup;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the connectorGroup property of the microsoft.graph.application entity. */
 public class ConnectorGroupRequestBuilder {
     /** Path parameters for the request */

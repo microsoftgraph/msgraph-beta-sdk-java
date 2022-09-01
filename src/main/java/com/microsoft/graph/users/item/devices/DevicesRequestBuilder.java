@@ -1,5 +1,13 @@
-package microsoft.graph.users.item.devices;
+package com.microsoft.graph.users.item.devices;
 
+import com.microsoft.graph.models.Device;
+import com.microsoft.graph.models.DeviceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.devices.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.devices.delta.DeltaRequestBuilder;
+import com.microsoft.graph.users.item.devices.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.users.item.devices.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
+import com.microsoft.graph.users.item.devices.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Device;
-import microsoft.graph.models.DeviceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.devices.count.CountRequestBuilder;
-import microsoft.graph.users.item.devices.delta.DeltaRequestBuilder;
-import microsoft.graph.users.item.devices.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.users.item.devices.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
-import microsoft.graph.users.item.devices.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the devices property of the microsoft.graph.user entity. */
 public class DevicesRequestBuilder {
     /** The Count property */

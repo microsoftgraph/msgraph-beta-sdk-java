@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.informationprotection.decryptbuffer;
+package com.microsoft.graph.users.item.informationprotection.decryptbuffer;
 
+import com.microsoft.graph.models.BufferDecryptionResult;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.BufferDecryptionResult;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the decryptBuffer method. */
 public class DecryptBufferRequestBuilder {
     /** Path parameters for the request */

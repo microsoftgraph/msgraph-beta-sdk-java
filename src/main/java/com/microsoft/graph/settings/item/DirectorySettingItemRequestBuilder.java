@@ -1,5 +1,7 @@
-package microsoft.graph.settings.item;
+package com.microsoft.graph.settings.item;
 
+import com.microsoft.graph.models.DirectorySetting;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectorySetting;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of directorySetting entities. */
 public class DirectorySettingItemRequestBuilder {
     /** Path parameters for the request */

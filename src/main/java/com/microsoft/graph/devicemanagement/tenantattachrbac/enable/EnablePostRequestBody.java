@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.tenantattachrbac.enable;
+package com.microsoft.graph.devicemanagement.tenantattachrbac.enable;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

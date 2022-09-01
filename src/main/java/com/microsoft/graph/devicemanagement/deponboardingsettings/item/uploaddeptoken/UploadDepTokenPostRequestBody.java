@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.deponboardingsettings.item.uploaddeptoken;
+package com.microsoft.graph.devicemanagement.deponboardingsettings.item.uploaddeptoken;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

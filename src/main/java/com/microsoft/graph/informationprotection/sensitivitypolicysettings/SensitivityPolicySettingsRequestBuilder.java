@@ -1,5 +1,7 @@
-package microsoft.graph.informationprotection.sensitivitypolicysettings;
+package com.microsoft.graph.informationprotection.sensitivitypolicysettings;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SensitivityPolicySettings;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SensitivityPolicySettings;
 /** Provides operations to manage the sensitivityPolicySettings property of the microsoft.graph.informationProtection entity. */
 public class SensitivityPolicySettingsRequestBuilder {
     /** Path parameters for the request */

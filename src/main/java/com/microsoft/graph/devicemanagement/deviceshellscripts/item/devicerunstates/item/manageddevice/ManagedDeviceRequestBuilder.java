@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.deviceshellscripts.item.devicerunstates.item.manageddevice;
+package com.microsoft.graph.devicemanagement.deviceshellscripts.item.devicerunstates.item.manageddevice;
 
+import com.microsoft.graph.models.ManagedDevice;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ManagedDevice;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedDevice property of the microsoft.graph.deviceManagementScriptDeviceState entity. */
 public class ManagedDeviceRequestBuilder {
     /** Path parameters for the request */

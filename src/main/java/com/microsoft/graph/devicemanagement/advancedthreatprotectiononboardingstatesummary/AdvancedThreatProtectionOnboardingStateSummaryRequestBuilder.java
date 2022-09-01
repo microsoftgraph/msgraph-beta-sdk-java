@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.advancedthreatprotectiononboardingstatesummary;
+package com.microsoft.graph.devicemanagement.advancedthreatprotectiononboardingstatesummary;
 
+import com.microsoft.graph.devicemanagement.advancedthreatprotectiononboardingstatesummary.advancedthreatprotectiononboardingdevicesettingstates.AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.advancedthreatprotectiononboardingstatesummary.advancedthreatprotectiononboardingdevicesettingstates.item.AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilder;
+import com.microsoft.graph.models.AdvancedThreatProtectionOnboardingStateSummary;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.advancedthreatprotectiononboardingstatesummary.advancedthreatprotectiononboardingdevicesettingstates.AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder;
-import microsoft.graph.devicemanagement.advancedthreatprotectiononboardingstatesummary.advancedthreatprotectiononboardingdevicesettingstates.item.AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilder;
-import microsoft.graph.models.AdvancedThreatProtectionOnboardingStateSummary;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the advancedThreatProtectionOnboardingStateSummary property of the microsoft.graph.deviceManagement entity. */
 public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder {
     /** The advancedThreatProtectionOnboardingDeviceSettingStates property */
@@ -32,7 +32,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.advancedThreatProtectionOnboardingStateSummary.advancedThreatProtectionOnboardingDeviceSettingStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.advancedThreatProtectionOnboardingStateSummary.advancedThreatProtectionOnboardingDeviceSettingStates.item collection
      * @param id Unique identifier of the item
      * @return a AdvancedThreatProtectionOnboardingDeviceSettingStateItemRequestBuilder
      */

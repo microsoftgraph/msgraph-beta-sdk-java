@@ -1,5 +1,8 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageresourcerolescopes.item.accesspackageresourcerole;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageresourcerolescopes.item.accesspackageresourcerole;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageresourcerolescopes.item.accesspackageresourcerole.accesspackageresource.AccessPackageResourceRequestBuilder;
+import com.microsoft.graph.models.AccessPackageResourceRole;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageresourcerolescopes.item.accesspackageresourcerole.accesspackageresource.AccessPackageResourceRequestBuilder;
-import microsoft.graph.models.AccessPackageResourceRole;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageResourceRole property of the microsoft.graph.accessPackageResourceRoleScope entity. */
 public class AccessPackageResourceRoleRequestBuilder {
     /** The accessPackageResource property */

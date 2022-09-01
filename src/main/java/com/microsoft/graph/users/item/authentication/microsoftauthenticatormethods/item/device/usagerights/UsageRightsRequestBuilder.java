@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.usagerights;
+package com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.usagerights;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UsageRight;
+import com.microsoft.graph.models.UsageRightCollectionResponse;
+import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.usagerights.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UsageRight;
-import microsoft.graph.models.UsageRightCollectionResponse;
-import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.usagerights.count.CountRequestBuilder;
 /** Provides operations to manage the usageRights property of the microsoft.graph.device entity. */
 public class UsageRightsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.devicemanagementscripts.item.userrunstates.item;
+package com.microsoft.graph.devicemanagement.devicemanagementscripts.item.userrunstates.item;
 
+import com.microsoft.graph.devicemanagement.devicemanagementscripts.item.userrunstates.item.devicerunstates.DeviceRunStatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicemanagementscripts.item.userrunstates.item.devicerunstates.item.DeviceManagementScriptDeviceStateItemRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementScriptUserState;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicemanagementscripts.item.userrunstates.item.devicerunstates.DeviceRunStatesRequestBuilder;
-import microsoft.graph.devicemanagement.devicemanagementscripts.item.userrunstates.item.devicerunstates.item.DeviceManagementScriptDeviceStateItemRequestBuilder;
-import microsoft.graph.models.DeviceManagementScriptUserState;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userRunStates property of the microsoft.graph.deviceManagementScript entity. */
 public class DeviceManagementScriptUserStateItemRequestBuilder {
     /** The deviceRunStates property */
@@ -200,7 +200,7 @@ public class DeviceManagementScriptUserStateItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceManagementScripts.item.userRunStates.item.deviceRunStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceManagementScripts.item.userRunStates.item.deviceRunStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementScriptDeviceStateItemRequestBuilder
      */

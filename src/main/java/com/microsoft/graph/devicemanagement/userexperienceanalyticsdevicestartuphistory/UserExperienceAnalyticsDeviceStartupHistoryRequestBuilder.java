@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsdevicestartuphistory;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicestartuphistory;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicestartuphistory.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupHistory;
+import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsdevicestartuphistory.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsDeviceStartupHistory;
-import microsoft.graph.models.UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsDeviceStartupHistory property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
     /** The Count property */

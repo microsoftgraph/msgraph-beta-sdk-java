@@ -1,5 +1,8 @@
-package microsoft.graph.app.onlinemeetings.item.transcripts.item;
+package com.microsoft.graph.app.onlinemeetings.item.transcripts.item;
 
+import com.microsoft.graph.app.onlinemeetings.item.transcripts.item.content.ContentRequestBuilder;
+import com.microsoft.graph.models.CallTranscript;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.app.onlinemeetings.item.transcripts.item.content.ContentRequestBuilder;
-import microsoft.graph.models.CallTranscript;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity. */
 public class CallTranscriptItemRequestBuilder {
     /** The content property */

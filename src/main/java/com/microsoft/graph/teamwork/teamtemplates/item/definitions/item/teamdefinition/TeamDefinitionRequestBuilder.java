@@ -1,5 +1,32 @@
-package microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition;
+package com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Team;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.allchannels.AllChannelsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.archive.ArchiveRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.ChannelsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.clone.CloneRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.completemigration.CompleteMigrationRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.group.GroupRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.incomingchannels.IncomingChannelsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.installedapps.InstalledAppsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.installedapps.item.TeamsAppInstallationItemRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.members.item.ConversationMemberItemRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.members.MembersRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.operations.item.TeamsAsyncOperationItemRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.operations.OperationsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.owners.item.UserItemRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.owners.OwnersRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.item.ResourceSpecificPermissionGrantItemRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.PermissionGrantsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.photo.PhotoRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.PrimaryChannelRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.schedule.ScheduleRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.sendactivitynotification.SendActivityNotificationRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.item.TeamworkTagItemRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.TagsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.template.TemplateRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,33 +41,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Team;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.allchannels.AllChannelsRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.archive.ArchiveRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.ChannelsRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.clone.CloneRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.completemigration.CompleteMigrationRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.group.GroupRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.incomingchannels.IncomingChannelsRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.installedapps.InstalledAppsRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.installedapps.item.TeamsAppInstallationItemRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.members.item.ConversationMemberItemRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.members.MembersRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.operations.item.TeamsAsyncOperationItemRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.operations.OperationsRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.owners.item.UserItemRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.owners.OwnersRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.item.ResourceSpecificPermissionGrantItemRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.PermissionGrantsRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.photo.PhotoRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.PrimaryChannelRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.schedule.ScheduleRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.sendactivitynotification.SendActivityNotificationRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.item.TeamworkTagItemRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.TagsRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.template.TemplateRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.unarchive.UnarchiveRequestBuilder;
 /** Provides operations to manage the teamDefinition property of the microsoft.graph.teamTemplateDefinition entity. */
 public class TeamDefinitionRequestBuilder {
     /** The allChannels property */
@@ -145,28 +145,28 @@ public class TeamDefinitionRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.allChannels.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.allChannels.item collection
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.allchannels.item.ChannelItemRequestBuilder allChannels(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.allchannels.item.ChannelItemRequestBuilder allChannels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
-        return new microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.allchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.allchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.channels.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.channels.item collection
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
-        return new microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TeamDefinitionRequestBuilder and sets the default values.
@@ -388,19 +388,19 @@ public class TeamDefinitionRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.incomingChannels.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.incomingChannels.item collection
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.incomingchannels.item.ChannelItemRequestBuilder incomingChannels(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.incomingchannels.item.ChannelItemRequestBuilder incomingChannels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
-        return new microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.incomingchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.incomingchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.installedApps.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.installedApps.item collection
      * @param id Unique identifier of the item
      * @return a TeamsAppInstallationItemRequestBuilder
      */
@@ -412,7 +412,7 @@ public class TeamDefinitionRequestBuilder {
         return new TeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.members.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.members.item collection
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */
@@ -424,7 +424,7 @@ public class TeamDefinitionRequestBuilder {
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.operations.item collection
      * @param id Unique identifier of the item
      * @return a TeamsAsyncOperationItemRequestBuilder
      */
@@ -436,7 +436,7 @@ public class TeamDefinitionRequestBuilder {
         return new TeamsAsyncOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.owners.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.owners.item collection
      * @param id Unique identifier of the item
      * @return a UserItemRequestBuilder
      */
@@ -503,7 +503,7 @@ public class TeamDefinitionRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.permissionGrants.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.permissionGrants.item collection
      * @param id Unique identifier of the item
      * @return a ResourceSpecificPermissionGrantItemRequestBuilder
      */
@@ -515,7 +515,7 @@ public class TeamDefinitionRequestBuilder {
         return new ResourceSpecificPermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.tags.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.teamTemplates.item.definitions.item.teamDefinition.tags.item collection
      * @param id Unique identifier of the item
      * @return a TeamworkTagItemRequestBuilder
      */

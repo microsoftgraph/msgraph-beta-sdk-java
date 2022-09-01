@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.manageddevices.item.restorecloudpc;
+package com.microsoft.graph.users.item.manageddevices.item.restorecloudpc;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

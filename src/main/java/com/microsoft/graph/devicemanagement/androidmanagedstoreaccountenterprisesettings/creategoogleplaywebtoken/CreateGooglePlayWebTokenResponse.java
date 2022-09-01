@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.androidmanagedstoreaccountenterprisesettings.creategoogleplaywebtoken;
+package com.microsoft.graph.devicemanagement.androidmanagedstoreaccountenterprisesettings.creategoogleplaywebtoken;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

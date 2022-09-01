@@ -1,9 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum MobileAppRelationshipType implements ValuedEnum {
     /** Indicates that the target of a relationship is the child in the relationship. */
     Child("child"),

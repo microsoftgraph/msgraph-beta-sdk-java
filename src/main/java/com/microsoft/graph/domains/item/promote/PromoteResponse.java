@@ -1,4 +1,4 @@
-package microsoft.graph.domains.item.promote;
+package com.microsoft.graph.domains.item.promote;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

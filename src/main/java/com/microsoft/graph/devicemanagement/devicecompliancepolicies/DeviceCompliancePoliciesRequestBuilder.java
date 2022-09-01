@@ -1,5 +1,14 @@
-package microsoft.graph.devicemanagement.devicecompliancepolicies;
+package com.microsoft.graph.devicemanagement.devicecompliancepolicies;
 
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.getdevicesscheduledtoretire.GetDevicesScheduledToRetireRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.haspayloadlinks.HasPayloadLinksRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.refreshdevicecompliancereportsummarization.RefreshDeviceComplianceReportSummarizationRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.setscheduledretirestate.SetScheduledRetireStateRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.validatecompliancescript.ValidateComplianceScriptRequestBuilder;
+import com.microsoft.graph.models.DeviceCompliancePolicy;
+import com.microsoft.graph.models.DeviceCompliancePolicyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.getdevicesscheduledtoretire.GetDevicesScheduledToRetireRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.haspayloadlinks.HasPayloadLinksRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.refreshdevicecompliancereportsummarization.RefreshDeviceComplianceReportSummarizationRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.setscheduledretirestate.SetScheduledRetireStateRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.validatecompliancescript.ValidateComplianceScriptRequestBuilder;
-import microsoft.graph.models.DeviceCompliancePolicy;
-import microsoft.graph.models.DeviceCompliancePolicyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceCompliancePolicies property of the microsoft.graph.deviceManagement entity. */
 public class DeviceCompliancePoliciesRequestBuilder {
     /** The Count property */

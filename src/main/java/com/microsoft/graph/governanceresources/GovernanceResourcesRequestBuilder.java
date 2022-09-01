@@ -1,5 +1,10 @@
-package microsoft.graph.governanceresources;
+package com.microsoft.graph.governanceresources;
 
+import com.microsoft.graph.governanceresources.count.CountRequestBuilder;
+import com.microsoft.graph.governanceresources.register.RegisterRequestBuilder;
+import com.microsoft.graph.models.GovernanceResource;
+import com.microsoft.graph.models.GovernanceResourceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.governanceresources.count.CountRequestBuilder;
-import microsoft.graph.governanceresources.register.RegisterRequestBuilder;
-import microsoft.graph.models.GovernanceResource;
-import microsoft.graph.models.GovernanceResourceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of governanceResource entities. */
 public class GovernanceResourcesRequestBuilder {
     /** The Count property */

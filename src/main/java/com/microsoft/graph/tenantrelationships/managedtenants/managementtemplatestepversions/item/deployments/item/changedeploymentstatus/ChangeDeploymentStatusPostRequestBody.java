@@ -1,4 +1,4 @@
-package microsoft.graph.tenantrelationships.managedtenants.managementtemplatestepversions.item.deployments.item.changedeploymentstatus;
+package com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatestepversions.item.deployments.item.changedeploymentstatus;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

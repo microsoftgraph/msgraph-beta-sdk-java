@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.devices.getbyids;
+package com.microsoft.graph.users.item.devices.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

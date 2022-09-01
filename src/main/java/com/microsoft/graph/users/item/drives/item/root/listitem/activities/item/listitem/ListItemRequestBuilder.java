@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.drives.item.root.listitem.activities.item.listitem;
+package com.microsoft.graph.users.item.drives.item.root.listitem.activities.item.listitem;
 
+import com.microsoft.graph.models.ListItem;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ListItem;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the listItem property of the microsoft.graph.itemActivityOLD entity. */
 public class ListItemRequestBuilder {
     /** Path parameters for the request */

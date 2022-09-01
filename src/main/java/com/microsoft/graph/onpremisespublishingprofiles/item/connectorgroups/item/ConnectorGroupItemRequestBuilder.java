@@ -1,5 +1,11 @@
-package microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item;
+package com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item;
 
+import com.microsoft.graph.models.ConnectorGroup;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.applications.ApplicationsRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.applications.item.ApplicationItemRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.members.item.ConnectorItemRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.members.MembersRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ConnectorGroup;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.applications.ApplicationsRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.applications.item.ApplicationItemRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.members.item.ConnectorItemRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.members.MembersRequestBuilder;
 /** Provides operations to manage the connectorGroups property of the microsoft.graph.onPremisesPublishingProfile entity. */
 public class ConnectorGroupItemRequestBuilder {
     /** The applications property */
@@ -39,7 +39,7 @@ public class ConnectorGroupItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.connectorGroups.item.applications.item collection
+     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.connectorGroups.item.applications.item collection
      * @param id Unique identifier of the item
      * @return a ApplicationItemRequestBuilder
      */
@@ -270,7 +270,7 @@ public class ConnectorGroupItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.connectorGroups.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.connectorGroups.item.members.item collection
      * @param id Unique identifier of the item
      * @return a ConnectorItemRequestBuilder
      */

@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -41,7 +41,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     private Boolean _isTranslateLinksInBodyEnabled;
     /** The OdataType property */
     private String _odataType;
-    /** The onPremisesApplicationSegments property */
+    /** Represents the application segment collection for an on-premises wildcard application. */
     private java.util.List<OnPremisesApplicationSegment> _onPremisesApplicationSegments;
     /** Represents the single sign-on configuration for the on-premises application. */
     private OnPremisesPublishingSingleSignOn _singleSignOnSettings;
@@ -231,7 +231,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the onPremisesApplicationSegments property value. The onPremisesApplicationSegments property
+     * Gets the onPremisesApplicationSegments property value. Represents the application segment collection for an on-premises wildcard application.
      * @return a onPremisesApplicationSegment
      */
     @javax.annotation.Nullable
@@ -437,7 +437,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the onPremisesApplicationSegments property value. The onPremisesApplicationSegments property
+     * Sets the onPremisesApplicationSegments property value. Represents the application segment collection for an on-premises wildcard application.
      * @param value Value to set for the onPremisesApplicationSegments property.
      * @return a void
      */

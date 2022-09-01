@@ -1,5 +1,11 @@
-package microsoft.graph.users.item.presence;
+package com.microsoft.graph.users.item.presence;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Presence;
+import com.microsoft.graph.users.item.presence.clearpresence.ClearPresenceRequestBuilder;
+import com.microsoft.graph.users.item.presence.clearuserpreferredpresence.ClearUserPreferredPresenceRequestBuilder;
+import com.microsoft.graph.users.item.presence.setpresence.SetPresenceRequestBuilder;
+import com.microsoft.graph.users.item.presence.setuserpreferredpresence.SetUserPreferredPresenceRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Presence;
-import microsoft.graph.users.item.presence.clearpresence.ClearPresenceRequestBuilder;
-import microsoft.graph.users.item.presence.clearuserpreferredpresence.ClearUserPreferredPresenceRequestBuilder;
-import microsoft.graph.users.item.presence.setpresence.SetPresenceRequestBuilder;
-import microsoft.graph.users.item.presence.setuserpreferredpresence.SetUserPreferredPresenceRequestBuilder;
 /** Provides operations to manage the presence property of the microsoft.graph.user entity. */
 public class PresenceRequestBuilder {
     /** The clearPresence property */

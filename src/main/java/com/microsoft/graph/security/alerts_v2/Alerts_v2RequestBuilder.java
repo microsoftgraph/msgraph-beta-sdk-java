@@ -1,5 +1,9 @@
-package microsoft.graph.security.alerts_v2;
+package com.microsoft.graph.security.alerts_v2;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.Alert;
+import com.microsoft.graph.models.security.AlertCollectionResponse;
+import com.microsoft.graph.security.alerts_v2.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.Alert;
-import microsoft.graph.models.security.AlertCollectionResponse;
-import microsoft.graph.security.alerts_v2.count.CountRequestBuilder;
 /** Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity. */
 public class Alerts_v2RequestBuilder {
     /** The Count property */

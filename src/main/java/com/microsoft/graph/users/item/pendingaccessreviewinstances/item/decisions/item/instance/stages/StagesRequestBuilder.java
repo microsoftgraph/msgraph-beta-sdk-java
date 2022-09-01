@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages;
+package com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages;
 
+import com.microsoft.graph.models.AccessReviewStage;
+import com.microsoft.graph.models.AccessReviewStageCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AccessReviewStage;
-import microsoft.graph.models.AccessReviewStageCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.count.CountRequestBuilder;
-import microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 /** Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity. */
 public class StagesRequestBuilder {
     /** The Count property */

@@ -1,5 +1,8 @@
-package microsoft.graph.financials.companies.item.customerpaymentjournals.item.customerpayments.item;
+package com.microsoft.graph.financials.companies.item.customerpaymentjournals.item.customerpayments.item;
 
+import com.microsoft.graph.financials.companies.item.customerpaymentjournals.item.customerpayments.item.customer.CustomerRequestBuilder;
+import com.microsoft.graph.models.CustomerPayment;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.customerpaymentjournals.item.customerpayments.item.customer.CustomerRequestBuilder;
-import microsoft.graph.models.CustomerPayment;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customerPayments property of the microsoft.graph.customerPaymentJournal entity. */
 public class CustomerPaymentItemRequestBuilder {
     /** The customer property */

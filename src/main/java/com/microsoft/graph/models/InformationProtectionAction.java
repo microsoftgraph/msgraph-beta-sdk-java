@@ -1,5 +1,20 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AddContentFooterAction;
+import com.microsoft.graph.models.AddContentHeaderAction;
+import com.microsoft.graph.models.AddWatermarkAction;
+import com.microsoft.graph.models.ApplyLabelAction;
+import com.microsoft.graph.models.CustomAction;
+import com.microsoft.graph.models.JustifyAction;
+import com.microsoft.graph.models.MetadataAction;
+import com.microsoft.graph.models.ProtectAdhocAction;
+import com.microsoft.graph.models.ProtectByTemplateAction;
+import com.microsoft.graph.models.ProtectDoNotForwardAction;
+import com.microsoft.graph.models.RecommendLabelAction;
+import com.microsoft.graph.models.RemoveContentFooterAction;
+import com.microsoft.graph.models.RemoveContentHeaderAction;
+import com.microsoft.graph.models.RemoveProtectionAction;
+import com.microsoft.graph.models.RemoveWatermarkAction;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

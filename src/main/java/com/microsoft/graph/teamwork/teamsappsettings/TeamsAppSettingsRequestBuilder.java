@@ -1,5 +1,7 @@
-package microsoft.graph.teamwork.teamsappsettings;
+package com.microsoft.graph.teamwork.teamsappsettings;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamsAppSettings;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamsAppSettings;
 /** Provides operations to manage the teamsAppSettings property of the microsoft.graph.teamwork entity. */
 public class TeamsAppSettingsRequestBuilder {
     /** Path parameters for the request */

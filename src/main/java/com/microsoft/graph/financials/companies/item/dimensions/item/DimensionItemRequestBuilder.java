@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.dimensions.item;
+package com.microsoft.graph.financials.companies.item.dimensions.item;
 
+import com.microsoft.graph.financials.companies.item.dimensions.item.dimensionvalues.DimensionValuesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.dimensions.item.dimensionvalues.item.DimensionValueItemRequestBuilder;
+import com.microsoft.graph.models.Dimension;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.dimensions.item.dimensionvalues.DimensionValuesRequestBuilder;
-import microsoft.graph.financials.companies.item.dimensions.item.dimensionvalues.item.DimensionValueItemRequestBuilder;
-import microsoft.graph.models.Dimension;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the dimensions property of the microsoft.graph.company entity. */
 public class DimensionItemRequestBuilder {
     /** The dimensionValues property */
@@ -89,7 +89,7 @@ public class DimensionItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.dimensions.item.dimensionValues.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.dimensions.item.dimensionValues.item collection
      * @param id Unique identifier of the item
      * @return a DimensionValueItemRequestBuilder
      */

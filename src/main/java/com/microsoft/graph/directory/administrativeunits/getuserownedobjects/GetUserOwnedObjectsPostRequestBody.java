@@ -1,4 +1,4 @@
-package microsoft.graph.directory.administrativeunits.getuserownedobjects;
+package com.microsoft.graph.directory.administrativeunits.getuserownedobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

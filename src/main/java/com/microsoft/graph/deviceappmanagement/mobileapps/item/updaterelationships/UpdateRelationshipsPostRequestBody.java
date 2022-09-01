@@ -1,5 +1,6 @@
-package microsoft.graph.deviceappmanagement.mobileapps.item.updaterelationships;
+package com.microsoft.graph.deviceappmanagement.mobileapps.item.updaterelationships;
 
+import com.microsoft.graph.models.MobileAppRelationship;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MobileAppRelationship;
 /** Provides operations to call the updateRelationships method. */
 public class UpdateRelationshipsPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

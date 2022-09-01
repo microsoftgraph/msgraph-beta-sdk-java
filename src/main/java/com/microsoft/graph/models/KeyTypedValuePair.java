@@ -1,5 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.KeyBooleanValuePair;
+import com.microsoft.graph.models.KeyIntegerValuePair;
+import com.microsoft.graph.models.KeyRealValuePair;
+import com.microsoft.graph.models.KeyStringValuePair;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

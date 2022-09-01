@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.chats.item.permissiongrants.item.checkmembergroups;
+package com.microsoft.graph.users.item.chats.item.permissiongrants.item.checkmembergroups;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

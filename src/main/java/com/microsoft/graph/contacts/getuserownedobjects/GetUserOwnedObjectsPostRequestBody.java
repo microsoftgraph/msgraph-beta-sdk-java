@@ -1,4 +1,4 @@
-package microsoft.graph.contacts.getuserownedobjects;
+package com.microsoft.graph.contacts.getuserownedobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

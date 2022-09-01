@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.managedtenants.cloudpcsoverview;
+package com.microsoft.graph.tenantrelationships.managedtenants.cloudpcsoverview;
 
+import com.microsoft.graph.models.managedtenants.CloudPcOverview;
+import com.microsoft.graph.models.managedtenants.CloudPcOverviewCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.cloudpcsoverview.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.CloudPcOverview;
-import microsoft.graph.models.managedtenants.CloudPcOverviewCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.cloudpcsoverview.count.CountRequestBuilder;
 /** Provides operations to manage the cloudPcsOverview property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class CloudPcsOverviewRequestBuilder {
     /** The Count property */

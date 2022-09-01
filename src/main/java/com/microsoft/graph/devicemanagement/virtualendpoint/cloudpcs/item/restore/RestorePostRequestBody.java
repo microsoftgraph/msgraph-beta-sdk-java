@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.restore;
+package com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.restore;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

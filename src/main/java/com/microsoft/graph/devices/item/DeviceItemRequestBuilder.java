@@ -1,5 +1,22 @@
-package microsoft.graph.devices.item;
+package com.microsoft.graph.devices.item;
 
+import com.microsoft.graph.devices.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.devices.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.devices.item.commands.CommandsRequestBuilder;
+import com.microsoft.graph.devices.item.commands.item.CommandItemRequestBuilder;
+import com.microsoft.graph.devices.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.devices.item.extensions.item.ExtensionItemRequestBuilder;
+import com.microsoft.graph.devices.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.devices.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.devices.item.memberof.MemberOfRequestBuilder;
+import com.microsoft.graph.devices.item.registeredowners.RegisteredOwnersRequestBuilder;
+import com.microsoft.graph.devices.item.registeredusers.RegisteredUsersRequestBuilder;
+import com.microsoft.graph.devices.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.devices.item.transitivememberof.TransitiveMemberOfRequestBuilder;
+import com.microsoft.graph.devices.item.usagerights.item.UsageRightItemRequestBuilder;
+import com.microsoft.graph.devices.item.usagerights.UsageRightsRequestBuilder;
+import com.microsoft.graph.models.Device;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,23 +31,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devices.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.devices.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.devices.item.commands.CommandsRequestBuilder;
-import microsoft.graph.devices.item.commands.item.CommandItemRequestBuilder;
-import microsoft.graph.devices.item.extensions.ExtensionsRequestBuilder;
-import microsoft.graph.devices.item.extensions.item.ExtensionItemRequestBuilder;
-import microsoft.graph.devices.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.devices.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.devices.item.memberof.MemberOfRequestBuilder;
-import microsoft.graph.devices.item.registeredowners.RegisteredOwnersRequestBuilder;
-import microsoft.graph.devices.item.registeredusers.RegisteredUsersRequestBuilder;
-import microsoft.graph.devices.item.restore.RestoreRequestBuilder;
-import microsoft.graph.devices.item.transitivememberof.TransitiveMemberOfRequestBuilder;
-import microsoft.graph.devices.item.usagerights.item.UsageRightItemRequestBuilder;
-import microsoft.graph.devices.item.usagerights.UsageRightsRequestBuilder;
-import microsoft.graph.models.Device;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of device entities. */
 public class DeviceItemRequestBuilder {
     /** The checkMemberGroups property */
@@ -100,7 +100,7 @@ public class DeviceItemRequestBuilder {
         return new UsageRightsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.devices.item.commands.item collection
+     * Gets an item from the com.Microsoft.Graph.devices.item.commands.item collection
      * @param id Unique identifier of the item
      * @return a CommandItemRequestBuilder
      */
@@ -120,7 +120,7 @@ public class DeviceItemRequestBuilder {
     public DeviceItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/devices/{device%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/devices/{device%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -132,7 +132,7 @@ public class DeviceItemRequestBuilder {
      * @return a void
      */
     public DeviceItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/devices/{device%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/devices/{device%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -280,7 +280,7 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.devices.item.extensions.item collection
+     * Gets an item from the com.Microsoft.Graph.devices.item.extensions.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -343,16 +343,16 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.devices.item.memberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.devices.item.memberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.devices.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.devices.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.devices.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.devices.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
@@ -410,43 +410,43 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.devices.item.registeredOwners.item collection
+     * Gets an item from the com.Microsoft.Graph.devices.item.registeredOwners.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder registeredOwners(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder registeredOwners(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.devices.item.registeredUsers.item collection
+     * Gets an item from the com.Microsoft.Graph.devices.item.registeredUsers.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder registeredUsers(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder registeredUsers(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.devices.item.transitiveMemberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.devices.item.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.devices.item.usageRights.item collection
+     * Gets an item from the com.Microsoft.Graph.devices.item.usageRights.item collection
      * @param id Unique identifier of the item
      * @return a UsageRightItemRequestBuilder
      */
@@ -474,10 +474,6 @@ public class DeviceItemRequestBuilder {
     }
     /** Get the properties and relationships of a device object. Since the **device** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **device** instance. */
     public class DeviceItemRequestBuilderGetQueryParameters {
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable

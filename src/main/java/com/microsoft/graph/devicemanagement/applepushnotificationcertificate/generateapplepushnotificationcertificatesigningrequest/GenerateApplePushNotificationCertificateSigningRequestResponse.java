@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.applepushnotificationcertificate.generateapplepushnotificationcertificatesigningrequest;
+package com.microsoft.graph.devicemanagement.applepushnotificationcertificate.generateapplepushnotificationcertificatesigningrequest;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

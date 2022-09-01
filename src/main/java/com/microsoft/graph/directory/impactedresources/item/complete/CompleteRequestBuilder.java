@@ -1,5 +1,7 @@
-package microsoft.graph.directory.impactedresources.item.complete;
+package com.microsoft.graph.directory.impactedresources.item.complete;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RecommendationResource;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RecommendationResource;
 /** Provides operations to call the complete method. */
 public class CompleteRequestBuilder {
     /** Path parameters for the request */

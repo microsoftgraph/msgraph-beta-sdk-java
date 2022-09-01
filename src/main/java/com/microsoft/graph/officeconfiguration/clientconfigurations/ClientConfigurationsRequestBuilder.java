@@ -1,5 +1,10 @@
-package microsoft.graph.officeconfiguration.clientconfigurations;
+package com.microsoft.graph.officeconfiguration.clientconfigurations;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OfficeClientConfiguration;
+import com.microsoft.graph.models.OfficeClientConfigurationCollectionResponse;
+import com.microsoft.graph.officeconfiguration.clientconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.officeconfiguration.clientconfigurations.updatepriorities.UpdatePrioritiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OfficeClientConfiguration;
-import microsoft.graph.models.OfficeClientConfigurationCollectionResponse;
-import microsoft.graph.officeconfiguration.clientconfigurations.count.CountRequestBuilder;
-import microsoft.graph.officeconfiguration.clientconfigurations.updatepriorities.UpdatePrioritiesRequestBuilder;
 /** Provides operations to manage the clientConfigurations property of the microsoft.graph.officeConfiguration entity. */
 public class ClientConfigurationsRequestBuilder {
     /** The Count property */

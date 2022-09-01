@@ -1,5 +1,6 @@
-package microsoft.graph.models.windowsupdates;
+package com.microsoft.graph.models.windowsupdates;
 
+import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
 public class Updates extends Entity implements Parsable {
     /** Catalog of content that can be approved for deployment by the deployment service. Read-only. */
     private Catalog _catalog;

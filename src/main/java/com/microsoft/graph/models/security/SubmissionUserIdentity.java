@@ -1,5 +1,6 @@
-package microsoft.graph.models.security;
+package com.microsoft.graph.models.security;
 
+import com.microsoft.graph.models.Identity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Identity;
 public class SubmissionUserIdentity extends Identity implements Parsable {
     /** The email of user who is making the submission when logged in (delegated token case). */
     private String _email;

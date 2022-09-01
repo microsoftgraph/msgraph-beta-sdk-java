@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.windowsqualityupdateprofiles;
+package com.microsoft.graph.devicemanagement.windowsqualityupdateprofiles;
 
+import com.microsoft.graph.devicemanagement.windowsqualityupdateprofiles.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsQualityUpdateProfile;
+import com.microsoft.graph.models.WindowsQualityUpdateProfileCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.windowsqualityupdateprofiles.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsQualityUpdateProfile;
-import microsoft.graph.models.WindowsQualityUpdateProfileCollectionResponse;
 /** Provides operations to manage the windowsQualityUpdateProfiles property of the microsoft.graph.deviceManagement entity. */
 public class WindowsQualityUpdateProfilesRequestBuilder {
     /** The Count property */

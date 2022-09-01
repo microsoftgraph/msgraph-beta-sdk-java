@@ -1,5 +1,7 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.IdentityBuiltInUserFlowAttribute;
+import com.microsoft.graph.models.IdentityCustomUserFlowAttribute;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

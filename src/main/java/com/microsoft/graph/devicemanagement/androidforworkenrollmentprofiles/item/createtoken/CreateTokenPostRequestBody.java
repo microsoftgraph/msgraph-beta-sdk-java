@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.androidforworkenrollmentprofiles.item.createtoken;
+package com.microsoft.graph.devicemanagement.androidforworkenrollmentprofiles.item.createtoken;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,11 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate;
+import com.microsoft.graph.models.DeviceManagementConfigurationChoiceSettingInstanceTemplate;
+import com.microsoft.graph.models.DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate;
+import com.microsoft.graph.models.DeviceManagementConfigurationGroupSettingInstanceTemplate;
+import com.microsoft.graph.models.DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplate;
+import com.microsoft.graph.models.DeviceManagementConfigurationSimpleSettingInstanceTemplate;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

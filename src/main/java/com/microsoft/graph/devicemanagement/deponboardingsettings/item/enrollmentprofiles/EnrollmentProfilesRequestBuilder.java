@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles;
+package com.microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles;
 
+import com.microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.count.CountRequestBuilder;
+import com.microsoft.graph.models.EnrollmentProfile;
+import com.microsoft.graph.models.EnrollmentProfileCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.count.CountRequestBuilder;
-import microsoft.graph.models.EnrollmentProfile;
-import microsoft.graph.models.EnrollmentProfileCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the enrollmentProfiles property of the microsoft.graph.depOnboardingSetting entity. */
 public class EnrollmentProfilesRequestBuilder {
     /** The Count property */

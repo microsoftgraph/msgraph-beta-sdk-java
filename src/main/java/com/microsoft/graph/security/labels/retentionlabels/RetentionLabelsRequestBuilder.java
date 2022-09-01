@@ -1,5 +1,9 @@
-package microsoft.graph.security.labels.retentionlabels;
+package com.microsoft.graph.security.labels.retentionlabels;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.RetentionLabel;
+import com.microsoft.graph.models.security.RetentionLabelCollectionResponse;
+import com.microsoft.graph.security.labels.retentionlabels.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.RetentionLabel;
-import microsoft.graph.models.security.RetentionLabelCollectionResponse;
-import microsoft.graph.security.labels.retentionlabels.count.CountRequestBuilder;
 /** Provides operations to manage the retentionLabels property of the microsoft.graph.security.labelsRoot entity. */
 public class RetentionLabelsRequestBuilder {
     /** The Count property */

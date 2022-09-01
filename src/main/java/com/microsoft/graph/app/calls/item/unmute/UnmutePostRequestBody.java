@@ -1,4 +1,4 @@
-package microsoft.graph.app.calls.item.unmute;
+package com.microsoft.graph.app.calls.item.unmute;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

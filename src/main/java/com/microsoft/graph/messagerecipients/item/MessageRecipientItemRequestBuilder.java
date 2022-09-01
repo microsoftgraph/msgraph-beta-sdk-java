@@ -1,5 +1,9 @@
-package microsoft.graph.messagerecipients.item;
+package com.microsoft.graph.messagerecipients.item;
 
+import com.microsoft.graph.messagerecipients.item.events.EventsRequestBuilder;
+import com.microsoft.graph.messagerecipients.item.events.item.MessageEventItemRequestBuilder;
+import com.microsoft.graph.models.MessageRecipient;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.messagerecipients.item.events.EventsRequestBuilder;
-import microsoft.graph.messagerecipients.item.events.item.MessageEventItemRequestBuilder;
-import microsoft.graph.models.MessageRecipient;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of messageRecipient entities. */
 public class MessageRecipientItemRequestBuilder {
     /** The events property */
@@ -200,7 +200,7 @@ public class MessageRecipientItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.messageRecipients.item.events.item collection
+     * Gets an item from the com.Microsoft.Graph.messageRecipients.item.events.item collection
      * @param id Unique identifier of the item
      * @return a MessageEventItemRequestBuilder
      */

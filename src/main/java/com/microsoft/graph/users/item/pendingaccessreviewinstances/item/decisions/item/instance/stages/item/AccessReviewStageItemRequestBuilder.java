@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item;
+package com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item;
 
+import com.microsoft.graph.models.AccessReviewStage;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.DecisionsRequestBuilder;
+import com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
+import com.microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.stop.StopRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AccessReviewStage;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.DecisionsRequestBuilder;
-import microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
-import microsoft.graph.users.item.pendingaccessreviewinstances.item.decisions.item.instance.stages.item.stop.StopRequestBuilder;
 /** Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity. */
 public class AccessReviewStageItemRequestBuilder {
     /** The decisions property */
@@ -155,7 +155,7 @@ public class AccessReviewStageItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.pendingAccessReviewInstances.item.decisions.item.instance.stages.item.decisions.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.pendingAccessReviewInstances.item.decisions.item.instance.stages.item.decisions.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
      */

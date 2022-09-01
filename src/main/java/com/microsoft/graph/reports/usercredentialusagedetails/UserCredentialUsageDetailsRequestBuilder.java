@@ -1,5 +1,9 @@
-package microsoft.graph.reports.usercredentialusagedetails;
+package com.microsoft.graph.reports.usercredentialusagedetails;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserCredentialUsageDetails;
+import com.microsoft.graph.models.UserCredentialUsageDetailsCollectionResponse;
+import com.microsoft.graph.reports.usercredentialusagedetails.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserCredentialUsageDetails;
-import microsoft.graph.models.UserCredentialUsageDetailsCollectionResponse;
-import microsoft.graph.reports.usercredentialusagedetails.count.CountRequestBuilder;
 /** Provides operations to manage the userCredentialUsageDetails property of the microsoft.graph.reportRoot entity. */
 public class UserCredentialUsageDetailsRequestBuilder {
     /** The Count property */

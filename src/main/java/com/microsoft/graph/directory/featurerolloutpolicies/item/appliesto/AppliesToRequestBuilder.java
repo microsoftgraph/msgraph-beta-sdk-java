@@ -1,5 +1,13 @@
-package microsoft.graph.directory.featurerolloutpolicies.item.appliesto;
+package com.microsoft.graph.directory.featurerolloutpolicies.item.appliesto;
 
+import com.microsoft.graph.directory.featurerolloutpolicies.item.appliesto.count.CountRequestBuilder;
+import com.microsoft.graph.directory.featurerolloutpolicies.item.appliesto.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.directory.featurerolloutpolicies.item.appliesto.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
+import com.microsoft.graph.directory.featurerolloutpolicies.item.appliesto.ref.RefRequestBuilder;
+import com.microsoft.graph.directory.featurerolloutpolicies.item.appliesto.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.featurerolloutpolicies.item.appliesto.count.CountRequestBuilder;
-import microsoft.graph.directory.featurerolloutpolicies.item.appliesto.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.directory.featurerolloutpolicies.item.appliesto.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
-import microsoft.graph.directory.featurerolloutpolicies.item.appliesto.ref.RefRequestBuilder;
-import microsoft.graph.directory.featurerolloutpolicies.item.appliesto.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the appliesTo property of the microsoft.graph.featureRolloutPolicy entity. */
 public class AppliesToRequestBuilder {
     /** The Count property */

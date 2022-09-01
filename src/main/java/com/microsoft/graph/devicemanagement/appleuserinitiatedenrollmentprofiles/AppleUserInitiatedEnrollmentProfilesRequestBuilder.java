@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.appleuserinitiatedenrollmentprofiles;
+package com.microsoft.graph.devicemanagement.appleuserinitiatedenrollmentprofiles;
 
+import com.microsoft.graph.devicemanagement.appleuserinitiatedenrollmentprofiles.count.CountRequestBuilder;
+import com.microsoft.graph.models.AppleUserInitiatedEnrollmentProfile;
+import com.microsoft.graph.models.AppleUserInitiatedEnrollmentProfileCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.appleuserinitiatedenrollmentprofiles.count.CountRequestBuilder;
-import microsoft.graph.models.AppleUserInitiatedEnrollmentProfile;
-import microsoft.graph.models.AppleUserInitiatedEnrollmentProfileCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the appleUserInitiatedEnrollmentProfiles property of the microsoft.graph.deviceManagement entity. */
 public class AppleUserInitiatedEnrollmentProfilesRequestBuilder {
     /** The Count property */

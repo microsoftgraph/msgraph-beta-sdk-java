@@ -1,15 +1,17 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum ComanagementEligibleType implements ValuedEnum {
     Comanaged("comanaged"),
     Eligible("eligible"),
     EligibleButNotAzureAdJoined("eligibleButNotAzureAdJoined"),
     NeedsOsUpdate("needsOsUpdate"),
-    Ineligible("ineligible");
+    Ineligible("ineligible"),
+    /** Devices scheduled for Co-Management enrollment */
+    ScheduledForEnrollment("scheduledForEnrollment");
     public final String value;
     ComanagementEligibleType(final String value) {
         this.value = value;
@@ -25,6 +27,7 @@ public enum ComanagementEligibleType implements ValuedEnum {
             case "eligibleButNotAzureAdJoined": return EligibleButNotAzureAdJoined;
             case "needsOsUpdate": return NeedsOsUpdate;
             case "ineligible": return Ineligible;
+            case "scheduledForEnrollment": return ScheduledForEnrollment;
             default: return null;
         }
     }

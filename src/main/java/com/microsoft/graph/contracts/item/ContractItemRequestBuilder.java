@@ -1,5 +1,12 @@
-package microsoft.graph.contracts.item;
+package com.microsoft.graph.contracts.item;
 
+import com.microsoft.graph.contracts.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.contracts.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.contracts.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.contracts.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.contracts.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.models.Contract;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.contracts.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.contracts.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.contracts.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.contracts.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.contracts.item.restore.RestoreRequestBuilder;
-import microsoft.graph.models.Contract;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of contract entities. */
 public class ContractItemRequestBuilder {
     /** The checkMemberGroups property */
@@ -63,7 +63,7 @@ public class ContractItemRequestBuilder {
     public ContractItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/contracts/{contract%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/contracts/{contract%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -75,7 +75,7 @@ public class ContractItemRequestBuilder {
      * @return a void
      */
     public ContractItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/contracts/{contract%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/contracts/{contract%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -345,10 +345,6 @@ public class ContractItemRequestBuilder {
     }
     /** Retrieve the properties and relationships of contract object. */
     public class ContractItemRequestBuilderGetQueryParameters {
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable

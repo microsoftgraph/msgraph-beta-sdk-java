@@ -1,5 +1,28 @@
-package microsoft.graph.teams.item.schedule;
+package com.microsoft.graph.teams.item.schedule;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Schedule;
+import com.microsoft.graph.teams.item.schedule.offershiftrequests.item.OfferShiftRequestItemRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.offershiftrequests.OfferShiftRequestsRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.openshiftchangerequests.item.OpenShiftChangeRequestItemRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.openshiftchangerequests.OpenShiftChangeRequestsRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.openshifts.item.OpenShiftItemRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.openshifts.OpenShiftsRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.schedulinggroups.item.SchedulingGroupItemRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.schedulinggroups.SchedulingGroupsRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.share.ShareRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.shifts.item.ShiftItemRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.shifts.ShiftsRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.swapshiftschangerequests.item.SwapShiftsChangeRequestItemRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.swapshiftschangerequests.SwapShiftsChangeRequestsRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.timecards.item.TimeCardItemRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.timecards.TimeCardsRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.timeoffreasons.item.TimeOffReasonItemRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.timeoffreasons.TimeOffReasonsRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.timeoffrequests.item.TimeOffRequestItemRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.timeoffrequests.TimeOffRequestsRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.timesoff.item.TimeOffItemRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.timesoff.TimesOffRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,29 +37,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Schedule;
-import microsoft.graph.teams.item.schedule.offershiftrequests.item.OfferShiftRequestItemRequestBuilder;
-import microsoft.graph.teams.item.schedule.offershiftrequests.OfferShiftRequestsRequestBuilder;
-import microsoft.graph.teams.item.schedule.openshiftchangerequests.item.OpenShiftChangeRequestItemRequestBuilder;
-import microsoft.graph.teams.item.schedule.openshiftchangerequests.OpenShiftChangeRequestsRequestBuilder;
-import microsoft.graph.teams.item.schedule.openshifts.item.OpenShiftItemRequestBuilder;
-import microsoft.graph.teams.item.schedule.openshifts.OpenShiftsRequestBuilder;
-import microsoft.graph.teams.item.schedule.schedulinggroups.item.SchedulingGroupItemRequestBuilder;
-import microsoft.graph.teams.item.schedule.schedulinggroups.SchedulingGroupsRequestBuilder;
-import microsoft.graph.teams.item.schedule.share.ShareRequestBuilder;
-import microsoft.graph.teams.item.schedule.shifts.item.ShiftItemRequestBuilder;
-import microsoft.graph.teams.item.schedule.shifts.ShiftsRequestBuilder;
-import microsoft.graph.teams.item.schedule.swapshiftschangerequests.item.SwapShiftsChangeRequestItemRequestBuilder;
-import microsoft.graph.teams.item.schedule.swapshiftschangerequests.SwapShiftsChangeRequestsRequestBuilder;
-import microsoft.graph.teams.item.schedule.timecards.item.TimeCardItemRequestBuilder;
-import microsoft.graph.teams.item.schedule.timecards.TimeCardsRequestBuilder;
-import microsoft.graph.teams.item.schedule.timeoffreasons.item.TimeOffReasonItemRequestBuilder;
-import microsoft.graph.teams.item.schedule.timeoffreasons.TimeOffReasonsRequestBuilder;
-import microsoft.graph.teams.item.schedule.timeoffrequests.item.TimeOffRequestItemRequestBuilder;
-import microsoft.graph.teams.item.schedule.timeoffrequests.TimeOffRequestsRequestBuilder;
-import microsoft.graph.teams.item.schedule.timesoff.item.TimeOffItemRequestBuilder;
-import microsoft.graph.teams.item.schedule.timesoff.TimesOffRequestBuilder;
 /** Provides operations to manage the schedule property of the microsoft.graph.team entity. */
 public class ScheduleRequestBuilder {
     /** The offerShiftRequests property */
@@ -320,7 +320,7 @@ public class ScheduleRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.schedule.offerShiftRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.offerShiftRequests.item collection
      * @param id Unique identifier of the item
      * @return a OfferShiftRequestItemRequestBuilder
      */
@@ -332,7 +332,7 @@ public class ScheduleRequestBuilder {
         return new OfferShiftRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.schedule.openShiftChangeRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.openShiftChangeRequests.item collection
      * @param id Unique identifier of the item
      * @return a OpenShiftChangeRequestItemRequestBuilder
      */
@@ -344,7 +344,7 @@ public class ScheduleRequestBuilder {
         return new OpenShiftChangeRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.schedule.openShifts.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.openShifts.item collection
      * @param id Unique identifier of the item
      * @return a OpenShiftItemRequestBuilder
      */
@@ -411,7 +411,7 @@ public class ScheduleRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.schedule.schedulingGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.schedulingGroups.item collection
      * @param id Unique identifier of the item
      * @return a SchedulingGroupItemRequestBuilder
      */
@@ -423,7 +423,7 @@ public class ScheduleRequestBuilder {
         return new SchedulingGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.schedule.shifts.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.shifts.item collection
      * @param id Unique identifier of the item
      * @return a ShiftItemRequestBuilder
      */
@@ -435,7 +435,7 @@ public class ScheduleRequestBuilder {
         return new ShiftItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.schedule.swapShiftsChangeRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.swapShiftsChangeRequests.item collection
      * @param id Unique identifier of the item
      * @return a SwapShiftsChangeRequestItemRequestBuilder
      */
@@ -447,7 +447,7 @@ public class ScheduleRequestBuilder {
         return new SwapShiftsChangeRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.schedule.timeCards.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.timeCards.item collection
      * @param id Unique identifier of the item
      * @return a TimeCardItemRequestBuilder
      */
@@ -459,7 +459,7 @@ public class ScheduleRequestBuilder {
         return new TimeCardItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.schedule.timeOffReasons.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.timeOffReasons.item collection
      * @param id Unique identifier of the item
      * @return a TimeOffReasonItemRequestBuilder
      */
@@ -471,7 +471,7 @@ public class ScheduleRequestBuilder {
         return new TimeOffReasonItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.schedule.timeOffRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.timeOffRequests.item collection
      * @param id Unique identifier of the item
      * @return a TimeOffRequestItemRequestBuilder
      */
@@ -483,7 +483,7 @@ public class ScheduleRequestBuilder {
         return new TimeOffRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.schedule.timesOff.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.timesOff.item collection
      * @param id Unique identifier of the item
      * @return a TimeOffItemRequestBuilder
      */

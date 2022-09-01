@@ -1,5 +1,11 @@
-package microsoft.graph.approvalworkflowproviders.item;
+package com.microsoft.graph.approvalworkflowproviders.item;
 
+import com.microsoft.graph.approvalworkflowproviders.item.businessflows.BusinessFlowsRequestBuilder;
+import com.microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder;
+import com.microsoft.graph.approvalworkflowproviders.item.policytemplates.item.GovernancePolicyTemplateItemRequestBuilder;
+import com.microsoft.graph.approvalworkflowproviders.item.policytemplates.PolicyTemplatesRequestBuilder;
+import com.microsoft.graph.models.ApprovalWorkflowProvider;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.approvalworkflowproviders.item.businessflows.BusinessFlowsRequestBuilder;
-import microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder;
-import microsoft.graph.approvalworkflowproviders.item.policytemplates.item.GovernancePolicyTemplateItemRequestBuilder;
-import microsoft.graph.approvalworkflowproviders.item.policytemplates.PolicyTemplatesRequestBuilder;
-import microsoft.graph.models.ApprovalWorkflowProvider;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of approvalWorkflowProvider entities. */
 public class ApprovalWorkflowProviderItemRequestBuilder {
     /** The businessFlows property */
@@ -44,28 +44,28 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.approvalWorkflowProviders.item.businessFlows.item collection
+     * Gets an item from the com.Microsoft.Graph.approvalWorkflowProviders.item.businessFlows.item collection
      * @param id Unique identifier of the item
      * @return a BusinessFlowItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.approvalworkflowproviders.item.businessflows.item.BusinessFlowItemRequestBuilder businessFlows(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.approvalworkflowproviders.item.businessflows.item.BusinessFlowItemRequestBuilder businessFlows(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("businessFlow%2Did", id);
-        return new microsoft.graph.approvalworkflowproviders.item.businessflows.item.BusinessFlowItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.approvalworkflowproviders.item.businessflows.item.BusinessFlowItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.approvalWorkflowProviders.item.businessFlowsWithRequestsAwaitingMyDecision.item collection
+     * Gets an item from the com.Microsoft.Graph.approvalWorkflowProviders.item.businessFlowsWithRequestsAwaitingMyDecision.item collection
      * @param id Unique identifier of the item
      * @return a BusinessFlowItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.BusinessFlowItemRequestBuilder businessFlowsWithRequestsAwaitingMyDecision(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.BusinessFlowItemRequestBuilder businessFlowsWithRequestsAwaitingMyDecision(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("businessFlow%2Did", id);
-        return new microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.BusinessFlowItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.BusinessFlowItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ApprovalWorkflowProviderItemRequestBuilder and sets the default values.
@@ -342,7 +342,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.approvalWorkflowProviders.item.policyTemplates.item collection
+     * Gets an item from the com.Microsoft.Graph.approvalWorkflowProviders.item.policyTemplates.item collection
      * @param id Unique identifier of the item
      * @return a GovernancePolicyTemplateItemRequestBuilder
      */

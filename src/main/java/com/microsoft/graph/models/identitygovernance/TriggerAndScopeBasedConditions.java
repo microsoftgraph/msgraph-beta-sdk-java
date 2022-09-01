@@ -1,0 +1,89 @@
+package com.microsoft.graph.models.identitygovernance;
+
+import com.microsoft.graph.models.SubjectSet;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions implements Parsable {
+    /** The scope property */
+    private SubjectSet _scope;
+    /** The trigger property */
+    private WorkflowExecutionTrigger _trigger;
+    /**
+     * Instantiates a new TriggerAndScopeBasedConditions and sets the default values.
+     * @return a void
+     */
+    public TriggerAndScopeBasedConditions() {
+        super();
+        this.setOdataType("#microsoft.graph.identityGovernance.triggerAndScopeBasedConditions");
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a TriggerAndScopeBasedConditions
+     */
+    @javax.annotation.Nonnull
+    public static TriggerAndScopeBasedConditions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new TriggerAndScopeBasedConditions();
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final TriggerAndScopeBasedConditions currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(SubjectSet::createFromDiscriminatorValue)); });
+            this.put("trigger", (n) -> { currentObject.setTrigger(n.getObjectValue(WorkflowExecutionTrigger::createFromDiscriminatorValue)); });
+        }};
+    }
+    /**
+     * Gets the scope property value. The scope property
+     * @return a subjectSet
+     */
+    @javax.annotation.Nullable
+    public SubjectSet getScope() {
+        return this._scope;
+    }
+    /**
+     * Gets the trigger property value. The trigger property
+     * @return a workflowExecutionTrigger
+     */
+    @javax.annotation.Nullable
+    public WorkflowExecutionTrigger getTrigger() {
+        return this._trigger;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeObjectValue("scope", this.getScope());
+        writer.writeObjectValue("trigger", this.getTrigger());
+    }
+    /**
+     * Sets the scope property value. The scope property
+     * @param value Value to set for the scope property.
+     * @return a void
+     */
+    public void setScope(@javax.annotation.Nullable final SubjectSet value) {
+        this._scope = value;
+    }
+    /**
+     * Sets the trigger property value. The trigger property
+     * @param value Value to set for the trigger property.
+     * @return a void
+     */
+    public void setTrigger(@javax.annotation.Nullable final WorkflowExecutionTrigger value) {
+        this._trigger = value;
+    }
+}

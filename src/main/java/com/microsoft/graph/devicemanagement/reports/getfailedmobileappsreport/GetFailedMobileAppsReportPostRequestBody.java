@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getfailedmobileappsreport;
+package com.microsoft.graph.devicemanagement.reports.getfailedmobileappsreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

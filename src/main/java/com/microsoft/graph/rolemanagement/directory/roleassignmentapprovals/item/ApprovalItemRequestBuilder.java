@@ -1,5 +1,9 @@
-package microsoft.graph.rolemanagement.directory.roleassignmentapprovals.item;
+package com.microsoft.graph.rolemanagement.directory.roleassignmentapprovals.item;
 
+import com.microsoft.graph.models.Approval;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentapprovals.item.steps.item.ApprovalStepItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentapprovals.item.steps.StepsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Approval;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.rolemanagement.directory.roleassignmentapprovals.item.steps.item.ApprovalStepItemRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleassignmentapprovals.item.steps.StepsRequestBuilder;
 /** Provides operations to manage the roleAssignmentApprovals property of the microsoft.graph.rbacApplication entity. */
 public class ApprovalItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class ApprovalItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.directory.roleAssignmentApprovals.item.steps.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignmentApprovals.item.steps.item collection
      * @param id Unique identifier of the item
      * @return a ApprovalStepItemRequestBuilder
      */

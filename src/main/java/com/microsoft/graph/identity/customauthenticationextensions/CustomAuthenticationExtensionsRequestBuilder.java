@@ -1,5 +1,10 @@
-package microsoft.graph.identity.customauthenticationextensions;
+package com.microsoft.graph.identity.customauthenticationextensions;
 
+import com.microsoft.graph.identity.customauthenticationextensions.count.CountRequestBuilder;
+import com.microsoft.graph.identity.customauthenticationextensions.validateauthenticationconfiguration.ValidateAuthenticationConfigurationRequestBuilder;
+import com.microsoft.graph.models.CustomAuthenticationExtension;
+import com.microsoft.graph.models.CustomAuthenticationExtensionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.customauthenticationextensions.count.CountRequestBuilder;
-import microsoft.graph.identity.customauthenticationextensions.validateauthenticationconfiguration.ValidateAuthenticationConfigurationRequestBuilder;
-import microsoft.graph.models.CustomAuthenticationExtension;
-import microsoft.graph.models.CustomAuthenticationExtensionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customAuthenticationExtensions property of the microsoft.graph.identityContainer entity. */
 public class CustomAuthenticationExtensionsRequestBuilder {
     /** The Count property */

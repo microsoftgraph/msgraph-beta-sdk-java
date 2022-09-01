@@ -1,4 +1,4 @@
-package microsoft.graph.admin.windows.updates.updatableassets.item.addmembersbyid;
+package com.microsoft.graph.admin.windows.updates.updatableassets.item.addmembersbyid;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

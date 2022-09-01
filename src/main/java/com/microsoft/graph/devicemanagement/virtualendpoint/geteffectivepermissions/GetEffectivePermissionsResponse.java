@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.virtualendpoint.geteffectivepermissions;
+package com.microsoft.graph.devicemanagement.virtualendpoint.geteffectivepermissions;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

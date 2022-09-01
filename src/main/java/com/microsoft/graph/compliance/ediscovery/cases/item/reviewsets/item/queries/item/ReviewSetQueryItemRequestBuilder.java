@@ -1,5 +1,8 @@
-package microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.queries.item;
+package com.microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.queries.item;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.queries.item.applytags.ApplyTagsRequestBuilder;
+import com.microsoft.graph.models.ediscovery.ReviewSetQuery;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.queries.item.applytags.ApplyTagsRequestBuilder;
-import microsoft.graph.models.ediscovery.ReviewSetQuery;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the queries property of the microsoft.graph.ediscovery.reviewSet entity. */
 public class ReviewSetQueryItemRequestBuilder {
     /** The applyTags property */

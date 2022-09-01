@@ -1,16 +1,18 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum OrganizationalMessageFrequency implements ValuedEnum {
     /** Indicates that the message will be displayed once a week */
     WeeklyOnce("weeklyOnce"),
     /** Indicates that the message will be displayed once a month */
     MonthlyOnce("monthlyOnce"),
     /** Indicates that the message will be displayed twice a month */
-    MonthlyTwice("monthlyTwice");
+    MonthlyTwice("monthlyTwice"),
+    /** UnknownFutureValue, Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     OrganizationalMessageFrequency(final String value) {
         this.value = value;
@@ -24,6 +26,7 @@ public enum OrganizationalMessageFrequency implements ValuedEnum {
             case "weeklyOnce": return WeeklyOnce;
             case "monthlyOnce": return MonthlyOnce;
             case "monthlyTwice": return MonthlyTwice;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

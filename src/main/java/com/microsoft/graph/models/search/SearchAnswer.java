@@ -1,5 +1,9 @@
-package microsoft.graph.models.search;
+package com.microsoft.graph.models.search;
 
+import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.models.search.Acronym;
+import com.microsoft.graph.models.search.Bookmark;
+import com.microsoft.graph.models.search.Qna;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,8 +12,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class SearchAnswer extends Entity implements Parsable {
     /** Search answer description shown on search results page. */
     private String _description;

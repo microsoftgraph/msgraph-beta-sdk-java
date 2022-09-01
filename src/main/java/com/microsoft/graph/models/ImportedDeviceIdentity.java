@@ -1,5 +1,6 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.ImportedDeviceIdentityResult;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The importedDeviceIdentity resource represents a unique hardware identity of a device that has been pre-staged for pre-enrollment configuration. */
 public class ImportedDeviceIdentity extends Entity implements Parsable {
     /** Created Date Time of the device */
     private OffsetDateTime _createdDateTime;
@@ -27,7 +27,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     /** The platform property */
     private Platform _platform;
     /**
-     * Instantiates a new importedDeviceIdentity and sets the default values.
+     * Instantiates a new ImportedDeviceIdentity and sets the default values.
      * @return a void
      */
     public ImportedDeviceIdentity() {
@@ -37,7 +37,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a importedDeviceIdentity
+     * @return a ImportedDeviceIdentity
      */
     @javax.annotation.Nonnull
     public static ImportedDeviceIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

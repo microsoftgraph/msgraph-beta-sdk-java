@@ -1,5 +1,23 @@
-package microsoft.graph.dataclassification;
+package com.microsoft.graph.dataclassification;
 
+import com.microsoft.graph.dataclassification.classifyexactmatches.ClassifyExactMatchesRequestBuilder;
+import com.microsoft.graph.dataclassification.classifyfile.ClassifyFileRequestBuilder;
+import com.microsoft.graph.dataclassification.classifyfilejobs.ClassifyFileJobsRequestBuilder;
+import com.microsoft.graph.dataclassification.classifytext.ClassifyTextRequestBuilder;
+import com.microsoft.graph.dataclassification.classifytextjobs.ClassifyTextJobsRequestBuilder;
+import com.microsoft.graph.dataclassification.evaluatedlppoliciesjobs.EvaluateDlpPoliciesJobsRequestBuilder;
+import com.microsoft.graph.dataclassification.evaluatelabeljobs.EvaluateLabelJobsRequestBuilder;
+import com.microsoft.graph.dataclassification.exactmatchdatastores.ExactMatchDataStoresRequestBuilder;
+import com.microsoft.graph.dataclassification.exactmatchdatastores.item.ExactMatchDataStoreItemRequestBuilder;
+import com.microsoft.graph.dataclassification.exactmatchuploadagents.ExactMatchUploadAgentsRequestBuilder;
+import com.microsoft.graph.dataclassification.exactmatchuploadagents.item.ExactMatchUploadAgentItemRequestBuilder;
+import com.microsoft.graph.dataclassification.jobs.JobsRequestBuilder;
+import com.microsoft.graph.dataclassification.sensitivetypes.item.SensitiveTypeItemRequestBuilder;
+import com.microsoft.graph.dataclassification.sensitivetypes.SensitiveTypesRequestBuilder;
+import com.microsoft.graph.dataclassification.sensitivitylabels.item.SensitivityLabelItemRequestBuilder;
+import com.microsoft.graph.dataclassification.sensitivitylabels.SensitivityLabelsRequestBuilder;
+import com.microsoft.graph.models.DataClassificationService;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,24 +32,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.dataclassification.classifyexactmatches.ClassifyExactMatchesRequestBuilder;
-import microsoft.graph.dataclassification.classifyfile.ClassifyFileRequestBuilder;
-import microsoft.graph.dataclassification.classifyfilejobs.ClassifyFileJobsRequestBuilder;
-import microsoft.graph.dataclassification.classifytext.ClassifyTextRequestBuilder;
-import microsoft.graph.dataclassification.classifytextjobs.ClassifyTextJobsRequestBuilder;
-import microsoft.graph.dataclassification.evaluatedlppoliciesjobs.EvaluateDlpPoliciesJobsRequestBuilder;
-import microsoft.graph.dataclassification.evaluatelabeljobs.EvaluateLabelJobsRequestBuilder;
-import microsoft.graph.dataclassification.exactmatchdatastores.ExactMatchDataStoresRequestBuilder;
-import microsoft.graph.dataclassification.exactmatchdatastores.item.ExactMatchDataStoreItemRequestBuilder;
-import microsoft.graph.dataclassification.exactmatchuploadagents.ExactMatchUploadAgentsRequestBuilder;
-import microsoft.graph.dataclassification.exactmatchuploadagents.item.ExactMatchUploadAgentItemRequestBuilder;
-import microsoft.graph.dataclassification.jobs.JobsRequestBuilder;
-import microsoft.graph.dataclassification.sensitivetypes.item.SensitiveTypeItemRequestBuilder;
-import microsoft.graph.dataclassification.sensitivetypes.SensitiveTypesRequestBuilder;
-import microsoft.graph.dataclassification.sensitivitylabels.item.SensitivityLabelItemRequestBuilder;
-import microsoft.graph.dataclassification.sensitivitylabels.SensitivityLabelsRequestBuilder;
-import microsoft.graph.models.DataClassificationService;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the dataClassificationService singleton. */
 public class DataClassificationRequestBuilder {
     /** The classifyExactMatches property */
@@ -101,28 +101,28 @@ public class DataClassificationRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.dataClassification.classifyFileJobs.item collection
+     * Gets an item from the com.Microsoft.Graph.dataClassification.classifyFileJobs.item collection
      * @param id Unique identifier of the item
      * @return a JobResponseBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.dataclassification.classifyfilejobs.item.JobResponseBaseItemRequestBuilder classifyFileJobs(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.dataclassification.classifyfilejobs.item.JobResponseBaseItemRequestBuilder classifyFileJobs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("jobResponseBase%2Did", id);
-        return new microsoft.graph.dataclassification.classifyfilejobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.dataclassification.classifyfilejobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.dataClassification.classifyTextJobs.item collection
+     * Gets an item from the com.Microsoft.Graph.dataClassification.classifyTextJobs.item collection
      * @param id Unique identifier of the item
      * @return a JobResponseBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.dataclassification.classifytextjobs.item.JobResponseBaseItemRequestBuilder classifyTextJobs(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.dataclassification.classifytextjobs.item.JobResponseBaseItemRequestBuilder classifyTextJobs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("jobResponseBase%2Did", id);
-        return new microsoft.graph.dataclassification.classifytextjobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.dataclassification.classifytextjobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DataClassificationRequestBuilder and sets the default values.
@@ -214,31 +214,31 @@ public class DataClassificationRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.dataClassification.evaluateDlpPoliciesJobs.item collection
+     * Gets an item from the com.Microsoft.Graph.dataClassification.evaluateDlpPoliciesJobs.item collection
      * @param id Unique identifier of the item
      * @return a JobResponseBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.dataclassification.evaluatedlppoliciesjobs.item.JobResponseBaseItemRequestBuilder evaluateDlpPoliciesJobs(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.dataclassification.evaluatedlppoliciesjobs.item.JobResponseBaseItemRequestBuilder evaluateDlpPoliciesJobs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("jobResponseBase%2Did", id);
-        return new microsoft.graph.dataclassification.evaluatedlppoliciesjobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.dataclassification.evaluatedlppoliciesjobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.dataClassification.evaluateLabelJobs.item collection
+     * Gets an item from the com.Microsoft.Graph.dataClassification.evaluateLabelJobs.item collection
      * @param id Unique identifier of the item
      * @return a JobResponseBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.dataclassification.evaluatelabeljobs.item.JobResponseBaseItemRequestBuilder evaluateLabelJobs(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.dataclassification.evaluatelabeljobs.item.JobResponseBaseItemRequestBuilder evaluateLabelJobs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("jobResponseBase%2Did", id);
-        return new microsoft.graph.dataclassification.evaluatelabeljobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.dataclassification.evaluatelabeljobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.dataClassification.exactMatchDataStores.item collection
+     * Gets an item from the com.Microsoft.Graph.dataClassification.exactMatchDataStores.item collection
      * @param id Unique identifier of the item
      * @return a ExactMatchDataStoreItemRequestBuilder
      */
@@ -250,7 +250,7 @@ public class DataClassificationRequestBuilder {
         return new ExactMatchDataStoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.dataClassification.exactMatchUploadAgents.item collection
+     * Gets an item from the com.Microsoft.Graph.dataClassification.exactMatchUploadAgents.item collection
      * @param id Unique identifier of the item
      * @return a ExactMatchUploadAgentItemRequestBuilder
      */
@@ -313,16 +313,16 @@ public class DataClassificationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.dataClassification.jobs.item collection
+     * Gets an item from the com.Microsoft.Graph.dataClassification.jobs.item collection
      * @param id Unique identifier of the item
      * @return a JobResponseBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.dataclassification.jobs.item.JobResponseBaseItemRequestBuilder jobs(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.dataclassification.jobs.item.JobResponseBaseItemRequestBuilder jobs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("jobResponseBase%2Did", id);
-        return new microsoft.graph.dataclassification.jobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.dataclassification.jobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update dataClassification
@@ -380,7 +380,7 @@ public class DataClassificationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.dataClassification.sensitiveTypes.item collection
+     * Gets an item from the com.Microsoft.Graph.dataClassification.sensitiveTypes.item collection
      * @param id Unique identifier of the item
      * @return a SensitiveTypeItemRequestBuilder
      */
@@ -392,7 +392,7 @@ public class DataClassificationRequestBuilder {
         return new SensitiveTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.dataClassification.sensitivityLabels.item collection
+     * Gets an item from the com.Microsoft.Graph.dataClassification.sensitivityLabels.item collection
      * @param id Unique identifier of the item
      * @return a SensitivityLabelItemRequestBuilder
      */

@@ -1,4 +1,4 @@
-package microsoft.graph.bookingbusinesses.item.calendarview.item.cancel;
+package com.microsoft.graph.bookingbusinesses.item.calendarview.item.cancel;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

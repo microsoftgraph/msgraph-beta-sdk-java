@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item.device.getmembergroups;
+package com.microsoft.graph.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item.device.getmembergroups;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

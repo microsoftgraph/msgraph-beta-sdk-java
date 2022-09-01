@@ -1,5 +1,46 @@
-package microsoft.graph.policies;
+package com.microsoft.graph.policies;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PolicyRoot;
+import com.microsoft.graph.policies.accessreviewpolicy.AccessReviewPolicyRequestBuilder;
+import com.microsoft.graph.policies.activitybasedtimeoutpolicies.ActivityBasedTimeoutPoliciesRequestBuilder;
+import com.microsoft.graph.policies.activitybasedtimeoutpolicies.item.ActivityBasedTimeoutPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.adminconsentrequestpolicy.AdminConsentRequestPolicyRequestBuilder;
+import com.microsoft.graph.policies.appmanagementpolicies.AppManagementPoliciesRequestBuilder;
+import com.microsoft.graph.policies.appmanagementpolicies.item.AppManagementPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.authenticationflowspolicy.AuthenticationFlowsPolicyRequestBuilder;
+import com.microsoft.graph.policies.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.policies.authorizationpolicy.AuthorizationPolicyRequestBuilder;
+import com.microsoft.graph.policies.authorizationpolicy.item.AuthorizationPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.b2cauthenticationmethodspolicy.B2cAuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.policies.claimsmappingpolicies.ClaimsMappingPoliciesRequestBuilder;
+import com.microsoft.graph.policies.claimsmappingpolicies.item.ClaimsMappingPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.conditionalaccesspolicies.ConditionalAccessPoliciesRequestBuilder;
+import com.microsoft.graph.policies.conditionalaccesspolicies.item.ConditionalAccessPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.CrossTenantAccessPolicyRequestBuilder;
+import com.microsoft.graph.policies.defaultappmanagementpolicy.DefaultAppManagementPolicyRequestBuilder;
+import com.microsoft.graph.policies.deviceregistrationpolicy.DeviceRegistrationPolicyRequestBuilder;
+import com.microsoft.graph.policies.directoryroleaccessreviewpolicy.DirectoryRoleAccessReviewPolicyRequestBuilder;
+import com.microsoft.graph.policies.externalidentitiespolicy.ExternalIdentitiesPolicyRequestBuilder;
+import com.microsoft.graph.policies.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
+import com.microsoft.graph.policies.featurerolloutpolicies.item.FeatureRolloutPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
+import com.microsoft.graph.policies.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.identitysecuritydefaultsenforcementpolicy.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.policies.mobileappmanagementpolicies.MobileAppManagementPoliciesRequestBuilder;
+import com.microsoft.graph.policies.mobiledevicemanagementpolicies.MobileDeviceManagementPoliciesRequestBuilder;
+import com.microsoft.graph.policies.permissiongrantpolicies.item.PermissionGrantPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.permissiongrantpolicies.PermissionGrantPoliciesRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicies.item.UnifiedRoleManagementPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicies.RoleManagementPoliciesRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicyassignments.item.UnifiedRoleManagementPolicyAssignmentItemRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicyassignments.RoleManagementPolicyAssignmentsRequestBuilder;
+import com.microsoft.graph.policies.serviceprincipalcreationpolicies.item.ServicePrincipalCreationPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.serviceprincipalcreationpolicies.ServicePrincipalCreationPoliciesRequestBuilder;
+import com.microsoft.graph.policies.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
+import com.microsoft.graph.policies.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
+import com.microsoft.graph.policies.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
+import com.microsoft.graph.policies.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,47 +55,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PolicyRoot;
-import microsoft.graph.policies.accessreviewpolicy.AccessReviewPolicyRequestBuilder;
-import microsoft.graph.policies.activitybasedtimeoutpolicies.ActivityBasedTimeoutPoliciesRequestBuilder;
-import microsoft.graph.policies.activitybasedtimeoutpolicies.item.ActivityBasedTimeoutPolicyItemRequestBuilder;
-import microsoft.graph.policies.adminconsentrequestpolicy.AdminConsentRequestPolicyRequestBuilder;
-import microsoft.graph.policies.appmanagementpolicies.AppManagementPoliciesRequestBuilder;
-import microsoft.graph.policies.appmanagementpolicies.item.AppManagementPolicyItemRequestBuilder;
-import microsoft.graph.policies.authenticationflowspolicy.AuthenticationFlowsPolicyRequestBuilder;
-import microsoft.graph.policies.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
-import microsoft.graph.policies.authorizationpolicy.AuthorizationPolicyRequestBuilder;
-import microsoft.graph.policies.authorizationpolicy.item.AuthorizationPolicyItemRequestBuilder;
-import microsoft.graph.policies.b2cauthenticationmethodspolicy.B2cAuthenticationMethodsPolicyRequestBuilder;
-import microsoft.graph.policies.claimsmappingpolicies.ClaimsMappingPoliciesRequestBuilder;
-import microsoft.graph.policies.claimsmappingpolicies.item.ClaimsMappingPolicyItemRequestBuilder;
-import microsoft.graph.policies.conditionalaccesspolicies.ConditionalAccessPoliciesRequestBuilder;
-import microsoft.graph.policies.conditionalaccesspolicies.item.ConditionalAccessPolicyItemRequestBuilder;
-import microsoft.graph.policies.crosstenantaccesspolicy.CrossTenantAccessPolicyRequestBuilder;
-import microsoft.graph.policies.defaultappmanagementpolicy.DefaultAppManagementPolicyRequestBuilder;
-import microsoft.graph.policies.deviceregistrationpolicy.DeviceRegistrationPolicyRequestBuilder;
-import microsoft.graph.policies.directoryroleaccessreviewpolicy.DirectoryRoleAccessReviewPolicyRequestBuilder;
-import microsoft.graph.policies.externalidentitiespolicy.ExternalIdentitiesPolicyRequestBuilder;
-import microsoft.graph.policies.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
-import microsoft.graph.policies.featurerolloutpolicies.item.FeatureRolloutPolicyItemRequestBuilder;
-import microsoft.graph.policies.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
-import microsoft.graph.policies.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
-import microsoft.graph.policies.identitysecuritydefaultsenforcementpolicy.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
-import microsoft.graph.policies.mobileappmanagementpolicies.MobileAppManagementPoliciesRequestBuilder;
-import microsoft.graph.policies.mobiledevicemanagementpolicies.MobileDeviceManagementPoliciesRequestBuilder;
-import microsoft.graph.policies.permissiongrantpolicies.item.PermissionGrantPolicyItemRequestBuilder;
-import microsoft.graph.policies.permissiongrantpolicies.PermissionGrantPoliciesRequestBuilder;
-import microsoft.graph.policies.rolemanagementpolicies.item.UnifiedRoleManagementPolicyItemRequestBuilder;
-import microsoft.graph.policies.rolemanagementpolicies.RoleManagementPoliciesRequestBuilder;
-import microsoft.graph.policies.rolemanagementpolicyassignments.item.UnifiedRoleManagementPolicyAssignmentItemRequestBuilder;
-import microsoft.graph.policies.rolemanagementpolicyassignments.RoleManagementPolicyAssignmentsRequestBuilder;
-import microsoft.graph.policies.serviceprincipalcreationpolicies.item.ServicePrincipalCreationPolicyItemRequestBuilder;
-import microsoft.graph.policies.serviceprincipalcreationpolicies.ServicePrincipalCreationPoliciesRequestBuilder;
-import microsoft.graph.policies.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
-import microsoft.graph.policies.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
-import microsoft.graph.policies.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
-import microsoft.graph.policies.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
 /** Provides operations to manage the policyRoot singleton. */
 public class PoliciesRequestBuilder {
     /** The accessReviewPolicy property */
@@ -194,7 +194,7 @@ public class PoliciesRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.policies.activityBasedTimeoutPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.activityBasedTimeoutPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ActivityBasedTimeoutPolicyItemRequestBuilder
      */
@@ -206,7 +206,7 @@ public class PoliciesRequestBuilder {
         return new ActivityBasedTimeoutPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.appManagementPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.appManagementPolicies.item collection
      * @param id Unique identifier of the item
      * @return a AppManagementPolicyItemRequestBuilder
      */
@@ -218,7 +218,7 @@ public class PoliciesRequestBuilder {
         return new AppManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.authorizationPolicy.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.authorizationPolicy.item collection
      * @param id Unique identifier of the item
      * @return a AuthorizationPolicyItemRequestBuilder
      */
@@ -230,7 +230,7 @@ public class PoliciesRequestBuilder {
         return new AuthorizationPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.claimsMappingPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.claimsMappingPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ClaimsMappingPolicyItemRequestBuilder
      */
@@ -242,7 +242,7 @@ public class PoliciesRequestBuilder {
         return new ClaimsMappingPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.conditionalAccessPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.conditionalAccessPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ConditionalAccessPolicyItemRequestBuilder
      */
@@ -343,7 +343,7 @@ public class PoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.featureRolloutPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.featureRolloutPolicies.item collection
      * @param id Unique identifier of the item
      * @return a FeatureRolloutPolicyItemRequestBuilder
      */
@@ -406,7 +406,7 @@ public class PoliciesRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.homeRealmDiscoveryPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.homeRealmDiscoveryPolicies.item collection
      * @param id Unique identifier of the item
      * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
      */
@@ -418,28 +418,28 @@ public class PoliciesRequestBuilder {
         return new HomeRealmDiscoveryPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.mobileAppManagementPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.mobileAppManagementPolicies.item collection
      * @param id Unique identifier of the item
      * @return a MobilityManagementPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.policies.mobileappmanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder mobileAppManagementPolicies(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.policies.mobileappmanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder mobileAppManagementPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mobilityManagementPolicy%2Did", id);
-        return new microsoft.graph.policies.mobileappmanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.policies.mobileappmanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.mobileDeviceManagementPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.mobileDeviceManagementPolicies.item collection
      * @param id Unique identifier of the item
      * @return a MobilityManagementPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.policies.mobiledevicemanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder mobileDeviceManagementPolicies(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.policies.mobiledevicemanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder mobileDeviceManagementPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mobilityManagementPolicy%2Did", id);
-        return new microsoft.graph.policies.mobiledevicemanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.policies.mobiledevicemanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update policies
@@ -497,7 +497,7 @@ public class PoliciesRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.permissionGrantPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.permissionGrantPolicies.item collection
      * @param id Unique identifier of the item
      * @return a PermissionGrantPolicyItemRequestBuilder
      */
@@ -509,7 +509,7 @@ public class PoliciesRequestBuilder {
         return new PermissionGrantPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.roleManagementPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.roleManagementPolicies.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleManagementPolicyItemRequestBuilder
      */
@@ -521,7 +521,7 @@ public class PoliciesRequestBuilder {
         return new UnifiedRoleManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.roleManagementPolicyAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.roleManagementPolicyAssignments.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
      */
@@ -533,7 +533,7 @@ public class PoliciesRequestBuilder {
         return new UnifiedRoleManagementPolicyAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.servicePrincipalCreationPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.servicePrincipalCreationPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ServicePrincipalCreationPolicyItemRequestBuilder
      */
@@ -545,7 +545,7 @@ public class PoliciesRequestBuilder {
         return new ServicePrincipalCreationPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.tokenIssuancePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.tokenIssuancePolicies.item collection
      * @param id Unique identifier of the item
      * @return a TokenIssuancePolicyItemRequestBuilder
      */
@@ -557,7 +557,7 @@ public class PoliciesRequestBuilder {
         return new TokenIssuancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.tokenLifetimePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.tokenLifetimePolicies.item collection
      * @param id Unique identifier of the item
      * @return a TokenLifetimePolicyItemRequestBuilder
      */

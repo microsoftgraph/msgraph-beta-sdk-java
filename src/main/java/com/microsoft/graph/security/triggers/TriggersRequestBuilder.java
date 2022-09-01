@@ -1,5 +1,9 @@
-package microsoft.graph.security.triggers;
+package com.microsoft.graph.security.triggers;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.TriggersRoot;
+import com.microsoft.graph.security.triggers.retentionevents.item.RetentionEventItemRequestBuilder;
+import com.microsoft.graph.security.triggers.retentionevents.RetentionEventsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.TriggersRoot;
-import microsoft.graph.security.triggers.retentionevents.item.RetentionEventItemRequestBuilder;
-import microsoft.graph.security.triggers.retentionevents.RetentionEventsRequestBuilder;
 /** Provides operations to manage the triggers property of the microsoft.graph.security entity. */
 public class TriggersRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class TriggersRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.triggers.retentionEvents.item collection
+     * Gets an item from the com.Microsoft.Graph.security.triggers.retentionEvents.item collection
      * @param id Unique identifier of the item
      * @return a RetentionEventItemRequestBuilder
      */

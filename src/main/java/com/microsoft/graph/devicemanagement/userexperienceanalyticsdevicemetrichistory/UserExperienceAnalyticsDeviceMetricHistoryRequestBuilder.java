@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsdevicemetrichistory;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicemetrichistory;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicemetrichistory.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsMetricHistory;
+import com.microsoft.graph.models.UserExperienceAnalyticsMetricHistoryCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsdevicemetrichistory.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsMetricHistory;
-import microsoft.graph.models.UserExperienceAnalyticsMetricHistoryCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsDeviceMetricHistory property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder {
     /** The Count property */

@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AndroidDeviceOwnerImportedPFXCertificateProfile;
+import com.microsoft.graph.models.AndroidDeviceOwnerPkcsCertificateProfile;
+import com.microsoft.graph.models.AndroidDeviceOwnerScepCertificateProfile;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

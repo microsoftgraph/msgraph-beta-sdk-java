@@ -1,5 +1,7 @@
-package microsoft.graph.me.pendingaccessreviewinstances.item.stages.item.decisions.item.instance.definition;
+package com.microsoft.graph.me.pendingaccessreviewinstances.item.stages.item.decisions.item.instance.definition;
 
+import com.microsoft.graph.models.AccessReviewScheduleDefinition;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AccessReviewScheduleDefinition;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the definition property of the microsoft.graph.accessReviewInstance entity. */
 public class DefinitionRequestBuilder {
     /** Path parameters for the request */

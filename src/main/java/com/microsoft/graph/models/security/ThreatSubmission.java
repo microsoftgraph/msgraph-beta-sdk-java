@@ -1,5 +1,13 @@
-package microsoft.graph.models.security;
+package com.microsoft.graph.models.security;
 
+import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.models.security.EmailContentThreatSubmission;
+import com.microsoft.graph.models.security.EmailThreatSubmission;
+import com.microsoft.graph.models.security.EmailUrlThreatSubmission;
+import com.microsoft.graph.models.security.FileContentThreatSubmission;
+import com.microsoft.graph.models.security.FileThreatSubmission;
+import com.microsoft.graph.models.security.FileUrlThreatSubmission;
+import com.microsoft.graph.models.security.UrlThreatSubmission;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,7 +16,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
 /** Provides operations to manage the collection of accessReview entities. */
 public class ThreatSubmission extends Entity implements Parsable {
     /** Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as. */

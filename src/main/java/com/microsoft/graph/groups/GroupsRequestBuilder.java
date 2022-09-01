@@ -1,5 +1,13 @@
-package microsoft.graph.groups;
+package com.microsoft.graph.groups;
 
+import com.microsoft.graph.groups.delta.DeltaRequestBuilder;
+import com.microsoft.graph.groups.evaluatedynamicmembership.EvaluateDynamicMembershipRequestBuilder;
+import com.microsoft.graph.groups.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.groups.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
+import com.microsoft.graph.groups.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.Group;
+import com.microsoft.graph.models.GroupCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,22 +22,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.count.CountRequestBuilder;
-import microsoft.graph.groups.delta.DeltaRequestBuilder;
-import microsoft.graph.groups.evaluatedynamicmembership.EvaluateDynamicMembershipRequestBuilder;
-import microsoft.graph.groups.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.groups.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
-import microsoft.graph.groups.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.Group;
-import microsoft.graph.models.GroupCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of group entities. */
 public class GroupsRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /** The evaluateDynamicMembership property */
     @javax.annotation.Nonnull
     public EvaluateDynamicMembershipRequestBuilder evaluateDynamicMembership() {
@@ -65,7 +59,7 @@ public class GroupsRequestBuilder {
     public GroupsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/groups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/groups{?%24top,%24search,%24orderby,%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -77,7 +71,7 @@ public class GroupsRequestBuilder {
      * @return a void
      */
     public GroupsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/groups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/groups{?%24top,%24search,%24orderby,%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -262,18 +256,6 @@ public class GroupsRequestBuilder {
     }
     /** List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the more commonly used properties for each group. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the group and specify the properties in a `$select` OData query option. The **hasMembersWithLicenseErrors** and **isArchived** properties are an exception and are not returned in the `$select` query. */
     public class GroupsRequestBuilderGetQueryParameters {
-        /** Include count of items */
-        @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
-        public Boolean count;
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
-        /** Filter items by property values */
-        @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
-        public String filter;
         /** Order items by property values */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
@@ -286,10 +268,6 @@ public class GroupsRequestBuilder {
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
-        @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
-        public Integer skip;
         /** Show only the first n items */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable

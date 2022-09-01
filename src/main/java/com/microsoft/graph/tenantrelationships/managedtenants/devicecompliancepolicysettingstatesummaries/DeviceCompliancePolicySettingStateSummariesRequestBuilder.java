@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.managedtenants.devicecompliancepolicysettingstatesummaries;
+package com.microsoft.graph.tenantrelationships.managedtenants.devicecompliancepolicysettingstatesummaries;
 
+import com.microsoft.graph.models.managedtenants.DeviceCompliancePolicySettingStateSummary;
+import com.microsoft.graph.models.managedtenants.DeviceCompliancePolicySettingStateSummaryCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.devicecompliancepolicysettingstatesummaries.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.DeviceCompliancePolicySettingStateSummary;
-import microsoft.graph.models.managedtenants.DeviceCompliancePolicySettingStateSummaryCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.devicecompliancepolicysettingstatesummaries.count.CountRequestBuilder;
 /** Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class DeviceCompliancePolicySettingStateSummariesRequestBuilder {
     /** The Count property */

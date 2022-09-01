@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformance;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformance;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformance.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthApplicationPerformance;
+import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformance.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsAppHealthApplicationPerformance;
-import microsoft.graph.models.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformance property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder {
     /** The Count property */

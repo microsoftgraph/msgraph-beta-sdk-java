@@ -1,5 +1,6 @@
-package microsoft.graph.users.item.drives.item.items.item.createlink;
+package com.microsoft.graph.users.item.drives.item.items.item.createlink;
 
+import com.microsoft.graph.models.DriveRecipient;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -9,7 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DriveRecipient;
 /** Provides operations to call the createLink method. */
 public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

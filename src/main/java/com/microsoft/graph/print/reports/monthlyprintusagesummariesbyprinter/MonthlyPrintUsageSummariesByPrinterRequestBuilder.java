@@ -1,5 +1,9 @@
-package microsoft.graph.print.reports.monthlyprintusagesummariesbyprinter;
+package com.microsoft.graph.print.reports.monthlyprintusagesummariesbyprinter;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrintUsageByPrinter;
+import com.microsoft.graph.models.PrintUsageByPrinterCollectionResponse;
+import com.microsoft.graph.print.reports.monthlyprintusagesummariesbyprinter.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrintUsageByPrinter;
-import microsoft.graph.models.PrintUsageByPrinterCollectionResponse;
-import microsoft.graph.print.reports.monthlyprintusagesummariesbyprinter.count.CountRequestBuilder;
 /** Provides operations to manage the monthlyPrintUsageSummariesByPrinter property of the microsoft.graph.reportRoot entity. */
 public class MonthlyPrintUsageSummariesByPrinterRequestBuilder {
     /** The Count property */

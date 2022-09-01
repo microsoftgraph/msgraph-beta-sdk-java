@@ -1,5 +1,13 @@
-package microsoft.graph.privilegedsignupstatus;
+package com.microsoft.graph.privilegedsignupstatus;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedSignupStatus;
+import com.microsoft.graph.models.PrivilegedSignupStatusCollectionResponse;
+import com.microsoft.graph.privilegedsignupstatus.cansignup.CanSignUpRequestBuilder;
+import com.microsoft.graph.privilegedsignupstatus.completesetup.CompleteSetupRequestBuilder;
+import com.microsoft.graph.privilegedsignupstatus.count.CountRequestBuilder;
+import com.microsoft.graph.privilegedsignupstatus.issignedup.IsSignedUpRequestBuilder;
+import com.microsoft.graph.privilegedsignupstatus.signup.SignUpRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedSignupStatus;
-import microsoft.graph.models.PrivilegedSignupStatusCollectionResponse;
-import microsoft.graph.privilegedsignupstatus.cansignup.CanSignUpRequestBuilder;
-import microsoft.graph.privilegedsignupstatus.completesetup.CompleteSetupRequestBuilder;
-import microsoft.graph.privilegedsignupstatus.count.CountRequestBuilder;
-import microsoft.graph.privilegedsignupstatus.issignedup.IsSignedUpRequestBuilder;
-import microsoft.graph.privilegedsignupstatus.signup.SignUpRequestBuilder;
 /** Provides operations to manage the collection of privilegedSignupStatus entities. */
 public class PrivilegedSignupStatusRequestBuilder {
     /** The completeSetup property */

@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.profile.emails;
+package com.microsoft.graph.users.item.profile.emails;
 
+import com.microsoft.graph.models.ItemEmail;
+import com.microsoft.graph.models.ItemEmailCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.profile.emails.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ItemEmail;
-import microsoft.graph.models.ItemEmailCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.profile.emails.count.CountRequestBuilder;
 /** Provides operations to manage the emails property of the microsoft.graph.profile entity. */
 public class EmailsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.devicemanagementscripts;
+package com.microsoft.graph.devicemanagement.devicemanagementscripts;
 
+import com.microsoft.graph.devicemanagement.devicemanagementscripts.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicemanagementscripts.haspayloadlinks.HasPayloadLinksRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementScript;
+import com.microsoft.graph.models.DeviceManagementScriptCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicemanagementscripts.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.devicemanagementscripts.haspayloadlinks.HasPayloadLinksRequestBuilder;
-import microsoft.graph.models.DeviceManagementScript;
-import microsoft.graph.models.DeviceManagementScriptCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceManagementScripts property of the microsoft.graph.deviceManagement entity. */
 public class DeviceManagementScriptsRequestBuilder {
     /** The Count property */

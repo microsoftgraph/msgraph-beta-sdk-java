@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.organizationalmessageguidedcontents;
+package com.microsoft.graph.devicemanagement.organizationalmessageguidedcontents;
 
+import com.microsoft.graph.devicemanagement.organizationalmessageguidedcontents.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OrganizationalMessageGuidedContent;
+import com.microsoft.graph.models.OrganizationalMessageGuidedContentCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.organizationalmessageguidedcontents.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OrganizationalMessageGuidedContent;
-import microsoft.graph.models.OrganizationalMessageGuidedContentCollectionResponse;
 /** Provides operations to manage the organizationalMessageGuidedContents property of the microsoft.graph.deviceManagement entity. */
 public class OrganizationalMessageGuidedContentsRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.auditevents.getauditcategories;
+package com.microsoft.graph.devicemanagement.auditevents.getauditcategories;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

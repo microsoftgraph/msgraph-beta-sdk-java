@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.deponboardingsettings.item.getencryptionpublickey;
+package com.microsoft.graph.devicemanagement.deponboardingsettings.item.getencryptionpublickey;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

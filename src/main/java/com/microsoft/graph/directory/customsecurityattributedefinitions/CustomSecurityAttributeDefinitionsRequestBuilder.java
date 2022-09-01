@@ -1,5 +1,9 @@
-package microsoft.graph.directory.customsecurityattributedefinitions;
+package com.microsoft.graph.directory.customsecurityattributedefinitions;
 
+import com.microsoft.graph.directory.customsecurityattributedefinitions.count.CountRequestBuilder;
+import com.microsoft.graph.models.CustomSecurityAttributeDefinition;
+import com.microsoft.graph.models.CustomSecurityAttributeDefinitionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.customsecurityattributedefinitions.count.CountRequestBuilder;
-import microsoft.graph.models.CustomSecurityAttributeDefinition;
-import microsoft.graph.models.CustomSecurityAttributeDefinitionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customSecurityAttributeDefinitions property of the microsoft.graph.directory entity. */
 public class CustomSecurityAttributeDefinitionsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,7 @@
-package microsoft.graph.privilegedaccess.item.roleassignments.item.resource;
+package com.microsoft.graph.privilegedaccess.item.roleassignments.item.resource;
 
+import com.microsoft.graph.models.GovernanceResource;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.GovernanceResource;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the resource property of the microsoft.graph.governanceRoleAssignment entity. */
 public class ResourceRequestBuilder {
     /** Path parameters for the request */

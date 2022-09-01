@@ -1,5 +1,8 @@
-package microsoft.graph.serviceprincipals.item.appmanagementpolicies;
+package com.microsoft.graph.serviceprincipals.item.appmanagementpolicies;
 
+import com.microsoft.graph.models.AppManagementPolicyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.serviceprincipals.item.appmanagementpolicies.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AppManagementPolicyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.serviceprincipals.item.appmanagementpolicies.count.CountRequestBuilder;
 /** Provides operations to manage the appManagementPolicies property of the microsoft.graph.servicePrincipal entity. */
 public class AppManagementPoliciesRequestBuilder {
     /** The Count property */

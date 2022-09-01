@@ -1,5 +1,10 @@
-package microsoft.graph.privilegedroleassignments.item;
+package com.microsoft.graph.privilegedroleassignments.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedRoleAssignment;
+import com.microsoft.graph.privilegedroleassignments.item.makeeligible.MakeEligibleRequestBuilder;
+import com.microsoft.graph.privilegedroleassignments.item.makepermanent.MakePermanentRequestBuilder;
+import com.microsoft.graph.privilegedroleassignments.item.roleinfo.RoleInfoRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedRoleAssignment;
-import microsoft.graph.privilegedroleassignments.item.makeeligible.MakeEligibleRequestBuilder;
-import microsoft.graph.privilegedroleassignments.item.makepermanent.MakePermanentRequestBuilder;
-import microsoft.graph.privilegedroleassignments.item.roleinfo.RoleInfoRequestBuilder;
 /** Provides operations to manage the collection of privilegedRoleAssignment entities. */
 public class PrivilegedRoleAssignmentItemRequestBuilder {
     /** The makeEligible property */

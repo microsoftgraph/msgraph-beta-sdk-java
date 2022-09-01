@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.grouppolicycategories;
+package com.microsoft.graph.devicemanagement.grouppolicycategories;
 
+import com.microsoft.graph.devicemanagement.grouppolicycategories.count.CountRequestBuilder;
+import com.microsoft.graph.models.GroupPolicyCategory;
+import com.microsoft.graph.models.GroupPolicyCategoryCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.grouppolicycategories.count.CountRequestBuilder;
-import microsoft.graph.models.GroupPolicyCategory;
-import microsoft.graph.models.GroupPolicyCategoryCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groupPolicyCategories property of the microsoft.graph.deviceManagement entity. */
 public class GroupPolicyCategoriesRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.windowsmanagedappprotections;
+package com.microsoft.graph.deviceappmanagement.windowsmanagedappprotections;
 
+import com.microsoft.graph.deviceappmanagement.windowsmanagedappprotections.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsManagedAppProtection;
+import com.microsoft.graph.models.WindowsManagedAppProtectionCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.windowsmanagedappprotections.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsManagedAppProtection;
-import microsoft.graph.models.WindowsManagedAppProtectionCollectionResponse;
 /** Provides operations to manage the windowsManagedAppProtections property of the microsoft.graph.deviceAppManagement entity. */
 public class WindowsManagedAppProtectionsRequestBuilder {
     /** The Count property */

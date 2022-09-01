@@ -1,4 +1,4 @@
-package microsoft.graph.auditlogs.signins.confirmcompromised;
+package com.microsoft.graph.auditlogs.signins.confirmcompromised;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

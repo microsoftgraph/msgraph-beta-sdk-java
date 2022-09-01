@@ -1,5 +1,9 @@
-package microsoft.graph.me.profile.addresses;
+package com.microsoft.graph.me.profile.addresses;
 
+import com.microsoft.graph.me.profile.addresses.count.CountRequestBuilder;
+import com.microsoft.graph.models.ItemAddress;
+import com.microsoft.graph.models.ItemAddressCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.profile.addresses.count.CountRequestBuilder;
-import microsoft.graph.models.ItemAddress;
-import microsoft.graph.models.ItemAddressCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the addresses property of the microsoft.graph.profile entity. */
 public class AddressesRequestBuilder {
     /** The Count property */

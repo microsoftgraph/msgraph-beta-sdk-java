@@ -1,4 +1,4 @@
-package microsoft.graph.informationprotection.encryptbuffer;
+package com.microsoft.graph.informationprotection.encryptbuffer;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

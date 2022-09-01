@@ -1,4 +1,4 @@
-package microsoft.graph.identityprotection.riskyserviceprincipals.dismiss;
+package com.microsoft.graph.identityprotection.riskyserviceprincipals.dismiss;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

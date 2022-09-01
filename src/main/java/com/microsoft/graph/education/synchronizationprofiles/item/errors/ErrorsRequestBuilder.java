@@ -1,5 +1,9 @@
-package microsoft.graph.education.synchronizationprofiles.item.errors;
+package com.microsoft.graph.education.synchronizationprofiles.item.errors;
 
+import com.microsoft.graph.education.synchronizationprofiles.item.errors.count.CountRequestBuilder;
+import com.microsoft.graph.models.EducationSynchronizationError;
+import com.microsoft.graph.models.EducationSynchronizationErrorCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.synchronizationprofiles.item.errors.count.CountRequestBuilder;
-import microsoft.graph.models.EducationSynchronizationError;
-import microsoft.graph.models.EducationSynchronizationErrorCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the errors property of the microsoft.graph.educationSynchronizationProfile entity. */
 public class ErrorsRequestBuilder {
     /** The Count property */

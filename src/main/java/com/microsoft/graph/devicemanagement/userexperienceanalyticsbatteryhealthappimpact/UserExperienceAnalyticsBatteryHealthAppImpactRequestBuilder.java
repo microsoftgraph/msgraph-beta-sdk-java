@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthappimpact;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthappimpact;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthappimpact.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthAppImpact;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthappimpact.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsBatteryHealthAppImpact;
-import microsoft.graph.models.UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsBatteryHealthAppImpact property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsBatteryHealthAppImpactRequestBuilder {
     /** The Count property */

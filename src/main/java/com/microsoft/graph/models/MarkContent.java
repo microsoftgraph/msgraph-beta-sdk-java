@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AddFooter;
+import com.microsoft.graph.models.AddHeader;
+import com.microsoft.graph.models.AddWatermark;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

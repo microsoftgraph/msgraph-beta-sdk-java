@@ -1,4 +1,4 @@
-package microsoft.graph.teams.item.permissiongrants.item.getmembergroups;
+package com.microsoft.graph.teams.item.permissiongrants.item.getmembergroups;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,10 @@
-package microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations;
+package com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations;
 
+import com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.haspayloadlinks.HasPayloadLinksRequestBuilder;
+import com.microsoft.graph.models.IosLobAppProvisioningConfiguration;
+import com.microsoft.graph.models.IosLobAppProvisioningConfigurationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.count.CountRequestBuilder;
-import microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.haspayloadlinks.HasPayloadLinksRequestBuilder;
-import microsoft.graph.models.IosLobAppProvisioningConfiguration;
-import microsoft.graph.models.IosLobAppProvisioningConfigurationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the iosLobAppProvisioningConfigurations property of the microsoft.graph.deviceAppManagement entity. */
 public class IosLobAppProvisioningConfigurationsRequestBuilder {
     /** The Count property */

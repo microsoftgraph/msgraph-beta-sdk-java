@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.resourceoperations.item.getscopesforuserwithuserid;
+package com.microsoft.graph.devicemanagement.resourceoperations.item.getscopesforuserwithuserid;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

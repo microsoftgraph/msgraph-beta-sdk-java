@@ -1,4 +1,4 @@
-package microsoft.graph.officeconfiguration.clientconfigurations.updatepriorities;
+package com.microsoft.graph.officeconfiguration.clientconfigurations.updatepriorities;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

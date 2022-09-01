@@ -1,5 +1,7 @@
-package microsoft.graph.directory.impactedresources.item.postpone;
+package com.microsoft.graph.directory.impactedresources.item.postpone;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RecommendationResource;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RecommendationResource;
 /** Provides operations to call the postpone method. */
 public class PostponeRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.BasicAuthentication;
+import com.microsoft.graph.models.ClientCertificateAuthentication;
+import com.microsoft.graph.models.Pkcs12Certificate;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

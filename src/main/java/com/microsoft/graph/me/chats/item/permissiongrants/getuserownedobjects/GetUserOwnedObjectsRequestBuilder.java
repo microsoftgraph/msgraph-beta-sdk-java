@@ -1,5 +1,7 @@
-package microsoft.graph.me.chats.item.permissiongrants.getuserownedobjects;
+package com.microsoft.graph.me.chats.item.permissiongrants.getuserownedobjects;
 
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the getUserOwnedObjects method. */
 public class GetUserOwnedObjectsRequestBuilder {
     /** Path parameters for the request */

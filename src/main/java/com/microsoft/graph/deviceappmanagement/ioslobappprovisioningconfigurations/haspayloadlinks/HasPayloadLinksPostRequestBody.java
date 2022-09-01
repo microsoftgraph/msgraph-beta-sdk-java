@@ -1,4 +1,4 @@
-package microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.haspayloadlinks;
+package com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.haspayloadlinks;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

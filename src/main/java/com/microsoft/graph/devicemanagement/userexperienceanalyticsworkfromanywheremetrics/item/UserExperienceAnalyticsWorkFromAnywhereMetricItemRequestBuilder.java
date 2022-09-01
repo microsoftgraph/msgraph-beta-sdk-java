@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item.metricdevices.item.UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item.metricdevices.MetricDevicesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereMetric;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item.metricdevices.item.UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.item.metricdevices.MetricDevicesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereMetric;
 /** Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereMetrics property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder {
     /** The metricDevices property */
@@ -251,7 +251,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.userExperienceAnalyticsWorkFromAnywhereMetrics.item.metricDevices.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.userExperienceAnalyticsWorkFromAnywhereMetrics.item.metricDevices.item collection
      * @param id Unique identifier of the item
      * @return a UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder
      */

@@ -1,5 +1,6 @@
-package microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.executeaction;
+package com.microsoft.graph.devicemanagement.windowsdriverupdateprofiles.item.executeaction;
 
+import com.microsoft.graph.models.DriverApprovalAction;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -9,7 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DriverApprovalAction;
 /** Provides operations to call the executeAction method. */
 public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsable {
     /** An enum type to represent approval actions of single or list of drivers. */

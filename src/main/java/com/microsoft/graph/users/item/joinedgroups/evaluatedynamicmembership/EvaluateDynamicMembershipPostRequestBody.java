@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.joinedgroups.evaluatedynamicmembership;
+package com.microsoft.graph.users.item.joinedgroups.evaluatedynamicmembership;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

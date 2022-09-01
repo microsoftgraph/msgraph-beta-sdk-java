@@ -1,9 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum OrganizationalMessagePlacement implements ValuedEnum {
     /** Indicates the default area for text to be displayed. This is the only valid placement value for the actionCenter and softLanding surfaces */
     Default_escaped("default_escaped"),
@@ -14,7 +14,9 @@ public enum OrganizationalMessagePlacement implements ValuedEnum {
     /** Indicates the area where the third card is displayed. Only applies to the getStarted surface */
     Card2("card2"),
     /** Indicates the area where the fourth card is displayed. Only applies to the getStarted surface */
-    Card3("card3");
+    Card3("card3"),
+    /** UnknownFutureValue, Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     OrganizationalMessagePlacement(final String value) {
         this.value = value;
@@ -30,6 +32,7 @@ public enum OrganizationalMessagePlacement implements ValuedEnum {
             case "card1": return Card1;
             case "card2": return Card2;
             case "card3": return Card3;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

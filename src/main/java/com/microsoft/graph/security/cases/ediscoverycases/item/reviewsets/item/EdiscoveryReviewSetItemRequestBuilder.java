@@ -1,5 +1,13 @@
-package microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item;
+package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryReviewSet;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.addtoreviewset.AddToReviewSetRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.export.ExportRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.FilesRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.EdiscoveryFileItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.EdiscoveryReviewSetQueryItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.QueriesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryReviewSet;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.addtoreviewset.AddToReviewSetRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.export.ExportRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.FilesRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.EdiscoveryFileItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.EdiscoveryReviewSetQueryItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.QueriesRequestBuilder;
 /** Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity. */
 public class EdiscoveryReviewSetItemRequestBuilder {
     /** The addToReviewSet property */
@@ -219,7 +219,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item.files.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item.files.item collection
      * @param id Unique identifier of the item
      * @return a EdiscoveryFileItemRequestBuilder
      */
@@ -337,7 +337,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item.queries.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item.queries.item collection
      * @param id Unique identifier of the item
      * @return a EdiscoveryReviewSetQueryItemRequestBuilder
      */

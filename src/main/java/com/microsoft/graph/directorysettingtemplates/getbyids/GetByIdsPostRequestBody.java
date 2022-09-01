@@ -1,4 +1,4 @@
-package microsoft.graph.directorysettingtemplates.getbyids;
+package com.microsoft.graph.directorysettingtemplates.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

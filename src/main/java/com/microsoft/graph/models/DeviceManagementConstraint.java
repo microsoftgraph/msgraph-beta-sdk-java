@@ -1,5 +1,20 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DeviceManagementEnumConstraint;
+import com.microsoft.graph.models.DeviceManagementIntentSettingSecretConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingAbstractImplementationConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingAppConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingBooleanConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingCollectionConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingEnrollmentTypeConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingFileConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingIntegerConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingProfileConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingRegexConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingRequiredConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingSddlConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingStringLengthConstraint;
+import com.microsoft.graph.models.DeviceManagementSettingXmlConstraint;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class RecommendationResource extends Entity implements Parsable {
     /** The addedDateTime property */
     private OffsetDateTime _addedDateTime;
@@ -30,7 +31,7 @@ public class RecommendationResource extends Entity implements Parsable {
     /** The status property */
     private RecommendationStatus _status;
     /**
-     * Instantiates a new RecommendationResource and sets the default values.
+     * Instantiates a new recommendationResource and sets the default values.
      * @return a void
      */
     public RecommendationResource() {
@@ -40,7 +41,7 @@ public class RecommendationResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RecommendationResource
+     * @return a recommendationResource
      */
     @javax.annotation.Nonnull
     public static RecommendationResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -1,4 +1,4 @@
-package microsoft.graph.directory.recommendations.item.impactedresources.item.dismiss;
+package com.microsoft.graph.directory.recommendations.item.impactedresources.item.dismiss;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,9 @@
-package microsoft.graph.app.onlinemeetings.item.registration.customquestions;
+package com.microsoft.graph.app.onlinemeetings.item.registration.customquestions;
 
+import com.microsoft.graph.app.onlinemeetings.item.registration.customquestions.count.CountRequestBuilder;
+import com.microsoft.graph.models.MeetingRegistrationQuestion;
+import com.microsoft.graph.models.MeetingRegistrationQuestionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.app.onlinemeetings.item.registration.customquestions.count.CountRequestBuilder;
-import microsoft.graph.models.MeetingRegistrationQuestion;
-import microsoft.graph.models.MeetingRegistrationQuestionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customQuestions property of the microsoft.graph.meetingRegistration entity. */
 public class CustomQuestionsRequestBuilder {
     /** The Count property */

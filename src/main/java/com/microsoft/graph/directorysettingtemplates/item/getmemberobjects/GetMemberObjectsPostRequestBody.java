@@ -1,4 +1,4 @@
-package microsoft.graph.directorysettingtemplates.item.getmemberobjects;
+package com.microsoft.graph.directorysettingtemplates.item.getmemberobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

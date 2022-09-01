@@ -1,5 +1,7 @@
-package microsoft.graph.trustframework.keysets.item.getactivekey;
+package com.microsoft.graph.trustframework.keysets.item.getactivekey;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TrustFrameworkKey;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TrustFrameworkKey;
 /** Provides operations to call the getActiveKey method. */
 public class GetActiveKeyRequestBuilder {
     /** Path parameters for the request */

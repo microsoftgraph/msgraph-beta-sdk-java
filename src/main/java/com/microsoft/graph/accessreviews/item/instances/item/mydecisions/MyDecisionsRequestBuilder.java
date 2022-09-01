@@ -1,5 +1,9 @@
-package microsoft.graph.accessreviews.item.instances.item.mydecisions;
+package com.microsoft.graph.accessreviews.item.instances.item.mydecisions;
 
+import com.microsoft.graph.accessreviews.item.instances.item.mydecisions.count.CountRequestBuilder;
+import com.microsoft.graph.models.AccessReviewDecision;
+import com.microsoft.graph.models.AccessReviewDecisionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.accessreviews.item.instances.item.mydecisions.count.CountRequestBuilder;
-import microsoft.graph.models.AccessReviewDecision;
-import microsoft.graph.models.AccessReviewDecisionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the myDecisions property of the microsoft.graph.accessReview entity. */
 public class MyDecisionsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.teamwork.teamtemplates;
+package com.microsoft.graph.teamwork.teamtemplates;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamTemplate;
+import com.microsoft.graph.models.TeamTemplateCollectionResponse;
+import com.microsoft.graph.teamwork.teamtemplates.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamTemplate;
-import microsoft.graph.models.TeamTemplateCollectionResponse;
-import microsoft.graph.teamwork.teamtemplates.count.CountRequestBuilder;
 /** Provides operations to manage the teamTemplates property of the microsoft.graph.teamwork entity. */
 public class TeamTemplatesRequestBuilder {
     /** The Count property */

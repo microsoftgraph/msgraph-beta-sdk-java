@@ -1,5 +1,9 @@
-package microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.agents.item;
+package com.microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.agents.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnPremisesAgent;
+import com.microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.agents.item.agentgroups.AgentGroupsRequestBuilder;
+import com.microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.agents.item.agentgroups.item.OnPremisesAgentGroupItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnPremisesAgent;
-import microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.agents.item.agentgroups.AgentGroupsRequestBuilder;
-import microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.agents.item.agentgroups.item.OnPremisesAgentGroupItemRequestBuilder;
 /** Provides operations to manage the agents property of the microsoft.graph.onPremisesAgentGroup entity. */
 public class OnPremisesAgentItemRequestBuilder {
     /** The agentGroups property */
@@ -32,7 +32,7 @@ public class OnPremisesAgentItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.onPremisesPublishingProfiles.item.agentGroups.item.agents.item.agentGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.agentGroups.item.agents.item.agentGroups.item collection
      * @param id Unique identifier of the item
      * @return a OnPremisesAgentGroupItemRequestBuilder
      */

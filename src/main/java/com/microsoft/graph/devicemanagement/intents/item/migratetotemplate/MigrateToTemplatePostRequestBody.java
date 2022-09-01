@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.intents.item.migratetotemplate;
+package com.microsoft.graph.devicemanagement.intents.item.migratetotemplate;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

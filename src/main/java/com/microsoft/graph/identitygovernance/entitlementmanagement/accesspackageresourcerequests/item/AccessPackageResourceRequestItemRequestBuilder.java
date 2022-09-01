@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.item;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.item;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.item.accesspackageresource.AccessPackageResourceRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.item.requestor.RequestorRequestBuilder;
+import com.microsoft.graph.models.AccessPackageResourceRequest;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.item.accesspackageresource.AccessPackageResourceRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.item.requestor.RequestorRequestBuilder;
-import microsoft.graph.models.AccessPackageResourceRequest;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageResourceRequests property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageResourceRequestItemRequestBuilder {
     /** The accessPackageResource property */

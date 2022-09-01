@@ -1,4 +1,4 @@
-package microsoft.graph.deviceappmanagement.vpptokens.item.revokelicenses;
+package com.microsoft.graph.deviceappmanagement.vpptokens.item.revokelicenses;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

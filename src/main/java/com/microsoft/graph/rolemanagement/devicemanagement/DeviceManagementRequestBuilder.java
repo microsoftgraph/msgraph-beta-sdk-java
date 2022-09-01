@@ -1,5 +1,13 @@
-package microsoft.graph.rolemanagement.devicemanagement;
+package com.microsoft.graph.rolemanagement.devicemanagement;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RbacApplicationMultiple;
+import com.microsoft.graph.rolemanagement.devicemanagement.resourcenamespaces.item.UnifiedRbacResourceNamespaceItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.devicemanagement.resourcenamespaces.ResourceNamespacesRequestBuilder;
+import com.microsoft.graph.rolemanagement.devicemanagement.roleassignments.item.UnifiedRoleAssignmentMultipleItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.devicemanagement.roleassignments.RoleAssignmentsRequestBuilder;
+import com.microsoft.graph.rolemanagement.devicemanagement.roledefinitions.item.UnifiedRoleDefinitionItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.devicemanagement.roledefinitions.RoleDefinitionsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RbacApplicationMultiple;
-import microsoft.graph.rolemanagement.devicemanagement.resourcenamespaces.item.UnifiedRbacResourceNamespaceItemRequestBuilder;
-import microsoft.graph.rolemanagement.devicemanagement.resourcenamespaces.ResourceNamespacesRequestBuilder;
-import microsoft.graph.rolemanagement.devicemanagement.roleassignments.item.UnifiedRoleAssignmentMultipleItemRequestBuilder;
-import microsoft.graph.rolemanagement.devicemanagement.roleassignments.RoleAssignmentsRequestBuilder;
-import microsoft.graph.rolemanagement.devicemanagement.roledefinitions.item.UnifiedRoleDefinitionItemRequestBuilder;
-import microsoft.graph.rolemanagement.devicemanagement.roledefinitions.RoleDefinitionsRequestBuilder;
 /** Provides operations to manage the deviceManagement property of the microsoft.graph.roleManagement entity. */
 public class DeviceManagementRequestBuilder {
     /** Path parameters for the request */
@@ -320,7 +320,7 @@ public class DeviceManagementRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.deviceManagement.resourceNamespaces.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.deviceManagement.resourceNamespaces.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRbacResourceNamespaceItemRequestBuilder
      */
@@ -332,7 +332,7 @@ public class DeviceManagementRequestBuilder {
         return new UnifiedRbacResourceNamespaceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.deviceManagement.roleAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.deviceManagement.roleAssignments.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentMultipleItemRequestBuilder
      */
@@ -344,7 +344,7 @@ public class DeviceManagementRequestBuilder {
         return new UnifiedRoleAssignmentMultipleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.deviceManagement.roleDefinitions.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.deviceManagement.roleDefinitions.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleDefinitionItemRequestBuilder
      */

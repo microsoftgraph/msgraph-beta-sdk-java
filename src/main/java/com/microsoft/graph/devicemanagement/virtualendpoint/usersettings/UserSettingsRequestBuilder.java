@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.virtualendpoint.usersettings;
+package com.microsoft.graph.devicemanagement.virtualendpoint.usersettings;
 
+import com.microsoft.graph.devicemanagement.virtualendpoint.usersettings.count.CountRequestBuilder;
+import com.microsoft.graph.models.CloudPcUserSetting;
+import com.microsoft.graph.models.CloudPcUserSettingCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.virtualendpoint.usersettings.count.CountRequestBuilder;
-import microsoft.graph.models.CloudPcUserSetting;
-import microsoft.graph.models.CloudPcUserSettingCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userSettings property of the microsoft.graph.virtualEndpoint entity. */
 public class UserSettingsRequestBuilder {
     /** The Count property */

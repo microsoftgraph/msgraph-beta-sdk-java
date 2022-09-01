@@ -1,5 +1,8 @@
-package microsoft.graph.privilegedapproval.item.roleinfo.assignments;
+package com.microsoft.graph.privilegedapproval.item.roleinfo.assignments;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedRoleAssignmentCollectionResponse;
+import com.microsoft.graph.privilegedapproval.item.roleinfo.assignments.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedRoleAssignmentCollectionResponse;
-import microsoft.graph.privilegedapproval.item.roleinfo.assignments.count.CountRequestBuilder;
 /** Provides operations to manage the assignments property of the microsoft.graph.privilegedRole entity. */
 public class AssignmentsRequestBuilder {
     /** The Count property */

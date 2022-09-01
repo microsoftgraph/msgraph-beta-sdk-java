@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.importeddeviceidentities.item;
+package com.microsoft.graph.devicemanagement.importeddeviceidentities.item;
 
+import com.microsoft.graph.models.ImportedDeviceIdentity;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ImportedDeviceIdentity;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the importedDeviceIdentities property of the microsoft.graph.deviceManagement entity. */
 public class ImportedDeviceIdentityItemRequestBuilder {
     /** Path parameters for the request */

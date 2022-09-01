@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.virtualendpoint.serviceplans;
+package com.microsoft.graph.devicemanagement.virtualendpoint.serviceplans;
 
+import com.microsoft.graph.devicemanagement.virtualendpoint.serviceplans.count.CountRequestBuilder;
+import com.microsoft.graph.models.CloudPcServicePlan;
+import com.microsoft.graph.models.CloudPcServicePlanCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.virtualendpoint.serviceplans.count.CountRequestBuilder;
-import microsoft.graph.models.CloudPcServicePlan;
-import microsoft.graph.models.CloudPcServicePlanCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the servicePlans property of the microsoft.graph.virtualEndpoint entity. */
 public class ServicePlansRequestBuilder {
     /** The Count property */

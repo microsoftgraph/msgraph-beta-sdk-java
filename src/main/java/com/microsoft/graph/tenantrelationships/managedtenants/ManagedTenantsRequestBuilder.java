@@ -1,5 +1,57 @@
-package microsoft.graph.tenantrelationships.managedtenants;
+package com.microsoft.graph.tenantrelationships.managedtenants;
 
+import com.microsoft.graph.models.managedtenants.ManagedTenant;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.aggregatedpolicycompliances.AggregatedPolicyCompliancesRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.aggregatedpolicycompliances.item.AggregatedPolicyComplianceItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.auditevents.AuditEventsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.auditevents.item.AuditEventItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.cloudpcconnections.CloudPcConnectionsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.cloudpcconnections.item.CloudPcConnectionItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.cloudpcdevices.CloudPcDevicesRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.cloudpcdevices.item.CloudPcDeviceItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.cloudpcsoverview.CloudPcsOverviewRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.cloudpcsoverview.item.CloudPcOverviewTenantItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.conditionalaccesspolicycoverages.ConditionalAccessPolicyCoveragesRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.conditionalaccesspolicycoverages.item.ConditionalAccessPolicyCoverageItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.credentialuserregistrationssummaries.CredentialUserRegistrationsSummariesRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.credentialuserregistrationssummaries.item.CredentialUserRegistrationsSummaryItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.devicecompliancepolicysettingstatesummaries.DeviceCompliancePolicySettingStateSummariesRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.devicecompliancepolicysettingstatesummaries.item.DeviceCompliancePolicySettingStateSummaryItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.manageddevicecompliances.item.ManagedDeviceComplianceItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.manageddevicecompliances.ManagedDeviceCompliancesRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.manageddevicecompliancetrends.item.ManagedDeviceComplianceTrendItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.manageddevicecompliancetrends.ManagedDeviceComplianceTrendsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementactions.item.ManagementActionItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementactions.ManagementActionsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses.item.ManagementActionTenantDeploymentStatusItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses.ManagementActionTenantDeploymentStatusesRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementintents.item.ManagementIntentItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementintents.ManagementIntentsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatecollections.item.ManagementTemplateCollectionItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatecollections.ManagementTemplateCollectionsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.ManagementTemplateItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplates.ManagementTemplatesRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatesteps.item.ManagementTemplateStepItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatesteps.ManagementTemplateStepsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatestepversions.item.ManagementTemplateStepVersionItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatestepversions.ManagementTemplateStepVersionsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.myroles.item.MyRoleTenantItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.myroles.MyRolesRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenantgroups.item.TenantGroupItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenantgroups.TenantGroupsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenants.item.TenantItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenants.TenantsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenantscustomizedinformation.item.TenantCustomizedInformationItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenantscustomizedinformation.TenantsCustomizedInformationRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenantsdetailedinformation.item.TenantDetailedInformationItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenantsdetailedinformation.TenantsDetailedInformationRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenanttags.item.TenantTagItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenanttags.TenantTagsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.windowsdevicemalwarestates.item.WindowsDeviceMalwareStateItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.windowsdevicemalwarestates.WindowsDeviceMalwareStatesRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.windowsprotectionstates.item.WindowsProtectionStateItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.windowsprotectionstates.WindowsProtectionStatesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,58 +66,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ManagedTenant;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.aggregatedpolicycompliances.AggregatedPolicyCompliancesRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.aggregatedpolicycompliances.item.AggregatedPolicyComplianceItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.auditevents.AuditEventsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.auditevents.item.AuditEventItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.cloudpcconnections.CloudPcConnectionsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.cloudpcconnections.item.CloudPcConnectionItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.cloudpcdevices.CloudPcDevicesRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.cloudpcdevices.item.CloudPcDeviceItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.cloudpcsoverview.CloudPcsOverviewRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.cloudpcsoverview.item.CloudPcOverviewTenantItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.conditionalaccesspolicycoverages.ConditionalAccessPolicyCoveragesRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.conditionalaccesspolicycoverages.item.ConditionalAccessPolicyCoverageItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.credentialuserregistrationssummaries.CredentialUserRegistrationsSummariesRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.credentialuserregistrationssummaries.item.CredentialUserRegistrationsSummaryItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.devicecompliancepolicysettingstatesummaries.DeviceCompliancePolicySettingStateSummariesRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.devicecompliancepolicysettingstatesummaries.item.DeviceCompliancePolicySettingStateSummaryItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.manageddevicecompliances.item.ManagedDeviceComplianceItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.manageddevicecompliances.ManagedDeviceCompliancesRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.manageddevicecompliancetrends.item.ManagedDeviceComplianceTrendItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.manageddevicecompliancetrends.ManagedDeviceComplianceTrendsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementactions.item.ManagementActionItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementactions.ManagementActionsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses.item.ManagementActionTenantDeploymentStatusItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses.ManagementActionTenantDeploymentStatusesRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementintents.item.ManagementIntentItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementintents.ManagementIntentsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplatecollections.item.ManagementTemplateCollectionItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplatecollections.ManagementTemplateCollectionsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplates.item.ManagementTemplateItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplates.ManagementTemplatesRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplatesteps.item.ManagementTemplateStepItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplatesteps.ManagementTemplateStepsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplatestepversions.item.ManagementTemplateStepVersionItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.managementtemplatestepversions.ManagementTemplateStepVersionsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.myroles.item.MyRoleTenantItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.myroles.MyRolesRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenantgroups.item.TenantGroupItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenantgroups.TenantGroupsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenants.item.TenantItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenants.TenantsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenantscustomizedinformation.item.TenantCustomizedInformationItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenantscustomizedinformation.TenantsCustomizedInformationRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenantsdetailedinformation.item.TenantDetailedInformationItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenantsdetailedinformation.TenantsDetailedInformationRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenanttags.item.TenantTagItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenanttags.TenantTagsRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.windowsdevicemalwarestates.item.WindowsDeviceMalwareStateItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.windowsdevicemalwarestates.WindowsDeviceMalwareStatesRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.windowsprotectionstates.item.WindowsProtectionStateItemRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.windowsprotectionstates.WindowsProtectionStatesRequestBuilder;
 /** Provides operations to manage the managedTenants property of the microsoft.graph.tenantRelationship entity. */
 public class ManagedTenantsRequestBuilder {
     /** The aggregatedPolicyCompliances property */
@@ -200,7 +200,7 @@ public class ManagedTenantsRequestBuilder {
         return new WindowsProtectionStatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.aggregatedPolicyCompliances.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.aggregatedPolicyCompliances.item collection
      * @param id Unique identifier of the item
      * @return a AggregatedPolicyComplianceItemRequestBuilder
      */
@@ -212,7 +212,7 @@ public class ManagedTenantsRequestBuilder {
         return new AggregatedPolicyComplianceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.auditEvents.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.auditEvents.item collection
      * @param id Unique identifier of the item
      * @return a AuditEventItemRequestBuilder
      */
@@ -224,7 +224,7 @@ public class ManagedTenantsRequestBuilder {
         return new AuditEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.cloudPcConnections.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.cloudPcConnections.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcConnectionItemRequestBuilder
      */
@@ -236,7 +236,7 @@ public class ManagedTenantsRequestBuilder {
         return new CloudPcConnectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.cloudPcDevices.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.cloudPcDevices.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcDeviceItemRequestBuilder
      */
@@ -248,7 +248,7 @@ public class ManagedTenantsRequestBuilder {
         return new CloudPcDeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.cloudPcsOverview.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.cloudPcsOverview.item collection
      * @param id Unique identifier of the item
      * @return a CloudPcOverviewTenantItemRequestBuilder
      */
@@ -260,7 +260,7 @@ public class ManagedTenantsRequestBuilder {
         return new CloudPcOverviewTenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.conditionalAccessPolicyCoverages.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.conditionalAccessPolicyCoverages.item collection
      * @param id Unique identifier of the item
      * @return a ConditionalAccessPolicyCoverageItemRequestBuilder
      */
@@ -389,7 +389,7 @@ public class ManagedTenantsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.credentialUserRegistrationsSummaries.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.credentialUserRegistrationsSummaries.item collection
      * @param id Unique identifier of the item
      * @return a CredentialUserRegistrationsSummaryItemRequestBuilder
      */
@@ -452,7 +452,7 @@ public class ManagedTenantsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.deviceCompliancePolicySettingStateSummaries.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.deviceCompliancePolicySettingStateSummaries.item collection
      * @param id Unique identifier of the item
      * @return a DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
      */
@@ -515,7 +515,7 @@ public class ManagedTenantsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managedDeviceCompliances.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managedDeviceCompliances.item collection
      * @param id Unique identifier of the item
      * @return a ManagedDeviceComplianceItemRequestBuilder
      */
@@ -527,7 +527,7 @@ public class ManagedTenantsRequestBuilder {
         return new ManagedDeviceComplianceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managedDeviceComplianceTrends.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managedDeviceComplianceTrends.item collection
      * @param id Unique identifier of the item
      * @return a ManagedDeviceComplianceTrendItemRequestBuilder
      */
@@ -539,7 +539,7 @@ public class ManagedTenantsRequestBuilder {
         return new ManagedDeviceComplianceTrendItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementActions.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementActions.item collection
      * @param id Unique identifier of the item
      * @return a ManagementActionItemRequestBuilder
      */
@@ -551,7 +551,7 @@ public class ManagedTenantsRequestBuilder {
         return new ManagementActionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementActionTenantDeploymentStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementActionTenantDeploymentStatuses.item collection
      * @param id Unique identifier of the item
      * @return a ManagementActionTenantDeploymentStatusItemRequestBuilder
      */
@@ -563,7 +563,7 @@ public class ManagedTenantsRequestBuilder {
         return new ManagementActionTenantDeploymentStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementIntents.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementIntents.item collection
      * @param id Unique identifier of the item
      * @return a ManagementIntentItemRequestBuilder
      */
@@ -575,7 +575,7 @@ public class ManagedTenantsRequestBuilder {
         return new ManagementIntentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateCollections.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateCollections.item collection
      * @param id Unique identifier of the item
      * @return a ManagementTemplateCollectionItemRequestBuilder
      */
@@ -587,7 +587,7 @@ public class ManagedTenantsRequestBuilder {
         return new ManagementTemplateCollectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplates.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementTemplates.item collection
      * @param id Unique identifier of the item
      * @return a ManagementTemplateItemRequestBuilder
      */
@@ -599,7 +599,7 @@ public class ManagedTenantsRequestBuilder {
         return new ManagementTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateSteps.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateSteps.item collection
      * @param id Unique identifier of the item
      * @return a ManagementTemplateStepItemRequestBuilder
      */
@@ -611,7 +611,7 @@ public class ManagedTenantsRequestBuilder {
         return new ManagementTemplateStepItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateStepVersions.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateStepVersions.item collection
      * @param id Unique identifier of the item
      * @return a ManagementTemplateStepVersionItemRequestBuilder
      */
@@ -623,7 +623,7 @@ public class ManagedTenantsRequestBuilder {
         return new ManagementTemplateStepVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.myRoles.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.myRoles.item collection
      * @param id Unique identifier of the item
      * @return a MyRoleTenantItemRequestBuilder
      */
@@ -690,7 +690,7 @@ public class ManagedTenantsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.tenantGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.tenantGroups.item collection
      * @param id Unique identifier of the item
      * @return a TenantGroupItemRequestBuilder
      */
@@ -702,7 +702,7 @@ public class ManagedTenantsRequestBuilder {
         return new TenantGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.tenants.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.tenants.item collection
      * @param id Unique identifier of the item
      * @return a TenantItemRequestBuilder
      */
@@ -714,7 +714,7 @@ public class ManagedTenantsRequestBuilder {
         return new TenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.tenantsCustomizedInformation.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.tenantsCustomizedInformation.item collection
      * @param id Unique identifier of the item
      * @return a TenantCustomizedInformationItemRequestBuilder
      */
@@ -726,7 +726,7 @@ public class ManagedTenantsRequestBuilder {
         return new TenantCustomizedInformationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.tenantsDetailedInformation.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.tenantsDetailedInformation.item collection
      * @param id Unique identifier of the item
      * @return a TenantDetailedInformationItemRequestBuilder
      */
@@ -738,7 +738,7 @@ public class ManagedTenantsRequestBuilder {
         return new TenantDetailedInformationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.tenantTags.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.tenantTags.item collection
      * @param id Unique identifier of the item
      * @return a TenantTagItemRequestBuilder
      */
@@ -750,7 +750,7 @@ public class ManagedTenantsRequestBuilder {
         return new TenantTagItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.windowsDeviceMalwareStates.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.windowsDeviceMalwareStates.item collection
      * @param id Unique identifier of the item
      * @return a WindowsDeviceMalwareStateItemRequestBuilder
      */
@@ -762,7 +762,7 @@ public class ManagedTenantsRequestBuilder {
         return new WindowsDeviceMalwareStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.managedTenants.windowsProtectionStates.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.windowsProtectionStates.item collection
      * @param id Unique identifier of the item
      * @return a WindowsProtectionStateItemRequestBuilder
      */

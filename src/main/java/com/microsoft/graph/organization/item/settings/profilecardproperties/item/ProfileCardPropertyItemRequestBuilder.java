@@ -1,5 +1,7 @@
-package microsoft.graph.organization.item.settings.profilecardproperties.item;
+package com.microsoft.graph.organization.item.settings.profilecardproperties.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ProfileCardProperty;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ProfileCardProperty;
 /** Provides operations to manage the profileCardProperties property of the microsoft.graph.organizationSettings entity. */
 public class ProfileCardPropertyItemRequestBuilder {
     /** Path parameters for the request */

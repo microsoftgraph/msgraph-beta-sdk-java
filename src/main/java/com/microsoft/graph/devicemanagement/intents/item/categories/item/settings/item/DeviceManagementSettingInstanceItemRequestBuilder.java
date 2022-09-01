@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.intents.item.categories.item.settings.item;
+package com.microsoft.graph.devicemanagement.intents.item.categories.item.settings.item;
 
+import com.microsoft.graph.models.DeviceManagementSettingInstance;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceManagementSettingInstance;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the settings property of the microsoft.graph.deviceManagementIntentSettingCategory entity. */
 public class DeviceManagementSettingInstanceItemRequestBuilder {
     /** Path parameters for the request */

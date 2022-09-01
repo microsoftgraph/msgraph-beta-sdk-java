@@ -1,5 +1,11 @@
-package microsoft.graph.devicemanagement.importeddeviceidentities;
+package com.microsoft.graph.devicemanagement.importeddeviceidentities;
 
+import com.microsoft.graph.devicemanagement.importeddeviceidentities.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.importeddeviceidentities.importdeviceidentitylist.ImportDeviceIdentityListRequestBuilder;
+import com.microsoft.graph.devicemanagement.importeddeviceidentities.searchexistingidentities.SearchExistingIdentitiesRequestBuilder;
+import com.microsoft.graph.models.ImportedDeviceIdentity;
+import com.microsoft.graph.models.ImportedDeviceIdentityCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.importeddeviceidentities.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.importeddeviceidentities.importdeviceidentitylist.ImportDeviceIdentityListRequestBuilder;
-import microsoft.graph.devicemanagement.importeddeviceidentities.searchexistingidentities.SearchExistingIdentitiesRequestBuilder;
-import microsoft.graph.models.ImportedDeviceIdentity;
-import microsoft.graph.models.ImportedDeviceIdentityCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the importedDeviceIdentities property of the microsoft.graph.deviceManagement entity. */
 public class ImportedDeviceIdentitiesRequestBuilder {
     /** The Count property */

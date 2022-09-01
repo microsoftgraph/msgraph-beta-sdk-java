@@ -1,5 +1,7 @@
-package microsoft.graph.me.informationprotection.sensitivitylabels.item.sublabels.item;
+package com.microsoft.graph.me.informationprotection.sensitivitylabels.item.sublabels.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SensitivityLabel;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SensitivityLabel;
 /** Provides operations to manage the sublabels property of the microsoft.graph.sensitivityLabel entity. */
 public class SensitivityLabelItemRequestBuilder {
     /** Path parameters for the request */

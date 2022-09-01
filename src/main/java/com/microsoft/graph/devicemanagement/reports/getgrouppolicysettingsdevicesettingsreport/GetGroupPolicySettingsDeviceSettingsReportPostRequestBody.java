@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getgrouppolicysettingsdevicesettingsreport;
+package com.microsoft.graph.devicemanagement.reports.getgrouppolicysettingsdevicesettingsreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

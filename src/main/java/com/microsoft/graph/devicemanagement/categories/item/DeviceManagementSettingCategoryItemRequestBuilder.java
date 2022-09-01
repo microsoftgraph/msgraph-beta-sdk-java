@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.categories.item;
+package com.microsoft.graph.devicemanagement.categories.item;
 
+import com.microsoft.graph.devicemanagement.categories.item.settingdefinitions.item.DeviceManagementSettingDefinitionItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.categories.item.settingdefinitions.SettingDefinitionsRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementSettingCategory;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.categories.item.settingdefinitions.item.DeviceManagementSettingDefinitionItemRequestBuilder;
-import microsoft.graph.devicemanagement.categories.item.settingdefinitions.SettingDefinitionsRequestBuilder;
-import microsoft.graph.models.DeviceManagementSettingCategory;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the categories property of the microsoft.graph.deviceManagement entity. */
 public class DeviceManagementSettingCategoryItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class DeviceManagementSettingCategoryItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.categories.item.settingDefinitions.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.categories.item.settingDefinitions.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementSettingDefinitionItemRequestBuilder
      */

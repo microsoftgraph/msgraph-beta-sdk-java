@@ -1,9 +1,9 @@
-package microsoft.graph.print.printershares.item.allowedusers.item;
+package com.microsoft.graph.print.printershares.item.allowedusers.item;
 
+import com.microsoft.graph.print.printershares.item.allowedusers.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.print.printershares.item.allowedusers.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /print/printerShares/{printerShare-id}/allowedUsers/{user-id} */
 public class UserItemRequestBuilder {
     /** Path parameters for the request */

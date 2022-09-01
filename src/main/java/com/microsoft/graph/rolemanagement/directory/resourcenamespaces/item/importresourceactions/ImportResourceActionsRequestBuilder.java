@@ -1,5 +1,7 @@
-package microsoft.graph.rolemanagement.directory.resourcenamespaces.item.importresourceactions;
+package com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item.importresourceactions;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRbacResourceNamespace;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRbacResourceNamespace;
 /** Provides operations to call the importResourceActions method. */
 public class ImportResourceActionsRequestBuilder {
     /** Path parameters for the request */

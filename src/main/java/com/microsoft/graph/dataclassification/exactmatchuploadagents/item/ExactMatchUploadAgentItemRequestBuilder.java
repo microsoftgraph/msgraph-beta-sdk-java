@@ -1,5 +1,7 @@
-package microsoft.graph.dataclassification.exactmatchuploadagents.item;
+package com.microsoft.graph.dataclassification.exactmatchuploadagents.item;
 
+import com.microsoft.graph.models.ExactMatchUploadAgent;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ExactMatchUploadAgent;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the exactMatchUploadAgents property of the microsoft.graph.dataClassificationService entity. */
 public class ExactMatchUploadAgentItemRequestBuilder {
     /** Path parameters for the request */

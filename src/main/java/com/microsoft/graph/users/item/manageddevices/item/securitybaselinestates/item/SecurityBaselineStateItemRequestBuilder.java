@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.manageddevices.item.securitybaselinestates.item;
+package com.microsoft.graph.users.item.manageddevices.item.securitybaselinestates.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SecurityBaselineState;
+import com.microsoft.graph.users.item.manageddevices.item.securitybaselinestates.item.settingstates.item.SecurityBaselineSettingStateItemRequestBuilder;
+import com.microsoft.graph.users.item.manageddevices.item.securitybaselinestates.item.settingstates.SettingStatesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SecurityBaselineState;
-import microsoft.graph.users.item.manageddevices.item.securitybaselinestates.item.settingstates.item.SecurityBaselineSettingStateItemRequestBuilder;
-import microsoft.graph.users.item.manageddevices.item.securitybaselinestates.item.settingstates.SettingStatesRequestBuilder;
 /** Provides operations to manage the securityBaselineStates property of the microsoft.graph.managedDevice entity. */
 public class SecurityBaselineStateItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class SecurityBaselineStateItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.managedDevices.item.securityBaselineStates.item.settingStates.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.managedDevices.item.securityBaselineStates.item.settingStates.item collection
      * @param id Unique identifier of the item
      * @return a SecurityBaselineSettingStateItemRequestBuilder
      */

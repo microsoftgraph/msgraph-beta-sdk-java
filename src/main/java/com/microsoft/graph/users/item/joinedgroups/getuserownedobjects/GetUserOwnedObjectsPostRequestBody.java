@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.joinedgroups.getuserownedobjects;
+package com.microsoft.graph.users.item.joinedgroups.getuserownedobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

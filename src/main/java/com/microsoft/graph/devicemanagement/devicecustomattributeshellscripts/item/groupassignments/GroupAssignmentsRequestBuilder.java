@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.groupassignments;
+package com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.groupassignments;
 
+import com.microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.groupassignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementScriptGroupAssignment;
+import com.microsoft.graph.models.DeviceManagementScriptGroupAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecustomattributeshellscripts.item.groupassignments.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementScriptGroupAssignment;
-import microsoft.graph.models.DeviceManagementScriptGroupAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groupAssignments property of the microsoft.graph.deviceCustomAttributeShellScript entity. */
 public class GroupAssignmentsRequestBuilder {
     /** The Count property */

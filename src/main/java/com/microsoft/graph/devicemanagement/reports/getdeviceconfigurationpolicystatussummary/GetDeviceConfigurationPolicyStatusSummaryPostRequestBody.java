@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getdeviceconfigurationpolicystatussummary;
+package com.microsoft.graph.devicemanagement.reports.getdeviceconfigurationpolicystatussummary;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

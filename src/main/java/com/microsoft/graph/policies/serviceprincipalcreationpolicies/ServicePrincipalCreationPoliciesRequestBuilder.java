@@ -1,5 +1,9 @@
-package microsoft.graph.policies.serviceprincipalcreationpolicies;
+package com.microsoft.graph.policies.serviceprincipalcreationpolicies;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServicePrincipalCreationPolicy;
+import com.microsoft.graph.models.ServicePrincipalCreationPolicyCollectionResponse;
+import com.microsoft.graph.policies.serviceprincipalcreationpolicies.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServicePrincipalCreationPolicy;
-import microsoft.graph.models.ServicePrincipalCreationPolicyCollectionResponse;
-import microsoft.graph.policies.serviceprincipalcreationpolicies.count.CountRequestBuilder;
 /** Provides operations to manage the servicePrincipalCreationPolicies property of the microsoft.graph.policyRoot entity. */
 public class ServicePrincipalCreationPoliciesRequestBuilder {
     /** The Count property */

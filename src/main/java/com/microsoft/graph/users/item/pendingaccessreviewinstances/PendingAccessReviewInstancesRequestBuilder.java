@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.pendingaccessreviewinstances;
+package com.microsoft.graph.users.item.pendingaccessreviewinstances;
 
+import com.microsoft.graph.models.AccessReviewInstance;
+import com.microsoft.graph.models.AccessReviewInstanceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.pendingaccessreviewinstances.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.pendingaccessreviewinstances.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AccessReviewInstance;
-import microsoft.graph.models.AccessReviewInstanceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.pendingaccessreviewinstances.count.CountRequestBuilder;
-import microsoft.graph.users.item.pendingaccessreviewinstances.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 /** Provides operations to manage the pendingAccessReviewInstances property of the microsoft.graph.user entity. */
 public class PendingAccessReviewInstancesRequestBuilder {
     /** The Count property */

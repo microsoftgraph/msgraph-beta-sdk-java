@@ -1,5 +1,10 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.ChatMessageFromIdentitySet;
+import com.microsoft.graph.models.ChatMessageMentionedIdentitySet;
+import com.microsoft.graph.models.ChatMessageReactionIdentitySet;
+import com.microsoft.graph.models.CommunicationsIdentitySet;
+import com.microsoft.graph.models.SharePointIdentitySet;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

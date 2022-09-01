@@ -1,5 +1,7 @@
-package microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses.item;
+package com.microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses.item;
 
+import com.microsoft.graph.models.managedtenants.ManagementActionTenantDeploymentStatus;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ManagementActionTenantDeploymentStatus;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managementActionTenantDeploymentStatuses property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class ManagementActionTenantDeploymentStatusItemRequestBuilder {
     /** Path parameters for the request */

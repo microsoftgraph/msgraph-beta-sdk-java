@@ -1,4 +1,4 @@
-package microsoft.graph.models.windowsupdates;
+package com.microsoft.graph.models.windowsupdates;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

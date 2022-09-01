@@ -1,5 +1,8 @@
-package microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.outlineicon;
+package com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.outlineicon;
 
+import com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.outlineicon.hostedcontent.HostedContentRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamsAppIcon;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.outlineicon.hostedcontent.HostedContentRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamsAppIcon;
 /** Provides operations to manage the outlineIcon property of the microsoft.graph.teamsAppDefinition entity. */
 public class OutlineIconRequestBuilder {
     /** The hostedContent property */

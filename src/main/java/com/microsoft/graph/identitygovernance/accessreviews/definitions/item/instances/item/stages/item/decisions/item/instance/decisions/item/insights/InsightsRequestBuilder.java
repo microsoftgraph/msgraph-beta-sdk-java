@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.decisions.item.insights;
+package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.decisions.item.insights;
 
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.decisions.item.insights.count.CountRequestBuilder;
+import com.microsoft.graph.models.GovernanceInsight;
+import com.microsoft.graph.models.GovernanceInsightCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.decisions.item.insights.count.CountRequestBuilder;
-import microsoft.graph.models.GovernanceInsight;
-import microsoft.graph.models.GovernanceInsightCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the insights property of the microsoft.graph.accessReviewInstanceDecisionItem entity. */
 public class InsightsRequestBuilder {
     /** The Count property */

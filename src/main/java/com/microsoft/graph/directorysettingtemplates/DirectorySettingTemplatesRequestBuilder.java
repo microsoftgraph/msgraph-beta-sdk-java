@@ -1,5 +1,11 @@
-package microsoft.graph.directorysettingtemplates;
+package com.microsoft.graph.directorysettingtemplates;
 
+import com.microsoft.graph.directorysettingtemplates.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.directorysettingtemplates.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
+import com.microsoft.graph.directorysettingtemplates.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.DirectorySettingTemplate;
+import com.microsoft.graph.models.DirectorySettingTemplateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,20 +20,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directorysettingtemplates.count.CountRequestBuilder;
-import microsoft.graph.directorysettingtemplates.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.directorysettingtemplates.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
-import microsoft.graph.directorysettingtemplates.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.DirectorySettingTemplate;
-import microsoft.graph.models.DirectorySettingTemplateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of directorySettingTemplate entities. */
 public class DirectorySettingTemplatesRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /** The getByIds property */
     @javax.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
@@ -58,7 +52,7 @@ public class DirectorySettingTemplatesRequestBuilder {
     public DirectorySettingTemplatesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/directorySettingTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directorySettingTemplates{?%24top,%24search,%24orderby,%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -70,7 +64,7 @@ public class DirectorySettingTemplatesRequestBuilder {
      * @return a void
      */
     public DirectorySettingTemplatesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/directorySettingTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directorySettingTemplates{?%24top,%24search,%24orderby,%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -247,18 +241,6 @@ public class DirectorySettingTemplatesRequestBuilder {
     }
     /** Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available **directorySettingTemplates** objects. */
     public class DirectorySettingTemplatesRequestBuilderGetQueryParameters {
-        /** Include count of items */
-        @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
-        public Boolean count;
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
-        /** Filter items by property values */
-        @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
-        public String filter;
         /** Order items by property values */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
@@ -271,10 +253,6 @@ public class DirectorySettingTemplatesRequestBuilder {
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
-        @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
-        public Integer skip;
         /** Show only the first n items */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable

@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.mobileappintentandstates;
+package com.microsoft.graph.users.item.mobileappintentandstates;
 
+import com.microsoft.graph.models.MobileAppIntentAndState;
+import com.microsoft.graph.models.MobileAppIntentAndStateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.mobileappintentandstates.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MobileAppIntentAndState;
-import microsoft.graph.models.MobileAppIntentAndStateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.mobileappintentandstates.count.CountRequestBuilder;
 /** Provides operations to manage the mobileAppIntentAndStates property of the microsoft.graph.user entity. */
 public class MobileAppIntentAndStatesRequestBuilder {
     /** The Count property */

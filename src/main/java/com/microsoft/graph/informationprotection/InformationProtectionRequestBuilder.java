@@ -1,5 +1,20 @@
-package microsoft.graph.informationprotection;
+package com.microsoft.graph.informationprotection;
 
+import com.microsoft.graph.informationprotection.bitlocker.BitlockerRequestBuilder;
+import com.microsoft.graph.informationprotection.datalosspreventionpolicies.DataLossPreventionPoliciesRequestBuilder;
+import com.microsoft.graph.informationprotection.datalosspreventionpolicies.item.DataLossPreventionPolicyItemRequestBuilder;
+import com.microsoft.graph.informationprotection.decryptbuffer.DecryptBufferRequestBuilder;
+import com.microsoft.graph.informationprotection.encryptbuffer.EncryptBufferRequestBuilder;
+import com.microsoft.graph.informationprotection.policy.PolicyRequestBuilder;
+import com.microsoft.graph.informationprotection.sensitivitylabels.item.SensitivityLabelItemRequestBuilder;
+import com.microsoft.graph.informationprotection.sensitivitylabels.SensitivityLabelsRequestBuilder;
+import com.microsoft.graph.informationprotection.sensitivitypolicysettings.SensitivityPolicySettingsRequestBuilder;
+import com.microsoft.graph.informationprotection.signdigest.SignDigestRequestBuilder;
+import com.microsoft.graph.informationprotection.threatassessmentrequests.item.ThreatAssessmentRequestItemRequestBuilder;
+import com.microsoft.graph.informationprotection.threatassessmentrequests.ThreatAssessmentRequestsRequestBuilder;
+import com.microsoft.graph.informationprotection.verifysignature.VerifySignatureRequestBuilder;
+import com.microsoft.graph.models.InformationProtection;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,21 +29,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.informationprotection.bitlocker.BitlockerRequestBuilder;
-import microsoft.graph.informationprotection.datalosspreventionpolicies.DataLossPreventionPoliciesRequestBuilder;
-import microsoft.graph.informationprotection.datalosspreventionpolicies.item.DataLossPreventionPolicyItemRequestBuilder;
-import microsoft.graph.informationprotection.decryptbuffer.DecryptBufferRequestBuilder;
-import microsoft.graph.informationprotection.encryptbuffer.EncryptBufferRequestBuilder;
-import microsoft.graph.informationprotection.policy.PolicyRequestBuilder;
-import microsoft.graph.informationprotection.sensitivitylabels.item.SensitivityLabelItemRequestBuilder;
-import microsoft.graph.informationprotection.sensitivitylabels.SensitivityLabelsRequestBuilder;
-import microsoft.graph.informationprotection.sensitivitypolicysettings.SensitivityPolicySettingsRequestBuilder;
-import microsoft.graph.informationprotection.signdigest.SignDigestRequestBuilder;
-import microsoft.graph.informationprotection.threatassessmentrequests.item.ThreatAssessmentRequestItemRequestBuilder;
-import microsoft.graph.informationprotection.threatassessmentrequests.ThreatAssessmentRequestsRequestBuilder;
-import microsoft.graph.informationprotection.verifysignature.VerifySignatureRequestBuilder;
-import microsoft.graph.models.InformationProtection;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the informationProtection singleton. */
 public class InformationProtectionRequestBuilder {
     /** The bitlocker property */
@@ -177,7 +177,7 @@ public class InformationProtectionRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.informationProtection.dataLossPreventionPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.informationProtection.dataLossPreventionPolicies.item collection
      * @param id Unique identifier of the item
      * @return a DataLossPreventionPolicyItemRequestBuilder
      */
@@ -295,7 +295,7 @@ public class InformationProtectionRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.informationProtection.sensitivityLabels.item collection
+     * Gets an item from the com.Microsoft.Graph.informationProtection.sensitivityLabels.item collection
      * @param id Unique identifier of the item
      * @return a SensitivityLabelItemRequestBuilder
      */
@@ -307,7 +307,7 @@ public class InformationProtectionRequestBuilder {
         return new SensitivityLabelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.informationProtection.threatAssessmentRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.informationProtection.threatAssessmentRequests.item collection
      * @param id Unique identifier of the item
      * @return a ThreatAssessmentRequestItemRequestBuilder
      */

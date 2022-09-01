@@ -1,5 +1,9 @@
-package microsoft.graph.directory.outboundshareduserprofiles.item.tenants;
+package com.microsoft.graph.directory.outboundshareduserprofiles.item.tenants;
 
+import com.microsoft.graph.directory.outboundshareduserprofiles.item.tenants.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TenantReference;
+import com.microsoft.graph.models.TenantReferenceCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.outboundshareduserprofiles.item.tenants.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TenantReference;
-import microsoft.graph.models.TenantReferenceCollectionResponse;
 /** Provides operations to manage the tenants property of the microsoft.graph.outboundSharedUserProfile entity. */
 public class TenantsRequestBuilder {
     /** The Count property */

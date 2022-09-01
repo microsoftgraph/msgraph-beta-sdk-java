@@ -1,5 +1,7 @@
-package microsoft.graph.dataclassification.classifytext;
+package com.microsoft.graph.dataclassification.classifytext;
 
+import com.microsoft.graph.models.ClassificationJobResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ClassificationJobResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the classifyText method. */
 public class ClassifyTextRequestBuilder {
     /** Path parameters for the request */

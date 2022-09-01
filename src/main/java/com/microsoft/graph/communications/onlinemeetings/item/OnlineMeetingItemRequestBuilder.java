@@ -1,5 +1,17 @@
-package microsoft.graph.communications.onlinemeetings.item;
+package com.microsoft.graph.communications.onlinemeetings.item;
 
+import com.microsoft.graph.communications.onlinemeetings.item.alternativerecording.AlternativeRecordingRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.attendancereports.AttendanceReportsRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.attendancereports.item.MeetingAttendanceReportItemRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.attendeereport.AttendeeReportRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.meetingattendancereport.MeetingAttendanceReportRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.recording.RecordingRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.registration.RegistrationRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.transcripts.item.CallTranscriptItemRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.transcripts.TranscriptsRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.virtualappointment.VirtualAppointmentRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,18 +26,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.communications.onlinemeetings.item.alternativerecording.AlternativeRecordingRequestBuilder;
-import microsoft.graph.communications.onlinemeetings.item.attendancereports.AttendanceReportsRequestBuilder;
-import microsoft.graph.communications.onlinemeetings.item.attendancereports.item.MeetingAttendanceReportItemRequestBuilder;
-import microsoft.graph.communications.onlinemeetings.item.attendeereport.AttendeeReportRequestBuilder;
-import microsoft.graph.communications.onlinemeetings.item.meetingattendancereport.MeetingAttendanceReportRequestBuilder;
-import microsoft.graph.communications.onlinemeetings.item.recording.RecordingRequestBuilder;
-import microsoft.graph.communications.onlinemeetings.item.registration.RegistrationRequestBuilder;
-import microsoft.graph.communications.onlinemeetings.item.transcripts.item.CallTranscriptItemRequestBuilder;
-import microsoft.graph.communications.onlinemeetings.item.transcripts.TranscriptsRequestBuilder;
-import microsoft.graph.communications.onlinemeetings.item.virtualappointment.VirtualAppointmentRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnlineMeeting;
 /** Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity. */
 public class OnlineMeetingItemRequestBuilder {
     /** The alternativeRecording property */
@@ -75,7 +75,7 @@ public class OnlineMeetingItemRequestBuilder {
         return new VirtualAppointmentRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.communications.onlineMeetings.item.attendanceReports.item collection
+     * Gets an item from the com.Microsoft.Graph.communications.onlineMeetings.item.attendanceReports.item collection
      * @param id Unique identifier of the item
      * @return a MeetingAttendanceReportItemRequestBuilder
      */
@@ -361,7 +361,7 @@ public class OnlineMeetingItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.communications.onlineMeetings.item.transcripts.item collection
+     * Gets an item from the com.Microsoft.Graph.communications.onlineMeetings.item.transcripts.item collection
      * @param id Unique identifier of the item
      * @return a CallTranscriptItemRequestBuilder
      */

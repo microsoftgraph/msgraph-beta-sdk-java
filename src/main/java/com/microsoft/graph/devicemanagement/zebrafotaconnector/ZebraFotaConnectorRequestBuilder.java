@@ -1,5 +1,11 @@
-package microsoft.graph.devicemanagement.zebrafotaconnector;
+package com.microsoft.graph.devicemanagement.zebrafotaconnector;
 
+import com.microsoft.graph.devicemanagement.zebrafotaconnector.approvefotaapps.ApproveFotaAppsRequestBuilder;
+import com.microsoft.graph.devicemanagement.zebrafotaconnector.connect.ConnectRequestBuilder;
+import com.microsoft.graph.devicemanagement.zebrafotaconnector.disconnect.DisconnectRequestBuilder;
+import com.microsoft.graph.devicemanagement.zebrafotaconnector.hasactivedeployments.HasActiveDeploymentsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ZebraFotaConnector;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.zebrafotaconnector.approvefotaapps.ApproveFotaAppsRequestBuilder;
-import microsoft.graph.devicemanagement.zebrafotaconnector.connect.ConnectRequestBuilder;
-import microsoft.graph.devicemanagement.zebrafotaconnector.disconnect.DisconnectRequestBuilder;
-import microsoft.graph.devicemanagement.zebrafotaconnector.hasactivedeployments.HasActiveDeploymentsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ZebraFotaConnector;
 /** Provides operations to manage the zebraFotaConnector property of the microsoft.graph.deviceManagement entity. */
 public class ZebraFotaConnectorRequestBuilder {
     /** The approveFotaApps property */

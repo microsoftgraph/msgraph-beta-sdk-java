@@ -1,5 +1,16 @@
-package microsoft.graph.users.item.cloudpcs.item;
+package com.microsoft.graph.users.item.cloudpcs.item;
 
+import com.microsoft.graph.models.CloudPC;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.cloudpcs.item.changeuseraccounttype.ChangeUserAccountTypeRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.endgraceperiod.EndGracePeriodRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.getcloudpcconnectivityhistory.GetCloudPcConnectivityHistoryRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.getcloudpclaunchinfo.GetCloudPcLaunchInfoRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.reboot.RebootRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.rename.RenameRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.troubleshoot.TroubleshootRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CloudPC;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.cloudpcs.item.changeuseraccounttype.ChangeUserAccountTypeRequestBuilder;
-import microsoft.graph.users.item.cloudpcs.item.endgraceperiod.EndGracePeriodRequestBuilder;
-import microsoft.graph.users.item.cloudpcs.item.getcloudpcconnectivityhistory.GetCloudPcConnectivityHistoryRequestBuilder;
-import microsoft.graph.users.item.cloudpcs.item.getcloudpclaunchinfo.GetCloudPcLaunchInfoRequestBuilder;
-import microsoft.graph.users.item.cloudpcs.item.reboot.RebootRequestBuilder;
-import microsoft.graph.users.item.cloudpcs.item.rename.RenameRequestBuilder;
-import microsoft.graph.users.item.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
-import microsoft.graph.users.item.cloudpcs.item.restore.RestoreRequestBuilder;
-import microsoft.graph.users.item.cloudpcs.item.troubleshoot.TroubleshootRequestBuilder;
 /** Provides operations to manage the cloudPCs property of the microsoft.graph.user entity. */
 public class CloudPCItemRequestBuilder {
     /** The changeUserAccountType property */

@@ -1,5 +1,8 @@
-package microsoft.graph.directory.outboundshareduserprofiles.item.tenants.item;
+package com.microsoft.graph.directory.outboundshareduserprofiles.item.tenants.item;
 
+import com.microsoft.graph.directory.outboundshareduserprofiles.item.tenants.item.removepersonaldata.RemovePersonalDataRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TenantReference;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.outboundshareduserprofiles.item.tenants.item.removepersonaldata.RemovePersonalDataRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TenantReference;
 /** Provides operations to manage the tenants property of the microsoft.graph.outboundSharedUserProfile entity. */
 public class TenantReferenceTenantItemRequestBuilder {
     /** Path parameters for the request */

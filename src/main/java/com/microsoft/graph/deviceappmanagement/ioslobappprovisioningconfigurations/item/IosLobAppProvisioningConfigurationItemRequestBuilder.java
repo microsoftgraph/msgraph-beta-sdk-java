@@ -1,5 +1,16 @@
-package microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item;
+package com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item;
 
+import com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.assignments.item.IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.devicestatuses.DeviceStatusesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.devicestatuses.item.ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.groupassignments.GroupAssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.groupassignments.item.MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.userstatuses.item.ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.userstatuses.UserStatusesRequestBuilder;
+import com.microsoft.graph.models.IosLobAppProvisioningConfiguration;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.assign.AssignRequestBuilder;
-import microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.assignments.item.IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.devicestatuses.DeviceStatusesRequestBuilder;
-import microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.devicestatuses.item.ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.groupassignments.GroupAssignmentsRequestBuilder;
-import microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.groupassignments.item.MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.userstatuses.item.ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.userstatuses.UserStatusesRequestBuilder;
-import microsoft.graph.models.IosLobAppProvisioningConfiguration;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the iosLobAppProvisioningConfigurations property of the microsoft.graph.deviceAppManagement entity. */
 public class IosLobAppProvisioningConfigurationItemRequestBuilder {
     /** The assign property */
@@ -59,7 +59,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
         return new UserStatusesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder
      */
@@ -239,7 +239,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.deviceStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
      */
@@ -302,7 +302,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.groupAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.groupAssignments.item collection
      * @param id Unique identifier of the item
      * @return a MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder
      */
@@ -369,7 +369,7 @@ public class IosLobAppProvisioningConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.userStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item.userStatuses.item collection
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
      */

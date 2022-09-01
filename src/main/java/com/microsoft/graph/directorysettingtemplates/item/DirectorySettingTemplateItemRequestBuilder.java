@@ -1,5 +1,12 @@
-package microsoft.graph.directorysettingtemplates.item;
+package com.microsoft.graph.directorysettingtemplates.item;
 
+import com.microsoft.graph.directorysettingtemplates.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.directorysettingtemplates.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.directorysettingtemplates.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.directorysettingtemplates.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.directorysettingtemplates.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.models.DirectorySettingTemplate;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directorysettingtemplates.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.directorysettingtemplates.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.directorysettingtemplates.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.directorysettingtemplates.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.directorysettingtemplates.item.restore.RestoreRequestBuilder;
-import microsoft.graph.models.DirectorySettingTemplate;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of directorySettingTemplate entities. */
 public class DirectorySettingTemplateItemRequestBuilder {
     /** The checkMemberGroups property */
@@ -63,7 +63,7 @@ public class DirectorySettingTemplateItemRequestBuilder {
     public DirectorySettingTemplateItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/directorySettingTemplates/{directorySettingTemplate%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directorySettingTemplates/{directorySettingTemplate%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -75,7 +75,7 @@ public class DirectorySettingTemplateItemRequestBuilder {
      * @return a void
      */
     public DirectorySettingTemplateItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/directorySettingTemplates/{directorySettingTemplate%2Did}{?%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/directorySettingTemplates/{directorySettingTemplate%2Did}{?%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -345,10 +345,6 @@ public class DirectorySettingTemplateItemRequestBuilder {
     }
     /** A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the **directorySettingTemplate** object, including the available settings and their defaults. */
     public class DirectorySettingTemplateItemRequestBuilderGetQueryParameters {
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable

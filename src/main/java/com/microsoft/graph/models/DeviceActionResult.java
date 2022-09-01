@@ -1,5 +1,14 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.ActivateDeviceEsimActionResult;
+import com.microsoft.graph.models.ConfigurationManagerActionResult;
+import com.microsoft.graph.models.DeleteUserFromSharedAppleDeviceActionResult;
+import com.microsoft.graph.models.LocateDeviceActionResult;
+import com.microsoft.graph.models.RemoteLockActionResult;
+import com.microsoft.graph.models.ResetPasscodeActionResult;
+import com.microsoft.graph.models.RevokeAppleVppLicensesActionResult;
+import com.microsoft.graph.models.RotateBitLockerKeysDeviceActionResult;
+import com.microsoft.graph.models.WindowsDefenderScanActionResult;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.salesinvoicelines;
+package com.microsoft.graph.financials.companies.item.salesinvoicelines;
 
+import com.microsoft.graph.financials.companies.item.salesinvoicelines.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SalesInvoiceLine;
+import com.microsoft.graph.models.SalesInvoiceLineCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salesinvoicelines.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SalesInvoiceLine;
-import microsoft.graph.models.SalesInvoiceLineCollectionResponse;
 /** Provides operations to manage the salesInvoiceLines property of the microsoft.graph.company entity. */
 public class SalesInvoiceLinesRequestBuilder {
     /** The Count property */

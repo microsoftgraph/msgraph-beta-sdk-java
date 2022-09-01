@@ -1,5 +1,16 @@
-package microsoft.graph.governanceresources.item;
+package com.microsoft.graph.governanceresources.item;
 
+import com.microsoft.graph.governanceresources.item.parent.ParentRequestBuilder;
+import com.microsoft.graph.governanceresources.item.roleassignmentrequests.item.GovernanceRoleAssignmentRequestItemRequestBuilder;
+import com.microsoft.graph.governanceresources.item.roleassignmentrequests.RoleAssignmentRequestsRequestBuilder;
+import com.microsoft.graph.governanceresources.item.roleassignments.item.GovernanceRoleAssignmentItemRequestBuilder;
+import com.microsoft.graph.governanceresources.item.roleassignments.RoleAssignmentsRequestBuilder;
+import com.microsoft.graph.governanceresources.item.roledefinitions.item.GovernanceRoleDefinitionItemRequestBuilder;
+import com.microsoft.graph.governanceresources.item.roledefinitions.RoleDefinitionsRequestBuilder;
+import com.microsoft.graph.governanceresources.item.rolesettings.item.GovernanceRoleSettingItemRequestBuilder;
+import com.microsoft.graph.governanceresources.item.rolesettings.RoleSettingsRequestBuilder;
+import com.microsoft.graph.models.GovernanceResource;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.governanceresources.item.parent.ParentRequestBuilder;
-import microsoft.graph.governanceresources.item.roleassignmentrequests.item.GovernanceRoleAssignmentRequestItemRequestBuilder;
-import microsoft.graph.governanceresources.item.roleassignmentrequests.RoleAssignmentRequestsRequestBuilder;
-import microsoft.graph.governanceresources.item.roleassignments.item.GovernanceRoleAssignmentItemRequestBuilder;
-import microsoft.graph.governanceresources.item.roleassignments.RoleAssignmentsRequestBuilder;
-import microsoft.graph.governanceresources.item.roledefinitions.item.GovernanceRoleDefinitionItemRequestBuilder;
-import microsoft.graph.governanceresources.item.roledefinitions.RoleDefinitionsRequestBuilder;
-import microsoft.graph.governanceresources.item.rolesettings.item.GovernanceRoleSettingItemRequestBuilder;
-import microsoft.graph.governanceresources.item.rolesettings.RoleSettingsRequestBuilder;
-import microsoft.graph.models.GovernanceResource;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of governanceResource entities. */
 public class GovernanceResourceItemRequestBuilder {
     /** The parent property */
@@ -333,7 +333,7 @@ public class GovernanceResourceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.governanceResources.item.roleAssignmentRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.governanceResources.item.roleAssignmentRequests.item collection
      * @param id Unique identifier of the item
      * @return a GovernanceRoleAssignmentRequestItemRequestBuilder
      */
@@ -345,7 +345,7 @@ public class GovernanceResourceItemRequestBuilder {
         return new GovernanceRoleAssignmentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.governanceResources.item.roleAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.governanceResources.item.roleAssignments.item collection
      * @param id Unique identifier of the item
      * @return a GovernanceRoleAssignmentItemRequestBuilder
      */
@@ -357,7 +357,7 @@ public class GovernanceResourceItemRequestBuilder {
         return new GovernanceRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.governanceResources.item.roleDefinitions.item collection
+     * Gets an item from the com.Microsoft.Graph.governanceResources.item.roleDefinitions.item collection
      * @param id Unique identifier of the item
      * @return a GovernanceRoleDefinitionItemRequestBuilder
      */
@@ -369,7 +369,7 @@ public class GovernanceResourceItemRequestBuilder {
         return new GovernanceRoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.governanceResources.item.roleSettings.item collection
+     * Gets an item from the com.Microsoft.Graph.governanceResources.item.roleSettings.item collection
      * @param id Unique identifier of the item
      * @return a GovernanceRoleSettingItemRequestBuilder
      */

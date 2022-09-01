@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.comanageddevices.item.securitybaselinestates.item.settingstates;
+package com.microsoft.graph.devicemanagement.comanageddevices.item.securitybaselinestates.item.settingstates;
 
+import com.microsoft.graph.devicemanagement.comanageddevices.item.securitybaselinestates.item.settingstates.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SecurityBaselineSettingState;
+import com.microsoft.graph.models.SecurityBaselineSettingStateCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.comanageddevices.item.securitybaselinestates.item.settingstates.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SecurityBaselineSettingState;
-import microsoft.graph.models.SecurityBaselineSettingStateCollectionResponse;
 /** Provides operations to manage the settingStates property of the microsoft.graph.securityBaselineState entity. */
 public class SettingStatesRequestBuilder {
     /** The Count property */

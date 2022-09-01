@@ -1,5 +1,7 @@
-package microsoft.graph.identitygovernance.accessreviews.policy;
+package com.microsoft.graph.identitygovernance.accessreviews.policy;
 
+import com.microsoft.graph.models.AccessReviewPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AccessReviewPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the policy property of the microsoft.graph.accessReviewSet entity. */
 public class PolicyRequestBuilder {
     /** Path parameters for the request */

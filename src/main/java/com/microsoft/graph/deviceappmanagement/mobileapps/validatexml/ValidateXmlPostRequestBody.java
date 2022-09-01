@@ -1,4 +1,4 @@
-package microsoft.graph.deviceappmanagement.mobileapps.validatexml;
+package com.microsoft.graph.deviceappmanagement.mobileapps.validatexml;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

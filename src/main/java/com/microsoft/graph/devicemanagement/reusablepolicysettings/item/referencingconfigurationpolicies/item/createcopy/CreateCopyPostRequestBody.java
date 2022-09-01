@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.createcopy;
+package com.microsoft.graph.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.createcopy;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

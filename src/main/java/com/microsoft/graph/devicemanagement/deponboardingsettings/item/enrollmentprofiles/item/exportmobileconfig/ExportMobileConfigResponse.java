@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item.exportmobileconfig;
+package com.microsoft.graph.devicemanagement.deponboardingsettings.item.enrollmentprofiles.item.exportmobileconfig;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -34,7 +34,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     /** The Teams client configuration. Applicable only for Teams Rooms-enabled devices. */
     private TeamworkTeamsClientConfiguration _teamsClientConfiguration;
     /**
-     * Instantiates a new TeamworkDeviceConfiguration and sets the default values.
+     * Instantiates a new teamworkDeviceConfiguration and sets the default values.
      * @return a void
      */
     public TeamworkDeviceConfiguration() {
@@ -44,7 +44,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkDeviceConfiguration
+     * @return a teamworkDeviceConfiguration
      */
     @javax.annotation.Nonnull
     public static TeamworkDeviceConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

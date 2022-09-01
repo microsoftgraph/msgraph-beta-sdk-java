@@ -1,5 +1,9 @@
-package microsoft.graph.privilegedoperationevents;
+package com.microsoft.graph.privilegedoperationevents;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedOperationEvent;
+import com.microsoft.graph.models.PrivilegedOperationEventCollectionResponse;
+import com.microsoft.graph.privilegedoperationevents.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedOperationEvent;
-import microsoft.graph.models.PrivilegedOperationEventCollectionResponse;
-import microsoft.graph.privilegedoperationevents.count.CountRequestBuilder;
 /** Provides operations to manage the collection of privilegedOperationEvent entities. */
 public class PrivilegedOperationEventsRequestBuilder {
     /** The Count property */

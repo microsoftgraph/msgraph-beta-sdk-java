@@ -1,5 +1,13 @@
-package microsoft.graph.devicemanagement.assignmentfilters;
+package com.microsoft.graph.devicemanagement.assignmentfilters;
 
+import com.microsoft.graph.devicemanagement.assignmentfilters.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.assignmentfilters.enable.EnableRequestBuilder;
+import com.microsoft.graph.devicemanagement.assignmentfilters.getplatformsupportedpropertieswithplatform.GetPlatformSupportedPropertiesWithPlatformRequestBuilder;
+import com.microsoft.graph.devicemanagement.assignmentfilters.getstate.GetStateRequestBuilder;
+import com.microsoft.graph.devicemanagement.assignmentfilters.validatefilter.ValidateFilterRequestBuilder;
+import com.microsoft.graph.models.DeviceAndAppManagementAssignmentFilter;
+import com.microsoft.graph.models.DeviceAndAppManagementAssignmentFilterCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.assignmentfilters.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.assignmentfilters.enable.EnableRequestBuilder;
-import microsoft.graph.devicemanagement.assignmentfilters.getplatformsupportedpropertieswithplatform.GetPlatformSupportedPropertiesWithPlatformRequestBuilder;
-import microsoft.graph.devicemanagement.assignmentfilters.getstate.GetStateRequestBuilder;
-import microsoft.graph.devicemanagement.assignmentfilters.validatefilter.ValidateFilterRequestBuilder;
-import microsoft.graph.models.DeviceAndAppManagementAssignmentFilter;
-import microsoft.graph.models.DeviceAndAppManagementAssignmentFilterCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignmentFilters property of the microsoft.graph.deviceManagement entity. */
 public class AssignmentFiltersRequestBuilder {
     /** The Count property */

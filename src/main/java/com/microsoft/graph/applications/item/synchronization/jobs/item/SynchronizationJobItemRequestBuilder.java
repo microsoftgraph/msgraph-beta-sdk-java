@@ -1,5 +1,14 @@
-package microsoft.graph.applications.item.synchronization.jobs.item;
+package com.microsoft.graph.applications.item.synchronization.jobs.item;
 
+import com.microsoft.graph.applications.item.synchronization.jobs.item.pause.PauseRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.jobs.item.provisionondemand.ProvisionOnDemandRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.jobs.item.restart.RestartRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.jobs.item.schema.SchemaRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.jobs.item.start.StartRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.jobs.item.stop.StopRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.jobs.item.validatecredentials.ValidateCredentialsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SynchronizationJob;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.item.synchronization.jobs.item.pause.PauseRequestBuilder;
-import microsoft.graph.applications.item.synchronization.jobs.item.provisionondemand.ProvisionOnDemandRequestBuilder;
-import microsoft.graph.applications.item.synchronization.jobs.item.restart.RestartRequestBuilder;
-import microsoft.graph.applications.item.synchronization.jobs.item.schema.SchemaRequestBuilder;
-import microsoft.graph.applications.item.synchronization.jobs.item.start.StartRequestBuilder;
-import microsoft.graph.applications.item.synchronization.jobs.item.stop.StopRequestBuilder;
-import microsoft.graph.applications.item.synchronization.jobs.item.validatecredentials.ValidateCredentialsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SynchronizationJob;
 /** Provides operations to manage the jobs property of the microsoft.graph.synchronization entity. */
 public class SynchronizationJobItemRequestBuilder {
     /** Path parameters for the request */

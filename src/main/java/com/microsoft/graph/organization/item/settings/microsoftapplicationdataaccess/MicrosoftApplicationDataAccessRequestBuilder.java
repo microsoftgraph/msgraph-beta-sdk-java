@@ -1,5 +1,7 @@
-package microsoft.graph.organization.item.settings.microsoftapplicationdataaccess;
+package com.microsoft.graph.organization.item.settings.microsoftapplicationdataaccess;
 
+import com.microsoft.graph.models.MicrosoftApplicationDataAccessSettings;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MicrosoftApplicationDataAccessSettings;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the microsoftApplicationDataAccess property of the microsoft.graph.organizationSettings entity. */
 public class MicrosoftApplicationDataAccessRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.policies.mobiledevicemanagementpolicies.item;
+package com.microsoft.graph.policies.mobiledevicemanagementpolicies.item;
 
+import com.microsoft.graph.models.MobilityManagementPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.mobiledevicemanagementpolicies.item.includedgroups.IncludedGroupsRequestBuilder;
+import com.microsoft.graph.policies.mobiledevicemanagementpolicies.item.includedgroups.item.GroupItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MobilityManagementPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.policies.mobiledevicemanagementpolicies.item.includedgroups.IncludedGroupsRequestBuilder;
-import microsoft.graph.policies.mobiledevicemanagementpolicies.item.includedgroups.item.GroupItemRequestBuilder;
 /** Provides operations to manage the mobileDeviceManagementPolicies property of the microsoft.graph.policyRoot entity. */
 public class MobilityManagementPolicyItemRequestBuilder {
     /** The includedGroups property */
@@ -251,7 +251,7 @@ public class MobilityManagementPolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.mobileDeviceManagementPolicies.item.includedGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.mobileDeviceManagementPolicies.item.includedGroups.item collection
      * @param id Unique identifier of the item
      * @return a GroupItemRequestBuilder
      */

@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.rolescopetags.getrolescopetagsbyid;
+package com.microsoft.graph.devicemanagement.rolescopetags.getrolescopetagsbyid;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

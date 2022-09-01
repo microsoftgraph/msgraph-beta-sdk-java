@@ -1,5 +1,9 @@
-package microsoft.graph.communications.calls.item.contentsharingsessions;
+package com.microsoft.graph.communications.calls.item.contentsharingsessions;
 
+import com.microsoft.graph.communications.calls.item.contentsharingsessions.count.CountRequestBuilder;
+import com.microsoft.graph.models.ContentSharingSession;
+import com.microsoft.graph.models.ContentSharingSessionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.communications.calls.item.contentsharingsessions.count.CountRequestBuilder;
-import microsoft.graph.models.ContentSharingSession;
-import microsoft.graph.models.ContentSharingSessionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity. */
 public class ContentSharingSessionsRequestBuilder {
     /** The Count property */

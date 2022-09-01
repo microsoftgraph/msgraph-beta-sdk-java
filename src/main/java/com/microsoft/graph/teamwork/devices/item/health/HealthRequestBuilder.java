@@ -1,5 +1,7 @@
-package microsoft.graph.teamwork.devices.item.health;
+package com.microsoft.graph.teamwork.devices.item.health;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamworkDeviceHealth;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamworkDeviceHealth;
 /** Provides operations to manage the health property of the microsoft.graph.teamworkDevice entity. */
 public class HealthRequestBuilder {
     /** Path parameters for the request */

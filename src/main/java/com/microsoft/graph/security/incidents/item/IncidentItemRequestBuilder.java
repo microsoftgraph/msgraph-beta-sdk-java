@@ -1,5 +1,9 @@
-package microsoft.graph.security.incidents.item;
+package com.microsoft.graph.security.incidents.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.Incident;
+import com.microsoft.graph.security.incidents.item.alerts.AlertsRequestBuilder;
+import com.microsoft.graph.security.incidents.item.alerts.item.AlertItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.Incident;
-import microsoft.graph.security.incidents.item.alerts.AlertsRequestBuilder;
-import microsoft.graph.security.incidents.item.alerts.item.AlertItemRequestBuilder;
 /** Provides operations to manage the incidents property of the microsoft.graph.security entity. */
 public class IncidentItemRequestBuilder {
     /** The alerts property */
@@ -32,7 +32,7 @@ public class IncidentItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.security.incidents.item.alerts.item collection
+     * Gets an item from the com.Microsoft.Graph.security.incidents.item.alerts.item collection
      * @param id Unique identifier of the item
      * @return a AlertItemRequestBuilder
      */

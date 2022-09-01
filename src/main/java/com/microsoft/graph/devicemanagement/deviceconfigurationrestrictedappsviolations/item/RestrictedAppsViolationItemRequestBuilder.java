@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.deviceconfigurationrestrictedappsviolations.item;
+package com.microsoft.graph.devicemanagement.deviceconfigurationrestrictedappsviolations.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RestrictedAppsViolation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RestrictedAppsViolation;
 /** Provides operations to manage the deviceConfigurationRestrictedAppsViolations property of the microsoft.graph.deviceManagement entity. */
 public class RestrictedAppsViolationItemRequestBuilder {
     /** Path parameters for the request */

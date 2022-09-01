@@ -1,5 +1,7 @@
-package microsoft.graph.financials.companies.item.salesorders.item.customer.paymentterm;
+package com.microsoft.graph.financials.companies.item.salesorders.item.customer.paymentterm;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PaymentTerm;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PaymentTerm;
 /** Provides operations to manage the paymentTerm property of the microsoft.graph.customer entity. */
 public class PaymentTermRequestBuilder {
     /** Path parameters for the request */

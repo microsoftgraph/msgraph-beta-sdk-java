@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.informationprotection.signdigest;
+package com.microsoft.graph.users.item.informationprotection.signdigest;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

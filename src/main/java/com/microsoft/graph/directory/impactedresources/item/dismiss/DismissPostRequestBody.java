@@ -1,4 +1,4 @@
-package microsoft.graph.directory.impactedresources.item.dismiss;
+package com.microsoft.graph.directory.impactedresources.item.dismiss;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

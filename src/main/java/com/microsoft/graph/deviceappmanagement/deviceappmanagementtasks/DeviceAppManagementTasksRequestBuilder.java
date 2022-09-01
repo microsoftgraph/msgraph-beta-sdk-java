@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.deviceappmanagementtasks;
+package com.microsoft.graph.deviceappmanagement.deviceappmanagementtasks;
 
+import com.microsoft.graph.deviceappmanagement.deviceappmanagementtasks.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceAppManagementTask;
+import com.microsoft.graph.models.DeviceAppManagementTaskCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.deviceappmanagementtasks.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceAppManagementTask;
-import microsoft.graph.models.DeviceAppManagementTaskCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceAppManagementTasks property of the microsoft.graph.deviceAppManagement entity. */
 public class DeviceAppManagementTasksRequestBuilder {
     /** The Count property */

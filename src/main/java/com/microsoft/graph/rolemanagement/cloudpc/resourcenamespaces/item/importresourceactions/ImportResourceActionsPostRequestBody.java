@@ -1,4 +1,4 @@
-package microsoft.graph.rolemanagement.cloudpc.resourcenamespaces.item.importresourceactions;
+package com.microsoft.graph.rolemanagement.cloudpc.resourcenamespaces.item.importresourceactions;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

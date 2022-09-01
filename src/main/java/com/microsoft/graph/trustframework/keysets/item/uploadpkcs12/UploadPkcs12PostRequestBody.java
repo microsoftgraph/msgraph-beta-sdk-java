@@ -1,4 +1,4 @@
-package microsoft.graph.trustframework.keysets.item.uploadpkcs12;
+package com.microsoft.graph.trustframework.keysets.item.uploadpkcs12;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

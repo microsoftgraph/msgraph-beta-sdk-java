@@ -1,5 +1,7 @@
-package microsoft.graph.policies.authorizationpolicy.item.defaultuserroleoverrides.item;
+package com.microsoft.graph.policies.authorizationpolicy.item.defaultuserroleoverrides.item;
 
+import com.microsoft.graph.models.DefaultUserRoleOverride;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DefaultUserRoleOverride;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the defaultUserRoleOverrides property of the microsoft.graph.authorizationPolicy entity. */
 public class DefaultUserRoleOverrideItemRequestBuilder {
     /** Path parameters for the request */

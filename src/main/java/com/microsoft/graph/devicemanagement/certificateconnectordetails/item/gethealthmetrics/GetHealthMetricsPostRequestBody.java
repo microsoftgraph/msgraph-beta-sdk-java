@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.certificateconnectordetails.item.gethealthmetrics;
+package com.microsoft.graph.devicemanagement.certificateconnectordetails.item.gethealthmetrics;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

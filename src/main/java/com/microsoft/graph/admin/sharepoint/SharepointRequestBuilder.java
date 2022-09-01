@@ -1,5 +1,8 @@
-package microsoft.graph.admin.sharepoint;
+package com.microsoft.graph.admin.sharepoint;
 
+import com.microsoft.graph.admin.sharepoint.settings.SettingsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.tenantadmin.Sharepoint;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.sharepoint.settings.SettingsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.tenantadmin.Sharepoint;
 /** Provides operations to manage the sharepoint property of the microsoft.graph.admin entity. */
 public class SharepointRequestBuilder {
     /** Path parameters for the request */

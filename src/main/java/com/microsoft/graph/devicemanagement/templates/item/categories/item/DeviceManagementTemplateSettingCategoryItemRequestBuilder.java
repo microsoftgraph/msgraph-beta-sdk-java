@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.templates.item.categories.item;
+package com.microsoft.graph.devicemanagement.templates.item.categories.item;
 
+import com.microsoft.graph.devicemanagement.templates.item.categories.item.recommendedsettings.item.DeviceManagementSettingInstanceItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.templates.item.categories.item.recommendedsettings.RecommendedSettingsRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementTemplateSettingCategory;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.templates.item.categories.item.recommendedsettings.item.DeviceManagementSettingInstanceItemRequestBuilder;
-import microsoft.graph.devicemanagement.templates.item.categories.item.recommendedsettings.RecommendedSettingsRequestBuilder;
-import microsoft.graph.models.DeviceManagementTemplateSettingCategory;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the categories property of the microsoft.graph.deviceManagementTemplate entity. */
 public class DeviceManagementTemplateSettingCategoryItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class DeviceManagementTemplateSettingCategoryItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.templates.item.categories.item.recommendedSettings.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.templates.item.categories.item.recommendedSettings.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementSettingInstanceItemRequestBuilder
      */

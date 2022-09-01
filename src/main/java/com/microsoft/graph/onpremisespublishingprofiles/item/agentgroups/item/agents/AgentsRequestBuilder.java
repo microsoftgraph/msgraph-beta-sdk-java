@@ -1,5 +1,9 @@
-package microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.agents;
+package com.microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.agents;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnPremisesAgent;
+import com.microsoft.graph.models.OnPremisesAgentCollectionResponse;
+import com.microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.agents.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnPremisesAgent;
-import microsoft.graph.models.OnPremisesAgentCollectionResponse;
-import microsoft.graph.onpremisespublishingprofiles.item.agentgroups.item.agents.count.CountRequestBuilder;
 /** Provides operations to manage the agents property of the microsoft.graph.onPremisesAgentGroup entity. */
 public class AgentsRequestBuilder {
     /** The Count property */

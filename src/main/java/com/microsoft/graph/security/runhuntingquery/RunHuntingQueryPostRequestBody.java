@@ -1,4 +1,4 @@
-package microsoft.graph.security.runhuntingquery;
+package com.microsoft.graph.security.runhuntingquery;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

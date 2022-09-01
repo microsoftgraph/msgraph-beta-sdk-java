@@ -1,5 +1,7 @@
-package microsoft.graph.financials.companies.item.salescreditmemos.item.salescreditmemolines.item.item.itemcategory;
+package com.microsoft.graph.financials.companies.item.salescreditmemos.item.salescreditmemolines.item.item.itemcategory;
 
+import com.microsoft.graph.models.ItemCategory;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ItemCategory;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the itemCategory property of the microsoft.graph.item entity. */
 public class ItemCategoryRequestBuilder {
     /** Path parameters for the request */

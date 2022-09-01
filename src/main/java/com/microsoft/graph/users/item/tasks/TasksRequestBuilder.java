@@ -1,5 +1,11 @@
-package microsoft.graph.users.item.tasks;
+package com.microsoft.graph.users.item.tasks;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Tasks;
+import com.microsoft.graph.users.item.tasks.alltasks.AlltasksRequestBuilder;
+import com.microsoft.graph.users.item.tasks.alltasks.item.BaseTaskItemRequestBuilder;
+import com.microsoft.graph.users.item.tasks.lists.item.BaseTaskListItemRequestBuilder;
+import com.microsoft.graph.users.item.tasks.lists.ListsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Tasks;
-import microsoft.graph.users.item.tasks.alltasks.AlltasksRequestBuilder;
-import microsoft.graph.users.item.tasks.alltasks.item.BaseTaskItemRequestBuilder;
-import microsoft.graph.users.item.tasks.lists.item.BaseTaskListItemRequestBuilder;
-import microsoft.graph.users.item.tasks.lists.ListsRequestBuilder;
 /** Provides operations to manage the tasks property of the microsoft.graph.user entity. */
 public class TasksRequestBuilder {
     /** The alltasks property */
@@ -39,7 +39,7 @@ public class TasksRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.users.item.tasks.alltasks.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.tasks.alltasks.item collection
      * @param id Unique identifier of the item
      * @return a BaseTaskItemRequestBuilder
      */
@@ -270,7 +270,7 @@ public class TasksRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.tasks.lists.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.tasks.lists.item collection
      * @param id Unique identifier of the item
      * @return a BaseTaskListItemRequestBuilder
      */

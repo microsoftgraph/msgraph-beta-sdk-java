@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsnotautopilotreadydevice;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsnotautopilotreadydevice;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsnotautopilotreadydevice.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsNotAutopilotReadyDevice;
+import com.microsoft.graph.models.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsnotautopilotreadydevice.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsNotAutopilotReadyDevice;
-import microsoft.graph.models.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsNotAutopilotReadyDevice property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder {
     /** The Count property */

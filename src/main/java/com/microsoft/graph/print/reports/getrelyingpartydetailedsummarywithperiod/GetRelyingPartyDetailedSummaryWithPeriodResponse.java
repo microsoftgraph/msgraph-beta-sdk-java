@@ -1,5 +1,6 @@
-package microsoft.graph.print.reports.getrelyingpartydetailedsummarywithperiod;
+package com.microsoft.graph.print.reports.getrelyingpartydetailedsummarywithperiod;
 
+import com.microsoft.graph.models.RelyingPartyDetailedSummary;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.RelyingPartyDetailedSummary;
 /** Provides operations to call the getRelyingPartyDetailedSummary method. */
 public class GetRelyingPartyDetailedSummaryWithPeriodResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

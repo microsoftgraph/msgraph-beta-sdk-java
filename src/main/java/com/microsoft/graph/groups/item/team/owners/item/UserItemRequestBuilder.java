@@ -1,5 +1,7 @@
-package microsoft.graph.groups.item.team.owners.item;
+package com.microsoft.graph.groups.item.team.owners.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.User;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.User;
 /** Provides operations to manage the owners property of the microsoft.graph.team entity. */
 public class UserItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,18 @@
-package microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance;
+package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance;
 
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.acceptrecommendations.AcceptRecommendationsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.applydecisions.ApplyDecisionsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.batchrecorddecisions.BatchRecordDecisionsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.contactedreviewers.ContactedReviewersRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.contactedreviewers.item.AccessReviewReviewerItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.decisions.DecisionsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.definition.DefinitionRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.resetdecisions.ResetDecisionsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.sendreminder.SendReminderRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.stop.StopRequestBuilder;
+import com.microsoft.graph.models.AccessReviewInstance;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.acceptrecommendations.AcceptRecommendationsRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.applydecisions.ApplyDecisionsRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.batchrecorddecisions.BatchRecordDecisionsRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.contactedreviewers.ContactedReviewersRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.contactedreviewers.item.AccessReviewReviewerItemRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.decisions.DecisionsRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.definition.DefinitionRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.resetdecisions.ResetDecisionsRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.sendreminder.SendReminderRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.instance.stop.StopRequestBuilder;
-import microsoft.graph.models.AccessReviewInstance;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the instance property of the microsoft.graph.accessReviewInstanceDecisionItem entity. */
 public class InstanceRequestBuilder {
     /** The acceptRecommendations property */
@@ -108,7 +108,7 @@ public class InstanceRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item.decisions.item.instance.contactedReviewers.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item.decisions.item.instance.contactedReviewers.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewReviewerItemRequestBuilder
      */
@@ -210,7 +210,7 @@ public class InstanceRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item.decisions.item.instance.decisions.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item.decisions.item.instance.decisions.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
      */

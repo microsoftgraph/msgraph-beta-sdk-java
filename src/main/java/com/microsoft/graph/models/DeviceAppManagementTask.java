@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AppVulnerabilityTask;
+import com.microsoft.graph.models.SecurityConfigurationTask;
+import com.microsoft.graph.models.UnmanagedDeviceDiscoveryTask;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

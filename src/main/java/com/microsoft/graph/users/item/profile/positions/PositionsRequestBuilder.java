@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.profile.positions;
+package com.microsoft.graph.users.item.profile.positions;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WorkPosition;
+import com.microsoft.graph.models.WorkPositionCollectionResponse;
+import com.microsoft.graph.users.item.profile.positions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WorkPosition;
-import microsoft.graph.models.WorkPositionCollectionResponse;
-import microsoft.graph.users.item.profile.positions.count.CountRequestBuilder;
 /** Provides operations to manage the positions property of the microsoft.graph.profile entity. */
 public class PositionsRequestBuilder {
     /** The Count property */

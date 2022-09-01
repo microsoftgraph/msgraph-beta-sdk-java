@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.zebrafotaconnector.disconnect;
+package com.microsoft.graph.devicemanagement.zebrafotaconnector.disconnect;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

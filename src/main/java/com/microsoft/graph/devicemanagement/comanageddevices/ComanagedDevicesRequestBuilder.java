@@ -1,5 +1,16 @@
-package microsoft.graph.devicemanagement.comanageddevices;
+package com.microsoft.graph.devicemanagement.comanageddevices;
 
+import com.microsoft.graph.devicemanagement.comanageddevices.appdiagnosticswithupn.AppDiagnosticsWithUpnRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.bulkreprovisioncloudpc.BulkReprovisionCloudPcRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.bulkrestorecloudpc.BulkRestoreCloudPcRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.bulksetcloudpcreviewstatus.BulkSetCloudPcReviewStatusRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.downloadappdiagnostics.DownloadAppDiagnosticsRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.executeaction.ExecuteActionRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.movedevicestoou.MoveDevicesToOURequestBuilder;
+import com.microsoft.graph.models.ManagedDevice;
+import com.microsoft.graph.models.ManagedDeviceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.comanageddevices.appdiagnosticswithupn.AppDiagnosticsWithUpnRequestBuilder;
-import microsoft.graph.devicemanagement.comanageddevices.bulkreprovisioncloudpc.BulkReprovisionCloudPcRequestBuilder;
-import microsoft.graph.devicemanagement.comanageddevices.bulkrestorecloudpc.BulkRestoreCloudPcRequestBuilder;
-import microsoft.graph.devicemanagement.comanageddevices.bulksetcloudpcreviewstatus.BulkSetCloudPcReviewStatusRequestBuilder;
-import microsoft.graph.devicemanagement.comanageddevices.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.comanageddevices.downloadappdiagnostics.DownloadAppDiagnosticsRequestBuilder;
-import microsoft.graph.devicemanagement.comanageddevices.executeaction.ExecuteActionRequestBuilder;
-import microsoft.graph.devicemanagement.comanageddevices.movedevicestoou.MoveDevicesToOURequestBuilder;
-import microsoft.graph.models.ManagedDevice;
-import microsoft.graph.models.ManagedDeviceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the comanagedDevices property of the microsoft.graph.deviceManagement entity. */
 public class ComanagedDevicesRequestBuilder {
     /** The bulkReprovisionCloudPc property */

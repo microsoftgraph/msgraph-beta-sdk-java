@@ -1,5 +1,6 @@
-package microsoft.graph.me.manageddevices.appdiagnosticswithupn;
+package com.microsoft.graph.me.manageddevices.appdiagnosticswithupn;
 
+import com.microsoft.graph.models.PowerliftIncidentMetadata;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.PowerliftIncidentMetadata;
 /** Provides operations to call the appDiagnostics method. */
 public class AppDiagnosticsWithUpnResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

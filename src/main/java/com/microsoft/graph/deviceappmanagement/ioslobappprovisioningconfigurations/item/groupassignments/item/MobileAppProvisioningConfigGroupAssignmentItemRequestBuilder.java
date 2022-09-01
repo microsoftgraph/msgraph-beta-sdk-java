@@ -1,5 +1,7 @@
-package microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.groupassignments.item;
+package com.microsoft.graph.deviceappmanagement.ioslobappprovisioningconfigurations.item.groupassignments.item;
 
+import com.microsoft.graph.models.MobileAppProvisioningConfigGroupAssignment;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MobileAppProvisioningConfigGroupAssignment;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groupAssignments property of the microsoft.graph.iosLobAppProvisioningConfiguration entity. */
 public class MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder {
     /** Path parameters for the request */

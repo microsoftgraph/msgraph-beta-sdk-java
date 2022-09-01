@@ -1,9 +1,9 @@
-package microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.members.item;
+package com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.members.item;
 
+import com.microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.members.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.onpremisespublishingprofiles.item.connectorgroups.item.members.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /onPremisesPublishingProfiles/{onPremisesPublishingProfile-id}/connectorGroups/{connectorGroup-id}/members/{connector-id} */
 public class ConnectorItemRequestBuilder {
     /** Path parameters for the request */

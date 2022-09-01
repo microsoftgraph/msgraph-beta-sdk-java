@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.rolescopetags.item;
+package com.microsoft.graph.devicemanagement.rolescopetags.item;
 
+import com.microsoft.graph.devicemanagement.rolescopetags.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.rolescopetags.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.rolescopetags.item.assignments.item.RoleScopeTagAutoAssignmentItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RoleScopeTag;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.rolescopetags.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.rolescopetags.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.rolescopetags.item.assignments.item.RoleScopeTagAutoAssignmentItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RoleScopeTag;
 /** Provides operations to manage the roleScopeTags property of the microsoft.graph.deviceManagement entity. */
 public class RoleScopeTagItemRequestBuilder {
     /** The assign property */
@@ -38,7 +38,7 @@ public class RoleScopeTagItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.roleScopeTags.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.roleScopeTags.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a RoleScopeTagAutoAssignmentItemRequestBuilder
      */

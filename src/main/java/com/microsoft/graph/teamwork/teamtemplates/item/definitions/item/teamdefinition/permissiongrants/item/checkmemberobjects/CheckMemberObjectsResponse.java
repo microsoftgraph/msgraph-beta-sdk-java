@@ -1,4 +1,4 @@
-package microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.item.checkmemberobjects;
+package com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.item.checkmemberobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

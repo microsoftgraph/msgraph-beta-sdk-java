@@ -1,5 +1,10 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DomainDnsCnameRecord;
+import com.microsoft.graph.models.DomainDnsMxRecord;
+import com.microsoft.graph.models.DomainDnsSrvRecord;
+import com.microsoft.graph.models.DomainDnsTxtRecord;
+import com.microsoft.graph.models.DomainDnsUnavailableRecord;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +12,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class DomainDnsRecord extends Entity implements Parsable {
     /** If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain. */
     private Boolean _isOptional;

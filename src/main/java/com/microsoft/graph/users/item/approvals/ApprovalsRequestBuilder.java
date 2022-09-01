@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.approvals;
+package com.microsoft.graph.users.item.approvals;
 
+import com.microsoft.graph.models.Approval;
+import com.microsoft.graph.models.ApprovalCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.approvals.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.approvals.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Approval;
-import microsoft.graph.models.ApprovalCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.approvals.count.CountRequestBuilder;
-import microsoft.graph.users.item.approvals.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 /** Provides operations to manage the approvals property of the microsoft.graph.user entity. */
 public class ApprovalsRequestBuilder {
     /** The Count property */

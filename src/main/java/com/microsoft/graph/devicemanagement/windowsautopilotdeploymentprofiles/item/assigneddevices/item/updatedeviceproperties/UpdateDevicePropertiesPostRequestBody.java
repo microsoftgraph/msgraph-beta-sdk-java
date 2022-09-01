@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.updatedeviceproperties;
+package com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assigneddevices.item.updatedeviceproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

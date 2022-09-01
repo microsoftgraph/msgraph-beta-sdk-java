@@ -1,4 +1,4 @@
-package microsoft.graph.privilegedroles.item.selfactivate;
+package com.microsoft.graph.privilegedroles.item.selfactivate;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

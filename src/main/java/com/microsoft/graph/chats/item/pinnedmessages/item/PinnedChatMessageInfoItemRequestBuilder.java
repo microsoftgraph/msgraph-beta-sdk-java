@@ -1,5 +1,8 @@
-package microsoft.graph.chats.item.pinnedmessages.item;
+package com.microsoft.graph.chats.item.pinnedmessages.item;
 
+import com.microsoft.graph.chats.item.pinnedmessages.item.message.MessageRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PinnedChatMessageInfo;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.chats.item.pinnedmessages.item.message.MessageRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PinnedChatMessageInfo;
 /** Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity. */
 public class PinnedChatMessageInfoItemRequestBuilder {
     /** The message property */

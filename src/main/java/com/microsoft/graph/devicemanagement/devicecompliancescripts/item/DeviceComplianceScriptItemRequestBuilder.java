@@ -1,5 +1,13 @@
-package microsoft.graph.devicemanagement.devicecompliancescripts.item;
+package com.microsoft.graph.devicemanagement.devicecompliancescripts.item;
 
+import com.microsoft.graph.devicemanagement.devicecompliancescripts.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancescripts.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancescripts.item.assignments.item.DeviceHealthScriptAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancescripts.item.devicerunstates.DeviceRunStatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancescripts.item.devicerunstates.item.DeviceComplianceScriptDeviceStateItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancescripts.item.runsummary.RunSummaryRequestBuilder;
+import com.microsoft.graph.models.DeviceComplianceScript;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecompliancescripts.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancescripts.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancescripts.item.assignments.item.DeviceHealthScriptAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancescripts.item.devicerunstates.DeviceRunStatesRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancescripts.item.devicerunstates.item.DeviceComplianceScriptDeviceStateItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancescripts.item.runsummary.RunSummaryRequestBuilder;
-import microsoft.graph.models.DeviceComplianceScript;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceComplianceScripts property of the microsoft.graph.deviceManagement entity. */
 public class DeviceComplianceScriptItemRequestBuilder {
     /** The assign property */
@@ -51,7 +51,7 @@ public class DeviceComplianceScriptItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceComplianceScripts.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceComplianceScripts.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a DeviceHealthScriptAssignmentItemRequestBuilder
      */
@@ -231,7 +231,7 @@ public class DeviceComplianceScriptItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceComplianceScripts.item.deviceRunStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceComplianceScripts.item.deviceRunStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceComplianceScriptDeviceStateItemRequestBuilder
      */

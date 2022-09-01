@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.deponboardingsettings;
+package com.microsoft.graph.devicemanagement.deponboardingsettings;
 
+import com.microsoft.graph.devicemanagement.deponboardingsettings.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.deponboardingsettings.getexpiringvpptokencountwithexpiringbeforedatetime.GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder;
+import com.microsoft.graph.models.DepOnboardingSetting;
+import com.microsoft.graph.models.DepOnboardingSettingCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.deponboardingsettings.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.deponboardingsettings.getexpiringvpptokencountwithexpiringbeforedatetime.GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder;
-import microsoft.graph.models.DepOnboardingSetting;
-import microsoft.graph.models.DepOnboardingSettingCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the depOnboardingSettings property of the microsoft.graph.deviceManagement entity. */
 public class DepOnboardingSettingsRequestBuilder {
     /** The Count property */

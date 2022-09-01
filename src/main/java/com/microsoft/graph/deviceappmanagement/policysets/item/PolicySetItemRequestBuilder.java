@@ -1,5 +1,12 @@
-package microsoft.graph.deviceappmanagement.policysets.item;
+package com.microsoft.graph.deviceappmanagement.policysets.item;
 
+import com.microsoft.graph.deviceappmanagement.policysets.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.policysets.item.assignments.item.PolicySetAssignmentItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.policysets.item.items.item.PolicySetItemItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.policysets.item.items.ItemsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.policysets.item.update.UpdateRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PolicySet;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.policysets.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.deviceappmanagement.policysets.item.assignments.item.PolicySetAssignmentItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.policysets.item.items.item.PolicySetItemItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.policysets.item.items.ItemsRequestBuilder;
-import microsoft.graph.deviceappmanagement.policysets.item.update.UpdateRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PolicySet;
 /** Provides operations to manage the policySets property of the microsoft.graph.deviceAppManagement entity. */
 public class PolicySetItemRequestBuilder {
     /** The assignments property */
@@ -45,7 +45,7 @@ public class PolicySetItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.policySets.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.policySets.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a PolicySetAssignmentItemRequestBuilder
      */
@@ -276,7 +276,7 @@ public class PolicySetItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.policySets.item.items.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.policySets.item.items.item collection
      * @param id Unique identifier of the item
      * @return a PolicySetItemItemRequestBuilder
      */

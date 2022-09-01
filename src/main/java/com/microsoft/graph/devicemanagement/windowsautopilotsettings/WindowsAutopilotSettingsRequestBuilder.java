@@ -1,5 +1,8 @@
-package microsoft.graph.devicemanagement.windowsautopilotsettings;
+package com.microsoft.graph.devicemanagement.windowsautopilotsettings;
 
+import com.microsoft.graph.devicemanagement.windowsautopilotsettings.sync.SyncRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsAutopilotSettings;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.windowsautopilotsettings.sync.SyncRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsAutopilotSettings;
 /** Provides operations to manage the windowsAutopilotSettings property of the microsoft.graph.deviceManagement entity. */
 public class WindowsAutopilotSettingsRequestBuilder {
     /** Path parameters for the request */

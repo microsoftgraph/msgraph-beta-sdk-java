@@ -1,5 +1,13 @@
-package microsoft.graph.serviceprincipals.item.synchronization;
+package com.microsoft.graph.serviceprincipals.item.synchronization;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Synchronization;
+import com.microsoft.graph.serviceprincipals.item.synchronization.acquireaccesstoken.AcquireAccessTokenRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.synchronization.jobs.item.SynchronizationJobItemRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.synchronization.jobs.JobsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.synchronization.ping.PingRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.synchronization.templates.item.SynchronizationTemplateItemRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.synchronization.templates.TemplatesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Synchronization;
-import microsoft.graph.serviceprincipals.item.synchronization.acquireaccesstoken.AcquireAccessTokenRequestBuilder;
-import microsoft.graph.serviceprincipals.item.synchronization.jobs.item.SynchronizationJobItemRequestBuilder;
-import microsoft.graph.serviceprincipals.item.synchronization.jobs.JobsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.synchronization.ping.PingRequestBuilder;
-import microsoft.graph.serviceprincipals.item.synchronization.templates.item.SynchronizationTemplateItemRequestBuilder;
-import microsoft.graph.serviceprincipals.item.synchronization.templates.TemplatesRequestBuilder;
 /** Provides operations to manage the synchronization property of the microsoft.graph.servicePrincipal entity. */
 public class SynchronizationRequestBuilder {
     /** The acquireAccessToken property */
@@ -265,7 +265,7 @@ public class SynchronizationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.synchronization.jobs.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.synchronization.jobs.item collection
      * @param id Unique identifier of the item
      * @return a SynchronizationJobItemRequestBuilder
      */
@@ -340,7 +340,7 @@ public class SynchronizationRequestBuilder {
         return new PingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.synchronization.templates.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.synchronization.templates.item collection
      * @param id Unique identifier of the item
      * @return a SynchronizationTemplateItemRequestBuilder
      */

@@ -1,5 +1,9 @@
-package microsoft.graph.governanceroledefinitions;
+package com.microsoft.graph.governanceroledefinitions;
 
+import com.microsoft.graph.governanceroledefinitions.count.CountRequestBuilder;
+import com.microsoft.graph.models.GovernanceRoleDefinition;
+import com.microsoft.graph.models.GovernanceRoleDefinitionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.governanceroledefinitions.count.CountRequestBuilder;
-import microsoft.graph.models.GovernanceRoleDefinition;
-import microsoft.graph.models.GovernanceRoleDefinitionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of governanceRoleDefinition entities. */
 public class GovernanceRoleDefinitionsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,11 @@
-package microsoft.graph.devicemanagement.auditevents;
+package com.microsoft.graph.devicemanagement.auditevents;
 
+import com.microsoft.graph.devicemanagement.auditevents.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.auditevents.getauditactivitytypeswithcategory.GetAuditActivityTypesWithCategoryRequestBuilder;
+import com.microsoft.graph.devicemanagement.auditevents.getauditcategories.GetAuditCategoriesRequestBuilder;
+import com.microsoft.graph.models.AuditEvent;
+import com.microsoft.graph.models.AuditEventCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.auditevents.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.auditevents.getauditactivitytypeswithcategory.GetAuditActivityTypesWithCategoryRequestBuilder;
-import microsoft.graph.devicemanagement.auditevents.getauditcategories.GetAuditCategoriesRequestBuilder;
-import microsoft.graph.models.AuditEvent;
-import microsoft.graph.models.AuditEventCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the auditEvents property of the microsoft.graph.deviceManagement entity. */
 public class AuditEventsRequestBuilder {
     /** The Count property */

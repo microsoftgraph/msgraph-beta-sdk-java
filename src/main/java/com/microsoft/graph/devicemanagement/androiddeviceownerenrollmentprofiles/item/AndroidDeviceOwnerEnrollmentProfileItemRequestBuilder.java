@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.androiddeviceownerenrollmentprofiles.item;
+package com.microsoft.graph.devicemanagement.androiddeviceownerenrollmentprofiles.item;
 
+import com.microsoft.graph.devicemanagement.androiddeviceownerenrollmentprofiles.item.createtoken.CreateTokenRequestBuilder;
+import com.microsoft.graph.devicemanagement.androiddeviceownerenrollmentprofiles.item.revoketoken.RevokeTokenRequestBuilder;
+import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfile;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.androiddeviceownerenrollmentprofiles.item.createtoken.CreateTokenRequestBuilder;
-import microsoft.graph.devicemanagement.androiddeviceownerenrollmentprofiles.item.revoketoken.RevokeTokenRequestBuilder;
-import microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfile;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the androidDeviceOwnerEnrollmentProfiles property of the microsoft.graph.deviceManagement entity. */
 public class AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder {
     /** The createToken property */

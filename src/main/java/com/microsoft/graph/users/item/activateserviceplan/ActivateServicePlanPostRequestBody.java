@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.activateserviceplan;
+package com.microsoft.graph.users.item.activateserviceplan;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

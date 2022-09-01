@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.androiddeviceownerenrollmentprofiles;
+package com.microsoft.graph.devicemanagement.androiddeviceownerenrollmentprofiles;
 
+import com.microsoft.graph.devicemanagement.androiddeviceownerenrollmentprofiles.count.CountRequestBuilder;
+import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfile;
+import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfileCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.androiddeviceownerenrollmentprofiles.count.CountRequestBuilder;
-import microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfile;
-import microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfileCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the androidDeviceOwnerEnrollmentProfiles property of the microsoft.graph.deviceManagement entity. */
 public class AndroidDeviceOwnerEnrollmentProfilesRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.manageddevices.bulkreprovisioncloudpc;
+package com.microsoft.graph.users.item.manageddevices.bulkreprovisioncloudpc;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

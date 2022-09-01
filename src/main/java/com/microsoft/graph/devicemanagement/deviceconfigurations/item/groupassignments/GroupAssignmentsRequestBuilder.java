@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.deviceconfigurations.item.groupassignments;
+package com.microsoft.graph.devicemanagement.deviceconfigurations.item.groupassignments;
 
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.groupassignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceConfigurationGroupAssignment;
+import com.microsoft.graph.models.DeviceConfigurationGroupAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.groupassignments.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceConfigurationGroupAssignment;
-import microsoft.graph.models.DeviceConfigurationGroupAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groupAssignments property of the microsoft.graph.deviceConfiguration entity. */
 public class GroupAssignmentsRequestBuilder {
     /** The Count property */

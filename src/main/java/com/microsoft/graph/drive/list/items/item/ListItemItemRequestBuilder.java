@@ -1,5 +1,18 @@
-package microsoft.graph.drive.list.items.item;
+package com.microsoft.graph.drive.list.items.item;
 
+import com.microsoft.graph.drive.list.items.item.activities.ActivitiesRequestBuilder;
+import com.microsoft.graph.drive.list.items.item.activities.item.ItemActivityOLDItemRequestBuilder;
+import com.microsoft.graph.drive.list.items.item.analytics.AnalyticsRequestBuilder;
+import com.microsoft.graph.drive.list.items.item.createlink.CreateLinkRequestBuilder;
+import com.microsoft.graph.drive.list.items.item.documentsetversions.DocumentSetVersionsRequestBuilder;
+import com.microsoft.graph.drive.list.items.item.documentsetversions.item.DocumentSetVersionItemRequestBuilder;
+import com.microsoft.graph.drive.list.items.item.driveitem.DriveItemRequestBuilder;
+import com.microsoft.graph.drive.list.items.item.fields.FieldsRequestBuilder;
+import com.microsoft.graph.drive.list.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import com.microsoft.graph.drive.list.items.item.versions.item.ListItemVersionItemRequestBuilder;
+import com.microsoft.graph.drive.list.items.item.versions.VersionsRequestBuilder;
+import com.microsoft.graph.models.ListItem;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.drive.list.items.item.activities.ActivitiesRequestBuilder;
-import microsoft.graph.drive.list.items.item.activities.item.ItemActivityOLDItemRequestBuilder;
-import microsoft.graph.drive.list.items.item.analytics.AnalyticsRequestBuilder;
-import microsoft.graph.drive.list.items.item.createlink.CreateLinkRequestBuilder;
-import microsoft.graph.drive.list.items.item.documentsetversions.DocumentSetVersionsRequestBuilder;
-import microsoft.graph.drive.list.items.item.documentsetversions.item.DocumentSetVersionItemRequestBuilder;
-import microsoft.graph.drive.list.items.item.driveitem.DriveItemRequestBuilder;
-import microsoft.graph.drive.list.items.item.fields.FieldsRequestBuilder;
-import microsoft.graph.drive.list.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-import microsoft.graph.drive.list.items.item.versions.item.ListItemVersionItemRequestBuilder;
-import microsoft.graph.drive.list.items.item.versions.VersionsRequestBuilder;
-import microsoft.graph.models.ListItem;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the items property of the microsoft.graph.list entity. */
 public class ListItemItemRequestBuilder {
     /** The activities property */
@@ -71,7 +71,7 @@ public class ListItemItemRequestBuilder {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.drive.list.items.item.activities.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.list.items.item.activities.item collection
      * @param id Unique identifier of the item
      * @return a ItemActivityOLDItemRequestBuilder
      */
@@ -251,7 +251,7 @@ public class ListItemItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.drive.list.items.item.documentSetVersions.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.list.items.item.documentSetVersions.item collection
      * @param id Unique identifier of the item
      * @return a DocumentSetVersionItemRequestBuilder
      */
@@ -383,7 +383,7 @@ public class ListItemItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.drive.list.items.item.versions.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.list.items.item.versions.item collection
      * @param id Unique identifier of the item
      * @return a ListItemVersionItemRequestBuilder
      */

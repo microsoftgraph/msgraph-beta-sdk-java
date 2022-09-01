@@ -1,4 +1,4 @@
-package microsoft.graph.me.manageddevices.item.deprovision;
+package com.microsoft.graph.me.manageddevices.item.deprovision;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

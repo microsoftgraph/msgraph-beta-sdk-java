@@ -1,5 +1,9 @@
-package microsoft.graph.employeeexperience;
+package com.microsoft.graph.employeeexperience;
 
+import com.microsoft.graph.employeeexperience.learningproviders.item.LearningProviderItemRequestBuilder;
+import com.microsoft.graph.employeeexperience.learningproviders.LearningProvidersRequestBuilder;
+import com.microsoft.graph.models.EmployeeExperience;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.employeeexperience.learningproviders.item.LearningProviderItemRequestBuilder;
-import microsoft.graph.employeeexperience.learningproviders.LearningProvidersRequestBuilder;
-import microsoft.graph.models.EmployeeExperience;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the employeeExperience singleton. */
 public class EmployeeExperienceRequestBuilder {
     /** The learningProviders property */
@@ -172,7 +172,7 @@ public class EmployeeExperienceRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.employeeExperience.learningProviders.item collection
+     * Gets an item from the com.Microsoft.Graph.employeeExperience.learningProviders.item collection
      * @param id Unique identifier of the item
      * @return a LearningProviderItemRequestBuilder
      */

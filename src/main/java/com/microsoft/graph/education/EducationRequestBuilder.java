@@ -1,5 +1,16 @@
-package microsoft.graph.education;
+package com.microsoft.graph.education;
 
+import com.microsoft.graph.education.classes.ClassesRequestBuilder;
+import com.microsoft.graph.education.classes.item.EducationClassItemRequestBuilder;
+import com.microsoft.graph.education.me.MeRequestBuilder;
+import com.microsoft.graph.education.schools.item.EducationSchoolItemRequestBuilder;
+import com.microsoft.graph.education.schools.SchoolsRequestBuilder;
+import com.microsoft.graph.education.synchronizationprofiles.item.EducationSynchronizationProfileItemRequestBuilder;
+import com.microsoft.graph.education.synchronizationprofiles.SynchronizationProfilesRequestBuilder;
+import com.microsoft.graph.education.users.item.EducationUserItemRequestBuilder;
+import com.microsoft.graph.education.users.UsersRequestBuilder;
+import com.microsoft.graph.models.EducationRoot;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.classes.ClassesRequestBuilder;
-import microsoft.graph.education.classes.item.EducationClassItemRequestBuilder;
-import microsoft.graph.education.me.MeRequestBuilder;
-import microsoft.graph.education.schools.item.EducationSchoolItemRequestBuilder;
-import microsoft.graph.education.schools.SchoolsRequestBuilder;
-import microsoft.graph.education.synchronizationprofiles.item.EducationSynchronizationProfileItemRequestBuilder;
-import microsoft.graph.education.synchronizationprofiles.SynchronizationProfilesRequestBuilder;
-import microsoft.graph.education.users.item.EducationUserItemRequestBuilder;
-import microsoft.graph.education.users.UsersRequestBuilder;
-import microsoft.graph.models.EducationRoot;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the educationRoot singleton. */
 public class EducationRequestBuilder {
     /** The classes property */
@@ -59,7 +59,7 @@ public class EducationRequestBuilder {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.classes.item collection
+     * Gets an item from the com.Microsoft.Graph.education.classes.item collection
      * @param id Unique identifier of the item
      * @return a EducationClassItemRequestBuilder
      */
@@ -266,7 +266,7 @@ public class EducationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.schools.item collection
+     * Gets an item from the com.Microsoft.Graph.education.schools.item collection
      * @param id Unique identifier of the item
      * @return a EducationSchoolItemRequestBuilder
      */
@@ -278,7 +278,7 @@ public class EducationRequestBuilder {
         return new EducationSchoolItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.synchronizationProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.education.synchronizationProfiles.item collection
      * @param id Unique identifier of the item
      * @return a EducationSynchronizationProfileItemRequestBuilder
      */
@@ -290,7 +290,7 @@ public class EducationRequestBuilder {
         return new EducationSynchronizationProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.users.item collection
+     * Gets an item from the com.Microsoft.Graph.education.users.item collection
      * @param id Unique identifier of the item
      * @return a EducationUserItemRequestBuilder
      */

@@ -1,4 +1,4 @@
-package microsoft.graph.me.devices.validateproperties;
+package com.microsoft.graph.me.devices.validateproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.templates.item.migratableto;
+package com.microsoft.graph.devicemanagement.templates.item.migratableto;
 
+import com.microsoft.graph.devicemanagement.templates.item.migratableto.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.templates.item.migratableto.importoffice365deviceconfigurationpolicies.ImportOffice365DeviceConfigurationPoliciesRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementTemplate;
+import com.microsoft.graph.models.DeviceManagementTemplateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.templates.item.migratableto.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.templates.item.migratableto.importoffice365deviceconfigurationpolicies.ImportOffice365DeviceConfigurationPoliciesRequestBuilder;
-import microsoft.graph.models.DeviceManagementTemplate;
-import microsoft.graph.models.DeviceManagementTemplateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the migratableTo property of the microsoft.graph.deviceManagementTemplate entity. */
 public class MigratableToRequestBuilder {
     /** The Count property */

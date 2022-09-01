@@ -1,5 +1,11 @@
-package microsoft.graph.directory.impactedresources.item;
+package com.microsoft.graph.directory.impactedresources.item;
 
+import com.microsoft.graph.directory.impactedresources.item.complete.CompleteRequestBuilder;
+import com.microsoft.graph.directory.impactedresources.item.dismiss.DismissRequestBuilder;
+import com.microsoft.graph.directory.impactedresources.item.postpone.PostponeRequestBuilder;
+import com.microsoft.graph.directory.impactedresources.item.reactivate.ReactivateRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RecommendationResource;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.impactedresources.item.complete.CompleteRequestBuilder;
-import microsoft.graph.directory.impactedresources.item.dismiss.DismissRequestBuilder;
-import microsoft.graph.directory.impactedresources.item.postpone.PostponeRequestBuilder;
-import microsoft.graph.directory.impactedresources.item.reactivate.ReactivateRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RecommendationResource;
 /** Provides operations to manage the impactedResources property of the microsoft.graph.directory entity. */
 public class RecommendationResourceItemRequestBuilder {
     /** The complete property */

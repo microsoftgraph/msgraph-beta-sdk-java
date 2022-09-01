@@ -1,9 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum AndroidDeviceOwnerCrossProfileDataSharing implements ValuedEnum {
     /** Not configured; this value defaults to CROSS_PROFILE_DATA_SHARING_UNSPECIFIED. */
     NotConfigured("notConfigured"),

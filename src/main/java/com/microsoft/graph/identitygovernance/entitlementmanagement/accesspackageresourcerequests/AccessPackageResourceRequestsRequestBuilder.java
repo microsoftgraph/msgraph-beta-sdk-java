@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.count.CountRequestBuilder;
+import com.microsoft.graph.models.AccessPackageResourceRequest;
+import com.microsoft.graph.models.AccessPackageResourceRequestCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.count.CountRequestBuilder;
-import microsoft.graph.models.AccessPackageResourceRequest;
-import microsoft.graph.models.AccessPackageResourceRequestCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageResourceRequests property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageResourceRequestsRequestBuilder {
     /** The Count property */

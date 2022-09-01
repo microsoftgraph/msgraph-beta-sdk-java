@@ -1,5 +1,12 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.Drive;
+import com.microsoft.graph.models.DriveItem;
+import com.microsoft.graph.models.List;
+import com.microsoft.graph.models.ListItem;
+import com.microsoft.graph.models.SharedDriveItem;
+import com.microsoft.graph.models.Site;
+import com.microsoft.graph.models.SitePage;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

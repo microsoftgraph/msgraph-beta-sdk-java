@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.wdacsupplementalpolicies;
+package com.microsoft.graph.deviceappmanagement.wdacsupplementalpolicies;
 
+import com.microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicy;
+import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.wdacsupplementalpolicies.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicy;
-import microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse;
 /** Provides operations to manage the wdacSupplementalPolicies property of the microsoft.graph.deviceAppManagement entity. */
 public class WdacSupplementalPoliciesRequestBuilder {
     /** The Count property */

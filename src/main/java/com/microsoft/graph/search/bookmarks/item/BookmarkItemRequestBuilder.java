@@ -1,5 +1,7 @@
-package microsoft.graph.search.bookmarks.item;
+package com.microsoft.graph.search.bookmarks.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.search.Bookmark;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.search.Bookmark;
 /** Provides operations to manage the bookmarks property of the microsoft.graph.searchEntity entity. */
 public class BookmarkItemRequestBuilder {
     /** Path parameters for the request */

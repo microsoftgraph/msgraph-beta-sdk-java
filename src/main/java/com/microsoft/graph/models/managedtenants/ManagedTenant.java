@@ -1,5 +1,6 @@
-package microsoft.graph.models.managedtenants;
+package com.microsoft.graph.models.managedtenants;
 
+import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
 public class ManagedTenant extends Entity implements Parsable {
     /** Aggregate view of device compliance policies across managed tenants. */
     private java.util.List<AggregatedPolicyCompliance> _aggregatedPolicyCompliances;

@@ -1,5 +1,8 @@
-package microsoft.graph.deviceappmanagement.deviceappmanagementtasks.item;
+package com.microsoft.graph.deviceappmanagement.deviceappmanagementtasks.item;
 
+import com.microsoft.graph.deviceappmanagement.deviceappmanagementtasks.item.updatestatus.UpdateStatusRequestBuilder;
+import com.microsoft.graph.models.DeviceAppManagementTask;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.deviceappmanagementtasks.item.updatestatus.UpdateStatusRequestBuilder;
-import microsoft.graph.models.DeviceAppManagementTask;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceAppManagementTasks property of the microsoft.graph.deviceAppManagement entity. */
 public class DeviceAppManagementTaskItemRequestBuilder {
     /** Path parameters for the request */

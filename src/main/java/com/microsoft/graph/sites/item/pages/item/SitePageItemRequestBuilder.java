@@ -1,5 +1,8 @@
-package microsoft.graph.sites.item.pages.item;
+package com.microsoft.graph.sites.item.pages.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SitePage;
+import com.microsoft.graph.sites.item.pages.item.publish.PublishRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SitePage;
-import microsoft.graph.sites.item.pages.item.publish.PublishRequestBuilder;
 /** Provides operations to manage the pages property of the microsoft.graph.site entity. */
 public class SitePageItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,7 @@
-package microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.custodian;
+package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.files.item.custodian;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryCustodian;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryCustodian;
 /** Provides operations to manage the custodian property of the microsoft.graph.security.ediscoveryFile entity. */
 public class CustodianRequestBuilder {
     /** Path parameters for the request */

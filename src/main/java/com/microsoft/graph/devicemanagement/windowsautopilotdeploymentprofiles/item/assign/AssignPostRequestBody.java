@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assign;
+package com.microsoft.graph.devicemanagement.windowsautopilotdeploymentprofiles.item.assign;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

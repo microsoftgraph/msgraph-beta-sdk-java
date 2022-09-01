@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getappstatusoverviewreport;
+package com.microsoft.graph.devicemanagement.reports.getappstatusoverviewreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

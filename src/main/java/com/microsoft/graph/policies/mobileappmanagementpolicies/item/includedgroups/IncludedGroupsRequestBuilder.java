@@ -1,5 +1,9 @@
-package microsoft.graph.policies.mobileappmanagementpolicies.item.includedgroups;
+package com.microsoft.graph.policies.mobileappmanagementpolicies.item.includedgroups;
 
+import com.microsoft.graph.models.GroupCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.mobileappmanagementpolicies.item.includedgroups.count.CountRequestBuilder;
+import com.microsoft.graph.policies.mobileappmanagementpolicies.item.includedgroups.ref.RefRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.GroupCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.policies.mobileappmanagementpolicies.item.includedgroups.count.CountRequestBuilder;
-import microsoft.graph.policies.mobileappmanagementpolicies.item.includedgroups.ref.RefRequestBuilder;
 /** Provides operations to manage the includedGroups property of the microsoft.graph.mobilityManagementPolicy entity. */
 public class IncludedGroupsRequestBuilder {
     /** The Count property */

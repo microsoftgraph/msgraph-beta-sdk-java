@@ -1,5 +1,16 @@
-package microsoft.graph.accessreviews.item;
+package com.microsoft.graph.accessreviews.item;
 
+import com.microsoft.graph.accessreviews.item.applydecisions.ApplyDecisionsRequestBuilder;
+import com.microsoft.graph.accessreviews.item.decisions.DecisionsRequestBuilder;
+import com.microsoft.graph.accessreviews.item.instances.InstancesRequestBuilder;
+import com.microsoft.graph.accessreviews.item.mydecisions.MyDecisionsRequestBuilder;
+import com.microsoft.graph.accessreviews.item.resetdecisions.ResetDecisionsRequestBuilder;
+import com.microsoft.graph.accessreviews.item.reviewers.item.AccessReviewReviewerItemRequestBuilder;
+import com.microsoft.graph.accessreviews.item.reviewers.ReviewersRequestBuilder;
+import com.microsoft.graph.accessreviews.item.sendreminder.SendReminderRequestBuilder;
+import com.microsoft.graph.accessreviews.item.stop.StopRequestBuilder;
+import com.microsoft.graph.models.AccessReview;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.accessreviews.item.applydecisions.ApplyDecisionsRequestBuilder;
-import microsoft.graph.accessreviews.item.decisions.DecisionsRequestBuilder;
-import microsoft.graph.accessreviews.item.instances.InstancesRequestBuilder;
-import microsoft.graph.accessreviews.item.mydecisions.MyDecisionsRequestBuilder;
-import microsoft.graph.accessreviews.item.resetdecisions.ResetDecisionsRequestBuilder;
-import microsoft.graph.accessreviews.item.reviewers.item.AccessReviewReviewerItemRequestBuilder;
-import microsoft.graph.accessreviews.item.reviewers.ReviewersRequestBuilder;
-import microsoft.graph.accessreviews.item.sendreminder.SendReminderRequestBuilder;
-import microsoft.graph.accessreviews.item.stop.StopRequestBuilder;
-import microsoft.graph.models.AccessReview;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of accessReview entities. */
 public class AccessReviewItemRequestBuilder {
     /** The applyDecisions property */
@@ -191,16 +191,16 @@ public class AccessReviewItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.accessReviews.item.decisions.item collection
+     * Gets an item from the com.Microsoft.Graph.accessReviews.item.decisions.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewDecisionItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.accessreviews.item.decisions.item.AccessReviewDecisionItemRequestBuilder decisions(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.accessreviews.item.decisions.item.AccessReviewDecisionItemRequestBuilder decisions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessReviewDecision%2Did", id);
-        return new microsoft.graph.accessreviews.item.decisions.item.AccessReviewDecisionItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.accessreviews.item.decisions.item.AccessReviewDecisionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * In the Azure AD access reviews feature, delete an accessReview object.
@@ -305,7 +305,7 @@ public class AccessReviewItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.accessReviews.item.instances.item collection
+     * Gets an item from the com.Microsoft.Graph.accessReviews.item.instances.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewItemRequestBuilder
      */
@@ -317,16 +317,16 @@ public class AccessReviewItemRequestBuilder {
         return new AccessReviewItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.accessReviews.item.myDecisions.item collection
+     * Gets an item from the com.Microsoft.Graph.accessReviews.item.myDecisions.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewDecisionItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.accessreviews.item.mydecisions.item.AccessReviewDecisionItemRequestBuilder myDecisions(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.accessreviews.item.mydecisions.item.AccessReviewDecisionItemRequestBuilder myDecisions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessReviewDecision%2Did", id);
-        return new microsoft.graph.accessreviews.item.mydecisions.item.AccessReviewDecisionItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.accessreviews.item.mydecisions.item.AccessReviewDecisionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * In the Azure AD access reviews feature, update an existing accessReview object to change one or more of its properties. This API is not intended to change the reviewers or decisions of a review.  To change the reviewers, use the addReviewer or removeReviewer APIs.  To stop an already-started one-time review, or an already-started instance of a recurring review, early, use the stop API. To apply the decisions to the target group or app access rights, use the apply API. 
@@ -384,7 +384,7 @@ public class AccessReviewItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.accessReviews.item.reviewers.item collection
+     * Gets an item from the com.Microsoft.Graph.accessReviews.item.reviewers.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewReviewerItemRequestBuilder
      */

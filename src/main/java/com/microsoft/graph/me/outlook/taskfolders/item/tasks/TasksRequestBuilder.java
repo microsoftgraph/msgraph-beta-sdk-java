@@ -1,5 +1,9 @@
-package microsoft.graph.me.outlook.taskfolders.item.tasks;
+package com.microsoft.graph.me.outlook.taskfolders.item.tasks;
 
+import com.microsoft.graph.me.outlook.taskfolders.item.tasks.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OutlookTask;
+import com.microsoft.graph.models.OutlookTaskCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.outlook.taskfolders.item.tasks.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OutlookTask;
-import microsoft.graph.models.OutlookTaskCollectionResponse;
 /** Provides operations to manage the tasks property of the microsoft.graph.outlookTaskFolder entity. */
 public class TasksRequestBuilder {
     /** The Count property */

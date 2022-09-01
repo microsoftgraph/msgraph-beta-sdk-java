@@ -1,5 +1,8 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.Win32LobAppFileSystemRequirement;
+import com.microsoft.graph.models.Win32LobAppPowerShellScriptRequirement;
+import com.microsoft.graph.models.Win32LobAppRegistryRequirement;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

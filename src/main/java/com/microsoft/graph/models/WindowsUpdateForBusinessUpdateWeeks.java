@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
@@ -16,7 +16,9 @@ public enum WindowsUpdateForBusinessUpdateWeeks implements ValuedEnum {
     /** Scheduled the update installation on the fourth week of the month */
     FourthWeek("fourthWeek"),
     /** Scheduled the update installation on every week of the month */
-    EveryWeek("everyWeek");
+    EveryWeek("everyWeek"),
+    /** Evolvable enum member */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsUpdateForBusinessUpdateWeeks(final String value) {
         this.value = value;
@@ -33,6 +35,7 @@ public enum WindowsUpdateForBusinessUpdateWeeks implements ValuedEnum {
             case "thirdWeek": return ThirdWeek;
             case "fourthWeek": return FourthWeek;
             case "everyWeek": return EveryWeek;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments;
+package com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments;
 
+import com.microsoft.graph.models.DelegatedAdminAccessAssignment;
+import com.microsoft.graph.models.DelegatedAdminAccessAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DelegatedAdminAccessAssignment;
-import microsoft.graph.models.DelegatedAdminAccessAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments.count.CountRequestBuilder;
 /** Provides operations to manage the accessAssignments property of the microsoft.graph.delegatedAdminRelationship entity. */
 public class AccessAssignmentsRequestBuilder {
     /** The Count property */

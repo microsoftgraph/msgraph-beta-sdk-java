@@ -1,5 +1,9 @@
-package microsoft.graph.compliance.ediscovery.cases.item.legalholds;
+package com.microsoft.graph.compliance.ediscovery.cases.item.legalholds;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.legalholds.count.CountRequestBuilder;
+import com.microsoft.graph.models.ediscovery.LegalHold;
+import com.microsoft.graph.models.ediscovery.LegalHoldCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.legalholds.count.CountRequestBuilder;
-import microsoft.graph.models.ediscovery.LegalHold;
-import microsoft.graph.models.ediscovery.LegalHoldCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the legalHolds property of the microsoft.graph.ediscovery.case entity. */
 public class LegalHoldsRequestBuilder {
     /** The Count property */

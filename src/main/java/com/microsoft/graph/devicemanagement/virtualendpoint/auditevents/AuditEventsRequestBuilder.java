@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.virtualendpoint.auditevents;
+package com.microsoft.graph.devicemanagement.virtualendpoint.auditevents;
 
+import com.microsoft.graph.devicemanagement.virtualendpoint.auditevents.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.auditevents.getauditactivitytypes.GetAuditActivityTypesRequestBuilder;
+import com.microsoft.graph.models.CloudPcAuditEvent;
+import com.microsoft.graph.models.CloudPcAuditEventCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.virtualendpoint.auditevents.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.virtualendpoint.auditevents.getauditactivitytypes.GetAuditActivityTypesRequestBuilder;
-import microsoft.graph.models.CloudPcAuditEvent;
-import microsoft.graph.models.CloudPcAuditEventCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the auditEvents property of the microsoft.graph.virtualEndpoint entity. */
 public class AuditEventsRequestBuilder {
     /** The Count property */

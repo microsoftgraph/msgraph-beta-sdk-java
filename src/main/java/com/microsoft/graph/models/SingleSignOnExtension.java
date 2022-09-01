@@ -1,5 +1,18 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.CredentialSingleSignOnExtension;
+import com.microsoft.graph.models.IosAzureAdSingleSignOnExtension;
+import com.microsoft.graph.models.IosCredentialSingleSignOnExtension;
+import com.microsoft.graph.models.IosKerberosSingleSignOnExtension;
+import com.microsoft.graph.models.IosRedirectSingleSignOnExtension;
+import com.microsoft.graph.models.IosSingleSignOnExtension;
+import com.microsoft.graph.models.KerberosSingleSignOnExtension;
+import com.microsoft.graph.models.MacOSAzureAdSingleSignOnExtension;
+import com.microsoft.graph.models.MacOSCredentialSingleSignOnExtension;
+import com.microsoft.graph.models.MacOSKerberosSingleSignOnExtension;
+import com.microsoft.graph.models.MacOSRedirectSingleSignOnExtension;
+import com.microsoft.graph.models.MacOSSingleSignOnExtension;
+import com.microsoft.graph.models.RedirectSingleSignOnExtension;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

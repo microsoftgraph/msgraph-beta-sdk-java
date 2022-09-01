@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.intents.item.devicestatesummary;
+package com.microsoft.graph.devicemanagement.intents.item.devicestatesummary;
 
+import com.microsoft.graph.models.DeviceManagementIntentDeviceStateSummary;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceManagementIntentDeviceStateSummary;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceStateSummary property of the microsoft.graph.deviceManagementIntent entity. */
 public class DeviceStateSummaryRequestBuilder {
     /** Path parameters for the request */

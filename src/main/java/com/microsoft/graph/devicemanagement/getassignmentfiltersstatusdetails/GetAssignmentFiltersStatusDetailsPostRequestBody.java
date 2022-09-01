@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.getassignmentfiltersstatusdetails;
+package com.microsoft.graph.devicemanagement.getassignmentfiltersstatusdetails;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

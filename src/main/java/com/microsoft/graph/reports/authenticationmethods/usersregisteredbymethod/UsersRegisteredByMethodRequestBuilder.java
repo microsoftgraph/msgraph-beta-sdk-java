@@ -1,5 +1,7 @@
-package microsoft.graph.reports.authenticationmethods.usersregisteredbymethod;
+package com.microsoft.graph.reports.authenticationmethods.usersregisteredbymethod;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserRegistrationMethodSummary;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserRegistrationMethodSummary;
 /** Provides operations to call the usersRegisteredByMethod method. */
 public class UsersRegisteredByMethodRequestBuilder {
     /** Path parameters for the request */

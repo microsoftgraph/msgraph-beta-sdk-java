@@ -1,5 +1,7 @@
-package microsoft.graph.models.ediscovery;
+package com.microsoft.graph.models.ediscovery;
 
+import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,9 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
-import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Case_escaped extends Entity implements Parsable {
     /** The user who closed the case. */
     private IdentitySet _closedBy;

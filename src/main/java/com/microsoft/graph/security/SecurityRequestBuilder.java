@@ -1,5 +1,43 @@
-package microsoft.graph.security;
+package com.microsoft.graph.security;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Security;
+import com.microsoft.graph.security.alerts_v2.Alerts_v2RequestBuilder;
+import com.microsoft.graph.security.alerts.AlertsRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
+import com.microsoft.graph.security.cases.CasesRequestBuilder;
+import com.microsoft.graph.security.cloudappsecurityprofiles.CloudAppSecurityProfilesRequestBuilder;
+import com.microsoft.graph.security.cloudappsecurityprofiles.item.CloudAppSecurityProfileItemRequestBuilder;
+import com.microsoft.graph.security.domainsecurityprofiles.DomainSecurityProfilesRequestBuilder;
+import com.microsoft.graph.security.domainsecurityprofiles.item.DomainSecurityProfileItemRequestBuilder;
+import com.microsoft.graph.security.filesecurityprofiles.FileSecurityProfilesRequestBuilder;
+import com.microsoft.graph.security.filesecurityprofiles.item.FileSecurityProfileItemRequestBuilder;
+import com.microsoft.graph.security.hostsecurityprofiles.HostSecurityProfilesRequestBuilder;
+import com.microsoft.graph.security.hostsecurityprofiles.item.HostSecurityProfileItemRequestBuilder;
+import com.microsoft.graph.security.incidents.IncidentsRequestBuilder;
+import com.microsoft.graph.security.incidents.item.IncidentItemRequestBuilder;
+import com.microsoft.graph.security.informationprotection.InformationProtectionRequestBuilder;
+import com.microsoft.graph.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
+import com.microsoft.graph.security.ipsecurityprofiles.item.IpSecurityProfileItemRequestBuilder;
+import com.microsoft.graph.security.labels.LabelsRequestBuilder;
+import com.microsoft.graph.security.providertenantsettings.item.ProviderTenantSettingItemRequestBuilder;
+import com.microsoft.graph.security.providertenantsettings.ProviderTenantSettingsRequestBuilder;
+import com.microsoft.graph.security.runhuntingquery.RunHuntingQueryRequestBuilder;
+import com.microsoft.graph.security.securescorecontrolprofiles.item.SecureScoreControlProfileItemRequestBuilder;
+import com.microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
+import com.microsoft.graph.security.securescores.item.SecureScoreItemRequestBuilder;
+import com.microsoft.graph.security.securescores.SecureScoresRequestBuilder;
+import com.microsoft.graph.security.securityactions.item.SecurityActionItemRequestBuilder;
+import com.microsoft.graph.security.securityactions.SecurityActionsRequestBuilder;
+import com.microsoft.graph.security.subjectrightsrequests.item.SubjectRightsRequestItemRequestBuilder;
+import com.microsoft.graph.security.subjectrightsrequests.SubjectRightsRequestsRequestBuilder;
+import com.microsoft.graph.security.threatsubmission.ThreatSubmissionRequestBuilder;
+import com.microsoft.graph.security.tiindicators.item.TiIndicatorItemRequestBuilder;
+import com.microsoft.graph.security.tiindicators.TiIndicatorsRequestBuilder;
+import com.microsoft.graph.security.triggers.TriggersRequestBuilder;
+import com.microsoft.graph.security.triggertypes.TriggerTypesRequestBuilder;
+import com.microsoft.graph.security.usersecurityprofiles.item.UserSecurityProfileItemRequestBuilder;
+import com.microsoft.graph.security.usersecurityprofiles.UserSecurityProfilesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,44 +52,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Security;
-import microsoft.graph.security.alerts_v2.Alerts_v2RequestBuilder;
-import microsoft.graph.security.alerts.AlertsRequestBuilder;
-import microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
-import microsoft.graph.security.cases.CasesRequestBuilder;
-import microsoft.graph.security.cloudappsecurityprofiles.CloudAppSecurityProfilesRequestBuilder;
-import microsoft.graph.security.cloudappsecurityprofiles.item.CloudAppSecurityProfileItemRequestBuilder;
-import microsoft.graph.security.domainsecurityprofiles.DomainSecurityProfilesRequestBuilder;
-import microsoft.graph.security.domainsecurityprofiles.item.DomainSecurityProfileItemRequestBuilder;
-import microsoft.graph.security.filesecurityprofiles.FileSecurityProfilesRequestBuilder;
-import microsoft.graph.security.filesecurityprofiles.item.FileSecurityProfileItemRequestBuilder;
-import microsoft.graph.security.hostsecurityprofiles.HostSecurityProfilesRequestBuilder;
-import microsoft.graph.security.hostsecurityprofiles.item.HostSecurityProfileItemRequestBuilder;
-import microsoft.graph.security.incidents.IncidentsRequestBuilder;
-import microsoft.graph.security.incidents.item.IncidentItemRequestBuilder;
-import microsoft.graph.security.informationprotection.InformationProtectionRequestBuilder;
-import microsoft.graph.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
-import microsoft.graph.security.ipsecurityprofiles.item.IpSecurityProfileItemRequestBuilder;
-import microsoft.graph.security.labels.LabelsRequestBuilder;
-import microsoft.graph.security.providertenantsettings.item.ProviderTenantSettingItemRequestBuilder;
-import microsoft.graph.security.providertenantsettings.ProviderTenantSettingsRequestBuilder;
-import microsoft.graph.security.runhuntingquery.RunHuntingQueryRequestBuilder;
-import microsoft.graph.security.securescorecontrolprofiles.item.SecureScoreControlProfileItemRequestBuilder;
-import microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
-import microsoft.graph.security.securescores.item.SecureScoreItemRequestBuilder;
-import microsoft.graph.security.securescores.SecureScoresRequestBuilder;
-import microsoft.graph.security.securityactions.item.SecurityActionItemRequestBuilder;
-import microsoft.graph.security.securityactions.SecurityActionsRequestBuilder;
-import microsoft.graph.security.subjectrightsrequests.item.SubjectRightsRequestItemRequestBuilder;
-import microsoft.graph.security.subjectrightsrequests.SubjectRightsRequestsRequestBuilder;
-import microsoft.graph.security.threatsubmission.ThreatSubmissionRequestBuilder;
-import microsoft.graph.security.tiindicators.item.TiIndicatorItemRequestBuilder;
-import microsoft.graph.security.tiindicators.TiIndicatorsRequestBuilder;
-import microsoft.graph.security.triggers.TriggersRequestBuilder;
-import microsoft.graph.security.triggertypes.TriggerTypesRequestBuilder;
-import microsoft.graph.security.usersecurityprofiles.item.UserSecurityProfileItemRequestBuilder;
-import microsoft.graph.security.usersecurityprofiles.UserSecurityProfilesRequestBuilder;
 /** Provides operations to manage the security singleton. */
 public class SecurityRequestBuilder {
     /** The alerts property */
@@ -176,31 +176,31 @@ public class SecurityRequestBuilder {
         return new UserSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.alerts.item collection
+     * Gets an item from the com.Microsoft.Graph.security.alerts.item collection
      * @param id Unique identifier of the item
      * @return a AlertItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.security.alerts.item.AlertItemRequestBuilder alerts(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.security.alerts.item.AlertItemRequestBuilder alerts(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("alert%2Did", id);
-        return new microsoft.graph.security.alerts.item.AlertItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.security.alerts.item.AlertItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.alerts_v2.item collection
+     * Gets an item from the com.Microsoft.Graph.security.alerts_v2.item collection
      * @param id Unique identifier of the item
      * @return a AlertItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder alerts_v2(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder alerts_v2(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("alert%2Did", id);
-        return new microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cloudAppSecurityProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cloudAppSecurityProfiles.item collection
      * @param id Unique identifier of the item
      * @return a CloudAppSecurityProfileItemRequestBuilder
      */
@@ -301,7 +301,7 @@ public class SecurityRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.domainSecurityProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.security.domainSecurityProfiles.item collection
      * @param id Unique identifier of the item
      * @return a DomainSecurityProfileItemRequestBuilder
      */
@@ -313,7 +313,7 @@ public class SecurityRequestBuilder {
         return new DomainSecurityProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.fileSecurityProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.security.fileSecurityProfiles.item collection
      * @param id Unique identifier of the item
      * @return a FileSecurityProfileItemRequestBuilder
      */
@@ -376,7 +376,7 @@ public class SecurityRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.hostSecurityProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.security.hostSecurityProfiles.item collection
      * @param id Unique identifier of the item
      * @return a HostSecurityProfileItemRequestBuilder
      */
@@ -388,7 +388,7 @@ public class SecurityRequestBuilder {
         return new HostSecurityProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.incidents.item collection
+     * Gets an item from the com.Microsoft.Graph.security.incidents.item collection
      * @param id Unique identifier of the item
      * @return a IncidentItemRequestBuilder
      */
@@ -400,7 +400,7 @@ public class SecurityRequestBuilder {
         return new IncidentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.ipSecurityProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.security.ipSecurityProfiles.item collection
      * @param id Unique identifier of the item
      * @return a IpSecurityProfileItemRequestBuilder
      */
@@ -467,7 +467,7 @@ public class SecurityRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.providerTenantSettings.item collection
+     * Gets an item from the com.Microsoft.Graph.security.providerTenantSettings.item collection
      * @param id Unique identifier of the item
      * @return a ProviderTenantSettingItemRequestBuilder
      */
@@ -479,7 +479,7 @@ public class SecurityRequestBuilder {
         return new ProviderTenantSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.secureScoreControlProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.security.secureScoreControlProfiles.item collection
      * @param id Unique identifier of the item
      * @return a SecureScoreControlProfileItemRequestBuilder
      */
@@ -491,7 +491,7 @@ public class SecurityRequestBuilder {
         return new SecureScoreControlProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.secureScores.item collection
+     * Gets an item from the com.Microsoft.Graph.security.secureScores.item collection
      * @param id Unique identifier of the item
      * @return a SecureScoreItemRequestBuilder
      */
@@ -503,7 +503,7 @@ public class SecurityRequestBuilder {
         return new SecureScoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.securityActions.item collection
+     * Gets an item from the com.Microsoft.Graph.security.securityActions.item collection
      * @param id Unique identifier of the item
      * @return a SecurityActionItemRequestBuilder
      */
@@ -515,7 +515,7 @@ public class SecurityRequestBuilder {
         return new SecurityActionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.subjectRightsRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.security.subjectRightsRequests.item collection
      * @param id Unique identifier of the item
      * @return a SubjectRightsRequestItemRequestBuilder
      */
@@ -527,7 +527,7 @@ public class SecurityRequestBuilder {
         return new SubjectRightsRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.tiIndicators.item collection
+     * Gets an item from the com.Microsoft.Graph.security.tiIndicators.item collection
      * @param id Unique identifier of the item
      * @return a TiIndicatorItemRequestBuilder
      */
@@ -539,7 +539,7 @@ public class SecurityRequestBuilder {
         return new TiIndicatorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.userSecurityProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.security.userSecurityProfiles.item collection
      * @param id Unique identifier of the item
      * @return a UserSecurityProfileItemRequestBuilder
      */

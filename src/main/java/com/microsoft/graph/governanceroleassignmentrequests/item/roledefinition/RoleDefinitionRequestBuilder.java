@@ -1,5 +1,9 @@
-package microsoft.graph.governanceroleassignmentrequests.item.roledefinition;
+package com.microsoft.graph.governanceroleassignmentrequests.item.roledefinition;
 
+import com.microsoft.graph.governanceroleassignmentrequests.item.roledefinition.resource.ResourceRequestBuilder;
+import com.microsoft.graph.governanceroleassignmentrequests.item.roledefinition.rolesetting.RoleSettingRequestBuilder;
+import com.microsoft.graph.models.GovernanceRoleDefinition;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.governanceroleassignmentrequests.item.roledefinition.resource.ResourceRequestBuilder;
-import microsoft.graph.governanceroleassignmentrequests.item.roledefinition.rolesetting.RoleSettingRequestBuilder;
-import microsoft.graph.models.GovernanceRoleDefinition;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the roleDefinition property of the microsoft.graph.governanceRoleAssignmentRequest entity. */
 public class RoleDefinitionRequestBuilder {
     /** Path parameters for the request */

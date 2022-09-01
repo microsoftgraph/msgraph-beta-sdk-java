@@ -1,5 +1,7 @@
-package microsoft.graph.me.planner.all.item;
+package com.microsoft.graph.me.planner.all.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerDelta;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerDelta;
 /** Provides operations to manage the all property of the microsoft.graph.plannerUser entity. */
 public class PlannerDeltaItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,4 +1,4 @@
-package microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.schedule.share;
+package com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.schedule.share;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

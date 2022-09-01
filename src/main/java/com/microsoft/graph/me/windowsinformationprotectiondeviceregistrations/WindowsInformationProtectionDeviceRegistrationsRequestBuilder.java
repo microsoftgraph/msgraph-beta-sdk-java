@@ -1,5 +1,8 @@
-package microsoft.graph.me.windowsinformationprotectiondeviceregistrations;
+package com.microsoft.graph.me.windowsinformationprotectiondeviceregistrations;
 
+import com.microsoft.graph.me.windowsinformationprotectiondeviceregistrations.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsInformationProtectionDeviceRegistrationCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.windowsinformationprotectiondeviceregistrations.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsInformationProtectionDeviceRegistrationCollectionResponse;
 /** Provides operations to manage the windowsInformationProtectionDeviceRegistrations property of the microsoft.graph.user entity. */
 public class WindowsInformationProtectionDeviceRegistrationsRequestBuilder {
     /** The Count property */

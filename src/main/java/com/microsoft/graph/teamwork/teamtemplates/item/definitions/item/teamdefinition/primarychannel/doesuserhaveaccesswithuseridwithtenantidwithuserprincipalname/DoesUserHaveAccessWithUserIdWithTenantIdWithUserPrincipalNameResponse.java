@@ -1,4 +1,4 @@
-package microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname;
+package com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

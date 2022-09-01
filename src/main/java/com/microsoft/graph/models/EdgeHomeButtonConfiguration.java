@@ -1,5 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.EdgeHomeButtonHidden;
+import com.microsoft.graph.models.EdgeHomeButtonLoadsStartPage;
+import com.microsoft.graph.models.EdgeHomeButtonOpensCustomURL;
+import com.microsoft.graph.models.EdgeHomeButtonOpensNewTab;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

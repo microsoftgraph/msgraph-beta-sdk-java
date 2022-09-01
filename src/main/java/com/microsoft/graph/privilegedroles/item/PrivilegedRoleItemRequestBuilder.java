@@ -1,5 +1,13 @@
-package microsoft.graph.privilegedroles.item;
+package com.microsoft.graph.privilegedroles.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedRole;
+import com.microsoft.graph.privilegedroles.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.privilegedroles.item.assignments.item.PrivilegedRoleAssignmentItemRequestBuilder;
+import com.microsoft.graph.privilegedroles.item.selfactivate.SelfActivateRequestBuilder;
+import com.microsoft.graph.privilegedroles.item.selfdeactivate.SelfDeactivateRequestBuilder;
+import com.microsoft.graph.privilegedroles.item.settings.SettingsRequestBuilder;
+import com.microsoft.graph.privilegedroles.item.summary.SummaryRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedRole;
-import microsoft.graph.privilegedroles.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.privilegedroles.item.assignments.item.PrivilegedRoleAssignmentItemRequestBuilder;
-import microsoft.graph.privilegedroles.item.selfactivate.SelfActivateRequestBuilder;
-import microsoft.graph.privilegedroles.item.selfdeactivate.SelfDeactivateRequestBuilder;
-import microsoft.graph.privilegedroles.item.settings.SettingsRequestBuilder;
-import microsoft.graph.privilegedroles.item.summary.SummaryRequestBuilder;
 /** Provides operations to manage the collection of privilegedRole entities. */
 public class PrivilegedRoleItemRequestBuilder {
     /** The assignments property */
@@ -56,7 +56,7 @@ public class PrivilegedRoleItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.privilegedRoles.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.privilegedRoles.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a PrivilegedRoleAssignmentItemRequestBuilder
      */

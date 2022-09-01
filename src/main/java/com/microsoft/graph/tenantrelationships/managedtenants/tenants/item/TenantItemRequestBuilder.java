@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.managedtenants.tenants.item;
+package com.microsoft.graph.tenantrelationships.managedtenants.tenants.item;
 
+import com.microsoft.graph.models.managedtenants.Tenant;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenants.item.offboardtenant.OffboardTenantRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.tenants.item.resettenantonboardingstatus.ResetTenantOnboardingStatusRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.Tenant;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.managedtenants.tenants.item.offboardtenant.OffboardTenantRequestBuilder;
-import microsoft.graph.tenantrelationships.managedtenants.tenants.item.resettenantonboardingstatus.ResetTenantOnboardingStatusRequestBuilder;
 /** Provides operations to manage the tenants property of the microsoft.graph.managedTenants.managedTenant entity. */
 public class TenantItemRequestBuilder {
     /** The offboardTenant property */

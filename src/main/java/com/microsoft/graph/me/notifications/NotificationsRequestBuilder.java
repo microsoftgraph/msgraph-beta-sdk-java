@@ -1,5 +1,9 @@
-package microsoft.graph.me.notifications;
+package com.microsoft.graph.me.notifications;
 
+import com.microsoft.graph.me.notifications.count.CountRequestBuilder;
+import com.microsoft.graph.models.Notification;
+import com.microsoft.graph.models.NotificationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.notifications.count.CountRequestBuilder;
-import microsoft.graph.models.Notification;
-import microsoft.graph.models.NotificationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the notifications property of the microsoft.graph.user entity. */
 public class NotificationsRequestBuilder {
     /** The Count property */

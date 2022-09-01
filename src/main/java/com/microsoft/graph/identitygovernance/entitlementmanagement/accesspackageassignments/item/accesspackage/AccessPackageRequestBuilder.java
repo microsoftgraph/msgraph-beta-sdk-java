@@ -1,5 +1,17 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageassignmentpolicies.AccessPackageAssignmentPoliciesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageassignmentpolicies.item.AccessPackageAssignmentPolicyItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagecatalog.AccessPackageCatalogRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.AccessPackageResourceRoleScopesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.AccessPackageResourceRoleScopeItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.AccessPackagesIncompatibleWithRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.getapplicablepolicyrequirements.GetApplicablePolicyRequirementsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatibleaccesspackages.IncompatibleAccessPackagesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatiblegroups.IncompatibleGroupsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatiblegroups.item.GroupItemRequestBuilder;
+import com.microsoft.graph.models.AccessPackage;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,18 +26,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageassignmentpolicies.AccessPackageAssignmentPoliciesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageassignmentpolicies.item.AccessPackageAssignmentPolicyItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagecatalog.AccessPackageCatalogRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.AccessPackageResourceRoleScopesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.AccessPackageResourceRoleScopeItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.AccessPackagesIncompatibleWithRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.getapplicablepolicyrequirements.GetApplicablePolicyRequirementsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatibleaccesspackages.IncompatibleAccessPackagesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatiblegroups.IncompatibleGroupsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatiblegroups.item.GroupItemRequestBuilder;
-import microsoft.graph.models.AccessPackage;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignment entity. */
 public class AccessPackageRequestBuilder {
     /** The accessPackageAssignmentPolicies property */
@@ -70,7 +70,7 @@ public class AccessPackageRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageAssignmentPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageAssignmentPolicies.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageAssignmentPolicyItemRequestBuilder
      */
@@ -82,7 +82,7 @@ public class AccessPackageRequestBuilder {
         return new AccessPackageAssignmentPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageResourceRoleScopes.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageResourceRoleScopes.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageResourceRoleScopeItemRequestBuilder
      */
@@ -94,16 +94,16 @@ public class AccessPackageRequestBuilder {
         return new AccessPackageResourceRoleScopeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackagesIncompatibleWith.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackagesIncompatibleWith.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder accessPackagesIncompatibleWith(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder accessPackagesIncompatibleWith(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessPackage%2Did", id);
-        return new microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AccessPackageRequestBuilder and sets the default values.
@@ -325,19 +325,19 @@ public class AccessPackageRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.incompatibleAccessPackages.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.incompatibleAccessPackages.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder incompatibleAccessPackages(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder incompatibleAccessPackages(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessPackage%2Did", id);
-        return new microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.incompatibleGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.incompatibleGroups.item collection
      * @param id Unique identifier of the item
      * @return a GroupItemRequestBuilder
      */

@@ -1,5 +1,16 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AndroidManagedStoreAppAssignmentSettings;
+import com.microsoft.graph.models.IosLobAppAssignmentSettings;
+import com.microsoft.graph.models.IosStoreAppAssignmentSettings;
+import com.microsoft.graph.models.IosVppAppAssignmentSettings;
+import com.microsoft.graph.models.MacOsLobAppAssignmentSettings;
+import com.microsoft.graph.models.MacOsVppAppAssignmentSettings;
+import com.microsoft.graph.models.MicrosoftStoreForBusinessAppAssignmentSettings;
+import com.microsoft.graph.models.Win32LobAppAssignmentSettings;
+import com.microsoft.graph.models.WindowsAppXAppAssignmentSettings;
+import com.microsoft.graph.models.WindowsUniversalAppXAppAssignmentSettings;
+import com.microsoft.graph.models.WinGetAppAssignmentSettings;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -44,6 +55,7 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
                 case "#microsoft.graph.win32LobAppAssignmentSettings": return new Win32LobAppAssignmentSettings();
                 case "#microsoft.graph.windowsAppXAppAssignmentSettings": return new WindowsAppXAppAssignmentSettings();
                 case "#microsoft.graph.windowsUniversalAppXAppAssignmentSettings": return new WindowsUniversalAppXAppAssignmentSettings();
+                case "#microsoft.graph.winGetAppAssignmentSettings": return new WinGetAppAssignmentSettings();
             }
         }
         return new MobileAppAssignmentSettings();

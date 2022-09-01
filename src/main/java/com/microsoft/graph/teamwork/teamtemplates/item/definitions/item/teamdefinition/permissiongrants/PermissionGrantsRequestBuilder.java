@@ -1,5 +1,12 @@
-package microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants;
+package com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
+import com.microsoft.graph.models.ResourceSpecificPermissionGrantCollectionResponse;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.count.CountRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ResourceSpecificPermissionGrant;
-import microsoft.graph.models.ResourceSpecificPermissionGrantCollectionResponse;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.count.CountRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
-import microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.permissiongrants.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the permissionGrants property of the microsoft.graph.team entity. */
 public class PermissionGrantsRequestBuilder {
     /** The Count property */

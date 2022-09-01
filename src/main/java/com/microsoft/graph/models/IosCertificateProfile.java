@@ -1,5 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.IosCertificateProfileBase;
+import com.microsoft.graph.models.IosImportedPFXCertificateProfile;
+import com.microsoft.graph.models.IosPkcsCertificateProfile;
+import com.microsoft.graph.models.IosScepCertificateProfile;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

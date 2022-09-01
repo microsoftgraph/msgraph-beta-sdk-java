@@ -1,4 +1,4 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getuserownedobjects;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getuserownedobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

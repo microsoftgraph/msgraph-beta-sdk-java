@@ -1,5 +1,9 @@
-package microsoft.graph.planner.rosters.item.members;
+package com.microsoft.graph.planner.rosters.item.members;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerRosterMember;
+import com.microsoft.graph.models.PlannerRosterMemberCollectionResponse;
+import com.microsoft.graph.planner.rosters.item.members.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerRosterMember;
-import microsoft.graph.models.PlannerRosterMemberCollectionResponse;
-import microsoft.graph.planner.rosters.item.members.count.CountRequestBuilder;
 /** Provides operations to manage the members property of the microsoft.graph.plannerRoster entity. */
 public class MembersRequestBuilder {
     /** The Count property */

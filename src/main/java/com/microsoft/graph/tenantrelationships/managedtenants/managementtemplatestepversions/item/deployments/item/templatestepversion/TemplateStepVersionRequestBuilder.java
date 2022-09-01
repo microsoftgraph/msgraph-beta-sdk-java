@@ -1,5 +1,7 @@
-package microsoft.graph.tenantrelationships.managedtenants.managementtemplatestepversions.item.deployments.item.templatestepversion;
+package com.microsoft.graph.tenantrelationships.managedtenants.managementtemplatestepversions.item.deployments.item.templatestepversion;
 
+import com.microsoft.graph.models.managedtenants.ManagementTemplateStepVersion;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ManagementTemplateStepVersion;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the templateStepVersion property of the microsoft.graph.managedTenants.managementTemplateStepDeployment entity. */
 public class TemplateStepVersionRequestBuilder {
     /** Path parameters for the request */

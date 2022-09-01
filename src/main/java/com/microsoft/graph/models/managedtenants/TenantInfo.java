@@ -1,4 +1,4 @@
-package microsoft.graph.models.managedtenants;
+package com.microsoft.graph.models.managedtenants;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

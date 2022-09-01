@@ -1,5 +1,6 @@
-package microsoft.graph.devicemanagement.grouppolicyconfigurations.item.updatedefinitionvalues;
+package com.microsoft.graph.devicemanagement.grouppolicyconfigurations.item.updatedefinitionvalues;
 
+import com.microsoft.graph.models.GroupPolicyDefinitionValue;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.GroupPolicyDefinitionValue;
 /** Provides operations to call the updateDefinitionValues method. */
 public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHolder, Parsable {
     /** The added property */

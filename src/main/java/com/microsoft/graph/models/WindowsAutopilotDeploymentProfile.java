@@ -1,5 +1,7 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.ActiveDirectoryWindowsAutopilotDeploymentProfile;
+import com.microsoft.graph.models.AzureADWindowsAutopilotDeploymentProfile;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,7 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Windows Autopilot Deployment Profile */
 public class WindowsAutopilotDeploymentProfile extends Entity implements Parsable {
     /** The list of assigned devices for the profile. */
     private java.util.List<WindowsAutopilotDeviceIdentity> _assignedDevices;
@@ -41,7 +42,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
     /** Scope tags for the profile. */
     private java.util.List<String> _roleScopeTagIds;
     /**
-     * Instantiates a new windowsAutopilotDeploymentProfile and sets the default values.
+     * Instantiates a new WindowsAutopilotDeploymentProfile and sets the default values.
      * @return a void
      */
     public WindowsAutopilotDeploymentProfile() {
@@ -51,7 +52,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsAutopilotDeploymentProfile
+     * @return a WindowsAutopilotDeploymentProfile
      */
     @javax.annotation.Nonnull
     public static WindowsAutopilotDeploymentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

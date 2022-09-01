@@ -1,4 +1,4 @@
-package microsoft.graph.riskyusers.dismiss;
+package com.microsoft.graph.riskyusers.dismiss;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

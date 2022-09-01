@@ -1,5 +1,6 @@
-package microsoft.graph.models.tenantadmin;
+package com.microsoft.graph.models.tenantadmin;
 
+import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
 public class Settings extends Entity implements Parsable {
     /** Collection of trusted domain GUIDs for the OneDrive sync app. */
     private java.util.List<String> _allowedDomainGuidsForSyncApp;

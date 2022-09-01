@@ -1,5 +1,14 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.apphealthmetrics.AppHealthMetricsRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.batteryhealthmetrics.BatteryHealthMetricsRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.bestpracticesmetrics.BestPracticesMetricsRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.devicebootperformancemetrics.DeviceBootPerformanceMetricsRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.rebootanalyticsmetrics.RebootAnalyticsMetricsRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.resourceperformancemetrics.ResourcePerformanceMetricsRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.workfromanywheremetrics.WorkFromAnywhereMetricsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsBaseline;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.apphealthmetrics.AppHealthMetricsRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.batteryhealthmetrics.BatteryHealthMetricsRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.bestpracticesmetrics.BestPracticesMetricsRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.devicebootperformancemetrics.DeviceBootPerformanceMetricsRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.rebootanalyticsmetrics.RebootAnalyticsMetricsRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.resourceperformancemetrics.ResourcePerformanceMetricsRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.item.workfromanywheremetrics.WorkFromAnywhereMetricsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsBaseline;
 /** Provides operations to manage the userExperienceAnalyticsBaselines property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsBaselineItemRequestBuilder {
     /** The appHealthMetrics property */

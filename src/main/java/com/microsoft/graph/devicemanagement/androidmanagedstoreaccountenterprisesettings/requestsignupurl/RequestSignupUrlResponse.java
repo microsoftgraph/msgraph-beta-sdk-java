@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.androidmanagedstoreaccountenterprisesettings.requestsignupurl;
+package com.microsoft.graph.devicemanagement.androidmanagedstoreaccountenterprisesettings.requestsignupurl;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

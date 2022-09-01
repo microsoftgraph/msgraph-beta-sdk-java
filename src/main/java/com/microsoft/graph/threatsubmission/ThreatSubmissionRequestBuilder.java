@@ -1,5 +1,15 @@
-package microsoft.graph.threatsubmission;
+package com.microsoft.graph.threatsubmission;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.ThreatSubmissionRoot;
+import com.microsoft.graph.threatsubmission.emailthreats.EmailThreatsRequestBuilder;
+import com.microsoft.graph.threatsubmission.emailthreats.item.EmailThreatSubmissionItemRequestBuilder;
+import com.microsoft.graph.threatsubmission.emailthreatsubmissionpolicies.EmailThreatSubmissionPoliciesRequestBuilder;
+import com.microsoft.graph.threatsubmission.emailthreatsubmissionpolicies.item.EmailThreatSubmissionPolicyItemRequestBuilder;
+import com.microsoft.graph.threatsubmission.filethreats.FileThreatsRequestBuilder;
+import com.microsoft.graph.threatsubmission.filethreats.item.FileThreatSubmissionItemRequestBuilder;
+import com.microsoft.graph.threatsubmission.urlthreats.item.UrlThreatSubmissionItemRequestBuilder;
+import com.microsoft.graph.threatsubmission.urlthreats.UrlThreatsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.ThreatSubmissionRoot;
-import microsoft.graph.threatsubmission.emailthreats.EmailThreatsRequestBuilder;
-import microsoft.graph.threatsubmission.emailthreats.item.EmailThreatSubmissionItemRequestBuilder;
-import microsoft.graph.threatsubmission.emailthreatsubmissionpolicies.EmailThreatSubmissionPoliciesRequestBuilder;
-import microsoft.graph.threatsubmission.emailthreatsubmissionpolicies.item.EmailThreatSubmissionPolicyItemRequestBuilder;
-import microsoft.graph.threatsubmission.filethreats.FileThreatsRequestBuilder;
-import microsoft.graph.threatsubmission.filethreats.item.FileThreatSubmissionItemRequestBuilder;
-import microsoft.graph.threatsubmission.urlthreats.item.UrlThreatSubmissionItemRequestBuilder;
-import microsoft.graph.threatsubmission.urlthreats.UrlThreatsRequestBuilder;
 /** Provides operations to manage the threatSubmissionRoot singleton. */
 public class ThreatSubmissionRequestBuilder {
     /** The emailThreats property */
@@ -142,7 +142,7 @@ public class ThreatSubmissionRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.threatSubmission.emailThreats.item collection
+     * Gets an item from the com.Microsoft.Graph.threatSubmission.emailThreats.item collection
      * @param id Unique identifier of the item
      * @return a EmailThreatSubmissionItemRequestBuilder
      */
@@ -154,7 +154,7 @@ public class ThreatSubmissionRequestBuilder {
         return new EmailThreatSubmissionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.threatSubmission.emailThreatSubmissionPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.threatSubmission.emailThreatSubmissionPolicies.item collection
      * @param id Unique identifier of the item
      * @return a EmailThreatSubmissionPolicyItemRequestBuilder
      */
@@ -166,7 +166,7 @@ public class ThreatSubmissionRequestBuilder {
         return new EmailThreatSubmissionPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.threatSubmission.fileThreats.item collection
+     * Gets an item from the com.Microsoft.Graph.threatSubmission.fileThreats.item collection
      * @param id Unique identifier of the item
      * @return a FileThreatSubmissionItemRequestBuilder
      */
@@ -284,7 +284,7 @@ public class ThreatSubmissionRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.threatSubmission.urlThreats.item collection
+     * Gets an item from the com.Microsoft.Graph.threatSubmission.urlThreats.item collection
      * @param id Unique identifier of the item
      * @return a UrlThreatSubmissionItemRequestBuilder
      */

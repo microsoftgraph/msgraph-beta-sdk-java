@@ -1,5 +1,9 @@
-package microsoft.graph.policies.serviceprincipalcreationpolicies.item.includes;
+package com.microsoft.graph.policies.serviceprincipalcreationpolicies.item.includes;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServicePrincipalCreationConditionSet;
+import com.microsoft.graph.models.ServicePrincipalCreationConditionSetCollectionResponse;
+import com.microsoft.graph.policies.serviceprincipalcreationpolicies.item.includes.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServicePrincipalCreationConditionSet;
-import microsoft.graph.models.ServicePrincipalCreationConditionSetCollectionResponse;
-import microsoft.graph.policies.serviceprincipalcreationpolicies.item.includes.count.CountRequestBuilder;
 /** Provides operations to manage the includes property of the microsoft.graph.servicePrincipalCreationPolicy entity. */
 public class IncludesRequestBuilder {
     /** The Count property */

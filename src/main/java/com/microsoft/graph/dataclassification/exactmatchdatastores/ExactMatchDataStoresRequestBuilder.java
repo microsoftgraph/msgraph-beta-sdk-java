@@ -1,5 +1,9 @@
-package microsoft.graph.dataclassification.exactmatchdatastores;
+package com.microsoft.graph.dataclassification.exactmatchdatastores;
 
+import com.microsoft.graph.dataclassification.exactmatchdatastores.count.CountRequestBuilder;
+import com.microsoft.graph.models.ExactMatchDataStore;
+import com.microsoft.graph.models.ExactMatchDataStoreCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.dataclassification.exactmatchdatastores.count.CountRequestBuilder;
-import microsoft.graph.models.ExactMatchDataStore;
-import microsoft.graph.models.ExactMatchDataStoreCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the exactMatchDataStores property of the microsoft.graph.dataClassificationService entity. */
 public class ExactMatchDataStoresRequestBuilder {
     /** The Count property */

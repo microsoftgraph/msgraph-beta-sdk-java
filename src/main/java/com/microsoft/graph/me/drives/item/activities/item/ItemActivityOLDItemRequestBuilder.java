@@ -1,5 +1,9 @@
-package microsoft.graph.me.drives.item.activities.item;
+package com.microsoft.graph.me.drives.item.activities.item;
 
+import com.microsoft.graph.me.drives.item.activities.item.driveitem.DriveItemRequestBuilder;
+import com.microsoft.graph.me.drives.item.activities.item.listitem.ListItemRequestBuilder;
+import com.microsoft.graph.models.ItemActivityOLD;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.drives.item.activities.item.driveitem.DriveItemRequestBuilder;
-import microsoft.graph.me.drives.item.activities.item.listitem.ListItemRequestBuilder;
-import microsoft.graph.models.ItemActivityOLD;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the activities property of the microsoft.graph.drive entity. */
 public class ItemActivityOLDItemRequestBuilder {
     /** The driveItem property */

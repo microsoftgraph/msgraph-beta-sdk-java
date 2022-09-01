@@ -1,4 +1,4 @@
-package microsoft.graph.governanceresources.register;
+package com.microsoft.graph.governanceresources.register;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

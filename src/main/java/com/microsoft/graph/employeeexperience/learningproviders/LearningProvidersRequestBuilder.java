@@ -1,5 +1,9 @@
-package microsoft.graph.employeeexperience.learningproviders;
+package com.microsoft.graph.employeeexperience.learningproviders;
 
+import com.microsoft.graph.employeeexperience.learningproviders.count.CountRequestBuilder;
+import com.microsoft.graph.models.LearningProvider;
+import com.microsoft.graph.models.LearningProviderCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.employeeexperience.learningproviders.count.CountRequestBuilder;
-import microsoft.graph.models.LearningProvider;
-import microsoft.graph.models.LearningProviderCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the learningProviders property of the microsoft.graph.employeeExperience entity. */
 public class LearningProvidersRequestBuilder {
     /** The Count property */

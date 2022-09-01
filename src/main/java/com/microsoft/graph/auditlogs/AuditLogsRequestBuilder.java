@@ -1,5 +1,15 @@
-package microsoft.graph.auditlogs;
+package com.microsoft.graph.auditlogs;
 
+import com.microsoft.graph.auditlogs.directoryaudits.DirectoryAuditsRequestBuilder;
+import com.microsoft.graph.auditlogs.directoryaudits.item.DirectoryAuditItemRequestBuilder;
+import com.microsoft.graph.auditlogs.directoryprovisioning.DirectoryProvisioningRequestBuilder;
+import com.microsoft.graph.auditlogs.provisioning.ProvisioningRequestBuilder;
+import com.microsoft.graph.auditlogs.restrictedsignins.item.RestrictedSignInItemRequestBuilder;
+import com.microsoft.graph.auditlogs.restrictedsignins.RestrictedSignInsRequestBuilder;
+import com.microsoft.graph.auditlogs.signins.item.SignInItemRequestBuilder;
+import com.microsoft.graph.auditlogs.signins.SignInsRequestBuilder;
+import com.microsoft.graph.models.AuditLogRoot;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.auditlogs.directoryaudits.DirectoryAuditsRequestBuilder;
-import microsoft.graph.auditlogs.directoryaudits.item.DirectoryAuditItemRequestBuilder;
-import microsoft.graph.auditlogs.directoryprovisioning.DirectoryProvisioningRequestBuilder;
-import microsoft.graph.auditlogs.provisioning.ProvisioningRequestBuilder;
-import microsoft.graph.auditlogs.restrictedsignins.item.RestrictedSignInItemRequestBuilder;
-import microsoft.graph.auditlogs.restrictedsignins.RestrictedSignInsRequestBuilder;
-import microsoft.graph.auditlogs.signins.item.SignInItemRequestBuilder;
-import microsoft.graph.auditlogs.signins.SignInsRequestBuilder;
-import microsoft.graph.models.AuditLogRoot;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the auditLogRoot singleton. */
 public class AuditLogsRequestBuilder {
     /** The directoryAudits property */
@@ -147,7 +147,7 @@ public class AuditLogsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.auditLogs.directoryAudits.item collection
+     * Gets an item from the com.Microsoft.Graph.auditLogs.directoryAudits.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryAuditItemRequestBuilder
      */
@@ -159,16 +159,16 @@ public class AuditLogsRequestBuilder {
         return new DirectoryAuditItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.auditLogs.directoryProvisioning.item collection
+     * Gets an item from the com.Microsoft.Graph.auditLogs.directoryProvisioning.item collection
      * @param id Unique identifier of the item
      * @return a ProvisioningObjectSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.auditlogs.directoryprovisioning.item.ProvisioningObjectSummaryItemRequestBuilder directoryProvisioning(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.auditlogs.directoryprovisioning.item.ProvisioningObjectSummaryItemRequestBuilder directoryProvisioning(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("provisioningObjectSummary%2Did", id);
-        return new microsoft.graph.auditlogs.directoryprovisioning.item.ProvisioningObjectSummaryItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.auditlogs.directoryprovisioning.item.ProvisioningObjectSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get auditLogs
@@ -277,19 +277,19 @@ public class AuditLogsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.auditLogs.provisioning.item collection
+     * Gets an item from the com.Microsoft.Graph.auditLogs.provisioning.item collection
      * @param id Unique identifier of the item
      * @return a ProvisioningObjectSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.auditlogs.provisioning.item.ProvisioningObjectSummaryItemRequestBuilder provisioning(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.auditlogs.provisioning.item.ProvisioningObjectSummaryItemRequestBuilder provisioning(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("provisioningObjectSummary%2Did", id);
-        return new microsoft.graph.auditlogs.provisioning.item.ProvisioningObjectSummaryItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.auditlogs.provisioning.item.ProvisioningObjectSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.auditLogs.restrictedSignIns.item collection
+     * Gets an item from the com.Microsoft.Graph.auditLogs.restrictedSignIns.item collection
      * @param id Unique identifier of the item
      * @return a RestrictedSignInItemRequestBuilder
      */
@@ -301,7 +301,7 @@ public class AuditLogsRequestBuilder {
         return new RestrictedSignInItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.auditLogs.signIns.item collection
+     * Gets an item from the com.Microsoft.Graph.auditLogs.signIns.item collection
      * @param id Unique identifier of the item
      * @return a SignInItemRequestBuilder
      */

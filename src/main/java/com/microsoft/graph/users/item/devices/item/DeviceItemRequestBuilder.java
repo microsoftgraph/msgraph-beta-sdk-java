@@ -1,5 +1,22 @@
-package microsoft.graph.users.item.devices.item;
+package com.microsoft.graph.users.item.devices.item;
 
+import com.microsoft.graph.models.Device;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.devices.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.commands.CommandsRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.commands.item.CommandItemRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.extensions.item.ExtensionItemRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.memberof.MemberOfRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.registeredowners.RegisteredOwnersRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.registeredusers.RegisteredUsersRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.transitivememberof.TransitiveMemberOfRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.usagerights.item.UsageRightItemRequestBuilder;
+import com.microsoft.graph.users.item.devices.item.usagerights.UsageRightsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,23 +31,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Device;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.devices.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.users.item.devices.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.users.item.devices.item.commands.CommandsRequestBuilder;
-import microsoft.graph.users.item.devices.item.commands.item.CommandItemRequestBuilder;
-import microsoft.graph.users.item.devices.item.extensions.ExtensionsRequestBuilder;
-import microsoft.graph.users.item.devices.item.extensions.item.ExtensionItemRequestBuilder;
-import microsoft.graph.users.item.devices.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.users.item.devices.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.users.item.devices.item.memberof.MemberOfRequestBuilder;
-import microsoft.graph.users.item.devices.item.registeredowners.RegisteredOwnersRequestBuilder;
-import microsoft.graph.users.item.devices.item.registeredusers.RegisteredUsersRequestBuilder;
-import microsoft.graph.users.item.devices.item.restore.RestoreRequestBuilder;
-import microsoft.graph.users.item.devices.item.transitivememberof.TransitiveMemberOfRequestBuilder;
-import microsoft.graph.users.item.devices.item.usagerights.item.UsageRightItemRequestBuilder;
-import microsoft.graph.users.item.devices.item.usagerights.UsageRightsRequestBuilder;
 /** Provides operations to manage the devices property of the microsoft.graph.user entity. */
 public class DeviceItemRequestBuilder {
     /** The checkMemberGroups property */
@@ -100,7 +100,7 @@ public class DeviceItemRequestBuilder {
         return new UsageRightsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.devices.item.commands.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.devices.item.commands.item collection
      * @param id Unique identifier of the item
      * @return a CommandItemRequestBuilder
      */
@@ -280,7 +280,7 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.devices.item.extensions.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.devices.item.extensions.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -343,16 +343,16 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.devices.item.memberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.devices.item.memberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.devices.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.devices.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.users.item.devices.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.devices.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property devices in users
@@ -410,43 +410,43 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.devices.item.registeredOwners.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.devices.item.registeredOwners.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder registeredOwners(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder registeredOwners(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.users.item.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.devices.item.registeredUsers.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.devices.item.registeredUsers.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder registeredUsers(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder registeredUsers(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.users.item.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.devices.item.transitiveMemberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.devices.item.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.users.item.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.devices.item.usageRights.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.devices.item.usageRights.item collection
      * @param id Unique identifier of the item
      * @return a UsageRightItemRequestBuilder
      */

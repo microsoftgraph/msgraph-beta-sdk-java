@@ -1,5 +1,12 @@
-package microsoft.graph.financials.companies.item.purchaseinvoices.item;
+package com.microsoft.graph.financials.companies.item.purchaseinvoices.item;
 
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.currency.CurrencyRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.post.PostRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.purchaseinvoicelines.item.PurchaseInvoiceLineItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.purchaseinvoicelines.PurchaseInvoiceLinesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.VendorRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PurchaseInvoice;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.currency.CurrencyRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.post.PostRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.purchaseinvoicelines.item.PurchaseInvoiceLineItemRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.purchaseinvoicelines.PurchaseInvoiceLinesRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.VendorRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PurchaseInvoice;
 /** Provides operations to manage the purchaseInvoices property of the microsoft.graph.company entity. */
 public class PurchaseInvoiceItemRequestBuilder {
     /** The currency property */
@@ -245,7 +245,7 @@ public class PurchaseInvoiceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.purchaseInvoices.item.purchaseInvoiceLines.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.purchaseInvoices.item.purchaseInvoiceLines.item collection
      * @param id Unique identifier of the item
      * @return a PurchaseInvoiceLineItemRequestBuilder
      */

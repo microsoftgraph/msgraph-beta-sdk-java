@@ -1,5 +1,8 @@
-package microsoft.graph.devicemanagement.termsandconditions.item.groupassignments.item;
+package com.microsoft.graph.devicemanagement.termsandconditions.item.groupassignments.item;
 
+import com.microsoft.graph.devicemanagement.termsandconditions.item.groupassignments.item.termsandconditions.TermsAndConditionsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TermsAndConditionsGroupAssignment;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.termsandconditions.item.groupassignments.item.termsandconditions.TermsAndConditionsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TermsAndConditionsGroupAssignment;
 /** Provides operations to manage the groupAssignments property of the microsoft.graph.termsAndConditions entity. */
 public class TermsAndConditionsGroupAssignmentItemRequestBuilder {
     /** Path parameters for the request */

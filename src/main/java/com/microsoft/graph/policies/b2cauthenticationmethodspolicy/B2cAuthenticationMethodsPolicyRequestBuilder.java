@@ -1,5 +1,7 @@
-package microsoft.graph.policies.b2cauthenticationmethodspolicy;
+package com.microsoft.graph.policies.b2cauthenticationmethodspolicy;
 
+import com.microsoft.graph.models.B2cAuthenticationMethodsPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.B2cAuthenticationMethodsPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the b2cAuthenticationMethodsPolicy property of the microsoft.graph.policyRoot entity. */
 public class B2cAuthenticationMethodsPolicyRequestBuilder {
     /** Path parameters for the request */

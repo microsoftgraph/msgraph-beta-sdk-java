@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MembershipOutlierInsight extends GovernanceInsight implements Parsable {
-    /** The container property */
+    /** Navigation link to the container directory object. For example, to a group. */
     private DirectoryObject _container;
-    /** The containerId property */
+    /** Indicates the identifier of the container, for example, a group ID. */
     private String _containerId;
-    /** The member property */
+    /** Navigation link to a member object. For example, to a user. */
     private DirectoryObject _member;
-    /** The memberId property */
+    /** Indicates the identifier of the user. */
     private String _memberId;
     /** The outlierContainerType property */
     private OutlierContainerType _outlierContainerType;
@@ -39,7 +39,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
         return new MembershipOutlierInsight();
     }
     /**
-     * Gets the container property value. The container property
+     * Gets the container property value. Navigation link to the container directory object. For example, to a group.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -47,7 +47,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
         return this._container;
     }
     /**
-     * Gets the containerId property value. The containerId property
+     * Gets the containerId property value. Indicates the identifier of the container, for example, a group ID.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
         }};
     }
     /**
-     * Gets the member property value. The member property
+     * Gets the member property value. Navigation link to a member object. For example, to a user.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
         return this._member;
     }
     /**
-     * Gets the memberId property value. The memberId property
+     * Gets the memberId property value. Indicates the identifier of the user.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
         writer.writeEnumValue("outlierMemberType", this.getOutlierMemberType());
     }
     /**
-     * Sets the container property value. The container property
+     * Sets the container property value. Navigation link to the container directory object. For example, to a group.
      * @param value Value to set for the container property.
      * @return a void
      */
@@ -126,7 +126,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
         this._container = value;
     }
     /**
-     * Sets the containerId property value. The containerId property
+     * Sets the containerId property value. Indicates the identifier of the container, for example, a group ID.
      * @param value Value to set for the containerId property.
      * @return a void
      */
@@ -134,7 +134,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
         this._containerId = value;
     }
     /**
-     * Sets the member property value. The member property
+     * Sets the member property value. Navigation link to a member object. For example, to a user.
      * @param value Value to set for the member property.
      * @return a void
      */
@@ -142,7 +142,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
         this._member = value;
     }
     /**
-     * Sets the memberId property value. The memberId property
+     * Sets the memberId property value. Indicates the identifier of the user.
      * @param value Value to set for the memberId property.
      * @return a void
      */

@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.onlinemeetings.item.virtualappointment;
+package com.microsoft.graph.users.item.onlinemeetings.item.virtualappointment;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.VirtualAppointment;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.VirtualAppointment;
 /** Provides operations to manage the virtualAppointment property of the microsoft.graph.onlineMeeting entity. */
 public class VirtualAppointmentRequestBuilder {
     /** Path parameters for the request */

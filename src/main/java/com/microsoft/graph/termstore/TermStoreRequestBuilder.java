@@ -1,5 +1,11 @@
-package microsoft.graph.termstore;
+package com.microsoft.graph.termstore;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.termstore.Store;
+import com.microsoft.graph.termstore.groups.GroupsRequestBuilder;
+import com.microsoft.graph.termstore.groups.item.GroupItemRequestBuilder;
+import com.microsoft.graph.termstore.sets.item.SetItemRequestBuilder;
+import com.microsoft.graph.termstore.sets.SetsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.termstore.Store;
-import microsoft.graph.termstore.groups.GroupsRequestBuilder;
-import microsoft.graph.termstore.groups.item.GroupItemRequestBuilder;
-import microsoft.graph.termstore.sets.item.SetItemRequestBuilder;
-import microsoft.graph.termstore.sets.SetsRequestBuilder;
 /** Provides operations to manage the store singleton. */
 public class TermStoreRequestBuilder {
     /** The groups property */
@@ -179,7 +179,7 @@ public class TermStoreRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.termStore.groups.item collection
+     * Gets an item from the com.Microsoft.Graph.termStore.groups.item collection
      * @param id Unique identifier of the item
      * @return a GroupItemRequestBuilder
      */
@@ -246,7 +246,7 @@ public class TermStoreRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.termStore.sets.item collection
+     * Gets an item from the com.Microsoft.Graph.termStore.sets.item collection
      * @param id Unique identifier of the item
      * @return a SetItemRequestBuilder
      */

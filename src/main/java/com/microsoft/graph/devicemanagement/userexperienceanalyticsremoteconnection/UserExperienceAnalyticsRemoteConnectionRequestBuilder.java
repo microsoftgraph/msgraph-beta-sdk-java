@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsremoteconnection;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsremoteconnection;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsremoteconnection.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsremoteconnection.summarizedeviceremoteconnectionwithsummarizeby.SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsRemoteConnection;
+import com.microsoft.graph.models.UserExperienceAnalyticsRemoteConnectionCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsremoteconnection.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.userexperienceanalyticsremoteconnection.summarizedeviceremoteconnectionwithsummarizeby.SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsRemoteConnection;
-import microsoft.graph.models.UserExperienceAnalyticsRemoteConnectionCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsRemoteConnection property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsRemoteConnectionRequestBuilder {
     /** The Count property */

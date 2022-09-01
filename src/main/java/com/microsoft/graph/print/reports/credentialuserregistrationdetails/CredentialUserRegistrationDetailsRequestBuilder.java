@@ -1,5 +1,9 @@
-package microsoft.graph.print.reports.credentialuserregistrationdetails;
+package com.microsoft.graph.print.reports.credentialuserregistrationdetails;
 
+import com.microsoft.graph.models.CredentialUserRegistrationDetails;
+import com.microsoft.graph.models.CredentialUserRegistrationDetailsCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.print.reports.credentialuserregistrationdetails.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CredentialUserRegistrationDetails;
-import microsoft.graph.models.CredentialUserRegistrationDetailsCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.print.reports.credentialuserregistrationdetails.count.CountRequestBuilder;
 /** Provides operations to manage the credentialUserRegistrationDetails property of the microsoft.graph.reportRoot entity. */
 public class CredentialUserRegistrationDetailsRequestBuilder {
     /** The Count property */

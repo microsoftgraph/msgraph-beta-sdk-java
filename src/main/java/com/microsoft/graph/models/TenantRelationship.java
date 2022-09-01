@@ -1,5 +1,6 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.managedtenants.ManagedTenant;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.managedtenants.ManagedTenant;
 public class TenantRelationship extends Entity implements Parsable {
     /** The customer who has a delegated admin relationship with a Microsoft partner. */
     private java.util.List<DelegatedAdminCustomer> _delegatedAdminCustomers;

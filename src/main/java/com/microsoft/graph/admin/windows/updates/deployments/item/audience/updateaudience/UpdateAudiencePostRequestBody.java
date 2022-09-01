@@ -1,5 +1,6 @@
-package microsoft.graph.admin.windows.updates.deployments.item.audience.updateaudience;
+package com.microsoft.graph.admin.windows.updates.deployments.item.audience.updateaudience;
 
+import com.microsoft.graph.models.windowsupdates.UpdatableAsset;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.windowsupdates.UpdatableAsset;
 /** Provides operations to call the updateAudience method. */
 public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Parsable {
     /** The addExclusions property */

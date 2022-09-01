@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getzebrafotadeploymentreport;
+package com.microsoft.graph.devicemanagement.reports.getzebrafotadeploymentreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -25,7 +25,7 @@ public class GetZebraFotaDeploymentReportPostRequestBody implements AdditionalDa
     /** The select property */
     private java.util.List<String> _select;
     /** The sessionId property */
-    private Integer _sessionId;
+    private String _sessionId;
     /** The skip property */
     private Integer _skip;
     /** The top property */
@@ -69,7 +69,7 @@ public class GetZebraFotaDeploymentReportPostRequestBody implements AdditionalDa
             this.put("orderBy", (n) -> { currentObject.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("search", (n) -> { currentObject.setSearch(n.getStringValue()); });
             this.put("select", (n) -> { currentObject.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sessionId", (n) -> { currentObject.setSessionId(n.getIntegerValue()); });
+            this.put("sessionId", (n) -> { currentObject.setSessionId(n.getStringValue()); });
             this.put("skip", (n) -> { currentObject.setSkip(n.getIntegerValue()); });
             this.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
         }};
@@ -124,10 +124,10 @@ public class GetZebraFotaDeploymentReportPostRequestBody implements AdditionalDa
     }
     /**
      * Gets the sessionId property value. The sessionId property
-     * @return a integer
+     * @return a string
      */
     @javax.annotation.Nullable
-    public Integer getSessionId() {
+    public String getSessionId() {
         return this._sessionId;
     }
     /**
@@ -159,7 +159,7 @@ public class GetZebraFotaDeploymentReportPostRequestBody implements AdditionalDa
         writer.writeCollectionOfPrimitiveValues("orderBy", this.getOrderBy());
         writer.writeStringValue("search", this.getSearch());
         writer.writeCollectionOfPrimitiveValues("select", this.getSelect());
-        writer.writeIntegerValue("sessionId", this.getSessionId());
+        writer.writeStringValue("sessionId", this.getSessionId());
         writer.writeIntegerValue("skip", this.getSkip());
         writer.writeIntegerValue("top", this.getTop());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -225,7 +225,7 @@ public class GetZebraFotaDeploymentReportPostRequestBody implements AdditionalDa
      * @param value Value to set for the sessionId property.
      * @return a void
      */
-    public void setSessionId(@javax.annotation.Nullable final Integer value) {
+    public void setSessionId(@javax.annotation.Nullable final String value) {
         this._sessionId = value;
     }
     /**

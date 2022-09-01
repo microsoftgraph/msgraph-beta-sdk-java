@@ -1,5 +1,12 @@
-package microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor;
+package com.microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor;
 
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.currency.CurrencyRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.paymentmethod.PaymentMethodRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.paymentterm.PaymentTermRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.picture.item.PictureItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.picture.PictureRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Vendor;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.currency.CurrencyRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.paymentmethod.PaymentMethodRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.paymentterm.PaymentTermRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.picture.item.PictureItemRequestBuilder;
-import microsoft.graph.financials.companies.item.purchaseinvoices.item.vendor.picture.PictureRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Vendor;
 /** Provides operations to manage the vendor property of the microsoft.graph.purchaseInvoice entity. */
 public class VendorRequestBuilder {
     /** The currency property */
@@ -324,7 +324,7 @@ public class VendorRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.purchaseInvoices.item.vendor.picture.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.purchaseInvoices.item.vendor.picture.item collection
      * @param id Unique identifier of the item
      * @return a PictureItemRequestBuilder
      */

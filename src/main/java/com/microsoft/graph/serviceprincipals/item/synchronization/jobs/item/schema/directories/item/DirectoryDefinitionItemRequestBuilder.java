@@ -1,5 +1,8 @@
-package microsoft.graph.serviceprincipals.item.synchronization.jobs.item.schema.directories.item;
+package com.microsoft.graph.serviceprincipals.item.synchronization.jobs.item.schema.directories.item;
 
+import com.microsoft.graph.models.DirectoryDefinition;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.serviceprincipals.item.synchronization.jobs.item.schema.directories.item.discover.DiscoverRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryDefinition;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.serviceprincipals.item.synchronization.jobs.item.schema.directories.item.discover.DiscoverRequestBuilder;
 /** Provides operations to manage the directories property of the microsoft.graph.synchronizationSchema entity. */
 public class DirectoryDefinitionItemRequestBuilder {
     /** The discover property */

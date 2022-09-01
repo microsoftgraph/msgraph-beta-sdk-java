@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.manageddeviceencryptionstates;
+package com.microsoft.graph.devicemanagement.manageddeviceencryptionstates;
 
+import com.microsoft.graph.devicemanagement.manageddeviceencryptionstates.count.CountRequestBuilder;
+import com.microsoft.graph.models.ManagedDeviceEncryptionState;
+import com.microsoft.graph.models.ManagedDeviceEncryptionStateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.manageddeviceencryptionstates.count.CountRequestBuilder;
-import microsoft.graph.models.ManagedDeviceEncryptionState;
-import microsoft.graph.models.ManagedDeviceEncryptionStateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedDeviceEncryptionStates property of the microsoft.graph.deviceManagement entity. */
 public class ManagedDeviceEncryptionStatesRequestBuilder {
     /** The Count property */

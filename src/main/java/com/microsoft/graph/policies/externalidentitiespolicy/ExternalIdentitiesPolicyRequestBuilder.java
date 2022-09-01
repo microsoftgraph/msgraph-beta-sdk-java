@@ -1,5 +1,7 @@
-package microsoft.graph.policies.externalidentitiespolicy;
+package com.microsoft.graph.policies.externalidentitiespolicy;
 
+import com.microsoft.graph.models.ExternalIdentitiesPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ExternalIdentitiesPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the externalIdentitiesPolicy property of the microsoft.graph.policyRoot entity. */
 public class ExternalIdentitiesPolicyRequestBuilder {
     /** Path parameters for the request */

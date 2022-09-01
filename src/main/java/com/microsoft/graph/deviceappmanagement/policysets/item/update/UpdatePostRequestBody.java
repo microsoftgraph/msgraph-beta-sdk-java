@@ -1,5 +1,7 @@
-package microsoft.graph.deviceappmanagement.policysets.item.update;
+package com.microsoft.graph.deviceappmanagement.policysets.item.update;
 
+import com.microsoft.graph.models.PolicySetAssignment;
+import com.microsoft.graph.models.PolicySetItem;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.PolicySetAssignment;
-import microsoft.graph.models.PolicySetItem;
 /** Provides operations to call the update method. */
 public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
     /** The addedPolicySetItems property */

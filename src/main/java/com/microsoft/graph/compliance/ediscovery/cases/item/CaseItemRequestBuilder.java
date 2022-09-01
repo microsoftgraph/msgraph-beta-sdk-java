@@ -1,5 +1,24 @@
-package microsoft.graph.compliance.ediscovery.cases.item;
+package com.microsoft.graph.compliance.ediscovery.cases.item;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.close.CloseRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.CustodiansRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.custodians.item.CustodianItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.LegalHoldItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.legalholds.LegalHoldsRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.item.NoncustodialDataSourceItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.NoncustodialDataSourcesRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.operations.item.CaseOperationItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.reopen.ReopenRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.ReviewSetItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.reviewsets.ReviewSetsRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.settings.SettingsRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.SourceCollectionItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.SourceCollectionsRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.tags.item.TagItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.tags.TagsRequestBuilder;
+import com.microsoft.graph.models.ediscovery.Case_escaped;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,25 +33,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.close.CloseRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.CustodiansRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.custodians.item.CustodianItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.legalholds.item.LegalHoldItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.legalholds.LegalHoldsRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.item.NoncustodialDataSourceItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.noncustodialdatasources.NoncustodialDataSourcesRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.operations.item.CaseOperationItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.operations.OperationsRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.reopen.ReopenRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.reviewsets.item.ReviewSetItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.reviewsets.ReviewSetsRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.settings.SettingsRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.SourceCollectionItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.SourceCollectionsRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.tags.item.TagItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.tags.TagsRequestBuilder;
-import microsoft.graph.models.ediscovery.Case_escaped;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the cases property of the microsoft.graph.ediscovery.ediscoveryroot entity. */
 public class CaseItemRequestBuilder {
     /** The close property */
@@ -209,7 +209,7 @@ public class CaseItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.custodians.item collection
      * @param id Unique identifier of the item
      * @return a CustodianItemRequestBuilder
      */
@@ -323,7 +323,7 @@ public class CaseItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.legalHolds.item collection
      * @param id Unique identifier of the item
      * @return a LegalHoldItemRequestBuilder
      */
@@ -335,7 +335,7 @@ public class CaseItemRequestBuilder {
         return new LegalHoldItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.noncustodialDataSources.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.noncustodialDataSources.item collection
      * @param id Unique identifier of the item
      * @return a NoncustodialDataSourceItemRequestBuilder
      */
@@ -347,7 +347,7 @@ public class CaseItemRequestBuilder {
         return new NoncustodialDataSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.operations.item collection
      * @param id Unique identifier of the item
      * @return a CaseOperationItemRequestBuilder
      */
@@ -414,7 +414,7 @@ public class CaseItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.reviewSets.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.reviewSets.item collection
      * @param id Unique identifier of the item
      * @return a ReviewSetItemRequestBuilder
      */
@@ -426,7 +426,7 @@ public class CaseItemRequestBuilder {
         return new ReviewSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item collection
      * @param id Unique identifier of the item
      * @return a SourceCollectionItemRequestBuilder
      */
@@ -438,7 +438,7 @@ public class CaseItemRequestBuilder {
         return new SourceCollectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.tags.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.tags.item collection
      * @param id Unique identifier of the item
      * @return a TagItemRequestBuilder
      */

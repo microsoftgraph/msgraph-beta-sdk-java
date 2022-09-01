@@ -1,4 +1,4 @@
-package microsoft.graph.contracts.getuserownedobjects;
+package com.microsoft.graph.contracts.getuserownedobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

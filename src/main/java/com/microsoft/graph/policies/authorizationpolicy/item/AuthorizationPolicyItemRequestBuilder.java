@@ -1,5 +1,9 @@
-package microsoft.graph.policies.authorizationpolicy.item;
+package com.microsoft.graph.policies.authorizationpolicy.item;
 
+import com.microsoft.graph.models.AuthorizationPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.authorizationpolicy.item.defaultuserroleoverrides.DefaultUserRoleOverridesRequestBuilder;
+import com.microsoft.graph.policies.authorizationpolicy.item.defaultuserroleoverrides.item.DefaultUserRoleOverrideItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AuthorizationPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.policies.authorizationpolicy.item.defaultuserroleoverrides.DefaultUserRoleOverridesRequestBuilder;
-import microsoft.graph.policies.authorizationpolicy.item.defaultuserroleoverrides.item.DefaultUserRoleOverrideItemRequestBuilder;
 /** Provides operations to manage the authorizationPolicy property of the microsoft.graph.policyRoot entity. */
 public class AuthorizationPolicyItemRequestBuilder {
     /** The defaultUserRoleOverrides property */
@@ -149,7 +149,7 @@ public class AuthorizationPolicyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.authorizationPolicy.item.defaultUserRoleOverrides.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.authorizationPolicy.item.defaultUserRoleOverrides.item collection
      * @param id Unique identifier of the item
      * @return a DefaultUserRoleOverrideItemRequestBuilder
      */

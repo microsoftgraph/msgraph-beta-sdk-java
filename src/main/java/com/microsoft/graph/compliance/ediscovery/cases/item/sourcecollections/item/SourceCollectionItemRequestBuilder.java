@@ -1,5 +1,15 @@
-package microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item;
+package com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.additionalsources.AdditionalSourcesRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.addtoreviewsetoperation.AddToReviewSetOperationRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.custodiansources.CustodianSourcesRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.estimatestatistics.EstimateStatisticsRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.lastestimatestatisticsoperation.LastEstimateStatisticsOperationRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.noncustodialsources.item.NoncustodialDataSourceItemRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.noncustodialsources.NoncustodialSourcesRequestBuilder;
+import com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.purgedata.PurgeDataRequestBuilder;
+import com.microsoft.graph.models.ediscovery.SourceCollection;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.additionalsources.AdditionalSourcesRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.addtoreviewsetoperation.AddToReviewSetOperationRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.custodiansources.CustodianSourcesRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.estimatestatistics.EstimateStatisticsRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.lastestimatestatisticsoperation.LastEstimateStatisticsOperationRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.noncustodialsources.item.NoncustodialDataSourceItemRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.noncustodialsources.NoncustodialSourcesRequestBuilder;
-import microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.purgedata.PurgeDataRequestBuilder;
-import microsoft.graph.models.ediscovery.SourceCollection;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the sourceCollections property of the microsoft.graph.ediscovery.case entity. */
 public class SourceCollectionItemRequestBuilder {
     /** The additionalSources property */
@@ -68,16 +68,16 @@ public class SourceCollectionItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item.additionalSources.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item.additionalSources.item collection
      * @param id Unique identifier of the item
      * @return a DataSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.additionalsources.item.DataSourceItemRequestBuilder additionalSources(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.additionalsources.item.DataSourceItemRequestBuilder additionalSources(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("dataSource%2Did", id);
-        return new microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.additionalsources.item.DataSourceItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.additionalsources.item.DataSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SourceCollectionItemRequestBuilder and sets the default values.
@@ -197,16 +197,16 @@ public class SourceCollectionItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item.custodianSources.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item.custodianSources.item collection
      * @param id Unique identifier of the item
      * @return a DataSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.custodiansources.item.DataSourceItemRequestBuilder custodianSources(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.custodiansources.item.DataSourceItemRequestBuilder custodianSources(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("dataSource%2Did", id);
-        return new microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.custodiansources.item.DataSourceItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.compliance.ediscovery.cases.item.sourcecollections.item.custodiansources.item.DataSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property sourceCollections for compliance
@@ -311,7 +311,7 @@ public class SourceCollectionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item.noncustodialSources.item collection
+     * Gets an item from the com.Microsoft.Graph.compliance.ediscovery.cases.item.sourceCollections.item.noncustodialSources.item collection
      * @param id Unique identifier of the item
      * @return a NoncustodialDataSourceItemRequestBuilder
      */

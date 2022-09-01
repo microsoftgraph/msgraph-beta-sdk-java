@@ -1,5 +1,9 @@
-package microsoft.graph.devices.item.commands;
+package com.microsoft.graph.devices.item.commands;
 
+import com.microsoft.graph.devices.item.commands.count.CountRequestBuilder;
+import com.microsoft.graph.models.Command;
+import com.microsoft.graph.models.CommandCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devices.item.commands.count.CountRequestBuilder;
-import microsoft.graph.models.Command;
-import microsoft.graph.models.CommandCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the commands property of the microsoft.graph.device entity. */
 public class CommandsRequestBuilder {
     /** The Count property */

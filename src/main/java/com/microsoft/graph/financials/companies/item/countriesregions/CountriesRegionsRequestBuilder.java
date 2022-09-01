@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.countriesregions;
+package com.microsoft.graph.financials.companies.item.countriesregions;
 
+import com.microsoft.graph.financials.companies.item.countriesregions.count.CountRequestBuilder;
+import com.microsoft.graph.models.CountryRegion;
+import com.microsoft.graph.models.CountryRegionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.countriesregions.count.CountRequestBuilder;
-import microsoft.graph.models.CountryRegion;
-import microsoft.graph.models.CountryRegionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the countriesRegions property of the microsoft.graph.company entity. */
 public class CountriesRegionsRequestBuilder {
     /** The Count property */

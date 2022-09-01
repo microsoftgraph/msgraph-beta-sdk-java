@@ -1,5 +1,9 @@
-package microsoft.graph.tenantrelationships.delegatedadmincustomers.item;
+package com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item;
 
+import com.microsoft.graph.models.DelegatedAdminCustomer;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails.item.DelegatedAdminServiceManagementDetailItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails.ServiceManagementDetailsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DelegatedAdminCustomer;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails.item.DelegatedAdminServiceManagementDetailItemRequestBuilder;
-import microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails.ServiceManagementDetailsRequestBuilder;
 /** Provides operations to manage the delegatedAdminCustomers property of the microsoft.graph.tenantRelationship entity. */
 public class DelegatedAdminCustomerItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class DelegatedAdminCustomerItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.tenantRelationships.delegatedAdminCustomers.item.serviceManagementDetails.item collection
+     * Gets an item from the com.Microsoft.Graph.tenantRelationships.delegatedAdminCustomers.item.serviceManagementDetails.item collection
      * @param id Unique identifier of the item
      * @return a DelegatedAdminServiceManagementDetailItemRequestBuilder
      */

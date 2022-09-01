@@ -1,5 +1,6 @@
-package microsoft.graph.devicemanagement.certificateconnectordetails.item.gethealthmetrictimeseries;
+package com.microsoft.graph.devicemanagement.certificateconnectordetails.item.gethealthmetrictimeseries;
 
+import com.microsoft.graph.models.CertificateConnectorHealthMetricValue;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CertificateConnectorHealthMetricValue;
 /** Provides operations to call the getHealthMetricTimeSeries method. */
 public class GetHealthMetricTimeSeriesResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.items;
+package com.microsoft.graph.financials.companies.item.items;
 
+import com.microsoft.graph.financials.companies.item.items.count.CountRequestBuilder;
+import com.microsoft.graph.models.Item;
+import com.microsoft.graph.models.ItemCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.items.count.CountRequestBuilder;
-import microsoft.graph.models.Item;
-import microsoft.graph.models.ItemCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the items property of the microsoft.graph.company entity. */
 public class ItemsRequestBuilder {
     /** The Count property */

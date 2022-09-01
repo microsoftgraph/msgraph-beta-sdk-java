@@ -1,5 +1,11 @@
-package microsoft.graph.trustframework;
+package com.microsoft.graph.trustframework;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TrustFramework;
+import com.microsoft.graph.trustframework.keysets.item.TrustFrameworkKeySetItemRequestBuilder;
+import com.microsoft.graph.trustframework.keysets.KeySetsRequestBuilder;
+import com.microsoft.graph.trustframework.policies.item.TrustFrameworkPolicyItemRequestBuilder;
+import com.microsoft.graph.trustframework.policies.PoliciesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TrustFramework;
-import microsoft.graph.trustframework.keysets.item.TrustFrameworkKeySetItemRequestBuilder;
-import microsoft.graph.trustframework.keysets.KeySetsRequestBuilder;
-import microsoft.graph.trustframework.policies.item.TrustFrameworkPolicyItemRequestBuilder;
-import microsoft.graph.trustframework.policies.PoliciesRequestBuilder;
 /** Provides operations to manage the trustFramework singleton. */
 public class TrustFrameworkRequestBuilder {
     /** The keySets property */
@@ -179,7 +179,7 @@ public class TrustFrameworkRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.trustFramework.keySets.item collection
+     * Gets an item from the com.Microsoft.Graph.trustFramework.keySets.item collection
      * @param id Unique identifier of the item
      * @return a TrustFrameworkKeySetItemRequestBuilder
      */
@@ -246,7 +246,7 @@ public class TrustFrameworkRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.trustFramework.policies.item collection
+     * Gets an item from the com.Microsoft.Graph.trustFramework.policies.item collection
      * @param id Unique identifier of the item
      * @return a TrustFrameworkPolicyItemRequestBuilder
      */

@@ -1,4 +1,4 @@
-package microsoft.graph.privilegedapproval.item.roleinfo.selfactivate;
+package com.microsoft.graph.privilegedapproval.item.roleinfo.selfactivate;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

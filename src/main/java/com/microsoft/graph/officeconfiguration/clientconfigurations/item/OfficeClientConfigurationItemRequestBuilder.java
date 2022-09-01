@@ -1,5 +1,12 @@
-package microsoft.graph.officeconfiguration.clientconfigurations.item;
+package com.microsoft.graph.officeconfiguration.clientconfigurations.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OfficeClientConfiguration;
+import com.microsoft.graph.officeconfiguration.clientconfigurations.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.officeconfiguration.clientconfigurations.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.officeconfiguration.clientconfigurations.item.assignments.item.OfficeClientConfigurationAssignmentItemRequestBuilder;
+import com.microsoft.graph.officeconfiguration.clientconfigurations.item.policypayload.PolicyPayloadRequestBuilder;
+import com.microsoft.graph.officeconfiguration.clientconfigurations.item.userpreferencepayload.UserPreferencePayloadRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OfficeClientConfiguration;
-import microsoft.graph.officeconfiguration.clientconfigurations.item.assign.AssignRequestBuilder;
-import microsoft.graph.officeconfiguration.clientconfigurations.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.officeconfiguration.clientconfigurations.item.assignments.item.OfficeClientConfigurationAssignmentItemRequestBuilder;
-import microsoft.graph.officeconfiguration.clientconfigurations.item.policypayload.PolicyPayloadRequestBuilder;
-import microsoft.graph.officeconfiguration.clientconfigurations.item.userpreferencepayload.UserPreferencePayloadRequestBuilder;
 /** Provides operations to manage the clientConfigurations property of the microsoft.graph.officeConfiguration entity. */
 public class OfficeClientConfigurationItemRequestBuilder {
     /** The assign property */
@@ -50,7 +50,7 @@ public class OfficeClientConfigurationItemRequestBuilder {
         return new UserPreferencePayloadRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.officeConfiguration.clientConfigurations.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.officeConfiguration.clientConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a OfficeClientConfigurationAssignmentItemRequestBuilder
      */

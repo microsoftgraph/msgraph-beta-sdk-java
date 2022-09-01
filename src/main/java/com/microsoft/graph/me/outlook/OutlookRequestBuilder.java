@@ -1,5 +1,18 @@
-package microsoft.graph.me.outlook;
+package com.microsoft.graph.me.outlook;
 
+import com.microsoft.graph.me.outlook.mastercategories.item.OutlookCategoryItemRequestBuilder;
+import com.microsoft.graph.me.outlook.mastercategories.MasterCategoriesRequestBuilder;
+import com.microsoft.graph.me.outlook.supportedlanguages.SupportedLanguagesRequestBuilder;
+import com.microsoft.graph.me.outlook.supportedtimezones.SupportedTimeZonesRequestBuilder;
+import com.microsoft.graph.me.outlook.supportedtimezoneswithtimezonestandard.SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
+import com.microsoft.graph.me.outlook.taskfolders.item.OutlookTaskFolderItemRequestBuilder;
+import com.microsoft.graph.me.outlook.taskfolders.TaskFoldersRequestBuilder;
+import com.microsoft.graph.me.outlook.taskgroups.item.OutlookTaskGroupItemRequestBuilder;
+import com.microsoft.graph.me.outlook.taskgroups.TaskGroupsRequestBuilder;
+import com.microsoft.graph.me.outlook.tasks.item.OutlookTaskItemRequestBuilder;
+import com.microsoft.graph.me.outlook.tasks.TasksRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OutlookUser;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.outlook.mastercategories.item.OutlookCategoryItemRequestBuilder;
-import microsoft.graph.me.outlook.mastercategories.MasterCategoriesRequestBuilder;
-import microsoft.graph.me.outlook.supportedlanguages.SupportedLanguagesRequestBuilder;
-import microsoft.graph.me.outlook.supportedtimezones.SupportedTimeZonesRequestBuilder;
-import microsoft.graph.me.outlook.supportedtimezoneswithtimezonestandard.SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
-import microsoft.graph.me.outlook.taskfolders.item.OutlookTaskFolderItemRequestBuilder;
-import microsoft.graph.me.outlook.taskfolders.TaskFoldersRequestBuilder;
-import microsoft.graph.me.outlook.taskgroups.item.OutlookTaskGroupItemRequestBuilder;
-import microsoft.graph.me.outlook.taskgroups.TaskGroupsRequestBuilder;
-import microsoft.graph.me.outlook.tasks.item.OutlookTaskItemRequestBuilder;
-import microsoft.graph.me.outlook.tasks.TasksRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OutlookUser;
 /** Provides operations to manage the outlook property of the microsoft.graph.user entity. */
 public class OutlookRequestBuilder {
     /** The masterCategories property */
@@ -275,7 +275,7 @@ public class OutlookRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.outlook.masterCategories.item collection
+     * Gets an item from the com.Microsoft.Graph.me.outlook.masterCategories.item collection
      * @param id Unique identifier of the item
      * @return a OutlookCategoryItemRequestBuilder
      */
@@ -368,7 +368,7 @@ public class OutlookRequestBuilder {
         return new SupportedTimeZonesWithTimeZoneStandardRequestBuilder(pathParameters, requestAdapter, timeZoneStandard);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.outlook.taskFolders.item collection
+     * Gets an item from the com.Microsoft.Graph.me.outlook.taskFolders.item collection
      * @param id Unique identifier of the item
      * @return a OutlookTaskFolderItemRequestBuilder
      */
@@ -380,7 +380,7 @@ public class OutlookRequestBuilder {
         return new OutlookTaskFolderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.outlook.taskGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.me.outlook.taskGroups.item collection
      * @param id Unique identifier of the item
      * @return a OutlookTaskGroupItemRequestBuilder
      */
@@ -392,7 +392,7 @@ public class OutlookRequestBuilder {
         return new OutlookTaskGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.outlook.tasks.item collection
+     * Gets an item from the com.Microsoft.Graph.me.outlook.tasks.item collection
      * @param id Unique identifier of the item
      * @return a OutlookTaskItemRequestBuilder
      */

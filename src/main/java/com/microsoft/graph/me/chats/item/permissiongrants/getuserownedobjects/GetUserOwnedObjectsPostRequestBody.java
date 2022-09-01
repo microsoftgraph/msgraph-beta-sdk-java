@@ -1,4 +1,4 @@
-package microsoft.graph.me.chats.item.permissiongrants.getuserownedobjects;
+package com.microsoft.graph.me.chats.item.permissiongrants.getuserownedobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -11,17 +11,17 @@ import java.util.Objects;
 public class CorsConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The allowedHeaders property */
+    /** The request headers that the origin domain may specify on the CORS request. The wildcard character * indicates that any header beginning with the specified prefix is allowed. */
     private java.util.List<String> _allowedHeaders;
-    /** The allowedMethods property */
+    /** The HTTP request methods that the origin domain may use for a CORS request. */
     private java.util.List<String> _allowedMethods;
-    /** The allowedOrigins property */
+    /** The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user age sends to the service. */
     private java.util.List<String> _allowedOrigins;
-    /** The maxAgeInSeconds property */
+    /** The maximum amount of time that a browser should cache the response to the preflight OPTIONS request. */
     private Integer _maxAgeInSeconds;
     /** The OdataType property */
     private String _odataType;
-    /** The resource property */
+    /** Resource within the application segment for which CORS permissions are granted. / grants permission for whole app segment. */
     private String _resource;
     /**
      * Instantiates a new corsConfiguration and sets the default values.
@@ -50,7 +50,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the allowedHeaders property value. The allowedHeaders property
+     * Gets the allowedHeaders property value. The request headers that the origin domain may specify on the CORS request. The wildcard character * indicates that any header beginning with the specified prefix is allowed.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
         return this._allowedHeaders;
     }
     /**
-     * Gets the allowedMethods property value. The allowedMethods property
+     * Gets the allowedMethods property value. The HTTP request methods that the origin domain may use for a CORS request.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
         return this._allowedMethods;
     }
     /**
-     * Gets the allowedOrigins property value. The allowedOrigins property
+     * Gets the allowedOrigins property value. The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user age sends to the service.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the maxAgeInSeconds property value. The maxAgeInSeconds property
+     * Gets the maxAgeInSeconds property value. The maximum amount of time that a browser should cache the response to the preflight OPTIONS request.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the resource property value. The resource property
+     * Gets the resource property value. Resource within the application segment for which CORS permissions are granted. / grants permission for whole app segment.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the allowedHeaders property value. The allowedHeaders property
+     * Sets the allowedHeaders property value. The request headers that the origin domain may specify on the CORS request. The wildcard character * indicates that any header beginning with the specified prefix is allowed.
      * @param value Value to set for the allowedHeaders property.
      * @return a void
      */
@@ -145,7 +145,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
         this._allowedHeaders = value;
     }
     /**
-     * Sets the allowedMethods property value. The allowedMethods property
+     * Sets the allowedMethods property value. The HTTP request methods that the origin domain may use for a CORS request.
      * @param value Value to set for the allowedMethods property.
      * @return a void
      */
@@ -153,7 +153,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
         this._allowedMethods = value;
     }
     /**
-     * Sets the allowedOrigins property value. The allowedOrigins property
+     * Sets the allowedOrigins property value. The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user age sends to the service.
      * @param value Value to set for the allowedOrigins property.
      * @return a void
      */
@@ -161,7 +161,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
         this._allowedOrigins = value;
     }
     /**
-     * Sets the maxAgeInSeconds property value. The maxAgeInSeconds property
+     * Sets the maxAgeInSeconds property value. The maximum amount of time that a browser should cache the response to the preflight OPTIONS request.
      * @param value Value to set for the maxAgeInSeconds property.
      * @return a void
      */
@@ -177,7 +177,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the resource property value. The resource property
+     * Sets the resource property value. Resource within the application segment for which CORS permissions are granted. / grants permission for whole app segment.
      * @param value Value to set for the resource property.
      * @return a void
      */

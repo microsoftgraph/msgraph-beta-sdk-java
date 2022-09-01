@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.virtualendpoint.auditevents.getauditactivitytypes;
+package com.microsoft.graph.devicemanagement.virtualendpoint.auditevents.getauditactivitytypes;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

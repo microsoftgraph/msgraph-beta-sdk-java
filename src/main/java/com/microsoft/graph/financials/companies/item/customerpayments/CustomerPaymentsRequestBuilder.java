@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.customerpayments;
+package com.microsoft.graph.financials.companies.item.customerpayments;
 
+import com.microsoft.graph.financials.companies.item.customerpayments.count.CountRequestBuilder;
+import com.microsoft.graph.models.CustomerPayment;
+import com.microsoft.graph.models.CustomerPaymentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.customerpayments.count.CountRequestBuilder;
-import microsoft.graph.models.CustomerPayment;
-import microsoft.graph.models.CustomerPaymentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customerPayments property of the microsoft.graph.company entity. */
 public class CustomerPaymentsRequestBuilder {
     /** The Count property */

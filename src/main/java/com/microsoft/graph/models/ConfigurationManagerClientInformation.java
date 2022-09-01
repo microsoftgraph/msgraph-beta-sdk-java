@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -14,6 +14,8 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
     private Map<String, Object> _additionalData;
     /** Configuration Manager Client Id from SCCM */
     private String _clientIdentifier;
+    /** Configuration Manager Client version from SCCM */
+    private String _clientVersion;
     /** Configuration Manager Client blocked status from SCCM */
     private Boolean _isBlocked;
     /** The OdataType property */
@@ -53,14 +55,23 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
         return this._clientIdentifier;
     }
     /**
+     * Gets the clientVersion property value. Configuration Manager Client version from SCCM
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getClientVersion() {
+        return this._clientVersion;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConfigurationManagerClientInformation currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("clientIdentifier", (n) -> { currentObject.setClientIdentifier(n.getStringValue()); });
+            this.put("clientVersion", (n) -> { currentObject.setClientVersion(n.getStringValue()); });
             this.put("isBlocked", (n) -> { currentObject.setIsBlocked(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
@@ -89,6 +100,7 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("clientIdentifier", this.getClientIdentifier());
+        writer.writeStringValue("clientVersion", this.getClientVersion());
         writer.writeBooleanValue("isBlocked", this.getIsBlocked());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -108,6 +120,14 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
      */
     public void setClientIdentifier(@javax.annotation.Nullable final String value) {
         this._clientIdentifier = value;
+    }
+    /**
+     * Sets the clientVersion property value. Configuration Manager Client version from SCCM
+     * @param value Value to set for the clientVersion property.
+     * @return a void
+     */
+    public void setClientVersion(@javax.annotation.Nullable final String value) {
+        this._clientVersion = value;
     }
     /**
      * Sets the isBlocked property value. Configuration Manager Client blocked status from SCCM

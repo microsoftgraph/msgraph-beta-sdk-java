@@ -1,5 +1,8 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.customextensionhandlers.item;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.customextensionhandlers.item;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.customextensionhandlers.item.customextension.CustomExtensionRequestBuilder;
+import com.microsoft.graph.models.CustomExtensionHandler;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.item.accesspackageassignmentpolicies.item.customextensionhandlers.item.customextension.CustomExtensionRequestBuilder;
-import microsoft.graph.models.CustomExtensionHandler;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customExtensionHandlers property of the microsoft.graph.accessPackageAssignmentPolicy entity. */
 public class CustomExtensionHandlerItemRequestBuilder {
     /** The customExtension property */

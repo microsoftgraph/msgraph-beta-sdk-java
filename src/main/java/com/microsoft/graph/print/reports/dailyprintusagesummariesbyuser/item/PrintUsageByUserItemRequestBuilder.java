@@ -1,5 +1,7 @@
-package microsoft.graph.print.reports.dailyprintusagesummariesbyuser.item;
+package com.microsoft.graph.print.reports.dailyprintusagesummariesbyuser.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrintUsageByUser;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrintUsageByUser;
 /** Provides operations to manage the dailyPrintUsageSummariesByUser property of the microsoft.graph.reportRoot entity. */
 public class PrintUsageByUserItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.financials.companies.item.salesorders;
+package com.microsoft.graph.financials.companies.item.salesorders;
 
+import com.microsoft.graph.financials.companies.item.salesorders.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SalesOrder;
+import com.microsoft.graph.models.SalesOrderCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salesorders.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SalesOrder;
-import microsoft.graph.models.SalesOrderCollectionResponse;
 /** Provides operations to manage the salesOrders property of the microsoft.graph.company entity. */
 public class SalesOrdersRequestBuilder {
     /** The Count property */

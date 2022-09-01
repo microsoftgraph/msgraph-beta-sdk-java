@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.grouppolicymigrationreports.createmigrationreport;
+package com.microsoft.graph.devicemanagement.grouppolicymigrationreports.createmigrationreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,7 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.ExternalMeetingRegistrant;
+import com.microsoft.graph.models.MeetingRegistrant;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class MeetingRegistrantBase extends Entity implements Parsable {
     /** A unique web URL for the registrant to join the meeting. Read-only. */
     private String _joinWebUrl;

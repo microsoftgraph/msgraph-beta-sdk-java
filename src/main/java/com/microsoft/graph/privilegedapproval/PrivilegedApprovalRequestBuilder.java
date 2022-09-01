@@ -1,5 +1,10 @@
-package microsoft.graph.privilegedapproval;
+package com.microsoft.graph.privilegedapproval;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrivilegedApproval;
+import com.microsoft.graph.models.PrivilegedApprovalCollectionResponse;
+import com.microsoft.graph.privilegedapproval.count.CountRequestBuilder;
+import com.microsoft.graph.privilegedapproval.myrequests.MyRequestsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrivilegedApproval;
-import microsoft.graph.models.PrivilegedApprovalCollectionResponse;
-import microsoft.graph.privilegedapproval.count.CountRequestBuilder;
-import microsoft.graph.privilegedapproval.myrequests.MyRequestsRequestBuilder;
 /** Provides operations to manage the collection of privilegedApproval entities. */
 public class PrivilegedApprovalRequestBuilder {
     /** The Count property */

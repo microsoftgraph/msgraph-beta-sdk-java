@@ -1,5 +1,18 @@
-package microsoft.graph.financials.companies.item.salesinvoices.item;
+package com.microsoft.graph.financials.companies.item.salesinvoices.item;
 
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.cancelandsend.CancelAndSendRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.currency.CurrencyRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.customer.CustomerRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.paymentterm.PaymentTermRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.post.PostRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.postandsend.PostAndSendRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.salesinvoicelines.item.SalesInvoiceLineItemRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.salesinvoicelines.SalesInvoiceLinesRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.send.SendRequestBuilder;
+import com.microsoft.graph.financials.companies.item.salesinvoices.item.shipmentmethod.ShipmentMethodRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SalesInvoice;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.salesinvoices.item.cancel.CancelRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.item.cancelandsend.CancelAndSendRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.item.currency.CurrencyRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.item.customer.CustomerRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.item.paymentterm.PaymentTermRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.item.post.PostRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.item.postandsend.PostAndSendRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.item.salesinvoicelines.item.SalesInvoiceLineItemRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.item.salesinvoicelines.SalesInvoiceLinesRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.item.send.SendRequestBuilder;
-import microsoft.graph.financials.companies.item.salesinvoices.item.shipmentmethod.ShipmentMethodRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SalesInvoice;
 /** Provides operations to manage the salesInvoices property of the microsoft.graph.company entity. */
 public class SalesInvoiceItemRequestBuilder {
     /** The cancel property */
@@ -281,7 +281,7 @@ public class SalesInvoiceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.salesInvoices.item.salesInvoiceLines.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesInvoices.item.salesInvoiceLines.item collection
      * @param id Unique identifier of the item
      * @return a SalesInvoiceLineItemRequestBuilder
      */

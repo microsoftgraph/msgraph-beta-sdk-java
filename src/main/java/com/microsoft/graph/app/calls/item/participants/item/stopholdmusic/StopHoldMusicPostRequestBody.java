@@ -1,4 +1,4 @@
-package microsoft.graph.app.calls.item.participants.item.stopholdmusic;
+package com.microsoft.graph.app.calls.item.participants.item.stopholdmusic;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,4 +1,4 @@
-package microsoft.graph.privilegedaccess.item.roleassignments.export;
+package com.microsoft.graph.privilegedaccess.item.roleassignments.export;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

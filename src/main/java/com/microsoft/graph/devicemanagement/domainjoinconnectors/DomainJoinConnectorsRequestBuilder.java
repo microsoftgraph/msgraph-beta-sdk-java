@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.domainjoinconnectors;
+package com.microsoft.graph.devicemanagement.domainjoinconnectors;
 
+import com.microsoft.graph.devicemanagement.domainjoinconnectors.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementDomainJoinConnector;
+import com.microsoft.graph.models.DeviceManagementDomainJoinConnectorCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.domainjoinconnectors.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementDomainJoinConnector;
-import microsoft.graph.models.DeviceManagementDomainJoinConnectorCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the domainJoinConnectors property of the microsoft.graph.deviceManagement entity. */
 public class DomainJoinConnectorsRequestBuilder {
     /** The Count property */

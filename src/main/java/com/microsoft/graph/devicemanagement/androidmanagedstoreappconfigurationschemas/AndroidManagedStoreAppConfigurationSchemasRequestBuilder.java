@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.androidmanagedstoreappconfigurationschemas;
+package com.microsoft.graph.devicemanagement.androidmanagedstoreappconfigurationschemas;
 
+import com.microsoft.graph.devicemanagement.androidmanagedstoreappconfigurationschemas.count.CountRequestBuilder;
+import com.microsoft.graph.models.AndroidManagedStoreAppConfigurationSchema;
+import com.microsoft.graph.models.AndroidManagedStoreAppConfigurationSchemaCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.androidmanagedstoreappconfigurationschemas.count.CountRequestBuilder;
-import microsoft.graph.models.AndroidManagedStoreAppConfigurationSchema;
-import microsoft.graph.models.AndroidManagedStoreAppConfigurationSchemaCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the androidManagedStoreAppConfigurationSchemas property of the microsoft.graph.deviceManagement entity. */
 public class AndroidManagedStoreAppConfigurationSchemasRequestBuilder {
     /** The Count property */

@@ -1,5 +1,7 @@
-package microsoft.graph.security.ipsecurityprofiles.item;
+package com.microsoft.graph.security.ipsecurityprofiles.item;
 
+import com.microsoft.graph.models.IpSecurityProfile;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.IpSecurityProfile;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the ipSecurityProfiles property of the microsoft.graph.security entity. */
 public class IpSecurityProfileItemRequestBuilder {
     /** Path parameters for the request */

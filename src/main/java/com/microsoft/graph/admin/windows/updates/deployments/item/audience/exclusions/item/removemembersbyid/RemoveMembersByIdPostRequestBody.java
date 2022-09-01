@@ -1,4 +1,4 @@
-package microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.item.removemembersbyid;
+package com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.item.removemembersbyid;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,10 @@
-package microsoft.graph.financials.companies.item.customerpaymentjournals.item;
+package com.microsoft.graph.financials.companies.item.customerpaymentjournals.item;
 
+import com.microsoft.graph.financials.companies.item.customerpaymentjournals.item.account.AccountRequestBuilder;
+import com.microsoft.graph.financials.companies.item.customerpaymentjournals.item.customerpayments.CustomerPaymentsRequestBuilder;
+import com.microsoft.graph.financials.companies.item.customerpaymentjournals.item.customerpayments.item.CustomerPaymentItemRequestBuilder;
+import com.microsoft.graph.models.CustomerPaymentJournal;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.financials.companies.item.customerpaymentjournals.item.account.AccountRequestBuilder;
-import microsoft.graph.financials.companies.item.customerpaymentjournals.item.customerpayments.CustomerPaymentsRequestBuilder;
-import microsoft.graph.financials.companies.item.customerpaymentjournals.item.customerpayments.item.CustomerPaymentItemRequestBuilder;
-import microsoft.graph.models.CustomerPaymentJournal;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customerPaymentJournals property of the microsoft.graph.company entity. */
 public class CustomerPaymentJournalItemRequestBuilder {
     /** The account property */
@@ -155,7 +155,7 @@ public class CustomerPaymentJournalItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.financials.companies.item.customerPaymentJournals.item.customerPayments.item collection
+     * Gets an item from the com.Microsoft.Graph.financials.companies.item.customerPaymentJournals.item.customerPayments.item collection
      * @param id Unique identifier of the item
      * @return a CustomerPaymentItemRequestBuilder
      */

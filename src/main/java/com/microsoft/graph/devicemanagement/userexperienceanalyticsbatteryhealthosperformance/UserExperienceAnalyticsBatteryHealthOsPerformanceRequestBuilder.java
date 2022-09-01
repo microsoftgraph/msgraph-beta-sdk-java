@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthosperformance;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthosperformance;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthosperformance.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthOsPerformance;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthosperformance.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsBatteryHealthOsPerformance;
-import microsoft.graph.models.UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsBatteryHealthOsPerformance property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder {
     /** The Count property */

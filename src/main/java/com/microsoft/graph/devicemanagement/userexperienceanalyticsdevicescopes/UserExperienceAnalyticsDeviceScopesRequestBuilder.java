@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.userexperienceanalyticsdevicescopes;
+package com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicescopes;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicescopes.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScope;
+import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScopeCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.userexperienceanalyticsdevicescopes.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserExperienceAnalyticsDeviceScope;
-import microsoft.graph.models.UserExperienceAnalyticsDeviceScopeCollectionResponse;
 /** Provides operations to manage the userExperienceAnalyticsDeviceScopes property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsDeviceScopesRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.exchangeonpremisespolicies;
+package com.microsoft.graph.devicemanagement.exchangeonpremisespolicies;
 
+import com.microsoft.graph.devicemanagement.exchangeonpremisespolicies.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementExchangeOnPremisesPolicy;
+import com.microsoft.graph.models.DeviceManagementExchangeOnPremisesPolicyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.exchangeonpremisespolicies.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementExchangeOnPremisesPolicy;
-import microsoft.graph.models.DeviceManagementExchangeOnPremisesPolicyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the exchangeOnPremisesPolicies property of the microsoft.graph.deviceManagement entity. */
 public class ExchangeOnPremisesPoliciesRequestBuilder {
     /** The Count property */

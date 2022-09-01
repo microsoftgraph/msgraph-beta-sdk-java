@@ -1,5 +1,7 @@
-package microsoft.graph.print.printers.item.getcapabilities;
+package com.microsoft.graph.print.printers.item.getcapabilities;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrinterCapabilities;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrinterCapabilities;
 /** Provides operations to call the getCapabilities method. */
 public class GetCapabilitiesRequestBuilder {
     /** Path parameters for the request */

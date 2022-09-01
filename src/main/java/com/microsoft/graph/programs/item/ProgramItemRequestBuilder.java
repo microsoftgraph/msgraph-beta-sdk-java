@@ -1,5 +1,9 @@
-package microsoft.graph.programs.item;
+package com.microsoft.graph.programs.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Program;
+import com.microsoft.graph.programs.item.controls.ControlsRequestBuilder;
+import com.microsoft.graph.programs.item.controls.item.ProgramControlItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Program;
-import microsoft.graph.programs.item.controls.ControlsRequestBuilder;
-import microsoft.graph.programs.item.controls.item.ProgramControlItemRequestBuilder;
 /** Provides operations to manage the collection of program entities. */
 public class ProgramItemRequestBuilder {
     /** The controls property */
@@ -59,7 +59,7 @@ public class ProgramItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the Microsoft.Graph.programs.item.controls.item collection
+     * Gets an item from the com.Microsoft.Graph.programs.item.controls.item collection
      * @param id Unique identifier of the item
      * @return a ProgramControlItemRequestBuilder
      */

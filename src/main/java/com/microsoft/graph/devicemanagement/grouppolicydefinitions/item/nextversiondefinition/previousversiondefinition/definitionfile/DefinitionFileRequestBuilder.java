@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.grouppolicydefinitions.item.nextversiondefinition.previousversiondefinition.definitionfile;
+package com.microsoft.graph.devicemanagement.grouppolicydefinitions.item.nextversiondefinition.previousversiondefinition.definitionfile;
 
+import com.microsoft.graph.models.GroupPolicyDefinitionFile;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.GroupPolicyDefinitionFile;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the definitionFile property of the microsoft.graph.groupPolicyDefinition entity. */
 public class DefinitionFileRequestBuilder {
     /** Path parameters for the request */

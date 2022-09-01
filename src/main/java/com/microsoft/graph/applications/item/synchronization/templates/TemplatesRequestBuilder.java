@@ -1,5 +1,9 @@
-package microsoft.graph.applications.item.synchronization.templates;
+package com.microsoft.graph.applications.item.synchronization.templates;
 
+import com.microsoft.graph.applications.item.synchronization.templates.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SynchronizationTemplate;
+import com.microsoft.graph.models.SynchronizationTemplateCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.item.synchronization.templates.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SynchronizationTemplate;
-import microsoft.graph.models.SynchronizationTemplateCollectionResponse;
 /** Provides operations to manage the templates property of the microsoft.graph.synchronization entity. */
 public class TemplatesRequestBuilder {
     /** The Count property */

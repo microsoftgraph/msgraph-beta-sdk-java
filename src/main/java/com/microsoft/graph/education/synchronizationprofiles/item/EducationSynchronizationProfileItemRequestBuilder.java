@@ -1,5 +1,15 @@
-package microsoft.graph.education.synchronizationprofiles.item;
+package com.microsoft.graph.education.synchronizationprofiles.item;
 
+import com.microsoft.graph.education.synchronizationprofiles.item.errors.ErrorsRequestBuilder;
+import com.microsoft.graph.education.synchronizationprofiles.item.errors.item.EducationSynchronizationErrorItemRequestBuilder;
+import com.microsoft.graph.education.synchronizationprofiles.item.pause.PauseRequestBuilder;
+import com.microsoft.graph.education.synchronizationprofiles.item.profilestatus.ProfileStatusRequestBuilder;
+import com.microsoft.graph.education.synchronizationprofiles.item.reset.ResetRequestBuilder;
+import com.microsoft.graph.education.synchronizationprofiles.item.resume.ResumeRequestBuilder;
+import com.microsoft.graph.education.synchronizationprofiles.item.start.StartRequestBuilder;
+import com.microsoft.graph.education.synchronizationprofiles.item.uploadurl.UploadUrlRequestBuilder;
+import com.microsoft.graph.models.EducationSynchronizationProfile;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.synchronizationprofiles.item.errors.ErrorsRequestBuilder;
-import microsoft.graph.education.synchronizationprofiles.item.errors.item.EducationSynchronizationErrorItemRequestBuilder;
-import microsoft.graph.education.synchronizationprofiles.item.pause.PauseRequestBuilder;
-import microsoft.graph.education.synchronizationprofiles.item.profilestatus.ProfileStatusRequestBuilder;
-import microsoft.graph.education.synchronizationprofiles.item.reset.ResetRequestBuilder;
-import microsoft.graph.education.synchronizationprofiles.item.resume.ResumeRequestBuilder;
-import microsoft.graph.education.synchronizationprofiles.item.start.StartRequestBuilder;
-import microsoft.graph.education.synchronizationprofiles.item.uploadurl.UploadUrlRequestBuilder;
-import microsoft.graph.models.EducationSynchronizationProfile;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the synchronizationProfiles property of the microsoft.graph.educationRoot entity. */
 public class EducationSynchronizationProfileItemRequestBuilder {
     /** The errors property */
@@ -231,7 +231,7 @@ public class EducationSynchronizationProfileItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.synchronizationProfiles.item.errors.item collection
+     * Gets an item from the com.Microsoft.Graph.education.synchronizationProfiles.item.errors.item collection
      * @param id Unique identifier of the item
      * @return a EducationSynchronizationErrorItemRequestBuilder
      */

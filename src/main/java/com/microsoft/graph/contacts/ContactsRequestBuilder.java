@@ -1,5 +1,12 @@
-package microsoft.graph.contacts;
+package com.microsoft.graph.contacts;
 
+import com.microsoft.graph.contacts.delta.DeltaRequestBuilder;
+import com.microsoft.graph.contacts.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.contacts.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
+import com.microsoft.graph.contacts.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OrgContact;
+import com.microsoft.graph.models.OrgContactCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,21 +21,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.contacts.count.CountRequestBuilder;
-import microsoft.graph.contacts.delta.DeltaRequestBuilder;
-import microsoft.graph.contacts.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.contacts.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
-import microsoft.graph.contacts.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OrgContact;
-import microsoft.graph.models.OrgContactCollectionResponse;
 /** Provides operations to manage the collection of orgContact entities. */
 public class ContactsRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /** The getByIds property */
     @javax.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
@@ -59,7 +53,7 @@ public class ContactsRequestBuilder {
     public ContactsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/contacts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/contacts{?%24top,%24search,%24orderby,%24select}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -71,7 +65,7 @@ public class ContactsRequestBuilder {
      * @return a void
      */
     public ContactsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/contacts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/contacts{?%24top,%24search,%24orderby,%24select}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -256,18 +250,6 @@ public class ContactsRequestBuilder {
     }
     /** Get the list of organizational contacts for this organization. */
     public class ContactsRequestBuilderGetQueryParameters {
-        /** Include count of items */
-        @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
-        public Boolean count;
-        /** Expand related entities */
-        @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
-        public String[] expand;
-        /** Filter items by property values */
-        @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
-        public String filter;
         /** Order items by property values */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
@@ -280,10 +262,6 @@ public class ContactsRequestBuilder {
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
-        @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
-        public Integer skip;
         /** Show only the first n items */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable
