@@ -35,6 +35,15 @@ public class CertificateConnectorDetails extends Entity implements IJsonBackedOb
     public String connectorName;
 
     /**
+     * The Connector Version.
+     * Version of the connector installed.
+     */
+    @SerializedName(value = "connectorVersion", alternate = {"ConnectorVersion"})
+    @Expose
+	@Nullable
+    public String connectorVersion;
+
+    /**
      * The Enrollment Date Time.
      * Date/time when this connector was enrolled.
      */

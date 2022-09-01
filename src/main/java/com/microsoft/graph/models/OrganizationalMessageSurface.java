@@ -24,6 +24,10 @@ public enum OrganizationalMessageSurface
     */
     SOFT_LANDING,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For OrganizationalMessageSurface values that were not expected from the service
     */
     UNEXPECTED_VALUE

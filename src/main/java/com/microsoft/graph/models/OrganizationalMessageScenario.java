@@ -20,6 +20,10 @@ public enum OrganizationalMessageScenario
     */
     LIFECYCLE,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For OrganizationalMessageScenario values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -62,7 +62,7 @@ public class OrganizationalMessageDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Frequency.
-     * The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice.
+     * The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice, unknownFutureValue.
      */
     @SerializedName(value = "frequency", alternate = {"Frequency"})
     @Expose
@@ -80,7 +80,7 @@ public class OrganizationalMessageDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Scenario.
-     * Indicates the scenario for the message. Possible values are: onboarding, lifecycle.
+     * Indicates the scenario for the message. Possible values are: onboarding, lifecycle, unknownFutureValue.
      */
     @SerializedName(value = "scenario", alternate = {"Scenario"})
     @Expose
@@ -98,7 +98,7 @@ public class OrganizationalMessageDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Status.
-     * Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled.
+     * Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -107,7 +107,7 @@ public class OrganizationalMessageDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Surface.
-     * Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding.
+     * Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue.
      */
     @SerializedName(value = "surface", alternate = {"Surface"})
     @Expose
@@ -125,7 +125,7 @@ public class OrganizationalMessageDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Theme.
-     * Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows.
+     * Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue.
      */
     @SerializedName(value = "theme", alternate = {"Theme"})
     @Expose

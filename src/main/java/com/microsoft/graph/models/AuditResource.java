@@ -40,6 +40,15 @@ public class AuditResource implements IJsonBackedObject {
     }
 
     /**
+     * The Audit Resource Type.
+     * Audit resource's type.
+     */
+    @SerializedName(value = "auditResourceType", alternate = {"AuditResourceType"})
+    @Expose
+	@Nullable
+    public String auditResourceType;
+
+    /**
      * The Display Name.
      * Display name.
      */

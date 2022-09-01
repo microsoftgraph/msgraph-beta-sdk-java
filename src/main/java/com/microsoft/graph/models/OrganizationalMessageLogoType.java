@@ -16,6 +16,10 @@ public enum OrganizationalMessageLogoType
     */
     PNG,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For OrganizationalMessageLogoType values that were not expected from the service
     */
     UNEXPECTED_VALUE

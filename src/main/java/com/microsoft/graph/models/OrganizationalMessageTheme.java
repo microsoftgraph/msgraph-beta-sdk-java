@@ -24,6 +24,14 @@ public enum OrganizationalMessageTheme
     */
     WELCOME_TO_WINDOWS,
     /**
+    * explore
+    */
+    EXPLORE,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For OrganizationalMessageTheme values that were not expected from the service
     */
     UNEXPECTED_VALUE

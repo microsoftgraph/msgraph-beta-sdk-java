@@ -241,7 +241,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Request Signature Verification.
-     * 
+     * Specifies whether this application requires Azure AD to verify the signed authentication requests.
      */
     @SerializedName(value = "requestSignatureVerification", alternate = {"RequestSignatureVerification"})
     @Expose

@@ -28,6 +28,10 @@ public enum OrganizationalMessageStatus
     */
     CANCELLED,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For OrganizationalMessageStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

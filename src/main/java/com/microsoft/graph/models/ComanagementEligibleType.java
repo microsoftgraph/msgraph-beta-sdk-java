@@ -32,6 +32,10 @@ public enum ComanagementEligibleType
     */
     INELIGIBLE,
     /**
+    * scheduled For Enrollment
+    */
+    SCHEDULED_FOR_ENROLLMENT,
+    /**
     * For ComanagementEligibleType values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -41,7 +41,7 @@ public class OnPremisesApplicationSegment implements IJsonBackedObject {
 
     /**
      * The Alternate Url.
-     * 
+     * If you're configuring a traffic manager in front of multiple App Proxy application segments, contains the user-friendly URL that will point to the traffic manager.
      */
     @SerializedName(value = "alternateUrl", alternate = {"AlternateUrl"})
     @Expose
@@ -50,7 +50,7 @@ public class OnPremisesApplicationSegment implements IJsonBackedObject {
 
     /**
      * The Cors Configurations.
-     * 
+     * CORS Rule definition for a particular application segment.
      */
     @SerializedName(value = "corsConfigurations", alternate = {"CorsConfigurations"})
     @Expose
@@ -59,7 +59,7 @@ public class OnPremisesApplicationSegment implements IJsonBackedObject {
 
     /**
      * The External Url.
-     * 
+     * The published external URL for the application segment; for example, https://intranet.contoso.com./
      */
     @SerializedName(value = "externalUrl", alternate = {"ExternalUrl"})
     @Expose
@@ -68,7 +68,7 @@ public class OnPremisesApplicationSegment implements IJsonBackedObject {
 
     /**
      * The Internal Url.
-     * 
+     * The internal URL of the application segment; for example, https://intranet/.
      */
     @SerializedName(value = "internalUrl", alternate = {"InternalUrl"})
     @Expose

@@ -179,6 +179,15 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
 	@Nullable
     public Boolean windowsEnabled;
 
+    /**
+     * The Windows Mobile Application Management Enabled.
+     * When TRUE, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector for Windows. When FALSE, Intune will not use device risk details sent over this connector during app protection policies calculation for policies with a Device Threat Level configured. Existing devices that are not compliant due to risk levels obtained from this connector will also become compliant.
+     */
+    @SerializedName(value = "windowsMobileApplicationManagementEnabled", alternate = {"WindowsMobileApplicationManagementEnabled"})
+    @Expose
+	@Nullable
+    public Boolean windowsMobileApplicationManagementEnabled;
+
 
     /**
      * Sets the raw JSON object

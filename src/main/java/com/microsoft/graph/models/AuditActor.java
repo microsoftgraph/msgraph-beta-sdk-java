@@ -58,6 +58,15 @@ public class AuditActor implements IJsonBackedObject {
     public String applicationId;
 
     /**
+     * The Audit Actor Type.
+     * Actor Type.
+     */
+    @SerializedName(value = "auditActorType", alternate = {"AuditActorType"})
+    @Expose
+	@Nullable
+    public String auditActorType;
+
+    /**
      * The Ip Address.
      * IPAddress.
      */

@@ -172,7 +172,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The On Premises Application Segments.
-     * 
+     * Represents the application segment collection for an on-premises wildcard application.
      */
     @SerializedName(value = "onPremisesApplicationSegments", alternate = {"OnPremisesApplicationSegments"})
     @Expose

@@ -24,6 +24,10 @@ public enum AutoRestartNotificationDismissalMethod
     */
     USER,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For AutoRestartNotificationDismissalMethod values that were not expected from the service
     */
     UNEXPECTED_VALUE
