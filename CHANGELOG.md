@@ -11,6 +11,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.55.0] - 2022-09-01
+
+### Added
+ 
+- DataProcessorServiceForWindowsFeaturesOnboarding model. 
+- DetectedAppPlatformType model. 
+- SubjectSet model. 
+- CreateRemoteHelpSessionResponse model and requests. 
+- DeletedItemContainer model and requests. 
+- ManagedDeviceCreateRemoteHelpSession models and requests. 
+- ManagedDeviceRequestRemoteHelpSessionAccess models and requests. 
+- ManagedDeviceRetrieveRemoteHelpSession models and requests. 
+- RequestRemoteHelpSessionAccessResponse model and requests. 
+- RetrieveRemoteHelpSessionResponse model and requests. 
+- WinGetApp models and requests. 
+- Models and Requests added to the IdentityGovernance namespace.
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+
 ## [0.54.0] - 2022-08-23
 
 ### Added
