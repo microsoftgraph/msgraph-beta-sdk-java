@@ -27,7 +27,7 @@ public class WorkflowVersion extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Version Number.
-     * 
+     * The version of the workflow.
      */
     @SerializedName(value = "versionNumber", alternate = {"VersionNumber"})
     @Expose

@@ -25,7 +25,9 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 
 /**
  * The class for the Base Task List Collection Request Builder.
+ * @deprecated The Tasks V2 API is deprecated and will stop returning data on September 30, 2022. Please use the To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/
  */
+@Deprecated
 public class BaseTaskListCollectionRequestBuilder extends BaseCollectionRequestBuilder<BaseTaskList, BaseTaskListRequestBuilder, BaseTaskListCollectionResponse, BaseTaskListCollectionPage, BaseTaskListCollectionRequest> {
 
     /**

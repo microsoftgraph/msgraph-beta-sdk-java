@@ -29,7 +29,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
 
     /**
      * The Callback Configuration.
-     * 
+     * The callback configuration for a custom extension.
      */
     @SerializedName(value = "callbackConfiguration", alternate = {"CallbackConfiguration"})
     @Expose
@@ -38,7 +38,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
 
     /**
      * The Created Date Time.
-     * 
+     * When the custom task extension was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -47,7 +47,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
 
     /**
      * The Last Modified Date Time.
-     * 
+     * When the custom extension was last modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
 
     /**
      * The Created By.
-     * 
+     * The unique identifier of the Azure AD user that created the custom task extension.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -65,7 +65,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
 
     /**
      * The Last Modified By.
-     * 
+     * The unique identifier of the Azure AD user that modified the custom task extension last.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose

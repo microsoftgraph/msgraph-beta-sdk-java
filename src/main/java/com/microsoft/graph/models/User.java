@@ -261,7 +261,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Employee Leave Date Time.
-     * 
+     * The date and time when the user left or will leave the organization. Read: Requires User-LifeCycleInfo.Read.All. For delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Admin.  Write: Requires User-LifeCycleInfo.ReadWrite.All. For delegated scenarios, the admin needs the Global Administrator Azure AD role. Supports $filter (eq, ne, not , ge, le, in).
      */
     @SerializedName(value = "employeeLeaveDateTime", alternate = {"EmployeeLeaveDateTime"})
     @Expose

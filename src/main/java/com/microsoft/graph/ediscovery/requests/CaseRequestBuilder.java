@@ -137,6 +137,26 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
         return new com.microsoft.graph.ediscovery.requests.CaseOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the CaseExportOperation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.ediscovery.requests.CaseExportOperationCollectionRequestBuilder operationsAsCaseExportOperation() {
+        return new com.microsoft.graph.ediscovery.requests.CaseExportOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/microsoft.graph.ediscovery.caseExportOperation", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CaseExportOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.ediscovery.requests.CaseExportOperationRequestBuilder operationsAsCaseExportOperation(@Nonnull final String id) {
+        return new com.microsoft.graph.ediscovery.requests.CaseExportOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id + "/microsoft.graph.ediscovery.caseExportOperation", getClient(), null);
+    }
+    /**
      *  Gets a request builder for the ReviewSet collection
      *
      * @return the collection request builder

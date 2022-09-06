@@ -30,7 +30,7 @@ public class TaskDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * 
+     * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -48,7 +48,7 @@ public class TaskDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description of the taskDefinition.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -57,7 +57,7 @@ public class TaskDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name of the taskDefinition.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -66,7 +66,7 @@ public class TaskDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Parameters.
-     * 
+     * The parameters that must be supplied when creating a task.
      */
     @SerializedName(value = "parameters", alternate = {"Parameters"})
     @Expose
@@ -75,7 +75,7 @@ public class TaskDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * 
+     * The version number of the taskDefinition. New records are pushed when we add support for new parameters.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

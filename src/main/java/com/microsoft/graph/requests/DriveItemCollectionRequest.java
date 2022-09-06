@@ -11,6 +11,7 @@ import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.ItemReference;
 import com.microsoft.graph.models.DriveItemUploadableProperties;
 import com.microsoft.graph.models.UploadSession;
+import com.microsoft.graph.models.SensitivityLabelAssignmentMethod;
 import com.microsoft.graph.models.DriveRecipient;
 import com.microsoft.graph.models.Permission;
 import com.microsoft.graph.models.ExtractSensitivityLabelsResult;

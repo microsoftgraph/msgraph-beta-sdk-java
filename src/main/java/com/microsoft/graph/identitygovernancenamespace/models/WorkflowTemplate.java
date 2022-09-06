@@ -31,7 +31,7 @@ public class WorkflowTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * 
+     * The category of the workflow template. The possible values are: joiner, leaver.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -40,7 +40,7 @@ public class WorkflowTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description of the workflowTemplate.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -49,7 +49,7 @@ public class WorkflowTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name of the workflowTemplate. Supports  orderby.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,7 +58,7 @@ public class WorkflowTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Execution Conditions.
-     * 
+     * Conditions describing when to execute the workflow and the criteria to identify in-scope subject set.
      */
     @SerializedName(value = "executionConditions", alternate = {"ExecutionConditions"})
     @Expose
@@ -67,7 +67,7 @@ public class WorkflowTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * 
+     * Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

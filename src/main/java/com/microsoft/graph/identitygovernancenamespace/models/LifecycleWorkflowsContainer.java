@@ -34,7 +34,7 @@ public class LifecycleWorkflowsContainer extends Entity implements IJsonBackedOb
 
     /**
      * The Custom Task Extensions.
-     * 
+     * The customTaskExtension instance.
      */
     @SerializedName(value = "customTaskExtensions", alternate = {"CustomTaskExtensions"})
     @Expose
@@ -43,7 +43,7 @@ public class LifecycleWorkflowsContainer extends Entity implements IJsonBackedOb
 
     /**
      * The Deleted Items.
-     * 
+     * Deleted workflows in your lifecycle workflows instance.
      */
     @SerializedName(value = "deletedItems", alternate = {"DeletedItems"})
     @Expose
@@ -52,7 +52,7 @@ public class LifecycleWorkflowsContainer extends Entity implements IJsonBackedOb
 
     /**
      * The Settings.
-     * 
+     * The settings of the lifecycle workflows instance.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -61,7 +61,7 @@ public class LifecycleWorkflowsContainer extends Entity implements IJsonBackedOb
 
     /**
      * The Task Definitions.
-     * 
+     * The definition of tasks within the lifecycle workflows instance.
      */
     @SerializedName(value = "taskDefinitions", alternate = {"TaskDefinitions"})
     @Expose
@@ -70,7 +70,7 @@ public class LifecycleWorkflowsContainer extends Entity implements IJsonBackedOb
 
     /**
      * The Workflows.
-     * 
+     * The workflows in the lifecycle workflows instance.
      */
     @SerializedName(value = "workflows", alternate = {"Workflows"})
     @Expose
@@ -79,7 +79,7 @@ public class LifecycleWorkflowsContainer extends Entity implements IJsonBackedOb
 
     /**
      * The Workflow Templates.
-     * 
+     * The workflow templates in the lifecycle workflow instance.
      */
     @SerializedName(value = "workflowTemplates", alternate = {"WorkflowTemplates"})
     @Expose
