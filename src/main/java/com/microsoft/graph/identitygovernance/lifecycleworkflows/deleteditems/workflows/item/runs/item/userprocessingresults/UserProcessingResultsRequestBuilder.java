@@ -18,6 +18,7 @@ import java.time.OffsetDateTime;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the userProcessingResults property of the microsoft.graph.identityGovernance.run entity. */
@@ -42,7 +43,7 @@ public class UserProcessingResultsRequestBuilder {
     public UserProcessingResultsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/runs/{run%2Did}/userProcessingResults{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/runs/{run%2Did}/userProcessingResults{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -54,14 +55,14 @@ public class UserProcessingResultsRequestBuilder {
      * @return a void
      */
     public UserProcessingResultsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/runs/{run%2Did}/userProcessingResults{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/runs/{run%2Did}/userProcessingResults{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get userProcessingResults from identityGovernance
+     * The associated individual user execution.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -69,7 +70,7 @@ public class UserProcessingResultsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get userProcessingResults from identityGovernance
+     * The associated individual user execution.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -124,7 +125,7 @@ public class UserProcessingResultsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get userProcessingResults from identityGovernance
+     * The associated individual user execution.
      * @return a CompletableFuture of UserProcessingResultCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UserProcessingResultCollectionResponse> get() {
@@ -140,7 +141,7 @@ public class UserProcessingResultsRequestBuilder {
         }
     }
     /**
-     * Get userProcessingResults from identityGovernance
+     * The associated individual user execution.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserProcessingResultCollectionResponse
      */
@@ -157,7 +158,7 @@ public class UserProcessingResultsRequestBuilder {
         }
     }
     /**
-     * Get userProcessingResults from identityGovernance
+     * The associated individual user execution.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UserProcessingResultCollectionResponse
@@ -241,7 +242,7 @@ public class UserProcessingResultsRequestBuilder {
         Objects.requireNonNull(startDateTime);
         return new SummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
-    /** Get userProcessingResults from identityGovernance */
+    /** The associated individual user execution. */
     public class UserProcessingResultsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -283,7 +284,7 @@ public class UserProcessingResultsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public UserProcessingResultsRequestBuilderGetQueryParameters queryParameters = new UserProcessingResultsRequestBuilderGetQueryParameters();
@@ -301,7 +302,7 @@ public class UserProcessingResultsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new userProcessingResultsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

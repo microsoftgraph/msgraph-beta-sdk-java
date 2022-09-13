@@ -11,6 +11,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Event representing an general failure. */
 public class DeviceManagementTroubleshootingEvent extends Entity implements Parsable {
     /** A set of string key and string value pairs which provides additional information on the Troubleshooting event */
     private java.util.List<KeyValuePair> _additionalInformation;
@@ -23,7 +24,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     /** Object containing detailed information about the error and its remediation. */
     private DeviceManagementTroubleshootingErrorDetails _troubleshootingErrorDetails;
     /**
-     * Instantiates a new DeviceManagementTroubleshootingEvent and sets the default values.
+     * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.
      * @return a void
      */
     public DeviceManagementTroubleshootingEvent() {
@@ -33,7 +34,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementTroubleshootingEvent
+     * @return a deviceManagementTroubleshootingEvent
      */
     @javax.annotation.Nonnull
     public static DeviceManagementTroubleshootingEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

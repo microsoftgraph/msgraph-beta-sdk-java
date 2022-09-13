@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics application performance entity contains app performance details. */
 public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Entity implements Parsable {
     /** The number of devices where the app has been active. Valid values -2147483648 to 2147483647 */
     private Integer _activeDeviceCount;
@@ -29,7 +30,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     /** The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647 */
     private Integer _meanTimeToFailureInMinutes;
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthApplicationPerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsAppHealthApplicationPerformance and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsAppHealthApplicationPerformance() {
@@ -39,7 +40,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthApplicationPerformance
+     * @return a userExperienceAnalyticsAppHealthApplicationPerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthApplicationPerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

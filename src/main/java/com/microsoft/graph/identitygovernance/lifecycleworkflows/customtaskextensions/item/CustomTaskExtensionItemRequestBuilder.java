@@ -16,6 +16,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the customTaskExtensions property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity. */
@@ -92,7 +93,7 @@ public class CustomTaskExtensionItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get customTaskExtensions from identityGovernance
+     * The customTaskExtension instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -100,7 +101,7 @@ public class CustomTaskExtensionItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get customTaskExtensions from identityGovernance
+     * The customTaskExtension instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +206,7 @@ public class CustomTaskExtensionItemRequestBuilder {
         }
     }
     /**
-     * Get customTaskExtensions from identityGovernance
+     * The customTaskExtension instance.
      * @return a CompletableFuture of customTaskExtension
      */
     public java.util.concurrent.CompletableFuture<CustomTaskExtension> get() {
@@ -221,7 +222,7 @@ public class CustomTaskExtensionItemRequestBuilder {
         }
     }
     /**
-     * Get customTaskExtensions from identityGovernance
+     * The customTaskExtension instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customTaskExtension
      */
@@ -238,7 +239,7 @@ public class CustomTaskExtensionItemRequestBuilder {
         }
     }
     /**
-     * Get customTaskExtensions from identityGovernance
+     * The customTaskExtension instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of customTaskExtension
@@ -317,7 +318,7 @@ public class CustomTaskExtensionItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new CustomTaskExtensionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -325,7 +326,7 @@ public class CustomTaskExtensionItemRequestBuilder {
         public CustomTaskExtensionItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get customTaskExtensions from identityGovernance */
+    /** The customTaskExtension instance. */
     public class CustomTaskExtensionItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -343,7 +344,7 @@ public class CustomTaskExtensionItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public CustomTaskExtensionItemRequestBuilderGetQueryParameters queryParameters = new CustomTaskExtensionItemRequestBuilderGetQueryParameters();
@@ -361,7 +362,7 @@ public class CustomTaskExtensionItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new CustomTaskExtensionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

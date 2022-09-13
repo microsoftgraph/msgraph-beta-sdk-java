@@ -17,6 +17,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the userProcessingResults property of the microsoft.graph.identityGovernance.run entity. */
@@ -93,7 +94,7 @@ public class UserProcessingResultItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get userProcessingResults from identityGovernance
+     * The associated individual user execution.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -101,7 +102,7 @@ public class UserProcessingResultItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get userProcessingResults from identityGovernance
+     * The associated individual user execution.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -206,7 +207,7 @@ public class UserProcessingResultItemRequestBuilder {
         }
     }
     /**
-     * Get userProcessingResults from identityGovernance
+     * The associated individual user execution.
      * @return a CompletableFuture of userProcessingResult
      */
     public java.util.concurrent.CompletableFuture<UserProcessingResult> get() {
@@ -222,7 +223,7 @@ public class UserProcessingResultItemRequestBuilder {
         }
     }
     /**
-     * Get userProcessingResults from identityGovernance
+     * The associated individual user execution.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userProcessingResult
      */
@@ -239,7 +240,7 @@ public class UserProcessingResultItemRequestBuilder {
         }
     }
     /**
-     * Get userProcessingResults from identityGovernance
+     * The associated individual user execution.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of userProcessingResult
@@ -330,7 +331,7 @@ public class UserProcessingResultItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new UserProcessingResultItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -338,7 +339,7 @@ public class UserProcessingResultItemRequestBuilder {
         public UserProcessingResultItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get userProcessingResults from identityGovernance */
+    /** The associated individual user execution. */
     public class UserProcessingResultItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -356,7 +357,7 @@ public class UserProcessingResultItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public UserProcessingResultItemRequestBuilderGetQueryParameters queryParameters = new UserProcessingResultItemRequestBuilderGetQueryParameters();
@@ -374,7 +375,7 @@ public class UserProcessingResultItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new UserProcessingResultItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

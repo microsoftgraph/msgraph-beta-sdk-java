@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents an intent to apply settings to a device */
 public class DeviceManagementIntent extends Entity implements Parsable {
     /** Collection of assignments */
     private java.util.List<DeviceManagementIntentAssignment> _assignments;
@@ -38,7 +39,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     /** A summary of user states and counts of users that belong to corresponding state for all users that the intent is applied to */
     private DeviceManagementIntentUserStateSummary _userStateSummary;
     /**
-     * Instantiates a new DeviceManagementIntent and sets the default values.
+     * Instantiates a new deviceManagementIntent and sets the default values.
      * @return a void
      */
     public DeviceManagementIntent() {
@@ -48,7 +49,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementIntent
+     * @return a deviceManagementIntent
      */
     @javax.annotation.Nonnull
     public static DeviceManagementIntent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

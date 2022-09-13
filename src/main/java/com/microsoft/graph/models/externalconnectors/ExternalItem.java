@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of externalConnection entities. */
 public class ExternalItem extends Entity implements Parsable {
     /** An array of access control entries. Each entry specifies the access granted to a user or group. Required. */
     private java.util.List<Acl> _acl;
@@ -18,7 +19,7 @@ public class ExternalItem extends Entity implements Parsable {
     /** A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required. */
     private Properties _properties;
     /**
-     * Instantiates a new ExternalItem and sets the default values.
+     * Instantiates a new externalItem and sets the default values.
      * @return a void
      */
     public ExternalItem() {
@@ -28,7 +29,7 @@ public class ExternalItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExternalItem
+     * @return a externalItem
      */
     @javax.annotation.Nonnull
     public static ExternalItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health os performance entity contains battery related information for all operating system versions in their organization. */
 public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity implements Parsable {
     /** Number of active devices for that os version. Valid values -2147483648 to 2147483647 */
     private Integer _activeDevices;
@@ -14,14 +15,14 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     private Integer _averageBatteryAgeInDays;
     /** The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values -2147483648 to 2147483647 */
     private Integer _averageEstimatedRuntimeInMinutes;
-    /** The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647 */
+    /** The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values -2147483648 to 2147483647 */
     private Integer _averageMaxCapacityPercentage;
     /** Build number of the operating system. */
     private String _osBuildNumber;
     /** Version of the operating system. */
     private String _osVersion;
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthOsPerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBatteryHealthOsPerformance and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBatteryHealthOsPerformance() {
@@ -31,7 +32,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthOsPerformance
+     * @return a userExperienceAnalyticsBatteryHealthOsPerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthOsPerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +64,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
         return this._averageEstimatedRuntimeInMinutes;
     }
     /**
-     * Gets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
+     * Gets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -142,7 +143,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
         this._averageEstimatedRuntimeInMinutes = value;
     }
     /**
-     * Sets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
+     * Sets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values -2147483648 to 2147483647
      * @param value Value to set for the averageMaxCapacityPercentage property.
      * @return a void
      */

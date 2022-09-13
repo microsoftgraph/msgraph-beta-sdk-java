@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Device Co-Management eligibility state */
 public class ComanagementEligibleDevice extends Entity implements Parsable {
     /** Device registration status. */
     private DeviceRegistrationState _clientRegistrationStatus;
@@ -47,7 +48,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     /** UserName */
     private String _userName;
     /**
-     * Instantiates a new ComanagementEligibleDevice and sets the default values.
+     * Instantiates a new comanagementEligibleDevice and sets the default values.
      * @return a void
      */
     public ComanagementEligibleDevice() {
@@ -57,7 +58,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ComanagementEligibleDevice
+     * @return a comanagementEligibleDevice
      */
     @javax.annotation.Nonnull
     public static ComanagementEligibleDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

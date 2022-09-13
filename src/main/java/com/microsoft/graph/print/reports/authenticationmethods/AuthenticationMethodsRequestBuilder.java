@@ -20,6 +20,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the authenticationMethods property of the microsoft.graph.reportRoot entity. */
@@ -368,7 +369,7 @@ public class AuthenticationMethodsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new authenticationMethodsRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -394,7 +395,7 @@ public class AuthenticationMethodsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AuthenticationMethodsRequestBuilderGetQueryParameters queryParameters = new AuthenticationMethodsRequestBuilderGetQueryParameters();
@@ -412,7 +413,7 @@ public class AuthenticationMethodsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new authenticationMethodsRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

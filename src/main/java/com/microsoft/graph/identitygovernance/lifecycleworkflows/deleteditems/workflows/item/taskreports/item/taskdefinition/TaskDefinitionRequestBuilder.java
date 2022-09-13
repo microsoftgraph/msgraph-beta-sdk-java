@@ -14,6 +14,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the taskDefinition property of the microsoft.graph.identityGovernance.taskReport entity. */
@@ -52,7 +53,7 @@ public class TaskDefinitionRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get taskDefinition from identityGovernance
+     * The taskDefinition associated with the related lifecycle workflow task.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +61,7 @@ public class TaskDefinitionRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get taskDefinition from identityGovernance
+     * The taskDefinition associated with the related lifecycle workflow task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +83,7 @@ public class TaskDefinitionRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get taskDefinition from identityGovernance
+     * The taskDefinition associated with the related lifecycle workflow task.
      * @return a CompletableFuture of taskDefinition
      */
     public java.util.concurrent.CompletableFuture<TaskDefinition> get() {
@@ -98,7 +99,7 @@ public class TaskDefinitionRequestBuilder {
         }
     }
     /**
-     * Get taskDefinition from identityGovernance
+     * The taskDefinition associated with the related lifecycle workflow task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of taskDefinition
      */
@@ -115,7 +116,7 @@ public class TaskDefinitionRequestBuilder {
         }
     }
     /**
-     * Get taskDefinition from identityGovernance
+     * The taskDefinition associated with the related lifecycle workflow task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of taskDefinition
@@ -132,7 +133,7 @@ public class TaskDefinitionRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get taskDefinition from identityGovernance */
+    /** The taskDefinition associated with the related lifecycle workflow task. */
     public class TaskDefinitionRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -150,7 +151,7 @@ public class TaskDefinitionRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TaskDefinitionRequestBuilderGetQueryParameters queryParameters = new TaskDefinitionRequestBuilderGetQueryParameters();

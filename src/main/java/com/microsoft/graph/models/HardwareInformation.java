@@ -12,13 +12,13 @@ import java.util.Objects;
 public class HardwareInformation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The number of charge cycles the device’s current battery has gone through. Valid values 0 to 2147483647 */
+    /** The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647 */
     private Integer _batteryChargeCycles;
-    /** The device’s current battery’s health percentage. Valid values 0 to 100 */
+    /** The devices current batterys health percentage. Valid values 0 to 100 */
     private Integer _batteryHealthPercentage;
     /** The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100 */
     private Double _batteryLevelPercentage;
-    /** The serial number of the device’s current battery */
+    /** The serial number of the devices current battery */
     private String _batterySerialNumber;
     /** Cellular technology of the device */
     private String _cellularTechnology;
@@ -121,7 +121,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the batteryChargeCycles property value. The number of charge cycles the device’s current battery has gone through. Valid values 0 to 2147483647
+     * Gets the batteryChargeCycles property value. The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._batteryChargeCycles;
     }
     /**
-     * Gets the batteryHealthPercentage property value. The device’s current battery’s health percentage. Valid values 0 to 100
+     * Gets the batteryHealthPercentage property value. The devices current batterys health percentage. Valid values 0 to 100
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -145,7 +145,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._batteryLevelPercentage;
     }
     /**
-     * Gets the batterySerialNumber property value. The serial number of the device’s current battery
+     * Gets the batterySerialNumber property value. The serial number of the devices current battery
      * @return a string
      */
     @javax.annotation.Nullable
@@ -558,7 +558,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the batteryChargeCycles property value. The number of charge cycles the device’s current battery has gone through. Valid values 0 to 2147483647
+     * Sets the batteryChargeCycles property value. The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647
      * @param value Value to set for the batteryChargeCycles property.
      * @return a void
      */
@@ -566,7 +566,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         this._batteryChargeCycles = value;
     }
     /**
-     * Sets the batteryHealthPercentage property value. The device’s current battery’s health percentage. Valid values 0 to 100
+     * Sets the batteryHealthPercentage property value. The devices current batterys health percentage. Valid values 0 to 100
      * @param value Value to set for the batteryHealthPercentage property.
      * @return a void
      */
@@ -582,7 +582,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         this._batteryLevelPercentage = value;
     }
     /**
-     * Sets the batterySerialNumber property value. The serial number of the device’s current battery
+     * Sets the batterySerialNumber property value. The serial number of the devices current battery
      * @param value Value to set for the batterySerialNumber property.
      * @return a void
      */

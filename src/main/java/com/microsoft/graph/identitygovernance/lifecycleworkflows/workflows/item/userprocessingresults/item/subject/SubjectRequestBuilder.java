@@ -14,6 +14,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the subject property of the microsoft.graph.identityGovernance.userProcessingResult entity. */
@@ -52,7 +53,7 @@ public class SubjectRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get subject from identityGovernance
+     * The unique identifier of the AAD user targeted for the taskProcessingResult.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +61,7 @@ public class SubjectRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get subject from identityGovernance
+     * The unique identifier of the AAD user targeted for the taskProcessingResult.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +83,7 @@ public class SubjectRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get subject from identityGovernance
+     * The unique identifier of the AAD user targeted for the taskProcessingResult.
      * @return a CompletableFuture of user
      */
     public java.util.concurrent.CompletableFuture<User> get() {
@@ -98,7 +99,7 @@ public class SubjectRequestBuilder {
         }
     }
     /**
-     * Get subject from identityGovernance
+     * The unique identifier of the AAD user targeted for the taskProcessingResult.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
      */
@@ -115,7 +116,7 @@ public class SubjectRequestBuilder {
         }
     }
     /**
-     * Get subject from identityGovernance
+     * The unique identifier of the AAD user targeted for the taskProcessingResult.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of user
@@ -132,7 +133,7 @@ public class SubjectRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get subject from identityGovernance */
+    /** The unique identifier of the AAD user targeted for the taskProcessingResult. */
     public class SubjectRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -150,7 +151,7 @@ public class SubjectRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SubjectRequestBuilderGetQueryParameters queryParameters = new SubjectRequestBuilderGetQueryParameters();

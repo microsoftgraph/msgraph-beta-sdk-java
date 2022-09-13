@@ -22,7 +22,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     private CloudPcDomainJoinConfiguration _domainJoinConfiguration;
     /** The number of hours to wait before reprovisioning/deprovisioning happens. Read-only. */
     private Integer _gracePeriodInHours;
-    /** The display name for the OS image you’re provisioning. */
+    /** The display name for the OS image youre provisioning. */
     private String _imageDisplayName;
     /** The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os. */
     private String _imageId;
@@ -34,7 +34,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     private CloudPcManagementService _managedBy;
     /** The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it. */
     private MicrosoftManagedDesktop _microsoftManagedDesktop;
-    /** The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service. */
+    /** The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network thats validated by the Cloud PC service. */
     private String _onPremisesConnectionId;
     /** Specific Windows settings to configure while creating Cloud PCs for this provisioning policy. */
     private CloudPcWindowsSettings _windowsSettings;
@@ -138,7 +138,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this._gracePeriodInHours;
     }
     /**
-     * Gets the imageDisplayName property value. The display name for the OS image you’re provisioning.
+     * Gets the imageDisplayName property value. The display name for the OS image youre provisioning.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this._microsoftManagedDesktop;
     }
     /**
-     * Gets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service.
+     * Gets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network thats validated by the Cloud PC service.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -282,7 +282,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this._gracePeriodInHours = value;
     }
     /**
-     * Sets the imageDisplayName property value. The display name for the OS image you’re provisioning.
+     * Sets the imageDisplayName property value. The display name for the OS image youre provisioning.
      * @param value Value to set for the imageDisplayName property.
      * @return a void
      */
@@ -330,7 +330,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this._microsoftManagedDesktop = value;
     }
     /**
-     * Sets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service.
+     * Sets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network thats validated by the Cloud PC service.
      * @param value Value to set for the onPremisesConnectionId property.
      * @return a void
      */

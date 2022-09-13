@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to orgContact. */
 public class OrgContact extends DirectoryObject implements Parsable {
     /** Postal addresses for this organizational contact. For now a contact can only have one physical address. */
     private java.util.List<PhysicalOfficeAddress> _addresses;
@@ -48,7 +49,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     /** The transitive reports for a contact. Read-only. */
     private java.util.List<DirectoryObject> _transitiveReports;
     /**
-     * Instantiates a new OrgContact and sets the default values.
+     * Instantiates a new orgContact and sets the default values.
      * @return a void
      */
     public OrgContact() {
@@ -58,7 +59,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OrgContact
+     * @return a orgContact
      */
     @javax.annotation.Nonnull
     public static OrgContact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

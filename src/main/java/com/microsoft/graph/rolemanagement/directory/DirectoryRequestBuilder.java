@@ -6,6 +6,7 @@ import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item.Unif
 import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.ResourceNamespacesRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignmentapprovals.item.ApprovalItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignmentapprovals.RoleAssignmentApprovalsRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignments.item.UnifiedRoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignments.RoleAssignmentsRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignmentscheduleinstances.item.UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignmentscheduleinstances.RoleAssignmentScheduleInstancesRequestBuilder;
@@ -36,6 +37,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the directory property of the microsoft.graph.roleManagement entity. */
@@ -530,7 +532,7 @@ public class DirectoryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new directoryRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -556,7 +558,7 @@ public class DirectoryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DirectoryRequestBuilderGetQueryParameters queryParameters = new DirectoryRequestBuilderGetQueryParameters();
@@ -574,7 +576,7 @@ public class DirectoryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new directoryRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

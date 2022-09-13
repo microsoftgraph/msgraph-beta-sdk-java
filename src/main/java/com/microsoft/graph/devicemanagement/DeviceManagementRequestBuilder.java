@@ -31,14 +31,17 @@ import com.microsoft.graph.devicemanagement.chromeosonboardingsettings.item.Chro
 import com.microsoft.graph.devicemanagement.cloudpcconnectivityissues.CloudPCConnectivityIssuesRequestBuilder;
 import com.microsoft.graph.devicemanagement.cloudpcconnectivityissues.item.CloudPCConnectivityIssueItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanageddevices.ComanagedDevicesRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.item.ManagedDeviceItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanagementeligibledevices.ComanagementEligibleDevicesRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanagementeligibledevices.item.ComanagementEligibleDeviceItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.compliancecategories.ComplianceCategoriesRequestBuilder;
+import com.microsoft.graph.devicemanagement.compliancecategories.item.DeviceManagementConfigurationCategoryItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.compliancemanagementpartners.ComplianceManagementPartnersRequestBuilder;
 import com.microsoft.graph.devicemanagement.compliancemanagementpartners.item.ComplianceManagementPartnerItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.compliancepolicies.CompliancePoliciesRequestBuilder;
 import com.microsoft.graph.devicemanagement.compliancepolicies.item.DeviceManagementCompliancePolicyItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.compliancesettings.ComplianceSettingsRequestBuilder;
+import com.microsoft.graph.devicemanagement.compliancesettings.item.DeviceManagementConfigurationSettingDefinitionItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.conditionalaccesssettings.ConditionalAccessSettingsRequestBuilder;
 import com.microsoft.graph.devicemanagement.configmanagercollections.ConfigManagerCollectionsRequestBuilder;
 import com.microsoft.graph.devicemanagement.configmanagercollections.item.ConfigManagerCollectionItemRequestBuilder;
@@ -151,6 +154,7 @@ import com.microsoft.graph.devicemanagement.mobileapptroubleshootingevents.item.
 import com.microsoft.graph.devicemanagement.mobileapptroubleshootingevents.MobileAppTroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.devicemanagement.mobilethreatdefenseconnectors.item.MobileThreatDefenseConnectorItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.mobilethreatdefenseconnectors.MobileThreatDefenseConnectorsRequestBuilder;
+import com.microsoft.graph.devicemanagement.monitoring.MonitoringRequestBuilder;
 import com.microsoft.graph.devicemanagement.ndesconnectors.item.NdesConnectorItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.ndesconnectors.NdesConnectorsRequestBuilder;
 import com.microsoft.graph.devicemanagement.notificationmessagetemplates.item.NotificationMessageTemplateItemRequestBuilder;
@@ -233,6 +237,7 @@ import com.microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealth
 import com.microsoft.graph.devicemanagement.userexperienceanalyticsbatteryhealthruntimedetails.UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder;
 import com.microsoft.graph.devicemanagement.userexperienceanalyticscategories.item.UserExperienceAnalyticsCategoryItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.userexperienceanalyticscategories.UserExperienceAnalyticsCategoriesRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicemetrichistory.item.UserExperienceAnalyticsMetricHistoryItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicemetrichistory.UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder;
 import com.microsoft.graph.devicemanagement.userexperienceanalyticsdeviceperformance.item.UserExperienceAnalyticsDevicePerformanceItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.userexperienceanalyticsdeviceperformance.UserExperienceAnalyticsDevicePerformanceRequestBuilder;
@@ -312,6 +317,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the deviceManagement singleton. */
@@ -725,6 +731,11 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public MobileThreatDefenseConnectorsRequestBuilder mobileThreatDefenseConnectors() {
         return new MobileThreatDefenseConnectorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The monitoring property */
+    @javax.annotation.Nonnull
+    public MonitoringRequestBuilder monitoring() {
+        return new MonitoringRequestBuilder(pathParameters, requestAdapter);
     }
     /** The ndesConnectors property */
     @javax.annotation.Nonnull
@@ -3046,7 +3057,7 @@ public class DeviceManagementRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DeviceManagementRequestBuilderGetQueryParameters queryParameters = new DeviceManagementRequestBuilderGetQueryParameters();
@@ -3064,7 +3075,7 @@ public class DeviceManagementRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new deviceManagementRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

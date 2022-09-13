@@ -17,23 +17,23 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The category property */
     private LifecycleWorkflowCategory _category;
-    /** The createdBy property */
+    /** The user who created the workflow. */
     private User _createdBy;
-    /** The createdDateTime property */
+    /** When a workflow was created. */
     private OffsetDateTime _createdDateTime;
-    /** The description property */
+    /** A string that describes the purpose of the workflow. */
     private String _description;
-    /** The displayName property */
+    /** A string to identify the workflow. */
     private String _displayName;
-    /** The executionConditions property */
+    /** Defines when and for who the workflow will run. */
     private WorkflowExecutionConditions _executionConditions;
-    /** The lastModifiedBy property */
+    /** The user who last modified the workflow. */
     private User _lastModifiedBy;
-    /** The lastModifiedDateTime property */
+    /** When the workflow was last modified. */
     private OffsetDateTime _lastModifiedDateTime;
     /** The OdataType property */
     private String _odataType;
-    /** The tasks property */
+    /** The tasks in the workflow. */
     private java.util.List<Task> _tasks;
     /**
      * Instantiates a new workflowBase and sets the default values.
@@ -78,7 +78,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._category;
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The user who created the workflow.
      * @return a user
      */
     @javax.annotation.Nullable
@@ -86,7 +86,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. When a workflow was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A string that describes the purpose of the workflow.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. A string to identify the workflow.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._displayName;
     }
     /**
-     * Gets the executionConditions property value. The executionConditions property
+     * Gets the executionConditions property value. Defines when and for who the workflow will run.
      * @return a workflowExecutionConditions
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The user who last modified the workflow.
      * @return a user
      */
     @javax.annotation.Nullable
@@ -146,7 +146,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. When the workflow was last modified.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -162,7 +162,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the tasks property value. The tasks property
+     * Gets the tasks property value. The tasks in the workflow.
      * @return a task
      */
     @javax.annotation.Nullable
@@ -205,7 +205,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         this._category = value;
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The user who created the workflow.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -213,7 +213,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         this._createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. When a workflow was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -221,7 +221,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A string that describes the purpose of the workflow.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -229,7 +229,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. A string to identify the workflow.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -237,7 +237,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the executionConditions property value. The executionConditions property
+     * Sets the executionConditions property value. Defines when and for who the workflow will run.
      * @param value Value to set for the executionConditions property.
      * @return a void
      */
@@ -245,7 +245,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         this._executionConditions = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The user who last modified the workflow.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
@@ -253,7 +253,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         this._lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. When the workflow was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
@@ -269,7 +269,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the tasks property value. The tasks property
+     * Sets the tasks property value. The tasks in the workflow.
      * @param value Value to set for the tasks property.
      * @return a void
      */

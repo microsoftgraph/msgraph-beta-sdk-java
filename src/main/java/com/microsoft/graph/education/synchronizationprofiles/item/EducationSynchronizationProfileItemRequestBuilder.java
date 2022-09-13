@@ -22,6 +22,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the synchronizationProfiles property of the microsoft.graph.educationRoot entity. */
@@ -363,7 +364,7 @@ public class EducationSynchronizationProfileItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new EducationSynchronizationProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -389,7 +390,7 @@ public class EducationSynchronizationProfileItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public EducationSynchronizationProfileItemRequestBuilderGetQueryParameters queryParameters = new EducationSynchronizationProfileItemRequestBuilderGetQueryParameters();
@@ -407,7 +408,7 @@ public class EducationSynchronizationProfileItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new EducationSynchronizationProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

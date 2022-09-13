@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
-    /** The rule property */
+    /** The rule for the subject set. */
     private String _rule;
     /**
      * Instantiates a new RuleBasedSubjectSet and sets the default values.
@@ -41,7 +41,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
         }};
     }
     /**
-     * Gets the rule property value. The rule property
+     * Gets the rule property value. The rule for the subject set.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
         writer.writeStringValue("rule", this.getRule());
     }
     /**
-     * Sets the rule property value. The rule property
+     * Sets the rule property value. The rule for the subject set.
      * @param value Value to set for the rule property.
      * @return a void
      */

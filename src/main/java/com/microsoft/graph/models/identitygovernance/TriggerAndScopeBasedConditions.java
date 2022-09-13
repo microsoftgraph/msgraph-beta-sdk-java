@@ -9,9 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions implements Parsable {
-    /** The scope property */
+    /** Defines who the workflow runs for. */
     private SubjectSet _scope;
-    /** The trigger property */
+    /** What triggers a workflow to run. */
     private WorkflowExecutionTrigger _trigger;
     /**
      * Instantiates a new TriggerAndScopeBasedConditions and sets the default values.
@@ -44,7 +44,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
         }};
     }
     /**
-     * Gets the scope property value. The scope property
+     * Gets the scope property value. Defines who the workflow runs for.
      * @return a subjectSet
      */
     @javax.annotation.Nullable
@@ -52,7 +52,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
         return this._scope;
     }
     /**
-     * Gets the trigger property value. The trigger property
+     * Gets the trigger property value. What triggers a workflow to run.
      * @return a workflowExecutionTrigger
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
         writer.writeObjectValue("trigger", this.getTrigger());
     }
     /**
-     * Sets the scope property value. The scope property
+     * Sets the scope property value. Defines who the workflow runs for.
      * @param value Value to set for the scope property.
      * @return a void
      */
@@ -79,7 +79,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
         this._scope = value;
     }
     /**
-     * Sets the trigger property value. The trigger property
+     * Sets the trigger property value. What triggers a workflow to run.
      * @param value Value to set for the trigger property.
      * @return a void
      */

@@ -11,6 +11,8 @@ import java.util.Objects;
 public class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The authenticationStrength property */
+    private AuthenticationStrengthPolicy _authenticationStrength;
     /** List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue. */
     private java.util.List<String> _builtInControls;
     /** List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview). */
@@ -48,6 +50,14 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
         return this._additionalData;
     }
     /**
+     * Gets the authenticationStrength property value. The authenticationStrength property
+     * @return a authenticationStrengthPolicy
+     */
+    @javax.annotation.Nullable
+    public AuthenticationStrengthPolicy getAuthenticationStrength() {
+        return this._authenticationStrength;
+    }
+    /**
      * Gets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
      * @return a string
      */
@@ -70,7 +80,8 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessGrantControls currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
+            this.put("authenticationStrength", (n) -> { currentObject.setAuthenticationStrength(n.getObjectValue(AuthenticationStrengthPolicy::createFromDiscriminatorValue)); });
             this.put("builtInControls", (n) -> { currentObject.setBuiltInControls(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("customAuthenticationFactors", (n) -> { currentObject.setCustomAuthenticationFactors(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -109,6 +120,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("authenticationStrength", this.getAuthenticationStrength());
         writer.writeCollectionOfPrimitiveValues("builtInControls", this.getBuiltInControls());
         writer.writeCollectionOfPrimitiveValues("customAuthenticationFactors", this.getCustomAuthenticationFactors());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -123,6 +135,14 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the authenticationStrength property value. The authenticationStrength property
+     * @param value Value to set for the authenticationStrength property.
+     * @return a void
+     */
+    public void setAuthenticationStrength(@javax.annotation.Nullable final AuthenticationStrengthPolicy value) {
+        this._authenticationStrength = value;
     }
     /**
      * Sets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.

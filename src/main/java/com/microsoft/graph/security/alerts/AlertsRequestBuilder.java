@@ -17,6 +17,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the alerts property of the microsoft.graph.security entity. */
@@ -46,7 +47,7 @@ public class AlertsRequestBuilder {
     public AlertsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/security/alerts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/security/alerts{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -58,14 +59,14 @@ public class AlertsRequestBuilder {
      * @return a void
      */
     public AlertsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/security/alerts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/security/alerts{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Notifications for suspicious or potential security issues in a customers tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -73,7 +74,7 @@ public class AlertsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Notifications for suspicious or potential security issues in a customers tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +129,7 @@ public class AlertsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Notifications for suspicious or potential security issues in a customers tenant.
      * @return a CompletableFuture of AlertCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AlertCollectionResponse> get() {
@@ -144,7 +145,7 @@ public class AlertsRequestBuilder {
         }
     }
     /**
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Notifications for suspicious or potential security issues in a customers tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AlertCollectionResponse
      */
@@ -161,7 +162,7 @@ public class AlertsRequestBuilder {
         }
     }
     /**
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Notifications for suspicious or potential security issues in a customers tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AlertCollectionResponse
@@ -233,7 +234,7 @@ public class AlertsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Notifications for suspicious or potential security issues in a customer’s tenant. */
+    /** Notifications for suspicious or potential security issues in a customers tenant. */
     public class AlertsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -275,7 +276,7 @@ public class AlertsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AlertsRequestBuilderGetQueryParameters queryParameters = new AlertsRequestBuilderGetQueryParameters();
@@ -293,7 +294,7 @@ public class AlertsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new alertsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

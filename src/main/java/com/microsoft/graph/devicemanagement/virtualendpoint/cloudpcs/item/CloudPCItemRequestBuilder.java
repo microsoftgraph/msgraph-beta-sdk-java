@@ -23,6 +23,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the cloudPCs property of the microsoft.graph.virtualEndpoint entity. */
@@ -365,7 +366,7 @@ public class CloudPCItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new CloudPCItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -391,7 +392,7 @@ public class CloudPCItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public CloudPCItemRequestBuilderGetQueryParameters queryParameters = new CloudPCItemRequestBuilderGetQueryParameters();
@@ -409,7 +410,7 @@ public class CloudPCItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new CloudPCItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

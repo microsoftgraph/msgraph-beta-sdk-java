@@ -16,6 +16,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the customTaskExtensions property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity. */
@@ -40,7 +41,7 @@ public class CustomTaskExtensionsRequestBuilder {
     public CustomTaskExtensionsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/customTaskExtensions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/customTaskExtensions{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -52,14 +53,14 @@ public class CustomTaskExtensionsRequestBuilder {
      * @return a void
      */
     public CustomTaskExtensionsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/customTaskExtensions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/customTaskExtensions{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get customTaskExtensions from identityGovernance
+     * The customTaskExtension instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +68,7 @@ public class CustomTaskExtensionsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get customTaskExtensions from identityGovernance
+     * The customTaskExtension instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +123,7 @@ public class CustomTaskExtensionsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get customTaskExtensions from identityGovernance
+     * The customTaskExtension instance.
      * @return a CompletableFuture of CustomTaskExtensionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<CustomTaskExtensionCollectionResponse> get() {
@@ -138,7 +139,7 @@ public class CustomTaskExtensionsRequestBuilder {
         }
     }
     /**
-     * Get customTaskExtensions from identityGovernance
+     * The customTaskExtension instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CustomTaskExtensionCollectionResponse
      */
@@ -155,7 +156,7 @@ public class CustomTaskExtensionsRequestBuilder {
         }
     }
     /**
-     * Get customTaskExtensions from identityGovernance
+     * The customTaskExtension instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of CustomTaskExtensionCollectionResponse
@@ -227,7 +228,7 @@ public class CustomTaskExtensionsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get customTaskExtensions from identityGovernance */
+    /** The customTaskExtension instance. */
     public class CustomTaskExtensionsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +270,7 @@ public class CustomTaskExtensionsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public CustomTaskExtensionsRequestBuilderGetQueryParameters queryParameters = new CustomTaskExtensionsRequestBuilderGetQueryParameters();
@@ -287,7 +288,7 @@ public class CustomTaskExtensionsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new customTaskExtensionsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

@@ -22,17 +22,17 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     private CloudPcOnPremisesConnectionStatus _healthCheckStatus;
     /** The details of the connection's health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only. */
     private CloudPcOnPremisesConnectionStatusDetails _healthCheckStatusDetails;
-    /** When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only. */
+    /** When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only. */
     private Boolean _inUse;
     /** The managedBy property */
     private CloudPcManagementService _managedBy;
-    /** The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional. */
+    /** The organizational unit (OU) in which the computer account is created. If left null, the OU thats configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional. */
     private String _organizationalUnit;
     /** The ID of the target resource group. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}. */
     private String _resourceGroupId;
     /** The ID of the target subnet. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}. */
     private String _subnetId;
-    /** The ID of the target Azure subscription that’s associated with your tenant. */
+    /** The ID of the target Azure subscription thats associated with your tenant. */
     private String _subscriptionId;
     /** The name of the target Azure subscription. Read-only. */
     private String _subscriptionName;
@@ -141,7 +141,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this._healthCheckStatusDetails;
     }
     /**
-     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this._managedBy;
     }
     /**
-     * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
+     * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU thats configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this._subnetId;
     }
     /**
-     * Gets the subscriptionId property value. The ID of the target Azure subscription that’s associated with your tenant.
+     * Gets the subscriptionId property value. The ID of the target Azure subscription thats associated with your tenant.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -294,7 +294,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this._healthCheckStatusDetails = value;
     }
     /**
-     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @param value Value to set for the inUse property.
      * @return a void
      */
@@ -310,7 +310,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this._managedBy = value;
     }
     /**
-     * Sets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
+     * Sets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU thats configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
      * @param value Value to set for the organizationalUnit property.
      * @return a void
      */
@@ -334,7 +334,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this._subnetId = value;
     }
     /**
-     * Sets the subscriptionId property value. The ID of the target Azure subscription that’s associated with your tenant.
+     * Sets the subscriptionId property value. The ID of the target Azure subscription thats associated with your tenant.
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */

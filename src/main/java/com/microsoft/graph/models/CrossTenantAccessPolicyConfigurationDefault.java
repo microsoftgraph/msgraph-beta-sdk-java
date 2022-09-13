@@ -20,6 +20,8 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     private CrossTenantAccessPolicyInboundTrust _inboundTrust;
     /** If true, the default configuration is set to the system default configuration. If false, the default settings have been customized. */
     private Boolean _isServiceDefault;
+    /** The tenantRestrictions property */
+    private CrossTenantAccessPolicyTenantRestrictions _tenantRestrictions;
     /**
      * Instantiates a new crossTenantAccessPolicyConfigurationDefault and sets the default values.
      * @return a void
@@ -84,6 +86,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
             this.put("b2bDirectConnectOutbound", (n) -> { currentObject.setB2bDirectConnectOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
             this.put("inboundTrust", (n) -> { currentObject.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
             this.put("isServiceDefault", (n) -> { currentObject.setIsServiceDefault(n.getBooleanValue()); });
+            this.put("tenantRestrictions", (n) -> { currentObject.setTenantRestrictions(n.getObjectValue(CrossTenantAccessPolicyTenantRestrictions::createFromDiscriminatorValue)); });
         }};
     }
     /**
@@ -103,6 +106,14 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         return this._isServiceDefault;
     }
     /**
+     * Gets the tenantRestrictions property value. The tenantRestrictions property
+     * @return a crossTenantAccessPolicyTenantRestrictions
+     */
+    @javax.annotation.Nullable
+    public CrossTenantAccessPolicyTenantRestrictions getTenantRestrictions() {
+        return this._tenantRestrictions;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -116,6 +127,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         writer.writeObjectValue("b2bDirectConnectOutbound", this.getB2bDirectConnectOutbound());
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
         writer.writeBooleanValue("isServiceDefault", this.getIsServiceDefault());
+        writer.writeObjectValue("tenantRestrictions", this.getTenantRestrictions());
     }
     /**
      * Sets the b2bCollaborationInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
@@ -164,5 +176,13 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     public void setIsServiceDefault(@javax.annotation.Nullable final Boolean value) {
         this._isServiceDefault = value;
+    }
+    /**
+     * Sets the tenantRestrictions property value. The tenantRestrictions property
+     * @param value Value to set for the tenantRestrictions property.
+     * @return a void
+     */
+    public void setTenantRestrictions(@javax.annotation.Nullable final CrossTenantAccessPolicyTenantRestrictions value) {
+        this._tenantRestrictions = value;
     }
 }

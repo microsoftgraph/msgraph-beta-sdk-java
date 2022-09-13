@@ -7,11 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of businessFlowTemplate entities. */
 public class BusinessFlowTemplate extends Entity implements Parsable {
     /** The name of the business flow template */
     private String _displayName;
     /**
-     * Instantiates a new BusinessFlowTemplate and sets the default values.
+     * Instantiates a new businessFlowTemplate and sets the default values.
      * @return a void
      */
     public BusinessFlowTemplate() {
@@ -21,7 +22,7 @@ public class BusinessFlowTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BusinessFlowTemplate
+     * @return a businessFlowTemplate
      */
     @javax.annotation.Nonnull
     public static BusinessFlowTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

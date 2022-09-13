@@ -11,7 +11,7 @@ import java.util.Objects;
 public class NetworkInterface implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection <#>, etc.). */
+    /** Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on). */
     private String _description;
     /** Last IPv4 address associated with this NIC. */
     private String _ipV4Address;
@@ -50,7 +50,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the description property value. Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection <#>, etc.).
+     * Gets the description property value. Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the description property value. Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection <#>, etc.).
+     * Sets the description property value. Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
      * @param value Value to set for the description property.
      * @return a void
      */

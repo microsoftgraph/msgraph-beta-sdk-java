@@ -11,15 +11,15 @@ import java.util.Objects;
 public class RunSummary implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The failedRuns property */
+    /** The number of failed workflow runs. */
     private Integer _failedRuns;
-    /** The failedTasks property */
+    /** The number of failed tasks of a workflow. */
     private Integer _failedTasks;
     /** The OdataType property */
     private String _odataType;
-    /** The successfulRuns property */
+    /** The number of successful workflow runs. */
     private Integer _successfulRuns;
-    /** The totalRuns property */
+    /** The total number of runs for a workflow. */
     private Integer _totalRuns;
     /** The totalTasks property */
     private Integer _totalTasks;
@@ -52,7 +52,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the failedRuns property value. The failedRuns property
+     * Gets the failedRuns property value. The number of failed workflow runs.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -60,7 +60,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         return this._failedRuns;
     }
     /**
-     * Gets the failedTasks property value. The failedTasks property
+     * Gets the failedTasks property value. The number of failed tasks of a workflow.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the successfulRuns property value. The successfulRuns property
+     * Gets the successfulRuns property value. The number of successful workflow runs.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         return this._successfulRuns;
     }
     /**
-     * Gets the totalRuns property value. The totalRuns property
+     * Gets the totalRuns property value. The total number of runs for a workflow.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the failedRuns property value. The failedRuns property
+     * Sets the failedRuns property value. The number of failed workflow runs.
      * @param value Value to set for the failedRuns property.
      * @return a void
      */
@@ -157,7 +157,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         this._failedRuns = value;
     }
     /**
-     * Sets the failedTasks property value. The failedTasks property
+     * Sets the failedTasks property value. The number of failed tasks of a workflow.
      * @param value Value to set for the failedTasks property.
      * @return a void
      */
@@ -173,7 +173,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the successfulRuns property value. The successfulRuns property
+     * Sets the successfulRuns property value. The number of successful workflow runs.
      * @param value Value to set for the successfulRuns property.
      * @return a void
      */
@@ -181,7 +181,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         this._successfulRuns = value;
     }
     /**
-     * Sets the totalRuns property value. The totalRuns property
+     * Sets the totalRuns property value. The total number of runs for a workflow.
      * @param value Value to set for the totalRuns property.
      * @return a void
      */

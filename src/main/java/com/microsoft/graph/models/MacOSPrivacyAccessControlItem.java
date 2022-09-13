@@ -28,7 +28,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
     private Boolean _blockScreenCapture;
     /** Possible values of a property */
     private Enablement _calendar;
-    /** Enter the code requirement, which can be obtained with the command 'codesign –display -r –' in the Terminal app. Include everything after '=>'. */
+    /** Enter the code requirement, which can be obtained with the command 'codesign display -r ' in the Terminal app. Include everything after '=>'. */
     private String _codeRequirement;
     /** The display name of the app, process, or executable. */
     private String _displayName;
@@ -157,7 +157,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
         return this._calendar;
     }
     /**
-     * Gets the codeRequirement property value. Enter the code requirement, which can be obtained with the command 'codesign –display -r –' in the Terminal app. Include everything after '=>'.
+     * Gets the codeRequirement property value. Enter the code requirement, which can be obtained with the command 'codesign display -r ' in the Terminal app. Include everything after '=>'.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -454,7 +454,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
         this._calendar = value;
     }
     /**
-     * Sets the codeRequirement property value. Enter the code requirement, which can be obtained with the command 'codesign –display -r –' in the Terminal app. Include everything after '=>'.
+     * Sets the codeRequirement property value. Enter the code requirement, which can be obtained with the command 'codesign display -r ' in the Terminal app. Include everything after '=>'.
      * @param value Value to set for the codeRequirement property.
      * @return a void
      */

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Warranty status entity for a given OEM */
 public class OemWarrantyInformationOnboarding extends Entity implements Parsable {
     /** Specifies whether warranty API is available. This property is read-only. */
     private Boolean _available;
@@ -15,7 +16,7 @@ public class OemWarrantyInformationOnboarding extends Entity implements Parsable
     /** OEM name. This property is read-only. */
     private String _oemName;
     /**
-     * Instantiates a new OemWarrantyInformationOnboarding and sets the default values.
+     * Instantiates a new oemWarrantyInformationOnboarding and sets the default values.
      * @return a void
      */
     public OemWarrantyInformationOnboarding() {
@@ -25,7 +26,7 @@ public class OemWarrantyInformationOnboarding extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OemWarrantyInformationOnboarding
+     * @return a oemWarrantyInformationOnboarding
      */
     @javax.annotation.Nonnull
     public static OemWarrantyInformationOnboarding createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

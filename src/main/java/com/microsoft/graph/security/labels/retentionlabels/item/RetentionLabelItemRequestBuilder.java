@@ -17,6 +17,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the retentionLabels property of the microsoft.graph.security.labelsRoot entity. */
@@ -330,7 +331,7 @@ public class RetentionLabelItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new RetentionLabelItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -356,7 +357,7 @@ public class RetentionLabelItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public RetentionLabelItemRequestBuilderGetQueryParameters queryParameters = new RetentionLabelItemRequestBuilderGetQueryParameters();
@@ -374,7 +375,7 @@ public class RetentionLabelItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new RetentionLabelItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

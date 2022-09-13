@@ -17,6 +17,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the taskProcessingResults property of the microsoft.graph.identityGovernance.run entity. */
@@ -98,7 +99,7 @@ public class TaskProcessingResultItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get taskProcessingResults from identityGovernance
+     * The related taskProcessingResults.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -106,7 +107,7 @@ public class TaskProcessingResultItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get taskProcessingResults from identityGovernance
+     * The related taskProcessingResults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +212,7 @@ public class TaskProcessingResultItemRequestBuilder {
         }
     }
     /**
-     * Get taskProcessingResults from identityGovernance
+     * The related taskProcessingResults.
      * @return a CompletableFuture of taskProcessingResult
      */
     public java.util.concurrent.CompletableFuture<TaskProcessingResult> get() {
@@ -227,7 +228,7 @@ public class TaskProcessingResultItemRequestBuilder {
         }
     }
     /**
-     * Get taskProcessingResults from identityGovernance
+     * The related taskProcessingResults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of taskProcessingResult
      */
@@ -244,7 +245,7 @@ public class TaskProcessingResultItemRequestBuilder {
         }
     }
     /**
-     * Get taskProcessingResults from identityGovernance
+     * The related taskProcessingResults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of taskProcessingResult
@@ -323,7 +324,7 @@ public class TaskProcessingResultItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new TaskProcessingResultItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -331,7 +332,7 @@ public class TaskProcessingResultItemRequestBuilder {
         public TaskProcessingResultItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get taskProcessingResults from identityGovernance */
+    /** The related taskProcessingResults. */
     public class TaskProcessingResultItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -349,7 +350,7 @@ public class TaskProcessingResultItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TaskProcessingResultItemRequestBuilderGetQueryParameters queryParameters = new TaskProcessingResultItemRequestBuilderGetQueryParameters();
@@ -367,7 +368,7 @@ public class TaskProcessingResultItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new TaskProcessingResultItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

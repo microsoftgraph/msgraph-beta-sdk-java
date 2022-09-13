@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum ZebraFotaUpdateType implements ValuedEnum {
     /** Custom update where the user selects specific BSP, OS version, and patch number to update to. */
     Custom("custom"),

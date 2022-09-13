@@ -15,6 +15,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the executionScope property of the microsoft.graph.identityGovernance.workflow entity. */
@@ -39,7 +40,7 @@ public class ExecutionScopeRequestBuilder {
     public ExecutionScopeRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/executionScope{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/executionScope{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -51,14 +52,14 @@ public class ExecutionScopeRequestBuilder {
      * @return a void
      */
     public ExecutionScopeRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/executionScope{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/executionScope{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get executionScope from identityGovernance
+     * The unique identifier of the Azure AD identity that last modified the workflow object..
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +67,7 @@ public class ExecutionScopeRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get executionScope from identityGovernance
+     * The unique identifier of the Azure AD identity that last modified the workflow object..
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +89,7 @@ public class ExecutionScopeRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get executionScope from identityGovernance
+     * The unique identifier of the Azure AD identity that last modified the workflow object..
      * @return a CompletableFuture of UserCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get() {
@@ -104,7 +105,7 @@ public class ExecutionScopeRequestBuilder {
         }
     }
     /**
-     * Get executionScope from identityGovernance
+     * The unique identifier of the Azure AD identity that last modified the workflow object..
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserCollectionResponse
      */
@@ -121,7 +122,7 @@ public class ExecutionScopeRequestBuilder {
         }
     }
     /**
-     * Get executionScope from identityGovernance
+     * The unique identifier of the Azure AD identity that last modified the workflow object..
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UserCollectionResponse
@@ -138,7 +139,7 @@ public class ExecutionScopeRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get executionScope from identityGovernance */
+    /** The unique identifier of the Azure AD identity that last modified the workflow object.. */
     public class ExecutionScopeRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -180,7 +181,7 @@ public class ExecutionScopeRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ExecutionScopeRequestBuilderGetQueryParameters queryParameters = new ExecutionScopeRequestBuilderGetQueryParameters();

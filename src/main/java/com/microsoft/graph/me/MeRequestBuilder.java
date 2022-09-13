@@ -22,6 +22,7 @@ import com.microsoft.graph.me.calendargroups.item.CalendarGroupItemRequestBuilde
 import com.microsoft.graph.me.calendars.CalendarsRequestBuilder;
 import com.microsoft.graph.me.calendars.item.CalendarItemRequestBuilder;
 import com.microsoft.graph.me.calendarview.CalendarViewRequestBuilder;
+import com.microsoft.graph.me.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.me.changepassword.ChangePasswordRequestBuilder;
 import com.microsoft.graph.me.chats.ChatsRequestBuilder;
 import com.microsoft.graph.me.chats.item.ChatItemRequestBuilder;
@@ -34,6 +35,7 @@ import com.microsoft.graph.me.contactfolders.item.ContactFolderItemRequestBuilde
 import com.microsoft.graph.me.contacts.ContactsRequestBuilder;
 import com.microsoft.graph.me.contacts.item.ContactItemRequestBuilder;
 import com.microsoft.graph.me.createdobjects.CreatedObjectsRequestBuilder;
+import com.microsoft.graph.me.createdobjects.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.deviceenrollmentconfigurations.DeviceEnrollmentConfigurationsRequestBuilder;
 import com.microsoft.graph.me.deviceenrollmentconfigurations.item.DeviceEnrollmentConfigurationItemRequestBuilder;
 import com.microsoft.graph.me.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
@@ -149,6 +151,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the user singleton. */
@@ -1457,7 +1460,7 @@ public class MeRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public MeRequestBuilderGetQueryParameters queryParameters = new MeRequestBuilderGetQueryParameters();
@@ -1475,7 +1478,7 @@ public class MeRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new meRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

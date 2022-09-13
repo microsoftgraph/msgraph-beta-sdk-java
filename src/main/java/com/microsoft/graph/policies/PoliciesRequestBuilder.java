@@ -10,6 +10,8 @@ import com.microsoft.graph.policies.appmanagementpolicies.AppManagementPoliciesR
 import com.microsoft.graph.policies.appmanagementpolicies.item.AppManagementPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.authenticationflowspolicy.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.policies.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.policies.authenticationstrengthpolicies.AuthenticationStrengthPoliciesRequestBuilder;
+import com.microsoft.graph.policies.authenticationstrengthpolicies.item.AuthenticationStrengthPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.authorizationpolicy.AuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.policies.authorizationpolicy.item.AuthorizationPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.b2cauthenticationmethodspolicy.B2cAuthenticationMethodsPolicyRequestBuilder;
@@ -27,6 +29,7 @@ import com.microsoft.graph.policies.featurerolloutpolicies.item.FeatureRolloutPo
 import com.microsoft.graph.policies.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
 import com.microsoft.graph.policies.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.identitysecuritydefaultsenforcementpolicy.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.policies.mobileappmanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.mobileappmanagementpolicies.MobileAppManagementPoliciesRequestBuilder;
 import com.microsoft.graph.policies.mobiledevicemanagementpolicies.MobileDeviceManagementPoliciesRequestBuilder;
 import com.microsoft.graph.policies.permissiongrantpolicies.item.PermissionGrantPolicyItemRequestBuilder;
@@ -53,6 +56,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the policyRoot singleton. */
@@ -86,6 +90,11 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new AuthenticationMethodsPolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The authenticationStrengthPolicies property */
+    @javax.annotation.Nonnull
+    public AuthenticationStrengthPoliciesRequestBuilder authenticationStrengthPolicies() {
+        return new AuthenticationStrengthPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The authorizationPolicy property */
     @javax.annotation.Nonnull
@@ -216,6 +225,18 @@ public class PoliciesRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("appManagementPolicy%2Did", id);
         return new AppManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.policies.authenticationStrengthPolicies.item collection
+     * @param id Unique identifier of the item
+     * @return a AuthenticationStrengthPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AuthenticationStrengthPolicyItemRequestBuilder authenticationStrengthPolicies(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("authenticationStrengthPolicy%2Did", id);
+        return new AuthenticationStrengthPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the com.Microsoft.Graph.policies.authorizationPolicy.item collection
@@ -586,7 +607,7 @@ public class PoliciesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public PoliciesRequestBuilderGetQueryParameters queryParameters = new PoliciesRequestBuilderGetQueryParameters();
@@ -604,7 +625,7 @@ public class PoliciesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new policiesRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

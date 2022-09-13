@@ -55,7 +55,6 @@ import com.microsoft.graph.datapolicyoperations.DataPolicyOperationsRequestBuild
 import com.microsoft.graph.datapolicyoperations.item.DataPolicyOperationItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.DeviceAppManagementRequestBuilder;
 import com.microsoft.graph.devicemanagement.DeviceManagementRequestBuilder;
-import com.microsoft.graph.deviceregistrationpolicy.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.devices.DevicesRequestBuilder;
 import com.microsoft.graph.devices.item.DeviceItemRequestBuilder;
 import com.microsoft.graph.directory.DirectoryRequestBuilder;
@@ -115,6 +114,7 @@ import com.microsoft.graph.messagetraces.item.MessageTraceItemRequestBuilder;
 import com.microsoft.graph.messagetraces.MessageTracesRequestBuilder;
 import com.microsoft.graph.mobilitymanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder;
 import com.microsoft.graph.mobilitymanagementpolicies.MobilityManagementPoliciesRequestBuilder;
+import com.microsoft.graph.monitoring.MonitoringRequestBuilder;
 import com.microsoft.graph.oauth2permissiongrants.item.OAuth2PermissionGrantItemRequestBuilder;
 import com.microsoft.graph.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.officeconfiguration.OfficeConfigurationRequestBuilder;
@@ -182,6 +182,8 @@ import com.microsoft.graph.teams.item.TeamItemRequestBuilder;
 import com.microsoft.graph.teams.TeamsRequestBuilder;
 import com.microsoft.graph.teamstemplates.item.TeamsTemplateItemRequestBuilder;
 import com.microsoft.graph.teamstemplates.TeamsTemplatesRequestBuilder;
+import com.microsoft.graph.teamtemplatedefinition.item.TeamTemplateDefinitionItemRequestBuilder;
+import com.microsoft.graph.teamtemplatedefinition.TeamTemplateDefinitionRequestBuilder;
 import com.microsoft.graph.teamwork.TeamworkRequestBuilder;
 import com.microsoft.graph.tenantrelationships.TenantRelationshipsRequestBuilder;
 import com.microsoft.graph.termstore.TermStoreRequestBuilder;
@@ -368,11 +370,6 @@ public class BaseGraphServiceClient {
     public DeviceManagementRequestBuilder deviceManagement() {
         return new DeviceManagementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceRegistrationPolicy property */
-    @javax.annotation.Nonnull
-    public DeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
-        return new DeviceRegistrationPolicyRequestBuilder(pathParameters, requestAdapter);
-    }
     /** The devices property */
     @javax.annotation.Nonnull
     public DevicesRequestBuilder devices() {
@@ -547,6 +544,11 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public MobilityManagementPoliciesRequestBuilder mobilityManagementPolicies() {
         return new MobilityManagementPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The monitoring property */
+    @javax.annotation.Nonnull
+    public MonitoringRequestBuilder monitoring() {
+        return new MonitoringRequestBuilder(pathParameters, requestAdapter);
     }
     /** The oauth2PermissionGrants property */
     @javax.annotation.Nonnull
@@ -746,6 +748,11 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public TeamsTemplatesRequestBuilder teamsTemplates() {
         return new TeamsTemplatesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The teamTemplateDefinition property */
+    @javax.annotation.Nonnull
+    public TeamTemplateDefinitionRequestBuilder teamTemplateDefinition() {
+        return new TeamTemplateDefinitionRequestBuilder(pathParameters, requestAdapter);
     }
     /** The teamwork property */
     @javax.annotation.Nonnull
@@ -1689,6 +1696,18 @@ public class BaseGraphServiceClient {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("teamsTemplate%2Did", id);
         return new TeamsTemplateItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.teamTemplateDefinition.item collection
+     * @param id Unique identifier of the item
+     * @return a TeamTemplateDefinitionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamTemplateDefinitionItemRequestBuilder teamTemplateDefinition(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("teamTemplateDefinition%2Did", id);
+        return new TeamTemplateDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the com.Microsoft.Graph.users.item collection

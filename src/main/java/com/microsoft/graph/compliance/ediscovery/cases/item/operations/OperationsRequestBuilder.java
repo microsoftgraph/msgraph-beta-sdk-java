@@ -1,5 +1,6 @@
 package com.microsoft.graph.compliance.ediscovery.cases.item.operations;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.operations.caseexportoperation.CaseExportOperationRequestBuilder;
 import com.microsoft.graph.compliance.ediscovery.cases.item.operations.count.CountRequestBuilder;
 import com.microsoft.graph.models.ediscovery.CaseOperation;
 import com.microsoft.graph.models.ediscovery.CaseOperationCollectionResponse;
@@ -16,10 +17,16 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the operations property of the microsoft.graph.ediscovery.case entity. */
 public class OperationsRequestBuilder {
+    /** The caseExportOperation property */
+    @javax.annotation.Nonnull
+    public CaseExportOperationRequestBuilder caseExportOperation() {
+        return new CaseExportOperationRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -40,7 +47,7 @@ public class OperationsRequestBuilder {
     public OperationsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/operations{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -52,7 +59,7 @@ public class OperationsRequestBuilder {
      * @return a void
      */
     public OperationsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/operations{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -269,7 +276,7 @@ public class OperationsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public OperationsRequestBuilderGetQueryParameters queryParameters = new OperationsRequestBuilderGetQueryParameters();
@@ -287,7 +294,7 @@ public class OperationsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new operationsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

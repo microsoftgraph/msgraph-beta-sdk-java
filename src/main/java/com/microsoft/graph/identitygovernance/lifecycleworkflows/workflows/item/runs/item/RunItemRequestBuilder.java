@@ -18,6 +18,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the runs property of the microsoft.graph.identityGovernance.workflow entity. */
@@ -343,7 +344,7 @@ public class RunItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new RunItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -369,7 +370,7 @@ public class RunItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public RunItemRequestBuilderGetQueryParameters queryParameters = new RunItemRequestBuilderGetQueryParameters();
@@ -387,7 +388,7 @@ public class RunItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new RunItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -16,6 +16,8 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     private Boolean _allowEmailVerifiedUsersToJoinOrganization;
     /** Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. See more in the table below. */
     private AllowInvitesFrom _allowInvitesFrom;
+    /** The allowUserConsentForRiskyApps property */
+    private Boolean _allowUserConsentForRiskyApps;
     /** To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph. */
     private Boolean _blockMsolPowerShell;
     /** The defaultUserRoleOverrides property */
@@ -79,6 +81,14 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return this._allowInvitesFrom;
     }
     /**
+     * Gets the allowUserConsentForRiskyApps property value. The allowUserConsentForRiskyApps property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getAllowUserConsentForRiskyApps() {
+        return this._allowUserConsentForRiskyApps;
+    }
+    /**
      * Gets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
      * @return a boolean
      */
@@ -122,6 +132,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
             this.put("allowedToUseSSPR", (n) -> { currentObject.setAllowedToUseSSPR(n.getBooleanValue()); });
             this.put("allowEmailVerifiedUsersToJoinOrganization", (n) -> { currentObject.setAllowEmailVerifiedUsersToJoinOrganization(n.getBooleanValue()); });
             this.put("allowInvitesFrom", (n) -> { currentObject.setAllowInvitesFrom(n.getEnumValue(AllowInvitesFrom.class)); });
+            this.put("allowUserConsentForRiskyApps", (n) -> { currentObject.setAllowUserConsentForRiskyApps(n.getBooleanValue()); });
             this.put("blockMsolPowerShell", (n) -> { currentObject.setBlockMsolPowerShell(n.getBooleanValue()); });
             this.put("defaultUserRoleOverrides", (n) -> { currentObject.setDefaultUserRoleOverrides(n.getCollectionOfObjectValues(DefaultUserRoleOverride::createFromDiscriminatorValue)); });
             this.put("defaultUserRolePermissions", (n) -> { currentObject.setDefaultUserRolePermissions(n.getObjectValue(DefaultUserRolePermissions::createFromDiscriminatorValue)); });
@@ -158,6 +169,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         writer.writeBooleanValue("allowedToUseSSPR", this.getAllowedToUseSSPR());
         writer.writeBooleanValue("allowEmailVerifiedUsersToJoinOrganization", this.getAllowEmailVerifiedUsersToJoinOrganization());
         writer.writeEnumValue("allowInvitesFrom", this.getAllowInvitesFrom());
+        writer.writeBooleanValue("allowUserConsentForRiskyApps", this.getAllowUserConsentForRiskyApps());
         writer.writeBooleanValue("blockMsolPowerShell", this.getBlockMsolPowerShell());
         writer.writeCollectionOfObjectValues("defaultUserRoleOverrides", this.getDefaultUserRoleOverrides());
         writer.writeObjectValue("defaultUserRolePermissions", this.getDefaultUserRolePermissions());
@@ -196,6 +208,14 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     public void setAllowInvitesFrom(@javax.annotation.Nullable final AllowInvitesFrom value) {
         this._allowInvitesFrom = value;
+    }
+    /**
+     * Sets the allowUserConsentForRiskyApps property value. The allowUserConsentForRiskyApps property
+     * @param value Value to set for the allowUserConsentForRiskyApps property.
+     * @return a void
+     */
+    public void setAllowUserConsentForRiskyApps(@javax.annotation.Nullable final Boolean value) {
+        this._allowUserConsentForRiskyApps = value;
     }
     /**
      * Sets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.

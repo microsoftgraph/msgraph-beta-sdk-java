@@ -11,11 +11,11 @@ import java.util.Objects;
 public class Parameter implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The name property */
+    /** The name of the parameter. */
     private String _name;
     /** The OdataType property */
     private String _odataType;
-    /** The values property */
+    /** The values of the parameter. */
     private java.util.List<String> _values;
     /** The valueType property */
     private ValueType _valueType;
@@ -60,7 +60,7 @@ public class Parameter implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the parameter.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class Parameter implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the values property value. The values property
+     * Gets the values property value. The values of the parameter.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class Parameter implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the parameter.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -129,7 +129,7 @@ public class Parameter implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the values property value. The values property
+     * Sets the values property value. The values of the parameter.
      * @param value Value to set for the values property.
      * @return a void
      */

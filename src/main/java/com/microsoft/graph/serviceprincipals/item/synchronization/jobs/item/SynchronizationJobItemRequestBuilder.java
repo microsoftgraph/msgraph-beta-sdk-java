@@ -21,6 +21,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the jobs property of the microsoft.graph.synchronization entity. */
@@ -347,7 +348,7 @@ public class SynchronizationJobItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new SynchronizationJobItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -373,7 +374,7 @@ public class SynchronizationJobItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SynchronizationJobItemRequestBuilderGetQueryParameters queryParameters = new SynchronizationJobItemRequestBuilderGetQueryParameters();
@@ -391,7 +392,7 @@ public class SynchronizationJobItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new SynchronizationJobItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

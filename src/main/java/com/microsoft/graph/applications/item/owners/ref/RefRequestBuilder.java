@@ -15,6 +15,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of application entities. */
@@ -34,7 +35,7 @@ public class RefRequestBuilder {
     public RefRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/owners/$ref{?%24top,%24skip,%24search,%24filter,%24count,%24orderby}";
+        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/owners/$ref{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -46,14 +47,14 @@ public class RefRequestBuilder {
      * @return a void
      */
     public RefRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/owners/$ref{?%24top,%24skip,%24search,%24filter,%24count,%24orderby}";
+        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/owners/$ref{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -61,7 +62,7 @@ public class RefRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -115,7 +116,7 @@ public class RefRequestBuilder {
         return requestInfo;
     }
     /**
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections).
      * @return a CompletableFuture of StringCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get() {
@@ -131,7 +132,7 @@ public class RefRequestBuilder {
         }
     }
     /**
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of StringCollectionResponse
      */
@@ -148,7 +149,7 @@ public class RefRequestBuilder {
         }
     }
     /**
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of StringCollectionResponse
@@ -220,7 +221,7 @@ public class RefRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
+    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections). */
     public class RefRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -254,7 +255,7 @@ public class RefRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public RefRequestBuilderGetQueryParameters queryParameters = new RefRequestBuilderGetQueryParameters();
@@ -272,7 +273,7 @@ public class RefRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new RefRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

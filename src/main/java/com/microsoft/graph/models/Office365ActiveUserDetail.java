@@ -51,7 +51,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     private LocalDate _teamsLastActivityDate;
     /** The last date when the user was assigned a Teams license. */
     private LocalDate _teamsLicenseAssignDate;
-    /** The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created. */
+    /** The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created. */
     private String _userPrincipalName;
     /** The date when user last posted, read, or liked message. */
     private LocalDate _yammerLastActivityDate;
@@ -278,7 +278,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
         return this._teamsLicenseAssignDate;
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
+     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -503,7 +503,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
         this._teamsLicenseAssignDate = value;
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
+     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */

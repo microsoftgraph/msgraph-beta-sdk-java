@@ -99,9 +99,9 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeObjectValue("query_string", this.getQuery_string());
         writer.writeStringValue("queryString", this.getQueryString());
         writer.writeStringValue("queryTemplate", this.getQueryTemplate());
+        writer.writeObjectValue("query_string", this.getQuery_string());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

@@ -52,7 +52,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     private Boolean _passwordRequireActiveDirectoryComplexity;
     /** Gets or sets a description of the password complexity requirements. */
     private String _passwordRequirementsDescription;
-    /** Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later. */
+    /** Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers dont respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later. */
     private java.util.List<String> _preferredKDCs;
     /** Gets or sets the case-sensitive realm name for this profile. */
     private String _realm;
@@ -66,7 +66,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     private String _usernameLabelCustom;
     /** Gets or sets the principle user name to use for this profile. The realm name does not need to be included. */
     private String _userPrincipalName;
-    /** When set to True, the user isn’t prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later. */
+    /** When set to True, the user isnt prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later. */
     private Boolean _userSetupDelayed;
     /**
      * Instantiates a new MacOSKerberosSingleSignOnExtension and sets the default values.
@@ -303,7 +303,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         return this._passwordRequirementsDescription;
     }
     /**
-     * Gets the preferredKDCs property value. Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
+     * Gets the preferredKDCs property value. Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers dont respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -359,7 +359,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         return this._userPrincipalName;
     }
     /**
-     * Gets the userSetupDelayed property value. When set to True, the user isn’t prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later.
+     * Gets the userSetupDelayed property value. When set to True, the user isnt prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -582,7 +582,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         this._passwordRequirementsDescription = value;
     }
     /**
-     * Sets the preferredKDCs property value. Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
+     * Sets the preferredKDCs property value. Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers dont respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
      * @param value Value to set for the preferredKDCs property.
      * @return a void
      */
@@ -638,7 +638,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         this._userPrincipalName = value;
     }
     /**
-     * Sets the userSetupDelayed property value. When set to True, the user isn’t prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later.
+     * Sets the userSetupDelayed property value. When set to True, the user isnt prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later.
      * @param value Value to set for the userSetupDelayed property.
      * @return a void
      */

@@ -28,7 +28,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     /** Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted' */
     private java.util.List<String> _targetGroupIds;
     /**
-     * Instantiates a new AndroidForWorkSettings and sets the default values.
+     * Instantiates a new androidForWorkSettings and sets the default values.
      * @return a void
      */
     public AndroidForWorkSettings() {
@@ -38,7 +38,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidForWorkSettings
+     * @return a androidForWorkSettings
      */
     @javax.annotation.Nonnull
     public static AndroidForWorkSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

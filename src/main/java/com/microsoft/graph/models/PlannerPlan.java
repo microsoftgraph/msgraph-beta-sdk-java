@@ -12,7 +12,7 @@ import java.util.Objects;
 public class PlannerPlan extends PlannerDelta implements Parsable {
     /** Collection of buckets in the plan. Read-only. Nullable. */
     private java.util.List<PlannerBucket> _buckets;
-    /** Identifies the container of the plan. After it is set, this property can’t be updated. Required. */
+    /** Identifies the container of the plan. After it is set, this property cant be updated. Required. */
     private PlannerPlanContainer _container;
     /** Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries. */
     private PlannerPlanContextCollection _contexts;
@@ -55,7 +55,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         return this._buckets;
     }
     /**
-     * Gets the container property value. Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+     * Gets the container property value. Identifies the container of the plan. After it is set, this property cant be updated. Required.
      * @return a plannerPlanContainer
      */
     @javax.annotation.Nullable
@@ -164,7 +164,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         this._buckets = value;
     }
     /**
-     * Sets the container property value. Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+     * Sets the container property value. Identifies the container of the plan. After it is set, this property cant be updated. Required.
      * @param value Value to set for the container property.
      * @return a void
      */

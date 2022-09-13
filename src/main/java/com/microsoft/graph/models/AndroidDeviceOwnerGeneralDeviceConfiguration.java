@@ -54,7 +54,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     private AndroidDeviceOwnerGlobalProxy _globalProxy;
     /** Indicates whether or not google accounts will be blocked. */
     private Boolean _googleAccountsBlocked;
-    /** Indicates whether a user can access the device's Settings app while in Kiosk Mode. */
+    /** Indicateswhether a user can access the device's Settings app while in Kiosk Mode. */
     private Boolean _kioskCustomizationDeviceSettingsBlocked;
     /** Whether the power menu is shown when a user long presses the Power button of a device in Kiosk Mode. */
     private Boolean _kioskCustomizationPowerButtonActionsBlocked;
@@ -623,7 +623,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this._googleAccountsBlocked;
     }
     /**
-     * Gets the kioskCustomizationDeviceSettingsBlocked property value. Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+     * Gets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device's Settings app while in Kiosk Mode.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1838,7 +1838,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this._googleAccountsBlocked = value;
     }
     /**
-     * Sets the kioskCustomizationDeviceSettingsBlocked property value. Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+     * Sets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device's Settings app while in Kiosk Mode.
      * @param value Value to set for the kioskCustomizationDeviceSettingsBlocked property.
      * @return a void
      */

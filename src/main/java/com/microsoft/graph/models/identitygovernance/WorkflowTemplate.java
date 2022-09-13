@@ -8,19 +8,20 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WorkflowTemplate extends Entity implements Parsable {
     /** The category property */
     private LifecycleWorkflowCategory _category;
-    /** The description property */
+    /** The description of the workflowTemplate. */
     private String _description;
-    /** The displayName property */
+    /** The display name of the workflowTemplate. Supports  orderby. */
     private String _displayName;
-    /** The executionConditions property */
+    /** Conditions describing when to execute the workflow and the criteria to identify in-scope subject set. */
     private WorkflowExecutionConditions _executionConditions;
-    /** The tasks property */
+    /** Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default. */
     private java.util.List<Task> _tasks;
     /**
-     * Instantiates a new WorkflowTemplate and sets the default values.
+     * Instantiates a new workflowTemplate and sets the default values.
      * @return a void
      */
     public WorkflowTemplate() {
@@ -30,7 +31,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkflowTemplate
+     * @return a workflowTemplate
      */
     @javax.annotation.Nonnull
     public static WorkflowTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +47,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
         return this._category;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the workflowTemplate.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -54,7 +55,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the workflowTemplate. Supports  orderby.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -62,7 +63,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the executionConditions property value. The executionConditions property
+     * Gets the executionConditions property value. Conditions describing when to execute the workflow and the criteria to identify in-scope subject set.
      * @return a workflowExecutionConditions
      */
     @javax.annotation.Nullable
@@ -85,7 +86,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the tasks property value. The tasks property
+     * Gets the tasks property value. Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
      * @return a task
      */
     @javax.annotation.Nullable
@@ -115,7 +116,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
         this._category = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the workflowTemplate.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -123,7 +124,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the workflowTemplate. Supports  orderby.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -131,7 +132,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the executionConditions property value. The executionConditions property
+     * Sets the executionConditions property value. Conditions describing when to execute the workflow and the criteria to identify in-scope subject set.
      * @param value Value to set for the executionConditions property.
      * @return a void
      */
@@ -139,7 +140,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
         this._executionConditions = value;
     }
     /**
-     * Sets the tasks property value. The tasks property
+     * Sets the tasks property value. Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
      * @param value Value to set for the tasks property.
      * @return a void
      */

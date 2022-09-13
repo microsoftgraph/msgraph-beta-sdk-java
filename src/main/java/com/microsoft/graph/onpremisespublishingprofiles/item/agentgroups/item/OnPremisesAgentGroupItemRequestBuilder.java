@@ -18,6 +18,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the agentGroups property of the microsoft.graph.onPremisesPublishingProfile entity. */
@@ -343,7 +344,7 @@ public class OnPremisesAgentGroupItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new OnPremisesAgentGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -369,7 +370,7 @@ public class OnPremisesAgentGroupItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public OnPremisesAgentGroupItemRequestBuilderGetQueryParameters queryParameters = new OnPremisesAgentGroupItemRequestBuilderGetQueryParameters();
@@ -387,7 +388,7 @@ public class OnPremisesAgentGroupItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new OnPremisesAgentGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

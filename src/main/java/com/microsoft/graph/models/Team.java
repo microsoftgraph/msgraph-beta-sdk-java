@@ -65,6 +65,8 @@ public class Team extends Entity implements Parsable {
     private java.util.List<TeamworkTag> _tags;
     /** The template this team was created from. See available templates. */
     private TeamsTemplate _template;
+    /** The templateDefinition property */
+    private TeamTemplateDefinition _templateDefinition;
     /** The ID of the Azure Active Directory tenant. */
     private String _tenantId;
     /** The visibility of the group and team. Defaults to Public. */
@@ -181,6 +183,7 @@ public class Team extends Entity implements Parsable {
             this.put("summary", (n) -> { currentObject.setSummary(n.getObjectValue(TeamSummary::createFromDiscriminatorValue)); });
             this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfObjectValues(TeamworkTag::createFromDiscriminatorValue)); });
             this.put("template", (n) -> { currentObject.setTemplate(n.getObjectValue(TeamsTemplate::createFromDiscriminatorValue)); });
+            this.put("templateDefinition", (n) -> { currentObject.setTemplateDefinition(n.getObjectValue(TeamTemplateDefinition::createFromDiscriminatorValue)); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
             this.put("visibility", (n) -> { currentObject.setVisibility(n.getEnumValue(TeamVisibilityType.class)); });
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
@@ -355,6 +358,14 @@ public class Team extends Entity implements Parsable {
         return this._template;
     }
     /**
+     * Gets the templateDefinition property value. The templateDefinition property
+     * @return a teamTemplateDefinition
+     */
+    @javax.annotation.Nullable
+    public TeamTemplateDefinition getTemplateDefinition() {
+        return this._templateDefinition;
+    }
+    /**
      * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
      * @return a string
      */
@@ -414,6 +425,7 @@ public class Team extends Entity implements Parsable {
         writer.writeObjectValue("summary", this.getSummary());
         writer.writeCollectionOfObjectValues("tags", this.getTags());
         writer.writeObjectValue("template", this.getTemplate());
+        writer.writeObjectValue("templateDefinition", this.getTemplateDefinition());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeEnumValue("visibility", this.getVisibility());
         writer.writeStringValue("webUrl", this.getWebUrl());
@@ -641,6 +653,14 @@ public class Team extends Entity implements Parsable {
      */
     public void setTemplate(@javax.annotation.Nullable final TeamsTemplate value) {
         this._template = value;
+    }
+    /**
+     * Sets the templateDefinition property value. The templateDefinition property
+     * @param value Value to set for the templateDefinition property.
+     * @return a void
+     */
+    public void setTemplateDefinition(@javax.annotation.Nullable final TeamTemplateDefinition value) {
+        this._templateDefinition = value;
     }
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant.

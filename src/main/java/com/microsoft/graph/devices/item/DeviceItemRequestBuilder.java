@@ -8,6 +8,7 @@ import com.microsoft.graph.devices.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.devices.item.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.devices.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.devices.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.devices.item.memberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.devices.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.devices.item.registeredowners.RegisteredOwnersRequestBuilder;
 import com.microsoft.graph.devices.item.registeredusers.RegisteredUsersRequestBuilder;
@@ -29,6 +30,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of device entities. */
@@ -464,7 +466,7 @@ public class DeviceItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DeviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -486,7 +488,7 @@ public class DeviceItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DeviceItemRequestBuilderGetQueryParameters queryParameters = new DeviceItemRequestBuilderGetQueryParameters();
@@ -504,7 +506,7 @@ public class DeviceItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DeviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

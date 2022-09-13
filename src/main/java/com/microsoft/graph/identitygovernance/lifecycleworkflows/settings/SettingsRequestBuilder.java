@@ -14,6 +14,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the settings property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity. */
@@ -80,7 +81,7 @@ public class SettingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get settings from identityGovernance
+     * The settings of the lifecycle workflows instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +89,7 @@ public class SettingsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get settings from identityGovernance
+     * The settings of the lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +194,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Get settings from identityGovernance
+     * The settings of the lifecycle workflows instance.
      * @return a CompletableFuture of lifecycleManagementSettings
      */
     public java.util.concurrent.CompletableFuture<LifecycleManagementSettings> get() {
@@ -209,7 +210,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Get settings from identityGovernance
+     * The settings of the lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of lifecycleManagementSettings
      */
@@ -226,7 +227,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Get settings from identityGovernance
+     * The settings of the lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of lifecycleManagementSettings
@@ -305,7 +306,7 @@ public class SettingsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new settingsRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -313,7 +314,7 @@ public class SettingsRequestBuilder {
         public SettingsRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get settings from identityGovernance */
+    /** The settings of the lifecycle workflows instance. */
     public class SettingsRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -331,7 +332,7 @@ public class SettingsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SettingsRequestBuilderGetQueryParameters queryParameters = new SettingsRequestBuilderGetQueryParameters();
@@ -349,7 +350,7 @@ public class SettingsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new settingsRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

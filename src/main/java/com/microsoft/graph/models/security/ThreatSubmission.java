@@ -16,7 +16,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ThreatSubmission extends Entity implements Parsable {
     /** Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as. */
     private SubmissionAdminReview _adminReview;

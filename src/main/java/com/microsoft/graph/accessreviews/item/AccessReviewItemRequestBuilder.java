@@ -2,6 +2,7 @@ package com.microsoft.graph.accessreviews.item;
 
 import com.microsoft.graph.accessreviews.item.applydecisions.ApplyDecisionsRequestBuilder;
 import com.microsoft.graph.accessreviews.item.decisions.DecisionsRequestBuilder;
+import com.microsoft.graph.accessreviews.item.decisions.item.AccessReviewDecisionItemRequestBuilder;
 import com.microsoft.graph.accessreviews.item.instances.InstancesRequestBuilder;
 import com.microsoft.graph.accessreviews.item.mydecisions.MyDecisionsRequestBuilder;
 import com.microsoft.graph.accessreviews.item.resetdecisions.ResetDecisionsRequestBuilder;
@@ -23,6 +24,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of accessReview entities. */
@@ -402,7 +404,7 @@ public class AccessReviewItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new AccessReviewItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -428,7 +430,7 @@ public class AccessReviewItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AccessReviewItemRequestBuilderGetQueryParameters queryParameters = new AccessReviewItemRequestBuilderGetQueryParameters();
@@ -446,7 +448,7 @@ public class AccessReviewItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new AccessReviewItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

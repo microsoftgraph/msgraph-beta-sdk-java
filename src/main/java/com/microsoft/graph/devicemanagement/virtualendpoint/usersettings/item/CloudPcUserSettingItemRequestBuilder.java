@@ -17,6 +17,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the userSettings property of the microsoft.graph.virtualEndpoint entity. */
@@ -330,7 +331,7 @@ public class CloudPcUserSettingItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new CloudPcUserSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -356,7 +357,7 @@ public class CloudPcUserSettingItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public CloudPcUserSettingItemRequestBuilderGetQueryParameters queryParameters = new CloudPcUserSettingItemRequestBuilderGetQueryParameters();
@@ -374,7 +375,7 @@ public class CloudPcUserSettingItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new CloudPcUserSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -27,6 +27,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the workflows property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity. */
@@ -133,7 +134,7 @@ public class WorkflowItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get workflows from identityGovernance
+     * The workflows in the lifecycle workflows instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -141,7 +142,7 @@ public class WorkflowItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get workflows from identityGovernance
+     * The workflows in the lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -258,7 +259,7 @@ public class WorkflowItemRequestBuilder {
         return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get workflows from identityGovernance
+     * The workflows in the lifecycle workflows instance.
      * @return a CompletableFuture of workflow
      */
     public java.util.concurrent.CompletableFuture<Workflow> get() {
@@ -274,7 +275,7 @@ public class WorkflowItemRequestBuilder {
         }
     }
     /**
-     * Get workflows from identityGovernance
+     * The workflows in the lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workflow
      */
@@ -291,7 +292,7 @@ public class WorkflowItemRequestBuilder {
         }
     }
     /**
-     * Get workflows from identityGovernance
+     * The workflows in the lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of workflow
@@ -418,7 +419,7 @@ public class WorkflowItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new WorkflowItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -426,7 +427,7 @@ public class WorkflowItemRequestBuilder {
         public WorkflowItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get workflows from identityGovernance */
+    /** The workflows in the lifecycle workflows instance. */
     public class WorkflowItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -444,7 +445,7 @@ public class WorkflowItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public WorkflowItemRequestBuilderGetQueryParameters queryParameters = new WorkflowItemRequestBuilderGetQueryParameters();
@@ -462,7 +463,7 @@ public class WorkflowItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new WorkflowItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

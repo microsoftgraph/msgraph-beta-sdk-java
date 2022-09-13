@@ -16,7 +16,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     private Boolean _disallowDesktopApps;
     /** This setting allows the admin to specify whether the Task Bar is shown or not. */
     private Boolean _showTaskBar;
-    /** Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format. */
+    /** Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format. */
     private byte[] _startMenuLayoutXml;
     /**
      * Instantiates a new WindowsKioskMultipleApps and sets the default values.
@@ -84,7 +84,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
         return this._showTaskBar;
     }
     /**
-     * Gets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     * Gets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
         this._showTaskBar = value;
     }
     /**
-     * Sets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     * Sets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      * @param value Value to set for the startMenuLayoutXml property.
      * @return a void
      */

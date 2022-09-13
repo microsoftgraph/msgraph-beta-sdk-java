@@ -1,6 +1,7 @@
 package com.microsoft.graph.admin.windows.updates.deployments.item.audience;
 
 import com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.ExclusionsRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.deployments.item.audience.exclusions.item.UpdatableAssetItemRequestBuilder;
 import com.microsoft.graph.admin.windows.updates.deployments.item.audience.members.MembersRequestBuilder;
 import com.microsoft.graph.admin.windows.updates.deployments.item.audience.updateaudience.UpdateAudienceRequestBuilder;
 import com.microsoft.graph.admin.windows.updates.deployments.item.audience.updateaudiencebyid.UpdateAudienceByIdRequestBuilder;
@@ -18,6 +19,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the audience property of the microsoft.graph.windowsUpdates.deployment entity. */
@@ -353,7 +355,7 @@ public class AudienceRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new audienceRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -379,7 +381,7 @@ public class AudienceRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AudienceRequestBuilderGetQueryParameters queryParameters = new AudienceRequestBuilderGetQueryParameters();
@@ -397,7 +399,7 @@ public class AudienceRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new audienceRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of externalConnection entities. */
 public class Identity extends Entity implements Parsable {
     /** The type property */
     private IdentityType _type;

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This entity contains data which is used in customizing the tenant level appearance of the Company Portal applications as well as the end user web portal. */
 public class IntuneBrandingProfile extends Entity implements Parsable {
     /** The list of group assignments for the branding profile */
     private java.util.List<IntuneBrandingProfileAssignment> _assignments;
@@ -47,11 +48,11 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** Logo image displayed in Company Portal apps which have a light background behind the logo */
     private MimeContent _lightBackgroundLogo;
-    /** Display name of the company/organization’s IT helpdesk site */
+    /** Display name of the company/organizations IT helpdesk site */
     private String _onlineSupportSiteName;
-    /** URL to the company/organization’s IT helpdesk site */
+    /** URL to the company/organizations IT helpdesk site */
     private String _onlineSupportSiteUrl;
-    /** URL to the company/organization’s privacy policy */
+    /** URL to the company/organizations privacy policy */
     private String _privacyUrl;
     /** Description of the profile */
     private String _profileDescription;
@@ -74,7 +75,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     /** Logo image displayed in Company Portal apps which have a theme color background behind the logo */
     private MimeContent _themeColorLogo;
     /**
-     * Instantiates a new IntuneBrandingProfile and sets the default values.
+     * Instantiates a new intuneBrandingProfile and sets the default values.
      * @return a void
      */
     public IntuneBrandingProfile() {
@@ -84,7 +85,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IntuneBrandingProfile
+     * @return a intuneBrandingProfile
      */
     @javax.annotation.Nonnull
     public static IntuneBrandingProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -286,7 +287,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
         return this._lightBackgroundLogo;
     }
     /**
-     * Gets the onlineSupportSiteName property value. Display name of the company/organization’s IT helpdesk site
+     * Gets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site
      * @return a string
      */
     @javax.annotation.Nullable
@@ -294,7 +295,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
         return this._onlineSupportSiteName;
     }
     /**
-     * Gets the onlineSupportSiteUrl property value. URL to the company/organization’s IT helpdesk site
+     * Gets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site
      * @return a string
      */
     @javax.annotation.Nullable
@@ -302,7 +303,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
         return this._onlineSupportSiteUrl;
     }
     /**
-     * Gets the privacyUrl property value. URL to the company/organization’s privacy policy
+     * Gets the privacyUrl property value. URL to the company/organizations privacy policy
      * @return a string
      */
     @javax.annotation.Nullable
@@ -583,7 +584,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
         this._lightBackgroundLogo = value;
     }
     /**
-     * Sets the onlineSupportSiteName property value. Display name of the company/organization’s IT helpdesk site
+     * Sets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site
      * @param value Value to set for the onlineSupportSiteName property.
      * @return a void
      */
@@ -591,7 +592,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
         this._onlineSupportSiteName = value;
     }
     /**
-     * Sets the onlineSupportSiteUrl property value. URL to the company/organization’s IT helpdesk site
+     * Sets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site
      * @param value Value to set for the onlineSupportSiteUrl property.
      * @return a void
      */
@@ -599,7 +600,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
         this._onlineSupportSiteUrl = value;
     }
     /**
-     * Sets the privacyUrl property value. URL to the company/organization’s privacy policy
+     * Sets the privacyUrl property value. URL to the company/organizations privacy policy
      * @param value Value to set for the privacyUrl property.
      * @return a void
      */

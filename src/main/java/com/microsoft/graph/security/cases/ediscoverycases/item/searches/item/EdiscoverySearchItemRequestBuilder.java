@@ -3,6 +3,7 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.searches.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoverySearch;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.additionalsources.AdditionalSourcesRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.additionalsources.item.DataSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.addtoreviewsetoperation.AddToReviewSetOperationRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.CustodianSourcesRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.estimatestatistics.EstimateStatisticsRequestBuilder;
@@ -22,6 +23,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity. */
@@ -384,7 +386,7 @@ public class EdiscoverySearchItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new EdiscoverySearchItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -410,7 +412,7 @@ public class EdiscoverySearchItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public EdiscoverySearchItemRequestBuilderGetQueryParameters queryParameters = new EdiscoverySearchItemRequestBuilderGetQueryParameters();
@@ -428,7 +430,7 @@ public class EdiscoverySearchItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new EdiscoverySearchItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

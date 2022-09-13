@@ -6,6 +6,7 @@ import com.microsoft.graph.domains.item.federationconfiguration.FederationConfig
 import com.microsoft.graph.domains.item.federationconfiguration.item.InternalDomainFederationItemRequestBuilder;
 import com.microsoft.graph.domains.item.forcedelete.ForceDeleteRequestBuilder;
 import com.microsoft.graph.domains.item.promote.PromoteRequestBuilder;
+import com.microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder;
 import com.microsoft.graph.domains.item.serviceconfigurationrecords.ServiceConfigurationRecordsRequestBuilder;
 import com.microsoft.graph.domains.item.sharedemaildomaininvitations.item.SharedEmailDomainInvitationItemRequestBuilder;
 import com.microsoft.graph.domains.item.sharedemaildomaininvitations.SharedEmailDomainInvitationsRequestBuilder;
@@ -25,6 +26,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of domain entities. */
@@ -416,7 +418,7 @@ public class DomainItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DomainItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -442,7 +444,7 @@ public class DomainItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DomainItemRequestBuilderGetQueryParameters queryParameters = new DomainItemRequestBuilderGetQueryParameters();
@@ -460,7 +462,7 @@ public class DomainItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DomainItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

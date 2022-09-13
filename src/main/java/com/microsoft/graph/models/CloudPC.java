@@ -8,11 +8,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class CloudPC extends Entity implements Parsable {
     /** The Azure Active Directory (Azure AD) device ID of the Cloud PC. */
     private String _aadDeviceId;
     /** The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC is able to be connected or not. */
     private CloudPcConnectivityResult _connectivityResult;
+    /** The diskEncryptionState property */
+    private CloudPcDiskEncryptionState _diskEncryptionState;
     /** The display name of the Cloud PC. */
     private String _displayName;
     /** The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
@@ -52,7 +55,7 @@ public class CloudPC extends Entity implements Parsable {
     /** The user principal name (UPN) of the user assigned to the Cloud PC. */
     private String _userPrincipalName;
     /**
-     * Instantiates a new CloudPC and sets the default values.
+     * Instantiates a new cloudPC and sets the default values.
      * @return a void
      */
     public CloudPC() {
@@ -62,7 +65,7 @@ public class CloudPC extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPC
+     * @return a cloudPC
      */
     @javax.annotation.Nonnull
     public static CloudPC createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -86,6 +89,14 @@ public class CloudPC extends Entity implements Parsable {
         return this._connectivityResult;
     }
     /**
+     * Gets the diskEncryptionState property value. The diskEncryptionState property
+     * @return a cloudPcDiskEncryptionState
+     */
+    @javax.annotation.Nullable
+    public CloudPcDiskEncryptionState getDiskEncryptionState() {
+        return this._diskEncryptionState;
+    }
+    /**
      * Gets the displayName property value. The display name of the Cloud PC.
      * @return a string
      */
@@ -103,6 +114,7 @@ public class CloudPC extends Entity implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("aadDeviceId", (n) -> { currentObject.setAadDeviceId(n.getStringValue()); });
             this.put("connectivityResult", (n) -> { currentObject.setConnectivityResult(n.getObjectValue(CloudPcConnectivityResult::createFromDiscriminatorValue)); });
+            this.put("diskEncryptionState", (n) -> { currentObject.setDiskEncryptionState(n.getEnumValue(CloudPcDiskEncryptionState.class)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("gracePeriodEndDateTime", (n) -> { currentObject.setGracePeriodEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("imageDisplayName", (n) -> { currentObject.setImageDisplayName(n.getStringValue()); });
@@ -278,6 +290,7 @@ public class CloudPC extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("aadDeviceId", this.getAadDeviceId());
         writer.writeObjectValue("connectivityResult", this.getConnectivityResult());
+        writer.writeEnumValue("diskEncryptionState", this.getDiskEncryptionState());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("gracePeriodEndDateTime", this.getGracePeriodEndDateTime());
         writer.writeStringValue("imageDisplayName", this.getImageDisplayName());
@@ -313,6 +326,14 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setConnectivityResult(@javax.annotation.Nullable final CloudPcConnectivityResult value) {
         this._connectivityResult = value;
+    }
+    /**
+     * Sets the diskEncryptionState property value. The diskEncryptionState property
+     * @param value Value to set for the diskEncryptionState property.
+     * @return a void
+     */
+    public void setDiskEncryptionState(@javax.annotation.Nullable final CloudPcDiskEncryptionState value) {
+        this._diskEncryptionState = value;
     }
     /**
      * Sets the displayName property value. The display name of the Cloud PC.

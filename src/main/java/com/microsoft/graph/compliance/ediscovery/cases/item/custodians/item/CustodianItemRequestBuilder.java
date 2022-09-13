@@ -25,6 +25,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the custodians property of the microsoft.graph.ediscovery.case entity. */
@@ -392,7 +393,7 @@ public class CustodianItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new CustodianItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -418,7 +419,7 @@ public class CustodianItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public CustodianItemRequestBuilderGetQueryParameters queryParameters = new CustodianItemRequestBuilderGetQueryParameters();
@@ -436,7 +437,7 @@ public class CustodianItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new CustodianItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

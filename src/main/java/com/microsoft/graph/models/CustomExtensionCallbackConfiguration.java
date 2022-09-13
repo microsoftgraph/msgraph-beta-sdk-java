@@ -15,7 +15,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     private Map<String, Object> _additionalData;
     /** The OdataType property */
     private String _odataType;
-    /** The timeoutDuration property */
+    /** Callback time out in ISO 8601 time duration. Accepted time durations are between five minutes to three hours. For example, PT5M for five minutes and PT3H for three hours. */
     private Period _timeoutDuration;
     /**
      * Instantiates a new customExtensionCallbackConfiguration and sets the default values.
@@ -71,7 +71,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
         return this._odataType;
     }
     /**
-     * Gets the timeoutDuration property value. The timeoutDuration property
+     * Gets the timeoutDuration property value. Callback time out in ISO 8601 time duration. Accepted time durations are between five minutes to three hours. For example, PT5M for five minutes and PT3H for three hours.
      * @return a Period
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
         this._odataType = value;
     }
     /**
-     * Sets the timeoutDuration property value. The timeoutDuration property
+     * Sets the timeoutDuration property value. Callback time out in ISO 8601 time duration. Accepted time durations are between five minutes to three hours. For example, PT5M for five minutes and PT3H for three hours.
      * @param value Value to set for the timeoutDuration property.
      * @return a void
      */

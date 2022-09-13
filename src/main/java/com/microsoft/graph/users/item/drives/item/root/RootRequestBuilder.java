@@ -5,6 +5,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.drives.item.root.activities.ActivitiesRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.root.activities.item.ItemActivityOLDItemRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.root.analytics.AnalyticsRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.root.assignsensitivitylabel.AssignSensitivityLabelRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.root.checkin.CheckinRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.root.checkout.CheckoutRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.root.children.ChildrenRequestBuilder;
@@ -45,6 +46,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the root property of the microsoft.graph.drive entity. */
@@ -58,6 +60,11 @@ public class RootRequestBuilder {
     @javax.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The assignSensitivityLabel property */
+    @javax.annotation.Nonnull
+    public AssignSensitivityLabelRequestBuilder assignSensitivityLabel() {
+        return new AssignSensitivityLabelRequestBuilder(pathParameters, requestAdapter);
     }
     /** The checkin property */
     @javax.annotation.Nonnull
@@ -555,7 +562,7 @@ public class RootRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new rootRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -581,7 +588,7 @@ public class RootRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public RootRequestBuilderGetQueryParameters queryParameters = new RootRequestBuilderGetQueryParameters();
@@ -599,7 +606,7 @@ public class RootRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new rootRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

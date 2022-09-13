@@ -8,7 +8,9 @@ import com.microsoft.graph.reports.authenticationmethods.AuthenticationMethodsRe
 import com.microsoft.graph.reports.credentialuserregistrationdetails.CredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.reports.credentialuserregistrationdetails.item.CredentialUserRegistrationDetailsItemRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyprinter.DailyPrintUsageByPrinterRequestBuilder;
+import com.microsoft.graph.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyuser.DailyPrintUsageByUserRequestBuilder;
+import com.microsoft.graph.reports.dailyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagesummariesbyprinter.DailyPrintUsageSummariesByPrinterRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagesummariesbyuser.DailyPrintUsageSummariesByUserRequestBuilder;
 import com.microsoft.graph.reports.deviceconfigurationdeviceactivity.DeviceConfigurationDeviceActivityRequestBuilder;
@@ -17,9 +19,6 @@ import com.microsoft.graph.reports.getattacksimulationrepeatoffenders.GetAttackS
 import com.microsoft.graph.reports.getattacksimulationsimulationusercoverage.GetAttackSimulationSimulationUserCoverageRequestBuilder;
 import com.microsoft.graph.reports.getattacksimulationtrainingusercoverage.GetAttackSimulationTrainingUserCoverageRequestBuilder;
 import com.microsoft.graph.reports.getazureadapplicationsigninsummarywithperiod.GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder;
-import com.microsoft.graph.reports.getazureadfeatureusagewithperiod.GetAzureADFeatureUsageWithPeriodRequestBuilder;
-import com.microsoft.graph.reports.getazureadlicenseusagewithperiod.GetAzureADLicenseUsageWithPeriodRequestBuilder;
-import com.microsoft.graph.reports.getazureaduserfeatureusage.GetAzureADUserFeatureUsageRequestBuilder;
 import com.microsoft.graph.reports.getbrowserdistributionusercountswithperiod.GetBrowserDistributionUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getbrowserusercountswithperiod.GetBrowserUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getbrowseruserdetailwithperiod.GetBrowserUserDetailWithPeriodRequestBuilder;
@@ -155,6 +154,7 @@ import java.time.OffsetDateTime;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the reportRoot singleton. */
@@ -491,34 +491,6 @@ public class ReportsRequestBuilder {
     public GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder getAzureADApplicationSignInSummaryWithPeriod(@javax.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
         return new GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
-    }
-    /**
-     * Provides operations to call the getAzureADFeatureUsage method.
-     * @param period Usage: period='{period}'
-     * @return a getAzureADFeatureUsageWithPeriodRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetAzureADFeatureUsageWithPeriodRequestBuilder getAzureADFeatureUsageWithPeriod(@javax.annotation.Nonnull final String period) {
-        Objects.requireNonNull(period);
-        return new GetAzureADFeatureUsageWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
-    }
-    /**
-     * Provides operations to call the getAzureADLicenseUsage method.
-     * @param period Usage: period='{period}'
-     * @return a getAzureADLicenseUsageWithPeriodRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetAzureADLicenseUsageWithPeriodRequestBuilder getAzureADLicenseUsageWithPeriod(@javax.annotation.Nonnull final String period) {
-        Objects.requireNonNull(period);
-        return new GetAzureADLicenseUsageWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
-    }
-    /**
-     * Provides operations to call the getAzureADUserFeatureUsage method.
-     * @return a getAzureADUserFeatureUsageRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetAzureADUserFeatureUsageRequestBuilder getAzureADUserFeatureUsage() {
-        return new GetAzureADUserFeatureUsageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getBrowserDistributionUserCounts method.
@@ -1809,7 +1781,7 @@ public class ReportsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ReportsRequestBuilderGetQueryParameters queryParameters = new ReportsRequestBuilderGetQueryParameters();
@@ -1827,7 +1799,7 @@ public class ReportsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new reportsRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -14,6 +14,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the secureScores property of the microsoft.graph.security entity. */
@@ -80,7 +81,7 @@ public class SecureScoreItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Measurements of tenants’ security posture to help protect them from threats.
+     * Measurements of tenants security posture to help protect them from threats.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +89,7 @@ public class SecureScoreItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Measurements of tenants’ security posture to help protect them from threats.
+     * Measurements of tenants security posture to help protect them from threats.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +194,7 @@ public class SecureScoreItemRequestBuilder {
         }
     }
     /**
-     * Measurements of tenants’ security posture to help protect them from threats.
+     * Measurements of tenants security posture to help protect them from threats.
      * @return a CompletableFuture of secureScore
      */
     public java.util.concurrent.CompletableFuture<SecureScore> get() {
@@ -209,7 +210,7 @@ public class SecureScoreItemRequestBuilder {
         }
     }
     /**
-     * Measurements of tenants’ security posture to help protect them from threats.
+     * Measurements of tenants security posture to help protect them from threats.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of secureScore
      */
@@ -226,7 +227,7 @@ public class SecureScoreItemRequestBuilder {
         }
     }
     /**
-     * Measurements of tenants’ security posture to help protect them from threats.
+     * Measurements of tenants security posture to help protect them from threats.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of secureScore
@@ -305,7 +306,7 @@ public class SecureScoreItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new SecureScoreItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -313,7 +314,7 @@ public class SecureScoreItemRequestBuilder {
         public SecureScoreItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Measurements of tenants’ security posture to help protect them from threats. */
+    /** Measurements of tenants security posture to help protect them from threats. */
     public class SecureScoreItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -331,7 +332,7 @@ public class SecureScoreItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SecureScoreItemRequestBuilderGetQueryParameters queryParameters = new SecureScoreItemRequestBuilderGetQueryParameters();
@@ -349,7 +350,7 @@ public class SecureScoreItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new SecureScoreItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

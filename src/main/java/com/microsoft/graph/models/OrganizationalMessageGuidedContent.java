@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This will allow the admin to see the different templated organizational messages that can be created */
 public class OrganizationalMessageGuidedContent extends Entity implements Parsable {
     /** Example of the logo that will be displayed to customers and its size requirements */
     private OrganizationalMessageLogoGuide _logo;
@@ -19,7 +20,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements Parsab
     /** Indicates the theme for the guided content */
     private OrganizationalMessageTheme _theme;
     /**
-     * Instantiates a new OrganizationalMessageGuidedContent and sets the default values.
+     * Instantiates a new organizationalMessageGuidedContent and sets the default values.
      * @return a void
      */
     public OrganizationalMessageGuidedContent() {
@@ -29,7 +30,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OrganizationalMessageGuidedContent
+     * @return a organizationalMessageGuidedContent
      */
     @javax.annotation.Nonnull
     public static OrganizationalMessageGuidedContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

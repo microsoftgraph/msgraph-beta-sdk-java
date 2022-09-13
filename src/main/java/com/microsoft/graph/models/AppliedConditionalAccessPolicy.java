@@ -23,7 +23,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     private java.util.List<String> _enforcedGrantControls;
     /** Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls'). */
     private java.util.List<String> _enforcedSessionControls;
-    /** List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didn’t apply, because the DevicePlatform condition was a match. */
+    /** List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didnt apply, because the DevicePlatform condition was a match. */
     private java.util.List<ConditionalAccessRuleSatisfied> _excludeRulesSatisfied;
     /** Identifier of the conditional access policy. */
     private String _id;
@@ -110,7 +110,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         return this._enforcedSessionControls;
     }
     /**
-     * Gets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didn’t apply, because the DevicePlatform condition was a match.
+     * Gets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didnt apply, because the DevicePlatform condition was a match.
      * @return a conditionalAccessRuleSatisfied
      */
     @javax.annotation.Nullable
@@ -257,7 +257,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         this._enforcedSessionControls = value;
     }
     /**
-     * Sets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didn’t apply, because the DevicePlatform condition was a match.
+     * Sets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didnt apply, because the DevicePlatform condition was a match.
      * @param value Value to set for the excludeRulesSatisfied property.
      * @return a void
      */

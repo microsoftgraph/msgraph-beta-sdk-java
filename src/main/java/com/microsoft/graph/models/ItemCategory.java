@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ItemCategory extends Entity implements Parsable {
     /** The code property */
     private String _code;
@@ -16,7 +17,7 @@ public class ItemCategory extends Entity implements Parsable {
     /** The lastModifiedDateTime property */
     private OffsetDateTime _lastModifiedDateTime;
     /**
-     * Instantiates a new ItemCategory and sets the default values.
+     * Instantiates a new itemCategory and sets the default values.
      * @return a void
      */
     public ItemCategory() {
@@ -26,7 +27,7 @@ public class ItemCategory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemCategory
+     * @return a itemCategory
      */
     @javax.annotation.Nonnull
     public static ItemCategory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -3,6 +3,7 @@ package com.microsoft.graph.dataclassification;
 import com.microsoft.graph.dataclassification.classifyexactmatches.ClassifyExactMatchesRequestBuilder;
 import com.microsoft.graph.dataclassification.classifyfile.ClassifyFileRequestBuilder;
 import com.microsoft.graph.dataclassification.classifyfilejobs.ClassifyFileJobsRequestBuilder;
+import com.microsoft.graph.dataclassification.classifyfilejobs.item.JobResponseBaseItemRequestBuilder;
 import com.microsoft.graph.dataclassification.classifytext.ClassifyTextRequestBuilder;
 import com.microsoft.graph.dataclassification.classifytextjobs.ClassifyTextJobsRequestBuilder;
 import com.microsoft.graph.dataclassification.evaluatedlppoliciesjobs.EvaluateDlpPoliciesJobsRequestBuilder;
@@ -30,6 +31,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the dataClassificationService singleton. */
@@ -421,7 +423,7 @@ public class DataClassificationRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DataClassificationRequestBuilderGetQueryParameters queryParameters = new DataClassificationRequestBuilderGetQueryParameters();
@@ -439,7 +441,7 @@ public class DataClassificationRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new dataClassificationRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

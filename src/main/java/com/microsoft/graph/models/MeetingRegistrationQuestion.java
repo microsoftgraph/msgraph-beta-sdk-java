@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the commsApplication singleton. */
 public class MeetingRegistrationQuestion extends Entity implements Parsable {
     /** Answer input type of the custom registration question. */
     private AnswerInputType _answerInputType;

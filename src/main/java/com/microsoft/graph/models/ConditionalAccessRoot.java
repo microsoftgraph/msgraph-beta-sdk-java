@@ -10,6 +10,8 @@ import java.util.Objects;
 public class ConditionalAccessRoot extends Entity implements Parsable {
     /** Read-only. Nullable. Returns a collection of the specified authentication context class references. */
     private java.util.List<AuthenticationContextClassReference> _authenticationContextClassReferences;
+    /** The authenticationStrengths property */
+    private AuthenticationStrengthRoot _authenticationStrengths;
     /** Read-only. Nullable. Returns a collection of the specified named locations. */
     private java.util.List<NamedLocation> _namedLocations;
     /** Read-only. Nullable. Returns a collection of the specified Conditional Access policies. */
@@ -41,6 +43,14 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         return this._authenticationContextClassReferences;
     }
     /**
+     * Gets the authenticationStrengths property value. The authenticationStrengths property
+     * @return a authenticationStrengthRoot
+     */
+    @javax.annotation.Nullable
+    public AuthenticationStrengthRoot getAuthenticationStrengths() {
+        return this._authenticationStrengths;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -49,6 +59,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         final ConditionalAccessRoot currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("authenticationContextClassReferences", (n) -> { currentObject.setAuthenticationContextClassReferences(n.getCollectionOfObjectValues(AuthenticationContextClassReference::createFromDiscriminatorValue)); });
+            this.put("authenticationStrengths", (n) -> { currentObject.setAuthenticationStrengths(n.getObjectValue(AuthenticationStrengthRoot::createFromDiscriminatorValue)); });
             this.put("namedLocations", (n) -> { currentObject.setNamedLocations(n.getCollectionOfObjectValues(NamedLocation::createFromDiscriminatorValue)); });
             this.put("policies", (n) -> { currentObject.setPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
         }};
@@ -78,6 +89,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("authenticationContextClassReferences", this.getAuthenticationContextClassReferences());
+        writer.writeObjectValue("authenticationStrengths", this.getAuthenticationStrengths());
         writer.writeCollectionOfObjectValues("namedLocations", this.getNamedLocations());
         writer.writeCollectionOfObjectValues("policies", this.getPolicies());
     }
@@ -88,6 +100,14 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     public void setAuthenticationContextClassReferences(@javax.annotation.Nullable final java.util.List<AuthenticationContextClassReference> value) {
         this._authenticationContextClassReferences = value;
+    }
+    /**
+     * Sets the authenticationStrengths property value. The authenticationStrengths property
+     * @param value Value to set for the authenticationStrengths property.
+     * @return a void
+     */
+    public void setAuthenticationStrengths(@javax.annotation.Nullable final AuthenticationStrengthRoot value) {
+        this._authenticationStrengths = value;
     }
     /**
      * Sets the namedLocations property value. Read-only. Nullable. Returns a collection of the specified named locations.

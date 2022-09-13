@@ -7,9 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WorkflowVersion extends WorkflowBase implements Parsable {
-    /** The versionNumber property */
+    /** The version of the workflow. */
     private Integer _versionNumber;
     /**
      * Instantiates a new workflowVersion and sets the default values.
@@ -41,7 +41,7 @@ public class WorkflowVersion extends WorkflowBase implements Parsable {
         }};
     }
     /**
-     * Gets the versionNumber property value. The versionNumber property
+     * Gets the versionNumber property value. The version of the workflow.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class WorkflowVersion extends WorkflowBase implements Parsable {
         writer.writeIntegerValue("versionNumber", this.getVersionNumber());
     }
     /**
-     * Sets the versionNumber property value. The versionNumber property
+     * Sets the versionNumber property value. The version of the workflow.
      * @param value Value to set for the versionNumber property.
      * @return a void
      */

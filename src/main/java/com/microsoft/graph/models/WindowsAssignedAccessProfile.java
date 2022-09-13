@@ -12,11 +12,11 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
     private java.util.List<String> _appUserModelIds;
     /** These are the paths of the Desktop Apps that will be available on the Start menu and the only apps the user will be able to launch. */
     private java.util.List<String> _desktopAppPaths;
-    /** This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned. */
+    /** This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned. */
     private String _profileName;
     /** This setting allows the admin to specify whether the Task Bar is shown or not. */
     private Boolean _showTaskBar;
-    /** Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format. */
+    /** Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format. */
     private byte[] _startMenuLayoutXml;
     /** The user accounts that will be locked to this kiosk configuration. */
     private java.util.List<String> _userAccounts;
@@ -71,7 +71,7 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the profileName property value. This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+     * Gets the profileName property value. This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
         return this._showTaskBar;
     }
     /**
-     * Gets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     * Gets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -134,7 +134,7 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
         this._desktopAppPaths = value;
     }
     /**
-     * Sets the profileName property value. This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+     * Sets the profileName property value. This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      * @param value Value to set for the profileName property.
      * @return a void
      */
@@ -150,7 +150,7 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
         this._showTaskBar = value;
     }
     /**
-     * Sets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     * Sets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      * @param value Value to set for the startMenuLayoutXml property.
      * @return a void
      */

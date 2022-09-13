@@ -1,5 +1,6 @@
 package com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary;
 
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.manufacturerregression.item.UserExperienceAnalyticsMetricItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.manufacturerregression.ManufacturerRegressionRequestBuilder;
 import com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.modelregression.ModelRegressionRequestBuilder;
 import com.microsoft.graph.devicemanagement.userexperienceanalyticsregressionsummary.operatingsystemregression.OperatingSystemRegressionRequestBuilder;
@@ -18,6 +19,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the userExperienceAnalyticsRegressionSummary property of the microsoft.graph.deviceManagement entity. */
@@ -370,7 +372,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new userExperienceAnalyticsRegressionSummaryRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -396,7 +398,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public UserExperienceAnalyticsRegressionSummaryRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsRegressionSummaryRequestBuilderGetQueryParameters();
@@ -414,7 +416,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new userExperienceAnalyticsRegressionSummaryRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

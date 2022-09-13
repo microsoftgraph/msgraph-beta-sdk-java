@@ -36,7 +36,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<AssignedPlan> _assignedPlans;
     /** The authentication property */
     private Authentication _authentication;
-    /** The authorizationInfo property */
+    /** Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith). */
     private AuthorizationInfo _authorizationInfo;
     /** The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select. */
     private OffsetDateTime _birthday;
@@ -98,7 +98,7 @@ public class User extends DirectoryObject implements Parsable {
     private OffsetDateTime _employeeHireDate;
     /** The employee identifier assigned to the user by the organization. The maximum length is 16 characters.Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values). */
     private String _employeeId;
-    /** The employeeLeaveDateTime property */
+    /** The date and time when the user left or will leave the organization. Read: Requires User-LifeCycleInfo.Read.All. For delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Admin.  Write: Requires User-LifeCycleInfo.ReadWrite.All. For delegated scenarios, the admin needs the Global Administrator Azure AD role. Supports $filter (eq, ne, not , ge, le, in). */
     private OffsetDateTime _employeeLeaveDateTime;
     /** Represents organization data (e.g. division and costCenter) associated with a user. Supports $filter (eq, ne, not , ge, le, in). */
     private EmployeeOrgData _employeeOrgData;
@@ -136,7 +136,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<String> _interests;
     /** The isManagementRestricted property */
     private Boolean _isManagementRestricted;
-    /** Do not use – reserved for future use. */
+    /** Do not use  reserved for future use. */
     private Boolean _isResourceAccount;
     /** The user's job title. Maximum length is 128 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values). */
     private String _jobTitle;
@@ -423,7 +423,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._authentication;
     }
     /**
-     * Gets the authorizationInfo property value. The authorizationInfo property
+     * Gets the authorizationInfo property value. Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
      * @return a authorizationInfo
      */
     @javax.annotation.Nullable
@@ -671,7 +671,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._employeeId;
     }
     /**
-     * Gets the employeeLeaveDateTime property value. The employeeLeaveDateTime property
+     * Gets the employeeLeaveDateTime property value. The date and time when the user left or will leave the organization. Read: Requires User-LifeCycleInfo.Read.All. For delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Admin.  Write: Requires User-LifeCycleInfo.ReadWrite.All. For delegated scenarios, the admin needs the Global Administrator Azure AD role. Supports $filter (eq, ne, not , ge, le, in).
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -978,7 +978,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._isManagementRestricted;
     }
     /**
-     * Gets the isResourceAccount property value. Do not use – reserved for future use.
+     * Gets the isResourceAccount property value. Do not use  reserved for future use.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1892,7 +1892,7 @@ public class User extends DirectoryObject implements Parsable {
         this._authentication = value;
     }
     /**
-     * Sets the authorizationInfo property value. The authorizationInfo property
+     * Sets the authorizationInfo property value. Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
      * @param value Value to set for the authorizationInfo property.
      * @return a void
      */
@@ -2140,7 +2140,7 @@ public class User extends DirectoryObject implements Parsable {
         this._employeeId = value;
     }
     /**
-     * Sets the employeeLeaveDateTime property value. The employeeLeaveDateTime property
+     * Sets the employeeLeaveDateTime property value. The date and time when the user left or will leave the organization. Read: Requires User-LifeCycleInfo.Read.All. For delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Admin.  Write: Requires User-LifeCycleInfo.ReadWrite.All. For delegated scenarios, the admin needs the Global Administrator Azure AD role. Supports $filter (eq, ne, not , ge, le, in).
      * @param value Value to set for the employeeLeaveDateTime property.
      * @return a void
      */
@@ -2292,7 +2292,7 @@ public class User extends DirectoryObject implements Parsable {
         this._isManagementRestricted = value;
     }
     /**
-     * Sets the isResourceAccount property value. Do not use – reserved for future use.
+     * Sets the isResourceAccount property value. Do not use  reserved for future use.
      * @param value Value to set for the isResourceAccount property.
      * @return a void
      */

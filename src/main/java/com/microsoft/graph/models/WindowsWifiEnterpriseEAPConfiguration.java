@@ -14,9 +14,9 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     private Integer _authenticationPeriodInSeconds;
     /** Specify the number of seconds between a failed authentication and the next authentication attempt. Valid range 1-3600. */
     private Integer _authenticationRetryDelayPeriodInSeconds;
-    /** Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you’re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. */
+    /** Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. */
     private WifiAuthenticationType _authenticationType;
-    /** Specify whether to cache user credentials on the device so that users don’t need to keep entering them each time they connect. */
+    /** Specify whether to cache user credentials on the device so that users dont need to keep entering them each time they connect. */
     private Boolean _cacheCredentials;
     /** Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP. */
     private Boolean _disableUserPromptForServerValidation;
@@ -60,7 +60,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     private java.util.List<Windows81TrustedRootCertificate> _rootCertificatesForServerValidation;
     /** Specify trusted server certificate names. */
     private java.util.List<String> _trustedServerCertificateNames;
-    /** Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to ​Disabled. */
+    /** Specifiy whether to change the virtual LAN used by the device based on the users credentials. Cannot be used when NetworkSingleSignOnType is set to Disabled. */
     private Boolean _userBasedVirtualLan;
     /**
      * Instantiates a new WindowsWifiEnterpriseEAPConfiguration and sets the default values.
@@ -105,7 +105,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         return this._authenticationRetryDelayPeriodInSeconds;
     }
     /**
-     * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you’re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
+     * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
      * @return a wifiAuthenticationType
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         return this._authenticationType;
     }
     /**
-     * Gets the cacheCredentials property value. Specify whether to cache user credentials on the device so that users don’t need to keep entering them each time they connect.
+     * Gets the cacheCredentials property value. Specify whether to cache user credentials on the device so that users dont need to keep entering them each time they connect.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -326,7 +326,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         return this._trustedServerCertificateNames;
     }
     /**
-     * Gets the userBasedVirtualLan property value. Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to ​Disabled.
+     * Gets the userBasedVirtualLan property value. Specifiy whether to change the virtual LAN used by the device based on the users credentials. Cannot be used when NetworkSingleSignOnType is set to Disabled.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -394,7 +394,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         this._authenticationRetryDelayPeriodInSeconds = value;
     }
     /**
-     * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you’re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
+     * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
      * @param value Value to set for the authenticationType property.
      * @return a void
      */
@@ -402,7 +402,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         this._authenticationType = value;
     }
     /**
-     * Sets the cacheCredentials property value. Specify whether to cache user credentials on the device so that users don’t need to keep entering them each time they connect.
+     * Sets the cacheCredentials property value. Specify whether to cache user credentials on the device so that users dont need to keep entering them each time they connect.
      * @param value Value to set for the cacheCredentials property.
      * @return a void
      */
@@ -578,7 +578,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         this._trustedServerCertificateNames = value;
     }
     /**
-     * Sets the userBasedVirtualLan property value. Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to ​Disabled.
+     * Sets the userBasedVirtualLan property value. Specifiy whether to change the virtual LAN used by the device based on the users credentials. Cannot be used when NetworkSingleSignOnType is set to Disabled.
      * @param value Value to set for the userBasedVirtualLan property.
      * @return a void
      */

@@ -15,7 +15,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _expiration;
-    /** The interval between synchronization iterations. */
+    /** The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month. */
     private Period _interval;
     /** The OdataType property */
     private String _odataType;
@@ -70,7 +70,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the interval property value. The interval between synchronization iterations.
+     * Gets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
      * @return a Period
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
         this._expiration = value;
     }
     /**
-     * Sets the interval property value. The interval between synchronization iterations.
+     * Sets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
      * @param value Value to set for the interval property.
      * @return a void
      */

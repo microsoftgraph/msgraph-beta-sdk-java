@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to application. */
 public class Application extends DirectoryObject implements Parsable {
     /** Specifies settings for an application that implements a web API. */
     private ApiApplication _api;
@@ -35,7 +36,7 @@ public class Application extends DirectoryObject implements Parsable {
     private String _displayName;
     /** Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters). */
     private java.util.List<ExtensionProperty> _extensionProperties;
-    /** Federated identities for applications. Supports $expand and $filter (eq when counting empty collections). */
+    /** Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters). */
     private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
     /** Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of). */
     private String _groupMembershipClaims;
@@ -59,7 +60,7 @@ public class Application extends DirectoryObject implements Parsable {
     private OnPremisesPublishing _onPremisesPublishing;
     /** Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app. */
     private OptionalClaims _optionalClaims;
-    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
+    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections). */
     private java.util.List<DirectoryObject> _owners;
     /** Specifies parental control settings for an application. */
     private ParentalControlSettings _parentalControlSettings;
@@ -100,7 +101,7 @@ public class Application extends DirectoryObject implements Parsable {
     /** Specifies settings for apps running Microsoft Windows and published in the Microsoft Store or Xbox games store. */
     private WindowsApplication _windows;
     /**
-     * Instantiates a new Application and sets the default values.
+     * Instantiates a new application and sets the default values.
      * @return a void
      */
     public Application() {
@@ -110,7 +111,7 @@ public class Application extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Application
+     * @return a application
      */
     @javax.annotation.Nonnull
     public static Application createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -222,7 +223,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._extensionProperties;
     }
     /**
-     * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @return a federatedIdentityCredential
      */
     @javax.annotation.Nullable
@@ -373,7 +374,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._optionalClaims;
     }
     /**
-     * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections).
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -691,7 +692,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._extensionProperties = value;
     }
     /**
-     * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @param value Value to set for the federatedIdentityCredentials property.
      * @return a void
      */
@@ -787,7 +788,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._optionalClaims = value;
     }
     /**
-     * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections).
      * @param value Value to set for the owners property.
      * @return a void
      */

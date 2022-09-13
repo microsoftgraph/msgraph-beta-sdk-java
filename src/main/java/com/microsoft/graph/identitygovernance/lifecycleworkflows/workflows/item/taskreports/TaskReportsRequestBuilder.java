@@ -18,6 +18,7 @@ import java.time.OffsetDateTime;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the taskReports property of the microsoft.graph.identityGovernance.workflow entity. */
@@ -42,7 +43,7 @@ public class TaskReportsRequestBuilder {
     public TaskReportsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/taskReports{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/taskReports{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -54,14 +55,14 @@ public class TaskReportsRequestBuilder {
      * @return a void
      */
     public TaskReportsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/taskReports{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/taskReports{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get taskReports from identityGovernance
+     * Represents the aggregation of task execution data for tasks within a workflow object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -69,7 +70,7 @@ public class TaskReportsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get taskReports from identityGovernance
+     * Represents the aggregation of task execution data for tasks within a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -124,7 +125,7 @@ public class TaskReportsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get taskReports from identityGovernance
+     * Represents the aggregation of task execution data for tasks within a workflow object.
      * @return a CompletableFuture of TaskReportCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TaskReportCollectionResponse> get() {
@@ -140,7 +141,7 @@ public class TaskReportsRequestBuilder {
         }
     }
     /**
-     * Get taskReports from identityGovernance
+     * Represents the aggregation of task execution data for tasks within a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TaskReportCollectionResponse
      */
@@ -157,7 +158,7 @@ public class TaskReportsRequestBuilder {
         }
     }
     /**
-     * Get taskReports from identityGovernance
+     * Represents the aggregation of task execution data for tasks within a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of TaskReportCollectionResponse
@@ -241,7 +242,7 @@ public class TaskReportsRequestBuilder {
         Objects.requireNonNull(startDateTime);
         return new SummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
-    /** Get taskReports from identityGovernance */
+    /** Represents the aggregation of task execution data for tasks within a workflow object. */
     public class TaskReportsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -283,7 +284,7 @@ public class TaskReportsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TaskReportsRequestBuilderGetQueryParameters queryParameters = new TaskReportsRequestBuilderGetQueryParameters();
@@ -301,7 +302,7 @@ public class TaskReportsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new taskReportsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class Alert extends Entity implements Parsable {
     /** The adversary or activity group that is associated with this alert. */
     private String _actorDisplayName;

@@ -3,9 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum DefenderRealtimeScanDirection implements ValuedEnum {
-    /** 0 (default) – Monitor all files(bi-directional) */
+    /** 0 (default)  Monitor all files(bi-directional) */
     MonitorAllFiles("monitorAllFiles"),
     /** Monitor incoming files only. */
     MonitorIncomingFilesOnly("monitorIncomingFilesOnly"),

@@ -15,13 +15,13 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** The setting name displayed in the user interface. */
     private String _displayName;
-    /** The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'. */
+    /** The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this:'2014-01-01T00:00:00Z'. */
     private OffsetDateTime _lastModifiedDateTime;
     /** Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the Cloud PC device. */
     private Boolean _localAdminEnabled;
     /** Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time. */
     private CloudPcRestorePointSetting _restorePointSetting;
-    /** Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal. */
+    /** Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal. */
     private Boolean _selfServiceEnabled;
     /**
      * Instantiates a new CloudPcUserSetting and sets the default values.
@@ -83,7 +83,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the lastModifiedDateTime property value. The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
+     * Gets the lastModifiedDateTime property value. The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this:'2014-01-01T00:00:00Z'.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this._restorePointSetting;
     }
     /**
-     * Gets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
+     * Gets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -155,7 +155,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
+     * Sets the lastModifiedDateTime property value. The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this:'2014-01-01T00:00:00Z'.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
@@ -179,7 +179,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this._restorePointSetting = value;
     }
     /**
-     * Sets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
+     * Sets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
      * @param value Value to set for the selfServiceEnabled property.
      * @return a void
      */

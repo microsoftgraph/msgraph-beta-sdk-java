@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10EndpointProtectionConfiguration extends DeviceConfiguration implements Parsable {
-    /** Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone. */
+    /** Gets or sets whether applications inside Microsoft Defender Application Guard can access the devices camera and microphone. */
     private Boolean _applicationGuardAllowCameraMicrophoneRedirection;
     /** Allow users to download files from Edge in the application guard container and save them on the host file system */
     private Boolean _applicationGuardAllowFileSaveOnHost;
@@ -345,7 +345,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     private Boolean _localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts;
     /** Require CTRL+ALT+DEL to be pressed before a user can log on. */
     private Boolean _localSecurityOptionsDoNotRequireCtrlAltDel;
-    /** This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default. */
+    /** This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. Its not stored by default. */
     private Boolean _localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange;
     /** Possible values for LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser */
     private LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType _localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser;
@@ -353,7 +353,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     private String _localSecurityOptionsGuestAccountName;
     /** Do not display the username of the last person who signed in on this device. */
     private Boolean _localSecurityOptionsHideLastSignedInUser;
-    /** Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown. */
+    /** Do not display the username of the person signing in to this device after credentials are entered and before the devices desktop is shown. */
     private Boolean _localSecurityOptionsHideUsernameAtSignIn;
     /** Possible values for LocalSecurityOptionsInformationDisplayedOnLockScreen */
     private LocalSecurityOptionsInformationDisplayedOnLockScreenType _localSecurityOptionsInformationDisplayedOnLockScreen;
@@ -363,9 +363,9 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     private String _localSecurityOptionsLogOnMessageText;
     /** Set message title for users attempting to log in. */
     private String _localSecurityOptionsLogOnMessageTitle;
-    /** Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999 */
+    /** Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999 */
     private Integer _localSecurityOptionsMachineInactivityLimit;
-    /** Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999 */
+    /** Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999 */
     private Integer _localSecurityOptionsMachineInactivityLimitInMinutes;
     /** Possible values for LocalSecurityOptionsMinimumSessionSecurity */
     private LocalSecurityOptionsMinimumSessionSecurity _localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients;
@@ -480,7 +480,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return new Windows10EndpointProtectionConfiguration();
     }
     /**
-     * Gets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone.
+     * Gets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the devices camera and microphone.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2060,7 +2060,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._localSecurityOptionsDoNotRequireCtrlAltDel;
     }
     /**
-     * Gets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default.
+     * Gets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. Its not stored by default.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2092,7 +2092,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._localSecurityOptionsHideLastSignedInUser;
     }
     /**
-     * Gets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown.
+     * Gets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the devices desktop is shown.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2132,7 +2132,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._localSecurityOptionsLogOnMessageTitle;
     }
     /**
-     * Gets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Gets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -2140,7 +2140,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._localSecurityOptionsMachineInactivityLimit;
     }
     /**
-     * Gets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Gets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -2759,7 +2759,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         writer.writeEnumValue("xboxServicesLiveNetworkingServiceStartupMode", this.getXboxServicesLiveNetworkingServiceStartupMode());
     }
     /**
-     * Sets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone.
+     * Sets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the devices camera and microphone.
      * @param value Value to set for the applicationGuardAllowCameraMicrophoneRedirection property.
      * @return a void
      */
@@ -4103,7 +4103,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this._localSecurityOptionsDoNotRequireCtrlAltDel = value;
     }
     /**
-     * Sets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default.
+     * Sets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. Its not stored by default.
      * @param value Value to set for the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property.
      * @return a void
      */
@@ -4135,7 +4135,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this._localSecurityOptionsHideLastSignedInUser = value;
     }
     /**
-     * Sets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown.
+     * Sets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the devices desktop is shown.
      * @param value Value to set for the localSecurityOptionsHideUsernameAtSignIn property.
      * @return a void
      */
@@ -4175,7 +4175,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this._localSecurityOptionsLogOnMessageTitle = value;
     }
     /**
-     * Sets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Sets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @param value Value to set for the localSecurityOptionsMachineInactivityLimit property.
      * @return a void
      */
@@ -4183,7 +4183,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this._localSecurityOptionsMachineInactivityLimit = value;
     }
     /**
-     * Sets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Sets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @param value Value to set for the localSecurityOptionsMachineInactivityLimitInMinutes property.
      * @return a void
      */

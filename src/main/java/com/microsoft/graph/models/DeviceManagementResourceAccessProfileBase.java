@@ -13,6 +13,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Base Profile Type for Resource Access */
 public class DeviceManagementResourceAccessProfileBase extends Entity implements Parsable {
     /** The list of assignments for the device configuration profile. */
     private java.util.List<DeviceManagementResourceAccessProfileAssignment> _assignments;
@@ -29,7 +30,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     /** Version of the profile */
     private Integer _version;
     /**
-     * Instantiates a new DeviceManagementResourceAccessProfileBase and sets the default values.
+     * Instantiates a new deviceManagementResourceAccessProfileBase and sets the default values.
      * @return a void
      */
     public DeviceManagementResourceAccessProfileBase() {
@@ -39,7 +40,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementResourceAccessProfileBase
+     * @return a deviceManagementResourceAccessProfileBase
      */
     @javax.annotation.Nonnull
     public static DeviceManagementResourceAccessProfileBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

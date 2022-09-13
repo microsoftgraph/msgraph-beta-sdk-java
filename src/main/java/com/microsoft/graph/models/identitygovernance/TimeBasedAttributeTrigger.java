@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implements Parsable {
-    /** The offsetInDays property */
+    /** How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date. */
     private Integer _offsetInDays;
     /** The timeBasedAttribute property */
     private WorkflowTriggerTimeBasedAttribute _timeBasedAttribute;
@@ -43,7 +43,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
         }};
     }
     /**
-     * Gets the offsetInDays property value. The offsetInDays property
+     * Gets the offsetInDays property value. How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
         writer.writeEnumValue("timeBasedAttribute", this.getTimeBasedAttribute());
     }
     /**
-     * Sets the offsetInDays property value. The offsetInDays property
+     * Sets the offsetInDays property value. How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date.
      * @param value Value to set for the offsetInDays property.
      * @return a void
      */

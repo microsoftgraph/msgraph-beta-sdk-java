@@ -16,6 +16,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the ediscovery property of the microsoft.graph.compliance entity. */
@@ -324,7 +325,7 @@ public class EdiscoveryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ediscoveryRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -350,7 +351,7 @@ public class EdiscoveryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public EdiscoveryRequestBuilderGetQueryParameters queryParameters = new EdiscoveryRequestBuilderGetQueryParameters();
@@ -368,7 +369,7 @@ public class EdiscoveryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ediscoveryRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

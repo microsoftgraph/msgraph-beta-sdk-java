@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to device. */
 public class Device extends DirectoryObject implements Parsable {
     /** true if the account is enabled; otherwise, false. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property. */
     private Boolean _accountEnabled;
@@ -96,7 +97,7 @@ public class Device extends DirectoryObject implements Parsable {
     /** Represents the usage rights a device has been granted. */
     private java.util.List<UsageRight> _usageRights;
     /**
-     * Instantiates a new Device and sets the default values.
+     * Instantiates a new device and sets the default values.
      * @return a void
      */
     public Device() {
@@ -106,7 +107,7 @@ public class Device extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Device
+     * @return a device
      */
     @javax.annotation.Nonnull
     public static Device createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

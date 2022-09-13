@@ -22,6 +22,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the b2cUserFlows property of the microsoft.graph.identityContainer entity. */
@@ -381,7 +382,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new B2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -407,7 +408,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public B2cIdentityUserFlowItemRequestBuilderGetQueryParameters queryParameters = new B2cIdentityUserFlowItemRequestBuilderGetQueryParameters();
@@ -425,7 +426,7 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new B2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

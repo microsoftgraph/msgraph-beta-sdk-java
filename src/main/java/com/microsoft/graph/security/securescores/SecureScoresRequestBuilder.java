@@ -16,6 +16,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the secureScores property of the microsoft.graph.security entity. */
@@ -40,7 +41,7 @@ public class SecureScoresRequestBuilder {
     public SecureScoresRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/security/secureScores{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/security/secureScores{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -52,14 +53,14 @@ public class SecureScoresRequestBuilder {
      * @return a void
      */
     public SecureScoresRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/security/secureScores{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/security/secureScores{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Measurements of tenants’ security posture to help protect them from threats.
+     * Measurements of tenants security posture to help protect them from threats.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +68,7 @@ public class SecureScoresRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Measurements of tenants’ security posture to help protect them from threats.
+     * Measurements of tenants security posture to help protect them from threats.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +123,7 @@ public class SecureScoresRequestBuilder {
         return requestInfo;
     }
     /**
-     * Measurements of tenants’ security posture to help protect them from threats.
+     * Measurements of tenants security posture to help protect them from threats.
      * @return a CompletableFuture of SecureScoreCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<SecureScoreCollectionResponse> get() {
@@ -138,7 +139,7 @@ public class SecureScoresRequestBuilder {
         }
     }
     /**
-     * Measurements of tenants’ security posture to help protect them from threats.
+     * Measurements of tenants security posture to help protect them from threats.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SecureScoreCollectionResponse
      */
@@ -155,7 +156,7 @@ public class SecureScoresRequestBuilder {
         }
     }
     /**
-     * Measurements of tenants’ security posture to help protect them from threats.
+     * Measurements of tenants security posture to help protect them from threats.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of SecureScoreCollectionResponse
@@ -227,7 +228,7 @@ public class SecureScoresRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Measurements of tenants’ security posture to help protect them from threats. */
+    /** Measurements of tenants security posture to help protect them from threats. */
     public class SecureScoresRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +270,7 @@ public class SecureScoresRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SecureScoresRequestBuilderGetQueryParameters queryParameters = new SecureScoresRequestBuilderGetQueryParameters();
@@ -287,7 +288,7 @@ public class SecureScoresRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new secureScoresRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

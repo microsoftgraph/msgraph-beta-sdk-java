@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.team;
 
 import com.microsoft.graph.groups.item.team.allchannels.AllChannelsRequestBuilder;
+import com.microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.ChannelsRequestBuilder;
 import com.microsoft.graph.groups.item.team.clone.CloneRequestBuilder;
@@ -24,6 +25,7 @@ import com.microsoft.graph.groups.item.team.sendactivitynotification.SendActivit
 import com.microsoft.graph.groups.item.team.tags.item.TeamworkTagItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.tags.TagsRequestBuilder;
 import com.microsoft.graph.groups.item.team.template.TemplateRequestBuilder;
+import com.microsoft.graph.groups.item.team.templatedefinition.TemplateDefinitionRequestBuilder;
 import com.microsoft.graph.groups.item.team.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Team;
@@ -39,6 +41,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the team property of the microsoft.graph.group entity. */
@@ -136,6 +139,11 @@ public class TeamRequestBuilder {
     @javax.annotation.Nonnull
     public TemplateRequestBuilder template() {
         return new TemplateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The templateDefinition property */
+    @javax.annotation.Nonnull
+    public TemplateDefinitionRequestBuilder templateDefinition() {
+        return new TemplateDefinitionRequestBuilder(pathParameters, requestAdapter);
     }
     /** The unarchive property */
     @javax.annotation.Nonnull
@@ -533,7 +541,7 @@ public class TeamRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new teamRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -559,7 +567,7 @@ public class TeamRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TeamRequestBuilderGetQueryParameters queryParameters = new TeamRequestBuilderGetQueryParameters();
@@ -577,7 +585,7 @@ public class TeamRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new teamRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

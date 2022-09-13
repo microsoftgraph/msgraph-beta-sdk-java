@@ -5,6 +5,7 @@ import com.microsoft.graph.models.UnifiedRoleAssignmentMultiple;
 import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.appscopes.AppScopesRequestBuilder;
 import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.appscopes.item.AppScopeItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.directoryscopes.DirectoryScopesRequestBuilder;
+import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.directoryscopes.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.principals.PrincipalsRequestBuilder;
 import com.microsoft.graph.rolemanagement.cloudpc.roleassignments.item.roledefinition.RoleDefinitionRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
@@ -19,6 +20,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplicationMultiple entity. */
@@ -366,7 +368,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new UnifiedRoleAssignmentMultipleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -392,7 +394,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public UnifiedRoleAssignmentMultipleItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRoleAssignmentMultipleItemRequestBuilderGetQueryParameters();
@@ -410,7 +412,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new UnifiedRoleAssignmentMultipleItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

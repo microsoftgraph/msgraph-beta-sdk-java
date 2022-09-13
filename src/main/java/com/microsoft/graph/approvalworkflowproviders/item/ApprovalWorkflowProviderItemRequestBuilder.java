@@ -1,6 +1,7 @@
 package com.microsoft.graph.approvalworkflowproviders.item;
 
 import com.microsoft.graph.approvalworkflowproviders.item.businessflows.BusinessFlowsRequestBuilder;
+import com.microsoft.graph.approvalworkflowproviders.item.businessflows.item.BusinessFlowItemRequestBuilder;
 import com.microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder;
 import com.microsoft.graph.approvalworkflowproviders.item.policytemplates.item.GovernancePolicyTemplateItemRequestBuilder;
 import com.microsoft.graph.approvalworkflowproviders.item.policytemplates.PolicyTemplatesRequestBuilder;
@@ -18,6 +19,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of approvalWorkflowProvider entities. */
@@ -360,7 +362,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ApprovalWorkflowProviderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -386,7 +388,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ApprovalWorkflowProviderItemRequestBuilderGetQueryParameters queryParameters = new ApprovalWorkflowProviderItemRequestBuilderGetQueryParameters();
@@ -404,7 +406,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ApprovalWorkflowProviderItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

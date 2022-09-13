@@ -3,6 +3,7 @@ package com.microsoft.graph.policies.serviceprincipalcreationpolicies.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ServicePrincipalCreationPolicy;
 import com.microsoft.graph.policies.serviceprincipalcreationpolicies.item.excludes.ExcludesRequestBuilder;
+import com.microsoft.graph.policies.serviceprincipalcreationpolicies.item.excludes.item.ServicePrincipalCreationConditionSetItemRequestBuilder;
 import com.microsoft.graph.policies.serviceprincipalcreationpolicies.item.includes.IncludesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
@@ -16,6 +17,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the servicePrincipalCreationPolicies property of the microsoft.graph.policyRoot entity. */
@@ -341,7 +343,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ServicePrincipalCreationPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -367,7 +369,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ServicePrincipalCreationPolicyItemRequestBuilderGetQueryParameters queryParameters = new ServicePrincipalCreationPolicyItemRequestBuilderGetQueryParameters();
@@ -385,7 +387,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ServicePrincipalCreationPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -15,6 +15,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the templates property of the microsoft.graph.synchronization entity. */
@@ -311,7 +312,7 @@ public class SynchronizationTemplateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new SynchronizationTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -337,7 +338,7 @@ public class SynchronizationTemplateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SynchronizationTemplateItemRequestBuilderGetQueryParameters queryParameters = new SynchronizationTemplateItemRequestBuilderGetQueryParameters();
@@ -355,7 +356,7 @@ public class SynchronizationTemplateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

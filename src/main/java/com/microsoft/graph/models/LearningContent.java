@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class LearningContent extends Entity implements Parsable {
     /** Keywords, topics, and other tags associated with the learning content. Optional. */
     private java.util.List<String> _additionalTags;

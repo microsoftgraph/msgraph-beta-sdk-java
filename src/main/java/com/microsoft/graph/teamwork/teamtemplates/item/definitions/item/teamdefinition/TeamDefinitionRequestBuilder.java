@@ -3,6 +3,7 @@ package com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdef
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Team;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.allchannels.AllChannelsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.allchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.ChannelsRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.clone.CloneRequestBuilder;
@@ -26,6 +27,7 @@ import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefi
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.item.TeamworkTagItemRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.TagsRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.template.TemplateRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.templatedefinition.TemplateDefinitionRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
@@ -39,6 +41,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the teamDefinition property of the microsoft.graph.teamTemplateDefinition entity. */
@@ -136,6 +139,11 @@ public class TeamDefinitionRequestBuilder {
     @javax.annotation.Nonnull
     public TemplateRequestBuilder template() {
         return new TemplateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The templateDefinition property */
+    @javax.annotation.Nonnull
+    public TemplateDefinitionRequestBuilder templateDefinition() {
+        return new TemplateDefinitionRequestBuilder(pathParameters, requestAdapter);
     }
     /** The unarchive property */
     @javax.annotation.Nonnull
@@ -533,7 +541,7 @@ public class TeamDefinitionRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new teamDefinitionRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -559,7 +567,7 @@ public class TeamDefinitionRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TeamDefinitionRequestBuilderGetQueryParameters queryParameters = new TeamDefinitionRequestBuilderGetQueryParameters();
@@ -577,7 +585,7 @@ public class TeamDefinitionRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new teamDefinitionRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
