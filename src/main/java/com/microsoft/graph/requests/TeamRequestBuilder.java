@@ -289,6 +289,16 @@ public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
     }
 
     /**
+     * Gets the request builder for TeamTemplateDefinition
+     *
+     * @return the TeamTemplateDefinitionWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TeamTemplateDefinitionWithReferenceRequestBuilder templateDefinition() {
+        return new com.microsoft.graph.requests.TeamTemplateDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("templateDefinition"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for Schedule
      *
      * @return the ScheduleRequestBuilder instance

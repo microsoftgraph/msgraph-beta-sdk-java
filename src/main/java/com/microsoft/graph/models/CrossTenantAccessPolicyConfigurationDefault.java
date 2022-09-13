@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.CrossTenantAccessPolicyB2BSetting;
 import com.microsoft.graph.models.CrossTenantAccessPolicyInboundTrust;
+import com.microsoft.graph.models.CrossTenantAccessPolicyTenantRestrictions;
 import com.microsoft.graph.models.Entity;
 
 
@@ -80,6 +81,15 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     @Expose
 	@Nullable
     public Boolean isServiceDefault;
+
+    /**
+     * The Tenant Restrictions.
+     * 
+     */
+    @SerializedName(value = "tenantRestrictions", alternate = {"TenantRestrictions"})
+    @Expose
+	@Nullable
+    public CrossTenantAccessPolicyTenantRestrictions tenantRestrictions;
 
 
     /**

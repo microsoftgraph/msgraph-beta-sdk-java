@@ -135,7 +135,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Authorization Info.
-     * 
+     * Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
      */
     @SerializedName(value = "authorizationInfo", alternate = {"AuthorizationInfo"})
     @Expose
@@ -261,7 +261,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Employee Leave Date Time.
-     * 
+     * The date and time when the user left or will leave the organization. Read: Requires User-LifeCycleInfo.Read.All. For delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Admin.  Write: Requires User-LifeCycleInfo.ReadWrite.All. For delegated scenarios, the admin needs the Global Administrator Azure AD role. Supports $filter (eq, ne, not , ge, le, in).
      */
     @SerializedName(value = "employeeLeaveDateTime", alternate = {"EmployeeLeaveDateTime"})
     @Expose

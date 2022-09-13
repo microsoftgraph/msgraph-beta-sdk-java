@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ConditionalAccessGrantControl;
+import com.microsoft.graph.models.AuthenticationStrengthPolicy;
 
 
 import com.google.gson.JsonObject;
@@ -74,6 +75,15 @@ public class ConditionalAccessGrantControls implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<String> termsOfUse;
+
+    /**
+     * The Authentication Strength.
+     * 
+     */
+    @SerializedName(value = "authenticationStrength", alternate = {"AuthenticationStrength"})
+    @Expose
+	@Nullable
+    public AuthenticationStrengthPolicy authenticationStrength;
 
 
     /**

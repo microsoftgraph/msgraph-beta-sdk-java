@@ -41,7 +41,7 @@ public class Parameter implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of the parameter.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -50,7 +50,7 @@ public class Parameter implements IJsonBackedObject {
 
     /**
      * The Values.
-     * 
+     * The values of the parameter.
      */
     @SerializedName(value = "values", alternate = {"Values"})
     @Expose
@@ -59,7 +59,7 @@ public class Parameter implements IJsonBackedObject {
 
     /**
      * The Value Type.
-     * 
+     * The value type of the parameter. The possible values are: enum, string, int, bool, unknownFutureValue.
      */
     @SerializedName(value = "valueType", alternate = {"ValueType"})
     @Expose

@@ -20,6 +20,7 @@ import com.microsoft.graph.models.AccessReviewPolicy;
 import com.microsoft.graph.models.AdminConsentRequestPolicy;
 import com.microsoft.graph.models.DirectoryRoleAccessReviewPolicy;
 import com.microsoft.graph.models.IdentitySecurityDefaultsEnforcementPolicy;
+import com.microsoft.graph.requests.AuthenticationStrengthPolicyCollectionPage;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionPage;
 import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.AuthorizationPolicyCollectionPage;
@@ -70,6 +71,15 @@ public class PolicyRoot implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AuthenticationMethodsPolicy authenticationMethodsPolicy;
+
+    /**
+     * The Authentication Strength Policies.
+     * 
+     */
+    @SerializedName(value = "authenticationStrengthPolicies", alternate = {"AuthenticationStrengthPolicies"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AuthenticationStrengthPolicyCollectionPage authenticationStrengthPolicies;
 
     /**
      * The Authentication Flows Policy.
@@ -305,6 +315,10 @@ public class PolicyRoot implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("authenticationStrengthPolicies")) {
+            authenticationStrengthPolicies = serializer.deserializeObject(json.get("authenticationStrengthPolicies"), com.microsoft.graph.requests.AuthenticationStrengthPolicyCollectionPage.class);
+        }
 
         if (json.has("activityBasedTimeoutPolicies")) {
             activityBasedTimeoutPolicies = serializer.deserializeObject(json.get("activityBasedTimeoutPolicies"), com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionPage.class);

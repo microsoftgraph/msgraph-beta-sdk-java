@@ -40,7 +40,7 @@ public class CustomExtensionCalloutResponse implements IJsonBackedObject {
 
     /**
      * The Data.
-     * 
+     * Contains the data the external system provides to the custom extension endpoint.
      */
     @SerializedName(value = "data", alternate = {"Data"})
     @Expose
@@ -49,7 +49,7 @@ public class CustomExtensionCalloutResponse implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * Identifies the external system or event context related to the response.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -58,7 +58,7 @@ public class CustomExtensionCalloutResponse implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Describes the type of event related to the response.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

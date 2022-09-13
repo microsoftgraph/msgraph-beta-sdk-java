@@ -15,7 +15,9 @@ import com.microsoft.graph.http.BaseCollectionPage;
 
 /**
  * The class for the Base Task List Collection Page.
+ * @deprecated The Tasks V2 API is deprecated and will stop returning data on September 30, 2022. Please use the To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/
  */
+@Deprecated
 public class BaseTaskListCollectionPage extends BaseCollectionPage<BaseTaskList, BaseTaskListCollectionRequestBuilder> {
 
     /**

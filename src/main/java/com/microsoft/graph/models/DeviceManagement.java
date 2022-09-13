@@ -19,6 +19,7 @@ import com.microsoft.graph.models.DeviceManagementSubscriptions;
 import com.microsoft.graph.models.DeviceManagementSubscriptionState;
 import com.microsoft.graph.models.UserExperienceAnalyticsSettings;
 import com.microsoft.graph.models.WindowsMalwareOverview;
+import com.microsoft.graph.devicemanagement.models.Monitoring;
 import com.microsoft.graph.models.VirtualEndpoint;
 import com.microsoft.graph.models.AndroidForWorkSettings;
 import com.microsoft.graph.models.AndroidManagedStoreAccountEnterpriseSettings;
@@ -333,6 +334,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public WindowsMalwareOverview windowsMalwareOverview;
+
+    /**
+     * The Monitoring.
+     * 
+     */
+    @SerializedName(value = "monitoring", alternate = {"Monitoring"})
+    @Expose
+	@Nullable
+    public Monitoring monitoring;
 
     /**
      * The Virtual Endpoint.

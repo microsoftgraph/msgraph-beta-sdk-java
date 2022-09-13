@@ -47,7 +47,7 @@ public class CloudPcSupportedRegion extends Entity implements IJsonBackedObject 
 
     /**
      * The Supported Solution.
-     * 
+     * The supported service or solution for the region. The possible values are: windows365, devBox, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "supportedSolution", alternate = {"SupportedSolution"})
     @Expose

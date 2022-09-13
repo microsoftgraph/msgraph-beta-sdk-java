@@ -1755,6 +1755,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
+     * Gets the collection of TeamTemplateDefinition objects
+     *
+     * @return the request builder for the collection of TeamTemplateDefinition objects
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TeamTemplateDefinitionCollectionRequestBuilder teamTemplateDefinition() {
+        return new com.microsoft.graph.requests.TeamTemplateDefinitionCollectionRequestBuilder(getServiceRoot() + "/teamTemplateDefinition", this, null);
+    }
+
+    /**
+     * Gets a single TeamTemplateDefinition
+     *
+     * @param id the id of the TeamTemplateDefinition to retrieve
+     * @return the request builder for the TeamTemplateDefinition object
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TeamTemplateDefinitionRequestBuilder teamTemplateDefinition(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamTemplateDefinitionRequestBuilder(getServiceRoot() + "/teamTemplateDefinition/" + id, this, null);
+    }
+
+    /**
      * Gets the GraphServiceRequestBuilder
      *
      * @return the IdentityGovernance
@@ -1897,11 +1918,11 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the DeviceRegistrationPolicy
+     * @return the Monitoring
      */
     @Nonnull
-    public com.microsoft.graph.requests.DeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
-        return new com.microsoft.graph.requests.DeviceRegistrationPolicyRequestBuilder(getServiceRoot() + "/deviceRegistrationPolicy", this, null);
+    public com.microsoft.graph.devicemanagement.requests.MonitoringRequestBuilder monitoring() {
+        return new com.microsoft.graph.devicemanagement.requests.MonitoringRequestBuilder(getServiceRoot() + "/monitoring", this, null);
     }
 
     /**

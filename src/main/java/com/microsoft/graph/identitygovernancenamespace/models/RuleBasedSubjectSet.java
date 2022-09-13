@@ -27,7 +27,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements IJsonBackedObject
 
     /**
      * The Rule.
-     * 
+     * The rule for the subject set.
      */
     @SerializedName(value = "rule", alternate = {"Rule"})
     @Expose

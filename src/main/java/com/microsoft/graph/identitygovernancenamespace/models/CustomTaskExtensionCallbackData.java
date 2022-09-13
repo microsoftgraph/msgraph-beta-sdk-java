@@ -28,7 +28,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
 
     /**
      * The Operation Status.
-     * 
+     * Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
      */
     @SerializedName(value = "operationStatus", alternate = {"OperationStatus"})
     @Expose

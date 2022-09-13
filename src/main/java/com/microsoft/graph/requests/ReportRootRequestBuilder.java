@@ -9,9 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ReportRoot;
 import com.microsoft.graph.models.ApplicationSignInSummary;
-import com.microsoft.graph.models.AzureADFeatureUsage;
-import com.microsoft.graph.models.AzureADLicenseUsage;
-import com.microsoft.graph.models.AzureADUserFeatureUsage;
 import com.microsoft.graph.models.CredentialUsageSummary;
 import com.microsoft.graph.models.CredentialUserRegistrationCount;
 import com.microsoft.graph.models.RelyingPartyDetailedSummary;
@@ -40,8 +37,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.ReportRootGetAzureADApplicationSignInSummaryParameterSet;
-import com.microsoft.graph.models.ReportRootGetAzureADFeatureUsageParameterSet;
-import com.microsoft.graph.models.ReportRootGetAzureADLicenseUsageParameterSet;
 import com.microsoft.graph.models.ReportRootGetCredentialUsageSummaryParameterSet;
 import com.microsoft.graph.models.ReportRootGetRelyingPartyDetailedSummaryParameterSet;
 import com.microsoft.graph.models.ReportRootManagedDeviceEnrollmentAbandonmentDetailsParameterSet;
@@ -423,35 +418,6 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     @Nonnull
     public ReportRootGetAzureADApplicationSignInSummaryCollectionRequestBuilder getAzureADApplicationSignInSummary(@Nonnull final ReportRootGetAzureADApplicationSignInSummaryParameterSet parameters) {
         return new ReportRootGetAzureADApplicationSignInSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAzureADApplicationSignInSummary"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public ReportRootGetAzureADFeatureUsageCollectionRequestBuilder getAzureADFeatureUsage(@Nonnull final ReportRootGetAzureADFeatureUsageParameterSet parameters) {
-        return new ReportRootGetAzureADFeatureUsageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAzureADFeatureUsage"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public ReportRootGetAzureADLicenseUsageCollectionRequestBuilder getAzureADLicenseUsage(@Nonnull final ReportRootGetAzureADLicenseUsageParameterSet parameters) {
-        return new ReportRootGetAzureADLicenseUsageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAzureADLicenseUsage"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     */
-    @Nonnull
-    public ReportRootGetAzureADUserFeatureUsageCollectionRequestBuilder getAzureADUserFeatureUsage() {
-        return new ReportRootGetAzureADUserFeatureUsageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAzureADUserFeatureUsage"), getClient(), null);
     }
 
     /**

@@ -25,7 +25,9 @@ import com.microsoft.graph.requests.BaseTaskCollectionRequest;
 
 /**
  * The class for the Base Task Collection Request.
+ * @deprecated The Tasks V2 API is deprecated and will stop returning data on September 30, 2022. Please use the To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/
  */
+@Deprecated
 public class BaseTaskCollectionRequest extends BaseEntityCollectionRequest<BaseTask, BaseTaskCollectionResponse, BaseTaskCollectionPage> {
 
     /**

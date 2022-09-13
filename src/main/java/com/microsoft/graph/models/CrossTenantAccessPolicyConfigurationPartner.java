@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.CrossTenantAccessPolicyB2BSetting;
 import com.microsoft.graph.models.CrossTenantAccessPolicyInboundTrust;
+import com.microsoft.graph.models.CrossTenantAccessPolicyTenantRestrictions;
 
 
 import com.google.gson.JsonObject;
@@ -101,6 +102,15 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
     @Expose
 	@Nullable
     public String tenantId;
+
+    /**
+     * The Tenant Restrictions.
+     * 
+     */
+    @SerializedName(value = "tenantRestrictions", alternate = {"TenantRestrictions"})
+    @Expose
+	@Nullable
+    public CrossTenantAccessPolicyTenantRestrictions tenantRestrictions;
 
 
     /**

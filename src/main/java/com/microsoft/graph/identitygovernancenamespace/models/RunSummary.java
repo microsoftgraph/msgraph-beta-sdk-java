@@ -39,7 +39,7 @@ public class RunSummary implements IJsonBackedObject {
 
     /**
      * The Failed Runs.
-     * 
+     * The number of failed workflow runs.
      */
     @SerializedName(value = "failedRuns", alternate = {"FailedRuns"})
     @Expose
@@ -48,7 +48,7 @@ public class RunSummary implements IJsonBackedObject {
 
     /**
      * The Failed Tasks.
-     * 
+     * The number of failed tasks of a workflow.
      */
     @SerializedName(value = "failedTasks", alternate = {"FailedTasks"})
     @Expose
@@ -57,7 +57,7 @@ public class RunSummary implements IJsonBackedObject {
 
     /**
      * The Successful Runs.
-     * 
+     * The number of successful workflow runs.
      */
     @SerializedName(value = "successfulRuns", alternate = {"SuccessfulRuns"})
     @Expose
@@ -66,7 +66,7 @@ public class RunSummary implements IJsonBackedObject {
 
     /**
      * The Total Runs.
-     * 
+     * The total number of runs for a workflow.
      */
     @SerializedName(value = "totalRuns", alternate = {"TotalRuns"})
     @Expose

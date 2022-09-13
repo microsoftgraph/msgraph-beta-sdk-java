@@ -29,7 +29,7 @@ public class DeletedItemContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The Workflows.
-     * 
+     * Deleted workflows that end up in the deletedItemsContainer.
      */
     @SerializedName(value = "workflows", alternate = {"Workflows"})
     @Expose

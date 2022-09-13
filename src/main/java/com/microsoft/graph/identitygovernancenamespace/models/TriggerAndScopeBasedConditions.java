@@ -29,7 +29,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
 
     /**
      * The Scope.
-     * 
+     * Defines who the workflow runs for.
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
@@ -38,7 +38,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
 
     /**
      * The Trigger.
-     * 
+     * What triggers a workflow to run.
      */
     @SerializedName(value = "trigger", alternate = {"Trigger"})
     @Expose
