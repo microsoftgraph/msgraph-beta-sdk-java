@@ -40,7 +40,7 @@ public class AuthorizationInfo implements IJsonBackedObject {
 
     /**
      * The Certificate User Ids.
-     * 
+     * The collection of unique identifiers that can be associated with a user and can be used to bind the Azure AD user to a certificate for authentication and authorization into non-Azure AD environments. The identifiers must be unique in the tenant.
      */
     @SerializedName(value = "certificateUserIds", alternate = {"CertificateUserIds"})
     @Expose

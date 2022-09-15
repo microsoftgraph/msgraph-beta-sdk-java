@@ -39,7 +39,7 @@ public class UserSummary implements IJsonBackedObject {
 
     /**
      * The Failed Tasks.
-     * 
+     * The number of failed tasks for users in a user summary.
      */
     @SerializedName(value = "failedTasks", alternate = {"FailedTasks"})
     @Expose
@@ -48,7 +48,7 @@ public class UserSummary implements IJsonBackedObject {
 
     /**
      * The Failed Users.
-     * 
+     * The number of failed users in a user summary.
      */
     @SerializedName(value = "failedUsers", alternate = {"FailedUsers"})
     @Expose
@@ -57,7 +57,7 @@ public class UserSummary implements IJsonBackedObject {
 
     /**
      * The Successful Users.
-     * 
+     * The number of successful users in a user summary.
      */
     @SerializedName(value = "successfulUsers", alternate = {"SuccessfulUsers"})
     @Expose
@@ -66,7 +66,7 @@ public class UserSummary implements IJsonBackedObject {
 
     /**
      * The Total Tasks.
-     * 
+     * The total tasks of users in a user summary.
      */
     @SerializedName(value = "totalTasks", alternate = {"TotalTasks"})
     @Expose
@@ -75,7 +75,7 @@ public class UserSummary implements IJsonBackedObject {
 
     /**
      * The Total Users.
-     * 
+     * The total number of users in a user summary
      */
     @SerializedName(value = "totalUsers", alternate = {"TotalUsers"})
     @Expose

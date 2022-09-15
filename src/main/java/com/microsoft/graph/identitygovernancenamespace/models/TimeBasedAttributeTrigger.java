@@ -28,7 +28,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
 
     /**
      * The Offset In Days.
-     * 
+     * How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date.
      */
     @SerializedName(value = "offsetInDays", alternate = {"OffsetInDays"})
     @Expose
@@ -37,7 +37,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
 
     /**
      * The Time Based Attribute.
-     * 
+     * Determines which time-based identity property to reference. The possible values are: employeeHireDate, employeeLeaveDateTime, unknownFutureValue.
      */
     @SerializedName(value = "timeBasedAttribute", alternate = {"TimeBasedAttribute"})
     @Expose

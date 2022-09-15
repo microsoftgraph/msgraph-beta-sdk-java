@@ -11,6 +11,7 @@ import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.ItemReference;
 import com.microsoft.graph.models.DriveItemUploadableProperties;
 import com.microsoft.graph.models.UploadSession;
+import com.microsoft.graph.models.SensitivityLabelAssignmentMethod;
 import com.microsoft.graph.models.DriveRecipient;
 import com.microsoft.graph.models.Permission;
 import com.microsoft.graph.models.ExtractSensitivityLabelsResult;
@@ -25,6 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.DriveItemRestoreParameterSet;
 import com.microsoft.graph.models.DriveItemCopyParameterSet;
 import com.microsoft.graph.models.DriveItemCreateUploadSessionParameterSet;
+import com.microsoft.graph.models.DriveItemAssignSensitivityLabelParameterSet;
 import com.microsoft.graph.models.DriveItemCheckinParameterSet;
 import com.microsoft.graph.models.DriveItemCreateLinkParameterSet;
 import com.microsoft.graph.models.DriveItemInviteParameterSet;
@@ -300,6 +302,16 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
     @Nonnull
     public DriveItemCreateUploadSessionRequestBuilder createUploadSession(@Nonnull final DriveItemCreateUploadSessionParameterSet parameters) {
         return new DriveItemCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DriveItemAssignSensitivityLabelRequestBuilder assignSensitivityLabel(@Nonnull final DriveItemAssignSensitivityLabelParameterSet parameters) {
+        return new DriveItemAssignSensitivityLabelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignSensitivityLabel"), getClient(), null, parameters);
     }
 
     /**

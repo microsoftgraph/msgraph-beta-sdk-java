@@ -39,7 +39,7 @@ public class TaskReportSummary implements IJsonBackedObject {
 
     /**
      * The Failed Tasks.
-     * 
+     * The number of failed tasks in a report.
      */
     @SerializedName(value = "failedTasks", alternate = {"FailedTasks"})
     @Expose
@@ -48,7 +48,7 @@ public class TaskReportSummary implements IJsonBackedObject {
 
     /**
      * The Successful Tasks.
-     * 
+     * The total number of successful tasks in a report.
      */
     @SerializedName(value = "successfulTasks", alternate = {"SuccessfulTasks"})
     @Expose
@@ -57,7 +57,7 @@ public class TaskReportSummary implements IJsonBackedObject {
 
     /**
      * The Total Tasks.
-     * 
+     * The total number of tasks in a report.
      */
     @SerializedName(value = "totalTasks", alternate = {"TotalTasks"})
     @Expose
@@ -66,7 +66,7 @@ public class TaskReportSummary implements IJsonBackedObject {
 
     /**
      * The Unprocessed Tasks.
-     * 
+     * The number of unprocessed tasks in a report.
      */
     @SerializedName(value = "unprocessedTasks", alternate = {"UnprocessedTasks"})
     @Expose

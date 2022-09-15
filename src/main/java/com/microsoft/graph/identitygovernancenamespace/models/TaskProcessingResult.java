@@ -30,7 +30,7 @@ public class TaskProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * 
+     * The date time when taskProcessingResult execution ended. Value is null if task execution is still in progress.
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -39,7 +39,7 @@ public class TaskProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date time when the taskProcessingResult was created. Supports $filter(lt, gt) and orderBy.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class TaskProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Failure Reason.
-     * 
+     * Describes why the taskProcessingResult has failed.
      */
     @SerializedName(value = "failureReason", alternate = {"FailureReason"})
     @Expose
@@ -57,7 +57,7 @@ public class TaskProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Processing Status.
-     * 
+     * Describes the execution status of the taskProcessingResult. The possible values are: queued, inProgress, completed, completedWithErrors, canceled, failed, unknownFutureValue. Supports $filter(eq).
      */
     @SerializedName(value = "processingStatus", alternate = {"ProcessingStatus"})
     @Expose
@@ -66,7 +66,7 @@ public class TaskProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Started Date Time.
-     * 
+     * The date time when taskProcessingResult execution started. Value is null if task execution has not yet started. Supports $filter(lt, gt) and orderBy.
      */
     @SerializedName(value = "startedDateTime", alternate = {"StartedDateTime"})
     @Expose
@@ -75,7 +75,7 @@ public class TaskProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * The unique identifier of the Azure AD user targeted for the task execution.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
@@ -84,7 +84,7 @@ public class TaskProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Task.
-     * 
+     * The related workflow task
      */
     @SerializedName(value = "task", alternate = {"Task"})
     @Expose

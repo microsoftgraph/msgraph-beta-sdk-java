@@ -44,7 +44,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Category.
-     * 
+     * The category of the workflow. The possible values are: joiner, leaver, unknownFutureValue.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -53,7 +53,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * When a workflow was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -62,7 +62,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * A string that describes the purpose of the workflow.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -71,7 +71,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * A string to identify the workflow.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -80,7 +80,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Execution Conditions.
-     * 
+     * Defines when and for who the workflow will run.
      */
     @SerializedName(value = "executionConditions", alternate = {"ExecutionConditions"})
     @Expose
@@ -89,7 +89,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * When the workflow was last modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -98,7 +98,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * The user who created the workflow.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -107,7 +107,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * The user who last modified the workflow.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -116,7 +116,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * 
+     * The tasks in the workflow.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

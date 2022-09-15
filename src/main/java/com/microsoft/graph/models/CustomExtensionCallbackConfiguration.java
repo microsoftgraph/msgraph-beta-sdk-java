@@ -39,7 +39,7 @@ public class CustomExtensionCallbackConfiguration implements IJsonBackedObject {
 
     /**
      * The Timeout Duration.
-     * 
+     * Callback time out in ISO 8601 time duration. Accepted time durations are between five minutes to three hours. For example, PT5M for five minutes and PT3H for three hours.
      */
     @SerializedName(value = "timeoutDuration", alternate = {"TimeoutDuration"})
     @Expose

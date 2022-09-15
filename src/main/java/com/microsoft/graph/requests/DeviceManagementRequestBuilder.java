@@ -76,6 +76,16 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
 
 
     /**
+     * Gets the request builder for Monitoring
+     *
+     * @return the MonitoringRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.devicemanagement.requests.MonitoringRequestBuilder monitoring() {
+        return new com.microsoft.graph.devicemanagement.requests.MonitoringRequestBuilder(getRequestUrlWithAdditionalSegment("monitoring"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for VirtualEndpoint
      *
      * @return the VirtualEndpointRequestBuilder instance

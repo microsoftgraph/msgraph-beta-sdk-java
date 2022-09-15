@@ -120,11 +120,11 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<Externa
     /**
      * Gets the request builder for ConnectionQuota
      *
-     * @return the ConnectionQuotaWithReferenceRequestBuilder instance
+     * @return the ConnectionQuotaRequestBuilder instance
      */
     @Nonnull
-    public com.microsoft.graph.externalconnectors.requests.ConnectionQuotaWithReferenceRequestBuilder quota() {
-        return new com.microsoft.graph.externalconnectors.requests.ConnectionQuotaWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("quota"), getClient(), null);
+    public com.microsoft.graph.externalconnectors.requests.ConnectionQuotaRequestBuilder quota() {
+        return new com.microsoft.graph.externalconnectors.requests.ConnectionQuotaRequestBuilder(getRequestUrlWithAdditionalSegment("quota"), getClient(), null);
     }
 
     /**

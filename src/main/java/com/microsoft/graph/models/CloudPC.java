@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.CloudPcConnectivityResult;
+import com.microsoft.graph.models.CloudPcDiskEncryptionState;
 import com.microsoft.graph.models.CloudPcLoginResult;
 import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
@@ -50,6 +51,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public CloudPcConnectivityResult connectivityResult;
+
+    /**
+     * The Disk Encryption State.
+     * 
+     */
+    @SerializedName(value = "diskEncryptionState", alternate = {"DiskEncryptionState"})
+    @Expose
+	@Nullable
+    public CloudPcDiskEncryptionState diskEncryptionState;
 
     /**
      * The Display Name.

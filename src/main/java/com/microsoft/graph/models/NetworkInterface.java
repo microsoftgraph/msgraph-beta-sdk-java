@@ -39,7 +39,7 @@ public class NetworkInterface implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection &amp;lt;#&amp;gt;, etc.).
+     * Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose

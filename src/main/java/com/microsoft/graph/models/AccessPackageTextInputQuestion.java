@@ -36,7 +36,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
 
     /**
      * The Regex Pattern.
-     * 
+     * This is the regex pattern that the corresponding text answer must follow.
      */
     @SerializedName(value = "regexPattern", alternate = {"RegexPattern"})
     @Expose

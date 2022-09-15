@@ -383,7 +383,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Federated Identity Credentials.
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      */
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose
@@ -399,7 +399,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owners.
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections).
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;

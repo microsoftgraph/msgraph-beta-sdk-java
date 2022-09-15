@@ -32,7 +32,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * 
+     * The date time that the run completed. Value is null if the workflow hasn't completed. Optional.
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Failed Tasks Count.
-     * 
+     * The number of tasks that failed in the run execution. Required.
      */
     @SerializedName(value = "failedTasksCount", alternate = {"FailedTasksCount"})
     @Expose
@@ -50,7 +50,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Failed Users Count.
-     * 
+     * The number of users that failed in the run execution. Required.
      */
     @SerializedName(value = "failedUsersCount", alternate = {"FailedUsersCount"})
     @Expose
@@ -59,7 +59,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Updated Date Time.
-     * 
+     * The datetime that the run was last updated. Optional.
      */
     @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
@@ -68,7 +68,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Processing Status.
-     * 
+     * The run execution status. The possible values are: queued, inProgress, completed, completedWithErrors, canceled, failed, unknownFutureValue. Required.
      */
     @SerializedName(value = "processingStatus", alternate = {"ProcessingStatus"})
     @Expose
@@ -77,7 +77,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Scheduled Date Time.
-     * 
+     * The date time that the run is scheduled to be executed for a workflow. Required.
      */
     @SerializedName(value = "scheduledDateTime", alternate = {"ScheduledDateTime"})
     @Expose
@@ -86,7 +86,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Started Date Time.
-     * 
+     * The date time that the run execution started. Optional.
      */
     @SerializedName(value = "startedDateTime", alternate = {"StartedDateTime"})
     @Expose
@@ -95,7 +95,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Successful Users Count.
-     * 
+     * The number of successfully completed users in the run. Required.
      */
     @SerializedName(value = "successfulUsersCount", alternate = {"SuccessfulUsersCount"})
     @Expose
@@ -113,7 +113,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Total Unprocessed Tasks Count.
-     * 
+     * The total number of unprocessed tasks in the run execution. Required.
      */
     @SerializedName(value = "totalUnprocessedTasksCount", alternate = {"TotalUnprocessedTasksCount"})
     @Expose
@@ -122,7 +122,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Total Users Count.
-     * 
+     * The total number of users in the workflow execution. Required.
      */
     @SerializedName(value = "totalUsersCount", alternate = {"TotalUsersCount"})
     @Expose
@@ -131,7 +131,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Workflow Execution Type.
-     * 
+     * The execution type of the workflows associated with the run. The possible values are: scheduled, onDemand, unknownFutureValue. Required.
      */
     @SerializedName(value = "workflowExecutionType", alternate = {"WorkflowExecutionType"})
     @Expose
@@ -140,7 +140,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The Task Processing Results.
-     * 
+     * The related taskProcessingResults.
      */
     @SerializedName(value = "taskProcessingResults", alternate = {"TaskProcessingResults"})
     @Expose
@@ -149,7 +149,7 @@ public class Run extends Entity implements IJsonBackedObject {
 
     /**
      * The User Processing Results.
-     * 
+     * The associated individual user execution.
      */
     @SerializedName(value = "userProcessingResults", alternate = {"UserProcessingResults"})
     @Expose

@@ -32,7 +32,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * 
+     * The date time that the workflow execution for a user completed. Value is null if the workflow hasn't completed. Supports $filter(lt, gt) and $orderby.
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Failed Tasks Count.
-     * 
+     * The number of tasks that failed in the workflow execution.
      */
     @SerializedName(value = "failedTasksCount", alternate = {"FailedTasksCount"})
     @Expose
@@ -50,7 +50,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Processing Status.
-     * 
+     * The workflow execution status. The possible values are: queued, inProgress, completed, completedWithErrors, canceled, failed, unknownFutureValue.
      */
     @SerializedName(value = "processingStatus", alternate = {"ProcessingStatus"})
     @Expose
@@ -59,7 +59,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Scheduled Date Time.
-     * 
+     * The date time that the workflow is scheduled to be executed for a user.
      */
     @SerializedName(value = "scheduledDateTime", alternate = {"ScheduledDateTime"})
     @Expose
@@ -68,7 +68,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Started Date Time.
-     * 
+     * The date time that the workflow execution started. Value is null if the workflow execution has not started. Supports $filter(lt, gt) and $orderby.
      */
     @SerializedName(value = "startedDateTime", alternate = {"StartedDateTime"})
     @Expose
@@ -77,7 +77,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Total Tasks Count.
-     * 
+     * The total number of tasks that in the workflow execution.
      */
     @SerializedName(value = "totalTasksCount", alternate = {"TotalTasksCount"})
     @Expose
@@ -86,7 +86,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Total Unprocessed Tasks Count.
-     * 
+     * The total number of unprocessed tasks for the workflow.
      */
     @SerializedName(value = "totalUnprocessedTasksCount", alternate = {"TotalUnprocessedTasksCount"})
     @Expose
@@ -95,7 +95,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Workflow Execution Type.
-     * 
+     * Describes the execution type of the workflow. The possible values are: scheduled, onDemand, unknownFutureValue. Supports $filter(eq, ne).
      */
     @SerializedName(value = "workflowExecutionType", alternate = {"WorkflowExecutionType"})
     @Expose
@@ -104,7 +104,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Workflow Version.
-     * 
+     * The version of the workflow that was executed.
      */
     @SerializedName(value = "workflowVersion", alternate = {"WorkflowVersion"})
     @Expose
@@ -113,7 +113,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * The unique identifier of the AAD user targeted for the taskProcessingResult.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
@@ -122,7 +122,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Task Processing Results.
-     * 
+     * The associated individual task execution.
      */
     @SerializedName(value = "taskProcessingResults", alternate = {"TaskProcessingResults"})
     @Expose

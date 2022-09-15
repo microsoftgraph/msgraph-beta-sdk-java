@@ -32,7 +32,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * 
+     * The date time that the associated run completed. Value is null if the run has not completed.
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Failed Users Count.
-     * 
+     * The number of users in the run execution for which the associated task failed.
      */
     @SerializedName(value = "failedUsersCount", alternate = {"FailedUsersCount"})
     @Expose
@@ -50,7 +50,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Updated Date Time.
-     * 
+     * The date and time that the task report was last updated.
      */
     @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
@@ -59,7 +59,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Processing Status.
-     * 
+     * The processing status of the associated task based on the taskProcessingResults. The possible values are based on the number of queued, inProgress, completed, completedWithErrors, canceled, failed, and unknownFutureValue.
      */
     @SerializedName(value = "processingStatus", alternate = {"ProcessingStatus"})
     @Expose
@@ -68,7 +68,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Run Id.
-     * 
+     * The unique identifier of the associated run.
      */
     @SerializedName(value = "runId", alternate = {"RunId"})
     @Expose
@@ -77,7 +77,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Started Date Time.
-     * 
+     * The date time that the associated run started. Value is null if the run has not started.
      */
     @SerializedName(value = "startedDateTime", alternate = {"StartedDateTime"})
     @Expose
@@ -86,7 +86,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Successful Users Count.
-     * 
+     * The number of users in the run execution for which the associated task succeeded.
      */
     @SerializedName(value = "successfulUsersCount", alternate = {"SuccessfulUsersCount"})
     @Expose
@@ -95,7 +95,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Total Users Count.
-     * 
+     * The total number of users in the run execution for which the associated task was scheduled to execute.
      */
     @SerializedName(value = "totalUsersCount", alternate = {"TotalUsersCount"})
     @Expose
@@ -104,7 +104,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Unprocessed Users Count.
-     * 
+     * The number of users in the run execution for which the associated task is queued, in progress, or canceled.
      */
     @SerializedName(value = "unprocessedUsersCount", alternate = {"UnprocessedUsersCount"})
     @Expose
@@ -113,7 +113,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Task.
-     * 
+     * The related lifecycle workflow task.
      */
     @SerializedName(value = "task", alternate = {"Task"})
     @Expose
@@ -122,7 +122,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Task Definition.
-     * 
+     * The taskDefinition associated with the related lifecycle workflow task.
      */
     @SerializedName(value = "taskDefinition", alternate = {"TaskDefinition"})
     @Expose
@@ -131,7 +131,7 @@ public class TaskReport extends Entity implements IJsonBackedObject {
 
     /**
      * The Task Processing Results.
-     * 
+     * The related lifecycle workflow taskProcessingResults.
      */
     @SerializedName(value = "taskProcessingResults", alternate = {"TaskProcessingResults"})
     @Expose

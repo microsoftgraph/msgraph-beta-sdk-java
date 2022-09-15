@@ -33,7 +33,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Deleted Date Time.
-     * 
+     * The time and date a workflow is deleted. Supports $filter(lt,gt) and $orderby.
      */
     @SerializedName(value = "deletedDateTime", alternate = {"DeletedDateTime"})
     @Expose
@@ -42,7 +42,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Identifier used for individually addressing a specific workflow. Supports $filter(eq).
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -51,7 +51,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * 
+     * If true, the workflow engine creates and processes taskProcessingResults on the users scoped to the workflow. Supports $filter(eq,ne) and orderby.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -60,7 +60,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Is Scheduling Enabled.
-     * 
+     * If true, the workflow engine executes the workflow on the schedule defined by tenant settings.
      */
     @SerializedName(value = "isSchedulingEnabled", alternate = {"IsSchedulingEnabled"})
     @Expose
@@ -69,7 +69,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Next Schedule Run Date Time.
-     * 
+     * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
      */
     @SerializedName(value = "nextScheduleRunDateTime", alternate = {"NextScheduleRunDateTime"})
     @Expose
@@ -78,7 +78,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Version.
-     * 
+     * The current version number of the workflow. Value is 1 when the workflow is first created. Supports $filter(eq).
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -87,7 +87,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Execution Scope.
-     * 
+     * The unique identifier of the Azure AD identity that last modified the workflow object..
      */
 	@Nullable
     public com.microsoft.graph.requests.UserCollectionPage executionScope;
@@ -103,7 +103,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Task Reports.
-     * 
+     * Represents the aggregation of task execution data for tasks within a workflow object.
      */
     @SerializedName(value = "taskReports", alternate = {"TaskReports"})
     @Expose
@@ -121,7 +121,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Versions.
-     * 
+     * The workflow versions that are available.
      */
     @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose

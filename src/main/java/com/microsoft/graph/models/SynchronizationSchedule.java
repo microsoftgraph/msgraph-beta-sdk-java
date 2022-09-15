@@ -49,7 +49,7 @@ public class SynchronizationSchedule implements IJsonBackedObject {
 
     /**
      * The Interval.
-     * The interval between synchronization iterations.
+     * The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
      */
     @SerializedName(value = "interval", alternate = {"Interval"})
     @Expose

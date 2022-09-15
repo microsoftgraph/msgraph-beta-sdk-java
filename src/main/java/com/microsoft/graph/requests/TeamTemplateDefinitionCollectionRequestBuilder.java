@@ -7,7 +7,6 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.TeamTemplate;
 import com.microsoft.graph.models.TeamTemplateDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +27,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class TeamTemplateDefinitionCollectionRequestBuilder extends BaseCollectionRequestBuilder<TeamTemplateDefinition, TeamTemplateDefinitionRequestBuilder, TeamTemplateDefinitionCollectionResponse, TeamTemplateDefinitionCollectionPage, TeamTemplateDefinitionCollectionRequest> {
 
     /**
-     * The request builder for this collection of TeamTemplate
+     * The request builder for this collection of TeamTemplateDefinition
      *
      * @param requestUrl     the request URL
      * @param client         the service client

@@ -21,6 +21,7 @@ import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.TeamsTemplate;
+import com.microsoft.graph.models.TeamTemplateDefinition;
 import com.microsoft.graph.models.Schedule;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
@@ -308,6 +309,15 @@ public class Team extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TeamsTemplate template;
+
+    /**
+     * The Template Definition.
+     * 
+     */
+    @SerializedName(value = "templateDefinition", alternate = {"TemplateDefinition"})
+    @Expose
+	@Nullable
+    public TeamTemplateDefinition templateDefinition;
 
     /**
      * The Schedule.
