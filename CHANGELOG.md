@@ -11,6 +11,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.56.0] - 2022-09-15
+
+### Added
+ 
+- AuthenticationCombinationConfiguration model and related requests. 
+- AuthenticationMethodModeDetail model and related requests.
+- AuthenticationStrengthPolicy models and related requests. 
+- AuthenticationStrengthRoot model and related requests. 
+- DriveItemAssignSensitivityLabel models and related requests. 
+- Fido2CombinationConfiguration model and related requests. 
+- AuthenticationMethodFeatureConfiguration model. 
+- AuthenticationMethodModes model. 
+- AuthenticationStrengthRequirements model. 
+- AuthenticationStrengthUsage model. 
+- BaseAuthenticationMethod model. 
+- CloudPcDiskEncryptionState model. 
+- ConditionalAccess models. 
+- CrossTenantAccessPolicyTenantRestrictions model. 
+- DevicesFilter model. 
+- FeatureTarget models. 
+- MicrosoftAuthenticatorFeatureSettings model. 
+- UpdateAllowedCombinationsResult model. 
+- CaseExportOperationC requests added to the ediscovery namespace. 
+- Models and Requests added to the newly added DeviceManagement namespace.  
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests. 
+- Removed ConnectionQuota requests from the ExternalConnectors namespace. 
+- Removed AzureADFeatureUsage models and related requests.
+- Removed AzureADLicenseUsage models and realted requests.  
+- Removed AzureADUserFeatureUsage models and related requests. 
+- Removed RestrictedSignIn model and related requests. 
+- Removed the AzureADLicenseType model. 
+- Removed FeatureUsageDetail model. 
+- Removed LicenseInfoDetail model. 
+
 ## [0.55.0] - 2022-09-01
 
 ### Added
