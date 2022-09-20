@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OnlineMeetingPresenters;
-import com.microsoft.graph.models.MeetingChatMode;
 import com.microsoft.graph.models.OnlineMeetingRole;
 import com.microsoft.graph.models.AudioConferencing;
 import com.microsoft.graph.models.BroadcastMeetingSettings;
@@ -67,15 +66,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public OnlineMeetingPresenters allowedPresenters;
-
-    /**
-     * The Allow Meeting Chat.
-     * Specifies the mode of meeting chat.
-     */
-    @SerializedName(value = "allowMeetingChat", alternate = {"AllowMeetingChat"})
-    @Expose
-	@Nullable
-    public MeetingChatMode allowMeetingChat;
 
     /**
      * The Allow Teamwork Reactions.

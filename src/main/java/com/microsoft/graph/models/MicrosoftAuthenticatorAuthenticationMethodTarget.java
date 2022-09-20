@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMode;
-import com.microsoft.graph.models.AdvancedConfigState;
 import com.microsoft.graph.models.AuthenticationMethodTarget;
 
 
@@ -35,28 +34,6 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     @Expose
 	@Nullable
     public MicrosoftAuthenticatorAuthenticationMode authenticationMode;
-
-    /**
-     * The Display App Information Required State.
-     * 
-     * @deprecated The DisplayAppInformationRequiredState property is deprecated and will stop returning data on September 9, 2022. Please use the new featureSetting DisplayAppInformationRequiredState property.
-     */
-    @Deprecated
-    @SerializedName(value = "displayAppInformationRequiredState", alternate = {"DisplayAppInformationRequiredState"})
-    @Expose
-	@Nullable
-    public AdvancedConfigState displayAppInformationRequiredState;
-
-    /**
-     * The Number Matching Required State.
-     * 
-     * @deprecated The NumberMatchingRequiredState property is deprecated and will stop returning data on September 9, 2022. Please use the new featureSetting NumberMatchingRequiredState property.
-     */
-    @Deprecated
-    @SerializedName(value = "numberMatchingRequiredState", alternate = {"NumberMatchingRequiredState"})
-    @Expose
-	@Nullable
-    public AdvancedConfigState numberMatchingRequiredState;
 
 
     /**

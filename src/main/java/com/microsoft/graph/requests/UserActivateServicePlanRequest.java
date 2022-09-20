@@ -19,7 +19,7 @@ import com.microsoft.graph.models.UserActivateServicePlanParameterSet;
 
 /**
  * The class for the User Activate Service Plan Request.
- * @deprecated The activateServicePlan API will be deprecated and will stop returning data on Jun-30, 2022
+ * @deprecated The activateServicePlan API will be deprecated and will stop returning data on Oct-15, 2022
  */
 @Deprecated
 public class UserActivateServicePlanRequest extends BaseRequest<Void> {

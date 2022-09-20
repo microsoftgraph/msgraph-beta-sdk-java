@@ -48,7 +48,7 @@ public class AttendanceRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Identity.
-     * Identity of the user associated with this atttendance record.
+     * Identity of the user associated with this atttendance record. The specific type will be one of the following derived types of identity, depending on the type of the user: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
      */
     @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose

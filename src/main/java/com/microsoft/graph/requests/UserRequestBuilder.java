@@ -1690,7 +1690,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
-     * @deprecated The activateServicePlan API will be deprecated and will stop returning data on Jun-30, 2022
+     * @deprecated The activateServicePlan API will be deprecated and will stop returning data on Oct-15, 2022
      */
     @Deprecated
     @Nonnull
