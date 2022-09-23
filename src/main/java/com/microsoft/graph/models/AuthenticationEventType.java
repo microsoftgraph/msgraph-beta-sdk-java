@@ -7,28 +7,24 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Meeting Chat Mode.
+ * The Enum Authentication Event Type.
 */
-public enum MeetingChatMode
+public enum AuthenticationEventType
 {
     /**
-    * enabled
+    * token Issuance Start
     */
-    ENABLED,
+    TOKEN_ISSUANCE_START,
     /**
-    * disabled
+    * page Render Start
     */
-    DISABLED,
-    /**
-    * limited
-    */
-    LIMITED,
+    PAGE_RENDER_START,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For MeetingChatMode values that were not expected from the service
+    * For AuthenticationEventType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

@@ -40,7 +40,7 @@ public class BroadcastMeetingCaptionSettings implements IJsonBackedObject {
 
     /**
      * The Is Caption Enabled.
-     * Indicates whether caption is enabled for this Teams live event.
+     * Indicates whether captions are enabled for this Teams live event.
      */
     @SerializedName(value = "isCaptionEnabled", alternate = {"IsCaptionEnabled"})
     @Expose

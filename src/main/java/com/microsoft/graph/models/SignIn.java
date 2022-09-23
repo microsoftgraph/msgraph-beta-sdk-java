@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AppliedConditionalAccessPolicy;
+import com.microsoft.graph.models.AppliedAuthenticationEventListener;
 import com.microsoft.graph.models.AuthenticationContext;
 import com.microsoft.graph.models.AuthenticationDetail;
 import com.microsoft.graph.models.KeyValue;
@@ -75,6 +76,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AppliedConditionalAccessPolicy> appliedConditionalAccessPolicies;
+
+    /**
+     * The Applied Event Listeners.
+     * 
+     */
+    @SerializedName(value = "appliedEventListeners", alternate = {"AppliedEventListeners"})
+    @Expose
+	@Nullable
+    public java.util.List<AppliedAuthenticationEventListener> appliedEventListeners;
 
     /**
      * The Authentication Context Class References.
