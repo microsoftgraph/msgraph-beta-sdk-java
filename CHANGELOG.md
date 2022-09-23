@@ -11,6 +11,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.57.0] - 2022-09-22
+
+### Added
+ 
+- AppliedAuthenticationEventListener model.
+- AuthenticationEventHandlerResult model. 
+- AuthenticationEventType model. 
+- CustomExtensionCalloutResult model. 
+- WatermarkProtectionValues model. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests. 
+- Removed MeetingChatMode model. 
+
 ## [0.56.0] - 2022-09-15
 
 ### Added
