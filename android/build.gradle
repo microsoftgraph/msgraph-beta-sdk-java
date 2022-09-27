@@ -25,10 +25,6 @@ apply plugin: "com.github.ben-manes.versions"
 android {
     compileSdkVersion 32
 
-    dexOptions {
-       javaMaxHeapSize "3g"
-    }
-
     defaultConfig {
         versionCode 1
         versionName "1.0"
