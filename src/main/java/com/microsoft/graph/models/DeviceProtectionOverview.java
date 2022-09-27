@@ -85,7 +85,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceProtectionOverview currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("cleanDeviceCount", (n) -> { currentObject.setCleanDeviceCount(n.getIntegerValue()); });
             this.put("criticalFailuresDeviceCount", (n) -> { currentObject.setCriticalFailuresDeviceCount(n.getIntegerValue()); });
             this.put("inactiveThreatAgentDeviceCount", (n) -> { currentObject.setInactiveThreatAgentDeviceCount(n.getIntegerValue()); });

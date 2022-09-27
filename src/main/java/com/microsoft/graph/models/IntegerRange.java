@@ -62,7 +62,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IntegerRange currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("end", (n) -> { currentObject.setEnd(n.getLongValue()); });
             this.put("maximum", (n) -> { currentObject.setMaximum(n.getLongValue()); });
             this.put("minimum", (n) -> { currentObject.setMinimum(n.getLongValue()); });

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SensitivityLabel extends Entity implements Parsable {
     /** The color that the UI should display for the label, if configured. */
     private String _color;
@@ -79,7 +79,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitivityLabel currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
             this.put("contentFormats", (n) -> { currentObject.setContentFormats(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });

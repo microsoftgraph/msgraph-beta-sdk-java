@@ -37,7 +37,7 @@ public class CloudPcSubscription extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcSubscription currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
             this.put("subscriptionName", (n) -> { currentObject.setSubscriptionName(n.getStringValue()); });
         }};

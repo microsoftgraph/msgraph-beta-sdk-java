@@ -43,7 +43,7 @@ public class DeviceManagementSettingEnrollmentTypeConstraint extends DeviceManag
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingEnrollmentTypeConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enrollmentTypes", (n) -> { currentObject.setEnrollmentTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

@@ -84,7 +84,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcAuditActor currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("applicationDisplayName", (n) -> { currentObject.setApplicationDisplayName(n.getStringValue()); });
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });

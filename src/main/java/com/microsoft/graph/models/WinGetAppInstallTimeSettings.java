@@ -60,7 +60,7 @@ public class WinGetAppInstallTimeSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WinGetAppInstallTimeSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("deadlineDateTime", (n) -> { currentObject.setDeadlineDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("useLocalTime", (n) -> { currentObject.setUseLocalTime(n.getBooleanValue()); });

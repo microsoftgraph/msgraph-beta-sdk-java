@@ -95,7 +95,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkSystemConfiguration currentObject = this;
-        return new HashMap<>(13) {{
+        return new HashMap<String, Consumer<ParseNode>>(13) {{
             this.put("dateTimeConfiguration", (n) -> { currentObject.setDateTimeConfiguration(n.getObjectValue(TeamworkDateTimeConfiguration::createFromDiscriminatorValue)); });
             this.put("defaultPassword", (n) -> { currentObject.setDefaultPassword(n.getStringValue()); });
             this.put("deviceLockTimeout", (n) -> { currentObject.setDeviceLockTimeout(n.getPeriodValue()); });

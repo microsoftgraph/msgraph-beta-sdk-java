@@ -80,7 +80,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ComanagementEligibleDevicesSummary currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("comanagedCount", (n) -> { currentObject.setComanagedCount(n.getIntegerValue()); });
             this.put("eligibleButNotAzureAdJoinedCount", (n) -> { currentObject.setEligibleButNotAzureAdJoinedCount(n.getIntegerValue()); });
             this.put("eligibleCount", (n) -> { currentObject.setEligibleCount(n.getIntegerValue()); });

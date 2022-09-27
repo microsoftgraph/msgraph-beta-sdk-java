@@ -35,7 +35,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsAppXAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("useDeviceContext", (n) -> { currentObject.setUseDeviceContext(n.getBooleanValue()); });
         }};
     }

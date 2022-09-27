@@ -60,7 +60,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDriverUpdateProfileInventorySyncStatus currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("driverInventorySyncState", (n) -> { currentObject.setDriverInventorySyncState(n.getEnumValue(WindowsDriverUpdateProfileInventorySyncState.class)); });
             this.put("lastSuccessfulSyncDateTime", (n) -> { currentObject.setLastSuccessfulSyncDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

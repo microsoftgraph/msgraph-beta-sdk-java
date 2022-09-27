@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PlannerTask extends PlannerDelta implements Parsable {
     /** Number of checklist items with value set to false, representing incomplete items. */
     private Integer _activeChecklistItemCount;
@@ -215,7 +215,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeChecklistItemCount", (n) -> { currentObject.setActiveChecklistItemCount(n.getIntegerValue()); });
             this.put("appliedCategories", (n) -> { currentObject.setAppliedCategories(n.getObjectValue(PlannerAppliedCategories::createFromDiscriminatorValue)); });
             this.put("assignedToTaskBoardFormat", (n) -> { currentObject.setAssignedToTaskBoardFormat(n.getObjectValue(PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue)); });

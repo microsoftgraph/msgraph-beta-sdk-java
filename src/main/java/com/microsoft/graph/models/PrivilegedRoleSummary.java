@@ -51,7 +51,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedRoleSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("elevatedCount", (n) -> { currentObject.setElevatedCount(n.getIntegerValue()); });
             this.put("managedCount", (n) -> { currentObject.setManagedCount(n.getIntegerValue()); });
             this.put("mfaEnabled", (n) -> { currentObject.setMfaEnabled(n.getBooleanValue()); });

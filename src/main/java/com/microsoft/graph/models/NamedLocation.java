@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class NamedLocation extends Entity implements Parsable {
     /** The Timestamp type represents creation date and time of the location using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -18,7 +19,7 @@ public class NamedLocation extends Entity implements Parsable {
     /** The Timestamp type represents last modified date and time of the location using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _modifiedDateTime;
     /**
-     * Instantiates a new NamedLocation and sets the default values.
+     * Instantiates a new namedLocation and sets the default values.
      * @return a void
      */
     public NamedLocation() {
@@ -28,7 +29,7 @@ public class NamedLocation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a NamedLocation
+     * @return a namedLocation
      */
     @javax.annotation.Nonnull
     public static NamedLocation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +67,7 @@ public class NamedLocation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NamedLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });

@@ -48,7 +48,7 @@ public class ClassifyFilePostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassifyFilePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("file", (n) -> { currentObject.setFile(n.getByteArrayValue()); });
             this.put("sensitiveTypeIds", (n) -> { currentObject.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};

@@ -14,7 +14,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class DeviceManagementConfigurationSettingDefinition extends Entity implements Parsable {
     /** The accessTypes property */
     private DeviceManagementConfigurationSettingAccessTypes _accessTypes;
@@ -138,7 +138,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessTypes", (n) -> { currentObject.setAccessTypes(n.getEnumValue(DeviceManagementConfigurationSettingAccessTypes.class)); });
             this.put("applicability", (n) -> { currentObject.setApplicability(n.getObjectValue(DeviceManagementConfigurationSettingApplicability::createFromDiscriminatorValue)); });
             this.put("baseUri", (n) -> { currentObject.setBaseUri(n.getStringValue()); });

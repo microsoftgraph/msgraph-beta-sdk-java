@@ -50,7 +50,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final KerberosSignOnSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("kerberosServicePrincipalName", (n) -> { currentObject.setKerberosServicePrincipalName(n.getStringValue()); });
             this.put("kerberosSignOnMappingAttributeType", (n) -> { currentObject.setKerberosSignOnMappingAttributeType(n.getEnumValue(KerberosSignOnMappingAttributeType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

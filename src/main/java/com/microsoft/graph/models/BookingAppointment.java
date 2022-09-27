@@ -202,7 +202,7 @@ public class BookingAppointment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingAppointment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
             this.put("anonymousJoinWebUrl", (n) -> { currentObject.setAnonymousJoinWebUrl(n.getStringValue()); });
             this.put("customerEmailAddress", (n) -> { currentObject.setCustomerEmailAddress(n.getStringValue()); });
@@ -451,9 +451,7 @@ public class BookingAppointment extends Entity implements Parsable {
         writer.writeStringValue("customerPhone", this.getCustomerPhone());
         writer.writeCollectionOfObjectValues("customers", this.getCustomers());
         writer.writeStringValue("customerTimeZone", this.getCustomerTimeZone());
-        writer.writePeriodValue("duration", this.getDuration());
         writer.writeObjectValue("end", this.getEnd());
-        writer.writeIntegerValue("filledAttendeesCount", this.getFilledAttendeesCount());
         writer.writeDoubleValue("invoiceAmount", this.getInvoiceAmount());
         writer.writeObjectValue("invoiceDate", this.getInvoiceDate());
         writer.writeStringValue("invoiceId", this.getInvoiceId());

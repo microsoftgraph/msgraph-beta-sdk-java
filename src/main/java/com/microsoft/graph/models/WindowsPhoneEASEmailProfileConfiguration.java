@@ -93,7 +93,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhoneEASEmailProfileConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
             this.put("applyOnlyToWindowsPhone81", (n) -> { currentObject.setApplyOnlyToWindowsPhone81(n.getBooleanValue()); });
             this.put("durationOfEmailToSync", (n) -> { currentObject.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
@@ -155,7 +155,6 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("accountName", this.getAccountName());
-        writer.writeBooleanValue("applyOnlyToWindowsPhone81", this.getApplyOnlyToWindowsPhone81());
         writer.writeEnumValue("durationOfEmailToSync", this.getDurationOfEmailToSync());
         writer.writeEnumValue("emailAddressSource", this.getEmailAddressSource());
         writer.writeEnumValue("emailSyncSchedule", this.getEmailSyncSchedule());

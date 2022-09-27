@@ -78,7 +78,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ObjectMapping currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("attributeMappings", (n) -> { currentObject.setAttributeMappings(n.getCollectionOfObjectValues(AttributeMapping::createFromDiscriminatorValue)); });
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
             this.put("flowTypes", (n) -> { currentObject.setFlowTypes(n.getEnumValue(ObjectFlowTypes.class)); });

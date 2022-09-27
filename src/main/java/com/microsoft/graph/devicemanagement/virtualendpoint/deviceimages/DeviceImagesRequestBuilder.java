@@ -27,11 +27,11 @@ public class DeviceImagesRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new DeviceImagesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -42,7 +42,7 @@ public class DeviceImagesRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/virtualEndpoint/deviceImages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -54,13 +54,13 @@ public class DeviceImagesRequestBuilder {
      */
     public DeviceImagesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/deviceManagement/virtualEndpoint/deviceImages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The image resource on Cloud PC.
+     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class DeviceImagesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The image resource on Cloud PC.
+     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class DeviceImagesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to deviceImages for deviceManagement
+     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
      * @param body 
      * @return a RequestInformation
      */
@@ -99,7 +99,7 @@ public class DeviceImagesRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to deviceImages for deviceManagement
+     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -123,13 +123,13 @@ public class DeviceImagesRequestBuilder {
         return requestInfo;
     }
     /**
-     * The image resource on Cloud PC.
+     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
      * @return a CompletableFuture of CloudPcDeviceImageCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<CloudPcDeviceImageCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -139,14 +139,14 @@ public class DeviceImagesRequestBuilder {
         }
     }
     /**
-     * The image resource on Cloud PC.
+     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CloudPcDeviceImageCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<CloudPcDeviceImageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceImagesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -156,7 +156,7 @@ public class DeviceImagesRequestBuilder {
         }
     }
     /**
-     * The image resource on Cloud PC.
+     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of CloudPcDeviceImageCollectionResponse
@@ -164,7 +164,7 @@ public class DeviceImagesRequestBuilder {
     public java.util.concurrent.CompletableFuture<CloudPcDeviceImageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceImagesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -182,14 +182,14 @@ public class DeviceImagesRequestBuilder {
         return new GetSourceImagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Create new navigation property to deviceImages for deviceManagement
+     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
      * @param body 
      * @return a CompletableFuture of cloudPcDeviceImage
      */
     public java.util.concurrent.CompletableFuture<CloudPcDeviceImage> post(@javax.annotation.Nonnull final CloudPcDeviceImage body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -199,7 +199,7 @@ public class DeviceImagesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to deviceImages for deviceManagement
+     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcDeviceImage
@@ -207,7 +207,7 @@ public class DeviceImagesRequestBuilder {
     public java.util.concurrent.CompletableFuture<CloudPcDeviceImage> post(@javax.annotation.Nonnull final CloudPcDeviceImage body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceImagesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -217,7 +217,7 @@ public class DeviceImagesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to deviceImages for deviceManagement
+     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -227,7 +227,7 @@ public class DeviceImagesRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -236,7 +236,7 @@ public class DeviceImagesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The image resource on Cloud PC. */
+    /** List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC. */
     public class DeviceImagesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -278,7 +278,7 @@ public class DeviceImagesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DeviceImagesRequestBuilderGetQueryParameters queryParameters = new DeviceImagesRequestBuilderGetQueryParameters();
@@ -296,7 +296,7 @@ public class DeviceImagesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new deviceImagesRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

@@ -86,7 +86,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleManagement currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("cloudPC", (n) -> { currentObject.setCloudPC(n.getObjectValue(RbacApplicationMultiple::createFromDiscriminatorValue)); });
             this.put("deviceManagement", (n) -> { currentObject.setDeviceManagement(n.getObjectValue(RbacApplicationMultiple::createFromDiscriminatorValue)); });
             this.put("directory", (n) -> { currentObject.setDirectory(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });

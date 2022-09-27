@@ -127,7 +127,7 @@ public class Profile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Profile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("account", (n) -> { currentObject.setAccount(n.getCollectionOfObjectValues(UserAccountInformation::createFromDiscriminatorValue)); });
             this.put("addresses", (n) -> { currentObject.setAddresses(n.getCollectionOfObjectValues(ItemAddress::createFromDiscriminatorValue)); });
             this.put("anniversaries", (n) -> { currentObject.setAnniversaries(n.getCollectionOfObjectValues(PersonAnnualEvent::createFromDiscriminatorValue)); });

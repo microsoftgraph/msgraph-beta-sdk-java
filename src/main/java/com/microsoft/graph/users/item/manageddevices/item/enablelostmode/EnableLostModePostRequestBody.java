@@ -50,7 +50,7 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EnableLostModePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("footer", (n) -> { currentObject.setFooter(n.getStringValue()); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
             this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });

@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationStringSettingValueDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fileTypes", (n) -> { currentObject.setFileTypes(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("format", (n) -> { currentObject.setFormat(n.getEnumValue(DeviceManagementConfigurationStringFormat.class)); });
             this.put("inputValidationSchema", (n) -> { currentObject.setInputValidationSchema(n.getStringValue()); });

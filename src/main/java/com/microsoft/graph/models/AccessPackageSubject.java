@@ -93,7 +93,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageSubject currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("altSecId", (n) -> { currentObject.setAltSecId(n.getStringValue()); });
             this.put("connectedOrganization", (n) -> { currentObject.setConnectedOrganization(n.getObjectValue(ConnectedOrganization::createFromDiscriminatorValue)); });
             this.put("connectedOrganizationId", (n) -> { currentObject.setConnectedOrganizationId(n.getStringValue()); });

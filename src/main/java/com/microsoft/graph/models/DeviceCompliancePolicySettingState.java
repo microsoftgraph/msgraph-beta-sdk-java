@@ -97,7 +97,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceCompliancePolicySettingState currentObject = this;
-        return new HashMap<>(14) {{
+        return new HashMap<String, Consumer<ParseNode>>(14) {{
             this.put("currentValue", (n) -> { currentObject.setCurrentValue(n.getStringValue()); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getLongValue()); });
             this.put("errorDescription", (n) -> { currentObject.setErrorDescription(n.getStringValue()); });

@@ -35,7 +35,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AzureAdTokenAuthentication currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
         }};
     }

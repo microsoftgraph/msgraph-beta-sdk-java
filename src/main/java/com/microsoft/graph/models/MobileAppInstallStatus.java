@@ -101,7 +101,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppInstallStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("app", (n) -> { currentObject.setApp(n.getObjectValue(MobileApp::createFromDiscriminatorValue)); });
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });

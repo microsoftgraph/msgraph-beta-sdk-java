@@ -61,7 +61,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassifyExactMatchesPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("contentClassifications", (n) -> { currentObject.setContentClassifications(n.getCollectionOfObjectValues(ContentClassification::createFromDiscriminatorValue)); });
             this.put("sensitiveTypeIds", (n) -> { currentObject.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });

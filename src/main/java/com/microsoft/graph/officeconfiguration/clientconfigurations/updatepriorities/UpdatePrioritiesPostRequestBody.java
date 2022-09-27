@@ -48,7 +48,7 @@ public class UpdatePrioritiesPostRequestBody implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdatePrioritiesPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("officeConfigurationPolicyIds", (n) -> { currentObject.setOfficeConfigurationPolicyIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("officeConfigurationPriorities", (n) -> { currentObject.setOfficeConfigurationPriorities(n.getCollectionOfPrimitiveValues(Integer.class)); });
         }};

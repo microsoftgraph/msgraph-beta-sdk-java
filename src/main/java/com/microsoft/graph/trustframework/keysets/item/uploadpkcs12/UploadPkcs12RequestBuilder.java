@@ -18,11 +18,11 @@ import java.util.Objects;
 /** Provides operations to call the uploadPkcs12 method. */
 public class UploadPkcs12RequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new UploadPkcs12RequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -33,7 +33,7 @@ public class UploadPkcs12RequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/trustFramework/keySets/{trustFrameworkKeySet%2Did}/microsoft.graph.uploadPkcs12";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -45,13 +45,13 @@ public class UploadPkcs12RequestBuilder {
      */
     public UploadPkcs12RequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/trustFramework/keySets/{trustFrameworkKeySet%2Did}/microsoft.graph.uploadPkcs12";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action uploadPkcs12
+     * Upload a PKCS12 format key (PFX) to a trustFrameworkKeyset. The input is a base-64 encoded value of the Pfx certificate contents. This method returns trustFrameworkKey.
      * @param body 
      * @return a RequestInformation
      */
@@ -60,7 +60,7 @@ public class UploadPkcs12RequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Invoke action uploadPkcs12
+     * Upload a PKCS12 format key (PFX) to a trustFrameworkKeyset. The input is a base-64 encoded value of the Pfx certificate contents. This method returns trustFrameworkKey.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -84,14 +84,14 @@ public class UploadPkcs12RequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action uploadPkcs12
+     * Upload a PKCS12 format key (PFX) to a trustFrameworkKeyset. The input is a base-64 encoded value of the Pfx certificate contents. This method returns trustFrameworkKey.
      * @param body 
      * @return a CompletableFuture of trustFrameworkKey
      */
     public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadPkcs12PostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -101,7 +101,7 @@ public class UploadPkcs12RequestBuilder {
         }
     }
     /**
-     * Invoke action uploadPkcs12
+     * Upload a PKCS12 format key (PFX) to a trustFrameworkKeyset. The input is a base-64 encoded value of the Pfx certificate contents. This method returns trustFrameworkKey.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of trustFrameworkKey
@@ -109,7 +109,7 @@ public class UploadPkcs12RequestBuilder {
     public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadPkcs12PostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadPkcs12RequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -119,7 +119,7 @@ public class UploadPkcs12RequestBuilder {
         }
     }
     /**
-     * Invoke action uploadPkcs12
+     * Upload a PKCS12 format key (PFX) to a trustFrameworkKeyset. The input is a base-64 encoded value of the Pfx certificate contents. This method returns trustFrameworkKey.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -129,7 +129,7 @@ public class UploadPkcs12RequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -145,7 +145,7 @@ public class UploadPkcs12RequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new uploadPkcs12RequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

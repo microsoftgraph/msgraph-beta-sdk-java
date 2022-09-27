@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The category entity stores the category of a group policy definition */
 public class GroupPolicyCategory extends Entity implements Parsable {
     /** The children categories */
     private java.util.List<GroupPolicyCategory> _children;
@@ -83,7 +82,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(GroupPolicyCategory::createFromDiscriminatorValue)); });
             this.put("definitionFile", (n) -> { currentObject.setDefinitionFile(n.getObjectValue(GroupPolicyDefinitionFile::createFromDiscriminatorValue)); });
             this.put("definitions", (n) -> { currentObject.setDefinitions(n.getCollectionOfObjectValues(GroupPolicyDefinition::createFromDiscriminatorValue)); });

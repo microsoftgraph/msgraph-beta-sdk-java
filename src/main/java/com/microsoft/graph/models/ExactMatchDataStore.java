@@ -35,7 +35,7 @@ public class ExactMatchDataStore extends ExactMatchDataStoreBase implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExactMatchDataStore currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("sessions", (n) -> { currentObject.setSessions(n.getCollectionOfObjectValues(ExactMatchSession::createFromDiscriminatorValue)); });
         }};
     }

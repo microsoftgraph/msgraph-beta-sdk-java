@@ -71,7 +71,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSAppleEventReceiver currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("allowed", (n) -> { currentObject.setAllowed(n.getBooleanValue()); });
             this.put("codeRequirement", (n) -> { currentObject.setCodeRequirement(n.getStringValue()); });
             this.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });

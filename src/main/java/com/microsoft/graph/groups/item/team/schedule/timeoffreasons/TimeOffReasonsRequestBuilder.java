@@ -26,11 +26,11 @@ public class TimeOffReasonsRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new TimeOffReasonsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -41,7 +41,7 @@ public class TimeOffReasonsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/groups/{group%2Did}/team/schedule/timeOffReasons{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class TimeOffReasonsRequestBuilder {
      */
     public TimeOffReasonsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/groups/{group%2Did}/team/schedule/timeOffReasons{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The set of reasons for a time off in the schedule.
+     * Get the list of timeOffReasons in a schedule.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TimeOffReasonsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The set of reasons for a time off in the schedule.
+     * Get the list of timeOffReasons in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class TimeOffReasonsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to timeOffReasons for groups
+     * Create a new timeOffReason.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class TimeOffReasonsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to timeOffReasons for groups
+     * Create a new timeOffReason.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class TimeOffReasonsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The set of reasons for a time off in the schedule.
+     * Get the list of timeOffReasons in a schedule.
      * @return a CompletableFuture of TimeOffReasonCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TimeOffReasonCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class TimeOffReasonsRequestBuilder {
         }
     }
     /**
-     * The set of reasons for a time off in the schedule.
+     * Get the list of timeOffReasons in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TimeOffReasonCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TimeOffReasonCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TimeOffReasonsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class TimeOffReasonsRequestBuilder {
         }
     }
     /**
-     * The set of reasons for a time off in the schedule.
+     * Get the list of timeOffReasons in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of TimeOffReasonCollectionResponse
@@ -163,7 +163,7 @@ public class TimeOffReasonsRequestBuilder {
     public java.util.concurrent.CompletableFuture<TimeOffReasonCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TimeOffReasonsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class TimeOffReasonsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to timeOffReasons for groups
+     * Create a new timeOffReason.
      * @param body 
      * @return a CompletableFuture of timeOffReason
      */
     public java.util.concurrent.CompletableFuture<TimeOffReason> post(@javax.annotation.Nonnull final TimeOffReason body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class TimeOffReasonsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to timeOffReasons for groups
+     * Create a new timeOffReason.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeOffReason
@@ -198,7 +198,7 @@ public class TimeOffReasonsRequestBuilder {
     public java.util.concurrent.CompletableFuture<TimeOffReason> post(@javax.annotation.Nonnull final TimeOffReason body, @javax.annotation.Nullable final java.util.function.Consumer<TimeOffReasonsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class TimeOffReasonsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to timeOffReasons for groups
+     * Create a new timeOffReason.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class TimeOffReasonsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class TimeOffReasonsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The set of reasons for a time off in the schedule. */
+    /** Get the list of timeOffReasons in a schedule. */
     public class TimeOffReasonsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -265,7 +265,7 @@ public class TimeOffReasonsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TimeOffReasonsRequestBuilderGetQueryParameters queryParameters = new TimeOffReasonsRequestBuilderGetQueryParameters();
@@ -283,7 +283,7 @@ public class TimeOffReasonsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new timeOffReasonsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

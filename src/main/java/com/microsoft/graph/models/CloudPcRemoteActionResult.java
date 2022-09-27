@@ -18,13 +18,13 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     private Map<String, Object> _additionalData;
     /** The ID of the Cloud PC device on which the remote action is performed. Read-only. */
     private String _cloudPcId;
-    /** Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'. */
+    /** Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'. */
     private OffsetDateTime _lastUpdatedDateTime;
     /** The ID of the Intune managed device on which the remote action is performed. Read-only. */
     private String _managedDeviceId;
     /** The OdataType property */
     private String _odataType;
-    /** Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'. */
+    /** Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'. */
     private OffsetDateTime _startDateTime;
     /** The details of the Cloud PC status. */
     private CloudPcStatusDetails _statusDetails;
@@ -85,7 +85,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcRemoteActionResult currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
             this.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
             this.put("cloudPcId", (n) -> { currentObject.setCloudPcId(n.getStringValue()); });
@@ -97,7 +97,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
         }};
     }
     /**
-     * Gets the lastUpdatedDateTime property value. Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
+     * Gets the lastUpdatedDateTime property value. Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
         return this._odataType;
     }
     /**
-     * Gets the startDateTime property value. Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
+     * Gets the startDateTime property value. Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
         this._cloudPcId = value;
     }
     /**
-     * Sets the lastUpdatedDateTime property value. Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
+     * Sets the lastUpdatedDateTime property value. Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
@@ -210,7 +210,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
         this._odataType = value;
     }
     /**
-     * Sets the startDateTime property value. Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
+     * Sets the startDateTime property value. Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */

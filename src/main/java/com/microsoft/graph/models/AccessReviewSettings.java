@@ -112,7 +112,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewSettings currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("accessRecommendationsEnabled", (n) -> { currentObject.setAccessRecommendationsEnabled(n.getBooleanValue()); });
             this.put("activityDurationInDays", (n) -> { currentObject.setActivityDurationInDays(n.getIntegerValue()); });
             this.put("autoApplyReviewResultsEnabled", (n) -> { currentObject.setAutoApplyReviewResultsEnabled(n.getBooleanValue()); });

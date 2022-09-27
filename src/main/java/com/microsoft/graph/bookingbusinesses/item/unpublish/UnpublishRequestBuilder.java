@@ -17,11 +17,11 @@ import java.util.Objects;
 /** Provides operations to call the unpublish method. */
 public class UnpublishRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new UnpublishRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -32,7 +32,7 @@ public class UnpublishRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/bookingBusinesses/{bookingBusiness%2Did}/microsoft.graph.unpublish";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -44,13 +44,13 @@ public class UnpublishRequestBuilder {
      */
     public UnpublishRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/bookingBusinesses/{bookingBusiness%2Did}/microsoft.graph.unpublish";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Prevents the general public from seeing the scheduling page of this business.
+     * Make the scheduling page of this business not available to external customers. Set the **isPublished** property to false, and **publicUrl** property to null.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -58,7 +58,7 @@ public class UnpublishRequestBuilder {
         return createPostRequestInformation(null);
     }
     /**
-     * Prevents the general public from seeing the scheduling page of this business.
+     * Make the scheduling page of this business not available to external customers. Set the **isPublished** property to false, and **publicUrl** property to null.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,13 +78,13 @@ public class UnpublishRequestBuilder {
         return requestInfo;
     }
     /**
-     * Prevents the general public from seeing the scheduling page of this business.
+     * Make the scheduling page of this business not available to external customers. Set the **isPublished** property to false, and **publicUrl** property to null.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> post() {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -94,14 +94,14 @@ public class UnpublishRequestBuilder {
         }
     }
     /**
-     * Prevents the general public from seeing the scheduling page of this business.
+     * Make the scheduling page of this business not available to external customers. Set the **isPublished** property to false, and **publicUrl** property to null.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<UnpublishRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -111,7 +111,7 @@ public class UnpublishRequestBuilder {
         }
     }
     /**
-     * Prevents the general public from seeing the scheduling page of this business.
+     * Make the scheduling page of this business not available to external customers. Set the **isPublished** property to false, and **publicUrl** property to null.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -119,7 +119,7 @@ public class UnpublishRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<UnpublishRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -135,7 +135,7 @@ public class UnpublishRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new unpublishRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

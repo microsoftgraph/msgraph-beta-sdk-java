@@ -48,7 +48,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomExtensionClientConfiguration currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("timeoutInMilliseconds", (n) -> { currentObject.setTimeoutInMilliseconds(n.getIntegerValue()); });
         }};

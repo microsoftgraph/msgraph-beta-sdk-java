@@ -47,7 +47,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationRedirectSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deepLink", (n) -> { currentObject.setDeepLink(n.getStringValue()); });
             this.put("redirectMessage", (n) -> { currentObject.setRedirectMessage(n.getStringValue()); });
             this.put("redirectReason", (n) -> { currentObject.setRedirectReason(n.getStringValue()); });

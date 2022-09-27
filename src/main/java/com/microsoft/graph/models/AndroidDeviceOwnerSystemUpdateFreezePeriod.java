@@ -71,7 +71,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerSystemUpdateFreezePeriod currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("endDay", (n) -> { currentObject.setEndDay(n.getIntegerValue()); });
             this.put("endMonth", (n) -> { currentObject.setEndMonth(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

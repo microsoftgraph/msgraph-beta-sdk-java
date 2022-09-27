@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SitePage extends BaseItem implements Parsable {
     /** The content type of the page. */
     private ContentTypeInfo _contentType;
@@ -52,7 +52,7 @@ public class SitePage extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SitePage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contentType", (n) -> { currentObject.setContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
             this.put("pageLayoutType", (n) -> { currentObject.setPageLayoutType(n.getStringValue()); });
             this.put("publishingState", (n) -> { currentObject.setPublishingState(n.getObjectValue(PublicationFacet::createFromDiscriminatorValue)); });

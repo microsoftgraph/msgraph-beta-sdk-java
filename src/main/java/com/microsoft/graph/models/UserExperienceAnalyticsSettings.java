@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsSettings implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsSettings currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("configurationManagerDataConnectorConfigured", (n) -> { currentObject.setConfigurationManagerDataConnectorConfigured(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

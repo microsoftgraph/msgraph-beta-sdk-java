@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsCloudManagementDevicesSummary currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("coManagedDeviceCount", (n) -> { currentObject.setCoManagedDeviceCount(n.getIntegerValue()); });
             this.put("intuneDeviceCount", (n) -> { currentObject.setIntuneDeviceCount(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

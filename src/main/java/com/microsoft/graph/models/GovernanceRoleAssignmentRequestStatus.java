@@ -52,7 +52,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceRoleAssignmentRequestStatus currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
             this.put("statusDetails", (n) -> { currentObject.setStatusDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });

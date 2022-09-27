@@ -45,7 +45,7 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerKioskModeApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("className", (n) -> { currentObject.setClassName(n.getStringValue()); });
             this.put("package", (n) -> { currentObject.setPackage(n.getStringValue()); });
         }};

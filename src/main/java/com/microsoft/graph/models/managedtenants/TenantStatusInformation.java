@@ -73,7 +73,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantStatusInformation currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("delegatedPrivilegeStatus", (n) -> { currentObject.setDelegatedPrivilegeStatus(n.getEnumValue(DelegatedPrivilegeStatus.class)); });
             this.put("lastDelegatedPrivilegeRefreshDateTime", (n) -> { currentObject.setLastDelegatedPrivilegeRefreshDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

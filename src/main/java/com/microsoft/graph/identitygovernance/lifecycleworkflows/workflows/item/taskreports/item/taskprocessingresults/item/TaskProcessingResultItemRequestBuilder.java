@@ -22,9 +22,9 @@ import java.util.Objects;
 /** Provides operations to manage the taskProcessingResults property of the microsoft.graph.identityGovernance.taskReport entity. */
 public class TaskProcessingResultItemRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The resume property */
     @javax.annotation.Nonnull
     public ResumeRequestBuilder resume() {
@@ -41,7 +41,7 @@ public class TaskProcessingResultItemRequestBuilder {
         return new TaskRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new TaskProcessingResultItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -52,7 +52,7 @@ public class TaskProcessingResultItemRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/taskReports/{taskReport%2Did}/taskProcessingResults/{taskProcessingResult%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -64,7 +64,7 @@ public class TaskProcessingResultItemRequestBuilder {
      */
     public TaskProcessingResultItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/taskReports/{taskReport%2Did}/taskProcessingResults/{taskProcessingResult%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -98,7 +98,7 @@ public class TaskProcessingResultItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get taskProcessingResults from identityGovernance
+     * The related lifecycle workflow taskProcessingResults.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -106,7 +106,7 @@ public class TaskProcessingResultItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get taskProcessingResults from identityGovernance
+     * The related lifecycle workflow taskProcessingResults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -150,6 +150,7 @@ public class TaskProcessingResultItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final TaskProcessingResultItemRequestBuilderPatchRequestConfiguration requestConfig = new TaskProcessingResultItemRequestBuilderPatchRequestConfiguration();
@@ -166,7 +167,7 @@ public class TaskProcessingResultItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -183,7 +184,7 @@ public class TaskProcessingResultItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<TaskProcessingResultItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -201,7 +202,7 @@ public class TaskProcessingResultItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<TaskProcessingResultItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -211,13 +212,13 @@ public class TaskProcessingResultItemRequestBuilder {
         }
     }
     /**
-     * Get taskProcessingResults from identityGovernance
+     * The related lifecycle workflow taskProcessingResults.
      * @return a CompletableFuture of taskProcessingResult
      */
     public java.util.concurrent.CompletableFuture<TaskProcessingResult> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,14 +228,14 @@ public class TaskProcessingResultItemRequestBuilder {
         }
     }
     /**
-     * Get taskProcessingResults from identityGovernance
+     * The related lifecycle workflow taskProcessingResults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of taskProcessingResult
      */
     public java.util.concurrent.CompletableFuture<TaskProcessingResult> get(@javax.annotation.Nullable final java.util.function.Consumer<TaskProcessingResultItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -244,7 +245,7 @@ public class TaskProcessingResultItemRequestBuilder {
         }
     }
     /**
-     * Get taskProcessingResults from identityGovernance
+     * The related lifecycle workflow taskProcessingResults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of taskProcessingResult
@@ -252,7 +253,7 @@ public class TaskProcessingResultItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<TaskProcessingResult> get(@javax.annotation.Nullable final java.util.function.Consumer<TaskProcessingResultItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -264,16 +265,16 @@ public class TaskProcessingResultItemRequestBuilder {
     /**
      * Update the navigation property taskProcessingResults in identityGovernance
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of taskProcessingResult
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final TaskProcessingResult body) {
+    public java.util.concurrent.CompletableFuture<TaskProcessingResult> patch(@javax.annotation.Nonnull final TaskProcessingResult body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, TaskProcessingResult::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -282,16 +283,16 @@ public class TaskProcessingResultItemRequestBuilder {
      * Update the navigation property taskProcessingResults in identityGovernance
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of taskProcessingResult
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final TaskProcessingResult body, @javax.annotation.Nullable final java.util.function.Consumer<TaskProcessingResultItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<TaskProcessingResult> patch(@javax.annotation.Nonnull final TaskProcessingResult body, @javax.annotation.Nullable final java.util.function.Consumer<TaskProcessingResultItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, TaskProcessingResult::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -301,17 +302,17 @@ public class TaskProcessingResultItemRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of taskProcessingResult
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final TaskProcessingResult body, @javax.annotation.Nullable final java.util.function.Consumer<TaskProcessingResultItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<TaskProcessingResult> patch(@javax.annotation.Nonnull final TaskProcessingResult body, @javax.annotation.Nullable final java.util.function.Consumer<TaskProcessingResultItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, TaskProcessingResult::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -323,7 +324,7 @@ public class TaskProcessingResultItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new TaskProcessingResultItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -331,7 +332,7 @@ public class TaskProcessingResultItemRequestBuilder {
         public TaskProcessingResultItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get taskProcessingResults from identityGovernance */
+    /** The related lifecycle workflow taskProcessingResults. */
     public class TaskProcessingResultItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -349,7 +350,7 @@ public class TaskProcessingResultItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TaskProcessingResultItemRequestBuilderGetQueryParameters queryParameters = new TaskProcessingResultItemRequestBuilderGetQueryParameters();
@@ -367,7 +368,7 @@ public class TaskProcessingResultItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new TaskProcessingResultItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

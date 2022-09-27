@@ -39,7 +39,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppSupersedence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("supersededAppCount", (n) -> { currentObject.setSupersededAppCount(n.getIntegerValue()); });
             this.put("supersedenceType", (n) -> { currentObject.setSupersedenceType(n.getEnumValue(MobileAppSupersedenceType.class)); });
             this.put("supersedingAppCount", (n) -> { currentObject.setSupersedingAppCount(n.getIntegerValue()); });

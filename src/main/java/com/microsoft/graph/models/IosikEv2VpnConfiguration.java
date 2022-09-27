@@ -183,7 +183,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosikEv2VpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowDefaultChildSecurityAssociationParameters", (n) -> { currentObject.setAllowDefaultChildSecurityAssociationParameters(n.getBooleanValue()); });
             this.put("allowDefaultSecurityAssociationParameters", (n) -> { currentObject.setAllowDefaultSecurityAssociationParameters(n.getBooleanValue()); });
             this.put("alwaysOnConfiguration", (n) -> { currentObject.setAlwaysOnConfiguration(n.getObjectValue(AppleVpnAlwaysOnConfiguration::createFromDiscriminatorValue)); });

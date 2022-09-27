@@ -57,7 +57,7 @@ public class UpdatePasswordSingleSignOnCredentialsPostRequestBody implements Add
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdatePasswordSingleSignOnCredentialsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("credentials", (n) -> { currentObject.setCredentials(n.getCollectionOfObjectValues(Credential::createFromDiscriminatorValue)); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
         }};

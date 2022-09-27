@@ -84,7 +84,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageAttachment currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
             this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });

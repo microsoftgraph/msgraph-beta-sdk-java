@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Mention extends Entity implements Parsable {
     /** The name of the application where the mention is created. Optional. Not used and defaulted as null for message. */
     private String _application;
@@ -91,7 +91,7 @@ public class Mention extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Mention currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("application", (n) -> { currentObject.setApplication(n.getStringValue()); });
             this.put("clientReference", (n) -> { currentObject.setClientReference(n.getStringValue()); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });

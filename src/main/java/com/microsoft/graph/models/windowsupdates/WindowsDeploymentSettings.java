@@ -35,7 +35,7 @@ public class WindowsDeploymentSettings extends DeploymentSettings implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDeploymentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userExperience", (n) -> { currentObject.setUserExperience(n.getObjectValue(UserExperienceSettings::createFromDiscriminatorValue)); });
         }};
     }

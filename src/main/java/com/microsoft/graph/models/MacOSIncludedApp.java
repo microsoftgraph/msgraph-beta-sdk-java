@@ -67,7 +67,7 @@ public class MacOSIncludedApp implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSIncludedApp currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
             this.put("bundleVersion", (n) -> { currentObject.setBundleVersion(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

@@ -37,7 +37,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinition extends 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationIntegerSettingValueDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maximumValue", (n) -> { currentObject.setMaximumValue(n.getLongValue()); });
             this.put("minimumValue", (n) -> { currentObject.setMinimumValue(n.getLongValue()); });
         }};

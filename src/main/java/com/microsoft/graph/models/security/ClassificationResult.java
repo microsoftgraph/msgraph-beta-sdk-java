@@ -68,7 +68,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassificationResult currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("confidenceLevel", (n) -> { currentObject.setConfidenceLevel(n.getIntegerValue()); });
             this.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

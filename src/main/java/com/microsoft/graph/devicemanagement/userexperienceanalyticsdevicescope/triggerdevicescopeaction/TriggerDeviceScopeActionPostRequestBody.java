@@ -64,7 +64,7 @@ public class TriggerDeviceScopeActionPostRequestBody implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TriggerDeviceScopeActionPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
             this.put("deviceScopeId", (n) -> { currentObject.setDeviceScopeId(n.getStringValue()); });
         }};

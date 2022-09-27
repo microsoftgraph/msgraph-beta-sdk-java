@@ -35,7 +35,7 @@ public class WindowsKioskLocalUser extends WindowsKioskUser implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskLocalUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
         }};
     }

@@ -125,7 +125,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedStoreAppConfigurationSchemaItem currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(AndroidManagedStoreAppConfigurationSchemaItemDataType.class)); });
             this.put("defaultBoolValue", (n) -> { currentObject.setDefaultBoolValue(n.getBooleanValue()); });
             this.put("defaultIntValue", (n) -> { currentObject.setDefaultIntValue(n.getIntegerValue()); });

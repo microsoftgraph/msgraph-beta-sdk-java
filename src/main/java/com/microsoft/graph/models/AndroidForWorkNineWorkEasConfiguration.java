@@ -39,7 +39,7 @@ public class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEma
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkNineWorkEasConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("syncCalendar", (n) -> { currentObject.setSyncCalendar(n.getBooleanValue()); });
             this.put("syncContacts", (n) -> { currentObject.setSyncContacts(n.getBooleanValue()); });
             this.put("syncTasks", (n) -> { currentObject.setSyncTasks(n.getBooleanValue()); });

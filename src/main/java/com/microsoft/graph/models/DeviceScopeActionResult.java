@@ -79,7 +79,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceScopeActionResult currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("deviceScopeAction", (n) -> { currentObject.setDeviceScopeAction(n.getStringValue()); });
             this.put("deviceScopeId", (n) -> { currentObject.setDeviceScopeId(n.getStringValue()); });
             this.put("failedMessage", (n) -> { currentObject.setFailedMessage(n.getStringValue()); });

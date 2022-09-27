@@ -64,7 +64,7 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UploadDepTokenPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
             this.put("depToken", (n) -> { currentObject.setDepToken(n.getStringValue()); });
         }};

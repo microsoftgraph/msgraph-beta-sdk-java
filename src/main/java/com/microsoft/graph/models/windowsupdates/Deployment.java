@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class Deployment extends Entity implements Parsable {
     /** Specifies the audience to which content is deployed. */
     private DeploymentAudience _audience;
@@ -72,7 +72,7 @@ public class Deployment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Deployment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("audience", (n) -> { currentObject.setAudience(n.getObjectValue(DeploymentAudience::createFromDiscriminatorValue)); });
             this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(DeployableContent::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });

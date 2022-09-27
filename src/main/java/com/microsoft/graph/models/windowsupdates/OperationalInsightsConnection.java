@@ -55,7 +55,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OperationalInsightsConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureResourceGroupName", (n) -> { currentObject.setAzureResourceGroupName(n.getStringValue()); });
             this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
             this.put("workspaceName", (n) -> { currentObject.setWorkspaceName(n.getStringValue()); });

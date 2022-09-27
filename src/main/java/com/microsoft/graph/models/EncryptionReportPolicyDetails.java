@@ -51,7 +51,7 @@ public class EncryptionReportPolicyDetails implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EncryptionReportPolicyDetails currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
             this.put("policyName", (n) -> { currentObject.setPolicyName(n.getStringValue()); });

@@ -69,7 +69,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateRequestPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("assignmentState", (n) -> { currentObject.setAssignmentState(n.getStringValue()); });
             this.put("decision", (n) -> { currentObject.setDecision(n.getStringValue()); });
             this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });

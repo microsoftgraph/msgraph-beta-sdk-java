@@ -53,7 +53,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationChoiceSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultOptionId", (n) -> { currentObject.setDefaultOptionId(n.getStringValue()); });
             this.put("options", (n) -> { currentObject.setOptions(n.getCollectionOfObjectValues(DeviceManagementConfigurationOptionDefinition::createFromDiscriminatorValue)); });
         }};

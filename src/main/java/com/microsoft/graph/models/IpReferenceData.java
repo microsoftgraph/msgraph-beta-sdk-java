@@ -82,7 +82,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IpReferenceData currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("asn", (n) -> { currentObject.setAsn(n.getLongValue()); });
             this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
             this.put("countryOrRegionCode", (n) -> { currentObject.setCountryOrRegionCode(n.getStringValue()); });

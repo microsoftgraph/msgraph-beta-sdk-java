@@ -37,7 +37,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddToReviewSetOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("reviewSet", (n) -> { currentObject.setReviewSet(n.getObjectValue(ReviewSet::createFromDiscriminatorValue)); });
             this.put("sourceCollection", (n) -> { currentObject.setSourceCollection(n.getObjectValue(SourceCollection::createFromDiscriminatorValue)); });
         }};

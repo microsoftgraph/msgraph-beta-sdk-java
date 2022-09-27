@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OrganizationSettings extends Entity implements Parsable {
+    /** The contactInsights property */
+    private InsightsSettings _contactInsights;
     /** Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization. */
     private InsightsSettings _itemInsights;
     /** The microsoftApplicationDataAccess property */
@@ -35,13 +37,22 @@ public class OrganizationSettings extends Entity implements Parsable {
         return new OrganizationSettings();
     }
     /**
+     * Gets the contactInsights property value. The contactInsights property
+     * @return a insightsSettings
+     */
+    @javax.annotation.Nullable
+    public InsightsSettings getContactInsights() {
+        return this._contactInsights;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
+            this.put("contactInsights", (n) -> { currentObject.setContactInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
             this.put("itemInsights", (n) -> { currentObject.setItemInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
             this.put("microsoftApplicationDataAccess", (n) -> { currentObject.setMicrosoftApplicationDataAccess(n.getObjectValue(MicrosoftApplicationDataAccessSettings::createFromDiscriminatorValue)); });
             this.put("peopleInsights", (n) -> { currentObject.setPeopleInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
@@ -88,10 +99,19 @@ public class OrganizationSettings extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("contactInsights", this.getContactInsights());
         writer.writeObjectValue("itemInsights", this.getItemInsights());
         writer.writeObjectValue("microsoftApplicationDataAccess", this.getMicrosoftApplicationDataAccess());
         writer.writeObjectValue("peopleInsights", this.getPeopleInsights());
         writer.writeCollectionOfObjectValues("profileCardProperties", this.getProfileCardProperties());
+    }
+    /**
+     * Sets the contactInsights property value. The contactInsights property
+     * @param value Value to set for the contactInsights property.
+     * @return a void
+     */
+    public void setContactInsights(@javax.annotation.Nullable final InsightsSettings value) {
+        this._contactInsights = value;
     }
     /**
      * Sets the itemInsights property value. Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.

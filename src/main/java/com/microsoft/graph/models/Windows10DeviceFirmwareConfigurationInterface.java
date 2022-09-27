@@ -115,7 +115,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10DeviceFirmwareConfigurationInterface currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bluetooth", (n) -> { currentObject.setBluetooth(n.getEnumValue(Enablement.class)); });
             this.put("bootFromBuiltInNetworkAdapters", (n) -> { currentObject.setBootFromBuiltInNetworkAdapters(n.getEnumValue(Enablement.class)); });
             this.put("bootFromExternalMedia", (n) -> { currentObject.setBootFromExternalMedia(n.getEnumValue(Enablement.class)); });

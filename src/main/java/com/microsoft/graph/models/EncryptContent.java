@@ -53,7 +53,7 @@ public class EncryptContent extends LabelActionBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EncryptContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("encryptWith", (n) -> { currentObject.setEncryptWith(n.getEnumValue(EncryptWith.class)); });
         }};
     }

@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Employee extends Entity implements Parsable {
     /** The address property */
     private PostalAddressType _address;
@@ -47,7 +48,7 @@ public class Employee extends Entity implements Parsable {
     /** The terminationDate property */
     private LocalDate _terminationDate;
     /**
-     * Instantiates a new Employee and sets the default values.
+     * Instantiates a new employee and sets the default values.
      * @return a void
      */
     public Employee() {
@@ -57,7 +58,7 @@ public class Employee extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Employee
+     * @return a employee
      */
     @javax.annotation.Nonnull
     public static Employee createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -111,7 +112,7 @@ public class Employee extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Employee currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
             this.put("birthDate", (n) -> { currentObject.setBirthDate(n.getLocalDateValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

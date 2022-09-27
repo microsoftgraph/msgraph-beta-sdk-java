@@ -46,7 +46,7 @@ public class TenantSearchPostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantSearchPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
         }};
     }

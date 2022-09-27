@@ -49,7 +49,7 @@ public class ImportDeviceIdentityListPostRequestBody implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportDeviceIdentityListPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("importedDeviceIdentities", (n) -> { currentObject.setImportedDeviceIdentities(n.getCollectionOfObjectValues(ImportedDeviceIdentity::createFromDiscriminatorValue)); });
             this.put("overwriteImportedDeviceIdentities", (n) -> { currentObject.setOverwriteImportedDeviceIdentities(n.getBooleanValue()); });
         }};

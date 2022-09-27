@@ -51,7 +51,7 @@ public class PowerliftDownloadRequest implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PowerliftDownloadRequest currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("files", (n) -> { currentObject.setFiles(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("powerliftId", (n) -> { currentObject.setPowerliftId(n.getStringValue()); });

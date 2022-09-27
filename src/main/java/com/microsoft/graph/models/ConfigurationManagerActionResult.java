@@ -53,7 +53,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConfigurationManagerActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionDeliveryStatus", (n) -> { currentObject.setActionDeliveryStatus(n.getEnumValue(ConfigurationManagerActionDeliveryStatus.class)); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
         }};

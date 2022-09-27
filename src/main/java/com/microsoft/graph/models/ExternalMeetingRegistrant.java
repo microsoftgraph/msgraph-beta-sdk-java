@@ -37,7 +37,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalMeetingRegistrant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
         }};

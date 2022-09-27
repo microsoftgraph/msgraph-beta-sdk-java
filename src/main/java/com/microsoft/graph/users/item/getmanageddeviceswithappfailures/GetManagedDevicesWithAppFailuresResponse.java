@@ -46,7 +46,7 @@ public class GetManagedDevicesWithAppFailuresResponse implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetManagedDevicesWithAppFailuresResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

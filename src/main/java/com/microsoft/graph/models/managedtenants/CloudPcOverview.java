@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class CloudPcOverview extends Entity implements Parsable {
     /** Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only. */
     private OffsetDateTime _lastRefreshedDateTime;
@@ -76,7 +76,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcOverview currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
             this.put("numberOfCloudPcConnectionStatusFailed", (n) -> { currentObject.setNumberOfCloudPcConnectionStatusFailed(n.getIntegerValue()); });
             this.put("numberOfCloudPcConnectionStatusPassed", (n) -> { currentObject.setNumberOfCloudPcConnectionStatusPassed(n.getIntegerValue()); });

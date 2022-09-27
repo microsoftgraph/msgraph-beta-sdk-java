@@ -56,7 +56,7 @@ public class TenantRelationship extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantRelationship currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("delegatedAdminCustomers", (n) -> { currentObject.setDelegatedAdminCustomers(n.getCollectionOfObjectValues(DelegatedAdminCustomer::createFromDiscriminatorValue)); });
             this.put("delegatedAdminRelationships", (n) -> { currentObject.setDelegatedAdminRelationships(n.getCollectionOfObjectValues(DelegatedAdminRelationship::createFromDiscriminatorValue)); });
             this.put("managedTenants", (n) -> { currentObject.setManagedTenants(n.getObjectValue(ManagedTenant::createFromDiscriminatorValue)); });

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Simulation extends Entity implements Parsable {
     /** The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations. */
     private SimulationAttackTechnique _attackTechnique;
@@ -129,7 +129,7 @@ public class Simulation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Simulation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("attackTechnique", (n) -> { currentObject.setAttackTechnique(n.getEnumValue(SimulationAttackTechnique.class)); });
             this.put("attackType", (n) -> { currentObject.setAttackType(n.getEnumValue(SimulationAttackType.class)); });
             this.put("automationId", (n) -> { currentObject.setAutomationId(n.getStringValue()); });

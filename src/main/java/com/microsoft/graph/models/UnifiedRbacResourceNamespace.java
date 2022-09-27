@@ -38,7 +38,7 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRbacResourceNamespace currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("resourceActions", (n) -> { currentObject.setResourceActions(n.getCollectionOfObjectValues(UnifiedRbacResourceAction::createFromDiscriminatorValue)); });
         }};

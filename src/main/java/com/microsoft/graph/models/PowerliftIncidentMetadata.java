@@ -96,7 +96,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PowerliftIncidentMetadata currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("application", (n) -> { currentObject.setApplication(n.getStringValue()); });
             this.put("clientVersion", (n) -> { currentObject.setClientVersion(n.getStringValue()); });
             this.put("createdAtDateTime", (n) -> { currentObject.setCreatedAtDateTime(n.getOffsetDateTimeValue()); });

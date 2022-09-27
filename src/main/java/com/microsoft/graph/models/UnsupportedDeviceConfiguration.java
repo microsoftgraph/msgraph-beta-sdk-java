@@ -45,7 +45,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnsupportedDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(UnsupportedDeviceConfigurationDetail::createFromDiscriminatorValue)); });
             this.put("originalEntityTypeName", (n) -> { currentObject.setOriginalEntityTypeName(n.getStringValue()); });
         }};

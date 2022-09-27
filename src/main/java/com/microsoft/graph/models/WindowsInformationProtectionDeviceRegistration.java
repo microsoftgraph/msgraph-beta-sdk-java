@@ -78,7 +78,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionDeviceRegistration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceMacAddress", (n) -> { currentObject.setDeviceMacAddress(n.getStringValue()); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("deviceRegistrationId", (n) -> { currentObject.setDeviceRegistrationId(n.getStringValue()); });

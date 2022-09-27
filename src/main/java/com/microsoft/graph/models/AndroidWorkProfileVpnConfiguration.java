@@ -121,7 +121,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidWorkProfileVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("alwaysOn", (n) -> { currentObject.setAlwaysOn(n.getBooleanValue()); });
             this.put("alwaysOnLockdown", (n) -> { currentObject.setAlwaysOnLockdown(n.getBooleanValue()); });
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });

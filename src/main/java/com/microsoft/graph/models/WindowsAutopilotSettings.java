@@ -40,7 +40,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsAutopilotSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lastManualSyncTriggerDateTime", (n) -> { currentObject.setLastManualSyncTriggerDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
             this.put("syncStatus", (n) -> { currentObject.setSyncStatus(n.getEnumValue(WindowsAutopilotSyncStatus.class)); });

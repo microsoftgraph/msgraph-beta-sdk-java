@@ -14,7 +14,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     private DeliveryOptimizationBandwidth _bandwidthMode;
     /** Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000. */
     private Integer _cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds;
-    /** Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​ */
+    /** Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000. */
     private Integer _cacheServerForegroundDownloadFallbackToHttpDelayInSeconds;
     /** Specifies cache servers host names. */
     private java.util.List<String> _cacheServerHostNames;
@@ -85,7 +85,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
         return this._cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds;
     }
     /**
-     * Gets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​
+     * Gets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDeliveryOptimizationConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("backgroundDownloadFromHttpDelayInSeconds", (n) -> { currentObject.setBackgroundDownloadFromHttpDelayInSeconds(n.getLongValue()); });
             this.put("bandwidthMode", (n) -> { currentObject.setBandwidthMode(n.getObjectValue(DeliveryOptimizationBandwidth::createFromDiscriminatorValue)); });
             this.put("cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds", (n) -> { currentObject.setCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds(n.getIntegerValue()); });
@@ -274,7 +274,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
         this._cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds = value;
     }
     /**
-     * Sets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​
+     * Sets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.
      * @param value Value to set for the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property.
      * @return a void
      */

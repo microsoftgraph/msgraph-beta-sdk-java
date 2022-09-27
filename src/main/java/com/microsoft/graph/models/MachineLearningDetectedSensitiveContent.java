@@ -37,7 +37,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MachineLearningDetectedSensitiveContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("matchTolerance", (n) -> { currentObject.setMatchTolerance(n.getEnumValue(MlClassificationMatchTolerance.class)); });
             this.put("modelVersion", (n) -> { currentObject.setModelVersion(n.getStringValue()); });
         }};

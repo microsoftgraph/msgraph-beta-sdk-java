@@ -60,7 +60,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NotifyUserAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionLastModifiedDateTime", (n) -> { currentObject.setActionLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("emailText", (n) -> { currentObject.setEmailText(n.getStringValue()); });
             this.put("overrideOption", (n) -> { currentObject.setOverrideOption(n.getEnumValue(OverrideOption.class)); });

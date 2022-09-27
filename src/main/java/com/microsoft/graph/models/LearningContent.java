@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class LearningContent extends Entity implements Parsable {
     /** Keywords, topics, and other tags associated with the learning content. Optional. */
     private java.util.List<String> _additionalTags;
@@ -128,7 +128,7 @@ public class LearningContent extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LearningContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("additionalTags", (n) -> { currentObject.setAdditionalTags(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("contentWebUrl", (n) -> { currentObject.setContentWebUrl(n.getStringValue()); });
             this.put("contributor", (n) -> { currentObject.setContributor(n.getStringValue()); });

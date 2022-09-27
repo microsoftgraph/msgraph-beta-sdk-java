@@ -52,7 +52,7 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkContentCameraConfiguration currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("isContentCameraInverted", (n) -> { currentObject.setIsContentCameraInverted(n.getBooleanValue()); });
             this.put("isContentCameraOptional", (n) -> { currentObject.setIsContentCameraOptional(n.getBooleanValue()); });
             this.put("isContentEnhancementEnabled", (n) -> { currentObject.setIsContentEnhancementEnabled(n.getBooleanValue()); });

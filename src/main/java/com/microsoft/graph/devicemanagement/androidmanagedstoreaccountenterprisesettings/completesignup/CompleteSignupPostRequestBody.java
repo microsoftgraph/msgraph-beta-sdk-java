@@ -54,7 +54,7 @@ public class CompleteSignupPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CompleteSignupPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("enterpriseToken", (n) -> { currentObject.setEnterpriseToken(n.getStringValue()); });
         }};
     }

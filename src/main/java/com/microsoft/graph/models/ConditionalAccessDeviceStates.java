@@ -58,7 +58,7 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessDeviceStates currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("excludeStates", (n) -> { currentObject.setExcludeStates(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeStates", (n) -> { currentObject.setIncludeStates(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

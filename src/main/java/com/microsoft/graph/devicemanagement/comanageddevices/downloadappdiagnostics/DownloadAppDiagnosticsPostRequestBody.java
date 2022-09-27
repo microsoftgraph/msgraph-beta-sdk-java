@@ -47,7 +47,7 @@ public class DownloadAppDiagnosticsPostRequestBody implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DownloadAppDiagnosticsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("request", (n) -> { currentObject.setRequest(n.getObjectValue(PowerliftDownloadRequest::createFromDiscriminatorValue)); });
         }};
     }

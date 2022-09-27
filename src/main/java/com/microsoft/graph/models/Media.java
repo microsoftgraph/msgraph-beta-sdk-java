@@ -50,7 +50,7 @@ public class Media implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Media currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("isTranscriptionShown", (n) -> { currentObject.setIsTranscriptionShown(n.getBooleanValue()); });
             this.put("mediaSource", (n) -> { currentObject.setMediaSource(n.getObjectValue(MediaSource::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

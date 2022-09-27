@@ -82,7 +82,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcGalleryImage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
             this.put("expirationDate", (n) -> { currentObject.setExpirationDate(n.getLocalDateValue()); });

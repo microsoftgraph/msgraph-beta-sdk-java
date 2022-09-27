@@ -152,7 +152,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettings currentObject = this;
-        return new HashMap<>(14) {{
+        return new HashMap<String, Consumer<ParseNode>>(14) {{
             this.put("androidDeviceAdministratorEnrollmentEnabled", (n) -> { currentObject.setAndroidDeviceAdministratorEnrollmentEnabled(n.getBooleanValue()); });
             this.put("derivedCredentialProvider", (n) -> { currentObject.setDerivedCredentialProvider(n.getEnumValue(DerivedCredentialProviderType.class)); });
             this.put("derivedCredentialUrl", (n) -> { currentObject.setDerivedCredentialUrl(n.getStringValue()); });

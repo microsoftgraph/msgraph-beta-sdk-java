@@ -69,7 +69,7 @@ public class VpnServer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VpnServer currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("isDefaultServer", (n) -> { currentObject.setIsDefaultServer(n.getBooleanValue()); });

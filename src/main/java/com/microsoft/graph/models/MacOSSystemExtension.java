@@ -59,7 +59,7 @@ public class MacOSSystemExtension implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSSystemExtension currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("teamIdentifier", (n) -> { currentObject.setTeamIdentifier(n.getStringValue()); });

@@ -101,7 +101,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AospDeviceOwnerDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appsBlockInstallFromUnknownSources", (n) -> { currentObject.setAppsBlockInstallFromUnknownSources(n.getBooleanValue()); });
             this.put("bluetoothBlockConfiguration", (n) -> { currentObject.setBluetoothBlockConfiguration(n.getBooleanValue()); });
             this.put("bluetoothBlocked", (n) -> { currentObject.setBluetoothBlocked(n.getBooleanValue()); });

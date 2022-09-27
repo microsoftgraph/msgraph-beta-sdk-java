@@ -69,7 +69,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InformationProtectionContentLabel currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("assignmentMethod", (n) -> { currentObject.setAssignmentMethod(n.getEnumValue(AssignmentMethod.class)); });
             this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
             this.put("label", (n) -> { currentObject.setLabel(n.getObjectValue(LabelDetails::createFromDiscriminatorValue)); });

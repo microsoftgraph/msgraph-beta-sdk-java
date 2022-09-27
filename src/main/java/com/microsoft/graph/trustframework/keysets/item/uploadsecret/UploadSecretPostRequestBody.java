@@ -60,7 +60,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UploadSecretPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("exp", (n) -> { currentObject.setExp(n.getLongValue()); });
             this.put("k", (n) -> { currentObject.setK(n.getStringValue()); });
             this.put("nbf", (n) -> { currentObject.setNbf(n.getLongValue()); });

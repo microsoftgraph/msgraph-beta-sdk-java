@@ -62,7 +62,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Acl currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("accessType", (n) -> { currentObject.setAccessType(n.getEnumValue(AccessType.class)); });
             this.put("identitySource", (n) -> { currentObject.setIdentitySource(n.getEnumValue(IdentitySourceType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

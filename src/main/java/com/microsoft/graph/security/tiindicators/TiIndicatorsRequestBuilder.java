@@ -40,9 +40,9 @@ public class TiIndicatorsRequestBuilder {
         return new DeleteTiIndicatorsByExternalIdRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The submitTiIndicators property */
     @javax.annotation.Nonnull
     public SubmitTiIndicatorsRequestBuilder submitTiIndicators() {
@@ -54,7 +54,7 @@ public class TiIndicatorsRequestBuilder {
         return new UpdateTiIndicatorsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new TiIndicatorsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -65,7 +65,7 @@ public class TiIndicatorsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/security/tiIndicators{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -77,13 +77,13 @@ public class TiIndicatorsRequestBuilder {
      */
     public TiIndicatorsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/security/tiIndicators{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get tiIndicators from security
+     * Retrieve a list of tiIndicator objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -91,7 +91,7 @@ public class TiIndicatorsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get tiIndicators from security
+     * Retrieve a list of tiIndicator objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -113,7 +113,7 @@ public class TiIndicatorsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to tiIndicators for security
+     * Create a new tiIndicator object.
      * @param body 
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class TiIndicatorsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to tiIndicators for security
+     * Create a new tiIndicator object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -146,13 +146,13 @@ public class TiIndicatorsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get tiIndicators from security
+     * Retrieve a list of tiIndicator objects.
      * @return a CompletableFuture of TiIndicatorCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TiIndicatorCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -162,14 +162,14 @@ public class TiIndicatorsRequestBuilder {
         }
     }
     /**
-     * Get tiIndicators from security
+     * Retrieve a list of tiIndicator objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TiIndicatorCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TiIndicatorCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TiIndicatorsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -179,7 +179,7 @@ public class TiIndicatorsRequestBuilder {
         }
     }
     /**
-     * Get tiIndicators from security
+     * Retrieve a list of tiIndicator objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of TiIndicatorCollectionResponse
@@ -187,7 +187,7 @@ public class TiIndicatorsRequestBuilder {
     public java.util.concurrent.CompletableFuture<TiIndicatorCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TiIndicatorsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -197,14 +197,14 @@ public class TiIndicatorsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to tiIndicators for security
+     * Create a new tiIndicator object.
      * @param body 
      * @return a CompletableFuture of tiIndicator
      */
     public java.util.concurrent.CompletableFuture<TiIndicator> post(@javax.annotation.Nonnull final TiIndicator body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -214,7 +214,7 @@ public class TiIndicatorsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to tiIndicators for security
+     * Create a new tiIndicator object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tiIndicator
@@ -222,7 +222,7 @@ public class TiIndicatorsRequestBuilder {
     public java.util.concurrent.CompletableFuture<TiIndicator> post(@javax.annotation.Nonnull final TiIndicator body, @javax.annotation.Nullable final java.util.function.Consumer<TiIndicatorsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -232,7 +232,7 @@ public class TiIndicatorsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to tiIndicators for security
+     * Create a new tiIndicator object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -242,7 +242,7 @@ public class TiIndicatorsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -251,7 +251,7 @@ public class TiIndicatorsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get tiIndicators from security */
+    /** Retrieve a list of tiIndicator objects. */
     public class TiIndicatorsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -293,7 +293,7 @@ public class TiIndicatorsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TiIndicatorsRequestBuilderGetQueryParameters queryParameters = new TiIndicatorsRequestBuilderGetQueryParameters();
@@ -311,7 +311,7 @@ public class TiIndicatorsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new tiIndicatorsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

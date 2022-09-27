@@ -121,7 +121,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDefenderApplicationControlSupplementalPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyAssignment::createFromDiscriminatorValue)); });
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("contentFileName", (n) -> { currentObject.setContentFileName(n.getStringValue()); });

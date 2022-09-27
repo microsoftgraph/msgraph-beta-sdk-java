@@ -66,7 +66,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserRegistrationDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultMfaMethod", (n) -> { currentObject.setDefaultMfaMethod(n.getEnumValue(DefaultMfaMethodType.class)); });
             this.put("isAdmin", (n) -> { currentObject.setIsAdmin(n.getBooleanValue()); });
             this.put("isMfaCapable", (n) -> { currentObject.setIsMfaCapable(n.getBooleanValue()); });

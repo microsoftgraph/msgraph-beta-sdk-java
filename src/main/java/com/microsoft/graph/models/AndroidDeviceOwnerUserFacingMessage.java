@@ -59,7 +59,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerUserFacingMessage currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("defaultMessage", (n) -> { currentObject.setDefaultMessage(n.getStringValue()); });
             this.put("localizedMessages", (n) -> { currentObject.setLocalizedMessages(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

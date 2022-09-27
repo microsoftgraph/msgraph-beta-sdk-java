@@ -52,7 +52,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateDynamicMembershipResult currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("membershipRule", (n) -> { currentObject.setMembershipRule(n.getStringValue()); });
             this.put("membershipRuleEvaluationDetails", (n) -> { currentObject.setMembershipRuleEvaluationDetails(n.getObjectValue(ExpressionEvaluationDetails::createFromDiscriminatorValue)); });
             this.put("membershipRuleEvaluationResult", (n) -> { currentObject.setMembershipRuleEvaluationResult(n.getBooleanValue()); });

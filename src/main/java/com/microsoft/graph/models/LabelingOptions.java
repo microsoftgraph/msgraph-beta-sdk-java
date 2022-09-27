@@ -78,7 +78,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LabelingOptions currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("assignmentMethod", (n) -> { currentObject.setAssignmentMethod(n.getEnumValue(AssignmentMethod.class)); });
             this.put("downgradeJustification", (n) -> { currentObject.setDowngradeJustification(n.getObjectValue(DowngradeJustification::createFromDiscriminatorValue)); });
             this.put("extendedProperties", (n) -> { currentObject.setExtendedProperties(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });

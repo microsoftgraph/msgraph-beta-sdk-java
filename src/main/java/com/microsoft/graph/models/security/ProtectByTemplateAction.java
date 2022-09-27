@@ -35,7 +35,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProtectByTemplateAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
         }};
     }

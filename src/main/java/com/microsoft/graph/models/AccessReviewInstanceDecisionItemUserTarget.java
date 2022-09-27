@@ -39,7 +39,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItemUserTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });

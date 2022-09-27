@@ -81,7 +81,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserCredentialUsageDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authMethod", (n) -> { currentObject.setAuthMethod(n.getEnumValue(UsageAuthMethod.class)); });
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
             this.put("failureReason", (n) -> { currentObject.setFailureReason(n.getStringValue()); });

@@ -52,7 +52,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecordingInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

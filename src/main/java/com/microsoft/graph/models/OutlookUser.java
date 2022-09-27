@@ -41,7 +41,7 @@ public class OutlookUser extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutlookUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("masterCategories", (n) -> { currentObject.setMasterCategories(n.getCollectionOfObjectValues(OutlookCategory::createFromDiscriminatorValue)); });
             this.put("taskFolders", (n) -> { currentObject.setTaskFolders(n.getCollectionOfObjectValues(OutlookTaskFolder::createFromDiscriminatorValue)); });
             this.put("taskGroups", (n) -> { currentObject.setTaskGroups(n.getCollectionOfObjectValues(OutlookTaskGroup::createFromDiscriminatorValue)); });

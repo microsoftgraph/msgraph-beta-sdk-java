@@ -34,7 +34,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     /** Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted' */
     private java.util.List<String> _targetGroupIds;
     /**
-     * Instantiates a new AndroidManagedStoreAccountEnterpriseSettings and sets the default values.
+     * Instantiates a new androidManagedStoreAccountEnterpriseSettings and sets the default values.
      * @return a void
      */
     public AndroidManagedStoreAccountEnterpriseSettings() {
@@ -44,7 +44,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidManagedStoreAccountEnterpriseSettings
+     * @return a androidManagedStoreAccountEnterpriseSettings
      */
     @javax.annotation.Nonnull
     public static AndroidManagedStoreAccountEnterpriseSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -98,7 +98,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedStoreAccountEnterpriseSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("androidDeviceOwnerFullyManagedEnrollmentEnabled", (n) -> { currentObject.setAndroidDeviceOwnerFullyManagedEnrollmentEnabled(n.getBooleanValue()); });
             this.put("bindStatus", (n) -> { currentObject.setBindStatus(n.getEnumValue(AndroidManagedStoreAccountBindStatus.class)); });
             this.put("companyCodes", (n) -> { currentObject.setCompanyCodes(n.getCollectionOfObjectValues(AndroidEnrollmentCompanyCode::createFromDiscriminatorValue)); });

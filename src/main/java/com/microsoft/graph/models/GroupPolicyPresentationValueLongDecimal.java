@@ -35,7 +35,7 @@ public class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresenta
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationValueLongDecimal currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("value", (n) -> { currentObject.setValue(n.getLongValue()); });
         }};
     }

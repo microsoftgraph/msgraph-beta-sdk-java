@@ -48,7 +48,7 @@ public class ActivitySettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActivitySettings currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("urlToItemResolvers", (n) -> { currentObject.setUrlToItemResolvers(n.getCollectionOfObjectValues(UrlToItemResolverBase::createFromDiscriminatorValue)); });
         }};

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable {
     /** User source or SharePoint site data source as non-custodial data source. */
     private DataSource _dataSource;
@@ -46,7 +46,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryNoncustodialDataSource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("dataSource", (n) -> { currentObject.setDataSource(n.getObjectValue(DataSource::createFromDiscriminatorValue)); });
             this.put("lastIndexOperation", (n) -> { currentObject.setLastIndexOperation(n.getObjectValue(EdiscoveryIndexOperation::createFromDiscriminatorValue)); });
         }};

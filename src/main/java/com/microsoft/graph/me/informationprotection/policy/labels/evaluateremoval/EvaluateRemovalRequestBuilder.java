@@ -17,11 +17,11 @@ import java.util.Objects;
 /** Provides operations to call the evaluateRemoval method. */
 public class EvaluateRemovalRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new EvaluateRemovalRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -32,7 +32,7 @@ public class EvaluateRemovalRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/informationProtection/policy/labels/microsoft.graph.evaluateRemoval";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -44,13 +44,13 @@ public class EvaluateRemovalRequestBuilder {
      */
     public EvaluateRemovalRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/me/informationProtection/policy/labels/microsoft.graph.evaluateRemoval";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action evaluateRemoval
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following: 
      * @param body 
      * @return a RequestInformation
      */
@@ -59,7 +59,7 @@ public class EvaluateRemovalRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Invoke action evaluateRemoval
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following: 
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -83,14 +83,14 @@ public class EvaluateRemovalRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action evaluateRemoval
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following: 
      * @param body 
      * @return a CompletableFuture of evaluateRemovalResponse
      */
     public java.util.concurrent.CompletableFuture<EvaluateRemovalResponse> post(@javax.annotation.Nonnull final EvaluateRemovalPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -100,7 +100,7 @@ public class EvaluateRemovalRequestBuilder {
         }
     }
     /**
-     * Invoke action evaluateRemoval
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following: 
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of evaluateRemovalResponse
@@ -108,7 +108,7 @@ public class EvaluateRemovalRequestBuilder {
     public java.util.concurrent.CompletableFuture<EvaluateRemovalResponse> post(@javax.annotation.Nonnull final EvaluateRemovalPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<EvaluateRemovalRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -118,7 +118,7 @@ public class EvaluateRemovalRequestBuilder {
         }
     }
     /**
-     * Invoke action evaluateRemoval
+     * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key/value pairs, the API returns an informationProtectionAction that contains some combination of one of more of the following: 
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -128,7 +128,7 @@ public class EvaluateRemovalRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -144,7 +144,7 @@ public class EvaluateRemovalRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new evaluateRemovalRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

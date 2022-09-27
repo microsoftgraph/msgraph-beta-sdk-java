@@ -58,7 +58,7 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateLabelJobResultGroup currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("automatic", (n) -> { currentObject.setAutomatic(n.getObjectValue(EvaluateLabelJobResult::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recommended", (n) -> { currentObject.setRecommended(n.getObjectValue(EvaluateLabelJobResult::createFromDiscriminatorValue)); });

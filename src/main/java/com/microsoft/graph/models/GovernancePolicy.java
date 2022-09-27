@@ -58,7 +58,7 @@ public class GovernancePolicy implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernancePolicy currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("decisionMakerCriteria", (n) -> { currentObject.setDecisionMakerCriteria(n.getCollectionOfObjectValues(GovernanceCriteria::createFromDiscriminatorValue)); });
             this.put("notificationPolicy", (n) -> { currentObject.setNotificationPolicy(n.getObjectValue(GovernanceNotificationPolicy::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

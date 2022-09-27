@@ -33,7 +33,7 @@ public class EdgeHomeButtonHidden extends EdgeHomeButtonConfiguration implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdgeHomeButtonHidden currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**

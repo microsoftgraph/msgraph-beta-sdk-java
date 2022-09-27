@@ -58,7 +58,7 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleOwnerTypeEnrollmentType currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("enrollmentType", (n) -> { currentObject.setEnrollmentType(n.getEnumValue(AppleUserInitiatedEnrollmentType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("ownerType", (n) -> { currentObject.setOwnerType(n.getEnumValue(ManagedDeviceOwnerType.class)); });

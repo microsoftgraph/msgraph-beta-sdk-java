@@ -47,7 +47,7 @@ public class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGloba
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerGlobalProxyDirect currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("excludedHosts", (n) -> { currentObject.setExcludedHosts(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("host", (n) -> { currentObject.setHost(n.getStringValue()); });
             this.put("port", (n) -> { currentObject.setPort(n.getIntegerValue()); });

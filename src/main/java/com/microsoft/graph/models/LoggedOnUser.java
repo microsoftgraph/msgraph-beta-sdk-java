@@ -52,7 +52,7 @@ public class LoggedOnUser implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LoggedOnUser currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("lastLogOnDateTime", (n) -> { currentObject.setLastLogOnDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });

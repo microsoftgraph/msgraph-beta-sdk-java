@@ -99,7 +99,7 @@ public class DataClassificationService extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DataClassificationService currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classifyFileJobs", (n) -> { currentObject.setClassifyFileJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
             this.put("classifyTextJobs", (n) -> { currentObject.setClassifyTextJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
             this.put("evaluateDlpPoliciesJobs", (n) -> { currentObject.setEvaluateDlpPoliciesJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });

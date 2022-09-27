@@ -58,7 +58,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationTrainingUserCoverage currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("attackSimulationUser", (n) -> { currentObject.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userTrainings", (n) -> { currentObject.setUserTrainings(n.getCollectionOfObjectValues(UserTrainingStatusInfo::createFromDiscriminatorValue)); });

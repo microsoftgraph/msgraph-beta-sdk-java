@@ -51,7 +51,7 @@ public class OrganizationalMessageLocalizedText implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageLocalizedText currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("locale", (n) -> { currentObject.setLocale(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("text", (n) -> { currentObject.setText(n.getObjectValue(OrganizationalMessageText::createFromDiscriminatorValue)); });

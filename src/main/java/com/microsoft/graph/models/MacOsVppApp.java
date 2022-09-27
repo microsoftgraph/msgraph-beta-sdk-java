@@ -82,7 +82,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOsVppApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
             this.put("assignedLicenses", (n) -> { currentObject.setAssignedLicenses(n.getCollectionOfObjectValues(MacOsVppAppAssignedLicense::createFromDiscriminatorValue)); });
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });

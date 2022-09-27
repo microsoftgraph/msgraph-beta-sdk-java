@@ -73,7 +73,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VppTokenLicenseSummary currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
             this.put("availableLicenseCount", (n) -> { currentObject.setAvailableLicenseCount(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

@@ -53,7 +53,7 @@ public class OrganizationalMessageVariant implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageVariant currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("localizedTexts", (n) -> { currentObject.setLocalizedTexts(n.getCollectionOfObjectValues(OrganizationalMessageLocalizedText::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

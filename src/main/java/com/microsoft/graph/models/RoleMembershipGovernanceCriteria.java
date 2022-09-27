@@ -37,7 +37,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleMembershipGovernanceCriteria currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("roleId", (n) -> { currentObject.setRoleId(n.getStringValue()); });
             this.put("roleTemplateId", (n) -> { currentObject.setRoleTemplateId(n.getStringValue()); });
         }};

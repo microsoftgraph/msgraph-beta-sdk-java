@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PinnedChatMessageInfo extends Entity implements Parsable {
     /** Represents details about the chat message that is pinned. */
     private ChatMessage _message;
@@ -36,7 +36,7 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PinnedChatMessageInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("message", (n) -> { currentObject.setMessage(n.getObjectValue(ChatMessage::createFromDiscriminatorValue)); });
         }};
     }

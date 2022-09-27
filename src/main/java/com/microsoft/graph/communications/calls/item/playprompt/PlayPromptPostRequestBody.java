@@ -59,7 +59,7 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlayPromptPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
             this.put("loop", (n) -> { currentObject.setLoop(n.getBooleanValue()); });
             this.put("prompts", (n) -> { currentObject.setPrompts(n.getCollectionOfObjectValues(Prompt::createFromDiscriminatorValue)); });

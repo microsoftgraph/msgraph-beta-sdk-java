@@ -102,7 +102,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RetireScheduledManagedDevice currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("complianceState", (n) -> { currentObject.setComplianceState(n.getEnumValue(ComplianceStatus.class)); });
             this.put("deviceCompliancePolicyId", (n) -> { currentObject.setDeviceCompliancePolicyId(n.getStringValue()); });
             this.put("deviceCompliancePolicyName", (n) -> { currentObject.setDeviceCompliancePolicyName(n.getStringValue()); });

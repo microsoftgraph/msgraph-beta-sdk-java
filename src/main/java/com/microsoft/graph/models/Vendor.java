@@ -137,7 +137,7 @@ public class Vendor extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Vendor currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
             this.put("balance", (n) -> { currentObject.setBalance(n.getBigDecimalValue()); });
             this.put("blocked", (n) -> { currentObject.setBlocked(n.getStringValue()); });

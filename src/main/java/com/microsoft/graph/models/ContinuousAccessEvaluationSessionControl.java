@@ -48,7 +48,7 @@ public class ContinuousAccessEvaluationSessionControl implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContinuousAccessEvaluationSessionControl currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("mode", (n) -> { currentObject.setMode(n.getEnumValue(ContinuousAccessEvaluationMode.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

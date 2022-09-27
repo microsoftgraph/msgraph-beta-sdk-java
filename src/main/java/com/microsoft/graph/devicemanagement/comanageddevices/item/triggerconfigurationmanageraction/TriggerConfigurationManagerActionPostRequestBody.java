@@ -55,7 +55,7 @@ public class TriggerConfigurationManagerActionPostRequestBody implements Additio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TriggerConfigurationManagerActionPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("configurationManagerAction", (n) -> { currentObject.setConfigurationManagerAction(n.getObjectValue(ConfigurationManagerAction::createFromDiscriminatorValue)); });
         }};
     }

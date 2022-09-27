@@ -51,7 +51,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceAndAppManagementAssignedRoleDetails currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("roleAssignmentIds", (n) -> { currentObject.setRoleAssignmentIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("roleDefinitionIds", (n) -> { currentObject.setRoleDefinitionIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -89,8 +89,6 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeCollectionOfPrimitiveValues("roleAssignmentIds", this.getRoleAssignmentIds());
-        writer.writeCollectionOfPrimitiveValues("roleDefinitionIds", this.getRoleDefinitionIds());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

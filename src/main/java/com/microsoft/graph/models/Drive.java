@@ -81,7 +81,7 @@ public class Drive extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Drive currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ItemActivityOLD::createFromDiscriminatorValue)); });
             this.put("bundles", (n) -> { currentObject.setBundles(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
             this.put("driveType", (n) -> { currentObject.setDriveType(n.getStringValue()); });

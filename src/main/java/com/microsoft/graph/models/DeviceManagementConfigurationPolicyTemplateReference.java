@@ -55,7 +55,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationPolicyTemplateReference currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("templateDisplayName", (n) -> { currentObject.setTemplateDisplayName(n.getStringValue()); });
             this.put("templateDisplayVersion", (n) -> { currentObject.setTemplateDisplayVersion(n.getStringValue()); });
@@ -111,8 +111,6 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeStringValue("templateDisplayName", this.getTemplateDisplayName());
-        writer.writeStringValue("templateDisplayVersion", this.getTemplateDisplayVersion());
         writer.writeEnumValue("templateFamily", this.getTemplateFamily());
         writer.writeStringValue("templateId", this.getTemplateId());
         writer.writeAdditionalData(this.getAdditionalData());

@@ -72,7 +72,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkSpeakerConfiguration currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("defaultCommunicationSpeaker", (n) -> { currentObject.setDefaultCommunicationSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
             this.put("defaultSpeaker", (n) -> { currentObject.setDefaultSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
             this.put("isCommunicationSpeakerOptional", (n) -> { currentObject.setIsCommunicationSpeakerOptional(n.getBooleanValue()); });

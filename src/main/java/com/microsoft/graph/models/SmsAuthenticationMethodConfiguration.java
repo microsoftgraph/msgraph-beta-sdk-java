@@ -35,7 +35,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SmsAuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(SmsAuthenticationMethodTarget::createFromDiscriminatorValue)); });
         }};
     }

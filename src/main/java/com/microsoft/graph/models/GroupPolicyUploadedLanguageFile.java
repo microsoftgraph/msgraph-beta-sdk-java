@@ -66,7 +66,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyUploadedLanguageFile currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });

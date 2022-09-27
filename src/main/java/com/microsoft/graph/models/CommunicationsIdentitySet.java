@@ -89,7 +89,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommunicationsIdentitySet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationInstance", (n) -> { currentObject.setApplicationInstance(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
             this.put("assertedIdentity", (n) -> { currentObject.setAssertedIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
             this.put("azureCommunicationServicesUser", (n) -> { currentObject.setAzureCommunicationServicesUser(n.getObjectValue(Identity::createFromDiscriminatorValue)); });

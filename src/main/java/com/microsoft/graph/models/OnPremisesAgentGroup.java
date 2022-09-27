@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class OnPremisesAgentGroup extends Entity implements Parsable {
     /** List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable. */
     private java.util.List<OnPremisesAgent> _agents;
@@ -60,7 +60,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesAgentGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("agents", (n) -> { currentObject.setAgents(n.getCollectionOfObjectValues(OnPremisesAgent::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });

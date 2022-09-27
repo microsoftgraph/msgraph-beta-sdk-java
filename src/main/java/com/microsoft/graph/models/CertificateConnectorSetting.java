@@ -84,7 +84,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CertificateConnectorSetting currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("certExpiryTime", (n) -> { currentObject.setCertExpiryTime(n.getOffsetDateTimeValue()); });
             this.put("connectorVersion", (n) -> { currentObject.setConnectorVersion(n.getStringValue()); });
             this.put("enrollmentError", (n) -> { currentObject.setEnrollmentError(n.getStringValue()); });

@@ -67,7 +67,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDomainJoinConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeDirectoryDomainName", (n) -> { currentObject.setActiveDirectoryDomainName(n.getStringValue()); });
             this.put("computerNameStaticPrefix", (n) -> { currentObject.setComputerNameStaticPrefix(n.getStringValue()); });
             this.put("computerNameSuffixRandomCharCount", (n) -> { currentObject.setComputerNameSuffixRandomCharCount(n.getIntegerValue()); });

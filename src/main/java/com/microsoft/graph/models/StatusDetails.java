@@ -67,7 +67,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StatusDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
             this.put("errorCategory", (n) -> { currentObject.setErrorCategory(n.getEnumValue(ProvisioningStatusErrorCategory.class)); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });

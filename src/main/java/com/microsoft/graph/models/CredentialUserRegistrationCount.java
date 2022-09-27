@@ -37,7 +37,7 @@ public class CredentialUserRegistrationCount extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CredentialUserRegistrationCount currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("totalUserCount", (n) -> { currentObject.setTotalUserCount(n.getLongValue()); });
             this.put("userRegistrationCounts", (n) -> { currentObject.setUserRegistrationCounts(n.getCollectionOfObjectValues(UserRegistrationCount::createFromDiscriminatorValue)); });
         }};

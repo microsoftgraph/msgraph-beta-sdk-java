@@ -81,7 +81,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosSingleSignOnSettings currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("allowedAppsList", (n) -> { currentObject.setAllowedAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
             this.put("allowedUrls", (n) -> { currentObject.setAllowedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

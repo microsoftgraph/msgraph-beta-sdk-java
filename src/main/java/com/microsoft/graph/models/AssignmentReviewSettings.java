@@ -81,7 +81,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentReviewSettings currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("accessReviewTimeoutBehavior", (n) -> { currentObject.setAccessReviewTimeoutBehavior(n.getEnumValue(AccessReviewTimeoutBehavior.class)); });
             this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
             this.put("isAccessRecommendationEnabled", (n) -> { currentObject.setIsAccessRecommendationEnabled(n.getBooleanValue()); });

@@ -75,7 +75,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationQuarantine currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("currentBegan", (n) -> { currentObject.setCurrentBegan(n.getOffsetDateTimeValue()); });
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(SynchronizationError::createFromDiscriminatorValue)); });
             this.put("nextAttempt", (n) -> { currentObject.setNextAttempt(n.getOffsetDateTimeValue()); });

@@ -60,7 +60,7 @@ public class TeamworkPeripheralHealth implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkPeripheralHealth currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("connection", (n) -> { currentObject.setConnection(n.getObjectValue(TeamworkConnection::createFromDiscriminatorValue)); });
             this.put("isOptional", (n) -> { currentObject.setIsOptional(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

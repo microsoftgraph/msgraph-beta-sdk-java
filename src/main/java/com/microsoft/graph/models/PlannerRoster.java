@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PlannerRoster extends Entity implements Parsable {
     /** Retrieves the members of the plannerRoster. */
     private java.util.List<PlannerRosterMember> _members;
@@ -38,7 +38,7 @@ public class PlannerRoster extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerRoster currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(PlannerRosterMember::createFromDiscriminatorValue)); });
             this.put("plans", (n) -> { currentObject.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         }};

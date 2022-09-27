@@ -52,7 +52,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchQuery currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("query_string", (n) -> { currentObject.setQuery_string(n.getObjectValue(SearchQueryString::createFromDiscriminatorValue)); });
             this.put("queryString", (n) -> { currentObject.setQueryString(n.getStringValue()); });
@@ -99,9 +99,9 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeObjectValue("query_string", this.getQuery_string());
         writer.writeStringValue("queryString", this.getQueryString());
         writer.writeStringValue("queryTemplate", this.getQueryTemplate());
+        writer.writeObjectValue("query_string", this.getQuery_string());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

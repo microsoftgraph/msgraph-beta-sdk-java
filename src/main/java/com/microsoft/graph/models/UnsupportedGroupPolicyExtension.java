@@ -50,7 +50,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnsupportedGroupPolicyExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("extensionType", (n) -> { currentObject.setExtensionType(n.getStringValue()); });
             this.put("namespaceUrl", (n) -> { currentObject.setNamespaceUrl(n.getStringValue()); });
             this.put("nodeName", (n) -> { currentObject.setNodeName(n.getStringValue()); });

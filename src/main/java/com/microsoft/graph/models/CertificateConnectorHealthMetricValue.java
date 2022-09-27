@@ -70,7 +70,7 @@ public class CertificateConnectorHealthMetricValue implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CertificateConnectorHealthMetricValue currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("dateTime", (n) -> { currentObject.setDateTime(n.getOffsetDateTimeValue()); });
             this.put("failureCount", (n) -> { currentObject.setFailureCount(n.getLongValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

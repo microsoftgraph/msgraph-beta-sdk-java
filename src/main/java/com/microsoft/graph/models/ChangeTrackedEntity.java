@@ -21,7 +21,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ChangeTrackedEntity extends Entity implements Parsable {
     /** The createdBy property */
     private IdentitySet _createdBy;
@@ -91,7 +91,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChangeTrackedEntity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -123,9 +123,6 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("createdBy", this.getCreatedBy());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
      * Sets the createdBy property value. The createdBy property

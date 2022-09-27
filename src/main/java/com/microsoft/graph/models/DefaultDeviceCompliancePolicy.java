@@ -33,7 +33,7 @@ public class DefaultDeviceCompliancePolicy extends DeviceCompliancePolicy implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DefaultDeviceCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**

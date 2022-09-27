@@ -35,7 +35,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsAppSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isChatResourceSpecificConsentEnabled", (n) -> { currentObject.setIsChatResourceSpecificConsentEnabled(n.getBooleanValue()); });
         }};
     }

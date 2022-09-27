@@ -1,5 +1,6 @@
 package com.microsoft.graph.directoryroletemplates;
 
+import com.microsoft.graph.directoryroletemplates.count.CountRequestBuilder;
 import com.microsoft.graph.directoryroletemplates.getbyids.GetByIdsRequestBuilder;
 import com.microsoft.graph.directoryroletemplates.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
 import com.microsoft.graph.directoryroletemplates.validateproperties.ValidatePropertiesRequestBuilder;
@@ -22,6 +23,11 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of directoryRoleTemplate entities. */
 public class DirectoryRoleTemplatesRequestBuilder {
+    /** The Count property */
+    @javax.annotation.Nonnull
+    public CountRequestBuilder count() {
+        return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The getByIds property */
     @javax.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
@@ -33,11 +39,11 @@ public class DirectoryRoleTemplatesRequestBuilder {
         return new GetUserOwnedObjectsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /** The validateProperties property */
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
@@ -52,8 +58,8 @@ public class DirectoryRoleTemplatesRequestBuilder {
     public DirectoryRoleTemplatesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/directoryRoleTemplates{?%24search,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/directoryRoleTemplates{?%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -64,8 +70,8 @@ public class DirectoryRoleTemplatesRequestBuilder {
      * @return a void
      */
     public DirectoryRoleTemplatesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/directoryRoleTemplates{?%24search,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/directoryRoleTemplates{?%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -140,7 +146,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryRoleTemplateCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -157,7 +163,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryRoleTemplateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -175,7 +181,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryRoleTemplateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -192,7 +198,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> post(@javax.annotation.Nonnull final DirectoryRoleTemplate body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -210,7 +216,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> post(@javax.annotation.Nonnull final DirectoryRoleTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -230,7 +236,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -241,6 +247,18 @@ public class DirectoryRoleTemplatesRequestBuilder {
     }
     /** Retrieve a list of directoryroletemplate objects. */
     public class DirectoryRoleTemplatesRequestBuilderGetQueryParameters {
+        /** Include count of items */
+        @QueryParameter(name = "%24count")
+        @javax.annotation.Nullable
+        public Boolean count;
+        /** Expand related entities */
+        @QueryParameter(name = "%24expand")
+        @javax.annotation.Nullable
+        public String[] expand;
+        /** Filter items by property values */
+        @QueryParameter(name = "%24filter")
+        @javax.annotation.Nullable
+        public String filter;
         /** Order items by property values */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
@@ -253,6 +271,10 @@ public class DirectoryRoleTemplatesRequestBuilder {
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
+        /** Skip the first n items */
+        @QueryParameter(name = "%24skip")
+        @javax.annotation.Nullable
+        public Integer skip;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration {
@@ -261,7 +283,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DirectoryRoleTemplatesRequestBuilderGetQueryParameters queryParameters = new DirectoryRoleTemplatesRequestBuilderGetQueryParameters();
@@ -279,7 +301,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new directoryRoleTemplatesRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

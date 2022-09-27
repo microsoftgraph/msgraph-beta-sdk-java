@@ -429,7 +429,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceConfigurationAssignment::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -526,7 +526,6 @@ public class DeviceConfiguration extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("groupAssignments", this.getGroupAssignments());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
-        writer.writeBooleanValue("supportsScopeTags", this.getSupportsScopeTags());
         writer.writeCollectionOfObjectValues("userStatuses", this.getUserStatuses());
         writer.writeObjectValue("userStatusOverview", this.getUserStatusOverview());
         writer.writeIntegerValue("version", this.getVersion());

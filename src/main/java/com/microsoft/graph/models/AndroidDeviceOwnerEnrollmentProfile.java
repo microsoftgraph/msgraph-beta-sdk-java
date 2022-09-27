@@ -147,7 +147,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountId", (n) -> { currentObject.setAccountId(n.getStringValue()); });
             this.put("configureWifi", (n) -> { currentObject.setConfigureWifi(n.getBooleanValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });

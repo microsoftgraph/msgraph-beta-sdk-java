@@ -74,7 +74,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskForceUpdateSchedule currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("dayofMonth", (n) -> { currentObject.setDayofMonth(n.getIntegerValue()); });
             this.put("dayofWeek", (n) -> { currentObject.setDayofWeek(n.getEnumValue(DayOfWeek.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

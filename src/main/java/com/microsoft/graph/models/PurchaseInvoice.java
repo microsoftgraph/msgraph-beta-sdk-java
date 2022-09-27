@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class PurchaseInvoice extends Entity implements Parsable {
     /** The buyFromAddress property */
     private PostalAddressType _buyFromAddress;
@@ -70,7 +71,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
     /** The vendorNumber property */
     private String _vendorNumber;
     /**
-     * Instantiates a new PurchaseInvoice and sets the default values.
+     * Instantiates a new purchaseInvoice and sets the default values.
      * @return a void
      */
     public PurchaseInvoice() {
@@ -80,7 +81,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PurchaseInvoice
+     * @return a purchaseInvoice
      */
     @javax.annotation.Nonnull
     public static PurchaseInvoice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -150,7 +151,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PurchaseInvoice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("buyFromAddress", (n) -> { currentObject.setBuyFromAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
             this.put("currency", (n) -> { currentObject.setCurrency(n.getObjectValue(Currency::createFromDiscriminatorValue)); });
             this.put("currencyCode", (n) -> { currentObject.setCurrencyCode(n.getStringValue()); });

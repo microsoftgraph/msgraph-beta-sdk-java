@@ -7,10 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Call extends Entity implements Parsable {
     /** The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only. */
-    private java.util.List<String> _activeModalities;
+    private java.util.List<Modality> _activeModalities;
     /** The participant that answered the call. Read-only. */
     private ParticipantInfo _answeredBy;
     /** The audioRoutingGroups property */
@@ -46,13 +46,13 @@ public class Call extends Entity implements Parsable {
     /** The participants property */
     private java.util.List<Participant> _participants;
     /** The requestedModalities property */
-    private java.util.List<String> _requestedModalities;
+    private java.util.List<Modality> _requestedModalities;
     /** The resultInfo property */
     private ResultInfo _resultInfo;
     /** The ringingTimeoutInSeconds property */
     private Integer _ringingTimeoutInSeconds;
     /** The routingPolicies property */
-    private java.util.List<String> _routingPolicies;
+    private java.util.List<RoutingPolicy> _routingPolicies;
     /** The source property */
     private ParticipantInfo _source;
     /** The state property */
@@ -89,10 +89,10 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the activeModalities property value. The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
-     * @return a string
+     * @return a modality
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getActiveModalities() {
+    public java.util.List<Modality> getActiveModalities() {
         return this._activeModalities;
     }
     /**
@@ -174,8 +174,8 @@ public class Call extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Call currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeModalities", (n) -> { currentObject.setActiveModalities(n.getCollectionOfPrimitiveValues(String.class)); });
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
+            this.put("activeModalities", (n) -> { currentObject.setActiveModalities(n.getCollectionOfEnumValues(Modality.class)); });
             this.put("answeredBy", (n) -> { currentObject.setAnsweredBy(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
             this.put("audioRoutingGroups", (n) -> { currentObject.setAudioRoutingGroups(n.getCollectionOfObjectValues(AudioRoutingGroup::createFromDiscriminatorValue)); });
             this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
@@ -193,10 +193,10 @@ public class Call extends Entity implements Parsable {
             this.put("myParticipantId", (n) -> { currentObject.setMyParticipantId(n.getStringValue()); });
             this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(CommsOperation::createFromDiscriminatorValue)); });
             this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
-            this.put("requestedModalities", (n) -> { currentObject.setRequestedModalities(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("requestedModalities", (n) -> { currentObject.setRequestedModalities(n.getCollectionOfEnumValues(Modality.class)); });
             this.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
             this.put("ringingTimeoutInSeconds", (n) -> { currentObject.setRingingTimeoutInSeconds(n.getIntegerValue()); });
-            this.put("routingPolicies", (n) -> { currentObject.setRoutingPolicies(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("routingPolicies", (n) -> { currentObject.setRoutingPolicies(n.getCollectionOfEnumValues(RoutingPolicy.class)); });
             this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(CallState.class)); });
             this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
@@ -273,10 +273,10 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the requestedModalities property value. The requestedModalities property
-     * @return a string
+     * @return a modality
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getRequestedModalities() {
+    public java.util.List<Modality> getRequestedModalities() {
         return this._requestedModalities;
     }
     /**
@@ -297,10 +297,10 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the routingPolicies property value. The routingPolicies property
-     * @return a string
+     * @return a routingPolicy
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getRoutingPolicies() {
+    public java.util.List<RoutingPolicy> getRoutingPolicies() {
         return this._routingPolicies;
     }
     /**
@@ -375,7 +375,7 @@ public class Call extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfPrimitiveValues("activeModalities", this.getActiveModalities());
+        writer.writeCollectionOfEnumValues("activeModalities", this.getActiveModalities());
         writer.writeObjectValue("answeredBy", this.getAnsweredBy());
         writer.writeCollectionOfObjectValues("audioRoutingGroups", this.getAudioRoutingGroups());
         writer.writeStringValue("callbackUri", this.getCallbackUri());
@@ -393,10 +393,10 @@ public class Call extends Entity implements Parsable {
         writer.writeStringValue("myParticipantId", this.getMyParticipantId());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
-        writer.writeCollectionOfPrimitiveValues("requestedModalities", this.getRequestedModalities());
+        writer.writeCollectionOfEnumValues("requestedModalities", this.getRequestedModalities());
         writer.writeObjectValue("resultInfo", this.getResultInfo());
         writer.writeIntegerValue("ringingTimeoutInSeconds", this.getRingingTimeoutInSeconds());
-        writer.writeCollectionOfPrimitiveValues("routingPolicies", this.getRoutingPolicies());
+        writer.writeCollectionOfEnumValues("routingPolicies", this.getRoutingPolicies());
         writer.writeObjectValue("source", this.getSource());
         writer.writeEnumValue("state", this.getState());
         writer.writeStringValue("subject", this.getSubject());
@@ -411,7 +411,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the activeModalities property.
      * @return a void
      */
-    public void setActiveModalities(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setActiveModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
         this._activeModalities = value;
     }
     /**
@@ -555,7 +555,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the requestedModalities property.
      * @return a void
      */
-    public void setRequestedModalities(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRequestedModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
         this._requestedModalities = value;
     }
     /**
@@ -579,7 +579,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the routingPolicies property.
      * @return a void
      */
-    public void setRoutingPolicies(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoutingPolicies(@javax.annotation.Nullable final java.util.List<RoutingPolicy> value) {
         this._routingPolicies = value;
     }
     /**

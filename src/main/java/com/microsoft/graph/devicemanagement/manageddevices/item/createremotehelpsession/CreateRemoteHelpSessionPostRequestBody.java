@@ -46,7 +46,7 @@ public class CreateRemoteHelpSessionPostRequestBody implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateRemoteHelpSessionPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("sessionType", (n) -> { currentObject.setSessionType(n.getStringValue()); });
         }};
     }

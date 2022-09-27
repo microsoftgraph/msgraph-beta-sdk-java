@@ -58,7 +58,7 @@ public class DeviceManagementConfigurationDependentOn implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationDependentOn currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("dependentOn", (n) -> { currentObject.setDependentOn(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("parentSettingId", (n) -> { currentObject.setParentSettingId(n.getStringValue()); });

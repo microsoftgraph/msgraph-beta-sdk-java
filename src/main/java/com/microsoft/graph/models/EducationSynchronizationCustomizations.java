@@ -45,7 +45,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationCustomizations currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("school", (n) -> { currentObject.setSchool(n.getObjectValue(EducationSynchronizationCustomization::createFromDiscriminatorValue)); });
             this.put("section", (n) -> { currentObject.setSection(n.getObjectValue(EducationSynchronizationCustomization::createFromDiscriminatorValue)); });
             this.put("student", (n) -> { currentObject.setStudent(n.getObjectValue(EducationSynchronizationCustomization::createFromDiscriminatorValue)); });

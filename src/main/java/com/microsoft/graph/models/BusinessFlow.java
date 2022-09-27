@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of approvalWorkflowProvider entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class BusinessFlow extends Entity implements Parsable {
     /** The customData property */
     private String _customData;
@@ -84,7 +84,7 @@ public class BusinessFlow extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BusinessFlow currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customData", (n) -> { currentObject.setCustomData(n.getStringValue()); });
             this.put("deDuplicationId", (n) -> { currentObject.setDeDuplicationId(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });

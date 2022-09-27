@@ -33,7 +33,7 @@ public class TargetedManagedAppConfigurationPolicySetItem extends PolicySetItem 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TargetedManagedAppConfigurationPolicySetItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**

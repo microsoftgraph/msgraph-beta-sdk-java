@@ -61,7 +61,7 @@ public class CloudPcOnPremisesConnectionStatusDetails implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcOnPremisesConnectionStatusDetails currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("healthChecks", (n) -> { currentObject.setHealthChecks(n.getCollectionOfObjectValues(CloudPcOnPremisesConnectionHealthCheck::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

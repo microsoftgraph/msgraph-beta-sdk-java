@@ -35,7 +35,7 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeliveryOptimizationGroupIdSourceOptions currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("groupIdSourceOption", (n) -> { currentObject.setGroupIdSourceOption(n.getEnumValue(DeliveryOptimizationGroupIdOptionsType.class)); });
         }};
     }

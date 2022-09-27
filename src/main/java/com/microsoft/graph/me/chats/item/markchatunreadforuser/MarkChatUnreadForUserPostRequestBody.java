@@ -52,7 +52,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MarkChatUnreadForUserPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("lastMessageReadDateTime", (n) -> { currentObject.setLastMessageReadDateTime(n.getOffsetDateTimeValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
             this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });

@@ -83,7 +83,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceAndAppManagementAssignmentTarget currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("deviceAndAppManagementAssignmentFilterId", (n) -> { currentObject.setDeviceAndAppManagementAssignmentFilterId(n.getStringValue()); });
             this.put("deviceAndAppManagementAssignmentFilterType", (n) -> { currentObject.setDeviceAndAppManagementAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

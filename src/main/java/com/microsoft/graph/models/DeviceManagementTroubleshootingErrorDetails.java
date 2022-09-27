@@ -81,7 +81,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementTroubleshootingErrorDetails currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("context", (n) -> { currentObject.setContext(n.getStringValue()); });
             this.put("failure", (n) -> { currentObject.setFailure(n.getStringValue()); });
             this.put("failureDetails", (n) -> { currentObject.setFailureDetails(n.getStringValue()); });

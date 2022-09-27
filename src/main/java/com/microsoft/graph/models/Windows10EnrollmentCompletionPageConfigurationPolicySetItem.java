@@ -35,7 +35,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10EnrollmentCompletionPageConfigurationPolicySetItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
         }};
     }

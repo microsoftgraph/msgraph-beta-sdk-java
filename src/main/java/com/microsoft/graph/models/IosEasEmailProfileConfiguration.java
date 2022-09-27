@@ -175,7 +175,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosEasEmailProfileConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod.class)); });
             this.put("blockMovingMessagesToOtherEmailAccounts", (n) -> { currentObject.setBlockMovingMessagesToOtherEmailAccounts(n.getBooleanValue()); });

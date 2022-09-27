@@ -18,11 +18,11 @@ import java.util.Objects;
 /** Provides operations to call the discover method. */
 public class DiscoverRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new DiscoverRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -33,7 +33,7 @@ public class DiscoverRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/applications/{application%2Did}/synchronization/jobs/{synchronizationJob%2Did}/schema/directories/{directoryDefinition%2Did}/microsoft.graph.discover";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -45,13 +45,13 @@ public class DiscoverRequestBuilder {
      */
     public DiscoverRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/applications/{application%2Did}/synchronization/jobs/{synchronizationJob%2Did}/schema/directories/{directoryDefinition%2Did}/microsoft.graph.discover";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action discover
+     * Discover the latest schema definition for provisioning to an application. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -59,7 +59,7 @@ public class DiscoverRequestBuilder {
         return createPostRequestInformation(null);
     }
     /**
-     * Invoke action discover
+     * Discover the latest schema definition for provisioning to an application. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -80,13 +80,13 @@ public class DiscoverRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action discover
+     * Discover the latest schema definition for provisioning to an application. 
      * @return a CompletableFuture of directoryDefinition
      */
     public java.util.concurrent.CompletableFuture<DirectoryDefinition> post() {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -96,14 +96,14 @@ public class DiscoverRequestBuilder {
         }
     }
     /**
-     * Invoke action discover
+     * Discover the latest schema definition for provisioning to an application. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryDefinition
      */
     public java.util.concurrent.CompletableFuture<DirectoryDefinition> post(@javax.annotation.Nullable final java.util.function.Consumer<DiscoverRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -113,7 +113,7 @@ public class DiscoverRequestBuilder {
         }
     }
     /**
-     * Invoke action discover
+     * Discover the latest schema definition for provisioning to an application. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryDefinition
@@ -121,7 +121,7 @@ public class DiscoverRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryDefinition> post(@javax.annotation.Nullable final java.util.function.Consumer<DiscoverRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -137,7 +137,7 @@ public class DiscoverRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new discoverRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

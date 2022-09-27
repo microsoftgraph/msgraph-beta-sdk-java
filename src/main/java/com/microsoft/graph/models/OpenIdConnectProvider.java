@@ -61,7 +61,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OpenIdConnectProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("claimsMapping", (n) -> { currentObject.setClaimsMapping(n.getObjectValue(ClaimsMapping::createFromDiscriminatorValue)); });
             this.put("domainHint", (n) -> { currentObject.setDomainHint(n.getStringValue()); });
             this.put("metadataUrl", (n) -> { currentObject.setMetadataUrl(n.getStringValue()); });

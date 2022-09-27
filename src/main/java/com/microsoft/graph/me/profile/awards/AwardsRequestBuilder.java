@@ -26,11 +26,11 @@ public class AwardsRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new AwardsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -41,7 +41,7 @@ public class AwardsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/profile/awards{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class AwardsRequestBuilder {
      */
     public AwardsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/me/profile/awards{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents the details of awards or honors associated with a person.
+     * Retrieve a list of personAward objects from a user's profile.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AwardsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the details of awards or honors associated with a person.
+     * Retrieve a list of personAward objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class AwardsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to awards for me
+     * Create a new personAward object in a user's profile.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class AwardsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to awards for me
+     * Create a new personAward object in a user's profile.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class AwardsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the details of awards or honors associated with a person.
+     * Retrieve a list of personAward objects from a user's profile.
      * @return a CompletableFuture of PersonAwardCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PersonAwardCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class AwardsRequestBuilder {
         }
     }
     /**
-     * Represents the details of awards or honors associated with a person.
+     * Retrieve a list of personAward objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PersonAwardCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PersonAwardCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AwardsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class AwardsRequestBuilder {
         }
     }
     /**
-     * Represents the details of awards or honors associated with a person.
+     * Retrieve a list of personAward objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PersonAwardCollectionResponse
@@ -163,7 +163,7 @@ public class AwardsRequestBuilder {
     public java.util.concurrent.CompletableFuture<PersonAwardCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AwardsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class AwardsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to awards for me
+     * Create a new personAward object in a user's profile.
      * @param body 
      * @return a CompletableFuture of personAward
      */
     public java.util.concurrent.CompletableFuture<PersonAward> post(@javax.annotation.Nonnull final PersonAward body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class AwardsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to awards for me
+     * Create a new personAward object in a user's profile.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personAward
@@ -198,7 +198,7 @@ public class AwardsRequestBuilder {
     public java.util.concurrent.CompletableFuture<PersonAward> post(@javax.annotation.Nonnull final PersonAward body, @javax.annotation.Nullable final java.util.function.Consumer<AwardsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class AwardsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to awards for me
+     * Create a new personAward object in a user's profile.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class AwardsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class AwardsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents the details of awards or honors associated with a person. */
+    /** Retrieve a list of personAward objects from a user's profile. */
     public class AwardsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class AwardsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AwardsRequestBuilderGetQueryParameters queryParameters = new AwardsRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class AwardsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new awardsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

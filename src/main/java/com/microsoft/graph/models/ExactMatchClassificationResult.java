@@ -66,7 +66,7 @@ public class ExactMatchClassificationResult implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExactMatchClassificationResult currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("classification", (n) -> { currentObject.setClassification(n.getCollectionOfObjectValues(ExactMatchDetectedSensitiveContent::createFromDiscriminatorValue)); });
             this.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfObjectValues(ClassificationError::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

@@ -48,7 +48,7 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MigrateToTemplatePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("newTemplateId", (n) -> { currentObject.setNewTemplateId(n.getStringValue()); });
             this.put("preserveCustomValues", (n) -> { currentObject.setPreserveCustomValues(n.getBooleanValue()); });
         }};

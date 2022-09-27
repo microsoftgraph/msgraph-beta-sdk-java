@@ -13,7 +13,7 @@ public class AttendanceRecord extends Entity implements Parsable {
     private java.util.List<AttendanceInterval> _attendanceIntervals;
     /** Email address of the user associated with this atttendance record. */
     private String _emailAddress;
-    /** Identity of the user associated with this atttendance record. */
+    /** Identity of the user associated with this atttendance record. The specific type will be one of the following derived types of identity, depending on the type of the user: communicationsUserIdentity, azureCommunicationServicesUserIdentity. */
     private Identity _identity;
     /** Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting. */
     private String _registrantId;
@@ -62,7 +62,7 @@ public class AttendanceRecord extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttendanceRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("attendanceIntervals", (n) -> { currentObject.setAttendanceIntervals(n.getCollectionOfObjectValues(AttendanceInterval::createFromDiscriminatorValue)); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
             this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
@@ -72,7 +72,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the identity property value. Identity of the user associated with this atttendance record.
+     * Gets the identity property value. Identity of the user associated with this atttendance record. The specific type will be one of the following derived types of identity, depending on the type of the user: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -135,7 +135,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         this._emailAddress = value;
     }
     /**
-     * Sets the identity property value. Identity of the user associated with this atttendance record.
+     * Sets the identity property value. Identity of the user associated with this atttendance record. The specific type will be one of the following derived types of identity, depending on the type of the user: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
      * @param value Value to set for the identity property.
      * @return a void
      */

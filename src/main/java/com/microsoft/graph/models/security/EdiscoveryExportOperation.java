@@ -91,7 +91,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryExportOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureBlobContainer", (n) -> { currentObject.setAzureBlobContainer(n.getStringValue()); });
             this.put("azureBlobToken", (n) -> { currentObject.setAzureBlobToken(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });

@@ -46,7 +46,7 @@ public class EvaluateDynamicMembershipPostRequestBody implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateDynamicMembershipPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("memberId", (n) -> { currentObject.setMemberId(n.getStringValue()); });
         }};
     }

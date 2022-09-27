@@ -59,7 +59,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryHoldPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });
             this.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });

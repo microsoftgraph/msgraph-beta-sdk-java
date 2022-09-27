@@ -27,11 +27,11 @@ public class TasksRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new TasksRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -42,7 +42,7 @@ public class TasksRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/tasks/lists/{baseTaskList%2Did}/tasks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -54,13 +54,13 @@ public class TasksRequestBuilder {
      */
     public TasksRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/me/tasks/lists/{baseTaskList%2Did}/tasks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The tasks in this task list. Read-only. Nullable.
+     * Get the baseTask resources from the tasks navigation property of a specific baseTaskList.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class TasksRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The tasks in this task list. Read-only. Nullable.
+     * Get the baseTask resources from the tasks navigation property of a specific baseTaskList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class TasksRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to tasks for me
+     * Create a new baseTask object in a specific baseTaskList.
      * @param body 
      * @return a RequestInformation
      */
@@ -99,7 +99,7 @@ public class TasksRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to tasks for me
+     * Create a new baseTask object in a specific baseTaskList.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -131,13 +131,13 @@ public class TasksRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * The tasks in this task list. Read-only. Nullable.
+     * Get the baseTask resources from the tasks navigation property of a specific baseTaskList.
      * @return a CompletableFuture of BaseTaskCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BaseTaskCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -147,14 +147,14 @@ public class TasksRequestBuilder {
         }
     }
     /**
-     * The tasks in this task list. Read-only. Nullable.
+     * Get the baseTask resources from the tasks navigation property of a specific baseTaskList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BaseTaskCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BaseTaskCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TasksRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -164,7 +164,7 @@ public class TasksRequestBuilder {
         }
     }
     /**
-     * The tasks in this task list. Read-only. Nullable.
+     * Get the baseTask resources from the tasks navigation property of a specific baseTaskList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of BaseTaskCollectionResponse
@@ -172,7 +172,7 @@ public class TasksRequestBuilder {
     public java.util.concurrent.CompletableFuture<BaseTaskCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TasksRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -182,14 +182,14 @@ public class TasksRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to tasks for me
+     * Create a new baseTask object in a specific baseTaskList.
      * @param body 
      * @return a CompletableFuture of baseTask
      */
     public java.util.concurrent.CompletableFuture<BaseTask> post(@javax.annotation.Nonnull final BaseTask body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -199,7 +199,7 @@ public class TasksRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to tasks for me
+     * Create a new baseTask object in a specific baseTaskList.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of baseTask
@@ -207,7 +207,7 @@ public class TasksRequestBuilder {
     public java.util.concurrent.CompletableFuture<BaseTask> post(@javax.annotation.Nonnull final BaseTask body, @javax.annotation.Nullable final java.util.function.Consumer<TasksRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -217,7 +217,7 @@ public class TasksRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to tasks for me
+     * Create a new baseTask object in a specific baseTaskList.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -227,7 +227,7 @@ public class TasksRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -236,7 +236,7 @@ public class TasksRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The tasks in this task list. Read-only. Nullable. */
+    /** Get the baseTask resources from the tasks navigation property of a specific baseTaskList. */
     public class TasksRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -278,7 +278,7 @@ public class TasksRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TasksRequestBuilderGetQueryParameters queryParameters = new TasksRequestBuilderGetQueryParameters();
@@ -296,7 +296,7 @@ public class TasksRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new tasksRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

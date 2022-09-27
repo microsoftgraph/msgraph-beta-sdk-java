@@ -59,7 +59,7 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExpeditedWindowsQualityUpdateSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("daysUntilForcedReboot", (n) -> { currentObject.setDaysUntilForcedReboot(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("qualityUpdateRelease", (n) -> { currentObject.setQualityUpdateRelease(n.getStringValue()); });

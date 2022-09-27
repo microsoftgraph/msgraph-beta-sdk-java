@@ -70,7 +70,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityBaselineStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("conflictCount", (n) -> { currentObject.setConflictCount(n.getIntegerValue()); });
             this.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
             this.put("notApplicableCount", (n) -> { currentObject.setNotApplicableCount(n.getIntegerValue()); });

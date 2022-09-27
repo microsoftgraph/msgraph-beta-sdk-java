@@ -77,7 +77,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailThreatSubmissionPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customizedNotificationSenderEmailAddress", (n) -> { currentObject.setCustomizedNotificationSenderEmailAddress(n.getStringValue()); });
             this.put("customizedReportRecipientEmailAddress", (n) -> { currentObject.setCustomizedReportRecipientEmailAddress(n.getStringValue()); });
             this.put("isAlwaysReportEnabledForUsers", (n) -> { currentObject.setIsAlwaysReportEnabledForUsers(n.getBooleanValue()); });

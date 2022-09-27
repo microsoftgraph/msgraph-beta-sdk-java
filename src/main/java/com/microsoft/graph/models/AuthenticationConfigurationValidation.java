@@ -58,7 +58,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationConfigurationValidation currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfObjectValues(GenericError::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("warnings", (n) -> { currentObject.setWarnings(n.getCollectionOfObjectValues(GenericError::createFromDiscriminatorValue)); });

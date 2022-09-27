@@ -77,7 +77,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSAssociatedDomainsItem currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("applicationIdentifier", (n) -> { currentObject.setApplicationIdentifier(n.getStringValue()); });
             this.put("directDownloadsEnabled", (n) -> { currentObject.setDirectDownloadsEnabled(n.getBooleanValue()); });
             this.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });

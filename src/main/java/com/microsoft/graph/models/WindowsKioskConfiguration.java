@@ -61,7 +61,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("edgeKioskEnablePublicBrowsing", (n) -> { currentObject.setEdgeKioskEnablePublicBrowsing(n.getBooleanValue()); });
             this.put("kioskBrowserBlockedUrlExceptions", (n) -> { currentObject.setKioskBrowserBlockedUrlExceptions(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("kioskBrowserBlockedURLs", (n) -> { currentObject.setKioskBrowserBlockedURLs(n.getCollectionOfPrimitiveValues(String.class)); });

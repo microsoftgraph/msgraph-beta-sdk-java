@@ -37,7 +37,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemIdResolver currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
             this.put("urlMatchInfo", (n) -> { currentObject.setUrlMatchInfo(n.getObjectValue(UrlMatchInfo::createFromDiscriminatorValue)); });
         }};

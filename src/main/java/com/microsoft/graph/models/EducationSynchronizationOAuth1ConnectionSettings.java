@@ -33,7 +33,7 @@ public class EducationSynchronizationOAuth1ConnectionSettings extends EducationS
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationOAuth1ConnectionSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**

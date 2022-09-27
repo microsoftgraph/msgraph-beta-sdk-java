@@ -53,7 +53,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerKioskModeManagedFolder currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("folderIdentifier", (n) -> { currentObject.setFolderIdentifier(n.getStringValue()); });
             this.put("folderName", (n) -> { currentObject.setFolderName(n.getStringValue()); });
             this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(AndroidDeviceOwnerKioskModeFolderItem::createFromDiscriminatorValue)); });

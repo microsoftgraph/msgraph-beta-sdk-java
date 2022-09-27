@@ -49,7 +49,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcOrganizationSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enableMEMAutoEnroll", (n) -> { currentObject.setEnableMEMAutoEnroll(n.getBooleanValue()); });
             this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getEnumValue(CloudPcOperatingSystem.class)); });
             this.put("userAccountType", (n) -> { currentObject.setUserAccountType(n.getEnumValue(CloudPcUserAccountType.class)); });

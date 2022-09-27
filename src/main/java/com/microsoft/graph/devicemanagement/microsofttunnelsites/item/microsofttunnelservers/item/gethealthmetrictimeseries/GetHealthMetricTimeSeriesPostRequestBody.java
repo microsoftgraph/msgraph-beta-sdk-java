@@ -59,7 +59,7 @@ public class GetHealthMetricTimeSeriesPostRequestBody implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetHealthMetricTimeSeriesPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("metricName", (n) -> { currentObject.setMetricName(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });

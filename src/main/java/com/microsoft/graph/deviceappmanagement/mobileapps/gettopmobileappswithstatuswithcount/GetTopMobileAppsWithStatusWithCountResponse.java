@@ -47,7 +47,7 @@ public class GetTopMobileAppsWithStatusWithCountResponse implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetTopMobileAppsWithStatusWithCountResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(MobileApp::createFromDiscriminatorValue)); });
         }};
     }

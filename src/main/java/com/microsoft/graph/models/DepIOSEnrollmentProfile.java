@@ -155,7 +155,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DepIOSEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appearanceScreenDisabled", (n) -> { currentObject.setAppearanceScreenDisabled(n.getBooleanValue()); });
             this.put("awaitDeviceConfiguredConfirmation", (n) -> { currentObject.setAwaitDeviceConfiguredConfirmation(n.getBooleanValue()); });
             this.put("carrierActivationUrl", (n) -> { currentObject.setCarrierActivationUrl(n.getStringValue()); });

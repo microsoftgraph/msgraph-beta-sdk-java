@@ -50,7 +50,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageLocalizedText currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("languageCode", (n) -> { currentObject.setLanguageCode(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });

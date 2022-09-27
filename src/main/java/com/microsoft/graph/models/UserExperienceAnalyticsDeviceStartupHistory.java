@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device startup history entity contains device boot performance history details. */
 public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implements Parsable {
     /** The user experience analytics device core boot time in milliseconds. */
     private Integer _coreBootTimeInMs;
@@ -42,7 +43,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     /** The user experience analytics device total login time in milliseconds. */
     private Integer _totalLoginTimeInMs;
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceStartupHistory and sets the default values.
+     * Instantiates a new userExperienceAnalyticsDeviceStartupHistory and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsDeviceStartupHistory() {
@@ -52,7 +53,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceStartupHistory
+     * @return a userExperienceAnalyticsDeviceStartupHistory
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceStartupHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -98,7 +99,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsDeviceStartupHistory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("coreBootTimeInMs", (n) -> { currentObject.setCoreBootTimeInMs(n.getIntegerValue()); });
             this.put("coreLoginTimeInMs", (n) -> { currentObject.setCoreLoginTimeInMs(n.getIntegerValue()); });
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });

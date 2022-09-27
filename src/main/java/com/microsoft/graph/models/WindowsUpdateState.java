@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WindowsUpdateState extends Entity implements Parsable {
     /** Device display name. */
     private String _deviceDisplayName;
@@ -77,7 +77,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsUpdateState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("featureUpdateVersion", (n) -> { currentObject.setFeatureUpdateVersion(n.getStringValue()); });

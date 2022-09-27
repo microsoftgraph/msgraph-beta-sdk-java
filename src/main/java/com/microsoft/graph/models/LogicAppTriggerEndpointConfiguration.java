@@ -39,7 +39,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LogicAppTriggerEndpointConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("logicAppWorkflowName", (n) -> { currentObject.setLogicAppWorkflowName(n.getStringValue()); });
             this.put("resourceGroupName", (n) -> { currentObject.setResourceGroupName(n.getStringValue()); });
             this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });

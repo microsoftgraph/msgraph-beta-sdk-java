@@ -38,7 +38,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermsAndConditionsGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });
             this.put("termsAndConditions", (n) -> { currentObject.setTermsAndConditions(n.getObjectValue(TermsAndConditions::createFromDiscriminatorValue)); });
         }};

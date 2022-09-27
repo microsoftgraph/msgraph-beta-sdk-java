@@ -73,7 +73,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserTrainingContentEventInfo currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
             this.put("contentDateTime", (n) -> { currentObject.setContentDateTime(n.getOffsetDateTimeValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });

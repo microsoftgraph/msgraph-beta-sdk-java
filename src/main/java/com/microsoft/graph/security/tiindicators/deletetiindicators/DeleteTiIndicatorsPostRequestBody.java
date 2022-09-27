@@ -46,7 +46,7 @@ public class DeleteTiIndicatorsPostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeleteTiIndicatorsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

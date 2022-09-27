@@ -50,7 +50,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChangeDeploymentStatusPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("managementTemplateStepId", (n) -> { currentObject.setManagementTemplateStepId(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });

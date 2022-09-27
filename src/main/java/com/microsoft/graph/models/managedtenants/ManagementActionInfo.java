@@ -52,7 +52,7 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementActionInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("managementActionId", (n) -> { currentObject.setManagementActionId(n.getStringValue()); });
             this.put("managementTemplateId", (n) -> { currentObject.setManagementTemplateId(n.getStringValue()); });
             this.put("managementTemplateVersion", (n) -> { currentObject.setManagementTemplateVersion(n.getIntegerValue()); });

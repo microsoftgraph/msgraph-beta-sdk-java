@@ -35,7 +35,7 @@ public class EdgeHomeButtonOpensCustomURL extends EdgeHomeButtonConfiguration im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdgeHomeButtonOpensCustomURL currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("homeButtonCustomURL", (n) -> { currentObject.setHomeButtonCustomURL(n.getStringValue()); });
         }};
     }

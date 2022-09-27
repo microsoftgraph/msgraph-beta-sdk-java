@@ -55,7 +55,7 @@ public class RemoveMembersPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoveMembersPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("assets", (n) -> { currentObject.setAssets(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
         }};
     }

@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.RestrictedSignIn;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -16,6 +15,8 @@ public class SignIn extends Entity implements Parsable {
     private String _appId;
     /** A list of conditional access policies that are triggered by the corresponding sign-in activity. */
     private java.util.List<AppliedConditionalAccessPolicy> _appliedConditionalAccessPolicies;
+    /** The appliedEventListeners property */
+    private java.util.List<AppliedAuthenticationEventListener> _appliedEventListeners;
     /** Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in. */
     private java.util.List<AuthenticationContext> _authenticationContextClassReferences;
     /** The result of the authentication attempt and additional details on the authentication method. */
@@ -146,13 +147,6 @@ public class SignIn extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static SignIn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.restrictedSignIn": return new RestrictedSignIn();
-            }
-        }
         return new SignIn();
     }
     /**
@@ -178,6 +172,14 @@ public class SignIn extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<AppliedConditionalAccessPolicy> getAppliedConditionalAccessPolicies() {
         return this._appliedConditionalAccessPolicies;
+    }
+    /**
+     * Gets the appliedEventListeners property value. The appliedEventListeners property
+     * @return a appliedAuthenticationEventListener
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AppliedAuthenticationEventListener> getAppliedEventListeners() {
+        return this._appliedEventListeners;
     }
     /**
      * Gets the authenticationContextClassReferences property value. Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in.
@@ -322,10 +324,11 @@ public class SignIn extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignIn currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("appliedConditionalAccessPolicies", (n) -> { currentObject.setAppliedConditionalAccessPolicies(n.getCollectionOfObjectValues(AppliedConditionalAccessPolicy::createFromDiscriminatorValue)); });
+            this.put("appliedEventListeners", (n) -> { currentObject.setAppliedEventListeners(n.getCollectionOfObjectValues(AppliedAuthenticationEventListener::createFromDiscriminatorValue)); });
             this.put("authenticationContextClassReferences", (n) -> { currentObject.setAuthenticationContextClassReferences(n.getCollectionOfObjectValues(AuthenticationContext::createFromDiscriminatorValue)); });
             this.put("authenticationDetails", (n) -> { currentObject.setAuthenticationDetails(n.getCollectionOfObjectValues(AuthenticationDetail::createFromDiscriminatorValue)); });
             this.put("authenticationMethodsUsed", (n) -> { currentObject.setAuthenticationMethodsUsed(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -716,6 +719,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("appDisplayName", this.getAppDisplayName());
         writer.writeStringValue("appId", this.getAppId());
         writer.writeCollectionOfObjectValues("appliedConditionalAccessPolicies", this.getAppliedConditionalAccessPolicies());
+        writer.writeCollectionOfObjectValues("appliedEventListeners", this.getAppliedEventListeners());
         writer.writeCollectionOfObjectValues("authenticationContextClassReferences", this.getAuthenticationContextClassReferences());
         writer.writeCollectionOfObjectValues("authenticationDetails", this.getAuthenticationDetails());
         writer.writeCollectionOfPrimitiveValues("authenticationMethodsUsed", this.getAuthenticationMethodsUsed());
@@ -797,6 +801,14 @@ public class SignIn extends Entity implements Parsable {
      */
     public void setAppliedConditionalAccessPolicies(@javax.annotation.Nullable final java.util.List<AppliedConditionalAccessPolicy> value) {
         this._appliedConditionalAccessPolicies = value;
+    }
+    /**
+     * Sets the appliedEventListeners property value. The appliedEventListeners property
+     * @param value Value to set for the appliedEventListeners property.
+     * @return a void
+     */
+    public void setAppliedEventListeners(@javax.annotation.Nullable final java.util.List<AppliedAuthenticationEventListener> value) {
+        this._appliedEventListeners = value;
     }
     /**
      * Sets the authenticationContextClassReferences property value. Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in.

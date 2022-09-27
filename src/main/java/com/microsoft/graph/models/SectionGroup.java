@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable {
     /** The notebook that contains the section group. Read-only. */
     private Notebook _parentNotebook;
@@ -46,7 +46,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SectionGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("parentNotebook", (n) -> { currentObject.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
             this.put("parentSectionGroup", (n) -> { currentObject.setParentSectionGroup(n.getObjectValue(SectionGroup::createFromDiscriminatorValue)); });
             this.put("sectionGroups", (n) -> { currentObject.setSectionGroups(n.getCollectionOfObjectValues(SectionGroup::createFromDiscriminatorValue)); });

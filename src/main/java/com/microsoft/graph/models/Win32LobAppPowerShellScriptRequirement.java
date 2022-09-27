@@ -69,7 +69,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppPowerShellScriptRequirement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getEnumValue(Win32LobAppPowerShellScriptDetectionType.class)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });

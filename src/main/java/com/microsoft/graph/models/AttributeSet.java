@@ -46,7 +46,7 @@ public class AttributeSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("maxAttributesPerSet", (n) -> { currentObject.setMaxAttributesPerSet(n.getIntegerValue()); });
         }};

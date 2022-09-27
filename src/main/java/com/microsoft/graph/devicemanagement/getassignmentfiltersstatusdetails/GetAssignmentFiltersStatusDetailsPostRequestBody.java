@@ -64,7 +64,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetAssignmentFiltersStatusDetailsPostRequestBody currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("assignmentFilterIds", (n) -> { currentObject.setAssignmentFilterIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
             this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });

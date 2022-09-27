@@ -83,7 +83,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AdvancedThreatProtectionOnboardingStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("advancedThreatProtectionOnboardingDeviceSettingStates", (n) -> { currentObject.setAdvancedThreatProtectionOnboardingDeviceSettingStates(n.getCollectionOfObjectValues(AdvancedThreatProtectionOnboardingDeviceSettingState::createFromDiscriminatorValue)); });
             this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
             this.put("conflictDeviceCount", (n) -> { currentObject.setConflictDeviceCount(n.getIntegerValue()); });

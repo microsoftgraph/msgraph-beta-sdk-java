@@ -60,7 +60,7 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkHardwareConfiguration currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("compute", (n) -> { currentObject.setCompute(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
             this.put("hdmiIngest", (n) -> { currentObject.setHdmiIngest(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

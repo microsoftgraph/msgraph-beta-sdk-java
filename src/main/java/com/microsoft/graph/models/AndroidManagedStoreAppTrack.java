@@ -51,7 +51,7 @@ public class AndroidManagedStoreAppTrack implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedStoreAppTrack currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("trackAlias", (n) -> { currentObject.setTrackAlias(n.getStringValue()); });
             this.put("trackId", (n) -> { currentObject.setTrackId(n.getStringValue()); });

@@ -70,7 +70,7 @@ public class TimeCardBreak implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeCardBreak currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("breakId", (n) -> { currentObject.setBreakId(n.getStringValue()); });
             this.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
             this.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });

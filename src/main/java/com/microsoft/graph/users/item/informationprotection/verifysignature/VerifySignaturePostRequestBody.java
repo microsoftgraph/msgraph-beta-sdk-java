@@ -58,7 +58,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VerifySignaturePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("digest", (n) -> { currentObject.setDigest(n.getByteArrayValue()); });
             this.put("signature", (n) -> { currentObject.setSignature(n.getByteArrayValue()); });
             this.put("signingKeyId", (n) -> { currentObject.setSigningKeyId(n.getStringValue()); });

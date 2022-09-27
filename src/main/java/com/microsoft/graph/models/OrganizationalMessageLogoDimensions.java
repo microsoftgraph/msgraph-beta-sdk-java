@@ -55,7 +55,7 @@ public class OrganizationalMessageLogoDimensions implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageLogoDimensions currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("maxHeight", (n) -> { currentObject.setMaxHeight(n.getIntegerValue()); });
             this.put("maxWidth", (n) -> { currentObject.setMaxWidth(n.getIntegerValue()); });
             this.put("minHeight", (n) -> { currentObject.setMinHeight(n.getIntegerValue()); });

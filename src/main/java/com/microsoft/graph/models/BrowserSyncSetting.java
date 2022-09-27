@@ -5,7 +5,7 @@ import java.util.Objects;
 
 /** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum BrowserSyncSetting implements ValuedEnum {
-    /** Default – Allow syncing of browser settings across devices. */
+    /** Default  Allow syncing of browser settings across devices. */
     NotConfigured("notConfigured"),
     /** Prevent syncing of browser settings across user devices, allow user override of setting. */
     BlockedWithUserOverride("blockedWithUserOverride"),

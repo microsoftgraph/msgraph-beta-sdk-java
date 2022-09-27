@@ -45,7 +45,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationListBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("explicitValue", (n) -> { currentObject.setExplicitValue(n.getBooleanValue()); });
             this.put("valuePrefix", (n) -> { currentObject.setValuePrefix(n.getStringValue()); });
         }};

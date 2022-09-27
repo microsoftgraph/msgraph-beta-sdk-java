@@ -26,11 +26,11 @@ public class ChildrenRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new ChildrenRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -41,7 +41,7 @@ public class ChildrenRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/sites/{site%2Did}/termStore/sets/{set%2Did}/children{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class ChildrenRequestBuilder {
      */
     public ChildrenRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/sites/{site%2Did}/termStore/sets/{set%2Did}/children{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ChildrenRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class ChildrenRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to children for sites
+     * Create a new term object.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class ChildrenRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to children for sites
+     * Create a new term object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class ChildrenRequestBuilder {
         return requestInfo;
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @return a CompletableFuture of TermCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TermCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class ChildrenRequestBuilder {
         }
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TermCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TermCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ChildrenRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class ChildrenRequestBuilder {
         }
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of TermCollectionResponse
@@ -163,7 +163,7 @@ public class ChildrenRequestBuilder {
     public java.util.concurrent.CompletableFuture<TermCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ChildrenRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class ChildrenRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to children for sites
+     * Create a new term object.
      * @param body 
      * @return a CompletableFuture of term
      */
     public java.util.concurrent.CompletableFuture<Term> post(@javax.annotation.Nonnull final Term body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class ChildrenRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to children for sites
+     * Create a new term object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of term
@@ -198,7 +198,7 @@ public class ChildrenRequestBuilder {
     public java.util.concurrent.CompletableFuture<Term> post(@javax.annotation.Nonnull final Term body, @javax.annotation.Nullable final java.util.function.Consumer<ChildrenRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class ChildrenRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to children for sites
+     * Create a new term object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class ChildrenRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class ChildrenRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Children terms of set in term [store]. */
+    /** Get the first level children of a [set] or [term] resource using the children navigation property. */
     public class ChildrenRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class ChildrenRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ChildrenRequestBuilderGetQueryParameters queryParameters = new ChildrenRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class ChildrenRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new childrenRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

@@ -102,7 +102,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AnalyzedMessageEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("antiSpamDirection", (n) -> { currentObject.setAntiSpamDirection(n.getStringValue()); });
             this.put("attachmentsCount", (n) -> { currentObject.setAttachmentsCount(n.getLongValue()); });
             this.put("deliveryAction", (n) -> { currentObject.setDeliveryAction(n.getStringValue()); });

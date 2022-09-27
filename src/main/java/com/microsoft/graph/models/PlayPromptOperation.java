@@ -43,7 +43,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlayPromptOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("completionReason", (n) -> { currentObject.setCompletionReason(n.getEnumValue(PlayPromptCompletionReason.class)); });
         }};
     }

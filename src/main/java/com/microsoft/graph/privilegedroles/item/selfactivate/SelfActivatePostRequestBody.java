@@ -60,7 +60,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SelfActivatePostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("duration", (n) -> { currentObject.setDuration(n.getStringValue()); });
             this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
             this.put("ticketNumber", (n) -> { currentObject.setTicketNumber(n.getStringValue()); });

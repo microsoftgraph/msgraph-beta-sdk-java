@@ -56,9 +56,9 @@ public class DepOnboardingSettingItemRequestBuilder {
         return new ImportedAppleDeviceIdentitiesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The shareForSchoolDataSyncService property */
     @javax.annotation.Nonnull
     public ShareForSchoolDataSyncServiceRequestBuilder shareForSchoolDataSyncService() {
@@ -80,7 +80,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         return new UploadDepTokenRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new DepOnboardingSettingItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -91,7 +91,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/depOnboardingSettings/{depOnboardingSetting%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -103,7 +103,7 @@ public class DepOnboardingSettingItemRequestBuilder {
      */
     public DepOnboardingSettingItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/deviceManagement/depOnboardingSettings/{depOnboardingSetting%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -189,6 +189,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DepOnboardingSettingItemRequestBuilderPatchRequestConfiguration requestConfig = new DepOnboardingSettingItemRequestBuilderPatchRequestConfiguration();
@@ -205,7 +206,7 @@ public class DepOnboardingSettingItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -222,7 +223,7 @@ public class DepOnboardingSettingItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DepOnboardingSettingItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -240,7 +241,7 @@ public class DepOnboardingSettingItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DepOnboardingSettingItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -257,7 +258,7 @@ public class DepOnboardingSettingItemRequestBuilder {
     @javax.annotation.Nonnull
     public EnrollmentProfileItemRequestBuilder enrollmentProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("enrollmentProfile%2Did", id);
         return new EnrollmentProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -268,7 +269,7 @@ public class DepOnboardingSettingItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<DepOnboardingSetting> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -285,7 +286,7 @@ public class DepOnboardingSettingItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<DepOnboardingSetting> get(@javax.annotation.Nullable final java.util.function.Consumer<DepOnboardingSettingItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -303,7 +304,7 @@ public class DepOnboardingSettingItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<DepOnboardingSetting> get(@javax.annotation.Nullable final java.util.function.Consumer<DepOnboardingSettingItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -328,23 +329,23 @@ public class DepOnboardingSettingItemRequestBuilder {
     @javax.annotation.Nonnull
     public ImportedAppleDeviceIdentityItemRequestBuilder importedAppleDeviceIdentities(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("importedAppleDeviceIdentity%2Did", id);
         return new ImportedAppleDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property depOnboardingSettings in deviceManagement
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of depOnboardingSetting
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DepOnboardingSetting body) {
+    public java.util.concurrent.CompletableFuture<DepOnboardingSetting> patch(@javax.annotation.Nonnull final DepOnboardingSetting body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DepOnboardingSetting::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -353,16 +354,16 @@ public class DepOnboardingSettingItemRequestBuilder {
      * Update the navigation property depOnboardingSettings in deviceManagement
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of depOnboardingSetting
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DepOnboardingSetting body, @javax.annotation.Nullable final java.util.function.Consumer<DepOnboardingSettingItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DepOnboardingSetting> patch(@javax.annotation.Nonnull final DepOnboardingSetting body, @javax.annotation.Nullable final java.util.function.Consumer<DepOnboardingSettingItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DepOnboardingSetting::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -372,17 +373,17 @@ public class DepOnboardingSettingItemRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of depOnboardingSetting
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DepOnboardingSetting body, @javax.annotation.Nullable final java.util.function.Consumer<DepOnboardingSettingItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<DepOnboardingSetting> patch(@javax.annotation.Nonnull final DepOnboardingSetting body, @javax.annotation.Nullable final java.util.function.Consumer<DepOnboardingSettingItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DepOnboardingSetting::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -394,7 +395,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DepOnboardingSettingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -420,7 +421,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DepOnboardingSettingItemRequestBuilderGetQueryParameters queryParameters = new DepOnboardingSettingItemRequestBuilderGetQueryParameters();
@@ -438,7 +439,7 @@ public class DepOnboardingSettingItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DepOnboardingSettingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

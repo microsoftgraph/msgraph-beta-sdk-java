@@ -57,7 +57,7 @@ public class ManagedDeviceCleanupSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceCleanupSettings currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("deviceInactivityBeforeRetirementInDays", (n) -> { currentObject.setDeviceInactivityBeforeRetirementInDays(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

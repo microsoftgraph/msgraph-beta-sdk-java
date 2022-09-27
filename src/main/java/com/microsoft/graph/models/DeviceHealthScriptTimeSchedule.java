@@ -48,7 +48,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptTimeSchedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("time", (n) -> { currentObject.setTime(n.getLocalTimeValue()); });
             this.put("useUtc", (n) -> { currentObject.setUseUtc(n.getBooleanValue()); });
         }};

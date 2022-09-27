@@ -35,7 +35,7 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10NetworkBoundaryConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("windowsNetworkIsolationPolicy", (n) -> { currentObject.setWindowsNetworkIsolationPolicy(n.getObjectValue(WindowsNetworkIsolationPolicy::createFromDiscriminatorValue)); });
         }};
     }

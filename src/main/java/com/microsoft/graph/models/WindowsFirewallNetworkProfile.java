@@ -125,7 +125,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsFirewallNetworkProfile currentObject = this;
-        return new HashMap<>(24) {{
+        return new HashMap<String, Consumer<ParseNode>>(24) {{
             this.put("authorizedApplicationRulesFromGroupPolicyMerged", (n) -> { currentObject.setAuthorizedApplicationRulesFromGroupPolicyMerged(n.getBooleanValue()); });
             this.put("authorizedApplicationRulesFromGroupPolicyNotMerged", (n) -> { currentObject.setAuthorizedApplicationRulesFromGroupPolicyNotMerged(n.getBooleanValue()); });
             this.put("connectionSecurityRulesFromGroupPolicyMerged", (n) -> { currentObject.setConnectionSecurityRulesFromGroupPolicyMerged(n.getBooleanValue()); });

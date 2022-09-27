@@ -80,7 +80,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CorsConfiguration currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("allowedHeaders", (n) -> { currentObject.setAllowedHeaders(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("allowedMethods", (n) -> { currentObject.setAllowedMethods(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("allowedOrigins", (n) -> { currentObject.setAllowedOrigins(n.getCollectionOfPrimitiveValues(String.class)); });

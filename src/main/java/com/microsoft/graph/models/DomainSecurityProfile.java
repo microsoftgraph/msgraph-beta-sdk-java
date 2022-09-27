@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class DomainSecurityProfile extends Entity implements Parsable {
     /** The activityGroupNames property */
     private java.util.List<String> _activityGroupNames;
@@ -38,7 +39,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
     /** The vendorInformation property */
     private SecurityVendorInformation _vendorInformation;
     /**
-     * Instantiates a new DomainSecurityProfile and sets the default values.
+     * Instantiates a new domainSecurityProfile and sets the default values.
      * @return a void
      */
     public DomainSecurityProfile() {
@@ -48,7 +49,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DomainSecurityProfile
+     * @return a domainSecurityProfile
      */
     @javax.annotation.Nonnull
     public static DomainSecurityProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -118,7 +119,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainSecurityProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activityGroupNames", (n) -> { currentObject.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
             this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });

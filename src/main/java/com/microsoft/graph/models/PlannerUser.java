@@ -73,7 +73,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("all", (n) -> { currentObject.setAll(n.getCollectionOfObjectValues(PlannerDelta::createFromDiscriminatorValue)); });
             this.put("favoritePlanReferences", (n) -> { currentObject.setFavoritePlanReferences(n.getObjectValue(PlannerFavoritePlanReferenceCollection::createFromDiscriminatorValue)); });
             this.put("favoritePlans", (n) -> { currentObject.setFavoritePlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });

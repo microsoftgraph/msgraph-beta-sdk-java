@@ -35,7 +35,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     /** Details about the remediation status. */
     private String _remediationStatusDetails;
     /** The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'. */
-    private java.util.List<String> _roles;
+    private java.util.List<EvidenceRole> _roles;
     /** Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc. */
     private java.util.List<String> _tags;
     /** The verdict property */
@@ -101,12 +101,12 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlertEvidence currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("remediationStatus", (n) -> { currentObject.setRemediationStatus(n.getEnumValue(EvidenceRemediationStatus.class)); });
             this.put("remediationStatusDetails", (n) -> { currentObject.setRemediationStatusDetails(n.getStringValue()); });
-            this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfEnumValues(EvidenceRole.class)); });
             this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("verdict", (n) -> { currentObject.setVerdict(n.getEnumValue(EvidenceVerdict.class)); });
         }};
@@ -137,10 +137,10 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
-     * @return a string
+     * @return a evidenceRole
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getRoles() {
+    public java.util.List<EvidenceRole> getRoles() {
         return this._roles;
     }
     /**
@@ -170,7 +170,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("remediationStatus", this.getRemediationStatus());
         writer.writeStringValue("remediationStatusDetails", this.getRemediationStatusDetails());
-        writer.writeCollectionOfPrimitiveValues("roles", this.getRoles());
+        writer.writeCollectionOfEnumValues("roles", this.getRoles());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
         writer.writeEnumValue("verdict", this.getVerdict());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -220,7 +220,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roles property.
      * @return a void
      */
-    public void setRoles(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoles(@javax.annotation.Nullable final java.util.List<EvidenceRole> value) {
         this._roles = value;
     }
     /**

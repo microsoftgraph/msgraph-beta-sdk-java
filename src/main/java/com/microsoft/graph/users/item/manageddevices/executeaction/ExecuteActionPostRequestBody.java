@@ -107,7 +107,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExecuteActionPostRequestBody currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("actionName", (n) -> { currentObject.setActionName(n.getEnumValue(ManagedDeviceRemoteAction.class)); });
             this.put("carrierUrl", (n) -> { currentObject.setCarrierUrl(n.getStringValue()); });
             this.put("deprovisionReason", (n) -> { currentObject.setDeprovisionReason(n.getStringValue()); });

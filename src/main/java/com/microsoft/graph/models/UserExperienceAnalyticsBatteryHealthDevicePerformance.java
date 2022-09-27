@@ -7,10 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health device performance entity contains device level battery information. */
 public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity implements Parsable {
     /** Estimated battery age. Unit in days. Valid values -2147483648 to 2147483647 */
     private Integer _batteryAgeInDays;
-    /** A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647 */
+    /** A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647 */
     private Integer _deviceBatteryHealthScore;
     /** The unique identifier of the device, Intune DeviceID. */
     private String _deviceId;
@@ -27,7 +28,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     /** The model name of the device. */
     private String _model;
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthDevicePerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBatteryHealthDevicePerformance and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBatteryHealthDevicePerformance() {
@@ -37,7 +38,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthDevicePerformance
+     * @return a userExperienceAnalyticsBatteryHealthDevicePerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthDevicePerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +54,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         return this._batteryAgeInDays;
     }
     /**
-     * Gets the deviceBatteryHealthScore property value. A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * Gets the deviceBatteryHealthScore property value. A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -91,7 +92,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsBatteryHealthDevicePerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("batteryAgeInDays", (n) -> { currentObject.setBatteryAgeInDays(n.getIntegerValue()); });
             this.put("deviceBatteryHealthScore", (n) -> { currentObject.setDeviceBatteryHealthScore(n.getIntegerValue()); });
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
@@ -162,7 +163,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         this._batteryAgeInDays = value;
     }
     /**
-     * Sets the deviceBatteryHealthScore property value. A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * Sets the deviceBatteryHealthScore property value. A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
      * @param value Value to set for the deviceBatteryHealthScore property.
      * @return a void
      */

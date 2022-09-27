@@ -63,7 +63,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsHealthMonitoringConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowDeviceHealthMonitoring", (n) -> { currentObject.setAllowDeviceHealthMonitoring(n.getEnumValue(Enablement.class)); });
             this.put("configDeviceHealthMonitoringCustomScope", (n) -> { currentObject.setConfigDeviceHealthMonitoringCustomScope(n.getStringValue()); });
             this.put("configDeviceHealthMonitoringScope", (n) -> { currentObject.setConfigDeviceHealthMonitoringScope(n.getEnumValue(WindowsHealthMonitoringScope.class)); });

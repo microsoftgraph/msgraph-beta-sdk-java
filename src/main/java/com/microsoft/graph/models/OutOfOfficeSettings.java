@@ -50,7 +50,7 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutOfOfficeSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("isOutOfOffice", (n) -> { currentObject.setIsOutOfOffice(n.getBooleanValue()); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

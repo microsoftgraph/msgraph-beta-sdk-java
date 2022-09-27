@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class IdentityProvider extends Entity implements Parsable {
     /** The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable. */
     private String _clientId;
@@ -66,7 +66,7 @@ public class IdentityProvider extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
             this.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });

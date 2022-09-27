@@ -37,7 +37,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingIntegerConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maximumValue", (n) -> { currentObject.setMaximumValue(n.getIntegerValue()); });
             this.put("minimumValue", (n) -> { currentObject.setMinimumValue(n.getIntegerValue()); });
         }};

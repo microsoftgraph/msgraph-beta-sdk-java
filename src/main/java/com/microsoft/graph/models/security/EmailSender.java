@@ -76,7 +76,7 @@ public class EmailSender implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailSender currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });

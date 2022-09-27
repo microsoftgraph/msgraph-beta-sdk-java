@@ -35,7 +35,7 @@ public class InsightValueInt extends UserExperienceAnalyticsInsightValue impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InsightValueInt currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("value", (n) -> { currentObject.setValue(n.getIntegerValue()); });
         }};
     }

@@ -36,7 +36,7 @@ public class LookupResultRow extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LookupResultRow currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("row", (n) -> { currentObject.setRow(n.getStringValue()); });
         }};
     }

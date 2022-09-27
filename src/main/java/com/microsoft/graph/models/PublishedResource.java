@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class PublishedResource extends Entity implements Parsable {
     /** List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable. */
     private java.util.List<OnPremisesAgentGroup> _agentGroups;
@@ -58,7 +58,7 @@ public class PublishedResource extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PublishedResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("agentGroups", (n) -> { currentObject.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("publishingType", (n) -> { currentObject.setPublishingType(n.getEnumValue(OnPremisesPublishingType.class)); });

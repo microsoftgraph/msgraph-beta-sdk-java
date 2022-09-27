@@ -43,7 +43,7 @@ public class AzureCommunicationServicesUserIdentity extends Identity implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AzureCommunicationServicesUserIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureCommunicationServicesResourceId", (n) -> { currentObject.setAzureCommunicationServicesResourceId(n.getStringValue()); });
         }};
     }

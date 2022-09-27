@@ -71,7 +71,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationError currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("entryType", (n) -> { currentObject.setEntryType(n.getStringValue()); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
             this.put("errorMessage", (n) -> { currentObject.setErrorMessage(n.getStringValue()); });

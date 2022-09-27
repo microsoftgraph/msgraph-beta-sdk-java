@@ -46,7 +46,7 @@ public class AssignTagPostRequestBody implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignTagPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("tenantIds", (n) -> { currentObject.setTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

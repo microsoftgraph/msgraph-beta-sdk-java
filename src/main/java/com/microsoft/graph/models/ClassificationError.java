@@ -43,7 +43,7 @@ public class ClassificationError extends ClassifcationErrorBase implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassificationError currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(ClassifcationErrorBase::createFromDiscriminatorValue)); });
         }};
     }

@@ -64,7 +64,7 @@ public class Notification extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Notification currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayTimeToLive", (n) -> { currentObject.setDisplayTimeToLive(n.getIntegerValue()); });
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("groupName", (n) -> { currentObject.setGroupName(n.getStringValue()); });

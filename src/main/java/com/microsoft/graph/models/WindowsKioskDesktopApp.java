@@ -55,7 +55,7 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskDesktopApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("desktopApplicationId", (n) -> { currentObject.setDesktopApplicationId(n.getStringValue()); });
             this.put("desktopApplicationLinkPath", (n) -> { currentObject.setDesktopApplicationLinkPath(n.getStringValue()); });
             this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });

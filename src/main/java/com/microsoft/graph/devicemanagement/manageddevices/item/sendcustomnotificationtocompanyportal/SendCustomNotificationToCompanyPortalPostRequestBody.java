@@ -48,7 +48,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SendCustomNotificationToCompanyPortalPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("notificationBody", (n) -> { currentObject.setNotificationBody(n.getStringValue()); });
             this.put("notificationTitle", (n) -> { currentObject.setNotificationTitle(n.getStringValue()); });
         }};

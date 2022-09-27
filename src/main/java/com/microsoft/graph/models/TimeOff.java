@@ -49,7 +49,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeOff currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("draftTimeOff", (n) -> { currentObject.setDraftTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
             this.put("isStagedForDeletion", (n) -> { currentObject.setIsStagedForDeletion(n.getBooleanValue()); });
             this.put("sharedTimeOff", (n) -> { currentObject.setSharedTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });

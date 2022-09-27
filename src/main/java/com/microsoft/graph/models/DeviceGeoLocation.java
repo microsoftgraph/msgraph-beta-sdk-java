@@ -74,7 +74,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceGeoLocation currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
             this.put("heading", (n) -> { currentObject.setHeading(n.getDoubleValue()); });
             this.put("horizontalAccuracy", (n) -> { currentObject.setHorizontalAccuracy(n.getDoubleValue()); });

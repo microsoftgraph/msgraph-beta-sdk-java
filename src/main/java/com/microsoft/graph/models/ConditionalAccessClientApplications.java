@@ -17,6 +17,8 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     private java.util.List<String> _includeServicePrincipals;
     /** The OdataType property */
     private String _odataType;
+    /** The servicePrincipalFilter property */
+    private ConditionalAccessFilter _servicePrincipalFilter;
     /**
      * Instantiates a new conditionalAccessClientApplications and sets the default values.
      * @return a void
@@ -58,10 +60,11 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessClientApplications currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("excludeServicePrincipals", (n) -> { currentObject.setExcludeServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeServicePrincipals", (n) -> { currentObject.setIncludeServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+            this.put("servicePrincipalFilter", (n) -> { currentObject.setServicePrincipalFilter(n.getObjectValue(ConditionalAccessFilter::createFromDiscriminatorValue)); });
         }};
     }
     /**
@@ -81,6 +84,14 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         return this._odataType;
     }
     /**
+     * Gets the servicePrincipalFilter property value. The servicePrincipalFilter property
+     * @return a conditionalAccessFilter
+     */
+    @javax.annotation.Nullable
+    public ConditionalAccessFilter getServicePrincipalFilter() {
+        return this._servicePrincipalFilter;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -90,6 +101,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         writer.writeCollectionOfPrimitiveValues("excludeServicePrincipals", this.getExcludeServicePrincipals());
         writer.writeCollectionOfPrimitiveValues("includeServicePrincipals", this.getIncludeServicePrincipals());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("servicePrincipalFilter", this.getServicePrincipalFilter());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +135,13 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
+    }
+    /**
+     * Sets the servicePrincipalFilter property value. The servicePrincipalFilter property
+     * @param value Value to set for the servicePrincipalFilter property.
+     * @return a void
+     */
+    public void setServicePrincipalFilter(@javax.annotation.Nullable final ConditionalAccessFilter value) {
+        this._servicePrincipalFilter = value;
     }
 }

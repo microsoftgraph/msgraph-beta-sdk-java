@@ -9,10 +9,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConnectionQuota extends Entity implements Parsable {
-    /** The minimum of two values, one representing the items remaining in the connection and the other remaining items at tenant-level. The following equation represents the formula used to calculate the minimum number: min ({max capacity in the connection} – {number of items in the connection}, {tenant quota} – {number of items indexed in all connections}). If the connection is not monetized, such as in a preview connector or preview content experience, then this property is simply the number of remaining items in the connection. */
+    /** The minimum of two values, one representing the items remaining in the connection and the other remaining items at tenant-level. The following equation represents the formula used to calculate the minimum number: min ({max capacity in the connection}  {number of items in the connection}, {tenant quota}  {number of items indexed in all connections}). If the connection is not monetized, such as in a preview connector or preview content experience, then this property is simply the number of remaining items in the connection. */
     private Long _itemsRemaining;
     /**
-     * Instantiates a new ConnectionQuota and sets the default values.
+     * Instantiates a new connectionQuota and sets the default values.
      * @return a void
      */
     public ConnectionQuota() {
@@ -22,7 +22,7 @@ public class ConnectionQuota extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConnectionQuota
+     * @return a connectionQuota
      */
     @javax.annotation.Nonnull
     public static ConnectionQuota createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,12 +36,12 @@ public class ConnectionQuota extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConnectionQuota currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("itemsRemaining", (n) -> { currentObject.setItemsRemaining(n.getLongValue()); });
         }};
     }
     /**
-     * Gets the itemsRemaining property value. The minimum of two values, one representing the items remaining in the connection and the other remaining items at tenant-level. The following equation represents the formula used to calculate the minimum number: min ({max capacity in the connection} – {number of items in the connection}, {tenant quota} – {number of items indexed in all connections}). If the connection is not monetized, such as in a preview connector or preview content experience, then this property is simply the number of remaining items in the connection.
+     * Gets the itemsRemaining property value. The minimum of two values, one representing the items remaining in the connection and the other remaining items at tenant-level. The following equation represents the formula used to calculate the minimum number: min ({max capacity in the connection}  {number of items in the connection}, {tenant quota}  {number of items indexed in all connections}). If the connection is not monetized, such as in a preview connector or preview content experience, then this property is simply the number of remaining items in the connection.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class ConnectionQuota extends Entity implements Parsable {
         writer.writeLongValue("itemsRemaining", this.getItemsRemaining());
     }
     /**
-     * Sets the itemsRemaining property value. The minimum of two values, one representing the items remaining in the connection and the other remaining items at tenant-level. The following equation represents the formula used to calculate the minimum number: min ({max capacity in the connection} – {number of items in the connection}, {tenant quota} – {number of items indexed in all connections}). If the connection is not monetized, such as in a preview connector or preview content experience, then this property is simply the number of remaining items in the connection.
+     * Sets the itemsRemaining property value. The minimum of two values, one representing the items remaining in the connection and the other remaining items at tenant-level. The following equation represents the formula used to calculate the minimum number: min ({max capacity in the connection}  {number of items in the connection}, {tenant quota}  {number of items indexed in all connections}). If the connection is not monetized, such as in a preview connector or preview content experience, then this property is simply the number of remaining items in the connection.
      * @param value Value to set for the itemsRemaining property.
      * @return a void
      */

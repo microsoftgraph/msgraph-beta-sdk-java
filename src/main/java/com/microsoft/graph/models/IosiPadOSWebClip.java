@@ -45,7 +45,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosiPadOSWebClip currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appUrl", (n) -> { currentObject.setAppUrl(n.getStringValue()); });
             this.put("useManagedBrowser", (n) -> { currentObject.setUseManagedBrowser(n.getBooleanValue()); });
         }};

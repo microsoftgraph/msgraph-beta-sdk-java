@@ -25,7 +25,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     /** User logon ID. */
     private String _logonId;
     /** Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service. */
-    private java.util.List<String> _logonTypes;
+    private java.util.List<LogonType> _logonTypes;
     /** The OdataType property */
     private String _odataType;
     /**
@@ -85,14 +85,14 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LogonUser currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("accountDomain", (n) -> { currentObject.setAccountDomain(n.getStringValue()); });
             this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
             this.put("accountType", (n) -> { currentObject.setAccountType(n.getEnumValue(UserAccountSecurityType.class)); });
             this.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
             this.put("logonId", (n) -> { currentObject.setLogonId(n.getStringValue()); });
-            this.put("logonTypes", (n) -> { currentObject.setLogonTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("logonTypes", (n) -> { currentObject.setLogonTypes(n.getCollectionOfEnumValues(LogonType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
@@ -122,10 +122,10 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return a string
+     * @return a logonType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getLogonTypes() {
+    public java.util.List<LogonType> getLogonTypes() {
         return this._logonTypes;
     }
     /**
@@ -149,7 +149,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
         writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
         writer.writeStringValue("logonId", this.getLogonId());
-        writer.writeCollectionOfPrimitiveValues("logonTypes", this.getLogonTypes());
+        writer.writeCollectionOfEnumValues("logonTypes", this.getLogonTypes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -214,7 +214,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the logonTypes property.
      * @return a void
      */
-    public void setLogonTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setLogonTypes(@javax.annotation.Nullable final java.util.List<LogonType> value) {
         this._logonTypes = value;
     }
     /**

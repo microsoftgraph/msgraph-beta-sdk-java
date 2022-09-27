@@ -21,7 +21,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     /** Key of the Payload, In the format of Guid. */
     private String _payloadId;
     /** The reason where the link comes from. */
-    private java.util.List<String> _sources;
+    private java.util.List<DeviceAndAppManagementAssignmentSource> _sources;
     /**
      * Instantiates a new hasPayloadLinkResultItem and sets the default values.
      * @return a void
@@ -63,12 +63,12 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HasPayloadLinkResultItem currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
             this.put("hasLink", (n) -> { currentObject.setHasLink(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
-            this.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfEnumValues(DeviceAndAppManagementAssignmentSource.class)); });
         }};
     }
     /**
@@ -97,10 +97,10 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the sources property value. The reason where the link comes from.
-     * @return a string
+     * @return a deviceAndAppManagementAssignmentSource
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getSources() {
+    public java.util.List<DeviceAndAppManagementAssignmentSource> getSources() {
         return this._sources;
     }
     /**
@@ -114,7 +114,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
         writer.writeBooleanValue("hasLink", this.getHasLink());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("payloadId", this.getPayloadId());
-        writer.writeCollectionOfPrimitiveValues("sources", this.getSources());
+        writer.writeCollectionOfEnumValues("sources", this.getSources());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -162,7 +162,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the sources property.
      * @return a void
      */
-    public void setSources(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSources(@javax.annotation.Nullable final java.util.List<DeviceAndAppManagementAssignmentSource> value) {
         this._sources = value;
     }
 }

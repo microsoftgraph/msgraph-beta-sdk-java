@@ -50,7 +50,7 @@ public class ActivateServicePostRequestBody implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActivateServicePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
             this.put("servicePlanId", (n) -> { currentObject.setServicePlanId(n.getStringValue()); });
             this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });

@@ -35,7 +35,7 @@ public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRights
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestEnumeratedMailboxLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("upns", (n) -> { currentObject.setUpns(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

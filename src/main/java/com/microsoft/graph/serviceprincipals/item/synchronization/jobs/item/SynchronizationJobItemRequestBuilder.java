@@ -26,7 +26,7 @@ import java.util.Objects;
 /** Provides operations to manage the jobs property of the microsoft.graph.synchronization entity. */
 public class SynchronizationJobItemRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The pause property */
     @javax.annotation.Nonnull
     public PauseRequestBuilder pause() {
@@ -38,7 +38,7 @@ public class SynchronizationJobItemRequestBuilder {
         return new ProvisionOnDemandRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The restart property */
     @javax.annotation.Nonnull
     public RestartRequestBuilder restart() {
@@ -60,7 +60,7 @@ public class SynchronizationJobItemRequestBuilder {
         return new StopRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /** The validateCredentials property */
     @javax.annotation.Nonnull
     public ValidateCredentialsRequestBuilder validateCredentials() {
@@ -76,7 +76,7 @@ public class SynchronizationJobItemRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs/{synchronizationJob%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -88,7 +88,7 @@ public class SynchronizationJobItemRequestBuilder {
      */
     public SynchronizationJobItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs/{synchronizationJob%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -174,6 +174,7 @@ public class SynchronizationJobItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SynchronizationJobItemRequestBuilderPatchRequestConfiguration requestConfig = new SynchronizationJobItemRequestBuilderPatchRequestConfiguration();
@@ -190,7 +191,7 @@ public class SynchronizationJobItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -207,7 +208,7 @@ public class SynchronizationJobItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<SynchronizationJobItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -225,7 +226,7 @@ public class SynchronizationJobItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<SynchronizationJobItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -241,7 +242,7 @@ public class SynchronizationJobItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<SynchronizationJob> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -258,7 +259,7 @@ public class SynchronizationJobItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<SynchronizationJob> get(@javax.annotation.Nullable final java.util.function.Consumer<SynchronizationJobItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -276,7 +277,7 @@ public class SynchronizationJobItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<SynchronizationJob> get(@javax.annotation.Nullable final java.util.function.Consumer<SynchronizationJobItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -288,16 +289,16 @@ public class SynchronizationJobItemRequestBuilder {
     /**
      * Update the navigation property jobs in servicePrincipals
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of synchronizationJob
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final SynchronizationJob body) {
+    public java.util.concurrent.CompletableFuture<SynchronizationJob> patch(@javax.annotation.Nonnull final SynchronizationJob body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, SynchronizationJob::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -306,16 +307,16 @@ public class SynchronizationJobItemRequestBuilder {
      * Update the navigation property jobs in servicePrincipals
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of synchronizationJob
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final SynchronizationJob body, @javax.annotation.Nullable final java.util.function.Consumer<SynchronizationJobItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<SynchronizationJob> patch(@javax.annotation.Nonnull final SynchronizationJob body, @javax.annotation.Nullable final java.util.function.Consumer<SynchronizationJobItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, SynchronizationJob::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -325,17 +326,17 @@ public class SynchronizationJobItemRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of synchronizationJob
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final SynchronizationJob body, @javax.annotation.Nullable final java.util.function.Consumer<SynchronizationJobItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<SynchronizationJob> patch(@javax.annotation.Nonnull final SynchronizationJob body, @javax.annotation.Nullable final java.util.function.Consumer<SynchronizationJobItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, SynchronizationJob::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -347,7 +348,7 @@ public class SynchronizationJobItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new SynchronizationJobItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -373,7 +374,7 @@ public class SynchronizationJobItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SynchronizationJobItemRequestBuilderGetQueryParameters queryParameters = new SynchronizationJobItemRequestBuilderGetQueryParameters();
@@ -391,7 +392,7 @@ public class SynchronizationJobItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new SynchronizationJobItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

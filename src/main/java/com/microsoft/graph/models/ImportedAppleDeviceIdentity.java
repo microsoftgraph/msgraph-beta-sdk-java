@@ -97,7 +97,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedAppleDeviceIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("discoverySource", (n) -> { currentObject.setDiscoverySource(n.getEnumValue(DiscoverySource.class)); });

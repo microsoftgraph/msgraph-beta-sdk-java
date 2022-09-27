@@ -38,9 +38,9 @@ public class EducationRequestBuilder {
         return new MeRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The schools property */
     @javax.annotation.Nonnull
     public SchoolsRequestBuilder schools() {
@@ -52,7 +52,7 @@ public class EducationRequestBuilder {
         return new SynchronizationProfilesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /** The users property */
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
@@ -66,7 +66,7 @@ public class EducationRequestBuilder {
     @javax.annotation.Nonnull
     public EducationClassItemRequestBuilder classes(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("educationClass%2Did", id);
         return new EducationClassItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -80,7 +80,7 @@ public class EducationRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/education{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -92,7 +92,7 @@ public class EducationRequestBuilder {
      */
     public EducationRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/education{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -150,6 +150,7 @@ public class EducationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final EducationRequestBuilderPatchRequestConfiguration requestConfig = new EducationRequestBuilderPatchRequestConfiguration();
@@ -166,7 +167,7 @@ public class EducationRequestBuilder {
     public java.util.concurrent.CompletableFuture<EducationRoot> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -183,7 +184,7 @@ public class EducationRequestBuilder {
     public java.util.concurrent.CompletableFuture<EducationRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<EducationRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -201,7 +202,7 @@ public class EducationRequestBuilder {
     public java.util.concurrent.CompletableFuture<EducationRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<EducationRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -213,16 +214,16 @@ public class EducationRequestBuilder {
     /**
      * Update education
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of EducationRoot
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final EducationRoot body) {
+    public java.util.concurrent.CompletableFuture<EducationRoot> patch(@javax.annotation.Nonnull final EducationRoot body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, EducationRoot::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -231,16 +232,16 @@ public class EducationRequestBuilder {
      * Update education
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of EducationRoot
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final EducationRoot body, @javax.annotation.Nullable final java.util.function.Consumer<EducationRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<EducationRoot> patch(@javax.annotation.Nonnull final EducationRoot body, @javax.annotation.Nullable final java.util.function.Consumer<EducationRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, EducationRoot::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -250,17 +251,17 @@ public class EducationRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of EducationRoot
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final EducationRoot body, @javax.annotation.Nullable final java.util.function.Consumer<EducationRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<EducationRoot> patch(@javax.annotation.Nonnull final EducationRoot body, @javax.annotation.Nullable final java.util.function.Consumer<EducationRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, EducationRoot::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -273,7 +274,7 @@ public class EducationRequestBuilder {
     @javax.annotation.Nonnull
     public EducationSchoolItemRequestBuilder schools(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("educationSchool%2Did", id);
         return new EducationSchoolItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -285,7 +286,7 @@ public class EducationRequestBuilder {
     @javax.annotation.Nonnull
     public EducationSynchronizationProfileItemRequestBuilder synchronizationProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("educationSynchronizationProfile%2Did", id);
         return new EducationSynchronizationProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -297,7 +298,7 @@ public class EducationRequestBuilder {
     @javax.annotation.Nonnull
     public EducationUserItemRequestBuilder users(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("educationUser%2Did", id);
         return new EducationUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -319,7 +320,7 @@ public class EducationRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public EducationRequestBuilderGetQueryParameters queryParameters = new EducationRequestBuilderGetQueryParameters();
@@ -337,7 +338,7 @@ public class EducationRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new educationRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

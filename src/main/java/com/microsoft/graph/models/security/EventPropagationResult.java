@@ -54,7 +54,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EventPropagationResult currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("location", (n) -> { currentObject.setLocation(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });

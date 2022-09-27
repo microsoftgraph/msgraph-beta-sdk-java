@@ -89,7 +89,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobilityManagementPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getEnumValue(PolicyScope.class)); });
             this.put("complianceUrl", (n) -> { currentObject.setComplianceUrl(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });

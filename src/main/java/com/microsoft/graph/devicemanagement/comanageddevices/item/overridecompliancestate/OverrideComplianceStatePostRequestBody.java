@@ -57,7 +57,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OverrideComplianceStatePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("complianceState", (n) -> { currentObject.setComplianceState(n.getEnumValue(AdministratorConfiguredDeviceComplianceState.class)); });
             this.put("remediationUrl", (n) -> { currentObject.setRemediationUrl(n.getStringValue()); });
         }};

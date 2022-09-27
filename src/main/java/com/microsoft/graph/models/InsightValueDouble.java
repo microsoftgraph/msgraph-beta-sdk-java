@@ -35,7 +35,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InsightValueDouble currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("value", (n) -> { currentObject.setValue(n.getDoubleValue()); });
         }};
     }

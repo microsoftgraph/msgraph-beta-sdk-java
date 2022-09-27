@@ -63,7 +63,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationCustomization currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("allowDisplayNameUpdate", (n) -> { currentObject.setAllowDisplayNameUpdate(n.getBooleanValue()); });
             this.put("isSyncDeferred", (n) -> { currentObject.setIsSyncDeferred(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTempl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstanceTemplate::createFromDiscriminatorValue)); });
             this.put("settingDefinitionOptionId", (n) -> { currentObject.setSettingDefinitionOptionId(n.getStringValue()); });
         }};

@@ -58,7 +58,7 @@ public class OfficeUserCheckinSummary implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfficeUserCheckinSummary currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("failedUserCount", (n) -> { currentObject.setFailedUserCount(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("succeededUserCount", (n) -> { currentObject.setSucceededUserCount(n.getIntegerValue()); });

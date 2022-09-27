@@ -62,7 +62,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContentClassification currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
             this.put("matches", (n) -> { currentObject.setMatches(n.getCollectionOfObjectValues(MatchLocation::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

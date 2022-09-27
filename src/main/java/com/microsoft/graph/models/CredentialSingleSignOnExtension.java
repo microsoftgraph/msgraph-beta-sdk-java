@@ -67,7 +67,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CredentialSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configurations", (n) -> { currentObject.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
             this.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("extensionIdentifier", (n) -> { currentObject.setExtensionIdentifier(n.getStringValue()); });

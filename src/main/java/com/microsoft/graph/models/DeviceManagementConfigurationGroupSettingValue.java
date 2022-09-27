@@ -7,11 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Value of the GroupSetting */
 public class DeviceManagementConfigurationGroupSettingValue extends DeviceManagementConfigurationSettingValue implements Parsable {
     /** Collection of child setting instances contained within this GroupSetting */
     private java.util.List<DeviceManagementConfigurationSettingInstance> _children;
     /**
-     * Instantiates a new DeviceManagementConfigurationGroupSettingValue and sets the default values.
+     * Instantiates a new deviceManagementConfigurationGroupSettingValue and sets the default values.
      * @return a void
      */
     public DeviceManagementConfigurationGroupSettingValue() {
@@ -21,7 +22,7 @@ public class DeviceManagementConfigurationGroupSettingValue extends DeviceManage
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationGroupSettingValue
+     * @return a deviceManagementConfigurationGroupSettingValue
      */
     @javax.annotation.Nonnull
     public static DeviceManagementConfigurationGroupSettingValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +44,7 @@ public class DeviceManagementConfigurationGroupSettingValue extends DeviceManage
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationGroupSettingValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstance::createFromDiscriminatorValue)); });
         }};
     }

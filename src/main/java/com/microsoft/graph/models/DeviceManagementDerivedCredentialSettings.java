@@ -51,7 +51,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementDerivedCredentialSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("helpUrl", (n) -> { currentObject.setHelpUrl(n.getStringValue()); });
             this.put("issuer", (n) -> { currentObject.setIssuer(n.getEnumValue(DeviceManagementDerivedCredentialIssuer.class)); });

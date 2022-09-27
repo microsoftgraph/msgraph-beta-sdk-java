@@ -63,7 +63,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityBaselineTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("categoryDeviceStateSummaries", (n) -> { currentObject.setCategoryDeviceStateSummaries(n.getCollectionOfObjectValues(SecurityBaselineCategoryStateSummary::createFromDiscriminatorValue)); });
             this.put("deviceStates", (n) -> { currentObject.setDeviceStates(n.getCollectionOfObjectValues(SecurityBaselineDeviceState::createFromDiscriminatorValue)); });
             this.put("deviceStateSummary", (n) -> { currentObject.setDeviceStateSummary(n.getObjectValue(SecurityBaselineStateSummary::createFromDiscriminatorValue)); });

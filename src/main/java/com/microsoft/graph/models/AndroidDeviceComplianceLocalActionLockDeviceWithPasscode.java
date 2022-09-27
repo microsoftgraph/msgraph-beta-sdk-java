@@ -37,7 +37,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("passcode", (n) -> { currentObject.setPasscode(n.getStringValue()); });
             this.put("passcodeSignInFailureCountBeforeWipe", (n) -> { currentObject.setPasscodeSignInFailureCountBeforeWipe(n.getIntegerValue()); });
         }};
@@ -66,7 +66,6 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("passcode", this.getPasscode());
         writer.writeIntegerValue("passcodeSignInFailureCountBeforeWipe", this.getPasscodeSignInFailureCountBeforeWipe());
     }
     /**

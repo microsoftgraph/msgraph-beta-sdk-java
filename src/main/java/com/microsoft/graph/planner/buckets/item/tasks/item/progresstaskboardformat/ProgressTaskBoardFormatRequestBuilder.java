@@ -19,11 +19,11 @@ import java.util.Objects;
 /** Provides operations to manage the progressTaskBoardFormat property of the microsoft.graph.plannerTask entity. */
 public class ProgressTaskBoardFormatRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new ProgressTaskBoardFormatRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -34,7 +34,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/planner/buckets/{plannerBucket%2Did}/tasks/{plannerTask%2Did}/progressTaskBoardFormat{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -46,7 +46,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
      */
     public ProgressTaskBoardFormatRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/planner/buckets/{plannerBucket%2Did}/tasks/{plannerTask%2Did}/progressTaskBoardFormat{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -80,7 +80,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -110,7 +110,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property progressTaskBoardFormat in planner
+     * Update the properties of **plannerProgressTaskBoardTaskFormat** object.
      * @param body 
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property progressTaskBoardFormat in planner
+     * Update the properties of **plannerProgressTaskBoardTaskFormat** object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -132,6 +132,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration requestConfig = new ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration();
@@ -148,7 +149,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -165,7 +166,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ProgressTaskBoardFormatRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -183,7 +184,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ProgressTaskBoardFormatRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -193,13 +194,13 @@ public class ProgressTaskBoardFormatRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
      * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
      */
     public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -209,14 +210,14 @@ public class ProgressTaskBoardFormatRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
      */
     public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> get(@javax.annotation.Nullable final java.util.function.Consumer<ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -226,7 +227,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
@@ -234,7 +235,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
     public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> get(@javax.annotation.Nullable final java.util.function.Consumer<ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -244,56 +245,56 @@ public class ProgressTaskBoardFormatRequestBuilder {
         }
     }
     /**
-     * Update the navigation property progressTaskBoardFormat in planner
+     * Update the properties of **plannerProgressTaskBoardTaskFormat** object.
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final PlannerProgressTaskBoardTaskFormat body) {
+    public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> patch(@javax.annotation.Nonnull final PlannerProgressTaskBoardTaskFormat body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, PlannerProgressTaskBoardTaskFormat::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
-     * Update the navigation property progressTaskBoardFormat in planner
+     * Update the properties of **plannerProgressTaskBoardTaskFormat** object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final PlannerProgressTaskBoardTaskFormat body, @javax.annotation.Nullable final java.util.function.Consumer<ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> patch(@javax.annotation.Nonnull final PlannerProgressTaskBoardTaskFormat body, @javax.annotation.Nullable final java.util.function.Consumer<ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, PlannerProgressTaskBoardTaskFormat::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
-     * Update the navigation property progressTaskBoardFormat in planner
+     * Update the properties of **plannerProgressTaskBoardTaskFormat** object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final PlannerProgressTaskBoardTaskFormat body, @javax.annotation.Nullable final java.util.function.Consumer<ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> patch(@javax.annotation.Nonnull final PlannerProgressTaskBoardTaskFormat body, @javax.annotation.Nullable final java.util.function.Consumer<ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, PlannerProgressTaskBoardTaskFormat::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -305,7 +306,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new progressTaskBoardFormatRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -313,7 +314,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
         public ProgressTaskBoardFormatRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress. */
+    /** Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object. */
     public class ProgressTaskBoardFormatRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -331,7 +332,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ProgressTaskBoardFormatRequestBuilderGetQueryParameters queryParameters = new ProgressTaskBoardFormatRequestBuilderGetQueryParameters();
@@ -349,7 +350,7 @@ public class ProgressTaskBoardFormatRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new progressTaskBoardFormatRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

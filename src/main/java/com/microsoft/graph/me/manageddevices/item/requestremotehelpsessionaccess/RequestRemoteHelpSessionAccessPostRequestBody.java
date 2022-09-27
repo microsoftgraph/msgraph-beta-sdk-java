@@ -48,7 +48,7 @@ public class RequestRemoteHelpSessionAccessPostRequestBody implements Additional
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RequestRemoteHelpSessionAccessPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("pubSubConnectionId", (n) -> { currentObject.setPubSubConnectionId(n.getStringValue()); });
             this.put("sessionKey", (n) -> { currentObject.setSessionKey(n.getStringValue()); });
         }};

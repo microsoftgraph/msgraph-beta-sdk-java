@@ -64,7 +64,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfigurationConflictSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("conflictingDeviceConfigurations", (n) -> { currentObject.setConflictingDeviceConfigurations(n.getCollectionOfObjectValues(SettingSource::createFromDiscriminatorValue)); });
             this.put("contributingSettings", (n) -> { currentObject.setContributingSettings(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("deviceCheckinsImpacted", (n) -> { currentObject.setDeviceCheckinsImpacted(n.getIntegerValue()); });

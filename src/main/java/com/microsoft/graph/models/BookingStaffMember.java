@@ -63,7 +63,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingStaffMember currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("availabilityIsAffectedByPersonalCalendar", (n) -> { currentObject.setAvailabilityIsAffectedByPersonalCalendar(n.getBooleanValue()); });
             this.put("colorIndex", (n) -> { currentObject.setColorIndex(n.getIntegerValue()); });
             this.put("isEmailNotificationEnabled", (n) -> { currentObject.setIsEmailNotificationEnabled(n.getBooleanValue()); });

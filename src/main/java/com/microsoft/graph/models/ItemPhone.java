@@ -47,7 +47,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemPhone currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PhoneType.class)); });

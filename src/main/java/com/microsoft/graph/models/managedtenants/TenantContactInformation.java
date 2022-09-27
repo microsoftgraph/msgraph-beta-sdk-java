@@ -64,7 +64,7 @@ public class TenantContactInformation implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantContactInformation currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });

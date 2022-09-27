@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class CustomerPayment extends Entity implements Parsable {
     /** The amount property */
     private BigDecimal _amount;
@@ -155,7 +155,7 @@ public class CustomerPayment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomerPayment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("amount", (n) -> { currentObject.setAmount(n.getBigDecimalValue()); });
             this.put("appliesToInvoiceId", (n) -> { currentObject.setAppliesToInvoiceId(n.getStringValue()); });
             this.put("appliesToInvoiceNumber", (n) -> { currentObject.setAppliesToInvoiceNumber(n.getStringValue()); });

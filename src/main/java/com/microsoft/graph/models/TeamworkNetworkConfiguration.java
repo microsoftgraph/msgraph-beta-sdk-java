@@ -80,7 +80,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkNetworkConfiguration currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("defaultGateway", (n) -> { currentObject.setDefaultGateway(n.getStringValue()); });
             this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
             this.put("hostName", (n) -> { currentObject.setHostName(n.getStringValue()); });

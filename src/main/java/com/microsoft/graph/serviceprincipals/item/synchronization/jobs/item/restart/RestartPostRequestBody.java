@@ -55,7 +55,7 @@ public class RestartPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RestartPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("criteria", (n) -> { currentObject.setCriteria(n.getObjectValue(SynchronizationJobRestartCriteria::createFromDiscriminatorValue)); });
         }};
     }

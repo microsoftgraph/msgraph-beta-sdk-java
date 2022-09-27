@@ -58,7 +58,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcSnapshot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cloudPcId", (n) -> { currentObject.setCloudPcId(n.getStringValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastRestoredDateTime", (n) -> { currentObject.setLastRestoredDateTime(n.getOffsetDateTimeValue()); });

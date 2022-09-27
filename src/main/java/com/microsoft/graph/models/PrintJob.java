@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PrintJob extends Entity implements Parsable {
     /** A group of settings that a printer should use to print a job. */
     private PrintJobConfiguration _configuration;
@@ -16,6 +16,8 @@ public class PrintJob extends Entity implements Parsable {
     private UserIdentity _createdBy;
     /** The DateTimeOffset when the job was created. Read-only. */
     private OffsetDateTime _createdDateTime;
+    /** The displayName property */
+    private String _displayName;
     /** The documents property */
     private java.util.List<PrintDocument> _documents;
     /** If true, document can be fetched by printer. */
@@ -71,6 +73,14 @@ public class PrintJob extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
+     * Gets the displayName property value. The displayName property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDisplayName() {
+        return this._displayName;
+    }
+    /**
      * Gets the documents property value. The documents property
      * @return a printDocument
      */
@@ -85,10 +95,11 @@ public class PrintJob extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintJob currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configuration", (n) -> { currentObject.setConfiguration(n.getObjectValue(PrintJobConfiguration::createFromDiscriminatorValue)); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("documents", (n) -> { currentObject.setDocuments(n.getCollectionOfObjectValues(PrintDocument::createFromDiscriminatorValue)); });
             this.put("isFetchable", (n) -> { currentObject.setIsFetchable(n.getBooleanValue()); });
             this.put("redirectedFrom", (n) -> { currentObject.setRedirectedFrom(n.getStringValue()); });
@@ -148,6 +159,7 @@ public class PrintJob extends Entity implements Parsable {
         writer.writeObjectValue("configuration", this.getConfiguration());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("documents", this.getDocuments());
         writer.writeBooleanValue("isFetchable", this.getIsFetchable());
         writer.writeStringValue("redirectedFrom", this.getRedirectedFrom());
@@ -178,6 +190,14 @@ public class PrintJob extends Entity implements Parsable {
      */
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
+    }
+    /**
+     * Sets the displayName property value. The displayName property
+     * @param value Value to set for the displayName property.
+     * @return a void
+     */
+    public void setDisplayName(@javax.annotation.Nullable final String value) {
+        this._displayName = value;
     }
     /**
      * Sets the documents property value. The documents property

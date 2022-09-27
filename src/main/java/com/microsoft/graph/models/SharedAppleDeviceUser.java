@@ -78,7 +78,7 @@ public class SharedAppleDeviceUser implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedAppleDeviceUser currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("dataQuota", (n) -> { currentObject.setDataQuota(n.getLongValue()); });
             this.put("dataToSync", (n) -> { currentObject.setDataToSync(n.getBooleanValue()); });
             this.put("dataUsed", (n) -> { currentObject.setDataUsed(n.getLongValue()); });

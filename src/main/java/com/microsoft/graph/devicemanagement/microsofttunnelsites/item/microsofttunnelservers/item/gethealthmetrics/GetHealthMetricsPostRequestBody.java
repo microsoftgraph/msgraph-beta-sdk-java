@@ -46,7 +46,7 @@ public class GetHealthMetricsPostRequestBody implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetHealthMetricsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("metricNames", (n) -> { currentObject.setMetricNames(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

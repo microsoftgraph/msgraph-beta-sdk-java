@@ -35,7 +35,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationIdentityCreationConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userDomains", (n) -> { currentObject.setUserDomains(n.getCollectionOfObjectValues(EducationIdentityDomain::createFromDiscriminatorValue)); });
         }};
     }

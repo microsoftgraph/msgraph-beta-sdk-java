@@ -2,6 +2,7 @@ package com.microsoft.graph.accessreviews.item.instances.item;
 
 import com.microsoft.graph.accessreviews.item.instances.item.applydecisions.ApplyDecisionsRequestBuilder;
 import com.microsoft.graph.accessreviews.item.instances.item.decisions.DecisionsRequestBuilder;
+import com.microsoft.graph.accessreviews.item.instances.item.mydecisions.item.AccessReviewDecisionItemRequestBuilder;
 import com.microsoft.graph.accessreviews.item.instances.item.mydecisions.MyDecisionsRequestBuilder;
 import com.microsoft.graph.accessreviews.item.instances.item.resetdecisions.ResetDecisionsRequestBuilder;
 import com.microsoft.graph.accessreviews.item.instances.item.reviewers.item.AccessReviewReviewerItemRequestBuilder;
@@ -42,9 +43,9 @@ public class AccessReviewItemRequestBuilder {
         return new MyDecisionsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The resetDecisions property */
     @javax.annotation.Nonnull
     public ResetDecisionsRequestBuilder resetDecisions() {
@@ -66,7 +67,7 @@ public class AccessReviewItemRequestBuilder {
         return new StopRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new AccessReviewItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -77,7 +78,7 @@ public class AccessReviewItemRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/accessReviews/{accessReview%2Did}/instances/{accessReview%2Did1}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -89,7 +90,7 @@ public class AccessReviewItemRequestBuilder {
      */
     public AccessReviewItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/accessReviews/{accessReview%2Did}/instances/{accessReview%2Did1}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -175,6 +176,7 @@ public class AccessReviewItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AccessReviewItemRequestBuilderPatchRequestConfiguration requestConfig = new AccessReviewItemRequestBuilderPatchRequestConfiguration();
@@ -192,7 +194,7 @@ public class AccessReviewItemRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.accessreviews.item.instances.item.decisions.item.AccessReviewDecisionItemRequestBuilder decisions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessReviewDecision%2Did", id);
         return new com.microsoft.graph.accessreviews.item.instances.item.decisions.item.AccessReviewDecisionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -203,7 +205,7 @@ public class AccessReviewItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -220,7 +222,7 @@ public class AccessReviewItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<AccessReviewItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -238,7 +240,7 @@ public class AccessReviewItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<AccessReviewItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -254,7 +256,7 @@ public class AccessReviewItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessReview> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -271,7 +273,7 @@ public class AccessReviewItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessReview> get(@javax.annotation.Nullable final java.util.function.Consumer<AccessReviewItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -289,7 +291,7 @@ public class AccessReviewItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessReview> get(@javax.annotation.Nullable final java.util.function.Consumer<AccessReviewItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -306,23 +308,23 @@ public class AccessReviewItemRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.accessreviews.item.instances.item.mydecisions.item.AccessReviewDecisionItemRequestBuilder myDecisions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessReviewDecision%2Did", id);
         return new com.microsoft.graph.accessreviews.item.instances.item.mydecisions.item.AccessReviewDecisionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property instances in accessReviews
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of accessReview
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final AccessReview body) {
+    public java.util.concurrent.CompletableFuture<AccessReview> patch(@javax.annotation.Nonnull final AccessReview body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AccessReview::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -331,16 +333,16 @@ public class AccessReviewItemRequestBuilder {
      * Update the navigation property instances in accessReviews
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of accessReview
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final AccessReview body, @javax.annotation.Nullable final java.util.function.Consumer<AccessReviewItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AccessReview> patch(@javax.annotation.Nonnull final AccessReview body, @javax.annotation.Nullable final java.util.function.Consumer<AccessReviewItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AccessReview::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -350,17 +352,17 @@ public class AccessReviewItemRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of accessReview
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final AccessReview body, @javax.annotation.Nullable final java.util.function.Consumer<AccessReviewItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<AccessReview> patch(@javax.annotation.Nonnull final AccessReview body, @javax.annotation.Nullable final java.util.function.Consumer<AccessReviewItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AccessReview::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -373,7 +375,7 @@ public class AccessReviewItemRequestBuilder {
     @javax.annotation.Nonnull
     public AccessReviewReviewerItemRequestBuilder reviewers(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessReviewReviewer%2Did", id);
         return new AccessReviewReviewerItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -384,7 +386,7 @@ public class AccessReviewItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new AccessReviewItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -410,7 +412,7 @@ public class AccessReviewItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AccessReviewItemRequestBuilderGetQueryParameters queryParameters = new AccessReviewItemRequestBuilderGetQueryParameters();
@@ -428,7 +430,7 @@ public class AccessReviewItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new AccessReviewItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

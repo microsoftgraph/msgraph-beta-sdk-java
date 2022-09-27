@@ -9,15 +9,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcAuditEvent extends Entity implements Parsable {
-    /** Friendly name of the activity. Optional. */
+    /** Friendly name of the activity.Optional. */
     private String _activity;
-    /** The date time in UTC when the activity was performed. Read-only. */
+    /** The date time in UTC when the activity was performed.Read-only. */
     private OffsetDateTime _activityDateTime;
     /** The activityOperationType property */
     private CloudPcAuditActivityOperationType _activityOperationType;
     /** The activityResult property */
     private CloudPcAuditActivityResult _activityResult;
-    /** The type of activity that was performed. Read-only. */
+    /** The type of activity that was performed.Read-only. */
     private String _activityType;
     /** The actor property */
     private CloudPcAuditActor _actor;
@@ -25,11 +25,11 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     private CloudPcAuditCategory _category;
     /** Component name. Read-only. */
     private String _componentName;
-    /** The client request identifier, used to correlate activity within the system. Read-only. */
+    /** The client request identifier, used to correlate activity within the system.Read-only. */
     private String _correlationId;
     /** Event display name. Read-only. */
     private String _displayName;
-    /** List of cloudPcAuditResource objects. Read-only. */
+    /** List of cloudPcAuditResource objects.Read-only. */
     private java.util.List<CloudPcAuditResource> _resources;
     /**
      * Instantiates a new CloudPcAuditEvent and sets the default values.
@@ -50,7 +50,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         return new CloudPcAuditEvent();
     }
     /**
-     * Gets the activity property value. Friendly name of the activity. Optional.
+     * Gets the activity property value. Friendly name of the activity.Optional.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         return this._activity;
     }
     /**
-     * Gets the activityDateTime property value. The date time in UTC when the activity was performed. Read-only.
+     * Gets the activityDateTime property value. The date time in UTC when the activity was performed.Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         return this._activityResult;
     }
     /**
-     * Gets the activityType property value. The type of activity that was performed. Read-only.
+     * Gets the activityType property value. The type of activity that was performed.Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         return this._componentName;
     }
     /**
-     * Gets the correlationId property value. The client request identifier, used to correlate activity within the system. Read-only.
+     * Gets the correlationId property value. The client request identifier, used to correlate activity within the system.Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcAuditEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
             this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
             this.put("activityOperationType", (n) -> { currentObject.setActivityOperationType(n.getEnumValue(CloudPcAuditActivityOperationType.class)); });
@@ -151,7 +151,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the resources property value. List of cloudPcAuditResource objects. Read-only.
+     * Gets the resources property value. List of cloudPcAuditResource objects.Read-only.
      * @return a cloudPcAuditResource
      */
     @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("resources", this.getResources());
     }
     /**
-     * Sets the activity property value. Friendly name of the activity. Optional.
+     * Sets the activity property value. Friendly name of the activity.Optional.
      * @param value Value to set for the activity property.
      * @return a void
      */
@@ -187,7 +187,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         this._activity = value;
     }
     /**
-     * Sets the activityDateTime property value. The date time in UTC when the activity was performed. Read-only.
+     * Sets the activityDateTime property value. The date time in UTC when the activity was performed.Read-only.
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
@@ -211,7 +211,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         this._activityResult = value;
     }
     /**
-     * Sets the activityType property value. The type of activity that was performed. Read-only.
+     * Sets the activityType property value. The type of activity that was performed.Read-only.
      * @param value Value to set for the activityType property.
      * @return a void
      */
@@ -243,7 +243,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         this._componentName = value;
     }
     /**
-     * Sets the correlationId property value. The client request identifier, used to correlate activity within the system. Read-only.
+     * Sets the correlationId property value. The client request identifier, used to correlate activity within the system.Read-only.
      * @param value Value to set for the correlationId property.
      * @return a void
      */
@@ -259,7 +259,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the resources property value. List of cloudPcAuditResource objects. Read-only.
+     * Sets the resources property value. List of cloudPcAuditResource objects.Read-only.
      * @param value Value to set for the resources property.
      * @return a void
      */

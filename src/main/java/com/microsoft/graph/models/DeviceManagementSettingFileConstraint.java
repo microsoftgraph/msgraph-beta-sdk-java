@@ -35,7 +35,7 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingFileConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("supportedExtensions", (n) -> { currentObject.setSupportedExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

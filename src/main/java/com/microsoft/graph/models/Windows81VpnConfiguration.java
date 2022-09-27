@@ -75,7 +75,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows81VpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applyOnlyToWindows81", (n) -> { currentObject.setApplyOnlyToWindows81(n.getBooleanValue()); });
             this.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(WindowsVpnConnectionType.class)); });
             this.put("enableSplitTunneling", (n) -> { currentObject.setEnableSplitTunneling(n.getBooleanValue()); });
@@ -107,7 +107,6 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("applyOnlyToWindows81", this.getApplyOnlyToWindows81());
         writer.writeEnumValue("connectionType", this.getConnectionType());
         writer.writeBooleanValue("enableSplitTunneling", this.getEnableSplitTunneling());
         writer.writeStringValue("loginGroupOrDomain", this.getLoginGroupOrDomain());

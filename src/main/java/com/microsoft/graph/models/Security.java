@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Security extends Entity implements Parsable {
-    /** Notifications for suspicious or potential security issues in a customer’s tenant. */
+    /** Notifications for suspicious or potential security issues in a customers tenant. */
     private java.util.List<Alert> _alerts;
     /** A collection of alerts in Microsoft 365 Defender. */
     private java.util.List<Alert> _alerts_v2;
@@ -46,7 +46,7 @@ public class Security extends Entity implements Parsable {
     private java.util.List<ProviderTenantSetting> _providerTenantSettings;
     /** The secureScoreControlProfiles property */
     private java.util.List<SecureScoreControlProfile> _secureScoreControlProfiles;
-    /** Measurements of tenants’ security posture to help protect them from threats. */
+    /** Measurements of tenants security posture to help protect them from threats. */
     private java.util.List<SecureScore> _secureScores;
     /** The securityActions property */
     private java.util.List<SecurityAction> _securityActions;
@@ -81,7 +81,7 @@ public class Security extends Entity implements Parsable {
         return new Security();
     }
     /**
-     * Gets the alerts property value. Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Gets the alerts property value. Notifications for suspicious or potential security issues in a customers tenant.
      * @return a alert
      */
     @javax.annotation.Nullable
@@ -135,7 +135,7 @@ public class Security extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Security currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("alerts", (n) -> { currentObject.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
             this.put("alerts_v2", (n) -> { currentObject.setAlerts_v2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
             this.put("attackSimulation", (n) -> { currentObject.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
@@ -234,7 +234,7 @@ public class Security extends Entity implements Parsable {
         return this._secureScoreControlProfiles;
     }
     /**
-     * Gets the secureScores property value. Measurements of tenants’ security posture to help protect them from threats.
+     * Gets the secureScores property value. Measurements of tenants security posture to help protect them from threats.
      * @return a secureScore
      */
     @javax.annotation.Nullable
@@ -330,7 +330,7 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("userSecurityProfiles", this.getUserSecurityProfiles());
     }
     /**
-     * Sets the alerts property value. Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Sets the alerts property value. Notifications for suspicious or potential security issues in a customers tenant.
      * @param value Value to set for the alerts property.
      * @return a void
      */
@@ -450,7 +450,7 @@ public class Security extends Entity implements Parsable {
         this._secureScoreControlProfiles = value;
     }
     /**
-     * Sets the secureScores property value. Measurements of tenants’ security posture to help protect them from threats.
+     * Sets the secureScores property value. Measurements of tenants security posture to help protect them from threats.
      * @param value Value to set for the secureScores property.
      * @return a void
      */

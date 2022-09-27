@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that stores the server log collection status. */
 public class MicrosoftTunnelServerLogCollectionResponse extends Entity implements Parsable {
     /** The end time of the logs collected */
     private OffsetDateTime _endDateTime;
@@ -24,7 +25,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     /** Enum type that represent the status of log collection. */
     private MicrosoftTunnelLogCollectionStatus _status;
     /**
-     * Instantiates a new MicrosoftTunnelServerLogCollectionResponse and sets the default values.
+     * Instantiates a new microsoftTunnelServerLogCollectionResponse and sets the default values.
      * @return a void
      */
     public MicrosoftTunnelServerLogCollectionResponse() {
@@ -34,7 +35,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftTunnelServerLogCollectionResponse
+     * @return a microsoftTunnelServerLogCollectionResponse
      */
     @javax.annotation.Nonnull
     public static MicrosoftTunnelServerLogCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +65,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftTunnelServerLogCollectionResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("expiryDateTime", (n) -> { currentObject.setExpiryDateTime(n.getOffsetDateTimeValue()); });
             this.put("requestDateTime", (n) -> { currentObject.setRequestDateTime(n.getOffsetDateTimeValue()); });

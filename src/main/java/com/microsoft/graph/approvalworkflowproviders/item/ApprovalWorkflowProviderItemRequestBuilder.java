@@ -2,6 +2,7 @@ package com.microsoft.graph.approvalworkflowproviders.item;
 
 import com.microsoft.graph.approvalworkflowproviders.item.businessflows.BusinessFlowsRequestBuilder;
 import com.microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder;
+import com.microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.BusinessFlowItemRequestBuilder;
 import com.microsoft.graph.approvalworkflowproviders.item.policytemplates.item.GovernancePolicyTemplateItemRequestBuilder;
 import com.microsoft.graph.approvalworkflowproviders.item.policytemplates.PolicyTemplatesRequestBuilder;
 import com.microsoft.graph.models.ApprovalWorkflowProvider;
@@ -33,16 +34,16 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         return new BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The policyTemplates property */
     @javax.annotation.Nonnull
     public PolicyTemplatesRequestBuilder policyTemplates() {
         return new PolicyTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Gets an item from the com.Microsoft.Graph.approvalWorkflowProviders.item.businessFlows.item collection
      * @param id Unique identifier of the item
@@ -51,7 +52,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.approvalworkflowproviders.item.businessflows.item.BusinessFlowItemRequestBuilder businessFlows(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("businessFlow%2Did", id);
         return new com.microsoft.graph.approvalworkflowproviders.item.businessflows.item.BusinessFlowItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -63,7 +64,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.BusinessFlowItemRequestBuilder businessFlowsWithRequestsAwaitingMyDecision(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("businessFlow%2Did", id);
         return new com.microsoft.graph.approvalworkflowproviders.item.businessflowswithrequestsawaitingmydecision.item.BusinessFlowItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -77,7 +78,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/approvalWorkflowProviders/{approvalWorkflowProvider%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -89,7 +90,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
      */
     public ApprovalWorkflowProviderItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/approvalWorkflowProviders/{approvalWorkflowProvider%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -175,6 +176,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ApprovalWorkflowProviderItemRequestBuilderPatchRequestConfiguration requestConfig = new ApprovalWorkflowProviderItemRequestBuilderPatchRequestConfiguration();
@@ -191,7 +193,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +210,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ApprovalWorkflowProviderItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -226,7 +228,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ApprovalWorkflowProviderItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -242,7 +244,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<ApprovalWorkflowProvider> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -259,7 +261,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<ApprovalWorkflowProvider> get(@javax.annotation.Nullable final java.util.function.Consumer<ApprovalWorkflowProviderItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -277,7 +279,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<ApprovalWorkflowProvider> get(@javax.annotation.Nullable final java.util.function.Consumer<ApprovalWorkflowProviderItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -289,16 +291,16 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     /**
      * Update entity in approvalWorkflowProviders
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of approvalWorkflowProvider
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ApprovalWorkflowProvider body) {
+    public java.util.concurrent.CompletableFuture<ApprovalWorkflowProvider> patch(@javax.annotation.Nonnull final ApprovalWorkflowProvider body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ApprovalWorkflowProvider::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -307,16 +309,16 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
      * Update entity in approvalWorkflowProviders
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of approvalWorkflowProvider
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ApprovalWorkflowProvider body, @javax.annotation.Nullable final java.util.function.Consumer<ApprovalWorkflowProviderItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ApprovalWorkflowProvider> patch(@javax.annotation.Nonnull final ApprovalWorkflowProvider body, @javax.annotation.Nullable final java.util.function.Consumer<ApprovalWorkflowProviderItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ApprovalWorkflowProvider::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -326,17 +328,17 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of approvalWorkflowProvider
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ApprovalWorkflowProvider body, @javax.annotation.Nullable final java.util.function.Consumer<ApprovalWorkflowProviderItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<ApprovalWorkflowProvider> patch(@javax.annotation.Nonnull final ApprovalWorkflowProvider body, @javax.annotation.Nullable final java.util.function.Consumer<ApprovalWorkflowProviderItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ApprovalWorkflowProvider::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -349,7 +351,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
     @javax.annotation.Nonnull
     public GovernancePolicyTemplateItemRequestBuilder policyTemplates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("governancePolicyTemplate%2Did", id);
         return new GovernancePolicyTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -360,7 +362,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ApprovalWorkflowProviderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -386,7 +388,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ApprovalWorkflowProviderItemRequestBuilderGetQueryParameters queryParameters = new ApprovalWorkflowProviderItemRequestBuilderGetQueryParameters();
@@ -404,7 +406,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ApprovalWorkflowProviderItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

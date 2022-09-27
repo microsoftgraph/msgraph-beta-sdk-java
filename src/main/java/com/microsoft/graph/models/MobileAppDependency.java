@@ -63,7 +63,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppDependency currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("dependencyType", (n) -> { currentObject.setDependencyType(n.getEnumValue(MobileAppDependencyType.class)); });
             this.put("dependentAppCount", (n) -> { currentObject.setDependentAppCount(n.getIntegerValue()); });
             this.put("dependsOnAppCount", (n) -> { currentObject.setDependsOnAppCount(n.getIntegerValue()); });

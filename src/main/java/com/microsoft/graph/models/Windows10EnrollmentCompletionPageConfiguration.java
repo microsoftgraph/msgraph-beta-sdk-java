@@ -111,7 +111,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10EnrollmentCompletionPageConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowDeviceResetOnInstallFailure", (n) -> { currentObject.setAllowDeviceResetOnInstallFailure(n.getBooleanValue()); });
             this.put("allowDeviceUseOnInstallFailure", (n) -> { currentObject.setAllowDeviceUseOnInstallFailure(n.getBooleanValue()); });
             this.put("allowLogCollectionOnInstallFailure", (n) -> { currentObject.setAllowLogCollectionOnInstallFailure(n.getBooleanValue()); });

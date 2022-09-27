@@ -54,7 +54,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContentInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getEnumValue(ContentFormat.class)); });
             this.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });
             this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });

@@ -38,7 +38,7 @@ public class DeviceManagementComplianceScheduledActionForRule extends Entity imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementComplianceScheduledActionForRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("ruleName", (n) -> { currentObject.setRuleName(n.getStringValue()); });
             this.put("scheduledActionConfigurations", (n) -> { currentObject.setScheduledActionConfigurations(n.getCollectionOfObjectValues(DeviceManagementComplianceActionItem::createFromDiscriminatorValue)); });
         }};

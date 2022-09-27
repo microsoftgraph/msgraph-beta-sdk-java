@@ -58,7 +58,7 @@ public class AssignResourceAccountToDevicePostRequestBody implements AdditionalD
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignResourceAccountToDevicePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("addressableUserName", (n) -> { currentObject.setAddressableUserName(n.getStringValue()); });
             this.put("resourceAccountName", (n) -> { currentObject.setResourceAccountName(n.getStringValue()); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });

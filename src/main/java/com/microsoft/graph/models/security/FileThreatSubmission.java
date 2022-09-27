@@ -45,7 +45,7 @@ public class FileThreatSubmission extends ThreatSubmission implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileThreatSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
         }};
     }

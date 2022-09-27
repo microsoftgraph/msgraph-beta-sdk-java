@@ -26,11 +26,11 @@ public class TaskGroupsRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new TaskGroupsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -41,7 +41,7 @@ public class TaskGroupsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/users/{user%2Did}/outlook/taskGroups{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class TaskGroupsRequestBuilder {
      */
     public TaskGroupsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/users/{user%2Did}/outlook/taskGroups{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get taskGroups from users
+     * Get all the Outlook task groups in the user's mailbox. The response always includes the default task group `My Tasks`, and any other task groups that have been created in the mailbox.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TaskGroupsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get taskGroups from users
+     * Get all the Outlook task groups in the user's mailbox. The response always includes the default task group `My Tasks`, and any other task groups that have been created in the mailbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class TaskGroupsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to taskGroups for users
+     * Create an Outlook task group in the user's mailbox.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class TaskGroupsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to taskGroups for users
+     * Create an Outlook task group in the user's mailbox.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class TaskGroupsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get taskGroups from users
+     * Get all the Outlook task groups in the user's mailbox. The response always includes the default task group `My Tasks`, and any other task groups that have been created in the mailbox.
      * @return a CompletableFuture of OutlookTaskGroupCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<OutlookTaskGroupCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class TaskGroupsRequestBuilder {
         }
     }
     /**
-     * Get taskGroups from users
+     * Get all the Outlook task groups in the user's mailbox. The response always includes the default task group `My Tasks`, and any other task groups that have been created in the mailbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OutlookTaskGroupCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<OutlookTaskGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TaskGroupsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class TaskGroupsRequestBuilder {
         }
     }
     /**
-     * Get taskGroups from users
+     * Get all the Outlook task groups in the user's mailbox. The response always includes the default task group `My Tasks`, and any other task groups that have been created in the mailbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of OutlookTaskGroupCollectionResponse
@@ -163,7 +163,7 @@ public class TaskGroupsRequestBuilder {
     public java.util.concurrent.CompletableFuture<OutlookTaskGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TaskGroupsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class TaskGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to taskGroups for users
+     * Create an Outlook task group in the user's mailbox.
      * @param body 
      * @return a CompletableFuture of outlookTaskGroup
      */
     public java.util.concurrent.CompletableFuture<OutlookTaskGroup> post(@javax.annotation.Nonnull final OutlookTaskGroup body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class TaskGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to taskGroups for users
+     * Create an Outlook task group in the user's mailbox.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of outlookTaskGroup
@@ -198,7 +198,7 @@ public class TaskGroupsRequestBuilder {
     public java.util.concurrent.CompletableFuture<OutlookTaskGroup> post(@javax.annotation.Nonnull final OutlookTaskGroup body, @javax.annotation.Nullable final java.util.function.Consumer<TaskGroupsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class TaskGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to taskGroups for users
+     * Create an Outlook task group in the user's mailbox.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class TaskGroupsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class TaskGroupsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get taskGroups from users */
+    /** Get all the Outlook task groups in the user's mailbox. The response always includes the default task group `My Tasks`, and any other task groups that have been created in the mailbox. */
     public class TaskGroupsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -261,7 +261,7 @@ public class TaskGroupsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TaskGroupsRequestBuilderGetQueryParameters queryParameters = new TaskGroupsRequestBuilderGetQueryParameters();
@@ -279,7 +279,7 @@ public class TaskGroupsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new taskGroupsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

@@ -108,7 +108,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitivityLabel currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicableTo", (n) -> { currentObject.setApplicableTo(n.getEnumValue(SensitivityLabelTarget.class)); });
             this.put("applicationMode", (n) -> { currentObject.setApplicationMode(n.getEnumValue(ApplicationMode.class)); });
             this.put("assignedPolicies", (n) -> { currentObject.setAssignedPolicies(n.getCollectionOfObjectValues(LabelPolicy::createFromDiscriminatorValue)); });

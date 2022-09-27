@@ -54,7 +54,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserRegistrationFeatureSummary currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("totalUserCount", (n) -> { currentObject.setTotalUserCount(n.getLongValue()); });
             this.put("userRegistrationFeatureCounts", (n) -> { currentObject.setUserRegistrationFeatureCounts(n.getCollectionOfObjectValues(UserRegistrationFeatureCount::createFromDiscriminatorValue)); });

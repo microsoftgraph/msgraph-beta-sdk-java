@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Subscription extends Entity implements Parsable {
     /** Optional. Identifier of the application used to create the subscription. Read-only. */
     private String _applicationId;
@@ -121,7 +121,7 @@ public class Subscription extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Subscription currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
             this.put("changeType", (n) -> { currentObject.setChangeType(n.getStringValue()); });
             this.put("clientState", (n) -> { currentObject.setClientState(n.getStringValue()); });

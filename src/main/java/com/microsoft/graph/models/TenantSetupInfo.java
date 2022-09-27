@@ -53,7 +53,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantSetupInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultRolesSettings", (n) -> { currentObject.setDefaultRolesSettings(n.getObjectValue(PrivilegedRoleSettings::createFromDiscriminatorValue)); });
             this.put("firstTimeSetup", (n) -> { currentObject.setFirstTimeSetup(n.getBooleanValue()); });
             this.put("relevantRolesSettings", (n) -> { currentObject.setRelevantRolesSettings(n.getCollectionOfPrimitiveValues(String.class)); });

@@ -46,7 +46,7 @@ public class ExportMobileConfigResponse implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExportMobileConfigResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
     }

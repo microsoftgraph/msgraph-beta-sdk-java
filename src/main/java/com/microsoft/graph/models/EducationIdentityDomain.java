@@ -58,7 +58,7 @@ public class EducationIdentityDomain implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationIdentityDomain currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getEnumValue(EducationUserRole.class)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

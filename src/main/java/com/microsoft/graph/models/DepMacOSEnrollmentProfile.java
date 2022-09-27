@@ -119,7 +119,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DepMacOSEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessibilityScreenDisabled", (n) -> { currentObject.setAccessibilityScreenDisabled(n.getBooleanValue()); });
             this.put("autoUnlockWithWatchDisabled", (n) -> { currentObject.setAutoUnlockWithWatchDisabled(n.getBooleanValue()); });
             this.put("chooseYourLockScreenDisabled", (n) -> { currentObject.setChooseYourLockScreenDisabled(n.getBooleanValue()); });

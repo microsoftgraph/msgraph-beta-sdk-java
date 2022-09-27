@@ -76,7 +76,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RestrictedAppsViolation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceConfigurationId", (n) -> { currentObject.setDeviceConfigurationId(n.getStringValue()); });
             this.put("deviceConfigurationName", (n) -> { currentObject.setDeviceConfigurationName(n.getStringValue()); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });

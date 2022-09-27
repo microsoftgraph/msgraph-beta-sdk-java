@@ -83,7 +83,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExactMatchDataStoreBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(ExactDataMatchStoreColumn::createFromDiscriminatorValue)); });
             this.put("dataLastUpdatedDateTime", (n) -> { currentObject.setDataLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });

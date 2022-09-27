@@ -69,7 +69,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsIdentityProtectionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enhancedAntiSpoofingForFacialFeaturesEnabled", (n) -> { currentObject.setEnhancedAntiSpoofingForFacialFeaturesEnabled(n.getBooleanValue()); });
             this.put("pinExpirationInDays", (n) -> { currentObject.setPinExpirationInDays(n.getIntegerValue()); });
             this.put("pinLowercaseCharactersUsage", (n) -> { currentObject.setPinLowercaseCharactersUsage(n.getEnumValue(ConfigurationUsage.class)); });

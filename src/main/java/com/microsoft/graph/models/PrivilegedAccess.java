@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PrivilegedAccess extends Entity implements Parsable {
     /** The display name of the provider managed by PIM. */
     private String _displayName;
@@ -21,7 +22,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     /** A collection of role settings for the provider. */
     private java.util.List<GovernanceRoleSetting> _roleSettings;
     /**
-     * Instantiates a new PrivilegedAccess and sets the default values.
+     * Instantiates a new privilegedAccess and sets the default values.
      * @return a void
      */
     public PrivilegedAccess() {
@@ -31,7 +32,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedAccess
+     * @return a privilegedAccess
      */
     @javax.annotation.Nonnull
     public static PrivilegedAccess createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +54,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedAccess currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(GovernanceResource::createFromDiscriminatorValue)); });
             this.put("roleAssignmentRequests", (n) -> { currentObject.setRoleAssignmentRequests(n.getCollectionOfObjectValues(GovernanceRoleAssignmentRequest::createFromDiscriminatorValue)); });

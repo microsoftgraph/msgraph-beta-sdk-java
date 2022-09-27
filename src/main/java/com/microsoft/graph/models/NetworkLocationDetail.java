@@ -50,7 +50,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NetworkLocationDetail currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("networkNames", (n) -> { currentObject.setNetworkNames(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("networkType", (n) -> { currentObject.setNetworkType(n.getEnumValue(NetworkType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

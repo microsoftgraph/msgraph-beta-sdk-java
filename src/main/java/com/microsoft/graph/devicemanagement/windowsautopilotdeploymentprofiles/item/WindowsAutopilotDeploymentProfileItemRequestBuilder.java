@@ -39,11 +39,11 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Gets an item from the com.Microsoft.Graph.deviceManagement.windowsAutopilotDeploymentProfiles.item.assignedDevices.item collection
      * @param id Unique identifier of the item
@@ -52,7 +52,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     @javax.annotation.Nonnull
     public WindowsAutopilotDeviceIdentityItemRequestBuilder assignedDevices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsAutopilotDeviceIdentity%2Did", id);
         return new WindowsAutopilotDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -64,7 +64,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     @javax.annotation.Nonnull
     public WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsAutopilotDeploymentProfileAssignment%2Did", id);
         return new WindowsAutopilotDeploymentProfileAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -78,7 +78,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/windowsAutopilotDeploymentProfiles/{windowsAutopilotDeploymentProfile%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -90,7 +90,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
      */
     public WindowsAutopilotDeploymentProfileItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/deviceManagement/windowsAutopilotDeploymentProfiles/{windowsAutopilotDeploymentProfile%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -176,6 +176,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final WindowsAutopilotDeploymentProfileItemRequestBuilderPatchRequestConfiguration requestConfig = new WindowsAutopilotDeploymentProfileItemRequestBuilderPatchRequestConfiguration();
@@ -192,7 +193,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -209,7 +210,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<WindowsAutopilotDeploymentProfileItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +228,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<WindowsAutopilotDeploymentProfileItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -243,7 +244,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -260,7 +261,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> get(@javax.annotation.Nullable final java.util.function.Consumer<WindowsAutopilotDeploymentProfileItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -278,7 +279,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> get(@javax.annotation.Nullable final java.util.function.Consumer<WindowsAutopilotDeploymentProfileItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -290,16 +291,16 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
     /**
      * Update the navigation property windowsAutopilotDeploymentProfiles in deviceManagement
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of windowsAutopilotDeploymentProfile
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final WindowsAutopilotDeploymentProfile body) {
+    public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> patch(@javax.annotation.Nonnull final WindowsAutopilotDeploymentProfile body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, WindowsAutopilotDeploymentProfile::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -308,16 +309,16 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
      * Update the navigation property windowsAutopilotDeploymentProfiles in deviceManagement
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of windowsAutopilotDeploymentProfile
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final WindowsAutopilotDeploymentProfile body, @javax.annotation.Nullable final java.util.function.Consumer<WindowsAutopilotDeploymentProfileItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> patch(@javax.annotation.Nonnull final WindowsAutopilotDeploymentProfile body, @javax.annotation.Nullable final java.util.function.Consumer<WindowsAutopilotDeploymentProfileItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, WindowsAutopilotDeploymentProfile::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -327,17 +328,17 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of windowsAutopilotDeploymentProfile
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final WindowsAutopilotDeploymentProfile body, @javax.annotation.Nullable final java.util.function.Consumer<WindowsAutopilotDeploymentProfileItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> patch(@javax.annotation.Nonnull final WindowsAutopilotDeploymentProfile body, @javax.annotation.Nullable final java.util.function.Consumer<WindowsAutopilotDeploymentProfileItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, WindowsAutopilotDeploymentProfile::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -349,7 +350,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new WindowsAutopilotDeploymentProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -375,7 +376,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public WindowsAutopilotDeploymentProfileItemRequestBuilderGetQueryParameters queryParameters = new WindowsAutopilotDeploymentProfileItemRequestBuilderGetQueryParameters();
@@ -393,7 +394,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new WindowsAutopilotDeploymentProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -65,7 +65,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VerifiedCustomDomainCertificatesMetadata currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("expiryDate", (n) -> { currentObject.setExpiryDate(n.getOffsetDateTimeValue()); });
             this.put("issueDate", (n) -> { currentObject.setIssueDate(n.getOffsetDateTimeValue()); });
             this.put("issuerName", (n) -> { currentObject.setIssuerName(n.getStringValue()); });

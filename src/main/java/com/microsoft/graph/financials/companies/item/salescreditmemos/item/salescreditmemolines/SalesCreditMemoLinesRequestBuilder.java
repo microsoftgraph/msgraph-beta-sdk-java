@@ -2,7 +2,6 @@ package com.microsoft.graph.financials.companies.item.salescreditmemos.item.sale
 
 import com.microsoft.graph.financials.companies.item.salescreditmemos.item.salescreditmemolines.count.CountRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.models.SalesCreditMemoLine;
 import com.microsoft.graph.models.SalesCreditMemoLineCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
@@ -26,11 +25,11 @@ public class SalesCreditMemoLinesRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new SalesCreditMemoLinesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -41,7 +40,7 @@ public class SalesCreditMemoLinesRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/financials/companies/{company%2Did}/salesCreditMemos/{salesCreditMemo%2Did}/salesCreditMemoLines{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,7 +52,7 @@ public class SalesCreditMemoLinesRequestBuilder {
      */
     public SalesCreditMemoLinesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/financials/companies/{company%2Did}/salesCreditMemos/{salesCreditMemo%2Did}/salesCreditMemoLines{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -89,46 +88,13 @@ public class SalesCreditMemoLinesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to salesCreditMemoLines for financials
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SalesCreditMemoLine body) throws URISyntaxException {
-        return createPostRequestInformation(body, null);
-    }
-    /**
-     * Create new navigation property to salesCreditMemoLines for financials
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SalesCreditMemoLine body, @javax.annotation.Nullable final java.util.function.Consumer<SalesCreditMemoLinesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final SalesCreditMemoLinesRequestBuilderPostRequestConfiguration requestConfig = new SalesCreditMemoLinesRequestBuilderPostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
      * Get salesCreditMemoLines from financials
      * @return a CompletableFuture of SalesCreditMemoLineCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<SalesCreditMemoLineCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -145,7 +111,7 @@ public class SalesCreditMemoLinesRequestBuilder {
     public java.util.concurrent.CompletableFuture<SalesCreditMemoLineCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<SalesCreditMemoLinesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -163,66 +129,11 @@ public class SalesCreditMemoLinesRequestBuilder {
     public java.util.concurrent.CompletableFuture<SalesCreditMemoLineCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<SalesCreditMemoLinesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
             return this.requestAdapter.sendAsync(requestInfo, SalesCreditMemoLineCollectionResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to salesCreditMemoLines for financials
-     * @param body 
-     * @return a CompletableFuture of salesCreditMemoLine
-     */
-    public java.util.concurrent.CompletableFuture<SalesCreditMemoLine> post(@javax.annotation.Nonnull final SalesCreditMemoLine body) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, SalesCreditMemoLine::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to salesCreditMemoLines for financials
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesCreditMemoLine
-     */
-    public java.util.concurrent.CompletableFuture<SalesCreditMemoLine> post(@javax.annotation.Nonnull final SalesCreditMemoLine body, @javax.annotation.Nullable final java.util.function.Consumer<SalesCreditMemoLinesRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, SalesCreditMemoLine::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to salesCreditMemoLines for financials
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of salesCreditMemoLine
-     */
-    public java.util.concurrent.CompletableFuture<SalesCreditMemoLine> post(@javax.annotation.Nonnull final SalesCreditMemoLine body, @javax.annotation.Nullable final java.util.function.Consumer<SalesCreditMemoLinesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, SalesCreditMemoLine::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -269,7 +180,7 @@ public class SalesCreditMemoLinesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SalesCreditMemoLinesRequestBuilderGetQueryParameters queryParameters = new SalesCreditMemoLinesRequestBuilderGetQueryParameters();
@@ -278,21 +189,6 @@ public class SalesCreditMemoLinesRequestBuilder {
          * @return a void
          */
         public SalesCreditMemoLinesRequestBuilderGetRequestConfiguration() {
-        }
-    }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class SalesCreditMemoLinesRequestBuilderPostRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new salesCreditMemoLinesRequestBuilderPostRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public SalesCreditMemoLinesRequestBuilderPostRequestConfiguration() {
         }
     }
 }

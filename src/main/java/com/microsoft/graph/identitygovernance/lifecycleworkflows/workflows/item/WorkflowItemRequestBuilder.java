@@ -47,9 +47,9 @@ public class WorkflowItemRequestBuilder {
         return new ExecutionScopeRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The restore property */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
@@ -66,7 +66,7 @@ public class WorkflowItemRequestBuilder {
         return new TaskReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /** The userProcessingResults property */
     @javax.annotation.Nonnull
     public UserProcessingResultsRequestBuilder userProcessingResults() {
@@ -87,7 +87,7 @@ public class WorkflowItemRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -99,7 +99,7 @@ public class WorkflowItemRequestBuilder {
      */
     public WorkflowItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -133,7 +133,7 @@ public class WorkflowItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get workflows from identityGovernance
+     * The workflows in the lifecycle workflows instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -141,7 +141,7 @@ public class WorkflowItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get workflows from identityGovernance
+     * The workflows in the lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -185,6 +185,7 @@ public class WorkflowItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final WorkflowItemRequestBuilderPatchRequestConfiguration requestConfig = new WorkflowItemRequestBuilderPatchRequestConfiguration();
@@ -201,7 +202,7 @@ public class WorkflowItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -218,7 +219,7 @@ public class WorkflowItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<WorkflowItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -236,7 +237,7 @@ public class WorkflowItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<WorkflowItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -253,18 +254,18 @@ public class WorkflowItemRequestBuilder {
     @javax.annotation.Nonnull
     public UserItemRequestBuilder executionScope(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("user%2Did", id);
         return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get workflows from identityGovernance
+     * The workflows in the lifecycle workflows instance.
      * @return a CompletableFuture of workflow
      */
     public java.util.concurrent.CompletableFuture<Workflow> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -274,14 +275,14 @@ public class WorkflowItemRequestBuilder {
         }
     }
     /**
-     * Get workflows from identityGovernance
+     * The workflows in the lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workflow
      */
     public java.util.concurrent.CompletableFuture<Workflow> get(@javax.annotation.Nullable final java.util.function.Consumer<WorkflowItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -291,7 +292,7 @@ public class WorkflowItemRequestBuilder {
         }
     }
     /**
-     * Get workflows from identityGovernance
+     * The workflows in the lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of workflow
@@ -299,7 +300,7 @@ public class WorkflowItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Workflow> get(@javax.annotation.Nullable final java.util.function.Consumer<WorkflowItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -311,16 +312,16 @@ public class WorkflowItemRequestBuilder {
     /**
      * Update the navigation property workflows in identityGovernance
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of workflow
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Workflow body) {
+    public java.util.concurrent.CompletableFuture<Workflow> patch(@javax.annotation.Nonnull final Workflow body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Workflow::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -329,16 +330,16 @@ public class WorkflowItemRequestBuilder {
      * Update the navigation property workflows in identityGovernance
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of workflow
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Workflow body, @javax.annotation.Nullable final java.util.function.Consumer<WorkflowItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Workflow> patch(@javax.annotation.Nonnull final Workflow body, @javax.annotation.Nullable final java.util.function.Consumer<WorkflowItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Workflow::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -348,17 +349,17 @@ public class WorkflowItemRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of workflow
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Workflow body, @javax.annotation.Nullable final java.util.function.Consumer<WorkflowItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<Workflow> patch(@javax.annotation.Nonnull final Workflow body, @javax.annotation.Nullable final java.util.function.Consumer<WorkflowItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Workflow::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -371,7 +372,7 @@ public class WorkflowItemRequestBuilder {
     @javax.annotation.Nonnull
     public RunItemRequestBuilder runs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("run%2Did", id);
         return new RunItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -383,7 +384,7 @@ public class WorkflowItemRequestBuilder {
     @javax.annotation.Nonnull
     public TaskReportItemRequestBuilder taskReports(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("taskReport%2Did", id);
         return new TaskReportItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -395,7 +396,7 @@ public class WorkflowItemRequestBuilder {
     @javax.annotation.Nonnull
     public UserProcessingResultItemRequestBuilder userProcessingResults(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userProcessingResult%2Did", id);
         return new UserProcessingResultItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -407,7 +408,7 @@ public class WorkflowItemRequestBuilder {
     @javax.annotation.Nonnull
     public WorkflowVersionVersionNumberItemRequestBuilder versions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("workflowVersion%2DversionNumber", id);
         return new WorkflowVersionVersionNumberItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -418,7 +419,7 @@ public class WorkflowItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new WorkflowItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -426,7 +427,7 @@ public class WorkflowItemRequestBuilder {
         public WorkflowItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get workflows from identityGovernance */
+    /** The workflows in the lifecycle workflows instance. */
     public class WorkflowItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -444,7 +445,7 @@ public class WorkflowItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public WorkflowItemRequestBuilderGetQueryParameters queryParameters = new WorkflowItemRequestBuilderGetQueryParameters();
@@ -462,7 +463,7 @@ public class WorkflowItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new WorkflowItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

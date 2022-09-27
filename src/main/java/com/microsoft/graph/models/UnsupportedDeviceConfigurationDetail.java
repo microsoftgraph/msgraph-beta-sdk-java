@@ -51,7 +51,7 @@ public class UnsupportedDeviceConfigurationDetail implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnsupportedDeviceConfigurationDetail currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("propertyName", (n) -> { currentObject.setPropertyName(n.getStringValue()); });

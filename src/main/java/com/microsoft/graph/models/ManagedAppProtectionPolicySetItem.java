@@ -35,7 +35,7 @@ public class ManagedAppProtectionPolicySetItem extends PolicySetItem implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppProtectionPolicySetItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("targetedAppManagementLevels", (n) -> { currentObject.setTargetedAppManagementLevels(n.getStringValue()); });
         }};
     }

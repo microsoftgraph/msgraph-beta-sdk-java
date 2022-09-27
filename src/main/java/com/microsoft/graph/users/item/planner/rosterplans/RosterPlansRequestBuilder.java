@@ -25,11 +25,11 @@ public class RosterPlansRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new RosterPlansRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -40,7 +40,7 @@ public class RosterPlansRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/users/{user%2Did}/planner/rosterPlans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -52,13 +52,13 @@ public class RosterPlansRequestBuilder {
      */
     public RosterPlansRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/users/{user%2Did}/planner/rosterPlans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
+     * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class RosterPlansRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
+     * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,13 +88,13 @@ public class RosterPlansRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
+     * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
      * @return a CompletableFuture of PlannerPlanCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PlannerPlanCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -104,14 +104,14 @@ public class RosterPlansRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
+     * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PlannerPlanCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PlannerPlanCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<RosterPlansRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -121,7 +121,7 @@ public class RosterPlansRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
+     * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PlannerPlanCollectionResponse
@@ -129,7 +129,7 @@ public class RosterPlansRequestBuilder {
     public java.util.concurrent.CompletableFuture<PlannerPlanCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<RosterPlansRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,7 +138,7 @@ public class RosterPlansRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member. */
+    /** Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member. */
     public class RosterPlansRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -180,7 +180,7 @@ public class RosterPlansRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public RosterPlansRequestBuilderGetQueryParameters queryParameters = new RosterPlansRequestBuilderGetQueryParameters();

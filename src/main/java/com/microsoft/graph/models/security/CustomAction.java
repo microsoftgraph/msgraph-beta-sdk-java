@@ -37,7 +37,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         }};

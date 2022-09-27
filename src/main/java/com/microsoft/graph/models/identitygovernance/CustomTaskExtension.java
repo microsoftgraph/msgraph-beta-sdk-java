@@ -12,15 +12,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CustomTaskExtension extends CustomCalloutExtension implements Parsable {
-    /** The callbackConfiguration property */
+    /** The callback configuration for a custom extension. */
     private CustomExtensionCallbackConfiguration _callbackConfiguration;
-    /** The createdBy property */
+    /** The unique identifier of the Azure AD user that created the custom task extension. */
     private User _createdBy;
-    /** The createdDateTime property */
+    /** When the custom task extension was created. */
     private OffsetDateTime _createdDateTime;
-    /** The lastModifiedBy property */
+    /** The unique identifier of the Azure AD user that modified the custom task extension last. */
     private User _lastModifiedBy;
-    /** The lastModifiedDateTime property */
+    /** When the custom extension was last modified. */
     private OffsetDateTime _lastModifiedDateTime;
     /**
      * Instantiates a new CustomTaskExtension and sets the default values.
@@ -41,7 +41,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return new CustomTaskExtension();
     }
     /**
-     * Gets the callbackConfiguration property value. The callbackConfiguration property
+     * Gets the callbackConfiguration property value. The callback configuration for a custom extension.
      * @return a customExtensionCallbackConfiguration
      */
     @javax.annotation.Nullable
@@ -49,7 +49,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return this._callbackConfiguration;
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.
      * @return a user
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return this._createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. When the custom task extension was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomTaskExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("callbackConfiguration", (n) -> { currentObject.setCallbackConfiguration(n.getObjectValue(CustomExtensionCallbackConfiguration::createFromDiscriminatorValue)); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(User::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -80,7 +80,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         }};
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.
      * @return a user
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return this._lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. When the custom extension was last modified.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
-     * Sets the callbackConfiguration property value. The callbackConfiguration property
+     * Sets the callbackConfiguration property value. The callback configuration for a custom extension.
      * @param value Value to set for the callbackConfiguration property.
      * @return a void
      */
@@ -118,7 +118,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         this._callbackConfiguration = value;
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -126,7 +126,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         this._createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. When the custom task extension was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -134,7 +134,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         this._createdDateTime = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
@@ -142,7 +142,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         this._lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. When the custom extension was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */

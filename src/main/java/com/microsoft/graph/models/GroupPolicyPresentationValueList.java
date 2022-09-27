@@ -35,7 +35,7 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationValueList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         }};
     }

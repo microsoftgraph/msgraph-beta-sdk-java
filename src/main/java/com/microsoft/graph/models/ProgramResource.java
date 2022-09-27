@@ -35,7 +35,7 @@ public class ProgramResource extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProgramResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }

@@ -97,7 +97,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewStageSettings currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("decisionsThatWillMoveToNextStage", (n) -> { currentObject.setDecisionsThatWillMoveToNextStage(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("dependsOn", (n) -> { currentObject.setDependsOn(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });

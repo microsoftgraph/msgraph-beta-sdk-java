@@ -67,7 +67,7 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkPkcsCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateTemplateName", (n) -> { currentObject.setCertificateTemplateName(n.getStringValue()); });
             this.put("certificationAuthority", (n) -> { currentObject.setCertificationAuthority(n.getStringValue()); });
             this.put("certificationAuthorityName", (n) -> { currentObject.setCertificationAuthorityName(n.getStringValue()); });

@@ -59,7 +59,7 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VpnRoute currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("destinationPrefix", (n) -> { currentObject.setDestinationPrefix(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("prefixSize", (n) -> { currentObject.setPrefixSize(n.getIntegerValue()); });

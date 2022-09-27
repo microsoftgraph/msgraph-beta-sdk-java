@@ -79,7 +79,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deploymentStatus", (n) -> { currentObject.setDeploymentStatus(n.getEnumValue(WindowsDefenderApplicationControlSupplementalPolicyStatuses.class)); });
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });

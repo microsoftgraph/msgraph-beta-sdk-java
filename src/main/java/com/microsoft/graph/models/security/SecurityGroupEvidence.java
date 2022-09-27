@@ -45,7 +45,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityGroupEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("securityGroupId", (n) -> { currentObject.setSecurityGroupId(n.getStringValue()); });
         }};

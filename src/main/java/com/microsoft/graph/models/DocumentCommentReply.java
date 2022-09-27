@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class DocumentCommentReply extends Entity implements Parsable {
     /** The content property */
     private String _content;
@@ -46,7 +46,7 @@ public class DocumentCommentReply extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DocumentCommentReply currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
             this.put("location", (n) -> { currentObject.setLocation(n.getStringValue()); });
         }};

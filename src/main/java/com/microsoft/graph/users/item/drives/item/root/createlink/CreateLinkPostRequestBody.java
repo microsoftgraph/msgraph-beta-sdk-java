@@ -68,7 +68,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateLinkPostRequestBody currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });

@@ -36,7 +36,7 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementScriptGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });
         }};
     }

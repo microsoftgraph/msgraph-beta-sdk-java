@@ -91,7 +91,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingComparison currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("comparisonResult", (n) -> { currentObject.setComparisonResult(n.getEnumValue(DeviceManagementComparisonResult.class)); });
             this.put("currentValueJson", (n) -> { currentObject.setCurrentValueJson(n.getStringValue()); });
             this.put("definitionId", (n) -> { currentObject.setDefinitionId(n.getStringValue()); });

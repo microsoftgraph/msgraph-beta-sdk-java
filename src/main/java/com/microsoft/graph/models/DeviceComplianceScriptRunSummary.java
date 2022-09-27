@@ -60,7 +60,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptRunSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("detectionScriptErrorDeviceCount", (n) -> { currentObject.setDetectionScriptErrorDeviceCount(n.getIntegerValue()); });
             this.put("detectionScriptPendingDeviceCount", (n) -> { currentObject.setDetectionScriptPendingDeviceCount(n.getIntegerValue()); });
             this.put("issueDetectedDeviceCount", (n) -> { currentObject.setIssueDetectedDeviceCount(n.getIntegerValue()); });

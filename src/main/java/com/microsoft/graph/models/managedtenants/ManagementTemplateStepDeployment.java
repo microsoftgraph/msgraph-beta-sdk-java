@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ManagementTemplateStepDeployment extends Entity implements Parsable {
     /** The createdByUserId property */
     private String _createdByUserId;
@@ -76,7 +76,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementTemplateStepDeployment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdByUserId", (n) -> { currentObject.setCreatedByUserId(n.getStringValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(GraphAPIErrorDetails::createFromDiscriminatorValue)); });

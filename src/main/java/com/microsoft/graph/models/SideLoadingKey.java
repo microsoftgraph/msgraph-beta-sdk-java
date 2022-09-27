@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** SideLoadingKey entity is required for Windows 8 and 8.1 devices to intall Line Of Business Apps for a tenant. */
 public class SideLoadingKey extends Entity implements Parsable {
     /** Side Loading Key description displayed to the ITPro Admins.. */
     private String _description;
@@ -19,7 +20,7 @@ public class SideLoadingKey extends Entity implements Parsable {
     /** Side Loading Key Value, it is 5x5 value, seperated by hiphens. */
     private String _value;
     /**
-     * Instantiates a new SideLoadingKey and sets the default values.
+     * Instantiates a new sideLoadingKey and sets the default values.
      * @return a void
      */
     public SideLoadingKey() {
@@ -29,7 +30,7 @@ public class SideLoadingKey extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SideLoadingKey
+     * @return a sideLoadingKey
      */
     @javax.annotation.Nonnull
     public static SideLoadingKey createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +60,7 @@ public class SideLoadingKey extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SideLoadingKey currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getStringValue()); });

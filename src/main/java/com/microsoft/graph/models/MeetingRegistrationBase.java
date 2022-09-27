@@ -55,7 +55,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingRegistrationBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedRegistrant", (n) -> { currentObject.setAllowedRegistrant(n.getEnumValue(MeetingAudience.class)); });
             this.put("registrants", (n) -> { currentObject.setRegistrants(n.getCollectionOfObjectValues(MeetingRegistrantBase::createFromDiscriminatorValue)); });
         }};

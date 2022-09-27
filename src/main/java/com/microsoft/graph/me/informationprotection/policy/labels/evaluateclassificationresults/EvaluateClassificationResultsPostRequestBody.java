@@ -66,7 +66,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateClassificationResultsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("classificationResults", (n) -> { currentObject.setClassificationResults(n.getCollectionOfObjectValues(ClassificationResult::createFromDiscriminatorValue)); });
             this.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
         }};

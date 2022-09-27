@@ -61,7 +61,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedStoreAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appSupportsOemConfig", (n) -> { currentObject.setAppSupportsOemConfig(n.getBooleanValue()); });
             this.put("connectedAppsEnabled", (n) -> { currentObject.setConnectedAppsEnabled(n.getBooleanValue()); });
             this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });

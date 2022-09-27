@@ -35,7 +35,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationIdentityMatchingConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("matchingOptions", (n) -> { currentObject.setMatchingOptions(n.getCollectionOfObjectValues(EducationIdentityMatchingOptions::createFromDiscriminatorValue)); });
         }};
     }

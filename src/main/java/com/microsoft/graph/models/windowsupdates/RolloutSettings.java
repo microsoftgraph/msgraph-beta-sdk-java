@@ -79,7 +79,7 @@ public class RolloutSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RolloutSettings currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("devicesPerOffer", (n) -> { currentObject.setDevicesPerOffer(n.getIntegerValue()); });
             this.put("durationBetweenOffers", (n) -> { currentObject.setDurationBetweenOffers(n.getStringValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });

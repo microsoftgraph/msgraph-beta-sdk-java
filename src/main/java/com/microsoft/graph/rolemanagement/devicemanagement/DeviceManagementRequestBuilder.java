@@ -25,9 +25,9 @@ import java.util.Objects;
 /** Provides operations to manage the deviceManagement property of the microsoft.graph.roleManagement entity. */
 public class DeviceManagementRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The resourceNamespaces property */
     @javax.annotation.Nonnull
     public ResourceNamespacesRequestBuilder resourceNamespaces() {
@@ -44,7 +44,7 @@ public class DeviceManagementRequestBuilder {
         return new RoleDefinitionsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new DeviceManagementRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -55,7 +55,7 @@ public class DeviceManagementRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/roleManagement/deviceManagement{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -67,7 +67,7 @@ public class DeviceManagementRequestBuilder {
      */
     public DeviceManagementRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/roleManagement/deviceManagement{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -153,6 +153,7 @@ public class DeviceManagementRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DeviceManagementRequestBuilderPatchRequestConfiguration requestConfig = new DeviceManagementRequestBuilderPatchRequestConfiguration();
@@ -169,7 +170,7 @@ public class DeviceManagementRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -186,7 +187,7 @@ public class DeviceManagementRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -204,7 +205,7 @@ public class DeviceManagementRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -220,7 +221,7 @@ public class DeviceManagementRequestBuilder {
     public java.util.concurrent.CompletableFuture<RbacApplicationMultiple> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -237,7 +238,7 @@ public class DeviceManagementRequestBuilder {
     public java.util.concurrent.CompletableFuture<RbacApplicationMultiple> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -255,7 +256,7 @@ public class DeviceManagementRequestBuilder {
     public java.util.concurrent.CompletableFuture<RbacApplicationMultiple> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -267,16 +268,16 @@ public class DeviceManagementRequestBuilder {
     /**
      * Update the navigation property deviceManagement in roleManagement
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of rbacApplicationMultiple
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final RbacApplicationMultiple body) {
+    public java.util.concurrent.CompletableFuture<RbacApplicationMultiple> patch(@javax.annotation.Nonnull final RbacApplicationMultiple body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, RbacApplicationMultiple::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -285,16 +286,16 @@ public class DeviceManagementRequestBuilder {
      * Update the navigation property deviceManagement in roleManagement
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of rbacApplicationMultiple
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final RbacApplicationMultiple body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<RbacApplicationMultiple> patch(@javax.annotation.Nonnull final RbacApplicationMultiple body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, RbacApplicationMultiple::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -304,17 +305,17 @@ public class DeviceManagementRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of rbacApplicationMultiple
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final RbacApplicationMultiple body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<RbacApplicationMultiple> patch(@javax.annotation.Nonnull final RbacApplicationMultiple body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, RbacApplicationMultiple::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -327,7 +328,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public UnifiedRbacResourceNamespaceItemRequestBuilder resourceNamespaces(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRbacResourceNamespace%2Did", id);
         return new UnifiedRbacResourceNamespaceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -339,7 +340,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public UnifiedRoleAssignmentMultipleItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleAssignmentMultiple%2Did", id);
         return new UnifiedRoleAssignmentMultipleItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -351,7 +352,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public UnifiedRoleDefinitionItemRequestBuilder roleDefinitions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleDefinition%2Did", id);
         return new UnifiedRoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -362,7 +363,7 @@ public class DeviceManagementRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new deviceManagementRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -388,7 +389,7 @@ public class DeviceManagementRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DeviceManagementRequestBuilderGetQueryParameters queryParameters = new DeviceManagementRequestBuilderGetQueryParameters();
@@ -406,7 +407,7 @@ public class DeviceManagementRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new deviceManagementRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

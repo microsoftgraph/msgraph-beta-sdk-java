@@ -3,9 +3,8 @@ package com.microsoft.graph.auditlogs;
 import com.microsoft.graph.auditlogs.directoryaudits.DirectoryAuditsRequestBuilder;
 import com.microsoft.graph.auditlogs.directoryaudits.item.DirectoryAuditItemRequestBuilder;
 import com.microsoft.graph.auditlogs.directoryprovisioning.DirectoryProvisioningRequestBuilder;
+import com.microsoft.graph.auditlogs.provisioning.item.ProvisioningObjectSummaryItemRequestBuilder;
 import com.microsoft.graph.auditlogs.provisioning.ProvisioningRequestBuilder;
-import com.microsoft.graph.auditlogs.restrictedsignins.item.RestrictedSignInItemRequestBuilder;
-import com.microsoft.graph.auditlogs.restrictedsignins.RestrictedSignInsRequestBuilder;
 import com.microsoft.graph.auditlogs.signins.item.SignInItemRequestBuilder;
 import com.microsoft.graph.auditlogs.signins.SignInsRequestBuilder;
 import com.microsoft.graph.models.AuditLogRoot;
@@ -37,26 +36,21 @@ public class AuditLogsRequestBuilder {
         return new DirectoryProvisioningRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The provisioning property */
     @javax.annotation.Nonnull
     public ProvisioningRequestBuilder provisioning() {
         return new ProvisioningRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The restrictedSignIns property */
-    @javax.annotation.Nonnull
-    public RestrictedSignInsRequestBuilder restrictedSignIns() {
-        return new RestrictedSignInsRequestBuilder(pathParameters, requestAdapter);
-    }
+    private RequestAdapter requestAdapter;
     /** The signIns property */
     @javax.annotation.Nonnull
     public SignInsRequestBuilder signIns() {
         return new SignInsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new AuditLogsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -67,7 +61,7 @@ public class AuditLogsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/auditLogs{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -79,7 +73,7 @@ public class AuditLogsRequestBuilder {
      */
     public AuditLogsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/auditLogs{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -137,6 +131,7 @@ public class AuditLogsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AuditLogsRequestBuilderPatchRequestConfiguration requestConfig = new AuditLogsRequestBuilderPatchRequestConfiguration();
@@ -154,7 +149,7 @@ public class AuditLogsRequestBuilder {
     @javax.annotation.Nonnull
     public DirectoryAuditItemRequestBuilder directoryAudits(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryAudit%2Did", id);
         return new DirectoryAuditItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -166,7 +161,7 @@ public class AuditLogsRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.auditlogs.directoryprovisioning.item.ProvisioningObjectSummaryItemRequestBuilder directoryProvisioning(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("provisioningObjectSummary%2Did", id);
         return new com.microsoft.graph.auditlogs.directoryprovisioning.item.ProvisioningObjectSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -177,7 +172,7 @@ public class AuditLogsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AuditLogRoot> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -194,7 +189,7 @@ public class AuditLogsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AuditLogRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<AuditLogsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -212,7 +207,7 @@ public class AuditLogsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AuditLogRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<AuditLogsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -224,16 +219,16 @@ public class AuditLogsRequestBuilder {
     /**
      * Update auditLogs
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of AuditLogRoot
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final AuditLogRoot body) {
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> patch(@javax.annotation.Nonnull final AuditLogRoot body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AuditLogRoot::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -242,16 +237,16 @@ public class AuditLogsRequestBuilder {
      * Update auditLogs
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of AuditLogRoot
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final AuditLogRoot body, @javax.annotation.Nullable final java.util.function.Consumer<AuditLogsRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> patch(@javax.annotation.Nonnull final AuditLogRoot body, @javax.annotation.Nullable final java.util.function.Consumer<AuditLogsRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AuditLogRoot::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -261,17 +256,17 @@ public class AuditLogsRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of AuditLogRoot
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final AuditLogRoot body, @javax.annotation.Nullable final java.util.function.Consumer<AuditLogsRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> patch(@javax.annotation.Nonnull final AuditLogRoot body, @javax.annotation.Nullable final java.util.function.Consumer<AuditLogsRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AuditLogRoot::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -284,21 +279,9 @@ public class AuditLogsRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.auditlogs.provisioning.item.ProvisioningObjectSummaryItemRequestBuilder provisioning(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("provisioningObjectSummary%2Did", id);
         return new com.microsoft.graph.auditlogs.provisioning.item.ProvisioningObjectSummaryItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.auditLogs.restrictedSignIns.item collection
-     * @param id Unique identifier of the item
-     * @return a RestrictedSignInItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RestrictedSignInItemRequestBuilder restrictedSignIns(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("restrictedSignIn%2Did", id);
-        return new RestrictedSignInItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the com.Microsoft.Graph.auditLogs.signIns.item collection
@@ -308,7 +291,7 @@ public class AuditLogsRequestBuilder {
     @javax.annotation.Nonnull
     public SignInItemRequestBuilder signIns(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("signIn%2Did", id);
         return new SignInItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -330,7 +313,7 @@ public class AuditLogsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AuditLogsRequestBuilderGetQueryParameters queryParameters = new AuditLogsRequestBuilderGetQueryParameters();
@@ -348,7 +331,7 @@ public class AuditLogsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new auditLogsRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

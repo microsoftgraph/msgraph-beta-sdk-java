@@ -37,7 +37,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExactMatchLookupJob currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("matchingRows", (n) -> { currentObject.setMatchingRows(n.getCollectionOfObjectValues(LookupResultRow::createFromDiscriminatorValue)); });
             this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
         }};

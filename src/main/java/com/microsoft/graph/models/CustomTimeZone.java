@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CustomTimeZone extends TimeZoneBase implements Parsable {
-    /** The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes. Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset. */
+    /** The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes.Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset. */
     private Integer _bias;
     /** Specifies when the time zone switches from standard time to daylight saving time. */
     private DaylightTimeZoneOffset _daylightOffset;
@@ -33,7 +33,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
         return new CustomTimeZone();
     }
     /**
-     * Gets the bias property value. The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes. Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
+     * Gets the bias property value. The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes.Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -55,7 +55,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomTimeZone currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bias", (n) -> { currentObject.setBias(n.getIntegerValue()); });
             this.put("daylightOffset", (n) -> { currentObject.setDaylightOffset(n.getObjectValue(DaylightTimeZoneOffset::createFromDiscriminatorValue)); });
             this.put("standardOffset", (n) -> { currentObject.setStandardOffset(n.getObjectValue(StandardTimeZoneOffset::createFromDiscriminatorValue)); });
@@ -82,7 +82,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
         writer.writeObjectValue("standardOffset", this.getStandardOffset());
     }
     /**
-     * Sets the bias property value. The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes. Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
+     * Sets the bias property value. The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes.Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
      * @param value Value to set for the bias property.
      * @return a void
      */

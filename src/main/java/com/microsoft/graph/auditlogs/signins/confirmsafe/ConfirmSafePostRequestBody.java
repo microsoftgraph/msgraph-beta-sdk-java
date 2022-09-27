@@ -46,7 +46,7 @@ public class ConfirmSafePostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConfirmSafePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("requestIds", (n) -> { currentObject.setRequestIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

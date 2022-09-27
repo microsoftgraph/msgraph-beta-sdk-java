@@ -35,7 +35,7 @@ public class EmailContentThreatSubmission extends EmailThreatSubmission implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailContentThreatSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fileContent", (n) -> { currentObject.setFileContent(n.getStringValue()); });
         }};
     }

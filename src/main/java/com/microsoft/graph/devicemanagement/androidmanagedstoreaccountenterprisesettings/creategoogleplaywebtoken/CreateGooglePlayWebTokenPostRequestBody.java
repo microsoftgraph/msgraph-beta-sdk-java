@@ -46,7 +46,7 @@ public class CreateGooglePlayWebTokenPostRequestBody implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateGooglePlayWebTokenPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("parentUri", (n) -> { currentObject.setParentUri(n.getStringValue()); });
         }};
     }

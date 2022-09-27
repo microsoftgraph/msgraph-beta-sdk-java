@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device scope entity contains device scope configuration values use to apply filtering on the endpoint analytics reports. */
 public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsable {
     /** Indicates the creation date and time for the custom device scope. */
     private OffsetDateTime _createdDateTime;
@@ -32,7 +33,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     /** The unique identifier for a user device scope tag Id used for the creation of device scope configuration. */
     private String _valueObjectId;
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceScope and sets the default values.
+     * Instantiates a new userExperienceAnalyticsDeviceScope and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsDeviceScope() {
@@ -42,7 +43,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceScope
+     * @return a userExperienceAnalyticsDeviceScope
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceScope createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -80,7 +81,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsDeviceScope currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("deviceScopeName", (n) -> { currentObject.setDeviceScopeName(n.getStringValue()); });
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });

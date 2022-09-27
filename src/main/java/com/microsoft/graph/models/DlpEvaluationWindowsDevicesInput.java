@@ -45,7 +45,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DlpEvaluationWindowsDevicesInput currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contentProperties", (n) -> { currentObject.setContentProperties(n.getObjectValue(ContentProperties::createFromDiscriminatorValue)); });
             this.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getStringValue()); });
         }};

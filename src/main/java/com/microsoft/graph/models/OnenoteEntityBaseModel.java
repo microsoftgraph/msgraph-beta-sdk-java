@@ -14,7 +14,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class OnenoteEntityBaseModel extends Entity implements Parsable {
     /** The self property */
     private String _self;
@@ -56,7 +56,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenoteEntityBaseModel currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("self", (n) -> { currentObject.setSelf(n.getStringValue()); });
         }};
     }

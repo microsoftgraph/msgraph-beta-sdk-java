@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class SecurityAction extends Entity implements Parsable {
     /** Reason for invoking this action. */
     private String _actionReason;
@@ -38,7 +39,7 @@ public class SecurityAction extends Entity implements Parsable {
     /** Complex Type containing details about the Security product/service vendor, provider, and sub-provider (for example, vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker). */
     private SecurityVendorInformation _vendorInformation;
     /**
-     * Instantiates a new SecurityAction and sets the default values.
+     * Instantiates a new securityAction and sets the default values.
      * @return a void
      */
     public SecurityAction() {
@@ -48,7 +49,7 @@ public class SecurityAction extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecurityAction
+     * @return a securityAction
      */
     @javax.annotation.Nonnull
     public static SecurityAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -118,7 +119,7 @@ public class SecurityAction extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionReason", (n) -> { currentObject.setActionReason(n.getStringValue()); });
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });

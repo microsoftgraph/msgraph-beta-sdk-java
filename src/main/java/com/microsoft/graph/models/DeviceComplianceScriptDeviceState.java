@@ -65,7 +65,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("detectionState", (n) -> { currentObject.setDetectionState(n.getEnumValue(RunState.class)); });
             this.put("expectedStateUpdateDateTime", (n) -> { currentObject.setExpectedStateUpdateDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastStateUpdateDateTime", (n) -> { currentObject.setLastStateUpdateDateTime(n.getOffsetDateTimeValue()); });

@@ -77,7 +77,7 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlertComment currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
             this.put("createdByDisplayName", (n) -> { currentObject.setCreatedByDisplayName(n.getStringValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });

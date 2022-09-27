@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Intune will provide customer the ability to run their Shell scripts on the enrolled Mac OS devices. The script can be run once or periodically. */
 public class DeviceShellScript extends Entity implements Parsable {
     /** The list of group assignments for the device management script. */
     private java.util.List<DeviceManagementScriptAssignment> _assignments;
@@ -43,7 +44,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     /** List of run states for this script across all users. */
     private java.util.List<DeviceManagementScriptUserState> _userRunStates;
     /**
-     * Instantiates a new DeviceShellScript and sets the default values.
+     * Instantiates a new deviceShellScript and sets the default values.
      * @return a void
      */
     public DeviceShellScript() {
@@ -53,7 +54,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceShellScript
+     * @return a deviceShellScript
      */
     @javax.annotation.Nonnull
     public static DeviceShellScript createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -123,7 +124,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceShellScript currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceManagementScriptAssignment::createFromDiscriminatorValue)); });
             this.put("blockExecutionNotifications", (n) -> { currentObject.setBlockExecutionNotifications(n.getBooleanValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -224,14 +225,12 @@ public class DeviceShellScript extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeBooleanValue("blockExecutionNotifications", this.getBlockExecutionNotifications());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfObjectValues("deviceRunStates", this.getDeviceRunStates());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writePeriodValue("executionFrequency", this.getExecutionFrequency());
         writer.writeStringValue("fileName", this.getFileName());
         writer.writeCollectionOfObjectValues("groupAssignments", this.getGroupAssignments());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeIntegerValue("retryCount", this.getRetryCount());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeEnumValue("runAsAccount", this.getRunAsAccount());

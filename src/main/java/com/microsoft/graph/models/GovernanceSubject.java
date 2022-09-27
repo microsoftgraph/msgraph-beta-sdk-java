@@ -57,7 +57,7 @@ public class GovernanceSubject extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceSubject currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("principalName", (n) -> { currentObject.setPrincipalName(n.getStringValue()); });

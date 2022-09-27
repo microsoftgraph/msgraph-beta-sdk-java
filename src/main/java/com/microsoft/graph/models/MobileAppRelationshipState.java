@@ -80,7 +80,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppRelationshipState currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
             this.put("installState", (n) -> { currentObject.setInstallState(n.getEnumValue(ResultantAppState.class)); });

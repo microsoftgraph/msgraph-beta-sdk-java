@@ -52,7 +52,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationLinkedObjects currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("manager", (n) -> { currentObject.setManager(n.getObjectValue(SynchronizationJobSubject::createFromDiscriminatorValue)); });
             this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(SynchronizationJobSubject::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

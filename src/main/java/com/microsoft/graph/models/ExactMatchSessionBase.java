@@ -66,7 +66,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExactMatchSessionBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("dataStoreId", (n) -> { currentObject.setDataStoreId(n.getStringValue()); });
             this.put("processingCompletionDateTime", (n) -> { currentObject.setProcessingCompletionDateTime(n.getOffsetDateTimeValue()); });
             this.put("remainingBlockCount", (n) -> { currentObject.setRemainingBlockCount(n.getIntegerValue()); });

@@ -53,7 +53,7 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemActivityTimeSet currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("lastRecordedDateTime", (n) -> { currentObject.setLastRecordedDateTime(n.getOffsetDateTimeValue()); });
             this.put("observedDateTime", (n) -> { currentObject.setObservedDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

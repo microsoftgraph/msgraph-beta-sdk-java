@@ -89,7 +89,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ComanagedDevicesSummary currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("compliancePolicyCount", (n) -> { currentObject.setCompliancePolicyCount(n.getIntegerValue()); });
             this.put("configurationSettingsCount", (n) -> { currentObject.setConfigurationSettingsCount(n.getIntegerValue()); });
             this.put("endpointProtectionCount", (n) -> { currentObject.setEndpointProtectionCount(n.getIntegerValue()); });
@@ -165,16 +165,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeIntegerValue("compliancePolicyCount", this.getCompliancePolicyCount());
-        writer.writeIntegerValue("configurationSettingsCount", this.getConfigurationSettingsCount());
-        writer.writeIntegerValue("endpointProtectionCount", this.getEndpointProtectionCount());
-        writer.writeIntegerValue("inventoryCount", this.getInventoryCount());
-        writer.writeIntegerValue("modernAppsCount", this.getModernAppsCount());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeIntegerValue("officeAppsCount", this.getOfficeAppsCount());
-        writer.writeIntegerValue("resourceAccessCount", this.getResourceAccessCount());
-        writer.writeIntegerValue("totalComanagedCount", this.getTotalComanagedCount());
-        writer.writeIntegerValue("windowsUpdateForBusinessCount", this.getWindowsUpdateForBusinessCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

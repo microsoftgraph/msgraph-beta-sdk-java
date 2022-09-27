@@ -69,7 +69,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementIntentDeviceStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("conflictCount", (n) -> { currentObject.setConflictCount(n.getIntegerValue()); });
             this.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
             this.put("failedCount", (n) -> { currentObject.setFailedCount(n.getIntegerValue()); });

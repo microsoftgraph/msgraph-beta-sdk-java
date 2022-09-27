@@ -101,7 +101,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsEnrollmentStatusScreenSettings currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("allowDeviceUseBeforeProfileAndAppInstallComplete", (n) -> { currentObject.setAllowDeviceUseBeforeProfileAndAppInstallComplete(n.getBooleanValue()); });
             this.put("allowDeviceUseOnInstallFailure", (n) -> { currentObject.setAllowDeviceUseOnInstallFailure(n.getBooleanValue()); });
             this.put("allowLogCollectionOnInstallFailure", (n) -> { currentObject.setAllowLogCollectionOnInstallFailure(n.getBooleanValue()); });

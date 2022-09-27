@@ -47,7 +47,7 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SetCloudPcReviewStatusPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("reviewStatus", (n) -> { currentObject.setReviewStatus(n.getObjectValue(CloudPcReviewStatus::createFromDiscriminatorValue)); });
         }};
     }

@@ -54,7 +54,7 @@ public class WipeManagedAppRegistrationByDeviceTagPostRequestBody implements Add
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WipeManagedAppRegistrationByDeviceTagPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("deviceTag", (n) -> { currentObject.setDeviceTag(n.getStringValue()); });
         }};
     }

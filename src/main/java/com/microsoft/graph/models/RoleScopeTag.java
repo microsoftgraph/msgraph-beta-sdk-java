@@ -66,7 +66,7 @@ public class RoleScopeTag extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleScopeTag currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(RoleScopeTagAutoAssignment::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -92,7 +92,6 @@ public class RoleScopeTag extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeBooleanValue("isBuiltIn", this.getIsBuiltIn());
     }
     /**
      * Sets the assignments property value. The list of assignments for this Role Scope Tag.

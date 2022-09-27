@@ -11,7 +11,7 @@ import java.util.Objects;
 public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Indicates whether caption is enabled for this Teams live event. */
+    /** Indicates whether captions are enabled for this Teams live event. */
     private Boolean _isCaptionEnabled;
     /** The OdataType property */
     private String _odataType;
@@ -52,7 +52,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BroadcastMeetingCaptionSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("isCaptionEnabled", (n) -> { currentObject.setIsCaptionEnabled(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("spokenLanguage", (n) -> { currentObject.setSpokenLanguage(n.getStringValue()); });
@@ -60,7 +60,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
         }};
     }
     /**
-     * Gets the isCaptionEnabled property value. Indicates whether caption is enabled for this Teams live event.
+     * Gets the isCaptionEnabled property value. Indicates whether captions are enabled for this Teams live event.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
         this._additionalData = value;
     }
     /**
-     * Sets the isCaptionEnabled property value. Indicates whether caption is enabled for this Teams live event.
+     * Sets the isCaptionEnabled property value. Indicates whether captions are enabled for this Teams live event.
      * @param value Value to set for the isCaptionEnabled property.
      * @return a void
      */

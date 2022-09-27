@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class TenantCustomizedInformation extends Entity implements Parsable {
     /** The collection of contacts for the managed tenant. Optional. */
     private java.util.List<TenantContactInformation> _contacts;
@@ -59,7 +59,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantCustomizedInformation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contacts", (n) -> { currentObject.setContacts(n.getCollectionOfObjectValues(TenantContactInformation::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });

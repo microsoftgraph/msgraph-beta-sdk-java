@@ -57,7 +57,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApplicationSignInSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
             this.put("failedSignInCount", (n) -> { currentObject.setFailedSignInCount(n.getLongValue()); });
             this.put("successfulSignInCount", (n) -> { currentObject.setSuccessfulSignInCount(n.getLongValue()); });

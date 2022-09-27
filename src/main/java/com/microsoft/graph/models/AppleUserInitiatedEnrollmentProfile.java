@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The enrollmentProfile resource represents a collection of configurations which must be provided pre-enrollment to enable enrolling certain devices whose identities have been pre-staged. Pre-staged device identities are assigned to this type of profile to apply the profile's configurations at enrollment of the corresponding device. */
 public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsable {
     /** The list of assignments for this profile. */
     private java.util.List<AppleEnrollmentProfileAssignment> _assignments;
@@ -28,7 +29,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     /** Priority, 0 is highest */
     private Integer _priority;
     /**
-     * Instantiates a new AppleUserInitiatedEnrollmentProfile and sets the default values.
+     * Instantiates a new appleUserInitiatedEnrollmentProfile and sets the default values.
      * @return a void
      */
     public AppleUserInitiatedEnrollmentProfile() {
@@ -38,7 +39,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppleUserInitiatedEnrollmentProfile
+     * @return a appleUserInitiatedEnrollmentProfile
      */
     @javax.annotation.Nonnull
     public static AppleUserInitiatedEnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -100,7 +101,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleUserInitiatedEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(AppleEnrollmentProfileAssignment::createFromDiscriminatorValue)); });
             this.put("availableEnrollmentTypeOptions", (n) -> { currentObject.setAvailableEnrollmentTypeOptions(n.getCollectionOfObjectValues(AppleOwnerTypeEnrollmentType::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });

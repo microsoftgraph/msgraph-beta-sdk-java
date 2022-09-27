@@ -67,7 +67,7 @@ public class Dimension extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Dimension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("dimensionValues", (n) -> { currentObject.setDimensionValues(n.getCollectionOfObjectValues(DimensionValue::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

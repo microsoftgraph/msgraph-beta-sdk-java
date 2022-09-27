@@ -66,7 +66,7 @@ public class TeamworkTeamsClientConfiguration implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkTeamsClientConfiguration currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("accountConfiguration", (n) -> { currentObject.setAccountConfiguration(n.getObjectValue(TeamworkAccountConfiguration::createFromDiscriminatorValue)); });
             this.put("featuresConfiguration", (n) -> { currentObject.setFeaturesConfiguration(n.getObjectValue(TeamworkFeaturesConfiguration::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

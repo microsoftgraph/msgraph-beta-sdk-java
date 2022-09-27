@@ -58,7 +58,7 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleAssignment currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("assignmentType", (n) -> { currentObject.setAssignmentType(n.getEnumValue(DelegatedPrivilegeStatus.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfObjectValues(RoleDefinition::createFromDiscriminatorValue)); });

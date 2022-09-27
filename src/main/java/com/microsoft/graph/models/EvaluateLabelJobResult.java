@@ -52,7 +52,7 @@ public class EvaluateLabelJobResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateLabelJobResult currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("responsiblePolicy", (n) -> { currentObject.setResponsiblePolicy(n.getObjectValue(ResponsiblePolicy::createFromDiscriminatorValue)); });
             this.put("responsibleSensitiveTypes", (n) -> { currentObject.setResponsibleSensitiveTypes(n.getCollectionOfObjectValues(ResponsibleSensitiveType::createFromDiscriminatorValue)); });

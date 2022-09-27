@@ -51,7 +51,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementUserRightsSetting currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("localUsersOrGroups", (n) -> { currentObject.setLocalUsersOrGroups(n.getCollectionOfObjectValues(DeviceManagementUserRightsLocalUserOrGroup::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(StateManagementSetting.class)); });

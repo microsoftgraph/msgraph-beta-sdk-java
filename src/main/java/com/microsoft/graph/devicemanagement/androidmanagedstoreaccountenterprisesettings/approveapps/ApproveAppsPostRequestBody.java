@@ -56,7 +56,7 @@ public class ApproveAppsPostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApproveAppsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("approveAllPermissions", (n) -> { currentObject.setApproveAllPermissions(n.getBooleanValue()); });
             this.put("packageIds", (n) -> { currentObject.setPackageIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};

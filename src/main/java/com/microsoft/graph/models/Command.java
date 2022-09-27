@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class Command extends Entity implements Parsable {
     /** The appServiceName property */
     private String _appServiceName;
@@ -68,7 +68,7 @@ public class Command extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Command currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appServiceName", (n) -> { currentObject.setAppServiceName(n.getStringValue()); });
             this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
             this.put("packageFamilyName", (n) -> { currentObject.setPackageFamilyName(n.getStringValue()); });

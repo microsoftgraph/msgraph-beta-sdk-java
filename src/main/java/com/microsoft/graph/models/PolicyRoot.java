@@ -23,6 +23,8 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     private AuthenticationFlowsPolicy _authenticationFlowsPolicy;
     /** The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD). */
     private AuthenticationMethodsPolicy _authenticationMethodsPolicy;
+    /** The authenticationStrengthPolicies property */
+    private java.util.List<AuthenticationStrengthPolicy> _authenticationStrengthPolicies;
     /** The policy that controls Azure AD authorization settings. */
     private java.util.List<AuthorizationPolicy> _authorizationPolicy;
     /** The Azure AD B2C policies that define how end users register via local accounts. */
@@ -140,6 +142,14 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
         return this._authenticationMethodsPolicy;
     }
     /**
+     * Gets the authenticationStrengthPolicies property value. The authenticationStrengthPolicies property
+     * @return a authenticationStrengthPolicy
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AuthenticationStrengthPolicy> getAuthenticationStrengthPolicies() {
+        return this._authenticationStrengthPolicies;
+    }
+    /**
      * Gets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
      * @return a authorizationPolicy
      */
@@ -226,13 +236,14 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PolicyRoot currentObject = this;
-        return new HashMap<>(27) {{
+        return new HashMap<String, Consumer<ParseNode>>(28) {{
             this.put("accessReviewPolicy", (n) -> { currentObject.setAccessReviewPolicy(n.getObjectValue(AccessReviewPolicy::createFromDiscriminatorValue)); });
             this.put("activityBasedTimeoutPolicies", (n) -> { currentObject.setActivityBasedTimeoutPolicies(n.getCollectionOfObjectValues(ActivityBasedTimeoutPolicy::createFromDiscriminatorValue)); });
             this.put("adminConsentRequestPolicy", (n) -> { currentObject.setAdminConsentRequestPolicy(n.getObjectValue(AdminConsentRequestPolicy::createFromDiscriminatorValue)); });
             this.put("appManagementPolicies", (n) -> { currentObject.setAppManagementPolicies(n.getCollectionOfObjectValues(AppManagementPolicy::createFromDiscriminatorValue)); });
             this.put("authenticationFlowsPolicy", (n) -> { currentObject.setAuthenticationFlowsPolicy(n.getObjectValue(AuthenticationFlowsPolicy::createFromDiscriminatorValue)); });
             this.put("authenticationMethodsPolicy", (n) -> { currentObject.setAuthenticationMethodsPolicy(n.getObjectValue(AuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
+            this.put("authenticationStrengthPolicies", (n) -> { currentObject.setAuthenticationStrengthPolicies(n.getCollectionOfObjectValues(AuthenticationStrengthPolicy::createFromDiscriminatorValue)); });
             this.put("authorizationPolicy", (n) -> { currentObject.setAuthorizationPolicy(n.getCollectionOfObjectValues(AuthorizationPolicy::createFromDiscriminatorValue)); });
             this.put("b2cAuthenticationMethodsPolicy", (n) -> { currentObject.setB2cAuthenticationMethodsPolicy(n.getObjectValue(B2cAuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
             this.put("claimsMappingPolicies", (n) -> { currentObject.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
@@ -357,6 +368,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("appManagementPolicies", this.getAppManagementPolicies());
         writer.writeObjectValue("authenticationFlowsPolicy", this.getAuthenticationFlowsPolicy());
         writer.writeObjectValue("authenticationMethodsPolicy", this.getAuthenticationMethodsPolicy());
+        writer.writeCollectionOfObjectValues("authenticationStrengthPolicies", this.getAuthenticationStrengthPolicies());
         writer.writeCollectionOfObjectValues("authorizationPolicy", this.getAuthorizationPolicy());
         writer.writeObjectValue("b2cAuthenticationMethodsPolicy", this.getB2cAuthenticationMethodsPolicy());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
@@ -435,6 +447,14 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      */
     public void setAuthenticationMethodsPolicy(@javax.annotation.Nullable final AuthenticationMethodsPolicy value) {
         this._authenticationMethodsPolicy = value;
+    }
+    /**
+     * Sets the authenticationStrengthPolicies property value. The authenticationStrengthPolicies property
+     * @param value Value to set for the authenticationStrengthPolicies property.
+     * @return a void
+     */
+    public void setAuthenticationStrengthPolicies(@javax.annotation.Nullable final java.util.List<AuthenticationStrengthPolicy> value) {
+        this._authenticationStrengthPolicies = value;
     }
     /**
      * Sets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.

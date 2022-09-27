@@ -93,7 +93,7 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OmaSetting currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isEncrypted", (n) -> { currentObject.setIsEncrypted(n.getBooleanValue()); });
@@ -143,10 +143,8 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeBooleanValue("isEncrypted", this.getIsEncrypted());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("omaUri", this.getOmaUri());
-        writer.writeStringValue("secretReferenceValueId", this.getSecretReferenceValueId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

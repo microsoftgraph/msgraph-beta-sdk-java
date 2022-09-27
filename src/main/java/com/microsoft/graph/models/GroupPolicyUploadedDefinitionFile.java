@@ -62,7 +62,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyUploadedDefinitionFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("defaultLanguageCode", (n) -> { currentObject.setDefaultLanguageCode(n.getStringValue()); });
             this.put("groupPolicyOperations", (n) -> { currentObject.setGroupPolicyOperations(n.getCollectionOfObjectValues(GroupPolicyOperation::createFromDiscriminatorValue)); });

@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.CrossTenantAccessPolicyTenantRestrictions;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -33,6 +34,13 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public static CrossTenantAccessPolicyB2BSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.crossTenantAccessPolicyTenantRestrictions": return new CrossTenantAccessPolicyTenantRestrictions();
+            }
+        }
         return new CrossTenantAccessPolicyB2BSetting();
     }
     /**
@@ -58,7 +66,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyB2BSetting currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("applications", (n) -> { currentObject.setApplications(n.getObjectValue(CrossTenantAccessPolicyTargetConfiguration::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("usersAndGroups", (n) -> { currentObject.setUsersAndGroups(n.getObjectValue(CrossTenantAccessPolicyTargetConfiguration::createFromDiscriminatorValue)); });

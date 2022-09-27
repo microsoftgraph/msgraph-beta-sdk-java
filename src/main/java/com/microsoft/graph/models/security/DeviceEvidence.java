@@ -88,7 +88,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureAdDeviceId", (n) -> { currentObject.setAzureAdDeviceId(n.getStringValue()); });
             this.put("defenderAvStatus", (n) -> { currentObject.setDefenderAvStatus(n.getEnumValue(DefenderAvStatus.class)); });
             this.put("deviceDnsName", (n) -> { currentObject.setDeviceDnsName(n.getStringValue()); });

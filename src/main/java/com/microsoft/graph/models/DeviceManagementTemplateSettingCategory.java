@@ -35,7 +35,7 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementTemplateSettingCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("recommendedSettings", (n) -> { currentObject.setRecommendedSettings(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
         }};
     }

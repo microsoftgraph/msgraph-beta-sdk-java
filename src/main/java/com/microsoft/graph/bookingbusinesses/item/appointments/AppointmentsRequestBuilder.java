@@ -26,11 +26,11 @@ public class AppointmentsRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new AppointmentsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -41,7 +41,7 @@ public class AppointmentsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/bookingBusinesses/{bookingBusiness%2Did}/appointments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class AppointmentsRequestBuilder {
      */
     public AppointmentsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/bookingBusinesses/{bookingBusiness%2Did}/appointments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AppointmentsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class AppointmentsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to appointments for bookingBusinesses
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class AppointmentsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to appointments for bookingBusinesses
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class AppointmentsRequestBuilder {
         return requestInfo;
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @return a CompletableFuture of BookingAppointmentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BookingAppointmentCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class AppointmentsRequestBuilder {
         }
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BookingAppointmentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BookingAppointmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AppointmentsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class AppointmentsRequestBuilder {
         }
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of BookingAppointmentCollectionResponse
@@ -163,7 +163,7 @@ public class AppointmentsRequestBuilder {
     public java.util.concurrent.CompletableFuture<BookingAppointmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AppointmentsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class AppointmentsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to appointments for bookingBusinesses
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body 
      * @return a CompletableFuture of bookingAppointment
      */
     public java.util.concurrent.CompletableFuture<BookingAppointment> post(@javax.annotation.Nonnull final BookingAppointment body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class AppointmentsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to appointments for bookingBusinesses
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingAppointment
@@ -198,7 +198,7 @@ public class AppointmentsRequestBuilder {
     public java.util.concurrent.CompletableFuture<BookingAppointment> post(@javax.annotation.Nonnull final BookingAppointment body, @javax.annotation.Nullable final java.util.function.Consumer<AppointmentsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class AppointmentsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to appointments for bookingBusinesses
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class AppointmentsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class AppointmentsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** All the appointments of this business. Read-only. Nullable. */
+    /** Get a list of bookingAppointment objects for the specified bookingBusiness. */
     public class AppointmentsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class AppointmentsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AppointmentsRequestBuilderGetQueryParameters queryParameters = new AppointmentsRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class AppointmentsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new appointmentsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

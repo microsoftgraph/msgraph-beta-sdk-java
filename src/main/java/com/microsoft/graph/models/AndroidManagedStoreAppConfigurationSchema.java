@@ -48,7 +48,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedStoreAppConfigurationSchema currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("exampleJson", (n) -> { currentObject.setExampleJson(n.getByteArrayValue()); });
             this.put("nestedSchemaItems", (n) -> { currentObject.setNestedSchemaItems(n.getCollectionOfObjectValues(AndroidManagedStoreAppConfigurationSchemaItem::createFromDiscriminatorValue)); });
             this.put("schemaItems", (n) -> { currentObject.setSchemaItems(n.getCollectionOfObjectValues(AndroidManagedStoreAppConfigurationSchemaItem::createFromDiscriminatorValue)); });

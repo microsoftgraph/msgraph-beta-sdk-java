@@ -43,7 +43,7 @@ public class AndroidOmaCpConfiguration extends DeviceConfiguration implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidOmaCpConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configurationXml", (n) -> { currentObject.setConfigurationXml(n.getByteArrayValue()); });
         }};
     }

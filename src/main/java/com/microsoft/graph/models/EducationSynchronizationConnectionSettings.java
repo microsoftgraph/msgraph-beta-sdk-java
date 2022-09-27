@@ -76,7 +76,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationConnectionSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
             this.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

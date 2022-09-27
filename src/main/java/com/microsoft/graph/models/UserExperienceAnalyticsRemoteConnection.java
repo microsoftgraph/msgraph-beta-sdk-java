@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analyte remote connection entity. */
 public class UserExperienceAnalyticsRemoteConnection extends Entity implements Parsable {
     /** The sign in failure percentage of Cloud PC Device. Valid values 0 to 100 */
     private Double _cloudPcFailurePercentage;
@@ -35,7 +36,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     /** The user experience analytics virtual network. */
     private String _virtualNetwork;
     /**
-     * Instantiates a new UserExperienceAnalyticsRemoteConnection and sets the default values.
+     * Instantiates a new userExperienceAnalyticsRemoteConnection and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsRemoteConnection() {
@@ -45,7 +46,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsRemoteConnection
+     * @return a userExperienceAnalyticsRemoteConnection
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsRemoteConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -123,7 +124,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsRemoteConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cloudPcFailurePercentage", (n) -> { currentObject.setCloudPcFailurePercentage(n.getDoubleValue()); });
             this.put("cloudPcRoundTripTime", (n) -> { currentObject.setCloudPcRoundTripTime(n.getDoubleValue()); });
             this.put("cloudPcSignInTime", (n) -> { currentObject.setCloudPcSignInTime(n.getDoubleValue()); });

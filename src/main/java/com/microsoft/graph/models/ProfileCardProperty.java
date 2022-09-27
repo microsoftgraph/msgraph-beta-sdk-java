@@ -54,7 +54,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProfileCardProperty currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("annotations", (n) -> { currentObject.setAnnotations(n.getCollectionOfObjectValues(ProfileCardAnnotation::createFromDiscriminatorValue)); });
             this.put("directoryPropertyName", (n) -> { currentObject.setDirectoryPropertyName(n.getStringValue()); });
         }};

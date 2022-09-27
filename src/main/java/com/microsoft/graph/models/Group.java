@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Group extends DirectoryObject implements Parsable {
     /** The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post. */
     private java.util.List<DirectoryObject> _acceptedSenders;
@@ -367,7 +367,7 @@ public class Group extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Group currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("acceptedSenders", (n) -> { currentObject.setAcceptedSenders(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
             this.put("accessType", (n) -> { currentObject.setAccessType(n.getEnumValue(GroupAccessType.class)); });
             this.put("allowExternalSenders", (n) -> { currentObject.setAllowExternalSenders(n.getBooleanValue()); });

@@ -47,7 +47,7 @@ public class ActivatePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActivatePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("subjects", (n) -> { currentObject.setSubjects(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
         }};
     }

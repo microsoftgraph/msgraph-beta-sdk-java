@@ -46,7 +46,7 @@ public class GetPolicySetsPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetPolicySetsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("policySetIds", (n) -> { currentObject.setPolicySetIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

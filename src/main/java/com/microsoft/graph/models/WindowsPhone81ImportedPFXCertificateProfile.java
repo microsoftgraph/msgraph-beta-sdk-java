@@ -37,7 +37,7 @@ public class WindowsPhone81ImportedPFXCertificateProfile extends WindowsCertific
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhone81ImportedPFXCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("intendedPurpose", (n) -> { currentObject.setIntendedPurpose(n.getEnumValue(IntendedPurpose.class)); });
             this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
         }};

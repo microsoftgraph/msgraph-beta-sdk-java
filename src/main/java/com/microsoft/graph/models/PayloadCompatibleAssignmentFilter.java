@@ -35,7 +35,7 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PayloadCompatibleAssignmentFilter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("payloadType", (n) -> { currentObject.setPayloadType(n.getEnumValue(AssignmentFilterPayloadType.class)); });
         }};
     }

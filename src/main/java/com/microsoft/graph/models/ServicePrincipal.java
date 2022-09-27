@@ -105,7 +105,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private java.util.List<String> _servicePrincipalNames;
     /** Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use. */
     private String _servicePrincipalType;
-    /** Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only. */
+    /** Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only. */
     private String _signInAudience;
     /** The synchronization property */
     private Synchronization _synchronization;
@@ -330,7 +330,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServicePrincipal currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
             this.put("addIns", (n) -> { currentObject.setAddIns(n.getCollectionOfObjectValues(AddIn::createFromDiscriminatorValue)); });
             this.put("alternativeNames", (n) -> { currentObject.setAlternativeNames(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -590,7 +590,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._servicePrincipalType;
     }
     /**
-     * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+     * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -1103,7 +1103,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._servicePrincipalType = value;
     }
     /**
-     * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+     * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
      * @param value Value to set for the signInAudience property.
      * @return a void
      */

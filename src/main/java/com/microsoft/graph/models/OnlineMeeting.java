@@ -15,14 +15,12 @@ public class OnlineMeeting extends Entity implements Parsable {
     private Boolean _allowAttendeeToEnableMic;
     /** Specifies who can be a presenter in a meeting. */
     private OnlineMeetingPresenters _allowedPresenters;
-    /** Specifies the mode of meeting chat. */
-    private MeetingChatMode _allowMeetingChat;
     /** Indicates if Teams reactions are enabled for the meeting. */
     private Boolean _allowTeamworkReactions;
     /** The content stream of the alternative recording of a Microsoft Teams live event. Read-only. */
     private byte[] _alternativeRecording;
     /** The anonymizeIdentityForRoles property */
-    private java.util.List<String> _anonymizeIdentityForRoles;
+    private java.util.List<OnlineMeetingRole> _anonymizeIdentityForRoles;
     /** The attendance reports of an online meeting. Read-only. */
     private java.util.List<MeetingAttendanceReport> _attendanceReports;
     /** The content stream of the attendee report of a Teams live event. Read-only. */
@@ -32,7 +30,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     /** Settings related to a live event. */
     private BroadcastMeetingSettings _broadcastSettings;
     /** The capabilities property */
-    private java.util.List<String> _capabilities;
+    private java.util.List<MeetingCapabilities> _capabilities;
     /** The chat information associated with this online meeting. */
     private ChatInfo _chatInfo;
     /** The meeting creation time in UTC. Read-only. */
@@ -118,14 +116,6 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._allowedPresenters;
     }
     /**
-     * Gets the allowMeetingChat property value. Specifies the mode of meeting chat.
-     * @return a meetingChatMode
-     */
-    @javax.annotation.Nullable
-    public MeetingChatMode getAllowMeetingChat() {
-        return this._allowMeetingChat;
-    }
-    /**
      * Gets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      * @return a boolean
      */
@@ -143,10 +133,10 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the anonymizeIdentityForRoles property value. The anonymizeIdentityForRoles property
-     * @return a string
+     * @return a onlineMeetingRole
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getAnonymizeIdentityForRoles() {
+    public java.util.List<OnlineMeetingRole> getAnonymizeIdentityForRoles() {
         return this._anonymizeIdentityForRoles;
     }
     /**
@@ -183,10 +173,10 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the capabilities property value. The capabilities property
-     * @return a string
+     * @return a meetingCapabilities
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getCapabilities() {
+    public java.util.List<MeetingCapabilities> getCapabilities() {
         return this._capabilities;
     }
     /**
@@ -228,19 +218,18 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnlineMeeting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowAttendeeToEnableCamera", (n) -> { currentObject.setAllowAttendeeToEnableCamera(n.getBooleanValue()); });
             this.put("allowAttendeeToEnableMic", (n) -> { currentObject.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
             this.put("allowedPresenters", (n) -> { currentObject.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
-            this.put("allowMeetingChat", (n) -> { currentObject.setAllowMeetingChat(n.getEnumValue(MeetingChatMode.class)); });
             this.put("allowTeamworkReactions", (n) -> { currentObject.setAllowTeamworkReactions(n.getBooleanValue()); });
             this.put("alternativeRecording", (n) -> { currentObject.setAlternativeRecording(n.getByteArrayValue()); });
-            this.put("anonymizeIdentityForRoles", (n) -> { currentObject.setAnonymizeIdentityForRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("anonymizeIdentityForRoles", (n) -> { currentObject.setAnonymizeIdentityForRoles(n.getCollectionOfEnumValues(OnlineMeetingRole.class)); });
             this.put("attendanceReports", (n) -> { currentObject.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
             this.put("attendeeReport", (n) -> { currentObject.setAttendeeReport(n.getByteArrayValue()); });
             this.put("audioConferencing", (n) -> { currentObject.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
             this.put("broadcastSettings", (n) -> { currentObject.setBroadcastSettings(n.getObjectValue(BroadcastMeetingSettings::createFromDiscriminatorValue)); });
-            this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getCollectionOfEnumValues(MeetingCapabilities.class)); });
             this.put("chatInfo", (n) -> { currentObject.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
             this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -411,15 +400,14 @@ public class OnlineMeeting extends Entity implements Parsable {
         writer.writeBooleanValue("allowAttendeeToEnableCamera", this.getAllowAttendeeToEnableCamera());
         writer.writeBooleanValue("allowAttendeeToEnableMic", this.getAllowAttendeeToEnableMic());
         writer.writeEnumValue("allowedPresenters", this.getAllowedPresenters());
-        writer.writeEnumValue("allowMeetingChat", this.getAllowMeetingChat());
         writer.writeBooleanValue("allowTeamworkReactions", this.getAllowTeamworkReactions());
         writer.writeByteArrayValue("alternativeRecording", this.getAlternativeRecording());
-        writer.writeCollectionOfPrimitiveValues("anonymizeIdentityForRoles", this.getAnonymizeIdentityForRoles());
+        writer.writeCollectionOfEnumValues("anonymizeIdentityForRoles", this.getAnonymizeIdentityForRoles());
         writer.writeCollectionOfObjectValues("attendanceReports", this.getAttendanceReports());
         writer.writeByteArrayValue("attendeeReport", this.getAttendeeReport());
         writer.writeObjectValue("audioConferencing", this.getAudioConferencing());
         writer.writeObjectValue("broadcastSettings", this.getBroadcastSettings());
-        writer.writeCollectionOfPrimitiveValues("capabilities", this.getCapabilities());
+        writer.writeCollectionOfEnumValues("capabilities", this.getCapabilities());
         writer.writeObjectValue("chatInfo", this.getChatInfo());
         writer.writeOffsetDateTimeValue("creationDateTime", this.getCreationDateTime());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
@@ -467,14 +455,6 @@ public class OnlineMeeting extends Entity implements Parsable {
         this._allowedPresenters = value;
     }
     /**
-     * Sets the allowMeetingChat property value. Specifies the mode of meeting chat.
-     * @param value Value to set for the allowMeetingChat property.
-     * @return a void
-     */
-    public void setAllowMeetingChat(@javax.annotation.Nullable final MeetingChatMode value) {
-        this._allowMeetingChat = value;
-    }
-    /**
      * Sets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      * @param value Value to set for the allowTeamworkReactions property.
      * @return a void
@@ -495,7 +475,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the anonymizeIdentityForRoles property.
      * @return a void
      */
-    public void setAnonymizeIdentityForRoles(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAnonymizeIdentityForRoles(@javax.annotation.Nullable final java.util.List<OnlineMeetingRole> value) {
         this._anonymizeIdentityForRoles = value;
     }
     /**
@@ -535,7 +515,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the capabilities property.
      * @return a void
      */
-    public void setCapabilities(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setCapabilities(@javax.annotation.Nullable final java.util.List<MeetingCapabilities> value) {
         this._capabilities = value;
     }
     /**

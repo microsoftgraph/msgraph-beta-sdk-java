@@ -46,7 +46,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomExtensionHandler currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customExtension", (n) -> { currentObject.setCustomExtension(n.getObjectValue(CustomAccessPackageWorkflowExtension::createFromDiscriminatorValue)); });
             this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(AccessPackageCustomExtensionStage.class)); });
         }};

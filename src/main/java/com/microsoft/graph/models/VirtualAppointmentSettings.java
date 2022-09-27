@@ -56,7 +56,7 @@ public class VirtualAppointmentSettings implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VirtualAppointmentSettings currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("allowClientToJoinUsingBrowser", (n) -> { currentObject.setAllowClientToJoinUsingBrowser(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

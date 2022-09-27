@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ImageInfo implements AdditionalDataHolder, Parsable {
-    /** Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image */
+    /** Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image */
     private Boolean _addImageQuery;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -40,7 +40,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
         return new ImageInfo();
     }
     /**
-     * Gets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
+     * Gets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImageInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("addImageQuery", (n) -> { currentObject.setAddImageQuery(n.getBooleanValue()); });
             this.put("alternateText", (n) -> { currentObject.setAlternateText(n.getStringValue()); });
             this.put("alternativeText", (n) -> { currentObject.setAlternativeText(n.getStringValue()); });
@@ -117,7 +117,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
+     * Sets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image
      * @param value Value to set for the addImageQuery property.
      * @return a void
      */

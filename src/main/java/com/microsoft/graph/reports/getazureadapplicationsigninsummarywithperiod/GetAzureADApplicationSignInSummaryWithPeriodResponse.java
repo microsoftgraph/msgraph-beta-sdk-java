@@ -47,7 +47,7 @@ public class GetAzureADApplicationSignInSummaryWithPeriodResponse implements Add
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetAzureADApplicationSignInSummaryWithPeriodResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(ApplicationSignInSummary::createFromDiscriminatorValue)); });
         }};
     }

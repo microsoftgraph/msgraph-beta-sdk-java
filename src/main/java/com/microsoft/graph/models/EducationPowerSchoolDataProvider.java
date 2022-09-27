@@ -87,7 +87,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationPowerSchoolDataProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowTeachersInMultipleSchools", (n) -> { currentObject.setAllowTeachersInMultipleSchools(n.getBooleanValue()); });
             this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
             this.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });

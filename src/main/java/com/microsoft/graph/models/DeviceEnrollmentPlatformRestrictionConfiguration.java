@@ -37,7 +37,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceEnrollmentPlatformRestrictionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("platformRestriction", (n) -> { currentObject.setPlatformRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
             this.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(EnrollmentRestrictionPlatformType.class)); });
         }};

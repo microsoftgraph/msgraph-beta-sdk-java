@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AppRoleAssignment extends Entity implements Parsable {
     /** The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create. */
     private String _appRoleId;
@@ -65,7 +65,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppRoleAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appRoleId", (n) -> { currentObject.setAppRoleId(n.getStringValue()); });
             this.put("creationTimestamp", (n) -> { currentObject.setCreationTimestamp(n.getOffsetDateTimeValue()); });
             this.put("principalDisplayName", (n) -> { currentObject.setPrincipalDisplayName(n.getStringValue()); });

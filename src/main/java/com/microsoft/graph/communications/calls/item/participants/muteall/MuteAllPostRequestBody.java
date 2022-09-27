@@ -56,7 +56,7 @@ public class MuteAllPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MuteAllPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
             this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfPrimitiveValues(String.class)); });
         }};

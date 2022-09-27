@@ -15,7 +15,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
     /** The URL of the API endpoint to call. */
     private String _targetUrl;
     /**
-     * Instantiates a new IdentityApiConnector and sets the default values.
+     * Instantiates a new identityApiConnector and sets the default values.
      * @return a void
      */
     public IdentityApiConnector() {
@@ -25,7 +25,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityApiConnector
+     * @return a identityApiConnector
      */
     @javax.annotation.Nonnull
     public static IdentityApiConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityApiConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationConfiguration", (n) -> { currentObject.setAuthenticationConfiguration(n.getObjectValue(ApiAuthenticationConfigurationBase::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("targetUrl", (n) -> { currentObject.setTargetUrl(n.getStringValue()); });

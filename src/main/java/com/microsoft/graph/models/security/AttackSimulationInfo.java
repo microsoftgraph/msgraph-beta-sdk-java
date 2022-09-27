@@ -88,7 +88,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("attackSimDateTime", (n) -> { currentObject.setAttackSimDateTime(n.getOffsetDateTimeValue()); });
             this.put("attackSimDurationTime", (n) -> { currentObject.setAttackSimDurationTime(n.getPeriodValue()); });
             this.put("attackSimId", (n) -> { currentObject.setAttackSimId(n.getStringValue()); });

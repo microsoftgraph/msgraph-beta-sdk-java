@@ -48,7 +48,7 @@ public class RecordDecisionsPostRequestBody implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecordDecisionsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
             this.put("reviewResult", (n) -> { currentObject.setReviewResult(n.getStringValue()); });
         }};

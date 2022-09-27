@@ -51,7 +51,7 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleExpeditedCheckinConfigurationBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enableExpeditedCheckin", (n) -> { currentObject.setEnableExpeditedCheckin(n.getBooleanValue()); });
         }};
     }

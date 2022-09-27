@@ -37,7 +37,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TypedEmailAddress currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("otherLabel", (n) -> { currentObject.setOtherLabel(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(EmailType.class)); });
         }};

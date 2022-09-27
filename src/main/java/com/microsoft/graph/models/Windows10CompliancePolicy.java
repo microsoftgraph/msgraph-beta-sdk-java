@@ -193,7 +193,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10CompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeFirewallRequired", (n) -> { currentObject.setActiveFirewallRequired(n.getBooleanValue()); });
             this.put("antiSpywareRequired", (n) -> { currentObject.setAntiSpywareRequired(n.getBooleanValue()); });
             this.put("antivirusRequired", (n) -> { currentObject.setAntivirusRequired(n.getBooleanValue()); });

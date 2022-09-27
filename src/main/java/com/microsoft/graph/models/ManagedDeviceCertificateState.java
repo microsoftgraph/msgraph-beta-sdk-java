@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ManagedDeviceCertificateState extends Entity implements Parsable {
     /** Extended key usage */
     private String _certificateEnhancedKeyUsage;
@@ -259,7 +259,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceCertificateState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateEnhancedKeyUsage", (n) -> { currentObject.setCertificateEnhancedKeyUsage(n.getStringValue()); });
             this.put("certificateErrorCode", (n) -> { currentObject.setCertificateErrorCode(n.getIntegerValue()); });
             this.put("certificateExpirationDateTime", (n) -> { currentObject.setCertificateExpirationDateTime(n.getOffsetDateTimeValue()); });

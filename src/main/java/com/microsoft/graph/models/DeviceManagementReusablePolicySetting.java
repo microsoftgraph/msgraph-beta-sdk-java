@@ -77,7 +77,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementReusablePolicySetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -145,15 +145,11 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfObjectValues("referencingConfigurationPolicies", this.getReferencingConfigurationPolicies());
-        writer.writeIntegerValue("referencingConfigurationPolicyCount", this.getReferencingConfigurationPolicyCount());
         writer.writeStringValue("settingDefinitionId", this.getSettingDefinitionId());
         writer.writeObjectValue("settingInstance", this.getSettingInstance());
-        writer.writeIntegerValue("version", this.getVersion());
     }
     /**
      * Sets the createdDateTime property value. reusable setting creation date and time. This property is read-only.

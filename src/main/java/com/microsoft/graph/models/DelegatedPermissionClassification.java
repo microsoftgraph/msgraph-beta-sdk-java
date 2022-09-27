@@ -48,7 +48,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedPermissionClassification currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(PermissionClassificationType.class)); });
             this.put("permissionId", (n) -> { currentObject.setPermissionId(n.getStringValue()); });
             this.put("permissionName", (n) -> { currentObject.setPermissionName(n.getStringValue()); });

@@ -106,7 +106,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RetrieveRemoteHelpSessionResponse currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("acsGroupId", (n) -> { currentObject.setAcsGroupId(n.getStringValue()); });
             this.put("acsHelperUserId", (n) -> { currentObject.setAcsHelperUserId(n.getStringValue()); });
             this.put("acsHelperUserToken", (n) -> { currentObject.setAcsHelperUserToken(n.getStringValue()); });

@@ -60,7 +60,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParseExpressionPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("expression", (n) -> { currentObject.setExpression(n.getStringValue()); });
             this.put("targetAttributeDefinition", (n) -> { currentObject.setTargetAttributeDefinition(n.getObjectValue(AttributeDefinition::createFromDiscriminatorValue)); });
             this.put("testInputObject", (n) -> { currentObject.setTestInputObject(n.getObjectValue(ExpressionInputObject::createFromDiscriminatorValue)); });

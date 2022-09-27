@@ -59,7 +59,7 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResumePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("data", (n) -> { currentObject.setData(n.getObjectValue(CustomTaskExtensionCallbackData::createFromDiscriminatorValue)); });
             this.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });

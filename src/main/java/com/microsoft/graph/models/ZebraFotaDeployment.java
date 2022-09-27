@@ -84,7 +84,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ZebraFotaDeployment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deploymentAssignments", (n) -> { currentObject.setDeploymentAssignments(n.getCollectionOfObjectValues(AndroidFotaDeploymentAssignment::createFromDiscriminatorValue)); });
             this.put("deploymentSettings", (n) -> { currentObject.setDeploymentSettings(n.getObjectValue(ZebraFotaDeploymentSettings::createFromDiscriminatorValue)); });
             this.put("deploymentStatus", (n) -> { currentObject.setDeploymentStatus(n.getObjectValue(ZebraFotaDeploymentStatus::createFromDiscriminatorValue)); });

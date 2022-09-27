@@ -63,7 +63,7 @@ public class PersonName extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersonName currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("first", (n) -> { currentObject.setFirst(n.getStringValue()); });
             this.put("initials", (n) -> { currentObject.setInitials(n.getStringValue()); });

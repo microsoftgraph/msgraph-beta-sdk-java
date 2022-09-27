@@ -47,7 +47,7 @@ public class GetManagedDevicesWithFailedOrPendingAppsResponse implements Additio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetManagedDevicesWithFailedOrPendingAppsResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(ManagedDeviceSummarizedAppState::createFromDiscriminatorValue)); });
         }};
     }

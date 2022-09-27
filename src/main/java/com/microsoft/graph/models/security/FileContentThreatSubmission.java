@@ -35,7 +35,7 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileContentThreatSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fileContent", (n) -> { currentObject.setFileContent(n.getStringValue()); });
         }};
     }

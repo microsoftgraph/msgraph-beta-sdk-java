@@ -126,7 +126,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsProtectionState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("antiMalwareVersion", (n) -> { currentObject.setAntiMalwareVersion(n.getStringValue()); });
             this.put("attentionRequired", (n) -> { currentObject.setAttentionRequired(n.getBooleanValue()); });
             this.put("deviceDeleted", (n) -> { currentObject.setDeviceDeleted(n.getBooleanValue()); });

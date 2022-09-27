@@ -105,7 +105,7 @@ public class Recommendation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Recommendation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionSteps", (n) -> { currentObject.setActionSteps(n.getCollectionOfObjectValues(ActionStep::createFromDiscriminatorValue)); });
             this.put("benefits", (n) -> { currentObject.setBenefits(n.getStringValue()); });
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(RecommendationCategory.class)); });

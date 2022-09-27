@@ -107,7 +107,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleVpnAlwaysOnConfiguration currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("airPrintExceptionAction", (n) -> { currentObject.setAirPrintExceptionAction(n.getEnumValue(VpnServiceExceptionAction.class)); });
             this.put("allowAllCaptiveNetworkPlugins", (n) -> { currentObject.setAllowAllCaptiveNetworkPlugins(n.getBooleanValue()); });
             this.put("allowCaptiveWebSheet", (n) -> { currentObject.setAllowCaptiveWebSheet(n.getBooleanValue()); });

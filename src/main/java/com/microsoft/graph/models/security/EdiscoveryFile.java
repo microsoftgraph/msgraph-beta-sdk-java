@@ -45,7 +45,7 @@ public class EdiscoveryFile extends File implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("custodian", (n) -> { currentObject.setCustodian(n.getObjectValue(EdiscoveryCustodian::createFromDiscriminatorValue)); });
             this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfObjectValues(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
         }};

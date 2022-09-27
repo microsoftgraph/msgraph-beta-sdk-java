@@ -174,7 +174,7 @@ public class CompanyItemRequestBuilder {
         return new JournalsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The paymentMethods property */
     @javax.annotation.Nonnull
     public PaymentMethodsRequestBuilder paymentMethods() {
@@ -201,7 +201,7 @@ public class CompanyItemRequestBuilder {
         return new PurchaseInvoicesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The salesCreditMemoLines property */
     @javax.annotation.Nonnull
     public SalesCreditMemoLinesRequestBuilder salesCreditMemoLines() {
@@ -263,7 +263,7 @@ public class CompanyItemRequestBuilder {
         return new UnitsOfMeasureRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /** The vendors property */
     @javax.annotation.Nonnull
     public VendorsRequestBuilder vendors() {
@@ -277,7 +277,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public AccountItemRequestBuilder accounts(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("account%2Did", id);
         return new AccountItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -289,7 +289,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public AgedAccountsPayableItemRequestBuilder agedAccountsPayable(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("agedAccountsPayable%2Did", id);
         return new AgedAccountsPayableItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -301,7 +301,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public AgedAccountsReceivableItemRequestBuilder agedAccountsReceivable(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("agedAccountsReceivable%2Did", id);
         return new AgedAccountsReceivableItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -313,7 +313,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public CompanyInformationItemRequestBuilder companyInformation(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("companyInformation%2Did", id);
         return new CompanyInformationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -327,7 +327,7 @@ public class CompanyItemRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/financials/companies/{company%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -339,7 +339,7 @@ public class CompanyItemRequestBuilder {
      */
     public CompanyItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/financials/companies/{company%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -352,7 +352,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public CountryRegionItemRequestBuilder countriesRegions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("countryRegion%2Did", id);
         return new CountryRegionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -394,7 +394,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public CurrencyItemRequestBuilder currencies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("currency%2Did", id);
         return new CurrencyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -406,7 +406,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public CustomerPaymentJournalItemRequestBuilder customerPaymentJournals(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("customerPaymentJournal%2Did", id);
         return new CustomerPaymentJournalItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -418,7 +418,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public CustomerPaymentItemRequestBuilder customerPayments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("customerPayment%2Did", id);
         return new CustomerPaymentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -430,7 +430,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public CustomerItemRequestBuilder customers(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("customer%2Did", id);
         return new CustomerItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -442,7 +442,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public DimensionItemRequestBuilder dimensions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("dimension%2Did", id);
         return new DimensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -454,7 +454,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public DimensionValueItemRequestBuilder dimensionValues(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("dimensionValue%2Did", id);
         return new DimensionValueItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -466,7 +466,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public EmployeeItemRequestBuilder employees(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("employee%2Did", id);
         return new EmployeeItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -478,7 +478,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public GeneralLedgerEntryItemRequestBuilder generalLedgerEntries(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("generalLedgerEntry%2Did", id);
         return new GeneralLedgerEntryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -489,7 +489,7 @@ public class CompanyItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Company> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -506,7 +506,7 @@ public class CompanyItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Company> get(@javax.annotation.Nullable final java.util.function.Consumer<CompanyItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -524,7 +524,7 @@ public class CompanyItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Company> get(@javax.annotation.Nullable final java.util.function.Consumer<CompanyItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -541,7 +541,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public ItemCategoryItemRequestBuilder itemCategories(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("itemCategory%2Did", id);
         return new ItemCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -553,7 +553,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public ItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("item%2Did", id);
         return new ItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -565,7 +565,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public JournalLineItemRequestBuilder journalLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("journalLine%2Did", id);
         return new JournalLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -577,7 +577,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public JournalItemRequestBuilder journals(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("journal%2Did", id);
         return new JournalItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -589,7 +589,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public PaymentMethodItemRequestBuilder paymentMethods(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("paymentMethod%2Did", id);
         return new PaymentMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -601,7 +601,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public PaymentTermItemRequestBuilder paymentTerms(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("paymentTerm%2Did", id);
         return new PaymentTermItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -613,7 +613,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public PictureItemRequestBuilder picture(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("picture%2Did", id);
         return new PictureItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -625,7 +625,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public PurchaseInvoiceLineItemRequestBuilder purchaseInvoiceLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("purchaseInvoiceLine%2Did", id);
         return new PurchaseInvoiceLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -637,7 +637,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public PurchaseInvoiceItemRequestBuilder purchaseInvoices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("purchaseInvoice%2Did", id);
         return new PurchaseInvoiceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -649,7 +649,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public SalesCreditMemoLineItemRequestBuilder salesCreditMemoLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesCreditMemoLine%2Did", id);
         return new SalesCreditMemoLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -661,7 +661,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public SalesCreditMemoItemRequestBuilder salesCreditMemos(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesCreditMemo%2Did", id);
         return new SalesCreditMemoItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -673,7 +673,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public SalesInvoiceLineItemRequestBuilder salesInvoiceLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesInvoiceLine%2Did", id);
         return new SalesInvoiceLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -685,7 +685,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public SalesInvoiceItemRequestBuilder salesInvoices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesInvoice%2Did", id);
         return new SalesInvoiceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -697,7 +697,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public SalesOrderLineItemRequestBuilder salesOrderLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesOrderLine%2Did", id);
         return new SalesOrderLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -709,7 +709,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public SalesOrderItemRequestBuilder salesOrders(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesOrder%2Did", id);
         return new SalesOrderItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -721,7 +721,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public SalesQuoteLineItemRequestBuilder salesQuoteLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesQuoteLine%2Did", id);
         return new SalesQuoteLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -733,7 +733,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public SalesQuoteItemRequestBuilder salesQuotes(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesQuote%2Did", id);
         return new SalesQuoteItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -745,7 +745,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public ShipmentMethodItemRequestBuilder shipmentMethods(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("shipmentMethod%2Did", id);
         return new ShipmentMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -757,7 +757,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public TaxAreaItemRequestBuilder taxAreas(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("taxArea%2Did", id);
         return new TaxAreaItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -769,7 +769,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public TaxGroupItemRequestBuilder taxGroups(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("taxGroup%2Did", id);
         return new TaxGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -781,7 +781,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public UnitOfMeasureItemRequestBuilder unitsOfMeasure(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unitOfMeasure%2Did", id);
         return new UnitOfMeasureItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -793,7 +793,7 @@ public class CompanyItemRequestBuilder {
     @javax.annotation.Nonnull
     public VendorItemRequestBuilder vendors(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("vendor%2Did", id);
         return new VendorItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -815,7 +815,7 @@ public class CompanyItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public CompanyItemRequestBuilderGetQueryParameters queryParameters = new CompanyItemRequestBuilderGetQueryParameters();

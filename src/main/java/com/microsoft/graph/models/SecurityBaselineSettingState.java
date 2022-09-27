@@ -66,7 +66,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityBaselineSettingState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contributingPolicies", (n) -> { currentObject.setContributingPolicies(n.getCollectionOfObjectValues(SecurityBaselineContributingPolicy::createFromDiscriminatorValue)); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
             this.put("settingCategoryId", (n) -> { currentObject.setSettingCategoryId(n.getStringValue()); });

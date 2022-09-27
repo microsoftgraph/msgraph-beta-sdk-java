@@ -46,7 +46,7 @@ public class ResizeCloudPcPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResizeCloudPcPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("targetServicePlanId", (n) -> { currentObject.setTargetServicePlanId(n.getStringValue()); });
         }};
     }

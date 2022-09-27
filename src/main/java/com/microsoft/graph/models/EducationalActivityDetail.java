@@ -104,7 +104,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationalActivityDetail currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("abbreviation", (n) -> { currentObject.setAbbreviation(n.getStringValue()); });
             this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("awards", (n) -> { currentObject.setAwards(n.getCollectionOfPrimitiveValues(String.class)); });

@@ -50,7 +50,7 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkConfiguredPeripheral currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("isOptional", (n) -> { currentObject.setIsOptional(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("peripheral", (n) -> { currentObject.setPeripheral(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });

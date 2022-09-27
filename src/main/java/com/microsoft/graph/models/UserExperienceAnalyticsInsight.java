@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsInsight currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("insightId", (n) -> { currentObject.setInsightId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("severity", (n) -> { currentObject.setSeverity(n.getEnumValue(UserExperienceAnalyticsInsightSeverity.class)); });

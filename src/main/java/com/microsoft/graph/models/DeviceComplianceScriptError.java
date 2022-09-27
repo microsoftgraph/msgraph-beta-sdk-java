@@ -76,7 +76,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptError currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("code", (n) -> { currentObject.setCode(n.getEnumValue(Code.class)); });
             this.put("deviceComplianceScriptRulesValidationError", (n) -> { currentObject.setDeviceComplianceScriptRulesValidationError(n.getEnumValue(DeviceComplianceScriptRulesValidationError.class)); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });

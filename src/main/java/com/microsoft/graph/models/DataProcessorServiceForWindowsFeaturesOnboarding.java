@@ -59,7 +59,7 @@ public class DataProcessorServiceForWindowsFeaturesOnboarding implements Additio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DataProcessorServiceForWindowsFeaturesOnboarding currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("areDataProcessorServiceForWindowsFeaturesEnabled", (n) -> { currentObject.setAreDataProcessorServiceForWindowsFeaturesEnabled(n.getBooleanValue()); });
             this.put("hasValidWindowsLicense", (n) -> { currentObject.setHasValidWindowsLicense(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

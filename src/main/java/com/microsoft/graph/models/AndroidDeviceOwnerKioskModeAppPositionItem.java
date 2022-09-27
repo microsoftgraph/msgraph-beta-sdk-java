@@ -51,7 +51,7 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerKioskModeAppPositionItem currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("item", (n) -> { currentObject.setItem(n.getObjectValue(AndroidDeviceOwnerKioskModeHomeScreenItem::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("position", (n) -> { currentObject.setPosition(n.getIntegerValue()); });

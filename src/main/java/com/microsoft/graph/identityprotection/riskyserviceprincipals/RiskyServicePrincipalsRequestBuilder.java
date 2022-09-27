@@ -38,11 +38,11 @@ public class RiskyServicePrincipalsRequestBuilder {
         return new DismissRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new RiskyServicePrincipalsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -53,7 +53,7 @@ public class RiskyServicePrincipalsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identityProtection/riskyServicePrincipals{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -65,13 +65,13 @@ public class RiskyServicePrincipalsRequestBuilder {
      */
     public RiskyServicePrincipalsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/identityProtection/riskyServicePrincipals{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Azure AD service principals that are at risk.
+     * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class RiskyServicePrincipalsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Azure AD service principals that are at risk.
+     * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,13 +134,13 @@ public class RiskyServicePrincipalsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Azure AD service principals that are at risk.
+     * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @return a CompletableFuture of RiskyServicePrincipalCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipalCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -150,14 +150,14 @@ public class RiskyServicePrincipalsRequestBuilder {
         }
     }
     /**
-     * Azure AD service principals that are at risk.
+     * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RiskyServicePrincipalCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipalCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<RiskyServicePrincipalsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -167,7 +167,7 @@ public class RiskyServicePrincipalsRequestBuilder {
         }
     }
     /**
-     * Azure AD service principals that are at risk.
+     * Retrieve the properties and relationships of riskyServicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of RiskyServicePrincipalCollectionResponse
@@ -175,7 +175,7 @@ public class RiskyServicePrincipalsRequestBuilder {
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipalCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<RiskyServicePrincipalsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -192,7 +192,7 @@ public class RiskyServicePrincipalsRequestBuilder {
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipal> post(@javax.annotation.Nonnull final RiskyServicePrincipal body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -210,7 +210,7 @@ public class RiskyServicePrincipalsRequestBuilder {
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipal> post(@javax.annotation.Nonnull final RiskyServicePrincipal body, @javax.annotation.Nullable final java.util.function.Consumer<RiskyServicePrincipalsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -230,7 +230,7 @@ public class RiskyServicePrincipalsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -239,7 +239,7 @@ public class RiskyServicePrincipalsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Azure AD service principals that are at risk. */
+    /** Retrieve the properties and relationships of riskyServicePrincipal objects. */
     public class RiskyServicePrincipalsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -281,7 +281,7 @@ public class RiskyServicePrincipalsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public RiskyServicePrincipalsRequestBuilderGetQueryParameters queryParameters = new RiskyServicePrincipalsRequestBuilderGetQueryParameters();
@@ -299,7 +299,7 @@ public class RiskyServicePrincipalsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new riskyServicePrincipalsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

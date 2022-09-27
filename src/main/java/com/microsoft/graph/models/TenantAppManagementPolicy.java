@@ -47,7 +47,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantAppManagementPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationRestrictions", (n) -> { currentObject.setApplicationRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
             this.put("servicePrincipalRestrictions", (n) -> { currentObject.setServicePrincipalRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });

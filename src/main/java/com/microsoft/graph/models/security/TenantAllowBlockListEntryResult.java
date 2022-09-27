@@ -73,7 +73,7 @@ public class TenantAllowBlockListEntryResult implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantAllowBlockListEntryResult currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("entryType", (n) -> { currentObject.setEntryType(n.getEnumValue(TenantAllowBlockListEntryType.class)); });
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("identity", (n) -> { currentObject.setIdentity(n.getStringValue()); });

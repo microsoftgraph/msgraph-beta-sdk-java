@@ -69,7 +69,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppRegistryDetection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
             this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getEnumValue(Win32LobAppRegistryDetectionType.class)); });
             this.put("detectionValue", (n) -> { currentObject.setDetectionValue(n.getStringValue()); });

@@ -56,7 +56,7 @@ public class EncryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EncryptBufferPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("buffer", (n) -> { currentObject.setBuffer(n.getByteArrayValue()); });
             this.put("labelId", (n) -> { currentObject.setLabelId(n.getStringValue()); });
         }};

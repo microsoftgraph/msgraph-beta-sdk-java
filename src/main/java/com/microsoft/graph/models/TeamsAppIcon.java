@@ -37,7 +37,7 @@ public class TeamsAppIcon extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsAppIcon currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("hostedContent", (n) -> { currentObject.setHostedContent(n.getObjectValue(TeamworkHostedContent::createFromDiscriminatorValue)); });
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};

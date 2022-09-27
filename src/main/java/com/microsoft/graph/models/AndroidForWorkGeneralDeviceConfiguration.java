@@ -117,7 +117,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("passwordBlockFaceUnlock", (n) -> { currentObject.setPasswordBlockFaceUnlock(n.getBooleanValue()); });
             this.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
             this.put("passwordBlockIrisUnlock", (n) -> { currentObject.setPasswordBlockIrisUnlock(n.getBooleanValue()); });

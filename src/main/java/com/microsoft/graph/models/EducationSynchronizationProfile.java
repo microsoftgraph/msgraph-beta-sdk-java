@@ -84,7 +84,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("dataProvider", (n) -> { currentObject.setDataProvider(n.getObjectValue(EducationSynchronizationDataProvider::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfObjectValues(EducationSynchronizationError::createFromDiscriminatorValue)); });

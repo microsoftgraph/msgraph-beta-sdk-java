@@ -69,7 +69,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ValidateCredentialsPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("applicationIdentifier", (n) -> { currentObject.setApplicationIdentifier(n.getStringValue()); });
             this.put("credentials", (n) -> { currentObject.setCredentials(n.getCollectionOfObjectValues(SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue)); });
             this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });

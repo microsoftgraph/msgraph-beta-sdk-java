@@ -53,7 +53,7 @@ public class WebAccount extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WebAccount currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("service", (n) -> { currentObject.setService(n.getObjectValue(ServiceInformation::createFromDiscriminatorValue)); });
             this.put("statusMessage", (n) -> { currentObject.setStatusMessage(n.getStringValue()); });

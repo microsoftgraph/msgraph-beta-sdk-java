@@ -51,7 +51,7 @@ public class MarkContent extends LabelActionBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MarkContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fontColor", (n) -> { currentObject.setFontColor(n.getStringValue()); });
             this.put("fontSize", (n) -> { currentObject.setFontSize(n.getLongValue()); });
             this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });

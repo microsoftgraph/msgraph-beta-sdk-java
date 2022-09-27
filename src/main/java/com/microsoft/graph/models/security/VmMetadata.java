@@ -62,7 +62,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VmMetadata currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("cloudProvider", (n) -> { currentObject.setCloudProvider(n.getEnumValue(VmCloudProvider.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });

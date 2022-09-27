@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ConditionalAccessPolicyCoverage extends Entity implements Parsable {
     /** The state for the conditional access policy. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only. */
     private String _conditionalAccessPolicyState;
@@ -52,7 +52,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessPolicyCoverage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("conditionalAccessPolicyState", (n) -> { currentObject.setConditionalAccessPolicyState(n.getStringValue()); });
             this.put("latestPolicyModifiedDateTime", (n) -> { currentObject.setLatestPolicyModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("requiresDeviceCompliance", (n) -> { currentObject.setRequiresDeviceCompliance(n.getBooleanValue()); });

@@ -70,7 +70,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MatchingDlpRule currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("actions", (n) -> { currentObject.setActions(n.getCollectionOfObjectValues(DlpActionInfo::createFromDiscriminatorValue)); });
             this.put("isMostRestrictive", (n) -> { currentObject.setIsMostRestrictive(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

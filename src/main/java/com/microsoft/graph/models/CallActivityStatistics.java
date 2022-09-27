@@ -44,7 +44,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallActivityStatistics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("afterHours", (n) -> { currentObject.setAfterHours(n.getPeriodValue()); });
         }};
     }

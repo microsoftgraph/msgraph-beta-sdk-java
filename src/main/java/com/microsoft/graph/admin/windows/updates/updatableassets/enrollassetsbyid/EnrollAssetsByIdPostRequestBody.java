@@ -51,7 +51,7 @@ public class EnrollAssetsByIdPostRequestBody implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EnrollAssetsByIdPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("ids", (n) -> { currentObject.setIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("memberEntityType", (n) -> { currentObject.setMemberEntityType(n.getStringValue()); });
             this.put("updateCategory", (n) -> { currentObject.setUpdateCategory(n.getEnumValue(UpdateCategory.class)); });

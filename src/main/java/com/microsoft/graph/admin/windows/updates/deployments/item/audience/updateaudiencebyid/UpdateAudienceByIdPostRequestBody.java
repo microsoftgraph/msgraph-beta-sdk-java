@@ -70,7 +70,7 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateAudienceByIdPostRequestBody currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("addExclusions", (n) -> { currentObject.setAddExclusions(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("addMembers", (n) -> { currentObject.setAddMembers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("memberEntityType", (n) -> { currentObject.setMemberEntityType(n.getStringValue()); });

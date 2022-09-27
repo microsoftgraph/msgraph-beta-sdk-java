@@ -45,7 +45,7 @@ public class EncryptWithTemplate extends EncryptContent implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EncryptWithTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("availableForEncryption", (n) -> { currentObject.setAvailableForEncryption(n.getBooleanValue()); });
             this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
         }};

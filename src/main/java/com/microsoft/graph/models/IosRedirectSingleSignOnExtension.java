@@ -57,7 +57,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosRedirectSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configurations", (n) -> { currentObject.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
             this.put("extensionIdentifier", (n) -> { currentObject.setExtensionIdentifier(n.getStringValue()); });
             this.put("teamIdentifier", (n) -> { currentObject.setTeamIdentifier(n.getStringValue()); });

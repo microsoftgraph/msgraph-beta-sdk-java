@@ -55,7 +55,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProtectGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowEmailFromGuestUsers", (n) -> { currentObject.setAllowEmailFromGuestUsers(n.getBooleanValue()); });
             this.put("allowGuestUsers", (n) -> { currentObject.setAllowGuestUsers(n.getBooleanValue()); });
             this.put("privacy", (n) -> { currentObject.setPrivacy(n.getEnumValue(GroupPrivacy.class)); });

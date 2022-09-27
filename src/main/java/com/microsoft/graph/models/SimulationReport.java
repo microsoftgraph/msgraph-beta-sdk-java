@@ -50,7 +50,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SimulationReport currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("overview", (n) -> { currentObject.setOverview(n.getObjectValue(SimulationReportOverview::createFromDiscriminatorValue)); });
             this.put("simulationUsers", (n) -> { currentObject.setSimulationUsers(n.getCollectionOfObjectValues(UserSimulationDetails::createFromDiscriminatorValue)); });

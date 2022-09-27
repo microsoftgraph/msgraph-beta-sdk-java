@@ -84,7 +84,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServicePrincipalCreationConditionSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationIds", (n) -> { currentObject.setApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("applicationPublisherIds", (n) -> { currentObject.setApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("applicationsFromVerifiedPublisherOnly", (n) -> { currentObject.setApplicationsFromVerifiedPublisherOnly(n.getBooleanValue()); });

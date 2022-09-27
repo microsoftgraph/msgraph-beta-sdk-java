@@ -53,7 +53,7 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosWebContentFilterAutoFilter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedUrls", (n) -> { currentObject.setAllowedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("blockedUrls", (n) -> { currentObject.setBlockedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
         }};

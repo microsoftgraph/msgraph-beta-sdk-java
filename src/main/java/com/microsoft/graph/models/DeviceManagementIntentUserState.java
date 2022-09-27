@@ -53,7 +53,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementIntentUserState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
             this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ComplianceStatus.class)); });

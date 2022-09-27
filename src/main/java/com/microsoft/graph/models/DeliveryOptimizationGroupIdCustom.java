@@ -35,7 +35,7 @@ public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroup
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeliveryOptimizationGroupIdCustom currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("groupIdCustom", (n) -> { currentObject.setGroupIdCustom(n.getStringValue()); });
         }};
     }

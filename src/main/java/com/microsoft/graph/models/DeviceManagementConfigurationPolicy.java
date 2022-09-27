@@ -93,7 +93,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicyAssignment::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("creationSource", (n) -> { currentObject.setCreationSource(n.getStringValue()); });
@@ -193,7 +193,6 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("creationSource", this.getCreationSource());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeBooleanValue("isAssigned", this.getIsAssigned());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("name", this.getName());
         writer.writeEnumValue("platforms", this.getPlatforms());

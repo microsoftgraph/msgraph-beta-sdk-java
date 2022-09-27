@@ -245,7 +245,7 @@ public class SalesQuote extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SalesQuote currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("acceptedDate", (n) -> { currentObject.setAcceptedDate(n.getLocalDateValue()); });
             this.put("billingPostalAddress", (n) -> { currentObject.setBillingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
             this.put("billToCustomerId", (n) -> { currentObject.setBillToCustomerId(n.getStringValue()); });

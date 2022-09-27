@@ -55,7 +55,7 @@ public class VppLicensingType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VppLicensingType currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("supportDeviceLicensing", (n) -> { currentObject.setSupportDeviceLicensing(n.getBooleanValue()); });
             this.put("supportsDeviceLicensing", (n) -> { currentObject.setSupportsDeviceLicensing(n.getBooleanValue()); });

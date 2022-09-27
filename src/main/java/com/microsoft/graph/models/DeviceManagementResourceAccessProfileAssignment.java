@@ -40,7 +40,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementResourceAccessProfileAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("intent", (n) -> { currentObject.setIntent(n.getEnumValue(DeviceManagementResourceAccessProfileIntent.class)); });
             this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
             this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });

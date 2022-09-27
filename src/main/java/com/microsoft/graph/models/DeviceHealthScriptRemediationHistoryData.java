@@ -62,7 +62,7 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptRemediationHistoryData currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("date", (n) -> { currentObject.setDate(n.getLocalDateValue()); });
             this.put("noIssueDeviceCount", (n) -> { currentObject.setNoIssueDeviceCount(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

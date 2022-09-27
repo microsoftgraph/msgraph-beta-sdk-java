@@ -45,7 +45,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddWatermarkAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fontColor", (n) -> { currentObject.setFontColor(n.getStringValue()); });
             this.put("fontName", (n) -> { currentObject.setFontName(n.getStringValue()); });
             this.put("fontSize", (n) -> { currentObject.setFontSize(n.getIntegerValue()); });

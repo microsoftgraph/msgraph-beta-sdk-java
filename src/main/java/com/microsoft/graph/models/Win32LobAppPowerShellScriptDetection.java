@@ -47,7 +47,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppPowerShellScriptDetection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });
             this.put("runAs32Bit", (n) -> { currentObject.setRunAs32Bit(n.getBooleanValue()); });
             this.put("scriptContent", (n) -> { currentObject.setScriptContent(n.getStringValue()); });

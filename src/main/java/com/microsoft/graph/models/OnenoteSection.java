@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable {
     /** Indicates whether this is the user's default section. Read-only. */
     private Boolean _isDefault;
@@ -46,7 +46,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenoteSection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
             this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(SectionLinks::createFromDiscriminatorValue)); });
             this.put("pages", (n) -> { currentObject.setPages(n.getCollectionOfObjectValues(OnenotePage::createFromDiscriminatorValue)); });

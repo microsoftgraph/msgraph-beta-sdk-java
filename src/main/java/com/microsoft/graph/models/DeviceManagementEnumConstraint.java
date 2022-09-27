@@ -35,7 +35,7 @@ public class DeviceManagementEnumConstraint extends DeviceManagementConstraint i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementEnumConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(DeviceManagementEnumValue::createFromDiscriminatorValue)); });
         }};
     }

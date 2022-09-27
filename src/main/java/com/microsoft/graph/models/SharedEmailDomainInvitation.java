@@ -49,7 +49,7 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedEmailDomainInvitation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("expiryTime", (n) -> { currentObject.setExpiryTime(n.getOffsetDateTimeValue()); });
             this.put("invitationDomain", (n) -> { currentObject.setInvitationDomain(n.getStringValue()); });
             this.put("invitationStatus", (n) -> { currentObject.setInvitationStatus(n.getStringValue()); });

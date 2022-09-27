@@ -68,7 +68,7 @@ public class RequestorSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RequestorSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("acceptRequests", (n) -> { currentObject.setAcceptRequests(n.getBooleanValue()); });
             this.put("allowedRequestors", (n) -> { currentObject.setAllowedRequestors(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

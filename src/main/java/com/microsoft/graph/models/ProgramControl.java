@@ -85,7 +85,7 @@ public class ProgramControl extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProgramControl currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("controlId", (n) -> { currentObject.setControlId(n.getStringValue()); });
             this.put("controlTypeId", (n) -> { currentObject.setControlTypeId(n.getStringValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });

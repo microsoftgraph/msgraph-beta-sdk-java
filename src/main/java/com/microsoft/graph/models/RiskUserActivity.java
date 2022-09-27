@@ -14,7 +14,7 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
     /** The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. */
     private RiskDetail _detail;
     /** The eventTypes property */
-    private java.util.List<String> _eventTypes;
+    private java.util.List<RiskEventType> _eventTypes;
     /** The OdataType property */
     private String _odataType;
     /** The riskEventTypes property */
@@ -55,10 +55,10 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the eventTypes property value. The eventTypes property
-     * @return a string
+     * @return a riskEventType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getEventTypes() {
+    public java.util.List<RiskEventType> getEventTypes() {
         return this._eventTypes;
     }
     /**
@@ -68,9 +68,9 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskUserActivity currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("detail", (n) -> { currentObject.setDetail(n.getEnumValue(RiskDetail.class)); });
-            this.put("eventTypes", (n) -> { currentObject.setEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("eventTypes", (n) -> { currentObject.setEventTypes(n.getCollectionOfEnumValues(RiskEventType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("riskEventTypes", (n) -> { currentObject.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
@@ -99,7 +99,7 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("detail", this.getDetail());
-        writer.writeCollectionOfPrimitiveValues("eventTypes", this.getEventTypes());
+        writer.writeCollectionOfEnumValues("eventTypes", this.getEventTypes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("riskEventTypes", this.getRiskEventTypes());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -125,7 +125,7 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the eventTypes property.
      * @return a void
      */
-    public void setEventTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setEventTypes(@javax.annotation.Nullable final java.util.List<RiskEventType> value) {
         this._eventTypes = value;
     }
     /**

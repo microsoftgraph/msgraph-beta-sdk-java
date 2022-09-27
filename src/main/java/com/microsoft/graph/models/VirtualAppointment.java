@@ -75,7 +75,7 @@ public class VirtualAppointment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VirtualAppointment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appointmentClientJoinWebUrl", (n) -> { currentObject.setAppointmentClientJoinWebUrl(n.getStringValue()); });
             this.put("appointmentClients", (n) -> { currentObject.setAppointmentClients(n.getCollectionOfObjectValues(VirtualAppointmentUser::createFromDiscriminatorValue)); });
             this.put("externalAppointmentId", (n) -> { currentObject.setExternalAppointmentId(n.getStringValue()); });

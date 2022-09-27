@@ -42,7 +42,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfigurationAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("intent", (n) -> { currentObject.setIntent(n.getEnumValue(DeviceConfigAssignmentIntent.class)); });
             this.put("source", (n) -> { currentObject.setSource(n.getEnumValue(DeviceAndAppManagementAssignmentSource.class)); });
             this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
@@ -91,7 +91,6 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeEnumValue("intent", this.getIntent());
         writer.writeEnumValue("source", this.getSource());
-        writer.writeStringValue("sourceId", this.getSourceId());
         writer.writeObjectValue("target", this.getTarget());
     }
     /**

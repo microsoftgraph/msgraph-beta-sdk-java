@@ -23,7 +23,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     private String _permissionClassification;
     /** The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all. */
     private java.util.List<String> _permissions;
-    /** The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required. */
+    /** The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required. */
     private PermissionType _permissionType;
     /** The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any. */
     private String _resourceApplication;
@@ -92,7 +92,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PermissionGrantConditionSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certifiedClientApplicationsOnly", (n) -> { currentObject.setCertifiedClientApplicationsOnly(n.getBooleanValue()); });
             this.put("clientApplicationIds", (n) -> { currentObject.setClientApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("clientApplicationPublisherIds", (n) -> { currentObject.setClientApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -121,7 +121,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         return this._permissions;
     }
     /**
-     * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
+     * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
      * @return a permissionType
      */
     @javax.annotation.Nullable
@@ -211,7 +211,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         this._permissions = value;
     }
     /**
-     * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
+     * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
      * @param value Value to set for the permissionType property.
      * @return a void
      */

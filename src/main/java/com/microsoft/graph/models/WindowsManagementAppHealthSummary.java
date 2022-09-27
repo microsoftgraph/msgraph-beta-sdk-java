@@ -39,7 +39,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsManagementAppHealthSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("healthyDeviceCount", (n) -> { currentObject.setHealthyDeviceCount(n.getIntegerValue()); });
             this.put("unhealthyDeviceCount", (n) -> { currentObject.setUnhealthyDeviceCount(n.getIntegerValue()); });
             this.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });

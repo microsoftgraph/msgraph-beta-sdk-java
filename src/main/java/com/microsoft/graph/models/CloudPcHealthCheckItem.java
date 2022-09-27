@@ -71,7 +71,7 @@ public class CloudPcHealthCheckItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcHealthCheckItem currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastHealthCheckDateTime", (n) -> { currentObject.setLastHealthCheckDateTime(n.getOffsetDateTimeValue()); });

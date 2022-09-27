@@ -74,7 +74,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedRoleAssignmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignmentState", (n) -> { currentObject.setAssignmentState(n.getStringValue()); });
             this.put("duration", (n) -> { currentObject.setDuration(n.getStringValue()); });
             this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });

@@ -17,11 +17,11 @@ import java.util.Objects;
 /** Provides operations to call the unfavorite method. */
 public class UnfavoriteRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new UnfavoriteRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -32,7 +32,7 @@ public class UnfavoriteRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/admin/serviceAnnouncement/messages/microsoft.graph.unfavorite";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -44,13 +44,13 @@ public class UnfavoriteRequestBuilder {
      */
     public UnfavoriteRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/admin/serviceAnnouncement/messages/microsoft.graph.unfavorite";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action unfavorite
+     * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param body 
      * @return a RequestInformation
      */
@@ -59,7 +59,7 @@ public class UnfavoriteRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Invoke action unfavorite
+     * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -83,14 +83,14 @@ public class UnfavoriteRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action unfavorite
+     * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param body 
      * @return a CompletableFuture of unfavoriteResponse
      */
     public java.util.concurrent.CompletableFuture<UnfavoriteResponse> post(@javax.annotation.Nonnull final UnfavoritePostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -100,7 +100,7 @@ public class UnfavoriteRequestBuilder {
         }
     }
     /**
-     * Invoke action unfavorite
+     * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unfavoriteResponse
@@ -108,7 +108,7 @@ public class UnfavoriteRequestBuilder {
     public java.util.concurrent.CompletableFuture<UnfavoriteResponse> post(@javax.annotation.Nonnull final UnfavoritePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UnfavoriteRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -118,7 +118,7 @@ public class UnfavoriteRequestBuilder {
         }
     }
     /**
-     * Invoke action unfavorite
+     * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -128,7 +128,7 @@ public class UnfavoriteRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -144,7 +144,7 @@ public class UnfavoriteRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new unfavoriteRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

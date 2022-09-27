@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AttributeMappingFunctionSchema extends Entity implements Parsable {
     /** Collection of function parameters. */
     private java.util.List<AttributeMappingParameterSchema> _parameters;
@@ -35,7 +36,7 @@ public class AttributeMappingFunctionSchema extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeMappingFunctionSchema currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("parameters", (n) -> { currentObject.setParameters(n.getCollectionOfObjectValues(AttributeMappingParameterSchema::createFromDiscriminatorValue)); });
         }};
     }

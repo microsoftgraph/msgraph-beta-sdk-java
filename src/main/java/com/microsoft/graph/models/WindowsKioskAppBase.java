@@ -83,7 +83,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskAppBase currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("appType", (n) -> { currentObject.setAppType(n.getEnumValue(WindowsKioskAppType.class)); });
             this.put("autoLaunch", (n) -> { currentObject.setAutoLaunch(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });

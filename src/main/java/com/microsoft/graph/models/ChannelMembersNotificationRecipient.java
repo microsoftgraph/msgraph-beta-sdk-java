@@ -45,7 +45,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChannelMembersNotificationRecipient currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
             this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
         }};

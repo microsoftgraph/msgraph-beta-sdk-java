@@ -37,7 +37,7 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOsVppAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("uninstallOnDeviceRemoval", (n) -> { currentObject.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
             this.put("useDeviceLicensing", (n) -> { currentObject.setUseDeviceLicensing(n.getBooleanValue()); });
         }};

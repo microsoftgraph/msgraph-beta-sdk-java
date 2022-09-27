@@ -52,7 +52,7 @@ public class AnswerKeyword implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AnswerKeyword currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("keywords", (n) -> { currentObject.setKeywords(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("matchSimilarKeywords", (n) -> { currentObject.setMatchSimilarKeywords(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

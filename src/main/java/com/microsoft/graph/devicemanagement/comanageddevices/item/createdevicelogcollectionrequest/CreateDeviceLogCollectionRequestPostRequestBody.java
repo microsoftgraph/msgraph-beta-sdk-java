@@ -47,7 +47,7 @@ public class CreateDeviceLogCollectionRequestPostRequestBody implements Addition
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateDeviceLogCollectionRequestPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("templateType", (n) -> { currentObject.setTemplateType(n.getObjectValue(DeviceLogCollectionRequest::createFromDiscriminatorValue)); });
         }};
     }

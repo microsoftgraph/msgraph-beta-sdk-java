@@ -49,7 +49,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateSoftwarePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("softwareType", (n) -> { currentObject.setSoftwareType(n.getEnumValue(TeamworkSoftwareType.class)); });
             this.put("softwareVersion", (n) -> { currentObject.setSoftwareVersion(n.getStringValue()); });
         }};

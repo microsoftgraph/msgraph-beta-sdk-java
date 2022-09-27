@@ -86,7 +86,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParentLabelDetails currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });

@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class CatalogEntry extends Entity implements Parsable {
     /** The date on which the content is no longer available to deploy using the service. Read-only. */
     private OffsetDateTime _deployableUntilDateTime;
@@ -70,7 +70,7 @@ public class CatalogEntry extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CatalogEntry currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deployableUntilDateTime", (n) -> { currentObject.setDeployableUntilDateTime(n.getOffsetDateTimeValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("releaseDateTime", (n) -> { currentObject.setReleaseDateTime(n.getOffsetDateTimeValue()); });

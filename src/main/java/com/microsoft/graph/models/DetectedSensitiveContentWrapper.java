@@ -56,7 +56,7 @@ public class DetectedSensitiveContentWrapper implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DetectedSensitiveContentWrapper currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("classification", (n) -> { currentObject.setClassification(n.getCollectionOfObjectValues(DetectedSensitiveContent::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

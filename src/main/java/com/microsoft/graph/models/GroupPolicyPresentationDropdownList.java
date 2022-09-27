@@ -47,7 +47,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationDropdownList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultItem", (n) -> { currentObject.setDefaultItem(n.getObjectValue(GroupPolicyPresentationDropdownListItem::createFromDiscriminatorValue)); });
             this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(GroupPolicyPresentationDropdownListItem::createFromDiscriminatorValue)); });
             this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });

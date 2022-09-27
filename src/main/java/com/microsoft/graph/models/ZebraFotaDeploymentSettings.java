@@ -119,7 +119,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ZebraFotaDeploymentSettings currentObject = this;
-        return new HashMap<>(16) {{
+        return new HashMap<String, Consumer<ParseNode>>(16) {{
             this.put("batteryRuleMinimumBatteryLevelPercentage", (n) -> { currentObject.setBatteryRuleMinimumBatteryLevelPercentage(n.getIntegerValue()); });
             this.put("batteryRuleRequireCharger", (n) -> { currentObject.setBatteryRuleRequireCharger(n.getBooleanValue()); });
             this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });

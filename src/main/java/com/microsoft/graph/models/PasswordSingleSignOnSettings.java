@@ -48,7 +48,7 @@ public class PasswordSingleSignOnSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordSingleSignOnSettings currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("fields", (n) -> { currentObject.setFields(n.getCollectionOfObjectValues(PasswordSingleSignOnField::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

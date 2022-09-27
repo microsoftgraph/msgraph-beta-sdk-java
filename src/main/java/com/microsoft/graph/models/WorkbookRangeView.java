@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WorkbookRangeView extends Entity implements Parsable {
     /** The cellAddresses property */
     private Json _cellAddresses;
@@ -33,7 +34,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     /** Represents the type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. */
     private Json _valueTypes;
     /**
-     * Instantiates a new WorkbookRangeView and sets the default values.
+     * Instantiates a new workbookRangeView and sets the default values.
      * @return a void
      */
     public WorkbookRangeView() {
@@ -43,7 +44,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookRangeView
+     * @return a workbookRangeView
      */
     @javax.annotation.Nonnull
     public static WorkbookRangeView createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -73,7 +74,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookRangeView currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cellAddresses", (n) -> { currentObject.setCellAddresses(n.getObjectValue(Json::createFromDiscriminatorValue)); });
             this.put("columnCount", (n) -> { currentObject.setColumnCount(n.getIntegerValue()); });
             this.put("formulas", (n) -> { currentObject.setFormulas(n.getObjectValue(Json::createFromDiscriminatorValue)); });

@@ -88,7 +88,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
             this.put("default", (n) -> { currentObject.setDefault(n.getBooleanValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });

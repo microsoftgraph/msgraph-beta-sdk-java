@@ -59,7 +59,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows81SCEPCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
             this.put("hashAlgorithm", (n) -> { currentObject.setHashAlgorithm(n.getEnumValue(HashAlgorithms.class)); });
             this.put("keySize", (n) -> { currentObject.setKeySize(n.getEnumValue(KeySize.class)); });

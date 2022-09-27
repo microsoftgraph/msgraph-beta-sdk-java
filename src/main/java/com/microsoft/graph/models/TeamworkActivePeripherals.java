@@ -72,7 +72,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkActivePeripherals currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("communicationSpeaker", (n) -> { currentObject.setCommunicationSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
             this.put("contentCamera", (n) -> { currentObject.setContentCamera(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
             this.put("microphone", (n) -> { currentObject.setMicrophone(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });

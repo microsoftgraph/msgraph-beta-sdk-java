@@ -50,7 +50,7 @@ public class Connector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Connector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("externalIp", (n) -> { currentObject.setExternalIp(n.getStringValue()); });
             this.put("machineName", (n) -> { currentObject.setMachineName(n.getStringValue()); });
             this.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(ConnectorGroup::createFromDiscriminatorValue)); });

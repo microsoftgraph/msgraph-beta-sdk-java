@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PrivilegedRoleAssignment extends Entity implements Parsable {
     /** The UTC DateTime when the temporary privileged role assignment will be expired. For permanent role assignment, the value is null. */
     private OffsetDateTime _expirationDateTime;
@@ -55,7 +55,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedRoleAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("isElevated", (n) -> { currentObject.setIsElevated(n.getBooleanValue()); });
             this.put("resultMessage", (n) -> { currentObject.setResultMessage(n.getStringValue()); });

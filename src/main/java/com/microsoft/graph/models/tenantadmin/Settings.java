@@ -124,7 +124,7 @@ public class Settings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Settings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedDomainGuidsForSyncApp", (n) -> { currentObject.setAllowedDomainGuidsForSyncApp(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("availableManagedPathsForSiteCreation", (n) -> { currentObject.setAvailableManagedPathsForSiteCreation(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("deletedUserPersonalSiteRetentionPeriodInDays", (n) -> { currentObject.setDeletedUserPersonalSiteRetentionPeriodInDays(n.getIntegerValue()); });

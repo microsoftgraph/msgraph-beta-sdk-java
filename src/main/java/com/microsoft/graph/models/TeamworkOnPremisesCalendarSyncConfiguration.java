@@ -68,7 +68,7 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkOnPremisesCalendarSyncConfiguration currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("domain", (n) -> { currentObject.setDomain(n.getStringValue()); });
             this.put("domainUserName", (n) -> { currentObject.setDomainUserName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

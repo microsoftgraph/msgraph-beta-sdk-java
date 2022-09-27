@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class IdentityUserFlow extends Entity implements Parsable {
     /** The userFlowType property */
     private UserFlowType _userFlowType;
@@ -47,7 +48,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityUserFlow currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userFlowType", (n) -> { currentObject.setUserFlowType(n.getEnumValue(UserFlowType.class)); });
             this.put("userFlowTypeVersion", (n) -> { currentObject.setUserFlowTypeVersion(n.getFloatValue()); });
         }};

@@ -48,7 +48,7 @@ public class UploadPkcs12PostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UploadPkcs12PostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
         }};

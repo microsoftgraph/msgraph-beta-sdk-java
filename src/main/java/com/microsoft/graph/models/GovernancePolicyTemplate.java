@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of approvalWorkflowProvider entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class GovernancePolicyTemplate extends Entity implements Parsable {
     /** The displayName property */
     private String _displayName;
@@ -48,7 +48,7 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernancePolicyTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("policy", (n) -> { currentObject.setPolicy(n.getObjectValue(GovernancePolicy::createFromDiscriminatorValue)); });
             this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(BusinessFlowSettings::createFromDiscriminatorValue)); });

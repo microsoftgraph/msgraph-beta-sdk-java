@@ -39,7 +39,7 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppIntentAndState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("managedDeviceIdentifier", (n) -> { currentObject.setManagedDeviceIdentifier(n.getStringValue()); });
             this.put("mobileAppList", (n) -> { currentObject.setMobileAppList(n.getCollectionOfObjectValues(MobileAppIntentAndStateDetail::createFromDiscriminatorValue)); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });

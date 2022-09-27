@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ItemActivityOLD extends Entity implements Parsable {
     /** The action property */
     private ItemActionSet _action;
@@ -68,7 +68,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemActivityOLD currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("action", (n) -> { currentObject.setAction(n.getObjectValue(ItemActionSet::createFromDiscriminatorValue)); });
             this.put("actor", (n) -> { currentObject.setActor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("driveItem", (n) -> { currentObject.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });

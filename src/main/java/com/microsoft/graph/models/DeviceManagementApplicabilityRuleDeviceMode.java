@@ -60,7 +60,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementApplicabilityRuleDeviceMode currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("deviceMode", (n) -> { currentObject.setDeviceMode(n.getEnumValue(Windows10DeviceModeType.class)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

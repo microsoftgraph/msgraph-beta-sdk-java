@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of allowedDataLocation entities. */
 public class AllowedDataLocation extends Entity implements Parsable {
     /** The appId property */
     private String _appId;
@@ -18,7 +17,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
     /** The location property */
     private String _location;
     /**
-     * Instantiates a new allowedDataLocation and sets the default values.
+     * Instantiates a new AllowedDataLocation and sets the default values.
      * @return a void
      */
     public AllowedDataLocation() {
@@ -28,7 +27,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a allowedDataLocation
+     * @return a AllowedDataLocation
      */
     @javax.annotation.Nonnull
     public static AllowedDataLocation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +57,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AllowedDataLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("domain", (n) -> { currentObject.setDomain(n.getStringValue()); });
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });

@@ -55,7 +55,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LanguageProficiency currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("proficiency", (n) -> { currentObject.setProficiency(n.getEnumValue(LanguageProficiencyLevel.class)); });
             this.put("reading", (n) -> { currentObject.setReading(n.getEnumValue(LanguageProficiencyLevel.class)); });

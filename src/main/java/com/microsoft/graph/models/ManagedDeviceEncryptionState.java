@@ -104,7 +104,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceEncryptionState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("advancedBitLockerStates", (n) -> { currentObject.setAdvancedBitLockerStates(n.getEnumValue(AdvancedBitLockerState.class)); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getEnumValue(DeviceTypes.class)); });

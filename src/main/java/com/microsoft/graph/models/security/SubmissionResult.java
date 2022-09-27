@@ -88,7 +88,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubmissionResult currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(SubmissionResultCategory.class)); });
             this.put("detail", (n) -> { currentObject.setDetail(n.getEnumValue(SubmissionResultDetail.class)); });
             this.put("detectedFiles", (n) -> { currentObject.setDetectedFiles(n.getCollectionOfObjectValues(SubmissionDetectedFile::createFromDiscriminatorValue)); });

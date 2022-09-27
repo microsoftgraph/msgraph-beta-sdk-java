@@ -60,7 +60,7 @@ public class GetEnrollmentConfigurationPoliciesByDevicePostRequestBody implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetEnrollmentConfigurationPoliciesByDevicePostRequestBody currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
             this.put("groupBy", (n) -> { currentObject.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });

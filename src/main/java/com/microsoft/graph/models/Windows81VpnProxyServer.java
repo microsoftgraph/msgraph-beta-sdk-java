@@ -53,7 +53,7 @@ public class Windows81VpnProxyServer extends VpnProxyServer implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows81VpnProxyServer currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("automaticallyDetectProxySettings", (n) -> { currentObject.setAutomaticallyDetectProxySettings(n.getBooleanValue()); });
             this.put("bypassProxyServerForLocalAddress", (n) -> { currentObject.setBypassProxyServerForLocalAddress(n.getBooleanValue()); });
         }};

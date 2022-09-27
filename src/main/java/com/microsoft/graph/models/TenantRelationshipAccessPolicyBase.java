@@ -51,7 +51,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantRelationshipAccessPolicyBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("definition", (n) -> { currentObject.setDefinition(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

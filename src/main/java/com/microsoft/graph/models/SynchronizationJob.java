@@ -44,7 +44,7 @@ public class SynchronizationJob extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationJob currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(SynchronizationSchedule::createFromDiscriminatorValue)); });
             this.put("schema", (n) -> { currentObject.setSchema(n.getObjectValue(SynchronizationSchema::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(SynchronizationStatus::createFromDiscriminatorValue)); });

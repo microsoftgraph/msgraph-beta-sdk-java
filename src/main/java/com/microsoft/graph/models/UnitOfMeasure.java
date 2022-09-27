@@ -59,7 +59,7 @@ public class UnitOfMeasure extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnitOfMeasure currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("internationalStandardCode", (n) -> { currentObject.setInternationalStandardCode(n.getStringValue()); });

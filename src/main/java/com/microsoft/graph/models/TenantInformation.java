@@ -78,7 +78,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantInformation currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("defaultDomainName", (n) -> { currentObject.setDefaultDomainName(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("federationBrandName", (n) -> { currentObject.setFederationBrandName(n.getStringValue()); });

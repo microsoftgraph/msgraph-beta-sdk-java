@@ -48,7 +48,7 @@ public class DecisionItemPrincipalResourceMembership implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DecisionItemPrincipalResourceMembership currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("membershipType", (n) -> { currentObject.setMembershipType(n.getEnumValue(DecisionItemPrincipalResourceMembershipType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

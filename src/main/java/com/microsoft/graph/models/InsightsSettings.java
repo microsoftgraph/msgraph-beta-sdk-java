@@ -45,7 +45,7 @@ public class InsightsSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InsightsSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("disabledForGroup", (n) -> { currentObject.setDisabledForGroup(n.getStringValue()); });
             this.put("isEnabledInOrganization", (n) -> { currentObject.setIsEnabledInOrganization(n.getBooleanValue()); });
         }};

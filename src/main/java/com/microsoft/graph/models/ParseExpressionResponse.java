@@ -80,7 +80,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParseExpressionResponse currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
             this.put("evaluationResult", (n) -> { currentObject.setEvaluationResult(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("evaluationSucceeded", (n) -> { currentObject.setEvaluationSucceeded(n.getBooleanValue()); });

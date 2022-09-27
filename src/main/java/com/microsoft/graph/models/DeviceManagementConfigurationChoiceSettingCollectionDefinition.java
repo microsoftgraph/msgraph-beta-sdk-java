@@ -37,7 +37,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationChoiceSettingCollectionDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maximumCount", (n) -> { currentObject.setMaximumCount(n.getIntegerValue()); });
             this.put("minimumCount", (n) -> { currentObject.setMinimumCount(n.getIntegerValue()); });
         }};

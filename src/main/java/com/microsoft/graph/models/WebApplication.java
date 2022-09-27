@@ -58,7 +58,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WebApplication currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
             this.put("implicitGrantSettings", (n) -> { currentObject.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
             this.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });

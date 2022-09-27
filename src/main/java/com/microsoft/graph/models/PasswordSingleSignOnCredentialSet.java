@@ -58,7 +58,7 @@ public class PasswordSingleSignOnCredentialSet implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordSingleSignOnCredentialSet currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("credentials", (n) -> { currentObject.setCredentials(n.getCollectionOfObjectValues(Credential::createFromDiscriminatorValue)); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

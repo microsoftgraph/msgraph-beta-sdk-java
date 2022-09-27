@@ -67,7 +67,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DetectedSensitiveContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classificationAttributes", (n) -> { currentObject.setClassificationAttributes(n.getCollectionOfObjectValues(ClassificationAttribute::createFromDiscriminatorValue)); });
             this.put("classificationMethod", (n) -> { currentObject.setClassificationMethod(n.getEnumValue(ClassificationMethod.class)); });
             this.put("matches", (n) -> { currentObject.setMatches(n.getCollectionOfObjectValues(SensitiveContentLocation::createFromDiscriminatorValue)); });

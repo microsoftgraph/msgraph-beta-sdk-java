@@ -87,7 +87,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RegionalAndLanguageSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authoringLanguages", (n) -> { currentObject.setAuthoringLanguages(n.getCollectionOfObjectValues(LocaleInfo::createFromDiscriminatorValue)); });
             this.put("defaultDisplayLanguage", (n) -> { currentObject.setDefaultDisplayLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
             this.put("defaultRegionalFormat", (n) -> { currentObject.setDefaultRegionalFormat(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     /** Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification. */
     private java.util.List<UserFlowLanguagePage> _defaultPages;
@@ -58,7 +58,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserFlowLanguageConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultPages", (n) -> { currentObject.setDefaultPages(n.getCollectionOfObjectValues(UserFlowLanguagePage::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });

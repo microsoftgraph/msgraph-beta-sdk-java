@@ -159,7 +159,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceOperatingSystemSummary currentObject = this;
-        return new HashMap<>(17) {{
+        return new HashMap<String, Consumer<ParseNode>>(17) {{
             this.put("androidCorporateWorkProfileCount", (n) -> { currentObject.setAndroidCorporateWorkProfileCount(n.getIntegerValue()); });
             this.put("androidCount", (n) -> { currentObject.setAndroidCount(n.getIntegerValue()); });
             this.put("androidDedicatedCount", (n) -> { currentObject.setAndroidDedicatedCount(n.getIntegerValue()); });

@@ -74,7 +74,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAnswer currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("answeredQuestion", (n) -> { currentObject.setAnsweredQuestion(n.getObjectValue(AccessPackageQuestion::createFromDiscriminatorValue)); });
             this.put("displayValue", (n) -> { currentObject.setDisplayValue(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

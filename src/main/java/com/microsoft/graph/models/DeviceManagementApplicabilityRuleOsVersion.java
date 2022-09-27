@@ -54,7 +54,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementApplicabilityRuleOsVersion currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("maxOSVersion", (n) -> { currentObject.setMaxOSVersion(n.getStringValue()); });
             this.put("minOSVersion", (n) -> { currentObject.setMinOSVersion(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });

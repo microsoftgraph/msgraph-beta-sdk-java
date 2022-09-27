@@ -89,7 +89,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserSimulationDetails currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("assignedTrainingsCount", (n) -> { currentObject.setAssignedTrainingsCount(n.getIntegerValue()); });
             this.put("completedTrainingsCount", (n) -> { currentObject.setCompletedTrainingsCount(n.getIntegerValue()); });
             this.put("compromisedDateTime", (n) -> { currentObject.setCompromisedDateTime(n.getOffsetDateTimeValue()); });

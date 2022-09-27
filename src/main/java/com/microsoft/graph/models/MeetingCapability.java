@@ -76,7 +76,7 @@ public class MeetingCapability implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingCapability currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("allowAnonymousUsersToDialOut", (n) -> { currentObject.setAllowAnonymousUsersToDialOut(n.getBooleanValue()); });
             this.put("allowAnonymousUsersToStartMeeting", (n) -> { currentObject.setAllowAnonymousUsersToStartMeeting(n.getBooleanValue()); });
             this.put("autoAdmittedUsers", (n) -> { currentObject.setAutoAdmittedUsers(n.getEnumValue(AutoAdmittedUsersType.class)); });

@@ -79,7 +79,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BitLockerSystemDrivePolicy currentObject = this;
-        return new HashMap<>(13) {{
+        return new HashMap<String, Consumer<ParseNode>>(13) {{
             this.put("encryptionMethod", (n) -> { currentObject.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
             this.put("minimumPinLength", (n) -> { currentObject.setMinimumPinLength(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

@@ -71,7 +71,7 @@ public class OrganizationalMessageText implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageText currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("buttonText", (n) -> { currentObject.setButtonText(n.getStringValue()); });
             this.put("clickUrl", (n) -> { currentObject.setClickUrl(n.getStringValue()); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });

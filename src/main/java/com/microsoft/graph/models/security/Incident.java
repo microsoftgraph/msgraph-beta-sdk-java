@@ -120,7 +120,7 @@ public class Incident extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Incident currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("alerts", (n) -> { currentObject.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
             this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(AlertClassification.class)); });

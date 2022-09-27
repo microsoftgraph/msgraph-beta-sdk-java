@@ -35,7 +35,7 @@ public class InvokeUserFlowListener extends AuthenticationListener implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InvokeUserFlowListener currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userFlow", (n) -> { currentObject.setUserFlow(n.getObjectValue(B2xIdentityUserFlow::createFromDiscriminatorValue)); });
         }};
     }

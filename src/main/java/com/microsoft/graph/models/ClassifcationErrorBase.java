@@ -70,7 +70,7 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassifcationErrorBase currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("innerError", (n) -> { currentObject.setInnerError(n.getObjectValue(ClassificationInnerError::createFromDiscriminatorValue)); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });

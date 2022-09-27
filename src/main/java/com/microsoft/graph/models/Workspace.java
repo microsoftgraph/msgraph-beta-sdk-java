@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Workspace extends Place implements Parsable {
     /** Specifies the building name or building number that the workspace is in. */
     private String _building;
@@ -76,7 +76,7 @@ public class Workspace extends Place implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Workspace currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("building", (n) -> { currentObject.setBuilding(n.getStringValue()); });
             this.put("capacity", (n) -> { currentObject.setCapacity(n.getIntegerValue()); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });

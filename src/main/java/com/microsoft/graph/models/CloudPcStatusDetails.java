@@ -68,7 +68,7 @@ public class CloudPcStatusDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcStatusDetails currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });

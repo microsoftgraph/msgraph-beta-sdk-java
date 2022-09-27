@@ -87,7 +87,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosEnterpriseWiFiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
             this.put("derivedCredentialSettings", (n) -> { currentObject.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
             this.put("eapFastConfiguration", (n) -> { currentObject.setEapFastConfiguration(n.getEnumValue(EapFastConfiguration.class)); });

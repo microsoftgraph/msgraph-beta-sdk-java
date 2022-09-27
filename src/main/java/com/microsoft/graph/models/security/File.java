@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class File extends Entity implements Parsable {
     /** The content property */
     private byte[] _content;
@@ -100,7 +100,7 @@ public class File extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final File currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("dateTime", (n) -> { currentObject.setDateTime(n.getOffsetDateTimeValue()); });
             this.put("extension", (n) -> { currentObject.setExtension(n.getStringValue()); });

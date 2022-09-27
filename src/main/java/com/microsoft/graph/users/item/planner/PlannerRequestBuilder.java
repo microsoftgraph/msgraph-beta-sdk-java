@@ -6,6 +6,7 @@ import com.microsoft.graph.users.item.planner.all.AllRequestBuilder;
 import com.microsoft.graph.users.item.planner.all.item.PlannerDeltaItemRequestBuilder;
 import com.microsoft.graph.users.item.planner.favoriteplans.FavoritePlansRequestBuilder;
 import com.microsoft.graph.users.item.planner.plans.PlansRequestBuilder;
+import com.microsoft.graph.users.item.planner.recentplans.item.PlannerPlanItemRequestBuilder;
 import com.microsoft.graph.users.item.planner.recentplans.RecentPlansRequestBuilder;
 import com.microsoft.graph.users.item.planner.rosterplans.RosterPlansRequestBuilder;
 import com.microsoft.graph.users.item.planner.tasks.item.PlannerTaskItemRequestBuilder;
@@ -37,7 +38,7 @@ public class PlannerRequestBuilder {
         return new FavoritePlansRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The plans property */
     @javax.annotation.Nonnull
     public PlansRequestBuilder plans() {
@@ -49,7 +50,7 @@ public class PlannerRequestBuilder {
         return new RecentPlansRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The rosterPlans property */
     @javax.annotation.Nonnull
     public RosterPlansRequestBuilder rosterPlans() {
@@ -61,7 +62,7 @@ public class PlannerRequestBuilder {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Gets an item from the com.Microsoft.Graph.users.item.planner.all.item collection
      * @param id Unique identifier of the item
@@ -70,7 +71,7 @@ public class PlannerRequestBuilder {
     @javax.annotation.Nonnull
     public PlannerDeltaItemRequestBuilder all(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("plannerDelta%2Did", id);
         return new PlannerDeltaItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -84,7 +85,7 @@ public class PlannerRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/users/{user%2Did}/planner{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -96,7 +97,7 @@ public class PlannerRequestBuilder {
      */
     public PlannerRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/users/{user%2Did}/planner{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -130,7 +131,7 @@ public class PlannerRequestBuilder {
         return requestInfo;
     }
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Retrieve the properties and relationships of a plannerUser object. The returned properties include the user's favorite plans and recently viewed plans. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -138,7 +139,7 @@ public class PlannerRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Retrieve the properties and relationships of a plannerUser object. The returned properties include the user's favorite plans and recently viewed plans. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -160,7 +161,7 @@ public class PlannerRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property planner in users
+     * Update the properties of a plannerUser object. You can use this operation to add or remove plans from a user's favorite plans list, and to indicate which plans the user has recently viewed.
      * @param body 
      * @return a RequestInformation
      */
@@ -169,7 +170,7 @@ public class PlannerRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property planner in users
+     * Update the properties of a plannerUser object. You can use this operation to add or remove plans from a user's favorite plans list, and to indicate which plans the user has recently viewed.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -182,6 +183,7 @@ public class PlannerRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PlannerRequestBuilderPatchRequestConfiguration requestConfig = new PlannerRequestBuilderPatchRequestConfiguration();
@@ -198,7 +200,7 @@ public class PlannerRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -215,7 +217,7 @@ public class PlannerRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -233,7 +235,7 @@ public class PlannerRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -250,18 +252,18 @@ public class PlannerRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.users.item.planner.favoriteplans.item.PlannerPlanItemRequestBuilder favoritePlans(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("plannerPlan%2Did", id);
         return new com.microsoft.graph.users.item.planner.favoriteplans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Retrieve the properties and relationships of a plannerUser object. The returned properties include the user's favorite plans and recently viewed plans. 
      * @return a CompletableFuture of plannerUser
      */
     public java.util.concurrent.CompletableFuture<PlannerUser> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -271,14 +273,14 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Retrieve the properties and relationships of a plannerUser object. The returned properties include the user's favorite plans and recently viewed plans. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerUser
      */
     public java.util.concurrent.CompletableFuture<PlannerUser> get(@javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -288,7 +290,7 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Retrieve the properties and relationships of a plannerUser object. The returned properties include the user's favorite plans and recently viewed plans. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of plannerUser
@@ -296,7 +298,7 @@ public class PlannerRequestBuilder {
     public java.util.concurrent.CompletableFuture<PlannerUser> get(@javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -306,56 +308,56 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Update the navigation property planner in users
+     * Update the properties of a plannerUser object. You can use this operation to add or remove plans from a user's favorite plans list, and to indicate which plans the user has recently viewed.
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of plannerUser
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final PlannerUser body) {
+    public java.util.concurrent.CompletableFuture<PlannerUser> patch(@javax.annotation.Nonnull final PlannerUser body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, PlannerUser::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
-     * Update the navigation property planner in users
+     * Update the properties of a plannerUser object. You can use this operation to add or remove plans from a user's favorite plans list, and to indicate which plans the user has recently viewed.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of plannerUser
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final PlannerUser body, @javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PlannerUser> patch(@javax.annotation.Nonnull final PlannerUser body, @javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, PlannerUser::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
-     * Update the navigation property planner in users
+     * Update the properties of a plannerUser object. You can use this operation to add or remove plans from a user's favorite plans list, and to indicate which plans the user has recently viewed.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of plannerUser
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final PlannerUser body, @javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<PlannerUser> patch(@javax.annotation.Nonnull final PlannerUser body, @javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, PlannerUser::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -368,7 +370,7 @@ public class PlannerRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.users.item.planner.plans.item.PlannerPlanItemRequestBuilder plans(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("plannerPlan%2Did", id);
         return new com.microsoft.graph.users.item.planner.plans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -380,7 +382,7 @@ public class PlannerRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.users.item.planner.recentplans.item.PlannerPlanItemRequestBuilder recentPlans(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("plannerPlan%2Did", id);
         return new com.microsoft.graph.users.item.planner.recentplans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -392,7 +394,7 @@ public class PlannerRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.users.item.planner.rosterplans.item.PlannerPlanItemRequestBuilder rosterPlans(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("plannerPlan%2Did", id);
         return new com.microsoft.graph.users.item.planner.rosterplans.item.PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -404,7 +406,7 @@ public class PlannerRequestBuilder {
     @javax.annotation.Nonnull
     public PlannerTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("plannerTask%2Did", id);
         return new PlannerTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -415,7 +417,7 @@ public class PlannerRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new plannerRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -423,7 +425,7 @@ public class PlannerRequestBuilder {
         public PlannerRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Selective Planner services available to the user. Read-only. Nullable. */
+    /** Retrieve the properties and relationships of a plannerUser object. The returned properties include the user's favorite plans and recently viewed plans.  */
     public class PlannerRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -441,7 +443,7 @@ public class PlannerRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public PlannerRequestBuilderGetQueryParameters queryParameters = new PlannerRequestBuilderGetQueryParameters();
@@ -459,7 +461,7 @@ public class PlannerRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new plannerRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

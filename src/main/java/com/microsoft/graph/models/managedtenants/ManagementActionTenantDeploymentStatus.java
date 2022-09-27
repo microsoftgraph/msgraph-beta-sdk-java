@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ManagementActionTenantDeploymentStatus extends Entity implements Parsable {
     /** The collection of deployment status for each instance of a management action. Optional. */
     private java.util.List<ManagementActionDeploymentStatus> _statuses;
@@ -41,7 +41,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementActionTenantDeploymentStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("statuses", (n) -> { currentObject.setStatuses(n.getCollectionOfObjectValues(ManagementActionDeploymentStatus::createFromDiscriminatorValue)); });
             this.put("tenantGroupId", (n) -> { currentObject.setTenantGroupId(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });

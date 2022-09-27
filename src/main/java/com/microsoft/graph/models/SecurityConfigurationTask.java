@@ -71,7 +71,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityConfigurationTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicablePlatform", (n) -> { currentObject.setApplicablePlatform(n.getEnumValue(EndpointSecurityConfigurationApplicablePlatform.class)); });
             this.put("endpointSecurityPolicy", (n) -> { currentObject.setEndpointSecurityPolicy(n.getEnumValue(EndpointSecurityConfigurationType.class)); });
             this.put("endpointSecurityPolicyProfile", (n) -> { currentObject.setEndpointSecurityPolicyProfile(n.getEnumValue(EndpointSecurityConfigurationProfileType.class)); });

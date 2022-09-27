@@ -46,7 +46,7 @@ public class MobileAppContent extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("containedApps", (n) -> { currentObject.setContainedApps(n.getCollectionOfObjectValues(MobileContainedApp::createFromDiscriminatorValue)); });
             this.put("files", (n) -> { currentObject.setFiles(n.getCollectionOfObjectValues(MobileAppContentFile::createFromDiscriminatorValue)); });
         }};

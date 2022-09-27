@@ -7,11 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics metric for work from anywhere report */
 public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implements Parsable {
     /** The work from anywhere metric devices. */
     private java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> _metricDevices;
     /**
-     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereMetric and sets the default values.
+     * Instantiates a new userExperienceAnalyticsWorkFromAnywhereMetric and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsWorkFromAnywhereMetric() {
@@ -21,7 +22,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsWorkFromAnywhereMetric
+     * @return a userExperienceAnalyticsWorkFromAnywhereMetric
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsWorkFromAnywhereMetric createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +36,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsWorkFromAnywhereMetric currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("metricDevices", (n) -> { currentObject.setMetricDevices(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue)); });
         }};
     }

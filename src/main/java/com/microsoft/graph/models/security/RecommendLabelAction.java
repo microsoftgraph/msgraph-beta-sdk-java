@@ -57,7 +57,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecommendLabelAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actions", (n) -> { currentObject.setActions(n.getCollectionOfObjectValues(InformationProtectionAction::createFromDiscriminatorValue)); });
             this.put("actionSource", (n) -> { currentObject.setActionSource(n.getEnumValue(ActionSource.class)); });
             this.put("responsibleSensitiveTypeIds", (n) -> { currentObject.setResponsibleSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });

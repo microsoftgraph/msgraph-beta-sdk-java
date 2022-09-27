@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Devices that are managed or pre-enrolled through Intune */
 public class ManagedDevice extends Entity implements Parsable {
     /** Whether the device is Azure Active Directory registered. This property is read-only. */
     private Boolean _aadRegistered;
@@ -193,7 +194,7 @@ public class ManagedDevice extends Entity implements Parsable {
     /** Count of remediated malware for this windows device. This property is read-only. */
     private Integer _windowsRemediatedMalwareCount;
     /**
-     * Instantiates a new ManagedDevice and sets the default values.
+     * Instantiates a new managedDevice and sets the default values.
      * @return a void
      */
     public ManagedDevice() {
@@ -203,7 +204,7 @@ public class ManagedDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDevice
+     * @return a managedDevice
      */
     @javax.annotation.Nonnull
     public static ManagedDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -536,7 +537,7 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("aadRegistered", (n) -> { currentObject.setAadRegistered(n.getBooleanValue()); });
             this.put("activationLockBypassCode", (n) -> { currentObject.setActivationLockBypassCode(n.getStringValue()); });
             this.put("androidSecurityPatchLevel", (n) -> { currentObject.setAndroidSecurityPatchLevel(n.getStringValue()); });
@@ -1054,97 +1055,41 @@ public class ManagedDevice extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("aadRegistered", this.getAadRegistered());
-        writer.writeStringValue("activationLockBypassCode", this.getActivationLockBypassCode());
-        writer.writeStringValue("androidSecurityPatchLevel", this.getAndroidSecurityPatchLevel());
         writer.writeCollectionOfObjectValues("assignmentFilterEvaluationStatusDetails", this.getAssignmentFilterEvaluationStatusDetails());
-        writer.writeBooleanValue("autopilotEnrolled", this.getAutopilotEnrolled());
-        writer.writeStringValue("azureActiveDirectoryDeviceId", this.getAzureActiveDirectoryDeviceId());
-        writer.writeStringValue("azureADDeviceId", this.getAzureADDeviceId());
-        writer.writeBooleanValue("azureADRegistered", this.getAzureADRegistered());
-        writer.writeBooleanValue("bootstrapTokenEscrowed", this.getBootstrapTokenEscrowed());
         writer.writeEnumValue("chassisType", this.getChassisType());
         writer.writeCollectionOfObjectValues("chromeOSDeviceInfo", this.getChromeOSDeviceInfo());
         writer.writeCollectionOfObjectValues("cloudPcRemoteActionResults", this.getCloudPcRemoteActionResults());
-        writer.writeOffsetDateTimeValue("complianceGracePeriodExpirationDateTime", this.getComplianceGracePeriodExpirationDateTime());
         writer.writeEnumValue("complianceState", this.getComplianceState());
-        writer.writeObjectValue("configurationManagerClientEnabledFeatures", this.getConfigurationManagerClientEnabledFeatures());
         writer.writeObjectValue("configurationManagerClientHealthState", this.getConfigurationManagerClientHealthState());
         writer.writeObjectValue("configurationManagerClientInformation", this.getConfigurationManagerClientInformation());
         writer.writeCollectionOfObjectValues("detectedApps", this.getDetectedApps());
-        writer.writeCollectionOfObjectValues("deviceActionResults", this.getDeviceActionResults());
         writer.writeObjectValue("deviceCategory", this.getDeviceCategory());
-        writer.writeStringValue("deviceCategoryDisplayName", this.getDeviceCategoryDisplayName());
         writer.writeCollectionOfObjectValues("deviceCompliancePolicyStates", this.getDeviceCompliancePolicyStates());
         writer.writeCollectionOfObjectValues("deviceConfigurationStates", this.getDeviceConfigurationStates());
         writer.writeEnumValue("deviceEnrollmentType", this.getDeviceEnrollmentType());
         writer.writeBooleanValue("deviceFirmwareConfigurationInterfaceManaged", this.getDeviceFirmwareConfigurationInterfaceManaged());
-        writer.writeObjectValue("deviceHealthAttestationState", this.getDeviceHealthAttestationState());
-        writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeEnumValue("deviceRegistrationState", this.getDeviceRegistrationState());
         writer.writeEnumValue("deviceType", this.getDeviceType());
-        writer.writeBooleanValue("easActivated", this.getEasActivated());
-        writer.writeOffsetDateTimeValue("easActivationDateTime", this.getEasActivationDateTime());
-        writer.writeStringValue("easDeviceId", this.getEasDeviceId());
-        writer.writeStringValue("emailAddress", this.getEmailAddress());
-        writer.writeOffsetDateTimeValue("enrolledDateTime", this.getEnrolledDateTime());
-        writer.writeStringValue("enrollmentProfileName", this.getEnrollmentProfileName());
-        writer.writeStringValue("ethernetMacAddress", this.getEthernetMacAddress());
         writer.writeEnumValue("exchangeAccessState", this.getExchangeAccessState());
         writer.writeEnumValue("exchangeAccessStateReason", this.getExchangeAccessStateReason());
-        writer.writeOffsetDateTimeValue("exchangeLastSuccessfulSyncDateTime", this.getExchangeLastSuccessfulSyncDateTime());
-        writer.writeLongValue("freeStorageSpaceInBytes", this.getFreeStorageSpaceInBytes());
-        writer.writeObjectValue("hardwareInformation", this.getHardwareInformation());
-        writer.writeStringValue("iccid", this.getIccid());
-        writer.writeStringValue("imei", this.getImei());
-        writer.writeBooleanValue("isEncrypted", this.getIsEncrypted());
-        writer.writeBooleanValue("isSupervised", this.getIsSupervised());
-        writer.writeStringValue("jailBroken", this.getJailBroken());
         writer.writeEnumValue("joinType", this.getJoinType());
-        writer.writeOffsetDateTimeValue("lastSyncDateTime", this.getLastSyncDateTime());
         writer.writeCollectionOfObjectValues("logCollectionRequests", this.getLogCollectionRequests());
         writer.writeEnumValue("lostModeState", this.getLostModeState());
         writer.writeCollectionOfObjectValues("managedDeviceMobileAppConfigurationStates", this.getManagedDeviceMobileAppConfigurationStates());
         writer.writeStringValue("managedDeviceName", this.getManagedDeviceName());
         writer.writeEnumValue("managedDeviceOwnerType", this.getManagedDeviceOwnerType());
         writer.writeEnumValue("managementAgent", this.getManagementAgent());
-        writer.writeOffsetDateTimeValue("managementCertificateExpirationDate", this.getManagementCertificateExpirationDate());
         writer.writeEnumValue("managementFeatures", this.getManagementFeatures());
         writer.writeEnumValue("managementState", this.getManagementState());
-        writer.writeStringValue("manufacturer", this.getManufacturer());
-        writer.writeStringValue("meid", this.getMeid());
-        writer.writeStringValue("model", this.getModel());
         writer.writeStringValue("notes", this.getNotes());
-        writer.writeStringValue("operatingSystem", this.getOperatingSystem());
-        writer.writeStringValue("osVersion", this.getOsVersion());
         writer.writeEnumValue("ownerType", this.getOwnerType());
         writer.writeEnumValue("partnerReportedThreatState", this.getPartnerReportedThreatState());
-        writer.writeStringValue("phoneNumber", this.getPhoneNumber());
-        writer.writeLongValue("physicalMemoryInBytes", this.getPhysicalMemoryInBytes());
-        writer.writeOffsetDateTimeValue("preferMdmOverGroupPolicyAppliedDateTime", this.getPreferMdmOverGroupPolicyAppliedDateTime());
         writer.writeEnumValue("processorArchitecture", this.getProcessorArchitecture());
-        writer.writeStringValue("remoteAssistanceSessionErrorDetails", this.getRemoteAssistanceSessionErrorDetails());
-        writer.writeStringValue("remoteAssistanceSessionUrl", this.getRemoteAssistanceSessionUrl());
-        writer.writeBooleanValue("requireUserEnrollmentApproval", this.getRequireUserEnrollmentApproval());
-        writer.writeOffsetDateTimeValue("retireAfterDateTime", this.getRetireAfterDateTime());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeCollectionOfObjectValues("securityBaselineStates", this.getSecurityBaselineStates());
-        writer.writeStringValue("serialNumber", this.getSerialNumber());
         writer.writeStringValue("skuFamily", this.getSkuFamily());
-        writer.writeIntegerValue("skuNumber", this.getSkuNumber());
-        writer.writeStringValue("specificationVersion", this.getSpecificationVersion());
-        writer.writeStringValue("subscriberCarrier", this.getSubscriberCarrier());
-        writer.writeLongValue("totalStorageSpaceInBytes", this.getTotalStorageSpaceInBytes());
-        writer.writeStringValue("udid", this.getUdid());
-        writer.writeStringValue("userDisplayName", this.getUserDisplayName());
-        writer.writeStringValue("userId", this.getUserId());
-        writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeCollectionOfObjectValues("users", this.getUsers());
-        writer.writeCollectionOfObjectValues("usersLoggedOn", this.getUsersLoggedOn());
-        writer.writeStringValue("wiFiMacAddress", this.getWiFiMacAddress());
-        writer.writeIntegerValue("windowsActiveMalwareCount", this.getWindowsActiveMalwareCount());
         writer.writeObjectValue("windowsProtectionState", this.getWindowsProtectionState());
-        writer.writeIntegerValue("windowsRemediatedMalwareCount", this.getWindowsRemediatedMalwareCount());
     }
     /**
      * Sets the aadRegistered property value. Whether the device is Azure Active Directory registered. This property is read-only.

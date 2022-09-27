@@ -17,7 +17,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     /** Managed Installer Configured Date Time */
     private String _managedInstallerConfiguredDateTime;
     /**
-     * Instantiates a new WindowsManagementApp and sets the default values.
+     * Instantiates a new windowsManagementApp and sets the default values.
      * @return a void
      */
     public WindowsManagementApp() {
@@ -27,7 +27,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsManagementApp
+     * @return a windowsManagementApp
      */
     @javax.annotation.Nonnull
     public static WindowsManagementApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsManagementApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("availableVersion", (n) -> { currentObject.setAvailableVersion(n.getStringValue()); });
             this.put("healthStates", (n) -> { currentObject.setHealthStates(n.getCollectionOfObjectValues(WindowsManagementAppHealthState::createFromDiscriminatorValue)); });
             this.put("managedInstaller", (n) -> { currentObject.setManagedInstaller(n.getEnumValue(ManagedInstallerStatus.class)); });

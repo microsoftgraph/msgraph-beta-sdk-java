@@ -76,7 +76,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExecuteActionPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("actionName", (n) -> { currentObject.setActionName(n.getEnumValue(DriverApprovalAction.class)); });
             this.put("deploymentDate", (n) -> { currentObject.setDeploymentDate(n.getOffsetDateTimeValue()); });
             this.put("driverIds", (n) -> { currentObject.setDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });

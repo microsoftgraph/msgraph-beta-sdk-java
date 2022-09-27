@@ -49,7 +49,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerImportedPFXCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateAccessType", (n) -> { currentObject.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
             this.put("intendedPurpose", (n) -> { currentObject.setIntendedPurpose(n.getEnumValue(IntendedPurpose.class)); });
             this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });

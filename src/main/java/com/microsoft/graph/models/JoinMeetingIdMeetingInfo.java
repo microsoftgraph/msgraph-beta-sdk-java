@@ -37,7 +37,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final JoinMeetingIdMeetingInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("joinMeetingId", (n) -> { currentObject.setJoinMeetingId(n.getStringValue()); });
             this.put("passcode", (n) -> { currentObject.setPasscode(n.getStringValue()); });
         }};

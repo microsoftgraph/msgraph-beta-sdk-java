@@ -37,7 +37,7 @@ public class Acronym extends SearchAnswer implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Acronym currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("standsFor", (n) -> { currentObject.setStandsFor(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AnswerState.class)); });
         }};

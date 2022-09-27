@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows update catalog item entity */
 public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     /** The display name for the catalog item. */
     private String _displayName;
@@ -18,7 +19,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     /** The date the catalog item was released */
     private OffsetDateTime _releaseDateTime;
     /**
-     * Instantiates a new WindowsUpdateCatalogItem and sets the default values.
+     * Instantiates a new windowsUpdateCatalogItem and sets the default values.
      * @return a void
      */
     public WindowsUpdateCatalogItem() {
@@ -28,7 +29,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsUpdateCatalogItem
+     * @return a windowsUpdateCatalogItem
      */
     @javax.annotation.Nonnull
     public static WindowsUpdateCatalogItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +67,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsUpdateCatalogItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("endOfSupportDate", (n) -> { currentObject.setEndOfSupportDate(n.getOffsetDateTimeValue()); });
             this.put("releaseDateTime", (n) -> { currentObject.setReleaseDateTime(n.getOffsetDateTimeValue()); });

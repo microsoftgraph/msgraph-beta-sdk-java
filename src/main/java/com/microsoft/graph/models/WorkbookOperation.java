@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class WorkbookOperation extends Entity implements Parsable {
     /** The error returned by the operation. */
     private WorkbookOperationError _error;
@@ -48,7 +48,7 @@ public class WorkbookOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(WorkbookOperationError::createFromDiscriminatorValue)); });
             this.put("resourceLocation", (n) -> { currentObject.setResourceLocation(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(WorkbookOperationStatus.class)); });

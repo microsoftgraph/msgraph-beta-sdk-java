@@ -56,7 +56,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutlookTaskFolder currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
             this.put("isDefaultFolder", (n) -> { currentObject.setIsDefaultFolder(n.getBooleanValue()); });
             this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });

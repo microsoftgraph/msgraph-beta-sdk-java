@@ -37,7 +37,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcForensicStorageAccount currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("storageAccountId", (n) -> { currentObject.setStorageAccountId(n.getStringValue()); });
             this.put("storageAccountName", (n) -> { currentObject.setStorageAccountName(n.getStringValue()); });
         }};

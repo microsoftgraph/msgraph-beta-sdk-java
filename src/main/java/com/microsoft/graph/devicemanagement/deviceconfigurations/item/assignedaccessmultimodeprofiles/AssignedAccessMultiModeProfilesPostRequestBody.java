@@ -55,7 +55,7 @@ public class AssignedAccessMultiModeProfilesPostRequestBody implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignedAccessMultiModeProfilesPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("assignedAccessMultiModeProfiles", (n) -> { currentObject.setAssignedAccessMultiModeProfiles(n.getCollectionOfObjectValues(WindowsAssignedAccessProfile::createFromDiscriminatorValue)); });
         }};
     }

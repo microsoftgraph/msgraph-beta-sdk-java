@@ -2,6 +2,7 @@ package com.microsoft.graph.me.findroomlists;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
+import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -17,11 +18,11 @@ import java.util.Objects;
 /** Provides operations to call the findRoomLists method. */
 public class FindRoomListsRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new FindRoomListsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -31,8 +32,8 @@ public class FindRoomListsRequestBuilder {
     public FindRoomListsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/me/microsoft.graph.findRoomLists()";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/me/microsoft.graph.findRoomLists(){?%24top,%24skip,%24search,%24filter,%24count}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -43,14 +44,14 @@ public class FindRoomListsRequestBuilder {
      * @return a void
      */
     public FindRoomListsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/me/microsoft.graph.findRoomLists()";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/me/microsoft.graph.findRoomLists(){?%24top,%24skip,%24search,%24filter,%24count}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke function findRoomLists
+     * Get the room lists defined in a tenant, as represented by their emailAddress objects. Tenants can organize meeting rooms into room lists. In this API, each meeting room and room list is represented by an emailAddress instance.You can get all the room lists in the tenant, get all the rooms in the tenant, or get all the rooms in a specific room list.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -58,7 +59,7 @@ public class FindRoomListsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Invoke function findRoomLists
+     * Get the room lists defined in a tenant, as represented by their emailAddress objects. Tenants can organize meeting rooms into room lists. In this API, each meeting room and room list is represented by an emailAddress instance.You can get all the room lists in the tenant, get all the rooms in the tenant, or get all the rooms in a specific room list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -73,19 +74,20 @@ public class FindRoomListsRequestBuilder {
         if (requestConfiguration != null) {
             final FindRoomListsRequestBuilderGetRequestConfiguration requestConfig = new FindRoomListsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
     }
     /**
-     * Invoke function findRoomLists
+     * Get the room lists defined in a tenant, as represented by their emailAddress objects. Tenants can organize meeting rooms into room lists. In this API, each meeting room and room list is represented by an emailAddress instance.You can get all the room lists in the tenant, get all the rooms in the tenant, or get all the rooms in a specific room list.
      * @return a CompletableFuture of findRoomListsResponse
      */
     public java.util.concurrent.CompletableFuture<FindRoomListsResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -95,14 +97,14 @@ public class FindRoomListsRequestBuilder {
         }
     }
     /**
-     * Invoke function findRoomLists
+     * Get the room lists defined in a tenant, as represented by their emailAddress objects. Tenants can organize meeting rooms into room lists. In this API, each meeting room and room list is represented by an emailAddress instance.You can get all the room lists in the tenant, get all the rooms in the tenant, or get all the rooms in a specific room list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of findRoomListsResponse
      */
     public java.util.concurrent.CompletableFuture<FindRoomListsResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<FindRoomListsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -112,7 +114,7 @@ public class FindRoomListsRequestBuilder {
         }
     }
     /**
-     * Invoke function findRoomLists
+     * Get the room lists defined in a tenant, as represented by their emailAddress objects. Tenants can organize meeting rooms into room lists. In this API, each meeting room and room list is represented by an emailAddress instance.You can get all the room lists in the tenant, get all the rooms in the tenant, or get all the rooms in a specific room list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of findRoomListsResponse
@@ -120,7 +122,7 @@ public class FindRoomListsRequestBuilder {
     public java.util.concurrent.CompletableFuture<FindRoomListsResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<FindRoomListsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -129,6 +131,29 @@ public class FindRoomListsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
+    /** Get the room lists defined in a tenant, as represented by their emailAddress objects. Tenants can organize meeting rooms into room lists. In this API, each meeting room and room list is represented by an emailAddress instance.You can get all the room lists in the tenant, get all the rooms in the tenant, or get all the rooms in a specific room list. */
+    public class FindRoomListsRequestBuilderGetQueryParameters {
+        /** Include count of items */
+        @QueryParameter(name = "%24count")
+        @javax.annotation.Nullable
+        public Boolean count;
+        /** Filter items by property values */
+        @QueryParameter(name = "%24filter")
+        @javax.annotation.Nullable
+        public String filter;
+        /** Search items by search phrases */
+        @QueryParameter(name = "%24search")
+        @javax.annotation.Nullable
+        public String search;
+        /** Skip the first n items */
+        @QueryParameter(name = "%24skip")
+        @javax.annotation.Nullable
+        public Integer skip;
+        /** Show only the first n items */
+        @QueryParameter(name = "%24top")
+        @javax.annotation.Nullable
+        public Integer top;
+    }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class FindRoomListsRequestBuilderGetRequestConfiguration {
         /** Request headers */
@@ -136,7 +161,10 @@ public class FindRoomListsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
+        /** Request query parameters */
+        @javax.annotation.Nullable
+        public FindRoomListsRequestBuilderGetQueryParameters queryParameters = new FindRoomListsRequestBuilderGetQueryParameters();
         /**
          * Instantiates a new findRoomListsRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void

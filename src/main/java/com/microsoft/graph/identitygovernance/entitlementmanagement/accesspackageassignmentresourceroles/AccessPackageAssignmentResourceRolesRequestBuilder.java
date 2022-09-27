@@ -27,11 +27,11 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new AccessPackageAssignmentResourceRolesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -42,7 +42,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentResourceRoles{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -54,13 +54,13 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
      */
     public AccessPackageAssignmentResourceRolesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentResourceRoles{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,13 +123,13 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
      * @return a CompletableFuture of AccessPackageAssignmentResourceRoleCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRoleCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -139,14 +139,14 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
         }
     }
     /**
-     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageAssignmentResourceRoleCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRoleCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AccessPackageAssignmentResourceRolesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -156,7 +156,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
         }
     }
     /**
-     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AccessPackageAssignmentResourceRoleCollectionResponse
@@ -164,7 +164,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRoleCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AccessPackageAssignmentResourceRolesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -189,7 +189,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRole> post(@javax.annotation.Nonnull final AccessPackageAssignmentResourceRole body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -207,7 +207,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRole> post(@javax.annotation.Nonnull final AccessPackageAssignmentResourceRole body, @javax.annotation.Nullable final java.util.function.Consumer<AccessPackageAssignmentResourceRolesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -236,7 +236,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents the resource-specific role which a subject has been assigned through an access package assignment. */
+    /** Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages. */
     public class AccessPackageAssignmentResourceRolesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -278,7 +278,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AccessPackageAssignmentResourceRolesRequestBuilderGetQueryParameters queryParameters = new AccessPackageAssignmentResourceRolesRequestBuilderGetQueryParameters();
@@ -296,7 +296,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new accessPackageAssignmentResourceRolesRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

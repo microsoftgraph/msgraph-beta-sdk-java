@@ -76,7 +76,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppLogCollectionDownloadDetails currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("appLogDecryptionAlgorithm", (n) -> { currentObject.setAppLogDecryptionAlgorithm(n.getEnumValue(AppLogDecryptionAlgorithm.class)); });
             this.put("decryptionKey", (n) -> { currentObject.setDecryptionKey(n.getStringValue()); });
             this.put("downloadUrl", (n) -> { currentObject.setDownloadUrl(n.getStringValue()); });

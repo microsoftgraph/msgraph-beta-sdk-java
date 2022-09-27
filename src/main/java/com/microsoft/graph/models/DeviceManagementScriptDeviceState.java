@@ -63,7 +63,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementScriptDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
             this.put("errorDescription", (n) -> { currentObject.setErrorDescription(n.getStringValue()); });
             this.put("lastStateUpdateDateTime", (n) -> { currentObject.setLastStateUpdateDateTime(n.getOffsetDateTimeValue()); });

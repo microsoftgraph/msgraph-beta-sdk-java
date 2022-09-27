@@ -87,7 +87,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageResourceRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessPackageResource", (n) -> { currentObject.setAccessPackageResource(n.getObjectValue(AccessPackageResource::createFromDiscriminatorValue)); });
             this.put("catalogId", (n) -> { currentObject.setCatalogId(n.getStringValue()); });
             this.put("executeImmediately", (n) -> { currentObject.setExecuteImmediately(n.getBooleanValue()); });

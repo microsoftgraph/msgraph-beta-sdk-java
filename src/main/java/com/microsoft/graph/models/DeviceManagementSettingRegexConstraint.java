@@ -35,7 +35,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingRegexConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("regex", (n) -> { currentObject.setRegex(n.getStringValue()); });
         }};
     }

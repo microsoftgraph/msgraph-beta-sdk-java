@@ -72,7 +72,7 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClaimsMapping currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });

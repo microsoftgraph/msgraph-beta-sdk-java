@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The entity describes all of the information about a single group policy. */
 public class GroupPolicyDefinition extends Entity implements Parsable {
     /** The group policy category associated with the definition. */
     private GroupPolicyCategory _category;
@@ -117,7 +116,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("category", (n) -> { currentObject.setCategory(n.getObjectValue(GroupPolicyCategory::createFromDiscriminatorValue)); });
             this.put("categoryPath", (n) -> { currentObject.setCategoryPath(n.getStringValue()); });
             this.put("classType", (n) -> { currentObject.setClassType(n.getEnumValue(GroupPolicyDefinitionClassType.class)); });

@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class AggregatedPolicyCompliance extends Entity implements Parsable {
     /** Identifier for the device compliance policy. Optional. Read-only. */
     private String _compliancePolicyId;
@@ -90,7 +90,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AggregatedPolicyCompliance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("compliancePolicyId", (n) -> { currentObject.setCompliancePolicyId(n.getStringValue()); });
             this.put("compliancePolicyName", (n) -> { currentObject.setCompliancePolicyName(n.getStringValue()); });
             this.put("compliancePolicyPlatform", (n) -> { currentObject.setCompliancePolicyPlatform(n.getStringValue()); });

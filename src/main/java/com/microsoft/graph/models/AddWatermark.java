@@ -35,7 +35,7 @@ public class AddWatermark extends MarkContent implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddWatermark currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("orientation", (n) -> { currentObject.setOrientation(n.getEnumValue(PageOrientation.class)); });
         }};
     }

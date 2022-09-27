@@ -83,7 +83,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignmentFilterIds", (n) -> { currentObject.setAssignmentFilterIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("detectionState", (n) -> { currentObject.setDetectionState(n.getEnumValue(RunState.class)); });
             this.put("expectedStateUpdateDateTime", (n) -> { currentObject.setExpectedStateUpdateDateTime(n.getOffsetDateTimeValue()); });

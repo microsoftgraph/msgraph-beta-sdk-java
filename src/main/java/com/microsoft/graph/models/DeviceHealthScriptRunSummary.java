@@ -80,7 +80,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptRunSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("detectionScriptErrorDeviceCount", (n) -> { currentObject.setDetectionScriptErrorDeviceCount(n.getIntegerValue()); });
             this.put("detectionScriptNotApplicableDeviceCount", (n) -> { currentObject.setDetectionScriptNotApplicableDeviceCount(n.getIntegerValue()); });
             this.put("detectionScriptPendingDeviceCount", (n) -> { currentObject.setDetectionScriptPendingDeviceCount(n.getIntegerValue()); });
