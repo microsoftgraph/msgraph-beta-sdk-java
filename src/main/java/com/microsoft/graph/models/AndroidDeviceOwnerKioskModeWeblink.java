@@ -37,7 +37,7 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerKioskModeWeblink currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
             this.put("link", (n) -> { currentObject.setLink(n.getStringValue()); });
         }};

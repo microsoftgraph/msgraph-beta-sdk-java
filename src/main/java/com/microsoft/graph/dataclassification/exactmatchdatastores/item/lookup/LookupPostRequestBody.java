@@ -50,7 +50,7 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LookupPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
             this.put("resultColumnNames", (n) -> { currentObject.setResultColumnNames(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfPrimitiveValues(String.class)); });

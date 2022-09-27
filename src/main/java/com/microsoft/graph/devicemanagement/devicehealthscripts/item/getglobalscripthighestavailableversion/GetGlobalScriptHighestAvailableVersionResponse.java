@@ -46,7 +46,7 @@ public class GetGlobalScriptHighestAvailableVersionResponse implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetGlobalScriptHighestAvailableVersionResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
     }

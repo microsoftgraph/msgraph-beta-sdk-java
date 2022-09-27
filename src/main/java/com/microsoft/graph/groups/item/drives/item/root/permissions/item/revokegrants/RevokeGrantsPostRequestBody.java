@@ -47,7 +47,7 @@ public class RevokeGrantsPostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RevokeGrantsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("grantees", (n) -> { currentObject.setGrantees(n.getCollectionOfObjectValues(DriveRecipient::createFromDiscriminatorValue)); });
         }};
     }

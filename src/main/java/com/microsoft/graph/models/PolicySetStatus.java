@@ -11,7 +11,7 @@ public enum PolicySetStatus implements ValuedEnum {
     Validating("validating"),
     /** Post process complete for all PolicySet items but there are failures. */
     PartialSuccess("partialSuccess"),
-    /** All PolicySet items are deployed. Doesn’t mean that all deployment succeeded.  */
+    /** All PolicySet items are deployed. Doesnt mean that all deployment succeeded.  */
     Success("success"),
     /** PolicySet processing completely failed. */
     Error("error"),

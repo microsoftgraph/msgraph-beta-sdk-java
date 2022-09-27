@@ -67,7 +67,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkPosition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("colleagues", (n) -> { currentObject.setColleagues(n.getCollectionOfObjectValues(RelatedPerson::createFromDiscriminatorValue)); });
             this.put("detail", (n) -> { currentObject.setDetail(n.getObjectValue(PositionDetail::createFromDiscriminatorValue)); });

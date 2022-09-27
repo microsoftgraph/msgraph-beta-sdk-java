@@ -13,7 +13,7 @@ public class UserAnalytics extends Entity implements Parsable {
     /** The current settings for a user to use the analytics API. */
     private Settings _settings;
     /**
-     * Instantiates a new UserAnalytics and sets the default values.
+     * Instantiates a new userAnalytics and sets the default values.
      * @return a void
      */
     public UserAnalytics() {
@@ -23,7 +23,7 @@ public class UserAnalytics extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserAnalytics
+     * @return a userAnalytics
      */
     @javax.annotation.Nonnull
     public static UserAnalytics createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class UserAnalytics extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserAnalytics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activityStatistics", (n) -> { currentObject.setActivityStatistics(n.getCollectionOfObjectValues(ActivityStatistics::createFromDiscriminatorValue)); });
             this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(Settings::createFromDiscriminatorValue)); });
         }};

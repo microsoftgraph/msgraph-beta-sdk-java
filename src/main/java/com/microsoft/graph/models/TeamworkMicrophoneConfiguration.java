@@ -60,7 +60,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkMicrophoneConfiguration currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("defaultMicrophone", (n) -> { currentObject.setDefaultMicrophone(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
             this.put("isMicrophoneOptional", (n) -> { currentObject.setIsMicrophoneOptional(n.getBooleanValue()); });
             this.put("microphones", (n) -> { currentObject.setMicrophones(n.getCollectionOfObjectValues(TeamworkPeripheral::createFromDiscriminatorValue)); });

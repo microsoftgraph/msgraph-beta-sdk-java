@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents an Autopilot flow event. */
 public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /** Time spent in user ESP. */
     private Period _accountSetupDuration;
@@ -65,7 +66,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /** Autopilot profile name. */
     private String _windowsAutopilotDeploymentProfileDisplayName;
     /**
-     * Instantiates a new DeviceManagementAutopilotEvent and sets the default values.
+     * Instantiates a new deviceManagementAutopilotEvent and sets the default values.
      * @return a void
      */
     public DeviceManagementAutopilotEvent() {
@@ -75,7 +76,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementAutopilotEvent
+     * @return a deviceManagementAutopilotEvent
      */
     @javax.annotation.Nonnull
     public static DeviceManagementAutopilotEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -233,7 +234,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementAutopilotEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountSetupDuration", (n) -> { currentObject.setAccountSetupDuration(n.getPeriodValue()); });
             this.put("accountSetupStatus", (n) -> { currentObject.setAccountSetupStatus(n.getEnumValue(WindowsAutopilotDeploymentState.class)); });
             this.put("deploymentDuration", (n) -> { currentObject.setDeploymentDuration(n.getPeriodValue()); });

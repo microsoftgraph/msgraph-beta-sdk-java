@@ -53,7 +53,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationLongDecimalTextBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getLongValue()); });
             this.put("maxValue", (n) -> { currentObject.setMaxValue(n.getLongValue()); });
             this.put("minValue", (n) -> { currentObject.setMinValue(n.getLongValue()); });

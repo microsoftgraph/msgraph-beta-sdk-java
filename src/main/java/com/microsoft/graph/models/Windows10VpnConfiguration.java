@@ -187,7 +187,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10VpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("associatedApps", (n) -> { currentObject.setAssociatedApps(n.getCollectionOfObjectValues(Windows10AssociatedApps::createFromDiscriminatorValue)); });
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(Windows10VpnAuthenticationMethod.class)); });
             this.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(Windows10VpnConnectionType.class)); });

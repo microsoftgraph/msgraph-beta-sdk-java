@@ -69,7 +69,7 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSLobChildApp currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

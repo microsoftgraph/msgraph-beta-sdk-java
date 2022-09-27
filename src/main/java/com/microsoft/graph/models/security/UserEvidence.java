@@ -35,7 +35,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userAccount", (n) -> { currentObject.setUserAccount(n.getObjectValue(UserAccount::createFromDiscriminatorValue)); });
         }};
     }

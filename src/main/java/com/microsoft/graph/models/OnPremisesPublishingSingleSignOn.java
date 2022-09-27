@@ -50,7 +50,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesPublishingSingleSignOn currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("kerberosSignOnSettings", (n) -> { currentObject.setKerberosSignOnSettings(n.getObjectValue(KerberosSignOnSettings::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("singleSignOnMode", (n) -> { currentObject.setSingleSignOnMode(n.getEnumValue(SingleSignOnMode.class)); });

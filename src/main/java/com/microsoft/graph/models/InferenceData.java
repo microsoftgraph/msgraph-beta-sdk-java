@@ -58,7 +58,7 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InferenceData currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("confidenceScore", (n) -> { currentObject.setConfidenceScore(n.getDoubleValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userHasVerifiedAccuracy", (n) -> { currentObject.setUserHasVerifiedAccuracy(n.getBooleanValue()); });

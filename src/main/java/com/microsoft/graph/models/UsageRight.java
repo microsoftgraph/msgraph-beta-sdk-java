@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class UsageRight extends Entity implements Parsable {
     /** Product id corresponding to the usage right. */
     private String _catalogId;
@@ -48,7 +48,7 @@ public class UsageRight extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UsageRight currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("catalogId", (n) -> { currentObject.setCatalogId(n.getStringValue()); });
             this.put("serviceIdentifier", (n) -> { currentObject.setServiceIdentifier(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(UsageRightState.class)); });

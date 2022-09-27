@@ -98,7 +98,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExportPostRequestBody currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("azureBlobContainer", (n) -> { currentObject.setAzureBlobContainer(n.getStringValue()); });
             this.put("azureBlobToken", (n) -> { currentObject.setAzureBlobToken(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });

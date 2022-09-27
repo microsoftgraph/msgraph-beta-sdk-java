@@ -61,7 +61,7 @@ public class OrganizationalMessageTargeting implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageTargeting currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("excludeIds", (n) -> { currentObject.setExcludeIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeIds", (n) -> { currentObject.setIncludeIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

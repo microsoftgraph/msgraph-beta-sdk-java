@@ -47,7 +47,7 @@ public class CreateMigrationReportPostRequestBody implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateMigrationReportPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("groupPolicyObjectFile", (n) -> { currentObject.setGroupPolicyObjectFile(n.getObjectValue(GroupPolicyObjectFile::createFromDiscriminatorValue)); });
         }};
     }

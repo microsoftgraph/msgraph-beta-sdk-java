@@ -36,7 +36,7 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterEvaluationStatusDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
         }};
     }

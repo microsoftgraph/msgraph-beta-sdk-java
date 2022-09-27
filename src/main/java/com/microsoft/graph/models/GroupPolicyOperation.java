@@ -43,7 +43,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("operationStatus", (n) -> { currentObject.setOperationStatus(n.getEnumValue(GroupPolicyOperationStatus.class)); });
             this.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(GroupPolicyOperationType.class)); });

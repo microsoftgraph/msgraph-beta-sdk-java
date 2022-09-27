@@ -259,7 +259,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceCertificateState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateEnhancedKeyUsage", (n) -> { currentObject.setCertificateEnhancedKeyUsage(n.getStringValue()); });
             this.put("certificateErrorCode", (n) -> { currentObject.setCertificateErrorCode(n.getIntegerValue()); });
             this.put("certificateExpirationDateTime", (n) -> { currentObject.setCertificateExpirationDateTime(n.getOffsetDateTimeValue()); });

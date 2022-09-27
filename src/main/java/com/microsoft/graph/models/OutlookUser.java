@@ -17,7 +17,7 @@ public class OutlookUser extends Entity implements Parsable {
     /** The tasks property */
     private java.util.List<OutlookTask> _tasks;
     /**
-     * Instantiates a new OutlookUser and sets the default values.
+     * Instantiates a new outlookUser and sets the default values.
      * @return a void
      */
     public OutlookUser() {
@@ -27,7 +27,7 @@ public class OutlookUser extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OutlookUser
+     * @return a outlookUser
      */
     @javax.annotation.Nonnull
     public static OutlookUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class OutlookUser extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutlookUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("masterCategories", (n) -> { currentObject.setMasterCategories(n.getCollectionOfObjectValues(OutlookCategory::createFromDiscriminatorValue)); });
             this.put("taskFolders", (n) -> { currentObject.setTaskFolders(n.getCollectionOfObjectValues(OutlookTaskFolder::createFromDiscriminatorValue)); });
             this.put("taskGroups", (n) -> { currentObject.setTaskGroups(n.getCollectionOfObjectValues(OutlookTaskGroup::createFromDiscriminatorValue)); });

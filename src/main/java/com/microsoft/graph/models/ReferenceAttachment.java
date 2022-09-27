@@ -45,7 +45,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReferenceAttachment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isFolder", (n) -> { currentObject.setIsFolder(n.getBooleanValue()); });
             this.put("permission", (n) -> { currentObject.setPermission(n.getEnumValue(ReferenceAttachmentPermission.class)); });
             this.put("previewUrl", (n) -> { currentObject.setPreviewUrl(n.getStringValue()); });

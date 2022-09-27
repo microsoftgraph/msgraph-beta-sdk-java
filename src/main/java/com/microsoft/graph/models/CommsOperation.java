@@ -19,7 +19,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class CommsOperation extends Entity implements Parsable {
     /** Unique Client Context string. Max limit is 256 chars. */
     private String _clientContext;
@@ -78,7 +78,7 @@ public class CommsOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommsOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
             this.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(OperationStatus.class)); });

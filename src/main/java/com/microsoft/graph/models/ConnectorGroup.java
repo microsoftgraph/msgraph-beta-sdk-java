@@ -61,7 +61,7 @@ public class ConnectorGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConnectorGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applications", (n) -> { currentObject.setApplications(n.getCollectionOfObjectValues(Application::createFromDiscriminatorValue)); });
             this.put("connectorGroupType", (n) -> { currentObject.setConnectorGroupType(n.getEnumValue(ConnectorGroupType.class)); });
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });

@@ -96,7 +96,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkloadActionDeploymentStatus currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("actionId", (n) -> { currentObject.setActionId(n.getStringValue()); });
             this.put("deployedPolicyId", (n) -> { currentObject.setDeployedPolicyId(n.getStringValue()); });
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(GenericError::createFromDiscriminatorValue)); });

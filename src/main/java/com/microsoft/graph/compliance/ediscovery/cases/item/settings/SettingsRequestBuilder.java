@@ -40,7 +40,7 @@ public class SettingsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/settings{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -52,7 +52,7 @@ public class SettingsRequestBuilder {
      */
     public SettingsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/settings{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -86,7 +86,7 @@ public class SettingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get settings from compliance
+     * Read the properties and relationships of an eDiscovery caseSettings object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class SettingsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get settings from compliance
+     * Read the properties and relationships of an eDiscovery caseSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -116,7 +116,7 @@ public class SettingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property settings in compliance
+     * Update the properties of a an eDiscovery caseSettings object.
      * @param body 
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class SettingsRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property settings in compliance
+     * Update the properties of a an eDiscovery caseSettings object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -138,6 +138,7 @@ public class SettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SettingsRequestBuilderPatchRequestConfiguration requestConfig = new SettingsRequestBuilderPatchRequestConfiguration();
@@ -154,7 +155,7 @@ public class SettingsRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -171,7 +172,7 @@ public class SettingsRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<SettingsRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -189,7 +190,7 @@ public class SettingsRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<SettingsRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -199,13 +200,13 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Get settings from compliance
+     * Read the properties and relationships of an eDiscovery caseSettings object.
      * @return a CompletableFuture of caseSettings
      */
     public java.util.concurrent.CompletableFuture<CaseSettings> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -215,14 +216,14 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Get settings from compliance
+     * Read the properties and relationships of an eDiscovery caseSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of caseSettings
      */
     public java.util.concurrent.CompletableFuture<CaseSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<SettingsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -232,7 +233,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Get settings from compliance
+     * Read the properties and relationships of an eDiscovery caseSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of caseSettings
@@ -240,7 +241,7 @@ public class SettingsRequestBuilder {
     public java.util.concurrent.CompletableFuture<CaseSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<SettingsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -250,56 +251,56 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Update the navigation property settings in compliance
+     * Update the properties of a an eDiscovery caseSettings object.
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of caseSettings
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final CaseSettings body) {
+    public java.util.concurrent.CompletableFuture<CaseSettings> patch(@javax.annotation.Nonnull final CaseSettings body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, CaseSettings::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
-     * Update the navigation property settings in compliance
+     * Update the properties of a an eDiscovery caseSettings object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of caseSettings
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final CaseSettings body, @javax.annotation.Nullable final java.util.function.Consumer<SettingsRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<CaseSettings> patch(@javax.annotation.Nonnull final CaseSettings body, @javax.annotation.Nullable final java.util.function.Consumer<SettingsRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, CaseSettings::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
-     * Update the navigation property settings in compliance
+     * Update the properties of a an eDiscovery caseSettings object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of caseSettings
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final CaseSettings body, @javax.annotation.Nullable final java.util.function.Consumer<SettingsRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<CaseSettings> patch(@javax.annotation.Nonnull final CaseSettings body, @javax.annotation.Nullable final java.util.function.Consumer<SettingsRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, CaseSettings::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -311,7 +312,7 @@ public class SettingsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new settingsRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -319,7 +320,7 @@ public class SettingsRequestBuilder {
         public SettingsRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get settings from compliance */
+    /** Read the properties and relationships of an eDiscovery caseSettings object. */
     public class SettingsRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -337,7 +338,7 @@ public class SettingsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SettingsRequestBuilderGetQueryParameters queryParameters = new SettingsRequestBuilderGetQueryParameters();
@@ -355,7 +356,7 @@ public class SettingsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new settingsRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

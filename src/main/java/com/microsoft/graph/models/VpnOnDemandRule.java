@@ -105,7 +105,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VpnOnDemandRule currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(VpnOnDemandRuleConnectionAction.class)); });
             this.put("dnsSearchDomains", (n) -> { currentObject.setDnsSearchDomains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("dnsServerAddressMatch", (n) -> { currentObject.setDnsServerAddressMatch(n.getCollectionOfPrimitiveValues(String.class)); });

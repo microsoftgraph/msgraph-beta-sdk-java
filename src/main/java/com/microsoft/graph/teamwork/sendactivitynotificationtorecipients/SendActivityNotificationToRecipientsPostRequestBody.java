@@ -78,7 +78,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SendActivityNotificationToRecipientsPostRequestBody currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("activityType", (n) -> { currentObject.setActivityType(n.getStringValue()); });
             this.put("chainId", (n) -> { currentObject.setChainId(n.getLongValue()); });
             this.put("previewText", (n) -> { currentObject.setPreviewText(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });

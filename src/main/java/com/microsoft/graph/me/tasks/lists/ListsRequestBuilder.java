@@ -42,7 +42,7 @@ public class ListsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/tasks/lists{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -54,13 +54,13 @@ public class ListsRequestBuilder {
      */
     public ListsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/me/tasks/lists{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The task lists in the users mailbox.
+     * Get a list of the baseTaskList objects of a user and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ListsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The task lists in the users mailbox.
+     * Get a list of the baseTaskList objects of a user and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class ListsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to lists for me
+     * Create a new baseTaskList object.
      * @param body 
      * @return a RequestInformation
      */
@@ -99,7 +99,7 @@ public class ListsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to lists for me
+     * Create a new baseTaskList object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -131,13 +131,13 @@ public class ListsRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * The task lists in the users mailbox.
+     * Get a list of the baseTaskList objects of a user and their properties.
      * @return a CompletableFuture of BaseTaskListCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BaseTaskListCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -147,14 +147,14 @@ public class ListsRequestBuilder {
         }
     }
     /**
-     * The task lists in the users mailbox.
+     * Get a list of the baseTaskList objects of a user and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BaseTaskListCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BaseTaskListCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ListsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -164,7 +164,7 @@ public class ListsRequestBuilder {
         }
     }
     /**
-     * The task lists in the users mailbox.
+     * Get a list of the baseTaskList objects of a user and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of BaseTaskListCollectionResponse
@@ -172,7 +172,7 @@ public class ListsRequestBuilder {
     public java.util.concurrent.CompletableFuture<BaseTaskListCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ListsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -182,14 +182,14 @@ public class ListsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to lists for me
+     * Create a new baseTaskList object.
      * @param body 
      * @return a CompletableFuture of baseTaskList
      */
     public java.util.concurrent.CompletableFuture<BaseTaskList> post(@javax.annotation.Nonnull final BaseTaskList body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -199,7 +199,7 @@ public class ListsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to lists for me
+     * Create a new baseTaskList object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of baseTaskList
@@ -207,7 +207,7 @@ public class ListsRequestBuilder {
     public java.util.concurrent.CompletableFuture<BaseTaskList> post(@javax.annotation.Nonnull final BaseTaskList body, @javax.annotation.Nullable final java.util.function.Consumer<ListsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -217,7 +217,7 @@ public class ListsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to lists for me
+     * Create a new baseTaskList object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -227,7 +227,7 @@ public class ListsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -236,7 +236,7 @@ public class ListsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The task lists in the users mailbox. */
+    /** Get a list of the baseTaskList objects of a user and their properties. */
     public class ListsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -278,7 +278,7 @@ public class ListsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ListsRequestBuilderGetQueryParameters queryParameters = new ListsRequestBuilderGetQueryParameters();
@@ -296,7 +296,7 @@ public class ListsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new listsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

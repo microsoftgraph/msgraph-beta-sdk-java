@@ -18,7 +18,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     private java.util.List<CustomUpdateTimeWindow> _customUpdateTimeWindows;
     /** Update behavior options for macOS software updates. */
     private MacOSSoftwareUpdateBehavior _firmwareUpdateBehavior;
-    /** Update schedule type for macOS software updates. */
+    /** Updatescheduletypefor macOS software updates. */
     private MacOSSoftwareUpdateScheduleType _updateScheduleType;
     /** Minutes indicating UTC offset for each update time window */
     private Integer _updateTimeWindowUtcOffsetInMinutes;
@@ -79,7 +79,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSSoftwareUpdateConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allOtherUpdateBehavior", (n) -> { currentObject.setAllOtherUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
             this.put("configDataUpdateBehavior", (n) -> { currentObject.setConfigDataUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
             this.put("criticalUpdateBehavior", (n) -> { currentObject.setCriticalUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
@@ -98,7 +98,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         return this._firmwareUpdateBehavior;
     }
     /**
-     * Gets the updateScheduleType property value. Update schedule type for macOS software updates.
+     * Gets the updateScheduleType property value. Updatescheduletypefor macOS software updates.
      * @return a macOSSoftwareUpdateScheduleType
      */
     @javax.annotation.Nullable
@@ -170,7 +170,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         this._firmwareUpdateBehavior = value;
     }
     /**
-     * Sets the updateScheduleType property value. Update schedule type for macOS software updates.
+     * Sets the updateScheduleType property value. Updatescheduletypefor macOS software updates.
      * @param value Value to set for the updateScheduleType property.
      * @return a void
      */

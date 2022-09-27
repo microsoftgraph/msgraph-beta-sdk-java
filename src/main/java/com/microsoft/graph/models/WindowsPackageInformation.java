@@ -77,7 +77,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPackageInformation currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("applicableArchitecture", (n) -> { currentObject.setApplicableArchitecture(n.getEnumValue(WindowsArchitecture.class)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("identityName", (n) -> { currentObject.setIdentityName(n.getStringValue()); });

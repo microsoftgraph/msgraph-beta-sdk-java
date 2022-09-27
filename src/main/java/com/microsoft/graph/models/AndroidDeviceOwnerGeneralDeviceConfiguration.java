@@ -54,7 +54,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     private AndroidDeviceOwnerGlobalProxy _globalProxy;
     /** Indicates whether or not google accounts will be blocked. */
     private Boolean _googleAccountsBlocked;
-    /** Indicates whether a user can access the device's Settings app while in Kiosk Mode. */
+    /** Indicateswhether a user can access the device's Settings app while in Kiosk Mode. */
     private Boolean _kioskCustomizationDeviceSettingsBlocked;
     /** Whether the power menu is shown when a user long presses the Power button of a device in Kiosk Mode. */
     private Boolean _kioskCustomizationPowerButtonActionsBlocked;
@@ -169,7 +169,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     /** Indicates whether or not the keyguard is disabled. */
     private Boolean _passwordBlockKeyguard;
     /** List of device keyguard features to block. This collection can contain a maximum of 7 elements. */
-    private java.util.List<String> _passwordBlockKeyguardFeatures;
+    private java.util.List<AndroidKeyguardFeature> _passwordBlockKeyguardFeatures;
     /** Indicates the amount of time that a password can be set for before it expires and a new password will be required. Valid values 1 to 365 */
     private Integer _passwordExpirationDays;
     /** Indicates the minimum length of the password required on the device. Valid values 4 to 16 */
@@ -221,7 +221,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     /** Indicates whether or the status bar is disabled, including notifications, quick settings and other screen overlays. */
     private Boolean _statusBarBlocked;
     /** List of modes in which the device's display will stay powered-on. This collection can contain a maximum of 4 elements. */
-    private java.util.List<String> _stayOnModes;
+    private java.util.List<AndroidDeviceOwnerBatteryPluggedMode> _stayOnModes;
     /** Indicates whether or not to allow USB mass storage. */
     private Boolean _storageAllowUsb;
     /** Indicates whether or not to block external media. */
@@ -469,7 +469,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountsBlockModification", (n) -> { currentObject.setAccountsBlockModification(n.getBooleanValue()); });
             this.put("appsAllowInstallFromUnknownSources", (n) -> { currentObject.setAppsAllowInstallFromUnknownSources(n.getBooleanValue()); });
             this.put("appsAutoUpdatePolicy", (n) -> { currentObject.setAppsAutoUpdatePolicy(n.getEnumValue(AndroidDeviceOwnerAppAutoUpdatePolicyType.class)); });
@@ -550,7 +550,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
             this.put("networkEscapeHatchAllowed", (n) -> { currentObject.setNetworkEscapeHatchAllowed(n.getBooleanValue()); });
             this.put("nfcBlockOutgoingBeam", (n) -> { currentObject.setNfcBlockOutgoingBeam(n.getBooleanValue()); });
             this.put("passwordBlockKeyguard", (n) -> { currentObject.setPasswordBlockKeyguard(n.getBooleanValue()); });
-            this.put("passwordBlockKeyguardFeatures", (n) -> { currentObject.setPasswordBlockKeyguardFeatures(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("passwordBlockKeyguardFeatures", (n) -> { currentObject.setPasswordBlockKeyguardFeatures(n.getCollectionOfEnumValues(AndroidKeyguardFeature.class)); });
             this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
             this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
             this.put("passwordMinimumLetterCharacters", (n) -> { currentObject.setPasswordMinimumLetterCharacters(n.getIntegerValue()); });
@@ -576,7 +576,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
             this.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
             this.put("shortHelpText", (n) -> { currentObject.setShortHelpText(n.getObjectValue(AndroidDeviceOwnerUserFacingMessage::createFromDiscriminatorValue)); });
             this.put("statusBarBlocked", (n) -> { currentObject.setStatusBarBlocked(n.getBooleanValue()); });
-            this.put("stayOnModes", (n) -> { currentObject.setStayOnModes(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("stayOnModes", (n) -> { currentObject.setStayOnModes(n.getCollectionOfEnumValues(AndroidDeviceOwnerBatteryPluggedMode.class)); });
             this.put("storageAllowUsb", (n) -> { currentObject.setStorageAllowUsb(n.getBooleanValue()); });
             this.put("storageBlockExternalMedia", (n) -> { currentObject.setStorageBlockExternalMedia(n.getBooleanValue()); });
             this.put("storageBlockUsbFileTransfer", (n) -> { currentObject.setStorageBlockUsbFileTransfer(n.getBooleanValue()); });
@@ -623,7 +623,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this._googleAccountsBlocked;
     }
     /**
-     * Gets the kioskCustomizationDeviceSettingsBlocked property value. Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+     * Gets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device's Settings app while in Kiosk Mode.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1080,10 +1080,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordBlockKeyguardFeatures property value. List of device keyguard features to block. This collection can contain a maximum of 7 elements.
-     * @return a string
+     * @return a androidKeyguardFeature
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getPasswordBlockKeyguardFeatures() {
+    public java.util.List<AndroidKeyguardFeature> getPasswordBlockKeyguardFeatures() {
         return this._passwordBlockKeyguardFeatures;
     }
     /**
@@ -1288,10 +1288,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the stayOnModes property value. List of modes in which the device's display will stay powered-on. This collection can contain a maximum of 4 elements.
-     * @return a string
+     * @return a androidDeviceOwnerBatteryPluggedMode
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getStayOnModes() {
+    public java.util.List<AndroidDeviceOwnerBatteryPluggedMode> getStayOnModes() {
         return this._stayOnModes;
     }
     /**
@@ -1598,7 +1598,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         writer.writeBooleanValue("networkEscapeHatchAllowed", this.getNetworkEscapeHatchAllowed());
         writer.writeBooleanValue("nfcBlockOutgoingBeam", this.getNfcBlockOutgoingBeam());
         writer.writeBooleanValue("passwordBlockKeyguard", this.getPasswordBlockKeyguard());
-        writer.writeCollectionOfPrimitiveValues("passwordBlockKeyguardFeatures", this.getPasswordBlockKeyguardFeatures());
+        writer.writeCollectionOfEnumValues("passwordBlockKeyguardFeatures", this.getPasswordBlockKeyguardFeatures());
         writer.writeIntegerValue("passwordExpirationDays", this.getPasswordExpirationDays());
         writer.writeIntegerValue("passwordMinimumLength", this.getPasswordMinimumLength());
         writer.writeIntegerValue("passwordMinimumLetterCharacters", this.getPasswordMinimumLetterCharacters());
@@ -1624,7 +1624,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         writer.writeBooleanValue("securityRequireVerifyApps", this.getSecurityRequireVerifyApps());
         writer.writeObjectValue("shortHelpText", this.getShortHelpText());
         writer.writeBooleanValue("statusBarBlocked", this.getStatusBarBlocked());
-        writer.writeCollectionOfPrimitiveValues("stayOnModes", this.getStayOnModes());
+        writer.writeCollectionOfEnumValues("stayOnModes", this.getStayOnModes());
         writer.writeBooleanValue("storageAllowUsb", this.getStorageAllowUsb());
         writer.writeBooleanValue("storageBlockExternalMedia", this.getStorageBlockExternalMedia());
         writer.writeBooleanValue("storageBlockUsbFileTransfer", this.getStorageBlockUsbFileTransfer());
@@ -1838,7 +1838,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this._googleAccountsBlocked = value;
     }
     /**
-     * Sets the kioskCustomizationDeviceSettingsBlocked property value. Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+     * Sets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device's Settings app while in Kiosk Mode.
      * @param value Value to set for the kioskCustomizationDeviceSettingsBlocked property.
      * @return a void
      */
@@ -2298,7 +2298,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordBlockKeyguardFeatures property.
      * @return a void
      */
-    public void setPasswordBlockKeyguardFeatures(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setPasswordBlockKeyguardFeatures(@javax.annotation.Nullable final java.util.List<AndroidKeyguardFeature> value) {
         this._passwordBlockKeyguardFeatures = value;
     }
     /**
@@ -2506,7 +2506,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the stayOnModes property.
      * @return a void
      */
-    public void setStayOnModes(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setStayOnModes(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerBatteryPluggedMode> value) {
         this._stayOnModes = value;
     }
     /**

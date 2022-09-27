@@ -52,7 +52,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcExternalPartnerSetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enableConnection", (n) -> { currentObject.setEnableConnection(n.getBooleanValue()); });
             this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
             this.put("partnerId", (n) -> { currentObject.setPartnerId(n.getStringValue()); });

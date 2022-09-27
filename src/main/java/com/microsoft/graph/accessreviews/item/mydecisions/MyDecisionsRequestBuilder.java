@@ -41,7 +41,7 @@ public class MyDecisionsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/accessReviews/{accessReview%2Did}/myDecisions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class MyDecisionsRequestBuilder {
      */
     public MyDecisionsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/accessReviews/{accessReview%2Did}/myDecisions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The collection of decisions for the caller, if the caller is a reviewer.
+     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class MyDecisionsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of decisions for the caller, if the caller is a reviewer.
+     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,13 +122,13 @@ public class MyDecisionsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of decisions for the caller, if the caller is a reviewer.
+     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @return a CompletableFuture of AccessReviewDecisionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessReviewDecisionCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class MyDecisionsRequestBuilder {
         }
     }
     /**
-     * The collection of decisions for the caller, if the caller is a reviewer.
+     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessReviewDecisionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessReviewDecisionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<MyDecisionsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class MyDecisionsRequestBuilder {
         }
     }
     /**
-     * The collection of decisions for the caller, if the caller is a reviewer.
+     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AccessReviewDecisionCollectionResponse
@@ -163,7 +163,7 @@ public class MyDecisionsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessReviewDecisionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<MyDecisionsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -180,7 +180,7 @@ public class MyDecisionsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessReviewDecision> post(@javax.annotation.Nonnull final AccessReviewDecision body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -198,7 +198,7 @@ public class MyDecisionsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessReviewDecision> post(@javax.annotation.Nonnull final AccessReviewDecision body, @javax.annotation.Nullable final java.util.function.Consumer<MyDecisionsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -218,7 +218,7 @@ public class MyDecisionsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class MyDecisionsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The collection of decisions for the caller, if the caller is a reviewer. */
+    /** In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer. */
     public class MyDecisionsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class MyDecisionsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public MyDecisionsRequestBuilderGetQueryParameters queryParameters = new MyDecisionsRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class MyDecisionsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new myDecisionsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

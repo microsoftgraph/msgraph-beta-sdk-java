@@ -45,7 +45,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DlpWindowsDevicesNotification currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contentName", (n) -> { currentObject.setContentName(n.getStringValue()); });
             this.put("lastModfiedBy", (n) -> { currentObject.setLastModfiedBy(n.getStringValue()); });
         }};

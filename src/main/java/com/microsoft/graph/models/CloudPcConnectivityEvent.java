@@ -89,7 +89,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcConnectivityEvent currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
             this.put("eventName", (n) -> { currentObject.setEventName(n.getStringValue()); });
             this.put("eventResult", (n) -> { currentObject.setEventResult(n.getEnumValue(CloudPcConnectivityEventResult.class)); });

@@ -58,7 +58,7 @@ public class EvaluateApplicationPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateApplicationPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
             this.put("labelingOptions", (n) -> { currentObject.setLabelingOptions(n.getObjectValue(LabelingOptions::createFromDiscriminatorValue)); });
         }};

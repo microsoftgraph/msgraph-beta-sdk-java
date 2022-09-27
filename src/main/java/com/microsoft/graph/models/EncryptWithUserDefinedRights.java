@@ -63,7 +63,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EncryptWithUserDefinedRights currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowAdHocPermissions", (n) -> { currentObject.setAllowAdHocPermissions(n.getBooleanValue()); });
             this.put("allowMailForwarding", (n) -> { currentObject.setAllowMailForwarding(n.getBooleanValue()); });
             this.put("decryptionRightsManagementTemplateId", (n) -> { currentObject.setDecryptionRightsManagementTemplateId(n.getStringValue()); });

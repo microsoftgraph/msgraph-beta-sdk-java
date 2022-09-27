@@ -58,7 +58,7 @@ public class ManagementCertificateWithThumbprint implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementCertificateWithThumbprint currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("certificate", (n) -> { currentObject.setCertificate(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("thumbprint", (n) -> { currentObject.setThumbprint(n.getStringValue()); });

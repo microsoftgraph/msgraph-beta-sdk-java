@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class PrivilegedApproval extends Entity implements Parsable {
     /** The approvalDuration property */
     private Period _approvalDuration;
@@ -33,7 +34,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     /** The userId property */
     private String _userId;
     /**
-     * Instantiates a new PrivilegedApproval and sets the default values.
+     * Instantiates a new privilegedApproval and sets the default values.
      * @return a void
      */
     public PrivilegedApproval() {
@@ -43,7 +44,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedApproval
+     * @return a privilegedApproval
      */
     @javax.annotation.Nonnull
     public static PrivilegedApproval createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -97,7 +98,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedApproval currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("approvalDuration", (n) -> { currentObject.setApprovalDuration(n.getPeriodValue()); });
             this.put("approvalState", (n) -> { currentObject.setApprovalState(n.getEnumValue(ApprovalState.class)); });
             this.put("approvalType", (n) -> { currentObject.setApprovalType(n.getStringValue()); });

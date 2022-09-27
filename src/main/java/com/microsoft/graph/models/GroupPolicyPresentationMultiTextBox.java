@@ -39,7 +39,7 @@ public class GroupPolicyPresentationMultiTextBox extends GroupPolicyUploadedPres
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationMultiTextBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maxLength", (n) -> { currentObject.setMaxLength(n.getLongValue()); });
             this.put("maxStrings", (n) -> { currentObject.setMaxStrings(n.getLongValue()); });
             this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });

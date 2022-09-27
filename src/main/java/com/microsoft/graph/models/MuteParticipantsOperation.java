@@ -35,7 +35,7 @@ public class MuteParticipantsOperation extends CommsOperation implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MuteParticipantsOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

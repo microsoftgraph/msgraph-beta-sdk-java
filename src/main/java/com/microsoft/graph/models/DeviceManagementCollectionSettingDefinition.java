@@ -43,7 +43,7 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementCollectionSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("elementDefinitionId", (n) -> { currentObject.setElementDefinitionId(n.getStringValue()); });
         }};
     }

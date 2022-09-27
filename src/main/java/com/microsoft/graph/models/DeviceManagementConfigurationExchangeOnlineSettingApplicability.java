@@ -33,7 +33,7 @@ public class DeviceManagementConfigurationExchangeOnlineSettingApplicability ext
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationExchangeOnlineSettingApplicability currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**

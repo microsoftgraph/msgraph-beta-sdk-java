@@ -64,7 +64,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDeviceSoftwareVersions currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("adminAgentSoftwareVersion", (n) -> { currentObject.setAdminAgentSoftwareVersion(n.getStringValue()); });
             this.put("firmwareSoftwareVersion", (n) -> { currentObject.setFirmwareSoftwareVersion(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

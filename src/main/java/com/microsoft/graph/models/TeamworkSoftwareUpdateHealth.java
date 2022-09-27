@@ -74,7 +74,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkSoftwareUpdateHealth currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("adminAgentSoftwareUpdateStatus", (n) -> { currentObject.setAdminAgentSoftwareUpdateStatus(n.getObjectValue(TeamworkSoftwareUpdateStatus::createFromDiscriminatorValue)); });
             this.put("companyPortalSoftwareUpdateStatus", (n) -> { currentObject.setCompanyPortalSoftwareUpdateStatus(n.getObjectValue(TeamworkSoftwareUpdateStatus::createFromDiscriminatorValue)); });
             this.put("firmwareSoftwareUpdateStatus", (n) -> { currentObject.setFirmwareSoftwareUpdateStatus(n.getObjectValue(TeamworkSoftwareUpdateStatus::createFromDiscriminatorValue)); });

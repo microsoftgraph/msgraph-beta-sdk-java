@@ -33,7 +33,7 @@ public class AndroidDeviceComplianceLocalActionLockDevice extends AndroidDeviceC
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceComplianceLocalActionLockDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**

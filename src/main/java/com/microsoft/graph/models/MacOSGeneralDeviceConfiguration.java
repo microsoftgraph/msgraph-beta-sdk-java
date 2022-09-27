@@ -271,7 +271,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("addingGameCenterFriendsBlocked", (n) -> { currentObject.setAddingGameCenterFriendsBlocked(n.getBooleanValue()); });
             this.put("airDropBlocked", (n) -> { currentObject.setAirDropBlocked(n.getBooleanValue()); });
             this.put("appleWatchBlockAutoUnlock", (n) -> { currentObject.setAppleWatchBlockAutoUnlock(n.getBooleanValue()); });

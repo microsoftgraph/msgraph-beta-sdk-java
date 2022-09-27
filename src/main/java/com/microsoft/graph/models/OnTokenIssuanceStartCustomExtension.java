@@ -43,7 +43,7 @@ public class OnTokenIssuanceStartCustomExtension extends CustomAuthenticationExt
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnTokenIssuanceStartCustomExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("claimsForTokenConfiguration", (n) -> { currentObject.setClaimsForTokenConfiguration(n.getCollectionOfObjectValues(OnTokenIssuanceStartReturnClaim::createFromDiscriminatorValue)); });
         }};
     }

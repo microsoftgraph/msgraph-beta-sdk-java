@@ -64,7 +64,7 @@ public class OathTokenMetadata implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OathTokenMetadata currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
             this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
             this.put("manufacturerProperties", (n) -> { currentObject.setManufacturerProperties(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });

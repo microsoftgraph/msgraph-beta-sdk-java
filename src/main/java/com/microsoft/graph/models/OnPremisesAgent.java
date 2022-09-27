@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class OnPremisesAgent extends Entity implements Parsable {
     /** List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable. */
     private java.util.List<OnPremisesAgentGroup> _agentGroups;
@@ -17,9 +18,9 @@ public class OnPremisesAgent extends Entity implements Parsable {
     /** The status property */
     private AgentStatus _status;
     /** The supportedPublishingTypes property */
-    private java.util.List<String> _supportedPublishingTypes;
+    private java.util.List<OnPremisesPublishingType> _supportedPublishingTypes;
     /**
-     * Instantiates a new OnPremisesAgent and sets the default values.
+     * Instantiates a new onPremisesAgent and sets the default values.
      * @return a void
      */
     public OnPremisesAgent() {
@@ -29,7 +30,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnPremisesAgent
+     * @return a onPremisesAgent
      */
     @javax.annotation.Nonnull
     public static OnPremisesAgent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -59,12 +60,12 @@ public class OnPremisesAgent extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesAgent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("agentGroups", (n) -> { currentObject.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
             this.put("externalIp", (n) -> { currentObject.setExternalIp(n.getStringValue()); });
             this.put("machineName", (n) -> { currentObject.setMachineName(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AgentStatus.class)); });
-            this.put("supportedPublishingTypes", (n) -> { currentObject.setSupportedPublishingTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("supportedPublishingTypes", (n) -> { currentObject.setSupportedPublishingTypes(n.getCollectionOfEnumValues(OnPremisesPublishingType.class)); });
         }};
     }
     /**
@@ -85,10 +86,10 @@ public class OnPremisesAgent extends Entity implements Parsable {
     }
     /**
      * Gets the supportedPublishingTypes property value. The supportedPublishingTypes property
-     * @return a string
+     * @return a onPremisesPublishingType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getSupportedPublishingTypes() {
+    public java.util.List<OnPremisesPublishingType> getSupportedPublishingTypes() {
         return this._supportedPublishingTypes;
     }
     /**
@@ -103,7 +104,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
         writer.writeStringValue("externalIp", this.getExternalIp());
         writer.writeStringValue("machineName", this.getMachineName());
         writer.writeEnumValue("status", this.getStatus());
-        writer.writeCollectionOfPrimitiveValues("supportedPublishingTypes", this.getSupportedPublishingTypes());
+        writer.writeCollectionOfEnumValues("supportedPublishingTypes", this.getSupportedPublishingTypes());
     }
     /**
      * Sets the agentGroups property value. List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
@@ -142,7 +143,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * @param value Value to set for the supportedPublishingTypes property.
      * @return a void
      */
-    public void setSupportedPublishingTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSupportedPublishingTypes(@javax.annotation.Nullable final java.util.List<OnPremisesPublishingType> value) {
         this._supportedPublishingTypes = value;
     }
 }

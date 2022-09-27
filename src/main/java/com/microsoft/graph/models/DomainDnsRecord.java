@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class DomainDnsRecord extends Entity implements Parsable {
     /** If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain. */
     private Boolean _isOptional;
@@ -60,7 +60,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainDnsRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isOptional", (n) -> { currentObject.setIsOptional(n.getBooleanValue()); });
             this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
             this.put("recordType", (n) -> { currentObject.setRecordType(n.getStringValue()); });

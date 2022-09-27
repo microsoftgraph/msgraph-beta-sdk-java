@@ -41,7 +41,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/schedule/swapShiftsChangeRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class SwapShiftsChangeRequestsRequestBuilder {
      */
     public SwapShiftsChangeRequestsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/schedule/swapShiftsChangeRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get swapShiftsChangeRequests from teamwork
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get swapShiftsChangeRequests from teamwork
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to swapShiftsChangeRequests for teamwork
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to swapShiftsChangeRequests for teamwork
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get swapShiftsChangeRequests from teamwork
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @return a CompletableFuture of SwapShiftsChangeRequestCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequestCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         }
     }
     /**
-     * Get swapShiftsChangeRequests from teamwork
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SwapShiftsChangeRequestCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         }
     }
     /**
-     * Get swapShiftsChangeRequests from teamwork
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of SwapShiftsChangeRequestCollectionResponse
@@ -163,7 +163,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to swapShiftsChangeRequests for teamwork
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body 
      * @return a CompletableFuture of swapShiftsChangeRequest
      */
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> post(@javax.annotation.Nonnull final SwapShiftsChangeRequest body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to swapShiftsChangeRequests for teamwork
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of swapShiftsChangeRequest
@@ -198,7 +198,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> post(@javax.annotation.Nonnull final SwapShiftsChangeRequest body, @javax.annotation.Nullable final java.util.function.Consumer<SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to swapShiftsChangeRequests for teamwork
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get swapShiftsChangeRequests from teamwork */
+    /** Retrieve a list of swapShiftsChangeRequest objects in the team. */
     public class SwapShiftsChangeRequestsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SwapShiftsChangeRequestsRequestBuilderGetQueryParameters queryParameters = new SwapShiftsChangeRequestsRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class SwapShiftsChangeRequestsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new swapShiftsChangeRequestsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

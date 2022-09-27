@@ -52,7 +52,7 @@ public class ManagementIntentInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementIntentInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("managementIntentDisplayName", (n) -> { currentObject.setManagementIntentDisplayName(n.getStringValue()); });
             this.put("managementIntentId", (n) -> { currentObject.setManagementIntentId(n.getStringValue()); });
             this.put("managementTemplates", (n) -> { currentObject.setManagementTemplates(n.getCollectionOfObjectValues(ManagementTemplateDetailedInfo::createFromDiscriminatorValue)); });

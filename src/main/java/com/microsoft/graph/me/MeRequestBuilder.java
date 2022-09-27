@@ -45,6 +45,7 @@ import com.microsoft.graph.me.drive.DriveRequestBuilder;
 import com.microsoft.graph.me.drives.DrivesRequestBuilder;
 import com.microsoft.graph.me.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.me.events.EventsRequestBuilder;
+import com.microsoft.graph.me.events.item.EventItemRequestBuilder;
 import com.microsoft.graph.me.exportdeviceandappmanagementdata.ExportDeviceAndAppManagementDataRequestBuilder;
 import com.microsoft.graph.me.exportdeviceandappmanagementdatawithskipwithtop.ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder;
 import com.microsoft.graph.me.exportpersonaldata.ExportPersonalDataRequestBuilder;
@@ -109,6 +110,7 @@ import com.microsoft.graph.me.photos.PhotosRequestBuilder;
 import com.microsoft.graph.me.planner.PlannerRequestBuilder;
 import com.microsoft.graph.me.presence.PresenceRequestBuilder;
 import com.microsoft.graph.me.profile.ProfileRequestBuilder;
+import com.microsoft.graph.me.registereddevices.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.registereddevices.RegisteredDevicesRequestBuilder;
 import com.microsoft.graph.me.reminderviewwithstartdatetimewithenddatetime.ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.me.removealldevicesfrommanagement.RemoveAllDevicesFromManagementRequestBuilder;
@@ -602,7 +604,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public UserActivityItemRequestBuilder activities(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userActivity%2Did", id);
         return new UserActivityItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -614,7 +616,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public AgreementAcceptanceItemRequestBuilder agreementAcceptances(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("agreementAcceptance%2Did", id);
         return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -626,7 +628,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public AppConsentRequestItemRequestBuilder appConsentRequestsForApproval(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("appConsentRequest%2Did", id);
         return new AppConsentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -638,7 +640,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public ServicePrincipalItemRequestBuilder appRoleAssignedResources(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("servicePrincipal%2Did", id);
         return new ServicePrincipalItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -650,7 +652,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public AppRoleAssignmentItemRequestBuilder appRoleAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("appRoleAssignment%2Did", id);
         return new AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -662,7 +664,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public ApprovalItemRequestBuilder approvals(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("approval%2Did", id);
         return new ApprovalItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -674,7 +676,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public CalendarGroupItemRequestBuilder calendarGroups(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("calendarGroup%2Did", id);
         return new CalendarGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -686,7 +688,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public CalendarItemRequestBuilder calendars(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("calendar%2Did", id);
         return new CalendarItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -698,7 +700,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("event%2Did", id);
         return new com.microsoft.graph.me.calendarview.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -710,7 +712,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public ChatItemRequestBuilder chats(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("chat%2Did", id);
         return new ChatItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -722,7 +724,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public CloudPCItemRequestBuilder cloudPCs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPC%2Did", id);
         return new CloudPCItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -735,8 +737,8 @@ public class MeRequestBuilder {
     public MeRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/me{?%24select}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/me{?%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -747,8 +749,8 @@ public class MeRequestBuilder {
      * @return a void
      */
     public MeRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/me{?%24select}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/me{?%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -761,7 +763,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public ContactFolderItemRequestBuilder contactFolders(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("contactFolder%2Did", id);
         return new ContactFolderItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -773,7 +775,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public ContactItemRequestBuilder contacts(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("contact%2Did", id);
         return new ContactItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -785,12 +787,12 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.createdobjects.item.DirectoryObjectItemRequestBuilder createdObjects(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.createdobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -798,7 +800,7 @@ public class MeRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -842,6 +844,7 @@ public class MeRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final MeRequestBuilderPatchRequestConfiguration requestConfig = new MeRequestBuilderPatchRequestConfiguration();
@@ -859,7 +862,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceEnrollmentConfigurationItemRequestBuilder deviceEnrollmentConfigurations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceEnrollmentConfiguration%2Did", id);
         return new DeviceEnrollmentConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -871,7 +874,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceManagementTroubleshootingEventItemRequestBuilder deviceManagementTroubleshootingEvents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceManagementTroubleshootingEvent%2Did", id);
         return new DeviceManagementTroubleshootingEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -883,7 +886,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceItemRequestBuilder devices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("device%2Did", id);
         return new DeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -895,7 +898,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.directreports.item.DirectoryObjectItemRequestBuilder directReports(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.directreports.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -907,7 +910,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder drives(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("drive%2Did", id);
         return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -919,7 +922,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("event%2Did", id);
         return new com.microsoft.graph.me.events.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -951,7 +954,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("extension%2Did", id);
         return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -989,18 +992,18 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public SiteItemRequestBuilder followedSites(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("site%2Did", id);
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @return a CompletableFuture of user
      */
     public java.util.concurrent.CompletableFuture<User> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -1010,14 +1013,14 @@ public class MeRequestBuilder {
         }
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
      */
     public java.util.concurrent.CompletableFuture<User> get(@javax.annotation.Nullable final java.util.function.Consumer<MeRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -1027,7 +1030,7 @@ public class MeRequestBuilder {
         }
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of user
@@ -1035,7 +1038,7 @@ public class MeRequestBuilder {
     public java.util.concurrent.CompletableFuture<User> get(@javax.annotation.Nullable final java.util.function.Consumer<MeRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -1108,7 +1111,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public TeamItemRequestBuilder joinedTeams(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("team%2Did", id);
         return new TeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1120,7 +1123,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public LicenseDetailsItemRequestBuilder licenseDetails(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("licenseDetails%2Did", id);
         return new LicenseDetailsItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1132,7 +1135,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public MailFolderItemRequestBuilder mailFolders(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mailFolder%2Did", id);
         return new MailFolderItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1144,7 +1147,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public ManagedAppRegistrationItemRequestBuilder managedAppRegistrations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedAppRegistration%2Did", id);
         return new ManagedAppRegistrationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1156,7 +1159,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public ManagedDeviceItemRequestBuilder managedDevices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedDevice%2Did", id);
         return new ManagedDeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1168,7 +1171,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1180,7 +1183,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public MessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("message%2Did", id);
         return new MessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1192,7 +1195,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public MobileAppIntentAndStateItemRequestBuilder mobileAppIntentAndStates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mobileAppIntentAndState%2Did", id);
         return new MobileAppIntentAndStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1204,7 +1207,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public MobileAppTroubleshootingEventItemRequestBuilder mobileAppTroubleshootingEvents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mobileAppTroubleshootingEvent%2Did", id);
         return new MobileAppTroubleshootingEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1216,7 +1219,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public NotificationItemRequestBuilder notifications(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("notification%2Did", id);
         return new NotificationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1228,7 +1231,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public OAuth2PermissionGrantItemRequestBuilder oauth2PermissionGrants(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("oAuth2PermissionGrant%2Did", id);
         return new OAuth2PermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1240,7 +1243,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public OnlineMeetingItemRequestBuilder onlineMeetings(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("onlineMeeting%2Did", id);
         return new OnlineMeetingItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1252,7 +1255,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.owneddevices.item.DirectoryObjectItemRequestBuilder ownedDevices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.owneddevices.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1264,23 +1267,23 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.ownedobjects.item.DirectoryObjectItemRequestBuilder ownedObjects(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.ownedobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of user
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final User body) {
+    public java.util.concurrent.CompletableFuture<User> patch(@javax.annotation.Nonnull final User body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -1289,16 +1292,16 @@ public class MeRequestBuilder {
      * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of user
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<MeRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<User> patch(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<MeRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -1308,17 +1311,17 @@ public class MeRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of user
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<MeRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<User> patch(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<MeRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -1331,7 +1334,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public AccessReviewInstanceItemRequestBuilder pendingAccessReviewInstances(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessReviewInstance%2Did", id);
         return new AccessReviewInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1343,7 +1346,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public PersonItemRequestBuilder people(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("person%2Did", id);
         return new PersonItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1355,7 +1358,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public ProfilePhotoItemRequestBuilder photos(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("profilePhoto%2Did", id);
         return new ProfilePhotoItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1367,7 +1370,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.registereddevices.item.DirectoryObjectItemRequestBuilder registeredDevices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.registereddevices.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1391,7 +1394,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public ScopedRoleMembershipItemRequestBuilder scopedRoleMemberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("scopedRoleMembership%2Did", id);
         return new ScopedRoleMembershipItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1403,7 +1406,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1415,7 +1418,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.transitivereports.item.DirectoryObjectItemRequestBuilder transitiveReports(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.transitivereports.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1427,7 +1430,7 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public UsageRightItemRequestBuilder usageRights(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("usageRight%2Did", id);
         return new UsageRightItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1439,12 +1442,16 @@ public class MeRequestBuilder {
     @javax.annotation.Nonnull
     public WindowsInformationProtectionDeviceRegistrationItemRequestBuilder windowsInformationProtectionDeviceRegistrations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsInformationProtectionDeviceRegistration%2Did", id);
         return new WindowsInformationProtectionDeviceRegistrationItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node. */
+    /** Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance. */
     public class MeRequestBuilderGetQueryParameters {
+        /** Expand related entities */
+        @QueryParameter(name = "%24expand")
+        @javax.annotation.Nullable
+        public String[] expand;
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
@@ -1457,7 +1464,7 @@ public class MeRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public MeRequestBuilderGetQueryParameters queryParameters = new MeRequestBuilderGetQueryParameters();
@@ -1475,7 +1482,7 @@ public class MeRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new meRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

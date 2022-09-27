@@ -59,7 +59,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppTroubleshootingEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
             this.put("appLogCollectionRequests", (n) -> { currentObject.setAppLogCollectionRequests(n.getCollectionOfObjectValues(AppLogCollectionRequest::createFromDiscriminatorValue)); });
             this.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(MobileAppTroubleshootingHistoryItem::createFromDiscriminatorValue)); });

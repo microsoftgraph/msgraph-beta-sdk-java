@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Alert extends Entity implements Parsable {
     /** The adversary or activity group that is associated with this alert. */
     private String _actorDisplayName;
@@ -188,7 +188,7 @@ public class Alert extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Alert currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actorDisplayName", (n) -> { currentObject.setActorDisplayName(n.getStringValue()); });
             this.put("alertWebUrl", (n) -> { currentObject.setAlertWebUrl(n.getStringValue()); });
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });

@@ -7,16 +7,16 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class UsedInsight extends Entity implements Parsable {
     /** Information about when the item was last viewed or modified by the user. Read only. */
     private UsageDetails _lastUsed;
     /** Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem. */
     private Entity _resource;
     /** Reference properties of the used document, such as the url and type of the document. Read-only */
-    private ResourceReference _resourceReference;
+    private final ResourceReference _resourceReference;
     /** Properties that you can use to visualize the document in your experience. Read-only */
-    private ResourceVisualization _resourceVisualization;
+    private final ResourceVisualization _resourceVisualization;
     /**
      * Instantiates a new usedInsight and sets the default values.
      * @return a void
@@ -42,7 +42,7 @@ public class UsedInsight extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UsedInsight currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lastUsed", (n) -> { currentObject.setLastUsed(n.getObjectValue(UsageDetails::createFromDiscriminatorValue)); });
             this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
             this.put("resourceReference", (n) -> { currentObject.setResourceReference(n.getObjectValue(ResourceReference::createFromDiscriminatorValue)); });
@@ -91,8 +91,6 @@ public class UsedInsight extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("lastUsed", this.getLastUsed());
         writer.writeObjectValue("resource", this.getResource());
-        writer.writeObjectValue("resourceReference", this.getResourceReference());
-        writer.writeObjectValue("resourceVisualization", this.getResourceVisualization());
     }
     /**
      * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.

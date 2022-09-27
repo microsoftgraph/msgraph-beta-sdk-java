@@ -41,7 +41,7 @@ public class B2xUserFlowsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identity/b2xUserFlows{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class B2xUserFlowsRequestBuilder {
      */
     public B2xUserFlowsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/identity/b2xUserFlows{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class B2xUserFlowsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class B2xUserFlowsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to b2xUserFlows for identity
+     * Create a new b2xIdentityUserFlow object.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class B2xUserFlowsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to b2xUserFlows for identity
+     * Create a new b2xIdentityUserFlow object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class B2xUserFlowsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @return a CompletableFuture of B2xIdentityUserFlowCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlowCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class B2xUserFlowsRequestBuilder {
         }
     }
     /**
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of B2xIdentityUserFlowCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlowCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<B2xUserFlowsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class B2xUserFlowsRequestBuilder {
         }
     }
     /**
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of B2xIdentityUserFlowCollectionResponse
@@ -163,7 +163,7 @@ public class B2xUserFlowsRequestBuilder {
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlowCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<B2xUserFlowsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class B2xUserFlowsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to b2xUserFlows for identity
+     * Create a new b2xIdentityUserFlow object.
      * @param body 
      * @return a CompletableFuture of b2xIdentityUserFlow
      */
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlow> post(@javax.annotation.Nonnull final B2xIdentityUserFlow body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class B2xUserFlowsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to b2xUserFlows for identity
+     * Create a new b2xIdentityUserFlow object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of b2xIdentityUserFlow
@@ -198,7 +198,7 @@ public class B2xUserFlowsRequestBuilder {
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlow> post(@javax.annotation.Nonnull final B2xIdentityUserFlow body, @javax.annotation.Nullable final java.util.function.Consumer<B2xUserFlowsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class B2xUserFlowsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to b2xUserFlows for identity
+     * Create a new b2xIdentityUserFlow object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class B2xUserFlowsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class B2xUserFlowsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents entry point for B2X and self-service sign-up identity userflows. */
+    /** Retrieve a list of b2xIdentityUserFlow objects. */
     public class B2xUserFlowsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class B2xUserFlowsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public B2xUserFlowsRequestBuilderGetQueryParameters queryParameters = new B2xUserFlowsRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class B2xUserFlowsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new b2xUserFlowsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

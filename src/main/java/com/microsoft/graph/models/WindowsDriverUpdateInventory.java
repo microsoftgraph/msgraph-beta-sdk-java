@@ -93,7 +93,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDriverUpdateInventory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicableDeviceCount", (n) -> { currentObject.setApplicableDeviceCount(n.getIntegerValue()); });
             this.put("approvalStatus", (n) -> { currentObject.setApprovalStatus(n.getEnumValue(DriverApprovalStatus.class)); });
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(DriverCategory.class)); });

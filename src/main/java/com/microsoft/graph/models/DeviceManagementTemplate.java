@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents a defined collection of device settings */
 public class DeviceManagementTemplate extends Entity implements Parsable {
     /** Collection of setting categories within the template */
     private java.util.List<DeviceManagementTemplateSettingCategory> _categories;
@@ -35,7 +36,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     /** The template's version information */
     private String _versionInfo;
     /**
-     * Instantiates a new DeviceManagementTemplate and sets the default values.
+     * Instantiates a new deviceManagementTemplate and sets the default values.
      * @return a void
      */
     public DeviceManagementTemplate() {
@@ -45,7 +46,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementTemplate
+     * @return a deviceManagementTemplate
      */
     @javax.annotation.Nonnull
     public static DeviceManagementTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -90,7 +91,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(DeviceManagementTemplateSettingCategory::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

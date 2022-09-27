@@ -37,7 +37,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MetadataAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("metadataToAdd", (n) -> { currentObject.setMetadataToAdd(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("metadataToRemove", (n) -> { currentObject.setMetadataToRemove(n.getCollectionOfPrimitiveValues(String.class)); });
         }};

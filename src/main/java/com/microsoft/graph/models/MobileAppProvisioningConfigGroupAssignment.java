@@ -36,7 +36,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppProvisioningConfigGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });
         }};
     }

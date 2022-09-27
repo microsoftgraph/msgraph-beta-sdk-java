@@ -85,7 +85,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceComplianceTrend currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
             this.put("configManagerDeviceCount", (n) -> { currentObject.setConfigManagerDeviceCount(n.getIntegerValue()); });
             this.put("countDateTime", (n) -> { currentObject.setCountDateTime(n.getStringValue()); });

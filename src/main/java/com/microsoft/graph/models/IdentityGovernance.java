@@ -81,7 +81,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityGovernance currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("accessReviews", (n) -> { currentObject.setAccessReviews(n.getObjectValue(AccessReviewSet::createFromDiscriminatorValue)); });
             this.put("appConsent", (n) -> { currentObject.setAppConsent(n.getObjectValue(AppConsentApprovalRoute::createFromDiscriminatorValue)); });
             this.put("entitlementManagement", (n) -> { currentObject.setEntitlementManagement(n.getObjectValue(EntitlementManagement::createFromDiscriminatorValue)); });

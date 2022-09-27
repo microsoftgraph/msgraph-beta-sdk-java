@@ -106,7 +106,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchHit currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("_id", (n) -> { currentObject.set_id(n.getStringValue()); });
             this.put("_score", (n) -> { currentObject.set_score(n.getIntegerValue()); });
             this.put("_source", (n) -> { currentObject.set_source(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
@@ -175,10 +175,6 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("_id", this.get_id());
-        writer.writeIntegerValue("_score", this.get_score());
-        writer.writeObjectValue("_source", this.get_source());
-        writer.writeStringValue("_summary", this.get_summary());
         writer.writeStringValue("contentSource", this.getContentSource());
         writer.writeStringValue("hitId", this.getHitId());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -186,6 +182,10 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("resource", this.getResource());
         writer.writeStringValue("resultTemplateId", this.getResultTemplateId());
         writer.writeStringValue("summary", this.getSummary());
+        writer.writeStringValue("_id", this.get_id());
+        writer.writeIntegerValue("_score", this.get_score());
+        writer.writeObjectValue("_source", this.get_source());
+        writer.writeStringValue("_summary", this.get_summary());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

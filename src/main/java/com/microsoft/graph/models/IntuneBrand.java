@@ -24,9 +24,9 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     private String _contactITPhoneNumber;
     /** The custom privacy message used to explain what the organization can see and do on managed devices. */
     private String _customCanSeePrivacyMessage;
-    /** The custom privacy message used to explain what the organization can’t see or do on managed devices. */
+    /** The custom privacy message used to explain what the organization cant see or do on managed devices. */
     private String _customCantSeePrivacyMessage;
-    /** The custom privacy message used to explain what the organization can’t see or do on managed devices. */
+    /** The custom privacy message used to explain what the organization cant see or do on managed devices. */
     private String _customPrivacyMessage;
     /** Logo image displayed in Company Portal apps which have a dark background behind the logo. */
     private MimeContent _darkBackgroundLogo;
@@ -46,11 +46,11 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     private MimeContent _lightBackgroundLogo;
     /** The OdataType property */
     private String _odataType;
-    /** Display name of the company/organization’s IT helpdesk site. */
+    /** Display name of the company/organizations IT helpdesk site. */
     private String _onlineSupportSiteName;
-    /** URL to the company/organization’s IT helpdesk site. */
+    /** URL to the company/organizations IT helpdesk site. */
     private String _onlineSupportSiteUrl;
-    /** URL to the company/organization’s privacy policy. */
+    /** URL to the company/organizations privacy policy. */
     private String _privacyUrl;
     /** List of scope tags assigned to the default branding profile */
     private java.util.List<String> _roleScopeTagIds;
@@ -143,7 +143,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._customCanSeePrivacyMessage;
     }
     /**
-     * Gets the customCantSeePrivacyMessage property value. The custom privacy message used to explain what the organization can’t see or do on managed devices.
+     * Gets the customCantSeePrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -151,7 +151,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._customCantSeePrivacyMessage;
     }
     /**
-     * Gets the customPrivacyMessage property value. The custom privacy message used to explain what the organization can’t see or do on managed devices.
+     * Gets the customPrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -197,7 +197,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IntuneBrand currentObject = this;
-        return new HashMap<>(28) {{
+        return new HashMap<String, Consumer<ParseNode>>(28) {{
             this.put("companyPortalBlockedActions", (n) -> { currentObject.setCompanyPortalBlockedActions(n.getCollectionOfObjectValues(CompanyPortalBlockedAction::createFromDiscriminatorValue)); });
             this.put("contactITEmailAddress", (n) -> { currentObject.setContactITEmailAddress(n.getStringValue()); });
             this.put("contactITName", (n) -> { currentObject.setContactITName(n.getStringValue()); });
@@ -269,7 +269,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the onlineSupportSiteName property value. Display name of the company/organization’s IT helpdesk site.
+     * Gets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -277,7 +277,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._onlineSupportSiteName;
     }
     /**
-     * Gets the onlineSupportSiteUrl property value. URL to the company/organization’s IT helpdesk site.
+     * Gets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -285,7 +285,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._onlineSupportSiteUrl;
     }
     /**
-     * Gets the privacyUrl property value. URL to the company/organization’s privacy policy.
+     * Gets the privacyUrl property value. URL to the company/organizations privacy policy.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -450,7 +450,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         this._customCanSeePrivacyMessage = value;
     }
     /**
-     * Sets the customCantSeePrivacyMessage property value. The custom privacy message used to explain what the organization can’t see or do on managed devices.
+     * Sets the customCantSeePrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @param value Value to set for the customCantSeePrivacyMessage property.
      * @return a void
      */
@@ -458,7 +458,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         this._customCantSeePrivacyMessage = value;
     }
     /**
-     * Sets the customPrivacyMessage property value. The custom privacy message used to explain what the organization can’t see or do on managed devices.
+     * Sets the customPrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @param value Value to set for the customPrivacyMessage property.
      * @return a void
      */
@@ -538,7 +538,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the onlineSupportSiteName property value. Display name of the company/organization’s IT helpdesk site.
+     * Sets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteName property.
      * @return a void
      */
@@ -546,7 +546,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         this._onlineSupportSiteName = value;
     }
     /**
-     * Sets the onlineSupportSiteUrl property value. URL to the company/organization’s IT helpdesk site.
+     * Sets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteUrl property.
      * @return a void
      */
@@ -554,7 +554,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         this._onlineSupportSiteUrl = value;
     }
     /**
-     * Sets the privacyUrl property value. URL to the company/organization’s privacy policy.
+     * Sets the privacyUrl property value. URL to the company/organizations privacy policy.
      * @param value Value to set for the privacyUrl property.
      * @return a void
      */

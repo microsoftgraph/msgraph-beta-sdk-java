@@ -53,7 +53,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalIdentitiesPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowDeletedIdentitiesDataRemoval", (n) -> { currentObject.setAllowDeletedIdentitiesDataRemoval(n.getBooleanValue()); });
             this.put("allowExternalIdentitiesToLeave", (n) -> { currentObject.setAllowExternalIdentitiesToLeave(n.getBooleanValue()); });
         }};

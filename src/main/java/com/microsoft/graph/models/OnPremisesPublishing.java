@@ -126,7 +126,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesPublishing currentObject = this;
-        return new HashMap<>(21) {{
+        return new HashMap<String, Consumer<ParseNode>>(21) {{
             this.put("alternateUrl", (n) -> { currentObject.setAlternateUrl(n.getStringValue()); });
             this.put("applicationServerTimeout", (n) -> { currentObject.setApplicationServerTimeout(n.getStringValue()); });
             this.put("applicationType", (n) -> { currentObject.setApplicationType(n.getStringValue()); });

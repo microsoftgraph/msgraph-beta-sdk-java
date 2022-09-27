@@ -77,7 +77,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhone81VpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });
             this.put("bypassVpnOnCompanyWifi", (n) -> { currentObject.setBypassVpnOnCompanyWifi(n.getBooleanValue()); });
             this.put("bypassVpnOnHomeWifi", (n) -> { currentObject.setBypassVpnOnHomeWifi(n.getBooleanValue()); });

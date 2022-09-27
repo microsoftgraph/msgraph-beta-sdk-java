@@ -30,11 +30,11 @@ public class BookingAppointment extends Entity implements Parsable {
     /** The time zone of the customer. For a list of possible values, see dateTimeTimeZone. */
     private String _customerTimeZone;
     /** The length of the appointment, denoted in ISO8601 format. */
-    private Period _duration;
+    private final Period _duration;
     /** The end property */
     private DateTimeTimeZone _end;
     /** The current number of customers in the appointment. */
-    private Integer _filledAttendeesCount;
+    private final Integer _filledAttendeesCount;
     /** The billed amount on the invoice. */
     private Double _invoiceAmount;
     /** The date, time, and time zone of the invoice for this appointment. */
@@ -202,7 +202,7 @@ public class BookingAppointment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingAppointment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
             this.put("anonymousJoinWebUrl", (n) -> { currentObject.setAnonymousJoinWebUrl(n.getStringValue()); });
             this.put("customerEmailAddress", (n) -> { currentObject.setCustomerEmailAddress(n.getStringValue()); });
@@ -451,9 +451,7 @@ public class BookingAppointment extends Entity implements Parsable {
         writer.writeStringValue("customerPhone", this.getCustomerPhone());
         writer.writeCollectionOfObjectValues("customers", this.getCustomers());
         writer.writeStringValue("customerTimeZone", this.getCustomerTimeZone());
-        writer.writePeriodValue("duration", this.getDuration());
         writer.writeObjectValue("end", this.getEnd());
-        writer.writeIntegerValue("filledAttendeesCount", this.getFilledAttendeesCount());
         writer.writeDoubleValue("invoiceAmount", this.getInvoiceAmount());
         writer.writeObjectValue("invoiceDate", this.getInvoiceDate());
         writer.writeStringValue("invoiceId", this.getInvoiceId());

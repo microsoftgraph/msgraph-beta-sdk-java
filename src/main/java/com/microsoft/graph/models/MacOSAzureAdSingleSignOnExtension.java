@@ -63,7 +63,7 @@ public class MacOSAzureAdSingleSignOnExtension extends MacOSSingleSignOnExtensio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSAzureAdSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bundleIdAccessControlList", (n) -> { currentObject.setBundleIdAccessControlList(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("configurations", (n) -> { currentObject.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
             this.put("enableSharedDeviceMode", (n) -> { currentObject.setEnableSharedDeviceMode(n.getBooleanValue()); });

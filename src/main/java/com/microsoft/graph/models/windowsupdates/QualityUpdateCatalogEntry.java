@@ -37,7 +37,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final QualityUpdateCatalogEntry currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isExpeditable", (n) -> { currentObject.setIsExpeditable(n.getBooleanValue()); });
             this.put("qualityUpdateClassification", (n) -> { currentObject.setQualityUpdateClassification(n.getEnumValue(QualityUpdateClassification.class)); });
         }};

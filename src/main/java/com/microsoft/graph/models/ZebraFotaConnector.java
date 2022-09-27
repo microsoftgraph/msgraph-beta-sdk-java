@@ -60,7 +60,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ZebraFotaConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enrollmentAuthorizationUrl", (n) -> { currentObject.setEnrollmentAuthorizationUrl(n.getStringValue()); });
             this.put("enrollmentToken", (n) -> { currentObject.setEnrollmentToken(n.getStringValue()); });
             this.put("fotaAppsApproved", (n) -> { currentObject.setFotaAppsApproved(n.getBooleanValue()); });

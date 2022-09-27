@@ -60,7 +60,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationalActivity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("completionMonthYear", (n) -> { currentObject.setCompletionMonthYear(n.getLocalDateValue()); });
             this.put("endMonthYear", (n) -> { currentObject.setEndMonthYear(n.getLocalDateValue()); });
             this.put("institution", (n) -> { currentObject.setInstitution(n.getObjectValue(InstitutionData::createFromDiscriminatorValue)); });

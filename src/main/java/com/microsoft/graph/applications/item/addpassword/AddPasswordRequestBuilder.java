@@ -33,7 +33,7 @@ public class AddPasswordRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/applications/{application%2Did}/microsoft.graph.addPassword";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -45,28 +45,28 @@ public class AddPasswordRequestBuilder {
      */
     public AddPasswordRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/applications/{application%2Did}/microsoft.graph.addPassword";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action addPassword
+     * Adds a strong password to an application.
      * @param body 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PasswordCredentialPostRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AddPasswordPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Invoke action addPassword
+     * Adds a strong password to an application.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PasswordCredentialPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AddPasswordPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -84,14 +84,14 @@ public class AddPasswordRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action addPassword
+     * Adds a strong password to an application.
      * @param body 
      * @return a CompletableFuture of PasswordCredential
      */
-    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final PasswordCredentialPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final AddPasswordPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -101,15 +101,15 @@ public class AddPasswordRequestBuilder {
         }
     }
     /**
-     * Invoke action addPassword
+     * Adds a strong password to an application.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PasswordCredential
      */
-    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final PasswordCredentialPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final AddPasswordPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -119,17 +119,17 @@ public class AddPasswordRequestBuilder {
         }
     }
     /**
-     * Invoke action addPassword
+     * Adds a strong password to an application.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PasswordCredential
      */
-    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final PasswordCredentialPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final AddPasswordPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddPasswordRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -145,7 +145,7 @@ public class AddPasswordRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new addPasswordRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

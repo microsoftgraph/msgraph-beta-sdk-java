@@ -50,7 +50,7 @@ public class UserRegistrationCount implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserRegistrationCount currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("registrationCount", (n) -> { currentObject.setRegistrationCount(n.getLongValue()); });
             this.put("registrationStatus", (n) -> { currentObject.setRegistrationStatus(n.getEnumValue(RegistrationStatusType.class)); });

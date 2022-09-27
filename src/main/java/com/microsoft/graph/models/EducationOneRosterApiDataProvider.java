@@ -69,7 +69,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationOneRosterApiDataProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("connectionSettings", (n) -> { currentObject.setConnectionSettings(n.getObjectValue(EducationSynchronizationConnectionSettings::createFromDiscriminatorValue)); });
             this.put("connectionUrl", (n) -> { currentObject.setConnectionUrl(n.getStringValue()); });
             this.put("customizations", (n) -> { currentObject.setCustomizations(n.getObjectValue(EducationSynchronizationCustomizations::createFromDiscriminatorValue)); });

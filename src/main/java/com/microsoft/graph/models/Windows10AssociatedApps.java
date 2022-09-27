@@ -59,7 +59,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10AssociatedApps currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("appType", (n) -> { currentObject.setAppType(n.getEnumValue(Windows10AppType.class)); });
             this.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

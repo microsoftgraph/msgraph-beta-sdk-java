@@ -50,7 +50,7 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DowngradeJustification currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("isDowngradeJustified", (n) -> { currentObject.setIsDowngradeJustified(n.getBooleanValue()); });
             this.put("justificationMessage", (n) -> { currentObject.setJustificationMessage(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

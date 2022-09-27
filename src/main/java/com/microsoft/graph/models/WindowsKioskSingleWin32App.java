@@ -35,7 +35,7 @@ public class WindowsKioskSingleWin32App extends WindowsKioskAppConfiguration imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskSingleWin32App currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("win32App", (n) -> { currentObject.setWin32App(n.getObjectValue(WindowsKioskWin32App::createFromDiscriminatorValue)); });
         }};
     }

@@ -87,7 +87,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConfigurationManagerClientEnabledFeatures currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("compliancePolicy", (n) -> { currentObject.setCompliancePolicy(n.getBooleanValue()); });
             this.put("deviceConfiguration", (n) -> { currentObject.setDeviceConfiguration(n.getBooleanValue()); });
             this.put("endpointProtection", (n) -> { currentObject.setEndpointProtection(n.getBooleanValue()); });

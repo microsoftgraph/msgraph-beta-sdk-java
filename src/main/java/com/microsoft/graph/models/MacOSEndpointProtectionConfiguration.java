@@ -145,7 +145,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSEndpointProtectionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("advancedThreatProtectionAutomaticSampleSubmission", (n) -> { currentObject.setAdvancedThreatProtectionAutomaticSampleSubmission(n.getEnumValue(Enablement.class)); });
             this.put("advancedThreatProtectionCloudDelivered", (n) -> { currentObject.setAdvancedThreatProtectionCloudDelivered(n.getEnumValue(Enablement.class)); });
             this.put("advancedThreatProtectionDiagnosticDataCollection", (n) -> { currentObject.setAdvancedThreatProtectionDiagnosticDataCollection(n.getEnumValue(Enablement.class)); });

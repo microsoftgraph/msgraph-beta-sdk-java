@@ -52,7 +52,7 @@ public class Settings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Settings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("hasGraphMailbox", (n) -> { currentObject.setHasGraphMailbox(n.getBooleanValue()); });
             this.put("hasLicense", (n) -> { currentObject.setHasLicense(n.getBooleanValue()); });
             this.put("hasOptedOut", (n) -> { currentObject.setHasOptedOut(n.getBooleanValue()); });

@@ -52,7 +52,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationJobSubject currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(SynchronizationLinkedObjects::createFromDiscriminatorValue)); });
             this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
             this.put("objectTypeName", (n) -> { currentObject.setObjectTypeName(n.getStringValue()); });

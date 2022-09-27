@@ -47,7 +47,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItemServicePrincipalTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("servicePrincipalDisplayName", (n) -> { currentObject.setServicePrincipalDisplayName(n.getStringValue()); });
             this.put("servicePrincipalId", (n) -> { currentObject.setServicePrincipalId(n.getStringValue()); });

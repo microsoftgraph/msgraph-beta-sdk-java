@@ -101,7 +101,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExcludedApps currentObject = this;
-        return new HashMap<>(16) {{
+        return new HashMap<String, Consumer<ParseNode>>(16) {{
             this.put("access", (n) -> { currentObject.setAccess(n.getBooleanValue()); });
             this.put("bing", (n) -> { currentObject.setBing(n.getBooleanValue()); });
             this.put("excel", (n) -> { currentObject.setExcel(n.getBooleanValue()); });

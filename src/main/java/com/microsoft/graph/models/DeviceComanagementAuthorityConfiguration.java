@@ -47,7 +47,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComanagementAuthorityConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configurationManagerAgentCommandLineArgument", (n) -> { currentObject.setConfigurationManagerAgentCommandLineArgument(n.getStringValue()); });
             this.put("installConfigurationManagerAgent", (n) -> { currentObject.setInstallConfigurationManagerAgent(n.getBooleanValue()); });
             this.put("managedDeviceAuthority", (n) -> { currentObject.setManagedDeviceAuthority(n.getIntegerValue()); });

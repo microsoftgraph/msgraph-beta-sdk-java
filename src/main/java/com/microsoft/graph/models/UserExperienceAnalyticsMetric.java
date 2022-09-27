@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsMetric extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsMetric currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("unit", (n) -> { currentObject.setUnit(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getDoubleValue()); });
         }};

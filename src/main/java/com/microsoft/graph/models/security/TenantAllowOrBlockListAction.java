@@ -71,7 +71,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantAllowOrBlockListAction currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(TenantAllowBlockListAction.class)); });
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("note", (n) -> { currentObject.setNote(n.getStringValue()); });

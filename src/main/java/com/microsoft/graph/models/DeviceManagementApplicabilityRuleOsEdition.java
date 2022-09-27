@@ -16,7 +16,7 @@ public class DeviceManagementApplicabilityRuleOsEdition implements AdditionalDat
     /** The OdataType property */
     private String _odataType;
     /** Applicability rule OS edition type. */
-    private java.util.List<String> _osEditionTypes;
+    private java.util.List<Windows10EditionType> _osEditionTypes;
     /** Supported Applicability rule types for Device Configuration */
     private DeviceManagementApplicabilityRuleType _ruleType;
     /**
@@ -52,10 +52,10 @@ public class DeviceManagementApplicabilityRuleOsEdition implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementApplicabilityRuleOsEdition currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("osEditionTypes", (n) -> { currentObject.setOsEditionTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("osEditionTypes", (n) -> { currentObject.setOsEditionTypes(n.getCollectionOfEnumValues(Windows10EditionType.class)); });
             this.put("ruleType", (n) -> { currentObject.setRuleType(n.getEnumValue(DeviceManagementApplicabilityRuleType.class)); });
         }};
     }
@@ -77,10 +77,10 @@ public class DeviceManagementApplicabilityRuleOsEdition implements AdditionalDat
     }
     /**
      * Gets the osEditionTypes property value. Applicability rule OS edition type.
-     * @return a string
+     * @return a windows10EditionType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getOsEditionTypes() {
+    public java.util.List<Windows10EditionType> getOsEditionTypes() {
         return this._osEditionTypes;
     }
     /**
@@ -100,7 +100,7 @@ public class DeviceManagementApplicabilityRuleOsEdition implements AdditionalDat
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeCollectionOfPrimitiveValues("osEditionTypes", this.getOsEditionTypes());
+        writer.writeCollectionOfEnumValues("osEditionTypes", this.getOsEditionTypes());
         writer.writeEnumValue("ruleType", this.getRuleType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -133,7 +133,7 @@ public class DeviceManagementApplicabilityRuleOsEdition implements AdditionalDat
      * @param value Value to set for the osEditionTypes property.
      * @return a void
      */
-    public void setOsEditionTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setOsEditionTypes(@javax.annotation.Nullable final java.util.List<Windows10EditionType> value) {
         this._osEditionTypes = value;
     }
     /**

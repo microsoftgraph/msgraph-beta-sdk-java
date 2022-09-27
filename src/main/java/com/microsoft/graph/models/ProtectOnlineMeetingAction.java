@@ -59,7 +59,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProtectOnlineMeetingAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedForwarders", (n) -> { currentObject.setAllowedForwarders(n.getEnumValue(OnlineMeetingForwarders.class)); });
             this.put("allowedPresenters", (n) -> { currentObject.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
             this.put("isCopyToClipboardEnabled", (n) -> { currentObject.setIsCopyToClipboardEnabled(n.getBooleanValue()); });

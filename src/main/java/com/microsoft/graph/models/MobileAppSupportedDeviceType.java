@@ -53,7 +53,7 @@ public class MobileAppSupportedDeviceType implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppSupportedDeviceType currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("maximumOperatingSystemVersion", (n) -> { currentObject.setMaximumOperatingSystemVersion(n.getStringValue()); });
             this.put("minimumOperatingSystemVersion", (n) -> { currentObject.setMinimumOperatingSystemVersion(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

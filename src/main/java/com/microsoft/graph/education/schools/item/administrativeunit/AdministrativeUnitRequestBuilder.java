@@ -34,7 +34,7 @@ public class AdministrativeUnitRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/education/schools/{educationSchool%2Did}/administrativeUnit{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -46,13 +46,13 @@ public class AdministrativeUnitRequestBuilder {
      */
     public AdministrativeUnitRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/education/schools/{educationSchool%2Did}/administrativeUnit{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get administrativeUnit from education
+     * Retrieve the simple directory **administrativeUnit** that corresponds to this **educationSchool**.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class AdministrativeUnitRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get administrativeUnit from education
+     * Retrieve the simple directory **administrativeUnit** that corresponds to this **educationSchool**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,13 +82,13 @@ public class AdministrativeUnitRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get administrativeUnit from education
+     * Retrieve the simple directory **administrativeUnit** that corresponds to this **educationSchool**.
      * @return a CompletableFuture of administrativeUnit
      */
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -98,14 +98,14 @@ public class AdministrativeUnitRequestBuilder {
         }
     }
     /**
-     * Get administrativeUnit from education
+     * Retrieve the simple directory **administrativeUnit** that corresponds to this **educationSchool**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of administrativeUnit
      */
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get(@javax.annotation.Nullable final java.util.function.Consumer<AdministrativeUnitRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -115,7 +115,7 @@ public class AdministrativeUnitRequestBuilder {
         }
     }
     /**
-     * Get administrativeUnit from education
+     * Retrieve the simple directory **administrativeUnit** that corresponds to this **educationSchool**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of administrativeUnit
@@ -123,7 +123,7 @@ public class AdministrativeUnitRequestBuilder {
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get(@javax.annotation.Nullable final java.util.function.Consumer<AdministrativeUnitRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -132,7 +132,7 @@ public class AdministrativeUnitRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get administrativeUnit from education */
+    /** Retrieve the simple directory **administrativeUnit** that corresponds to this **educationSchool**. */
     public class AdministrativeUnitRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -150,7 +150,7 @@ public class AdministrativeUnitRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AdministrativeUnitRequestBuilderGetQueryParameters queryParameters = new AdministrativeUnitRequestBuilderGetQueryParameters();

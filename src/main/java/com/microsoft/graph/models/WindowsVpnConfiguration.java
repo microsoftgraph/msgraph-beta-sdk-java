@@ -67,7 +67,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("connectionName", (n) -> { currentObject.setConnectionName(n.getStringValue()); });
             this.put("customXml", (n) -> { currentObject.setCustomXml(n.getByteArrayValue()); });
             this.put("servers", (n) -> { currentObject.setServers(n.getCollectionOfObjectValues(VpnServer::createFromDiscriminatorValue)); });

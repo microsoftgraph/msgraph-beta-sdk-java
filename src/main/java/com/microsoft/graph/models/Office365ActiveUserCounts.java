@@ -62,7 +62,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Office365ActiveUserCounts currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("exchange", (n) -> { currentObject.setExchange(n.getLongValue()); });
             this.put("office365", (n) -> { currentObject.setOffice365(n.getLongValue()); });
             this.put("oneDrive", (n) -> { currentObject.setOneDrive(n.getLongValue()); });

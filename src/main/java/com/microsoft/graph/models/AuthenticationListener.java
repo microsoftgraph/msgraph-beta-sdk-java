@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class AuthenticationListener extends Entity implements Parsable {
     /** The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high. */
     private Integer _priority;
@@ -46,7 +46,7 @@ public class AuthenticationListener extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationListener currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
             this.put("sourceFilter", (n) -> { currentObject.setSourceFilter(n.getObjectValue(AuthenticationSourceFilter::createFromDiscriminatorValue)); });
         }};

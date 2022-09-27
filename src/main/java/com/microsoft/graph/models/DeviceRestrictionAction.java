@@ -13,7 +13,7 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
     /** The restrictionAction property */
     private RestrictionAction _restrictionAction;
     /** The triggers property */
-    private java.util.List<String> _triggers;
+    private java.util.List<RestrictionTrigger> _triggers;
     /**
      * Instantiates a new DeviceRestrictionAction and sets the default values.
      * @return a void
@@ -39,10 +39,10 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceRestrictionAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
             this.put("restrictionAction", (n) -> { currentObject.setRestrictionAction(n.getEnumValue(RestrictionAction.class)); });
-            this.put("triggers", (n) -> { currentObject.setTriggers(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("triggers", (n) -> { currentObject.setTriggers(n.getCollectionOfEnumValues(RestrictionTrigger.class)); });
         }};
     }
     /**
@@ -63,10 +63,10 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
     }
     /**
      * Gets the triggers property value. The triggers property
-     * @return a string
+     * @return a restrictionTrigger
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getTriggers() {
+    public java.util.List<RestrictionTrigger> getTriggers() {
         return this._triggers;
     }
     /**
@@ -79,7 +79,7 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("message", this.getMessage());
         writer.writeEnumValue("restrictionAction", this.getRestrictionAction());
-        writer.writeCollectionOfPrimitiveValues("triggers", this.getTriggers());
+        writer.writeCollectionOfEnumValues("triggers", this.getTriggers());
     }
     /**
      * Sets the message property value. The message property
@@ -102,7 +102,7 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
      * @param value Value to set for the triggers property.
      * @return a void
      */
-    public void setTriggers(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setTriggers(@javax.annotation.Nullable final java.util.List<RestrictionTrigger> value) {
         this._triggers = value;
     }
 }

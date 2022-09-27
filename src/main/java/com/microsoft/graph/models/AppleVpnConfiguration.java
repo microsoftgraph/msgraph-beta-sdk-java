@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Apple VPN configuration profile. */
 public class AppleVpnConfiguration extends DeviceConfiguration implements Parsable {
     /** Associated Domains */
     private java.util.List<String> _associatedDomains;
@@ -56,7 +57,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     /** VPN Server definition. */
     private VpnServer _server;
     /**
-     * Instantiates a new AppleVpnConfiguration and sets the default values.
+     * Instantiates a new appleVpnConfiguration and sets the default values.
      * @return a void
      */
     public AppleVpnConfiguration() {
@@ -66,7 +67,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppleVpnConfiguration
+     * @return a appleVpnConfiguration
      */
     @javax.annotation.Nonnull
     public static AppleVpnConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -185,7 +186,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("associatedDomains", (n) -> { currentObject.setAssociatedDomains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });
             this.put("connectionName", (n) -> { currentObject.setConnectionName(n.getStringValue()); });

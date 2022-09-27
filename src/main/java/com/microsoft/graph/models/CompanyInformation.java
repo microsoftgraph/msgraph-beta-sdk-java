@@ -108,7 +108,7 @@ public class CompanyInformation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CompanyInformation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
             this.put("currencyCode", (n) -> { currentObject.setCurrencyCode(n.getStringValue()); });
             this.put("currentFiscalYearStartDate", (n) -> { currentObject.setCurrentFiscalYearStartDate(n.getLocalDateValue()); });

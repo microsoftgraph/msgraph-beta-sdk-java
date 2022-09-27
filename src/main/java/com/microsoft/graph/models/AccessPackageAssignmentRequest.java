@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     /** The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand. */
     private AccessPackage _accessPackage;
@@ -34,7 +34,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     private String _requestState;
     /** More information on the request processing status. Read-only. */
     private String _requestStatus;
-    /** One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only. */
+    /** One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd, UserUpdate or UserRemove. Read-only. */
     private String _requestType;
     /** The range of dates that access is to be assigned to the requestor. Read-only. */
     private RequestSchedule _schedule;
@@ -119,7 +119,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
             this.put("accessPackageAssignment", (n) -> { currentObject.setAccessPackageAssignment(n.getObjectValue(AccessPackageAssignment::createFromDiscriminatorValue)); });
             this.put("answers", (n) -> { currentObject.setAnswers(n.getCollectionOfObjectValues(AccessPackageAnswer::createFromDiscriminatorValue)); });
@@ -177,7 +177,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this._requestStatus;
     }
     /**
-     * Gets the requestType property value. One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * Gets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd, UserUpdate or UserRemove. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -312,7 +312,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this._requestStatus = value;
     }
     /**
-     * Sets the requestType property value. One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * Sets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd, UserUpdate or UserRemove. Read-only.
      * @param value Value to set for the requestType property.
      * @return a void
      */

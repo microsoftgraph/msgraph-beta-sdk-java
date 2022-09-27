@@ -41,7 +41,7 @@ public class ServiceManagementDetailsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/tenantRelationships/delegatedAdminCustomers/{delegatedAdminCustomer%2Did}/serviceManagementDetails{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class ServiceManagementDetailsRequestBuilder {
      */
     public ServiceManagementDetailsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/tenantRelationships/delegatedAdminCustomers/{delegatedAdminCustomer%2Did}/serviceManagementDetails{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ServiceManagementDetailsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,13 +122,13 @@ public class ServiceManagementDetailsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
      * @return a CompletableFuture of DelegatedAdminServiceManagementDetailCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetailCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class ServiceManagementDetailsRequestBuilder {
         }
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DelegatedAdminServiceManagementDetailCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetailCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ServiceManagementDetailsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class ServiceManagementDetailsRequestBuilder {
         }
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DelegatedAdminServiceManagementDetailCollectionResponse
@@ -163,7 +163,7 @@ public class ServiceManagementDetailsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetailCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ServiceManagementDetailsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -180,7 +180,7 @@ public class ServiceManagementDetailsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> post(@javax.annotation.Nonnull final DelegatedAdminServiceManagementDetail body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -198,7 +198,7 @@ public class ServiceManagementDetailsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> post(@javax.annotation.Nonnull final DelegatedAdminServiceManagementDetail body, @javax.annotation.Nullable final java.util.function.Consumer<ServiceManagementDetailsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -218,7 +218,7 @@ public class ServiceManagementDetailsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class ServiceManagementDetailsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Contains the management details of a service in the customer tenant that's managed by delegated administration. */
+    /** Get a list of the delegatedAdminServiceManagementDetail objects and their properties. */
     public class ServiceManagementDetailsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class ServiceManagementDetailsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ServiceManagementDetailsRequestBuilderGetQueryParameters queryParameters = new ServiceManagementDetailsRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class ServiceManagementDetailsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new serviceManagementDetailsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

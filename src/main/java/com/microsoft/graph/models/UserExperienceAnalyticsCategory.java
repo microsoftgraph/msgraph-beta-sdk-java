@@ -13,7 +13,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     /** The metric values for the user experience analytics category. */
     private java.util.List<UserExperienceAnalyticsMetric> _metricValues;
     /**
-     * Instantiates a new UserExperienceAnalyticsCategory and sets the default values.
+     * Instantiates a new userExperienceAnalyticsCategory and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsCategory() {
@@ -23,7 +23,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsCategory
+     * @return a userExperienceAnalyticsCategory
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsCategory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("insights", (n) -> { currentObject.setInsights(n.getCollectionOfObjectValues(UserExperienceAnalyticsInsight::createFromDiscriminatorValue)); });
             this.put("metricValues", (n) -> { currentObject.setMetricValues(n.getCollectionOfObjectValues(UserExperienceAnalyticsMetric::createFromDiscriminatorValue)); });
         }};

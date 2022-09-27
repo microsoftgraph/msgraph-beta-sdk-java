@@ -66,7 +66,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RedirectPostRequestBody currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
             this.put("maskCallee", (n) -> { currentObject.setMaskCallee(n.getBooleanValue()); });
             this.put("maskCaller", (n) -> { currentObject.setMaskCaller(n.getBooleanValue()); });

@@ -129,7 +129,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DepEnrollmentBaseProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appleIdDisabled", (n) -> { currentObject.setAppleIdDisabled(n.getBooleanValue()); });
             this.put("applePayDisabled", (n) -> { currentObject.setApplePayDisabled(n.getBooleanValue()); });
             this.put("configurationWebUrl", (n) -> { currentObject.setConfigurationWebUrl(n.getBooleanValue()); });

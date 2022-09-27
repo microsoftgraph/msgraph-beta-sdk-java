@@ -103,7 +103,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("alwaysOn", (n) -> { currentObject.setAlwaysOn(n.getBooleanValue()); });
             this.put("alwaysOnLockdown", (n) -> { currentObject.setAlwaysOnLockdown(n.getBooleanValue()); });
             this.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(AndroidVpnConnectionType.class)); });

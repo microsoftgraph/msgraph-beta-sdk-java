@@ -31,7 +31,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
     /** The count of devices in an organization eligible for windows upgrade. Valid values -2147483648 to 2147483647 */
     private Integer _upgradeEligibleDeviceCount;
     /**
-     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric and sets the default values.
+     * Instantiates a new userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
@@ -41,7 +41,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     * @return a userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("osCheckFailedPercentage", (n) -> { currentObject.setOsCheckFailedPercentage(n.getDoubleValue()); });
             this.put("processor64BitCheckFailedPercentage", (n) -> { currentObject.setProcessor64BitCheckFailedPercentage(n.getDoubleValue()); });
             this.put("processorCoreCountCheckFailedPercentage", (n) -> { currentObject.setProcessorCoreCountCheckFailedPercentage(n.getDoubleValue()); });

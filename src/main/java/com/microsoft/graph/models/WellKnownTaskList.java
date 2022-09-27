@@ -35,7 +35,7 @@ public class WellKnownTaskList extends BaseTaskList implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WellKnownTaskList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("wellKnownListName", (n) -> { currentObject.setWellKnownListName(n.getEnumValue(WellKnownListName_v2.class)); });
         }};
     }

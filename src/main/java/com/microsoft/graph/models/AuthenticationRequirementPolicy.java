@@ -58,7 +58,7 @@ public class AuthenticationRequirementPolicy implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationRequirementPolicy currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("detail", (n) -> { currentObject.setDetail(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("requirementProvider", (n) -> { currentObject.setRequirementProvider(n.getEnumValue(RequirementProvider.class)); });

@@ -69,7 +69,7 @@ public class OrganizationalMessageLogoGuide implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageLogoGuide currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("assetName", (n) -> { currentObject.setAssetName(n.getStringValue()); });
             this.put("dimensions", (n) -> { currentObject.setDimensions(n.getObjectValue(OrganizationalMessageLogoDimensions::createFromDiscriminatorValue)); });
             this.put("logoCdnUrl", (n) -> { currentObject.setLogoCdnUrl(n.getStringValue()); });

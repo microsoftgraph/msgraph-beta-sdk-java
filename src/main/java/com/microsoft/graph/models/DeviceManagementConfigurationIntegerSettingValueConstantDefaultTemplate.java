@@ -43,7 +43,7 @@ public class DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("constantValue", (n) -> { currentObject.setConstantValue(n.getIntegerValue()); });
         }};
     }

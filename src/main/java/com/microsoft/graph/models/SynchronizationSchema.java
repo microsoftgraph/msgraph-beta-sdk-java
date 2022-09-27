@@ -47,7 +47,7 @@ public class SynchronizationSchema extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationSchema currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("directories", (n) -> { currentObject.setDirectories(n.getCollectionOfObjectValues(DirectoryDefinition::createFromDiscriminatorValue)); });
             this.put("synchronizationRules", (n) -> { currentObject.setSynchronizationRules(n.getCollectionOfObjectValues(SynchronizationRule::createFromDiscriminatorValue)); });
             this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });

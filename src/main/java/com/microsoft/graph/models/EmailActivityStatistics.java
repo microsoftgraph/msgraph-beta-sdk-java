@@ -48,7 +48,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailActivityStatistics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("afterHours", (n) -> { currentObject.setAfterHours(n.getPeriodValue()); });
             this.put("readEmail", (n) -> { currentObject.setReadEmail(n.getPeriodValue()); });
             this.put("sentEmail", (n) -> { currentObject.setSentEmail(n.getPeriodValue()); });

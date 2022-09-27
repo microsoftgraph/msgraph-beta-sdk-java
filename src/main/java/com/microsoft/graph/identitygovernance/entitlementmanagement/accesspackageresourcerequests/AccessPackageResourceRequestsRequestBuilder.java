@@ -41,7 +41,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identityGovernance/entitlementManagement/accessPackageResourceRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class AccessPackageResourceRequestsRequestBuilder {
      */
     public AccessPackageResourceRequestsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/identityGovernance/entitlementManagement/accessPackageResourceRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents a request to add or remove a resource to or from a catalog respectively.
+     * Retrieve a list of accessPackageResourceRequest objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents a request to add or remove a resource to or from a catalog respectively.
+     * Retrieve a list of accessPackageResourceRequest objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to accessPackageResourceRequests for identityGovernance
+     * Create a new accessPackageResourceRequest object to request the addition of a resource to an access package catalog, or the removal of a resource from a catalog.  A resource must be included in an access package catalog before a role of that resource can be added to an access package.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to accessPackageResourceRequests for identityGovernance
+     * Create a new accessPackageResourceRequest object to request the addition of a resource to an access package catalog, or the removal of a resource from a catalog.  A resource must be included in an access package catalog before a role of that resource can be added to an access package.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class AccessPackageResourceRequestsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a request to add or remove a resource to or from a catalog respectively.
+     * Retrieve a list of accessPackageResourceRequest objects.
      * @return a CompletableFuture of AccessPackageResourceRequestCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRequestCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class AccessPackageResourceRequestsRequestBuilder {
         }
     }
     /**
-     * Represents a request to add or remove a resource to or from a catalog respectively.
+     * Retrieve a list of accessPackageResourceRequest objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageResourceRequestCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AccessPackageResourceRequestsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
         }
     }
     /**
-     * Represents a request to add or remove a resource to or from a catalog respectively.
+     * Retrieve a list of accessPackageResourceRequest objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AccessPackageResourceRequestCollectionResponse
@@ -163,7 +163,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AccessPackageResourceRequestsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class AccessPackageResourceRequestsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to accessPackageResourceRequests for identityGovernance
+     * Create a new accessPackageResourceRequest object to request the addition of a resource to an access package catalog, or the removal of a resource from a catalog.  A resource must be included in an access package catalog before a role of that resource can be added to an access package.
      * @param body 
      * @return a CompletableFuture of accessPackageResourceRequest
      */
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRequest> post(@javax.annotation.Nonnull final AccessPackageResourceRequest body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to accessPackageResourceRequests for identityGovernance
+     * Create a new accessPackageResourceRequest object to request the addition of a resource to an access package catalog, or the removal of a resource from a catalog.  A resource must be included in an access package catalog before a role of that resource can be added to an access package.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceRequest
@@ -198,7 +198,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRequest> post(@javax.annotation.Nonnull final AccessPackageResourceRequest body, @javax.annotation.Nullable final java.util.function.Consumer<AccessPackageResourceRequestsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to accessPackageResourceRequests for identityGovernance
+     * Create a new accessPackageResourceRequest object to request the addition of a resource to an access package catalog, or the removal of a resource from a catalog.  A resource must be included in an access package catalog before a role of that resource can be added to an access package.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents a request to add or remove a resource to or from a catalog respectively. */
+    /** Retrieve a list of accessPackageResourceRequest objects. */
     public class AccessPackageResourceRequestsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AccessPackageResourceRequestsRequestBuilderGetQueryParameters queryParameters = new AccessPackageResourceRequestsRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class AccessPackageResourceRequestsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new accessPackageResourceRequestsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

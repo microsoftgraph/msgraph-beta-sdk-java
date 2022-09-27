@@ -45,7 +45,7 @@ public class AospDeviceOwnerTrustedRootCertificate extends DeviceConfiguration i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AospDeviceOwnerTrustedRootCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certFileName", (n) -> { currentObject.setCertFileName(n.getStringValue()); });
             this.put("trustedRootCertificate", (n) -> { currentObject.setTrustedRootCertificate(n.getByteArrayValue()); });
         }};

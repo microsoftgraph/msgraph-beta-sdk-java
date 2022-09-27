@@ -57,7 +57,7 @@ public class UserAccountInformation extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserAccountInformation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("ageGroup", (n) -> { currentObject.setAgeGroup(n.getStringValue()); });
             this.put("countryCode", (n) -> { currentObject.setCountryCode(n.getStringValue()); });
             this.put("preferredLanguageTag", (n) -> { currentObject.setPreferredLanguageTag(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });

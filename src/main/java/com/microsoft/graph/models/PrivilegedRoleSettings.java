@@ -78,7 +78,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedRoleSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("approvalOnElevation", (n) -> { currentObject.setApprovalOnElevation(n.getBooleanValue()); });
             this.put("approverIds", (n) -> { currentObject.setApproverIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("elevationDuration", (n) -> { currentObject.setElevationDuration(n.getPeriodValue()); });

@@ -37,7 +37,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditUserIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("homeTenantId", (n) -> { currentObject.setHomeTenantId(n.getStringValue()); });
             this.put("homeTenantName", (n) -> { currentObject.setHomeTenantName(n.getStringValue()); });
         }};

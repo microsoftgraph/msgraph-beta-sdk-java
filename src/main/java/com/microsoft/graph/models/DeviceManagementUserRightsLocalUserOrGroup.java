@@ -12,7 +12,7 @@ import java.util.Objects;
 public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Admin’s description of this local user or group. */
+    /** Admins description of this local user or group. */
     private String _description;
     /** The name of this local user or group. */
     private String _name;
@@ -47,7 +47,7 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
         return this._additionalData;
     }
     /**
-     * Gets the description property value. Admin’s description of this local user or group.
+     * Gets the description property value. Admins description of this local user or group.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementUserRightsLocalUserOrGroup currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -114,7 +114,7 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
         this._additionalData = value;
     }
     /**
-     * Sets the description property value. Admin’s description of this local user or group.
+     * Sets the description property value. Admins description of this local user or group.
      * @param value Value to set for the description property.
      * @return a void
      */

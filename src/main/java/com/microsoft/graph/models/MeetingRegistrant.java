@@ -62,7 +62,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingRegistrant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customQuestionAnswers", (n) -> { currentObject.setCustomQuestionAnswers(n.getCollectionOfObjectValues(CustomQuestionAnswer::createFromDiscriminatorValue)); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("firstName", (n) -> { currentObject.setFirstName(n.getStringValue()); });

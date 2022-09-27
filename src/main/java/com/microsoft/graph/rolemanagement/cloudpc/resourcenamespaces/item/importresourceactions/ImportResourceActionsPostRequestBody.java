@@ -50,7 +50,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportResourceActionsPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getStringValue()); });
             this.put("overwriteResourceNamespace", (n) -> { currentObject.setOverwriteResourceNamespace(n.getBooleanValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });

@@ -62,7 +62,7 @@ public class GetRemoteAssistanceSessionsReportPostRequestBody implements Additio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetRemoteAssistanceSessionsReportPostRequestBody currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
             this.put("groupBy", (n) -> { currentObject.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });

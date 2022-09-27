@@ -98,7 +98,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemActionSet currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("comment", (n) -> { currentObject.setComment(n.getObjectValue(CommentAction::createFromDiscriminatorValue)); });
             this.put("create", (n) -> { currentObject.setCreate(n.getObjectValue(CreateAction::createFromDiscriminatorValue)); });
             this.put("delete", (n) -> { currentObject.setDelete(n.getObjectValue(DeleteAction::createFromDiscriminatorValue)); });

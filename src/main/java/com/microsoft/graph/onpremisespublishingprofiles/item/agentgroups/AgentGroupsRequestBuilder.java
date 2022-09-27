@@ -41,7 +41,7 @@ public class AgentGroupsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/agentGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class AgentGroupsRequestBuilder {
      */
     public AgentGroupsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/agentGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
+     * Retrieve a list of onPremisesAgentGroup objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AgentGroupsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
+     * Retrieve a list of onPremisesAgentGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class AgentGroupsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to agentGroups for onPremisesPublishingProfiles
+     * Create a new onPremisesAgentGroup object.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class AgentGroupsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to agentGroups for onPremisesPublishingProfiles
+     * Create a new onPremisesAgentGroup object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class AgentGroupsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
+     * Retrieve a list of onPremisesAgentGroup objects.
      * @return a CompletableFuture of OnPremisesAgentGroupCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroupCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class AgentGroupsRequestBuilder {
         }
     }
     /**
-     * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
+     * Retrieve a list of onPremisesAgentGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OnPremisesAgentGroupCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AgentGroupsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class AgentGroupsRequestBuilder {
         }
     }
     /**
-     * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
+     * Retrieve a list of onPremisesAgentGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of OnPremisesAgentGroupCollectionResponse
@@ -163,7 +163,7 @@ public class AgentGroupsRequestBuilder {
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AgentGroupsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class AgentGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to agentGroups for onPremisesPublishingProfiles
+     * Create a new onPremisesAgentGroup object.
      * @param body 
      * @return a CompletableFuture of onPremisesAgentGroup
      */
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroup> post(@javax.annotation.Nonnull final OnPremisesAgentGroup body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class AgentGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to agentGroups for onPremisesPublishingProfiles
+     * Create a new onPremisesAgentGroup object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onPremisesAgentGroup
@@ -198,7 +198,7 @@ public class AgentGroupsRequestBuilder {
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroup> post(@javax.annotation.Nonnull final OnPremisesAgentGroup body, @javax.annotation.Nullable final java.util.function.Consumer<AgentGroupsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class AgentGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to agentGroups for onPremisesPublishingProfiles
+     * Create a new onPremisesAgentGroup object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class AgentGroupsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class AgentGroupsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List of existing onPremisesAgentGroup objects. Read-only. Nullable. */
+    /** Retrieve a list of onPremisesAgentGroup objects. */
     public class AgentGroupsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class AgentGroupsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AgentGroupsRequestBuilderGetQueryParameters queryParameters = new AgentGroupsRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class AgentGroupsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new agentGroupsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

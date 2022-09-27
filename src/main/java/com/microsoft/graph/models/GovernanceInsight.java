@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class GovernanceInsight extends Entity implements Parsable {
     /** Indicates when the insight was created. */
     private OffsetDateTime _insightCreatedDateTime;
@@ -47,7 +47,7 @@ public class GovernanceInsight extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceInsight currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("insightCreatedDateTime", (n) -> { currentObject.setInsightCreatedDateTime(n.getOffsetDateTimeValue()); });
         }};
     }

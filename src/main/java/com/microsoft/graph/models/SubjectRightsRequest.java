@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class SubjectRightsRequest extends Entity implements Parsable {
     /** Identity that the request is assigned to. */
     private Identity _assignedTo;
@@ -62,7 +63,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     /** The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue. */
     private SubjectRightsRequestType _type;
     /**
-     * Instantiates a new SubjectRightsRequest and sets the default values.
+     * Instantiates a new subjectRightsRequest and sets the default values.
      * @return a void
      */
     public SubjectRightsRequest() {
@@ -72,7 +73,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubjectRightsRequest
+     * @return a subjectRightsRequest
      */
     @javax.annotation.Nonnull
     public static SubjectRightsRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -166,7 +167,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
             this.put("closedDateTime", (n) -> { currentObject.setClosedDateTime(n.getOffsetDateTimeValue()); });
             this.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });

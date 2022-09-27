@@ -61,7 +61,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MembershipOutlierInsight currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("container", (n) -> { currentObject.setContainer(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
             this.put("containerId", (n) -> { currentObject.setContainerId(n.getStringValue()); });
             this.put("member", (n) -> { currentObject.setMember(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });

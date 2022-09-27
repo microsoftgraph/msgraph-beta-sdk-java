@@ -54,7 +54,7 @@ public class SetAndroidDeviceOwnerFullyManagedEnrollmentStatePostRequestBody imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SetAndroidDeviceOwnerFullyManagedEnrollmentStatePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
         }};
     }

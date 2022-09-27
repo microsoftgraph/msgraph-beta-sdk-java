@@ -58,7 +58,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RequestSignatureVerification currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("allowedWeakAlgorithms", (n) -> { currentObject.setAllowedWeakAlgorithms(n.getEnumValue(WeakAlgorithms.class)); });
             this.put("isSignedRequestRequired", (n) -> { currentObject.setIsSignedRequestRequired(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

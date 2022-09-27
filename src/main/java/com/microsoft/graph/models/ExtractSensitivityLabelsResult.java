@@ -48,7 +48,7 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExtractSensitivityLabelsResult currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfObjectValues(SensitivityLabelAssignment::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

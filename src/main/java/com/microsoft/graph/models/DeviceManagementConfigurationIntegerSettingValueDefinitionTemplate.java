@@ -51,7 +51,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("maxValue", (n) -> { currentObject.setMaxValue(n.getIntegerValue()); });
             this.put("minValue", (n) -> { currentObject.setMinValue(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

@@ -24,7 +24,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     /** Supported platform types. */
     private DeviceManagementConfigurationPlatforms _platforms;
     /** Number of setting templates. Valid values 0 to 2147483647. This property is read-only. */
-    private Integer _settingTemplateCount;
+    private final Integer _settingTemplateCount;
     /** Setting templates */
     private java.util.List<DeviceManagementConfigurationSettingTemplate> _settingTemplates;
     /** Describes which technology this setting can be deployed with */
@@ -32,7 +32,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     /** Describes the TemplateFamily for the Template entity */
     private DeviceManagementConfigurationTemplateFamily _templateFamily;
     /** Template version. Valid values 1 to 2147483647. This property is read-only. */
-    private Integer _version;
+    private final Integer _version;
     /**
      * Instantiates a new deviceManagementConfigurationPolicyTemplate and sets the default values.
      * @return a void
@@ -98,7 +98,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationPolicyTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowUnmanagedSettings", (n) -> { currentObject.setAllowUnmanagedSettings(n.getBooleanValue()); });
             this.put("baseId", (n) -> { currentObject.setBaseId(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -184,11 +184,9 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         writer.writeStringValue("displayVersion", this.getDisplayVersion());
         writer.writeEnumValue("lifecycleState", this.getLifecycleState());
         writer.writeEnumValue("platforms", this.getPlatforms());
-        writer.writeIntegerValue("settingTemplateCount", this.getSettingTemplateCount());
         writer.writeCollectionOfObjectValues("settingTemplates", this.getSettingTemplates());
         writer.writeEnumValue("technologies", this.getTechnologies());
         writer.writeEnumValue("templateFamily", this.getTemplateFamily());
-        writer.writeIntegerValue("version", this.getVersion());
     }
     /**
      * Sets the allowUnmanagedSettings property value. Allow unmanaged setting templates

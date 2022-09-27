@@ -55,7 +55,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignInActivity currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("lastNonInteractiveSignInDateTime", (n) -> { currentObject.setLastNonInteractiveSignInDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastNonInteractiveSignInRequestId", (n) -> { currentObject.setLastNonInteractiveSignInRequestId(n.getStringValue()); });
             this.put("lastSignInDateTime", (n) -> { currentObject.setLastSignInDateTime(n.getOffsetDateTimeValue()); });

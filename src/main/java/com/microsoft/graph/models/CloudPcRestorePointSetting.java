@@ -50,7 +50,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcRestorePointSetting currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("frequencyInHours", (n) -> { currentObject.setFrequencyInHours(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userRestoreEnabled", (n) -> { currentObject.setUserRestoreEnabled(n.getBooleanValue()); });

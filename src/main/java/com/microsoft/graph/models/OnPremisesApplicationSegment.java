@@ -78,7 +78,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesApplicationSegment currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("alternateUrl", (n) -> { currentObject.setAlternateUrl(n.getStringValue()); });
             this.put("corsConfigurations", (n) -> { currentObject.setCorsConfigurations(n.getCollectionOfObjectValues(CorsConfiguration::createFromDiscriminatorValue)); });
             this.put("externalUrl", (n) -> { currentObject.setExternalUrl(n.getStringValue()); });

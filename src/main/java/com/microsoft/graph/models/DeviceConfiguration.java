@@ -174,7 +174,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
     /** List of Scope Tags for this Entity instance. */
     private java.util.List<String> _roleScopeTagIds;
     /** Indicates whether or not the underlying Device Configuration supports the assignment of scope tags. Assigning to the ScopeTags property is not allowed when this value is false and entities will not be visible to scoped users. This occurs for Legacy policies created in Silverlight and can be resolved by deleting and recreating the policy in the Azure Portal. This property is read-only. */
-    private Boolean _supportsScopeTags;
+    private final Boolean _supportsScopeTags;
     /** Device configuration installation status by user. */
     private java.util.List<DeviceConfigurationUserStatus> _userStatuses;
     /** Device Configuration users status overview */
@@ -429,7 +429,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceConfigurationAssignment::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -526,7 +526,6 @@ public class DeviceConfiguration extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("groupAssignments", this.getGroupAssignments());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
-        writer.writeBooleanValue("supportsScopeTags", this.getSupportsScopeTags());
         writer.writeCollectionOfObjectValues("userStatuses", this.getUserStatuses());
         writer.writeObjectValue("userStatusOverview", this.getUserStatusOverview());
         writer.writeIntegerValue("version", this.getVersion());

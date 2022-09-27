@@ -78,7 +78,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AzureAdJoinPolicy currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("allowedGroups", (n) -> { currentObject.setAllowedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("allowedUsers", (n) -> { currentObject.setAllowedUsers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getEnumValue(PolicyScope.class)); });

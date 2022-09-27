@@ -61,7 +61,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EasEmailProfileConfigurationBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customDomainName", (n) -> { currentObject.setCustomDomainName(n.getStringValue()); });
             this.put("userDomainNameSource", (n) -> { currentObject.setUserDomainNameSource(n.getEnumValue(DomainNameSource.class)); });
             this.put("usernameAADSource", (n) -> { currentObject.setUsernameAADSource(n.getEnumValue(UsernameSource.class)); });

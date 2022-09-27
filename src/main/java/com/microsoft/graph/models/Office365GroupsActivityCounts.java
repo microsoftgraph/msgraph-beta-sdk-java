@@ -56,7 +56,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Office365GroupsActivityCounts currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("exchangeEmailsReceived", (n) -> { currentObject.setExchangeEmailsReceived(n.getLongValue()); });
             this.put("reportDate", (n) -> { currentObject.setReportDate(n.getLocalDateValue()); });
             this.put("reportPeriod", (n) -> { currentObject.setReportPeriod(n.getStringValue()); });

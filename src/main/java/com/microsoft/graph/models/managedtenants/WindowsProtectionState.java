@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class WindowsProtectionState extends Entity implements Parsable {
     /** The anti-malware version for the managed device. Optional. Read-only. */
     private String _antiMalwareVersion;
@@ -126,7 +126,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsProtectionState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("antiMalwareVersion", (n) -> { currentObject.setAntiMalwareVersion(n.getStringValue()); });
             this.put("attentionRequired", (n) -> { currentObject.setAttentionRequired(n.getBooleanValue()); });
             this.put("deviceDeleted", (n) -> { currentObject.setDeviceDeleted(n.getBooleanValue()); });

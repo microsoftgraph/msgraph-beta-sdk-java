@@ -91,7 +91,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VpnTrafficRule currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("appType", (n) -> { currentObject.setAppType(n.getEnumValue(VpnTrafficRuleAppType.class)); });
             this.put("claims", (n) -> { currentObject.setClaims(n.getStringValue()); });

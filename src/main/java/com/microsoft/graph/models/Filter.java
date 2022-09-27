@@ -60,7 +60,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Filter currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("categoryFilterGroups", (n) -> { currentObject.setCategoryFilterGroups(n.getCollectionOfObjectValues(FilterGroup::createFromDiscriminatorValue)); });
             this.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfObjectValues(FilterGroup::createFromDiscriminatorValue)); });
             this.put("inputFilterGroups", (n) -> { currentObject.setInputFilterGroups(n.getCollectionOfObjectValues(FilterGroup::createFromDiscriminatorValue)); });

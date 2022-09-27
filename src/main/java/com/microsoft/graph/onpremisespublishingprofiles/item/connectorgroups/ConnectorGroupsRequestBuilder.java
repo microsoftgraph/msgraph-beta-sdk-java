@@ -41,7 +41,7 @@ public class ConnectorGroupsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class ConnectorGroupsRequestBuilder {
      */
     public ConnectorGroupsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
+     * Retrieve a list of connectorGroup objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ConnectorGroupsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
+     * Retrieve a list of connectorGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class ConnectorGroupsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to connectorGroups for onPremisesPublishingProfiles
+     * Create a connectorGroup object.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class ConnectorGroupsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to connectorGroups for onPremisesPublishingProfiles
+     * Create a connectorGroup object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class ConnectorGroupsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
+     * Retrieve a list of connectorGroup objects.
      * @return a CompletableFuture of ConnectorGroupCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ConnectorGroupCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class ConnectorGroupsRequestBuilder {
         }
     }
     /**
-     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
+     * Retrieve a list of connectorGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ConnectorGroupCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ConnectorGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ConnectorGroupsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class ConnectorGroupsRequestBuilder {
         }
     }
     /**
-     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
+     * Retrieve a list of connectorGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ConnectorGroupCollectionResponse
@@ -163,7 +163,7 @@ public class ConnectorGroupsRequestBuilder {
     public java.util.concurrent.CompletableFuture<ConnectorGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ConnectorGroupsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class ConnectorGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to connectorGroups for onPremisesPublishingProfiles
+     * Create a connectorGroup object.
      * @param body 
      * @return a CompletableFuture of connectorGroup
      */
     public java.util.concurrent.CompletableFuture<ConnectorGroup> post(@javax.annotation.Nonnull final ConnectorGroup body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class ConnectorGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to connectorGroups for onPremisesPublishingProfiles
+     * Create a connectorGroup object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of connectorGroup
@@ -198,7 +198,7 @@ public class ConnectorGroupsRequestBuilder {
     public java.util.concurrent.CompletableFuture<ConnectorGroup> post(@javax.annotation.Nonnull final ConnectorGroup body, @javax.annotation.Nullable final java.util.function.Consumer<ConnectorGroupsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class ConnectorGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to connectorGroups for onPremisesPublishingProfiles
+     * Create a connectorGroup object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class ConnectorGroupsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class ConnectorGroupsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable. */
+    /** Retrieve a list of connectorGroup objects. */
     public class ConnectorGroupsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class ConnectorGroupsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ConnectorGroupsRequestBuilderGetQueryParameters queryParameters = new ConnectorGroupsRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class ConnectorGroupsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new connectorGroupsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

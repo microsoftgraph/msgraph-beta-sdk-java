@@ -49,7 +49,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationComboBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
             this.put("maxLength", (n) -> { currentObject.setMaxLength(n.getLongValue()); });
             this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });

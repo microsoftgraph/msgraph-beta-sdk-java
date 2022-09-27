@@ -46,7 +46,7 @@ public class TokenLifetimePoliciesRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/applications/{application%2Did}/tokenLifetimePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -58,13 +58,13 @@ public class TokenLifetimePoliciesRequestBuilder {
      */
     public TokenLifetimePoliciesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/applications/{application%2Did}/tokenLifetimePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * List the tokenLifetimePolicy objects that are assigned to an application or servicePrincipal..
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -72,7 +72,7 @@ public class TokenLifetimePoliciesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * List the tokenLifetimePolicy objects that are assigned to an application or servicePrincipal..
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -94,13 +94,13 @@ public class TokenLifetimePoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * List the tokenLifetimePolicy objects that are assigned to an application or servicePrincipal..
      * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicyCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -110,14 +110,14 @@ public class TokenLifetimePoliciesRequestBuilder {
         }
     }
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * List the tokenLifetimePolicy objects that are assigned to an application or servicePrincipal..
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TokenLifetimePoliciesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -127,7 +127,7 @@ public class TokenLifetimePoliciesRequestBuilder {
         }
     }
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * List the tokenLifetimePolicy objects that are assigned to an application or servicePrincipal..
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
@@ -135,7 +135,7 @@ public class TokenLifetimePoliciesRequestBuilder {
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TokenLifetimePoliciesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -144,7 +144,7 @@ public class TokenLifetimePoliciesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The tokenLifetimePolicies assigned to this application. Supports $expand. */
+    /** List the tokenLifetimePolicy objects that are assigned to an application or servicePrincipal.. */
     public class TokenLifetimePoliciesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -186,7 +186,7 @@ public class TokenLifetimePoliciesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TokenLifetimePoliciesRequestBuilderGetQueryParameters queryParameters = new TokenLifetimePoliciesRequestBuilderGetQueryParameters();

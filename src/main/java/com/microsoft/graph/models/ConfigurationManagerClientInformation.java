@@ -69,7 +69,7 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConfigurationManagerClientInformation currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("clientIdentifier", (n) -> { currentObject.setClientIdentifier(n.getStringValue()); });
             this.put("clientVersion", (n) -> { currentObject.setClientVersion(n.getStringValue()); });
             this.put("isBlocked", (n) -> { currentObject.setIsBlocked(n.getBooleanValue()); });

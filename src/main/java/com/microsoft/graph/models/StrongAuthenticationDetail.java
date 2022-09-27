@@ -45,7 +45,7 @@ public class StrongAuthenticationDetail extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StrongAuthenticationDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("encryptedPinHashHistory", (n) -> { currentObject.setEncryptedPinHashHistory(n.getByteArrayValue()); });
             this.put("proofupTime", (n) -> { currentObject.setProofupTime(n.getLongValue()); });
         }};

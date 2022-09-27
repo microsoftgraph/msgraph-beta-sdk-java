@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of allowedDataLocation entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class AllowedDataLocation extends Entity implements Parsable {
     /** The appId property */
     private String _appId;
@@ -58,7 +58,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AllowedDataLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("domain", (n) -> { currentObject.setDomain(n.getStringValue()); });
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });

@@ -71,7 +71,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfigurationUserStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("compliantUserCount", (n) -> { currentObject.setCompliantUserCount(n.getIntegerValue()); });
             this.put("conflictUserCount", (n) -> { currentObject.setConflictUserCount(n.getIntegerValue()); });
             this.put("errorUserCount", (n) -> { currentObject.setErrorUserCount(n.getIntegerValue()); });

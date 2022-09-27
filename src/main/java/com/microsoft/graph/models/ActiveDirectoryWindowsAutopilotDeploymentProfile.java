@@ -45,7 +45,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActiveDirectoryWindowsAutopilotDeploymentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("domainJoinConfiguration", (n) -> { currentObject.setDomainJoinConfiguration(n.getObjectValue(WindowsDomainJoinConfiguration::createFromDiscriminatorValue)); });
             this.put("hybridAzureADJoinSkipConnectivityCheck", (n) -> { currentObject.setHybridAzureADJoinSkipConnectivityCheck(n.getBooleanValue()); });
         }};

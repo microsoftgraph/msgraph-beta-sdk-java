@@ -52,7 +52,7 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TranslationPreferences currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("languageOverrides", (n) -> { currentObject.setLanguageOverrides(n.getCollectionOfObjectValues(TranslationLanguageOverride::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("translationBehavior", (n) -> { currentObject.setTranslationBehavior(n.getEnumValue(TranslationBehavior.class)); });

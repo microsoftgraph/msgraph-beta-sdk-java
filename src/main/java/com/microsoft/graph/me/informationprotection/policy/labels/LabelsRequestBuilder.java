@@ -65,7 +65,7 @@ public class LabelsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/informationProtection/policy/labels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -77,13 +77,13 @@ public class LabelsRequestBuilder {
      */
     public LabelsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/me/informationProtection/policy/labels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get labels from me
+     * Get a collection of information protection labels available to the user or to the organization.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -91,7 +91,7 @@ public class LabelsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get labels from me
+     * Get a collection of information protection labels available to the user or to the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -146,13 +146,13 @@ public class LabelsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get labels from me
+     * Get a collection of information protection labels available to the user or to the organization.
      * @return a CompletableFuture of InformationProtectionLabelCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<InformationProtectionLabelCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -162,14 +162,14 @@ public class LabelsRequestBuilder {
         }
     }
     /**
-     * Get labels from me
+     * Get a collection of information protection labels available to the user or to the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InformationProtectionLabelCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<InformationProtectionLabelCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<LabelsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -179,7 +179,7 @@ public class LabelsRequestBuilder {
         }
     }
     /**
-     * Get labels from me
+     * Get a collection of information protection labels available to the user or to the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of InformationProtectionLabelCollectionResponse
@@ -187,7 +187,7 @@ public class LabelsRequestBuilder {
     public java.util.concurrent.CompletableFuture<InformationProtectionLabelCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<LabelsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -204,7 +204,7 @@ public class LabelsRequestBuilder {
     public java.util.concurrent.CompletableFuture<InformationProtectionLabel> post(@javax.annotation.Nonnull final InformationProtectionLabel body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -222,7 +222,7 @@ public class LabelsRequestBuilder {
     public java.util.concurrent.CompletableFuture<InformationProtectionLabel> post(@javax.annotation.Nonnull final InformationProtectionLabel body, @javax.annotation.Nullable final java.util.function.Consumer<LabelsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -242,7 +242,7 @@ public class LabelsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -251,7 +251,7 @@ public class LabelsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get labels from me */
+    /** Get a collection of information protection labels available to the user or to the organization. */
     public class LabelsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -293,7 +293,7 @@ public class LabelsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public LabelsRequestBuilderGetQueryParameters queryParameters = new LabelsRequestBuilderGetQueryParameters();
@@ -311,7 +311,7 @@ public class LabelsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new labelsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

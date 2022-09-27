@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A class containing the properties for Audit Event. */
 public class AuditEvent extends Entity implements Parsable {
     /** Friendly name of the activity. */
     private String _activity;
@@ -32,7 +33,7 @@ public class AuditEvent extends Entity implements Parsable {
     /** Resources being modified. */
     private java.util.List<AuditResource> _resources;
     /**
-     * Instantiates a new AuditEvent and sets the default values.
+     * Instantiates a new auditEvent and sets the default values.
      * @return a void
      */
     public AuditEvent() {
@@ -42,7 +43,7 @@ public class AuditEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuditEvent
+     * @return a auditEvent
      */
     @javax.annotation.Nonnull
     public static AuditEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -136,7 +137,7 @@ public class AuditEvent extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
             this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
             this.put("activityOperationType", (n) -> { currentObject.setActivityOperationType(n.getStringValue()); });

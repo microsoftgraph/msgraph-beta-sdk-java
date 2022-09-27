@@ -50,7 +50,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InformationProtectionPolicySetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultLabelId", (n) -> { currentObject.setDefaultLabelId(n.getStringValue()); });
             this.put("isDowngradeJustificationRequired", (n) -> { currentObject.setIsDowngradeJustificationRequired(n.getBooleanValue()); });
             this.put("isMandatory", (n) -> { currentObject.setIsMandatory(n.getBooleanValue()); });

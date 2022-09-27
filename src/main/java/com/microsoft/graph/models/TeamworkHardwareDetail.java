@@ -56,7 +56,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkHardwareDetail currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("macAddresses", (n) -> { currentObject.setMacAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
             this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });

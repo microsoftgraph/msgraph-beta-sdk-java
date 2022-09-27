@@ -13,7 +13,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     /** Represents an attack simulation training campaign in a tenant. */
     private java.util.List<Simulation> _simulations;
     /**
-     * Instantiates a new AttackSimulationRoot and sets the default values.
+     * Instantiates a new attackSimulationRoot and sets the default values.
      * @return a void
      */
     public AttackSimulationRoot() {
@@ -23,7 +23,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttackSimulationRoot
+     * @return a attackSimulationRoot
      */
     @javax.annotation.Nonnull
     public static AttackSimulationRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("simulationAutomations", (n) -> { currentObject.setSimulationAutomations(n.getCollectionOfObjectValues(SimulationAutomation::createFromDiscriminatorValue)); });
             this.put("simulations", (n) -> { currentObject.setSimulations(n.getCollectionOfObjectValues(Simulation::createFromDiscriminatorValue)); });
         }};

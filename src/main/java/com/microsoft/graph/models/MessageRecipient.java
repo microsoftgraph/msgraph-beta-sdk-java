@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class MessageRecipient extends Entity implements Parsable {
     /** The deliveryStatus property */
     private MessageStatus _deliveryStatus;
@@ -15,7 +16,7 @@ public class MessageRecipient extends Entity implements Parsable {
     /** The recipientEmail property */
     private String _recipientEmail;
     /**
-     * Instantiates a new MessageRecipient and sets the default values.
+     * Instantiates a new messageRecipient and sets the default values.
      * @return a void
      */
     public MessageRecipient() {
@@ -25,7 +26,7 @@ public class MessageRecipient extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MessageRecipient
+     * @return a messageRecipient
      */
     @javax.annotation.Nonnull
     public static MessageRecipient createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +56,7 @@ public class MessageRecipient extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageRecipient currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deliveryStatus", (n) -> { currentObject.setDeliveryStatus(n.getEnumValue(MessageStatus.class)); });
             this.put("events", (n) -> { currentObject.setEvents(n.getCollectionOfObjectValues(MessageEvent::createFromDiscriminatorValue)); });
             this.put("recipientEmail", (n) -> { currentObject.setRecipientEmail(n.getStringValue()); });

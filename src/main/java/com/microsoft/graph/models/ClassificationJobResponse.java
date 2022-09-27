@@ -35,7 +35,7 @@ public class ClassificationJobResponse extends JobResponseBase implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassificationJobResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("result", (n) -> { currentObject.setResult(n.getObjectValue(DetectedSensitiveContentWrapper::createFromDiscriminatorValue)); });
         }};
     }

@@ -33,7 +33,7 @@ public class ProvisionOnDemandRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/applications/{application%2Did}/synchronization/jobs/{synchronizationJob%2Did}/microsoft.graph.provisionOnDemand";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -45,28 +45,28 @@ public class ProvisionOnDemandRequestBuilder {
      */
     public ProvisionOnDemandRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/applications/{application%2Did}/synchronization/jobs/{synchronizationJob%2Did}/microsoft.graph.provisionOnDemand";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action provisionOnDemand
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final StringKeyStringValuePairPostRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ProvisionOnDemandPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Invoke action provisionOnDemand
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final StringKeyStringValuePairPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ProvisionOnDemandRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ProvisionOnDemandPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ProvisionOnDemandRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -84,14 +84,14 @@ public class ProvisionOnDemandRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action provisionOnDemand
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body 
      * @return a CompletableFuture of StringKeyStringValuePair
      */
-    public java.util.concurrent.CompletableFuture<StringKeyStringValuePair> post(@javax.annotation.Nonnull final StringKeyStringValuePairPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<StringKeyStringValuePair> post(@javax.annotation.Nonnull final ProvisionOnDemandPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -101,15 +101,15 @@ public class ProvisionOnDemandRequestBuilder {
         }
     }
     /**
-     * Invoke action provisionOnDemand
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of StringKeyStringValuePair
      */
-    public java.util.concurrent.CompletableFuture<StringKeyStringValuePair> post(@javax.annotation.Nonnull final StringKeyStringValuePairPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ProvisionOnDemandRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<StringKeyStringValuePair> post(@javax.annotation.Nonnull final ProvisionOnDemandPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ProvisionOnDemandRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -119,17 +119,17 @@ public class ProvisionOnDemandRequestBuilder {
         }
     }
     /**
-     * Invoke action provisionOnDemand
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of StringKeyStringValuePair
      */
-    public java.util.concurrent.CompletableFuture<StringKeyStringValuePair> post(@javax.annotation.Nonnull final StringKeyStringValuePairPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ProvisionOnDemandRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<StringKeyStringValuePair> post(@javax.annotation.Nonnull final ProvisionOnDemandPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ProvisionOnDemandRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -145,7 +145,7 @@ public class ProvisionOnDemandRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new provisionOnDemandRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

@@ -67,7 +67,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });
             this.put("connectionName", (n) -> { currentObject.setConnectionName(n.getStringValue()); });
             this.put("realm", (n) -> { currentObject.setRealm(n.getStringValue()); });

@@ -57,7 +57,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("allowedOptions", (n) -> { currentObject.setAllowedOptions(n.getCollectionOfObjectValues(DeviceManagementConfigurationOptionDefinitionTemplate::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

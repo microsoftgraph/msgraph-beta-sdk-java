@@ -63,7 +63,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationProgress currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("completedUnits", (n) -> { currentObject.setCompletedUnits(n.getLongValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("progressObservationDateTime", (n) -> { currentObject.setProgressObservationDateTime(n.getOffsetDateTimeValue()); });

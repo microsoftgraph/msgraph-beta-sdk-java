@@ -70,7 +70,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationRule currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("editable", (n) -> { currentObject.setEditable(n.getBooleanValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(StringKeyStringValuePair::createFromDiscriminatorValue)); });

@@ -54,7 +54,7 @@ public class PlayLostModeSoundPostRequestBody implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlayLostModeSoundPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("durationInMinutes", (n) -> { currentObject.setDurationInMinutes(n.getStringValue()); });
         }};
     }

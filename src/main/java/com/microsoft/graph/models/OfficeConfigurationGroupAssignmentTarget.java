@@ -35,7 +35,7 @@ public class OfficeConfigurationGroupAssignmentTarget extends OfficeConfiguratio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfficeConfigurationGroupAssignmentTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
         }};
     }

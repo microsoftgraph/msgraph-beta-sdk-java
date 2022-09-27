@@ -45,7 +45,7 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppTroubleshootingAppPolicyCreationHistory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
             this.put("runState", (n) -> { currentObject.setRunState(n.getEnumValue(RunState.class)); });
         }};

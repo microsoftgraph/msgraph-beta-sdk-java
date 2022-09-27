@@ -81,7 +81,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationSimulationUserCoverage currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("attackSimulationUser", (n) -> { currentObject.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
             this.put("clickCount", (n) -> { currentObject.setClickCount(n.getIntegerValue()); });
             this.put("compromisedCount", (n) -> { currentObject.setCompromisedCount(n.getIntegerValue()); });

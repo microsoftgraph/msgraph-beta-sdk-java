@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of approvalWorkflowProvider entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ApprovalWorkflowProvider extends Entity implements Parsable {
     /** The businessFlows property */
     private java.util.List<BusinessFlow> _businessFlows;
@@ -66,7 +66,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApprovalWorkflowProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("businessFlows", (n) -> { currentObject.setBusinessFlows(n.getCollectionOfObjectValues(BusinessFlow::createFromDiscriminatorValue)); });
             this.put("businessFlowsWithRequestsAwaitingMyDecision", (n) -> { currentObject.setBusinessFlowsWithRequestsAwaitingMyDecision(n.getCollectionOfObjectValues(BusinessFlow::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

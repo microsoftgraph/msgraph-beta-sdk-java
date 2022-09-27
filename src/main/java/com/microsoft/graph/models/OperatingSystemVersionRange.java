@@ -61,7 +61,7 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OperatingSystemVersionRange currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("highestVersion", (n) -> { currentObject.setHighestVersion(n.getStringValue()); });
             this.put("lowestVersion", (n) -> { currentObject.setLowestVersion(n.getStringValue()); });

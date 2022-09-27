@@ -76,7 +76,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeMapping currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
             this.put("exportMissingReferences", (n) -> { currentObject.setExportMissingReferences(n.getBooleanValue()); });
             this.put("flowBehavior", (n) -> { currentObject.setFlowBehavior(n.getEnumValue(AttributeFlowBehavior.class)); });

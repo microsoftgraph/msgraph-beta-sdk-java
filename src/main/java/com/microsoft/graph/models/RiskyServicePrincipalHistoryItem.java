@@ -48,7 +48,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskyServicePrincipalHistoryItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(RiskServicePrincipalActivity::createFromDiscriminatorValue)); });
             this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getStringValue()); });
             this.put("servicePrincipalId", (n) -> { currentObject.setServicePrincipalId(n.getStringValue()); });

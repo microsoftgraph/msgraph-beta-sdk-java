@@ -15,7 +15,7 @@ public class Program extends Entity implements Parsable {
     /** The name of the program.  Required on create. */
     private String _displayName;
     /**
-     * Instantiates a new Program and sets the default values.
+     * Instantiates a new program and sets the default values.
      * @return a void
      */
     public Program() {
@@ -25,7 +25,7 @@ public class Program extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Program
+     * @return a program
      */
     @javax.annotation.Nonnull
     public static Program createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class Program extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Program currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("controls", (n) -> { currentObject.setControls(n.getCollectionOfObjectValues(ProgramControl::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

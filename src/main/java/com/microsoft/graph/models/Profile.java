@@ -47,7 +47,7 @@ public class Profile extends Entity implements Parsable {
     /** Represents detailed information about websites associated with a user in various services. */
     private java.util.List<PersonWebsite> _websites;
     /**
-     * Instantiates a new Profile and sets the default values.
+     * Instantiates a new profile and sets the default values.
      * @return a void
      */
     public Profile() {
@@ -57,7 +57,7 @@ public class Profile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Profile
+     * @return a profile
      */
     @javax.annotation.Nonnull
     public static Profile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -127,7 +127,7 @@ public class Profile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Profile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("account", (n) -> { currentObject.setAccount(n.getCollectionOfObjectValues(UserAccountInformation::createFromDiscriminatorValue)); });
             this.put("addresses", (n) -> { currentObject.setAddresses(n.getCollectionOfObjectValues(ItemAddress::createFromDiscriminatorValue)); });
             this.put("anniversaries", (n) -> { currentObject.setAnniversaries(n.getCollectionOfObjectValues(PersonAnnualEvent::createFromDiscriminatorValue)); });

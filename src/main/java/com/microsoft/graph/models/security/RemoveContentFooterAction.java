@@ -35,7 +35,7 @@ public class RemoveContentFooterAction extends InformationProtectionAction imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoveContentFooterAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("uiElementNames", (n) -> { currentObject.setUiElementNames(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

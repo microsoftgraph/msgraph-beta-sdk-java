@@ -58,7 +58,7 @@ public class SearchEntity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchEntity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("acronyms", (n) -> { currentObject.setAcronyms(n.getCollectionOfObjectValues(Acronym::createFromDiscriminatorValue)); });
             this.put("bookmarks", (n) -> { currentObject.setBookmarks(n.getCollectionOfObjectValues(Bookmark::createFromDiscriminatorValue)); });
             this.put("qnas", (n) -> { currentObject.setQnas(n.getCollectionOfObjectValues(Qna::createFromDiscriminatorValue)); });

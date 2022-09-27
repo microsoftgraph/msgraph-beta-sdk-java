@@ -11,7 +11,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     /** Account name. */
     private String _accountName;
     /** Value indicating whether this policy only applies to Windows 8.1. This property is read-only. */
-    private Boolean _applyOnlyToWindowsPhone81;
+    private final Boolean _applyOnlyToWindowsPhone81;
     /** Possible values for email sync duration. */
     private EmailSyncDuration _durationOfEmailToSync;
     /** Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress. */
@@ -93,7 +93,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhoneEASEmailProfileConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
             this.put("applyOnlyToWindowsPhone81", (n) -> { currentObject.setApplyOnlyToWindowsPhone81(n.getBooleanValue()); });
             this.put("durationOfEmailToSync", (n) -> { currentObject.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
@@ -155,7 +155,6 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("accountName", this.getAccountName());
-        writer.writeBooleanValue("applyOnlyToWindowsPhone81", this.getApplyOnlyToWindowsPhone81());
         writer.writeEnumValue("durationOfEmailToSync", this.getDurationOfEmailToSync());
         writer.writeEnumValue("emailAddressSource", this.getEmailAddressSource());
         writer.writeEnumValue("emailSyncSchedule", this.getEmailSyncSchedule());

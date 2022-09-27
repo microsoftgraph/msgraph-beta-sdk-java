@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** An abstract class containing the base properties for Managed eBook. */
 public class ManagedEBook extends Entity implements Parsable {
     /** The list of assignments for this eBook. */
     private java.util.List<ManagedEBookAssignment> _assignments;
@@ -39,7 +40,7 @@ public class ManagedEBook extends Entity implements Parsable {
     /** The list of installation states for this eBook. */
     private java.util.List<UserInstallStateSummary> _userStateSummary;
     /**
-     * Instantiates a new ManagedEBook and sets the default values.
+     * Instantiates a new managedEBook and sets the default values.
      * @return a void
      */
     public ManagedEBook() {
@@ -49,7 +50,7 @@ public class ManagedEBook extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedEBook
+     * @return a managedEBook
      */
     @javax.annotation.Nonnull
     public static ManagedEBook createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -118,7 +119,7 @@ public class ManagedEBook extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedEBook currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(ManagedEBookAssignment::createFromDiscriminatorValue)); });
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(ManagedEBookCategory::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });

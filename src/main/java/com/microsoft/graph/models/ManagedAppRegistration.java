@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The ManagedAppEntity is the base entity type for all other entity types under app management workflow. */
 public class ManagedAppRegistration extends Entity implements Parsable {
     /** The app package Identifier */
     private MobileAppIdentifier _appIdentifier;
@@ -32,7 +33,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     /** Host device type */
     private String _deviceType;
     /** Zero or more reasons an app registration is flagged. E.g. app running on rooted device */
-    private java.util.List<String> _flaggedReasons;
+    private java.util.List<ManagedAppFlaggedReason> _flaggedReasons;
     /** Zero or more policies admin intended for the app as of now. */
     private java.util.List<ManagedAppPolicy> _intendedPolicies;
     /** Date and time of last the app synced with management service. */
@@ -50,7 +51,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     /** Version of the entity. */
     private String _version;
     /**
-     * Instantiates a new ManagedAppRegistration and sets the default values.
+     * Instantiates a new managedAppRegistration and sets the default values.
      * @return a void
      */
     public ManagedAppRegistration() {
@@ -60,7 +61,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAppRegistration
+     * @return a managedAppRegistration
      */
     @javax.annotation.Nonnull
     public static ManagedAppRegistration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -162,7 +163,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppRegistration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appIdentifier", (n) -> { currentObject.setAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
             this.put("applicationVersion", (n) -> { currentObject.setApplicationVersion(n.getStringValue()); });
             this.put("appliedPolicies", (n) -> { currentObject.setAppliedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
@@ -173,7 +174,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("deviceTag", (n) -> { currentObject.setDeviceTag(n.getStringValue()); });
             this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getStringValue()); });
-            this.put("flaggedReasons", (n) -> { currentObject.setFlaggedReasons(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("flaggedReasons", (n) -> { currentObject.setFlaggedReasons(n.getCollectionOfEnumValues(ManagedAppFlaggedReason.class)); });
             this.put("intendedPolicies", (n) -> { currentObject.setIntendedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
             this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
             this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
@@ -186,10 +187,10 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device
-     * @return a string
+     * @return a managedAppFlaggedReason
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getFlaggedReasons() {
+    public java.util.List<ManagedAppFlaggedReason> getFlaggedReasons() {
         return this._flaggedReasons;
     }
     /**
@@ -274,7 +275,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeStringValue("deviceTag", this.getDeviceTag());
         writer.writeStringValue("deviceType", this.getDeviceType());
-        writer.writeCollectionOfPrimitiveValues("flaggedReasons", this.getFlaggedReasons());
+        writer.writeCollectionOfEnumValues("flaggedReasons", this.getFlaggedReasons());
         writer.writeCollectionOfObjectValues("intendedPolicies", this.getIntendedPolicies());
         writer.writeOffsetDateTimeValue("lastSyncDateTime", this.getLastSyncDateTime());
         writer.writeStringValue("managedDeviceId", this.getManagedDeviceId());
@@ -369,7 +370,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the flaggedReasons property.
      * @return a void
      */
-    public void setFlaggedReasons(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setFlaggedReasons(@javax.annotation.Nullable final java.util.List<ManagedAppFlaggedReason> value) {
         this._flaggedReasons = value;
     }
     /**

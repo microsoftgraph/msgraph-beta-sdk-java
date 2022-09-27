@@ -66,7 +66,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResponsibleSensitiveType currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });

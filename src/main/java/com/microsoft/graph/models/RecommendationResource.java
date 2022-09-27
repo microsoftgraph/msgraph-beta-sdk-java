@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class RecommendationResource extends Entity implements Parsable {
     /** The addedDateTime property */
     private OffsetDateTime _addedDateTime;
@@ -87,7 +87,7 @@ public class RecommendationResource extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecommendationResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("addedDateTime", (n) -> { currentObject.setAddedDateTime(n.getOffsetDateTimeValue()); });
             this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
             this.put("apiUrl", (n) -> { currentObject.setApiUrl(n.getStringValue()); });

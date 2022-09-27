@@ -57,7 +57,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitivityPolicySettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicableTo", (n) -> { currentObject.setApplicableTo(n.getEnumValue(SensitivityLabelTarget.class)); });
             this.put("downgradeSensitivityRequiresJustification", (n) -> { currentObject.setDowngradeSensitivityRequiresJustification(n.getBooleanValue()); });
             this.put("helpWebUrl", (n) -> { currentObject.setHelpWebUrl(n.getStringValue()); });

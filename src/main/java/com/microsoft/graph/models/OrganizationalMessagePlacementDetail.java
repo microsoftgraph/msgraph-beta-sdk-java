@@ -51,7 +51,7 @@ public class OrganizationalMessagePlacementDetail implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessagePlacementDetail currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("placement", (n) -> { currentObject.setPlacement(n.getEnumValue(OrganizationalMessagePlacement.class)); });
             this.put("variants", (n) -> { currentObject.setVariants(n.getCollectionOfObjectValues(OrganizationalMessageVariant::createFromDiscriminatorValue)); });

@@ -73,7 +73,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDisplayScreenConfiguration currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("backlightBrightness", (n) -> { currentObject.setBacklightBrightness(n.getIntegerValue()); });
             this.put("backlightTimeout", (n) -> { currentObject.setBacklightTimeout(n.getPeriodValue()); });
             this.put("isHighContrastEnabled", (n) -> { currentObject.setIsHighContrastEnabled(n.getBooleanValue()); });

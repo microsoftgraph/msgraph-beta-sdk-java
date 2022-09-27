@@ -50,7 +50,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordValidationInformation currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("isValid", (n) -> { currentObject.setIsValid(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("validationResults", (n) -> { currentObject.setValidationResults(n.getCollectionOfObjectValues(ValidationResult::createFromDiscriminatorValue)); });

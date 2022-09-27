@@ -91,7 +91,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CryptographySuite currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("authenticationTransformConstants", (n) -> { currentObject.setAuthenticationTransformConstants(n.getEnumValue(AuthenticationTransformConstant.class)); });
             this.put("cipherTransformConstants", (n) -> { currentObject.setCipherTransformConstants(n.getEnumValue(VpnEncryptionAlgorithmType.class)); });
             this.put("dhGroup", (n) -> { currentObject.setDhGroup(n.getEnumValue(DiffieHellmanGroup.class)); });

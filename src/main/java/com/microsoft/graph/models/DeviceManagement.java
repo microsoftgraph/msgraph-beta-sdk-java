@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.devicemanagement.Monitoring;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -90,7 +91,7 @@ public class DeviceManagement extends Entity implements Parsable {
     /** The summary states of compliance policy settings for this account. */
     private java.util.List<DeviceCompliancePolicySettingStateSummary> _deviceCompliancePolicySettingStateSummaries;
     /** The last requested time of device compliance reporting for this account. This property is read-only. */
-    private OffsetDateTime _deviceComplianceReportSummarizationDateTime;
+    private final OffsetDateTime _deviceComplianceReportSummarizationDateTime;
     /** The list of device compliance scripts associated with the tenant. */
     private java.util.List<DeviceComplianceScript> _deviceComplianceScripts;
     /** Summary of policies in conflict state for this account. */
@@ -158,9 +159,9 @@ public class DeviceManagement extends Entity implements Parsable {
     /** The IOS software update installation statuses for this account. */
     private java.util.List<IosUpdateDeviceStatus> _iosUpdateStatuses;
     /** The last modified time of reporting for this account. This property is read-only. */
-    private OffsetDateTime _lastReportAggregationDateTime;
+    private final OffsetDateTime _lastReportAggregationDateTime;
     /** The property to enable Non-MDM managed legacy PC management for this account. This property is read-only. */
-    private Boolean _legacyPcManangementEnabled;
+    private final Boolean _legacyPcManangementEnabled;
     /** The MacOS software update account summaries for this account. */
     private java.util.List<MacOSSoftwareUpdateAccountSummary> _macOSSoftwareUpdateAccountSummaries;
     /** Device cleanup rule */
@@ -185,6 +186,8 @@ public class DeviceManagement extends Entity implements Parsable {
     private java.util.List<MobileAppTroubleshootingEvent> _mobileAppTroubleshootingEvents;
     /** The list of Mobile threat Defense connectors configured by the tenant. */
     private java.util.List<MobileThreatDefenseConnector> _mobileThreatDefenseConnectors;
+    /** The monitoring property */
+    private Monitoring _monitoring;
     /** The collection of Ndes connectors for this account. */
     private java.util.List<NdesConnector> _ndesConnectors;
     /** The Notification Message Templates. */
@@ -240,7 +243,7 @@ public class DeviceManagement extends Entity implements Parsable {
     /** The list of troubleshooting events for the tenant. */
     private java.util.List<DeviceManagementTroubleshootingEvent> _troubleshootingEvents;
     /** When enabled, users assigned as administrators via Role Assignment Memberships do not require an assigned Intune license. Prior to this, only Intune licensed users were granted permissions with an Intune role unless they were assigned a role via Azure Active Directory. You are limited to 350 unlicensed direct members for each AAD security group in a role assignment, but you can assign multiple AAD security groups to a role if you need to support more than 350 unlicensed administrators. Licensed administrators are unaffected, do not have to be direct members, nor does the 350 member limit apply. This property is read-only. */
-    private Boolean _unlicensedAdminstratorsEnabled;
+    private final Boolean _unlicensedAdminstratorsEnabled;
     /** User experience analytics appHealth Application Performance */
     private java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance> _userExperienceAnalyticsAppHealthApplicationPerformance;
     /** User experience analytics appHealth Application Performance by App Version */
@@ -862,7 +865,7 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountMoveCompletionDateTime", (n) -> { currentObject.setAccountMoveCompletionDateTime(n.getOffsetDateTimeValue()); });
             this.put("adminConsent", (n) -> { currentObject.setAdminConsent(n.getObjectValue(AdminConsent::createFromDiscriminatorValue)); });
             this.put("advancedThreatProtectionOnboardingStateSummary", (n) -> { currentObject.setAdvancedThreatProtectionOnboardingStateSummary(n.getObjectValue(AdvancedThreatProtectionOnboardingStateSummary::createFromDiscriminatorValue)); });
@@ -951,6 +954,7 @@ public class DeviceManagement extends Entity implements Parsable {
             this.put("microsoftTunnelSites", (n) -> { currentObject.setMicrosoftTunnelSites(n.getCollectionOfObjectValues(MicrosoftTunnelSite::createFromDiscriminatorValue)); });
             this.put("mobileAppTroubleshootingEvents", (n) -> { currentObject.setMobileAppTroubleshootingEvents(n.getCollectionOfObjectValues(MobileAppTroubleshootingEvent::createFromDiscriminatorValue)); });
             this.put("mobileThreatDefenseConnectors", (n) -> { currentObject.setMobileThreatDefenseConnectors(n.getCollectionOfObjectValues(MobileThreatDefenseConnector::createFromDiscriminatorValue)); });
+            this.put("monitoring", (n) -> { currentObject.setMonitoring(n.getObjectValue(Monitoring::createFromDiscriminatorValue)); });
             this.put("ndesConnectors", (n) -> { currentObject.setNdesConnectors(n.getCollectionOfObjectValues(NdesConnector::createFromDiscriminatorValue)); });
             this.put("notificationMessageTemplates", (n) -> { currentObject.setNotificationMessageTemplates(n.getCollectionOfObjectValues(NotificationMessageTemplate::createFromDiscriminatorValue)); });
             this.put("oemWarrantyInformationOnboarding", (n) -> { currentObject.setOemWarrantyInformationOnboarding(n.getCollectionOfObjectValues(OemWarrantyInformationOnboarding::createFromDiscriminatorValue)); });
@@ -1262,6 +1266,14 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<MobileThreatDefenseConnector> getMobileThreatDefenseConnectors() {
         return this._mobileThreatDefenseConnectors;
+    }
+    /**
+     * Gets the monitoring property value. The monitoring property
+     * @return a monitoring
+     */
+    @javax.annotation.Nullable
+    public Monitoring getMonitoring() {
+        return this._monitoring;
     }
     /**
      * Gets the ndesConnectors property value. The collection of Ndes connectors for this account.
@@ -1999,7 +2011,6 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceCompliancePolicies", this.getDeviceCompliancePolicies());
         writer.writeObjectValue("deviceCompliancePolicyDeviceStateSummary", this.getDeviceCompliancePolicyDeviceStateSummary());
         writer.writeCollectionOfObjectValues("deviceCompliancePolicySettingStateSummaries", this.getDeviceCompliancePolicySettingStateSummaries());
-        writer.writeOffsetDateTimeValue("deviceComplianceReportSummarizationDateTime", this.getDeviceComplianceReportSummarizationDateTime());
         writer.writeCollectionOfObjectValues("deviceComplianceScripts", this.getDeviceComplianceScripts());
         writer.writeCollectionOfObjectValues("deviceConfigurationConflictSummary", this.getDeviceConfigurationConflictSummary());
         writer.writeObjectValue("deviceConfigurationDeviceStateSummaries", this.getDeviceConfigurationDeviceStateSummaries());
@@ -2033,8 +2044,6 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeObjectValue("intuneBrand", this.getIntuneBrand());
         writer.writeCollectionOfObjectValues("intuneBrandingProfiles", this.getIntuneBrandingProfiles());
         writer.writeCollectionOfObjectValues("iosUpdateStatuses", this.getIosUpdateStatuses());
-        writer.writeOffsetDateTimeValue("lastReportAggregationDateTime", this.getLastReportAggregationDateTime());
-        writer.writeBooleanValue("legacyPcManangementEnabled", this.getLegacyPcManangementEnabled());
         writer.writeCollectionOfObjectValues("macOSSoftwareUpdateAccountSummaries", this.getMacOSSoftwareUpdateAccountSummaries());
         writer.writeObjectValue("managedDeviceCleanupSettings", this.getManagedDeviceCleanupSettings());
         writer.writeCollectionOfObjectValues("managedDeviceEncryptionStates", this.getManagedDeviceEncryptionStates());
@@ -2047,6 +2056,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("microsoftTunnelSites", this.getMicrosoftTunnelSites());
         writer.writeCollectionOfObjectValues("mobileAppTroubleshootingEvents", this.getMobileAppTroubleshootingEvents());
         writer.writeCollectionOfObjectValues("mobileThreatDefenseConnectors", this.getMobileThreatDefenseConnectors());
+        writer.writeObjectValue("monitoring", this.getMonitoring());
         writer.writeCollectionOfObjectValues("ndesConnectors", this.getNdesConnectors());
         writer.writeCollectionOfObjectValues("notificationMessageTemplates", this.getNotificationMessageTemplates());
         writer.writeCollectionOfObjectValues("oemWarrantyInformationOnboarding", this.getOemWarrantyInformationOnboarding());
@@ -2074,7 +2084,6 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeObjectValue("tenantAttachRBAC", this.getTenantAttachRBAC());
         writer.writeCollectionOfObjectValues("termsAndConditions", this.getTermsAndConditions());
         writer.writeCollectionOfObjectValues("troubleshootingEvents", this.getTroubleshootingEvents());
-        writer.writeBooleanValue("unlicensedAdminstratorsEnabled", this.getUnlicensedAdminstratorsEnabled());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformance", this.getUserExperienceAnalyticsAppHealthApplicationPerformance());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion", this.getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", this.getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails());
@@ -2837,6 +2846,14 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setMobileThreatDefenseConnectors(@javax.annotation.Nullable final java.util.List<MobileThreatDefenseConnector> value) {
         this._mobileThreatDefenseConnectors = value;
+    }
+    /**
+     * Sets the monitoring property value. The monitoring property
+     * @param value Value to set for the monitoring property.
+     * @return a void
+     */
+    public void setMonitoring(@javax.annotation.Nullable final Monitoring value) {
+        this._monitoring = value;
     }
     /**
      * Sets the ndesConnectors property value. The collection of Ndes connectors for this account.

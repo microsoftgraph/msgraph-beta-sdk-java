@@ -35,7 +35,7 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DlpEvaluatePoliciesJobResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("result", (n) -> { currentObject.setResult(n.getObjectValue(DlpPoliciesJobResult::createFromDiscriminatorValue)); });
         }};
     }

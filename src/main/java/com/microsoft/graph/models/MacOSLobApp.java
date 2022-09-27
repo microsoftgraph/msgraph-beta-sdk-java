@@ -77,7 +77,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSLobApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
             this.put("childApps", (n) -> { currentObject.setChildApps(n.getCollectionOfObjectValues(MacOSLobChildApp::createFromDiscriminatorValue)); });

@@ -65,7 +65,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CredentialUsageSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authMethod", (n) -> { currentObject.setAuthMethod(n.getEnumValue(UsageAuthMethod.class)); });
             this.put("failureActivityCount", (n) -> { currentObject.setFailureActivityCount(n.getLongValue()); });
             this.put("feature", (n) -> { currentObject.setFeature(n.getEnumValue(FeatureType.class)); });

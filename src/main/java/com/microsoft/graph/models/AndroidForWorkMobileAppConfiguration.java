@@ -51,7 +51,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkMobileAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("connectedAppsEnabled", (n) -> { currentObject.setConnectedAppsEnabled(n.getBooleanValue()); });
             this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
             this.put("payloadJson", (n) -> { currentObject.setPayloadJson(n.getStringValue()); });

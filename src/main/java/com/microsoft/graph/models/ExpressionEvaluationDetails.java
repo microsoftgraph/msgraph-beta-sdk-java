@@ -78,7 +78,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExpressionEvaluationDetails currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("expression", (n) -> { currentObject.setExpression(n.getStringValue()); });
             this.put("expressionEvaluationDetails", (n) -> { currentObject.setExpressionEvaluationDetails(n.getCollectionOfObjectValues(ExpressionEvaluationDetails::createFromDiscriminatorValue)); });
             this.put("expressionResult", (n) -> { currentObject.setExpressionResult(n.getBooleanValue()); });

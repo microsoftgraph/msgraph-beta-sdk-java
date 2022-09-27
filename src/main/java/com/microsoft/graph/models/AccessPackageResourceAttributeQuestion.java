@@ -35,7 +35,7 @@ public class AccessPackageResourceAttributeQuestion extends AccessPackageResourc
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageResourceAttributeQuestion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("question", (n) -> { currentObject.setQuestion(n.getObjectValue(AccessPackageQuestion::createFromDiscriminatorValue)); });
         }};
     }

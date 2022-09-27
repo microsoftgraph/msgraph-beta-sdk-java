@@ -39,7 +39,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final B2cAuthenticationMethodsPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isEmailPasswordAuthenticationEnabled", (n) -> { currentObject.setIsEmailPasswordAuthenticationEnabled(n.getBooleanValue()); });
             this.put("isPhoneOneTimePasswordAuthenticationEnabled", (n) -> { currentObject.setIsPhoneOneTimePasswordAuthenticationEnabled(n.getBooleanValue()); });
             this.put("isUserNameAuthenticationEnabled", (n) -> { currentObject.setIsUserNameAuthenticationEnabled(n.getBooleanValue()); });

@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity implements Parsable {
     /** The associated group assignments for this WindowsDefenderApplicationControl supplemental policy. */
     private java.util.List<WindowsDefenderApplicationControlSupplementalPolicyAssignment> _assignments;
@@ -121,7 +120,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDefenderApplicationControlSupplementalPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyAssignment::createFromDiscriminatorValue)); });
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("contentFileName", (n) -> { currentObject.setContentFileName(n.getStringValue()); });

@@ -35,7 +35,7 @@ public class OnTokenIssuanceStartListener extends AuthenticationEventListener im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnTokenIssuanceStartListener currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("handler", (n) -> { currentObject.setHandler(n.getObjectValue(OnTokenIssuanceStartHandler::createFromDiscriminatorValue)); });
         }};
     }

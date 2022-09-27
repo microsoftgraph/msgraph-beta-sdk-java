@@ -58,7 +58,7 @@ public class TeamworkHardwareHealth implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkHardwareHealth currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("computeHealth", (n) -> { currentObject.setComputeHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
             this.put("hdmiIngestHealth", (n) -> { currentObject.setHdmiIngestHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

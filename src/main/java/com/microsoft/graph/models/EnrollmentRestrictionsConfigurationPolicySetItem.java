@@ -37,7 +37,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EnrollmentRestrictionsConfigurationPolicySetItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("limit", (n) -> { currentObject.setLimit(n.getIntegerValue()); });
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
         }};

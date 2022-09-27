@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class TiIndicator extends Entity implements Parsable {
     /** The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required. */
     private TiAction _action;
@@ -17,7 +18,7 @@ public class TiIndicator extends Entity implements Parsable {
     private String _additionalInformation;
     /** Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required. */
     private String _azureTenantId;
-    /** An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest. */
+    /** An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0  100 with 100 being the highest. */
     private Integer _confidence;
     /** Brief description (100 characters or less) of the threat represented by the indicator. Required. */
     private String _description;
@@ -45,7 +46,7 @@ public class TiIndicator extends Entity implements Parsable {
     private String _emailXMailer;
     /** DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required. */
     private OffsetDateTime _expirationDateTime;
-    /** An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key). */
+    /** An identification number that ties the indicator back to the indicator providers system (e.g. a foreign key). */
     private String _externalId;
     /** The fileCompileDateTime property */
     private OffsetDateTime _fileCompileDateTime;
@@ -69,9 +70,9 @@ public class TiIndicator extends Entity implements Parsable {
     private String _fileType;
     /** Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _ingestedDateTime;
-    /** Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system. */
+    /** Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to False to deactivate indicators in the system. */
     private Boolean _isActive;
-    /** A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values. */
+    /** A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See killChain values below for exact values. */
     private java.util.List<String> _killChain;
     /** Scenarios in which the indicator may cause false positives. This should be human-readable text. */
     private String _knownFalsePositives;
@@ -109,9 +110,9 @@ public class TiIndicator extends Entity implements Parsable {
     private String _networkSourceIPv6;
     /** The networkSourcePort property */
     private Integer _networkSourcePort;
-    /** Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false. */
+    /** Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools will not notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false. */
     private Boolean _passiveOnly;
-    /** An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3. */
+    /** An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero is not severe at all. Default value is 3. */
     private Integer _severity;
     /** A JSON array of strings that stores arbitrary tags/keywords. */
     private java.util.List<String> _tags;
@@ -126,7 +127,7 @@ public class TiIndicator extends Entity implements Parsable {
     /** The userAgent property */
     private String _userAgent;
     /**
-     * Instantiates a new TiIndicator and sets the default values.
+     * Instantiates a new tiIndicator and sets the default values.
      * @return a void
      */
     public TiIndicator() {
@@ -136,7 +137,7 @@ public class TiIndicator extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TiIndicator
+     * @return a tiIndicator
      */
     @javax.annotation.Nonnull
     public static TiIndicator createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -176,7 +177,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._azureTenantId;
     }
     /**
-     * Gets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest.
+     * Gets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0  100 with 100 being the highest.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -288,7 +289,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._expirationDateTime;
     }
     /**
-     * Gets the externalId property value. An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
+     * Gets the externalId property value. An identification number that ties the indicator back to the indicator providers system (e.g. a foreign key).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -302,7 +303,7 @@ public class TiIndicator extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TiIndicator currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(TiAction.class)); });
             this.put("activityGroupNames", (n) -> { currentObject.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
@@ -452,7 +453,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._ingestedDateTime;
     }
     /**
-     * Gets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system.
+     * Gets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to False to deactivate indicators in the system.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -460,7 +461,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._isActive;
     }
     /**
-     * Gets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values.
+     * Gets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See killChain values below for exact values.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -612,7 +613,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._networkSourcePort;
     }
     /**
-     * Gets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
+     * Gets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools will not notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -620,7 +621,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._passiveOnly;
     }
     /**
-     * Gets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
+     * Gets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero is not severe at all. Default value is 3.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -775,7 +776,7 @@ public class TiIndicator extends Entity implements Parsable {
         this._azureTenantId = value;
     }
     /**
-     * Sets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest.
+     * Sets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0  100 with 100 being the highest.
      * @param value Value to set for the confidence property.
      * @return a void
      */
@@ -887,7 +888,7 @@ public class TiIndicator extends Entity implements Parsable {
         this._expirationDateTime = value;
     }
     /**
-     * Sets the externalId property value. An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
+     * Sets the externalId property value. An identification number that ties the indicator back to the indicator providers system (e.g. a foreign key).
      * @param value Value to set for the externalId property.
      * @return a void
      */
@@ -983,7 +984,7 @@ public class TiIndicator extends Entity implements Parsable {
         this._ingestedDateTime = value;
     }
     /**
-     * Sets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system.
+     * Sets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to False to deactivate indicators in the system.
      * @param value Value to set for the isActive property.
      * @return a void
      */
@@ -991,7 +992,7 @@ public class TiIndicator extends Entity implements Parsable {
         this._isActive = value;
     }
     /**
-     * Sets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values.
+     * Sets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See killChain values below for exact values.
      * @param value Value to set for the killChain property.
      * @return a void
      */
@@ -1143,7 +1144,7 @@ public class TiIndicator extends Entity implements Parsable {
         this._networkSourcePort = value;
     }
     /**
-     * Sets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
+     * Sets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools will not notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
      * @param value Value to set for the passiveOnly property.
      * @return a void
      */
@@ -1151,7 +1152,7 @@ public class TiIndicator extends Entity implements Parsable {
         this._passiveOnly = value;
     }
     /**
-     * Sets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
+     * Sets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero is not severe at all. Default value is 3.
      * @param value Value to set for the severity property.
      * @return a void
      */

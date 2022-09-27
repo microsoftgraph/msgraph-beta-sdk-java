@@ -71,7 +71,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementAutopilotPolicyStatusDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("complianceStatus", (n) -> { currentObject.setComplianceStatus(n.getEnumValue(DeviceManagementAutopilotPolicyComplianceStatus.class)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });

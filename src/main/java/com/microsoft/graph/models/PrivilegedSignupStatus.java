@@ -37,7 +37,7 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedSignupStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isRegistered", (n) -> { currentObject.setIsRegistered(n.getBooleanValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(SetupStatus.class)); });
         }};

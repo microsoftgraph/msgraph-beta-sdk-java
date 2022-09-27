@@ -53,7 +53,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deployedDeviceCount", (n) -> { currentObject.setDeployedDeviceCount(n.getIntegerValue()); });
             this.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
         }};

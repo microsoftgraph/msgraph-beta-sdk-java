@@ -81,7 +81,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeCard currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("breaks", (n) -> { currentObject.setBreaks(n.getCollectionOfObjectValues(TimeCardBreak::createFromDiscriminatorValue)); });
             this.put("clockInEvent", (n) -> { currentObject.setClockInEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
             this.put("clockOutEvent", (n) -> { currentObject.setClockOutEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });

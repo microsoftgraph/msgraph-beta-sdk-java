@@ -129,7 +129,7 @@ public class Simulation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Simulation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("attackTechnique", (n) -> { currentObject.setAttackTechnique(n.getEnumValue(SimulationAttackTechnique.class)); });
             this.put("attackType", (n) -> { currentObject.setAttackType(n.getEnumValue(SimulationAttackType.class)); });
             this.put("automationId", (n) -> { currentObject.setAutomationId(n.getStringValue()); });

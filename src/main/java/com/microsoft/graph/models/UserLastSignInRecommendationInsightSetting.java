@@ -38,7 +38,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserLastSignInRecommendationInsightSetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("recommendationLookBackDuration", (n) -> { currentObject.setRecommendationLookBackDuration(n.getPeriodValue()); });
             this.put("signInScope", (n) -> { currentObject.setSignInScope(n.getEnumValue(UserSignInRecommendationScope.class)); });
         }};

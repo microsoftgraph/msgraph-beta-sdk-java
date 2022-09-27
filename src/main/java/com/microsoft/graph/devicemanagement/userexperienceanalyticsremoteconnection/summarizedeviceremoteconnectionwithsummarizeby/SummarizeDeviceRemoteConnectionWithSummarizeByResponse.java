@@ -47,7 +47,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByResponse implements A
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SummarizeDeviceRemoteConnectionWithSummarizeByResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(UserExperienceAnalyticsRemoteConnection::createFromDiscriminatorValue)); });
         }};
     }

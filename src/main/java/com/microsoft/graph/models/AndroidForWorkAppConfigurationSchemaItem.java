@@ -121,7 +121,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkAppConfigurationSchemaItem currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(AndroidForWorkAppConfigurationSchemaItemDataType.class)); });
             this.put("defaultBoolValue", (n) -> { currentObject.setDefaultBoolValue(n.getBooleanValue()); });
             this.put("defaultIntValue", (n) -> { currentObject.setDefaultIntValue(n.getIntegerValue()); });

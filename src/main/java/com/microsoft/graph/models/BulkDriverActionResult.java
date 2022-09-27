@@ -61,7 +61,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BulkDriverActionResult currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("failedDriverIds", (n) -> { currentObject.setFailedDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("notFoundDriverIds", (n) -> { currentObject.setNotFoundDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

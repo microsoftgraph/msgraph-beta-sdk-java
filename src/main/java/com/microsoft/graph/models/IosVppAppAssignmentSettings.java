@@ -41,7 +41,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVppAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
             this.put("uninstallOnDeviceRemoval", (n) -> { currentObject.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
             this.put("useDeviceLicensing", (n) -> { currentObject.setUseDeviceLicensing(n.getBooleanValue()); });

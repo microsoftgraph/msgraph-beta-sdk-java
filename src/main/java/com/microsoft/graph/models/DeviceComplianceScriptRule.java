@@ -82,7 +82,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptRule currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(DataType.class)); });
             this.put("deviceComplianceScriptRuleDataType", (n) -> { currentObject.setDeviceComplianceScriptRuleDataType(n.getEnumValue(DeviceComplianceScriptRuleDataType.class)); });
             this.put("deviceComplianceScriptRulOperator", (n) -> { currentObject.setDeviceComplianceScriptRulOperator(n.getEnumValue(DeviceComplianceScriptRulOperator.class)); });

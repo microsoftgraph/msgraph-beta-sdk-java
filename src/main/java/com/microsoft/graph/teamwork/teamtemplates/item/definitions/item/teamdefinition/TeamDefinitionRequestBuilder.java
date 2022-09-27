@@ -9,6 +9,7 @@ import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefi
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.group.GroupRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.incomingchannels.IncomingChannelsRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.incomingchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.installedapps.InstalledAppsRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.installedapps.item.TeamsAppInstallationItemRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.members.item.ConversationMemberItemRequestBuilder;
@@ -26,6 +27,7 @@ import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefi
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.item.TeamworkTagItemRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.tags.TagsRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.template.TemplateRequestBuilder;
+import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.templatedefinition.TemplateDefinitionRequestBuilder;
 import com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
@@ -137,6 +139,11 @@ public class TeamDefinitionRequestBuilder {
     public TemplateRequestBuilder template() {
         return new TemplateRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The templateDefinition property */
+    @javax.annotation.Nonnull
+    public TemplateDefinitionRequestBuilder templateDefinition() {
+        return new TemplateDefinitionRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The unarchive property */
     @javax.annotation.Nonnull
     public UnarchiveRequestBuilder unarchive() {
@@ -152,7 +159,7 @@ public class TeamDefinitionRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.allchannels.item.ChannelItemRequestBuilder allChannels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
         return new com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.allchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -164,7 +171,7 @@ public class TeamDefinitionRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
         return new com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -178,7 +185,7 @@ public class TeamDefinitionRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -190,7 +197,7 @@ public class TeamDefinitionRequestBuilder {
      */
     public TeamDefinitionRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -224,7 +231,7 @@ public class TeamDefinitionRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get teamDefinition from teamwork
+     * Get the properties of the team associated with a teamTemplateDefinition object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -232,7 +239,7 @@ public class TeamDefinitionRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get teamDefinition from teamwork
+     * Get the properties of the team associated with a teamTemplateDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -276,6 +283,7 @@ public class TeamDefinitionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final TeamDefinitionRequestBuilderPatchRequestConfiguration requestConfig = new TeamDefinitionRequestBuilderPatchRequestConfiguration();
@@ -292,7 +300,7 @@ public class TeamDefinitionRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -309,7 +317,7 @@ public class TeamDefinitionRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<TeamDefinitionRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -327,7 +335,7 @@ public class TeamDefinitionRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<TeamDefinitionRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -337,13 +345,13 @@ public class TeamDefinitionRequestBuilder {
         }
     }
     /**
-     * Get teamDefinition from teamwork
+     * Get the properties of the team associated with a teamTemplateDefinition object.
      * @return a CompletableFuture of team
      */
     public java.util.concurrent.CompletableFuture<Team> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -353,14 +361,14 @@ public class TeamDefinitionRequestBuilder {
         }
     }
     /**
-     * Get teamDefinition from teamwork
+     * Get the properties of the team associated with a teamTemplateDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of team
      */
     public java.util.concurrent.CompletableFuture<Team> get(@javax.annotation.Nullable final java.util.function.Consumer<TeamDefinitionRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -370,7 +378,7 @@ public class TeamDefinitionRequestBuilder {
         }
     }
     /**
-     * Get teamDefinition from teamwork
+     * Get the properties of the team associated with a teamTemplateDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of team
@@ -378,7 +386,7 @@ public class TeamDefinitionRequestBuilder {
     public java.util.concurrent.CompletableFuture<Team> get(@javax.annotation.Nullable final java.util.function.Consumer<TeamDefinitionRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -395,7 +403,7 @@ public class TeamDefinitionRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.incomingchannels.item.ChannelItemRequestBuilder incomingChannels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
         return new com.microsoft.graph.teamwork.teamtemplates.item.definitions.item.teamdefinition.incomingchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -407,7 +415,7 @@ public class TeamDefinitionRequestBuilder {
     @javax.annotation.Nonnull
     public TeamsAppInstallationItemRequestBuilder installedApps(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("teamsAppInstallation%2Did", id);
         return new TeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -419,7 +427,7 @@ public class TeamDefinitionRequestBuilder {
     @javax.annotation.Nonnull
     public ConversationMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("conversationMember%2Did", id);
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -431,7 +439,7 @@ public class TeamDefinitionRequestBuilder {
     @javax.annotation.Nonnull
     public TeamsAsyncOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("teamsAsyncOperation%2Did", id);
         return new TeamsAsyncOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -443,23 +451,23 @@ public class TeamDefinitionRequestBuilder {
     @javax.annotation.Nonnull
     public UserItemRequestBuilder owners(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("user%2Did", id);
         return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property teamDefinition in teamwork
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of team
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Team body) {
+    public java.util.concurrent.CompletableFuture<Team> patch(@javax.annotation.Nonnull final Team body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Team::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -468,16 +476,16 @@ public class TeamDefinitionRequestBuilder {
      * Update the navigation property teamDefinition in teamwork
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of team
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Team body, @javax.annotation.Nullable final java.util.function.Consumer<TeamDefinitionRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Team> patch(@javax.annotation.Nonnull final Team body, @javax.annotation.Nullable final java.util.function.Consumer<TeamDefinitionRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Team::createFromDiscriminatorValue, null, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -487,17 +495,17 @@ public class TeamDefinitionRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of team
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Team body, @javax.annotation.Nullable final java.util.function.Consumer<TeamDefinitionRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<Team> patch(@javax.annotation.Nonnull final Team body, @javax.annotation.Nullable final java.util.function.Consumer<TeamDefinitionRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Team::createFromDiscriminatorValue, responseHandler, errorMapping);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -510,7 +518,7 @@ public class TeamDefinitionRequestBuilder {
     @javax.annotation.Nonnull
     public ResourceSpecificPermissionGrantItemRequestBuilder permissionGrants(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("resourceSpecificPermissionGrant%2Did", id);
         return new ResourceSpecificPermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -522,7 +530,7 @@ public class TeamDefinitionRequestBuilder {
     @javax.annotation.Nonnull
     public TeamworkTagItemRequestBuilder tags(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("teamworkTag%2Did", id);
         return new TeamworkTagItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -533,7 +541,7 @@ public class TeamDefinitionRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new teamDefinitionRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -541,7 +549,7 @@ public class TeamDefinitionRequestBuilder {
         public TeamDefinitionRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get teamDefinition from teamwork */
+    /** Get the properties of the team associated with a teamTemplateDefinition object. */
     public class TeamDefinitionRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -559,7 +567,7 @@ public class TeamDefinitionRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TeamDefinitionRequestBuilderGetQueryParameters queryParameters = new TeamDefinitionRequestBuilderGetQueryParameters();
@@ -577,7 +585,7 @@ public class TeamDefinitionRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new teamDefinitionRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

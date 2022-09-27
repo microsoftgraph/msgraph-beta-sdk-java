@@ -99,7 +99,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationDetail currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getStringValue()); });
             this.put("authenticationMethodDetail", (n) -> { currentObject.setAuthenticationMethodDetail(n.getStringValue()); });
             this.put("authenticationStepDateTime", (n) -> { currentObject.setAuthenticationStepDateTime(n.getOffsetDateTimeValue()); });

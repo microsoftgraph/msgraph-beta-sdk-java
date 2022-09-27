@@ -55,7 +55,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSCustomAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
             this.put("configurationXml", (n) -> { currentObject.setConfigurationXml(n.getByteArrayValue()); });
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });

@@ -11,23 +11,23 @@ import java.util.Objects;
 /** Graph model for a reusable setting */
 public class DeviceManagementReusablePolicySetting extends Entity implements Parsable {
     /** reusable setting creation date and time. This property is read-only. */
-    private OffsetDateTime _createdDateTime;
+    private final OffsetDateTime _createdDateTime;
     /** reusable setting description supplied by user. */
     private String _description;
     /** reusable setting display name supplied by user. */
     private String _displayName;
     /** date and time when reusable setting was last modified. This property is read-only. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private final OffsetDateTime _lastModifiedDateTime;
     /** configuration policies referencing the current reusable setting. This property is read-only. */
     private java.util.List<DeviceManagementConfigurationPolicy> _referencingConfigurationPolicies;
     /** count of configuration policies referencing the current reusable setting. Valid values 0 to 2147483647. This property is read-only. */
-    private Integer _referencingConfigurationPolicyCount;
+    private final Integer _referencingConfigurationPolicyCount;
     /** setting definition id associated with this reusable setting. */
     private String _settingDefinitionId;
     /** reusable setting configuration instance */
     private DeviceManagementConfigurationSettingInstance _settingInstance;
     /** version number for reusable setting. Valid values 0 to 2147483647. This property is read-only. */
-    private Integer _version;
+    private final Integer _version;
     /**
      * Instantiates a new deviceManagementReusablePolicySetting and sets the default values.
      * @return a void
@@ -77,7 +77,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementReusablePolicySetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -145,15 +145,11 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfObjectValues("referencingConfigurationPolicies", this.getReferencingConfigurationPolicies());
-        writer.writeIntegerValue("referencingConfigurationPolicyCount", this.getReferencingConfigurationPolicyCount());
         writer.writeStringValue("settingDefinitionId", this.getSettingDefinitionId());
         writer.writeObjectValue("settingInstance", this.getSettingInstance());
-        writer.writeIntegerValue("version", this.getVersion());
     }
     /**
      * Sets the createdDateTime property value. reusable setting creation date and time. This property is read-only.

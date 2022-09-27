@@ -74,7 +74,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentRequestRequirements currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("existingAnswers", (n) -> { currentObject.setExistingAnswers(n.getCollectionOfObjectValues(AccessPackageAnswer::createFromDiscriminatorValue)); });
             this.put("isApprovalRequired", (n) -> { currentObject.setIsApprovalRequired(n.getBooleanValue()); });
             this.put("isApprovalRequiredForExtension", (n) -> { currentObject.setIsApprovalRequiredForExtension(n.getBooleanValue()); });

@@ -76,7 +76,7 @@ public class TimeCardEntry implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeCardEntry currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("breaks", (n) -> { currentObject.setBreaks(n.getCollectionOfObjectValues(TimeCardBreak::createFromDiscriminatorValue)); });
             this.put("clockInEvent", (n) -> { currentObject.setClockInEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
             this.put("clockOutEvent", (n) -> { currentObject.setClockOutEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });

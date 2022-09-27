@@ -9,33 +9,34 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TaskReport extends Entity implements Parsable {
-    /** The completedDateTime property */
+    /** The date time that the associated run completed. Value is null if the run has not completed. */
     private OffsetDateTime _completedDateTime;
-    /** The failedUsersCount property */
+    /** The number of users in the run execution for which the associated task failed. */
     private Integer _failedUsersCount;
-    /** The lastUpdatedDateTime property */
+    /** The date and time that the task report was last updated. */
     private OffsetDateTime _lastUpdatedDateTime;
     /** The processingStatus property */
     private LifecycleWorkflowProcessingStatus _processingStatus;
-    /** The runId property */
+    /** The unique identifier of the associated run. */
     private String _runId;
-    /** The startedDateTime property */
+    /** The date time that the associated run started. Value is null if the run has not started. */
     private OffsetDateTime _startedDateTime;
-    /** The successfulUsersCount property */
+    /** The number of users in the run execution for which the associated task succeeded. */
     private Integer _successfulUsersCount;
     /** The task property */
     private Task _task;
     /** The taskDefinition property */
     private TaskDefinition _taskDefinition;
-    /** The taskProcessingResults property */
+    /** The related lifecycle workflow taskProcessingResults. */
     private java.util.List<TaskProcessingResult> _taskProcessingResults;
-    /** The totalUsersCount property */
+    /** The total number of users in the run execution for which the associated task was scheduled to execute. */
     private Integer _totalUsersCount;
-    /** The unprocessedUsersCount property */
+    /** The number of users in the run execution for which the associated task is queued, in progress, or canceled. */
     private Integer _unprocessedUsersCount;
     /**
-     * Instantiates a new TaskReport and sets the default values.
+     * Instantiates a new taskReport and sets the default values.
      * @return a void
      */
     public TaskReport() {
@@ -45,7 +46,7 @@ public class TaskReport extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TaskReport
+     * @return a taskReport
      */
     @javax.annotation.Nonnull
     public static TaskReport createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +54,7 @@ public class TaskReport extends Entity implements Parsable {
         return new TaskReport();
     }
     /**
-     * Gets the completedDateTime property value. The completedDateTime property
+     * Gets the completedDateTime property value. The date time that the associated run completed. Value is null if the run has not completed.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -61,7 +62,7 @@ public class TaskReport extends Entity implements Parsable {
         return this._completedDateTime;
     }
     /**
-     * Gets the failedUsersCount property value. The failedUsersCount property
+     * Gets the failedUsersCount property value. The number of users in the run execution for which the associated task failed.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -75,7 +76,7 @@ public class TaskReport extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TaskReport currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
             this.put("failedUsersCount", (n) -> { currentObject.setFailedUsersCount(n.getIntegerValue()); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
@@ -91,7 +92,7 @@ public class TaskReport extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * Gets the lastUpdatedDateTime property value. The date and time that the task report was last updated.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -107,7 +108,7 @@ public class TaskReport extends Entity implements Parsable {
         return this._processingStatus;
     }
     /**
-     * Gets the runId property value. The runId property
+     * Gets the runId property value. The unique identifier of the associated run.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -115,7 +116,7 @@ public class TaskReport extends Entity implements Parsable {
         return this._runId;
     }
     /**
-     * Gets the startedDateTime property value. The startedDateTime property
+     * Gets the startedDateTime property value. The date time that the associated run started. Value is null if the run has not started.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -123,7 +124,7 @@ public class TaskReport extends Entity implements Parsable {
         return this._startedDateTime;
     }
     /**
-     * Gets the successfulUsersCount property value. The successfulUsersCount property
+     * Gets the successfulUsersCount property value. The number of users in the run execution for which the associated task succeeded.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -147,7 +148,7 @@ public class TaskReport extends Entity implements Parsable {
         return this._taskDefinition;
     }
     /**
-     * Gets the taskProcessingResults property value. The taskProcessingResults property
+     * Gets the taskProcessingResults property value. The related lifecycle workflow taskProcessingResults.
      * @return a taskProcessingResult
      */
     @javax.annotation.Nullable
@@ -155,7 +156,7 @@ public class TaskReport extends Entity implements Parsable {
         return this._taskProcessingResults;
     }
     /**
-     * Gets the totalUsersCount property value. The totalUsersCount property
+     * Gets the totalUsersCount property value. The total number of users in the run execution for which the associated task was scheduled to execute.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -163,7 +164,7 @@ public class TaskReport extends Entity implements Parsable {
         return this._totalUsersCount;
     }
     /**
-     * Gets the unprocessedUsersCount property value. The unprocessedUsersCount property
+     * Gets the unprocessedUsersCount property value. The number of users in the run execution for which the associated task is queued, in progress, or canceled.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -192,7 +193,7 @@ public class TaskReport extends Entity implements Parsable {
         writer.writeIntegerValue("unprocessedUsersCount", this.getUnprocessedUsersCount());
     }
     /**
-     * Sets the completedDateTime property value. The completedDateTime property
+     * Sets the completedDateTime property value. The date time that the associated run completed. Value is null if the run has not completed.
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
@@ -200,7 +201,7 @@ public class TaskReport extends Entity implements Parsable {
         this._completedDateTime = value;
     }
     /**
-     * Sets the failedUsersCount property value. The failedUsersCount property
+     * Sets the failedUsersCount property value. The number of users in the run execution for which the associated task failed.
      * @param value Value to set for the failedUsersCount property.
      * @return a void
      */
@@ -208,7 +209,7 @@ public class TaskReport extends Entity implements Parsable {
         this._failedUsersCount = value;
     }
     /**
-     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * Sets the lastUpdatedDateTime property value. The date and time that the task report was last updated.
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
@@ -224,7 +225,7 @@ public class TaskReport extends Entity implements Parsable {
         this._processingStatus = value;
     }
     /**
-     * Sets the runId property value. The runId property
+     * Sets the runId property value. The unique identifier of the associated run.
      * @param value Value to set for the runId property.
      * @return a void
      */
@@ -232,7 +233,7 @@ public class TaskReport extends Entity implements Parsable {
         this._runId = value;
     }
     /**
-     * Sets the startedDateTime property value. The startedDateTime property
+     * Sets the startedDateTime property value. The date time that the associated run started. Value is null if the run has not started.
      * @param value Value to set for the startedDateTime property.
      * @return a void
      */
@@ -240,7 +241,7 @@ public class TaskReport extends Entity implements Parsable {
         this._startedDateTime = value;
     }
     /**
-     * Sets the successfulUsersCount property value. The successfulUsersCount property
+     * Sets the successfulUsersCount property value. The number of users in the run execution for which the associated task succeeded.
      * @param value Value to set for the successfulUsersCount property.
      * @return a void
      */
@@ -264,7 +265,7 @@ public class TaskReport extends Entity implements Parsable {
         this._taskDefinition = value;
     }
     /**
-     * Sets the taskProcessingResults property value. The taskProcessingResults property
+     * Sets the taskProcessingResults property value. The related lifecycle workflow taskProcessingResults.
      * @param value Value to set for the taskProcessingResults property.
      * @return a void
      */
@@ -272,7 +273,7 @@ public class TaskReport extends Entity implements Parsable {
         this._taskProcessingResults = value;
     }
     /**
-     * Sets the totalUsersCount property value. The totalUsersCount property
+     * Sets the totalUsersCount property value. The total number of users in the run execution for which the associated task was scheduled to execute.
      * @param value Value to set for the totalUsersCount property.
      * @return a void
      */
@@ -280,7 +281,7 @@ public class TaskReport extends Entity implements Parsable {
         this._totalUsersCount = value;
     }
     /**
-     * Sets the unprocessedUsersCount property value. The unprocessedUsersCount property
+     * Sets the unprocessedUsersCount property value. The number of users in the run execution for which the associated task is queued, in progress, or canceled.
      * @param value Value to set for the unprocessedUsersCount property.
      * @return a void
      */

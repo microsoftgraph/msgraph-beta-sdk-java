@@ -56,7 +56,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfigurationGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceConfiguration", (n) -> { currentObject.setDeviceConfiguration(n.getObjectValue(DeviceConfiguration::createFromDiscriminatorValue)); });
             this.put("excludeGroup", (n) -> { currentObject.setExcludeGroup(n.getBooleanValue()); });
             this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });

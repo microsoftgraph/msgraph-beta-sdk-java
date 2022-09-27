@@ -69,7 +69,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSMinimumOperatingSystem currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("v10_10", (n) -> { currentObject.setV10_10(n.getBooleanValue()); });
             this.put("v10_11", (n) -> { currentObject.setV10_11(n.getBooleanValue()); });

@@ -53,7 +53,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedAccess currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(GovernanceResource::createFromDiscriminatorValue)); });
             this.put("roleAssignmentRequests", (n) -> { currentObject.setRoleAssignmentRequests(n.getCollectionOfObjectValues(GovernanceRoleAssignmentRequest::createFromDiscriminatorValue)); });

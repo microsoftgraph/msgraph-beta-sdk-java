@@ -67,7 +67,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutOfBoxExperienceSettings currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("deviceUsageType", (n) -> { currentObject.setDeviceUsageType(n.getEnumValue(WindowsDeviceUsageType.class)); });
             this.put("hideEscapeLink", (n) -> { currentObject.setHideEscapeLink(n.getBooleanValue()); });
             this.put("hideEULA", (n) -> { currentObject.setHideEULA(n.getBooleanValue()); });

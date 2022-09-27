@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class TeamworkDevice extends Entity implements Parsable {
     /** The activity properties that change based on the device usage. */
     private TeamworkDeviceActivity _activity;
@@ -129,7 +129,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(TeamworkDeviceActivity::createFromDiscriminatorValue)); });
             this.put("activityState", (n) -> { currentObject.setActivityState(n.getEnumValue(TeamworkDeviceActivityState.class)); });
             this.put("companyAssetTag", (n) -> { currentObject.setCompanyAssetTag(n.getStringValue()); });

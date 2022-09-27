@@ -37,7 +37,7 @@ public class WinGetApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WinGetApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("installExperience", (n) -> { currentObject.setInstallExperience(n.getObjectValue(WinGetAppInstallExperience::createFromDiscriminatorValue)); });
             this.put("packageIdentifier", (n) -> { currentObject.setPackageIdentifier(n.getStringValue()); });
         }};

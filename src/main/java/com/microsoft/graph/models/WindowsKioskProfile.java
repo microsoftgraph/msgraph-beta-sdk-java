@@ -17,7 +17,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
     private String _odataType;
     /** Key of the entity. */
     private String _profileId;
-    /** This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned. */
+    /** This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned. */
     private String _profileName;
     /** The user accounts that will be locked to this kiosk configuration. This collection can contain a maximum of 100 elements. */
     private java.util.List<WindowsKioskUser> _userAccountsConfiguration;
@@ -62,7 +62,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskProfile currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("appConfiguration", (n) -> { currentObject.setAppConfiguration(n.getObjectValue(WindowsKioskAppConfiguration::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("profileId", (n) -> { currentObject.setProfileId(n.getStringValue()); });
@@ -87,7 +87,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
         return this._profileId;
     }
     /**
-     * Gets the profileName property value. This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+     * Gets the profileName property value. This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
         this._profileId = value;
     }
     /**
-     * Sets the profileName property value. This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+     * Sets the profileName property value. This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      * @param value Value to set for the profileName property.
      * @return a void
      */

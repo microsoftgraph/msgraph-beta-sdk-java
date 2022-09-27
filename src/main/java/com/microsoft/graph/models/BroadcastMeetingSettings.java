@@ -74,7 +74,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BroadcastMeetingSettings currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("allowedAudience", (n) -> { currentObject.setAllowedAudience(n.getEnumValue(BroadcastMeetingAudience.class)); });
             this.put("captions", (n) -> { currentObject.setCaptions(n.getObjectValue(BroadcastMeetingCaptionSettings::createFromDiscriminatorValue)); });
             this.put("isAttendeeReportEnabled", (n) -> { currentObject.setIsAttendeeReportEnabled(n.getBooleanValue()); });

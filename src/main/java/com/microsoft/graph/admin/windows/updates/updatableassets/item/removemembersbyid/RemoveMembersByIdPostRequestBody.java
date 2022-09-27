@@ -48,7 +48,7 @@ public class RemoveMembersByIdPostRequestBody implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoveMembersByIdPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("ids", (n) -> { currentObject.setIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("memberEntityType", (n) -> { currentObject.setMemberEntityType(n.getStringValue()); });
         }};

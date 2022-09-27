@@ -55,7 +55,7 @@ public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAc
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10XTrustedRootCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certFileName", (n) -> { currentObject.setCertFileName(n.getStringValue()); });
             this.put("destinationStore", (n) -> { currentObject.setDestinationStore(n.getEnumValue(CertificateDestinationStore.class)); });
             this.put("trustedRootCertificate", (n) -> { currentObject.setTrustedRootCertificate(n.getByteArrayValue()); });

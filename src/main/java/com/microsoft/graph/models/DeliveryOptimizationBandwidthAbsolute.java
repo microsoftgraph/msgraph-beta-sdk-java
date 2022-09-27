@@ -37,7 +37,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeliveryOptimizationBandwidthAbsolute currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maximumDownloadBandwidthInKilobytesPerSecond", (n) -> { currentObject.setMaximumDownloadBandwidthInKilobytesPerSecond(n.getLongValue()); });
             this.put("maximumUploadBandwidthInKilobytesPerSecond", (n) -> { currentObject.setMaximumUploadBandwidthInKilobytesPerSecond(n.getLongValue()); });
         }};

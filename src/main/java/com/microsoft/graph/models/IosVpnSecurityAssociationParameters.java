@@ -55,7 +55,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVpnSecurityAssociationParameters currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("lifetimeInMinutes", (n) -> { currentObject.setLifetimeInMinutes(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("securityDiffieHellmanGroup", (n) -> { currentObject.setSecurityDiffieHellmanGroup(n.getIntegerValue()); });

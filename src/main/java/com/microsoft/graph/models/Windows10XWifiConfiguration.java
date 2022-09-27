@@ -63,7 +63,7 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10XWifiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationCertificateId", (n) -> { currentObject.setAuthenticationCertificateId(n.getStringValue()); });
             this.put("customXml", (n) -> { currentObject.setCustomXml(n.getByteArrayValue()); });
             this.put("customXmlFileName", (n) -> { currentObject.setCustomXmlFileName(n.getStringValue()); });

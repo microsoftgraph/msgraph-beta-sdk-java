@@ -50,7 +50,7 @@ public class AuthenticationConditionsApplications implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationConditionsApplications currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("includeAllApplications", (n) -> { currentObject.setIncludeAllApplications(n.getBooleanValue()); });
             this.put("includeApplications", (n) -> { currentObject.setIncludeApplications(n.getCollectionOfObjectValues(AuthenticationConditionApplication::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

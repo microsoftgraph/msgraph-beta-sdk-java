@@ -13,15 +13,15 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     /** Policy assignments */
     private java.util.List<DeviceManagementConfigurationPolicyAssignment> _assignments;
     /** Policy creation date and time. This property is read-only. */
-    private OffsetDateTime _createdDateTime;
+    private final OffsetDateTime _createdDateTime;
     /** Policy creation source */
     private String _creationSource;
     /** Policy description */
     private String _description;
     /** Policy assignment status. This property is read-only. */
-    private Boolean _isAssigned;
+    private final Boolean _isAssigned;
     /** Policy last modification date and time. This property is read-only. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private final OffsetDateTime _lastModifiedDateTime;
     /** Policy name */
     private String _name;
     /** Supported platform types. */
@@ -31,7 +31,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     /** The list of scheduled action for this rule */
     private java.util.List<DeviceManagementComplianceScheduledActionForRule> _scheduledActionsForRule;
     /** Number of settings. This property is read-only. */
-    private Integer _settingCount;
+    private final Integer _settingCount;
     /** Policy settings */
     private java.util.List<DeviceManagementConfigurationSetting> _settings;
     /** Describes which technology this setting can be deployed with */
@@ -93,7 +93,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicyAssignment::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("creationSource", (n) -> { currentObject.setCreationSource(n.getStringValue()); });
@@ -190,16 +190,12 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("creationSource", this.getCreationSource());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeBooleanValue("isAssigned", this.getIsAssigned());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("name", this.getName());
         writer.writeEnumValue("platforms", this.getPlatforms());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeCollectionOfObjectValues("scheduledActionsForRule", this.getScheduledActionsForRule());
-        writer.writeIntegerValue("settingCount", this.getSettingCount());
         writer.writeCollectionOfObjectValues("settings", this.getSettings());
         writer.writeEnumValue("technologies", this.getTechnologies());
     }

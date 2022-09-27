@@ -8,21 +8,22 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TaskDefinition extends Entity implements Parsable {
     /** The category property */
     private LifecycleTaskCategory _category;
     /** The continueOnError property */
     private Boolean _continueOnError;
-    /** The description property */
+    /** The description of the taskDefinition. */
     private String _description;
-    /** The displayName property */
+    /** The display name of the taskDefinition. */
     private String _displayName;
-    /** The parameters property */
+    /** The parameters that must be supplied when creating a task. */
     private java.util.List<Parameter> _parameters;
-    /** The version property */
+    /** The version number of the taskDefinition. New records are pushed when we add support for new parameters. */
     private Integer _version;
     /**
-     * Instantiates a new TaskDefinition and sets the default values.
+     * Instantiates a new taskDefinition and sets the default values.
      * @return a void
      */
     public TaskDefinition() {
@@ -32,7 +33,7 @@ public class TaskDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TaskDefinition
+     * @return a taskDefinition
      */
     @javax.annotation.Nonnull
     public static TaskDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +57,7 @@ public class TaskDefinition extends Entity implements Parsable {
         return this._continueOnError;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the taskDefinition.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -64,7 +65,7 @@ public class TaskDefinition extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the taskDefinition.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -78,7 +79,7 @@ public class TaskDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TaskDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(LifecycleTaskCategory.class)); });
             this.put("continueOnError", (n) -> { currentObject.setContinueOnError(n.getBooleanValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -88,7 +89,7 @@ public class TaskDefinition extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the parameters property value. The parameters property
+     * Gets the parameters property value. The parameters that must be supplied when creating a task.
      * @return a parameter
      */
     @javax.annotation.Nullable
@@ -96,7 +97,7 @@ public class TaskDefinition extends Entity implements Parsable {
         return this._parameters;
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version number of the taskDefinition. New records are pushed when we add support for new parameters.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -135,7 +136,7 @@ public class TaskDefinition extends Entity implements Parsable {
         this._continueOnError = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the taskDefinition.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -143,7 +144,7 @@ public class TaskDefinition extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the taskDefinition.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -151,7 +152,7 @@ public class TaskDefinition extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the parameters property value. The parameters property
+     * Sets the parameters property value. The parameters that must be supplied when creating a task.
      * @param value Value to set for the parameters property.
      * @return a void
      */
@@ -159,7 +160,7 @@ public class TaskDefinition extends Entity implements Parsable {
         this._parameters = value;
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version number of the taskDefinition. New records are pushed when we add support for new parameters.
      * @param value Value to set for the version property.
      * @return a void
      */

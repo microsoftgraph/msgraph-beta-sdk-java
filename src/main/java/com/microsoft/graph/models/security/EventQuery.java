@@ -50,7 +50,7 @@ public class EventQuery implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EventQuery currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("query", (n) -> { currentObject.setQuery(n.getStringValue()); });
             this.put("queryType", (n) -> { currentObject.setQueryType(n.getEnumValue(QueryType.class)); });

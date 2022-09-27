@@ -34,7 +34,7 @@ public class AddToReviewSetOperationRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/sourceCollections/{sourceCollection%2Did}/addToReviewSetOperation{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -46,13 +46,13 @@ public class AddToReviewSetOperationRequestBuilder {
      */
     public AddToReviewSetOperationRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/sourceCollections/{sourceCollection%2Did}/addToReviewSetOperation{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Adds the results of the sourceCollection to the specified reviewSet.
+     * Get the last addToReviewSetOperation object associated with a source collection. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class AddToReviewSetOperationRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Adds the results of the sourceCollection to the specified reviewSet.
+     * Get the last addToReviewSetOperation object associated with a source collection. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,13 +82,13 @@ public class AddToReviewSetOperationRequestBuilder {
         return requestInfo;
     }
     /**
-     * Adds the results of the sourceCollection to the specified reviewSet.
+     * Get the last addToReviewSetOperation object associated with a source collection. 
      * @return a CompletableFuture of addToReviewSetOperation
      */
     public java.util.concurrent.CompletableFuture<AddToReviewSetOperation> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -98,14 +98,14 @@ public class AddToReviewSetOperationRequestBuilder {
         }
     }
     /**
-     * Adds the results of the sourceCollection to the specified reviewSet.
+     * Get the last addToReviewSetOperation object associated with a source collection. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of addToReviewSetOperation
      */
     public java.util.concurrent.CompletableFuture<AddToReviewSetOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<AddToReviewSetOperationRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -115,7 +115,7 @@ public class AddToReviewSetOperationRequestBuilder {
         }
     }
     /**
-     * Adds the results of the sourceCollection to the specified reviewSet.
+     * Get the last addToReviewSetOperation object associated with a source collection. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of addToReviewSetOperation
@@ -123,7 +123,7 @@ public class AddToReviewSetOperationRequestBuilder {
     public java.util.concurrent.CompletableFuture<AddToReviewSetOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<AddToReviewSetOperationRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -132,7 +132,7 @@ public class AddToReviewSetOperationRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Adds the results of the sourceCollection to the specified reviewSet. */
+    /** Get the last addToReviewSetOperation object associated with a source collection.  */
     public class AddToReviewSetOperationRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -150,7 +150,7 @@ public class AddToReviewSetOperationRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AddToReviewSetOperationRequestBuilderGetQueryParameters queryParameters = new AddToReviewSetOperationRequestBuilderGetQueryParameters();

@@ -58,7 +58,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessRuleSatisfied currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("conditionalAccessCondition", (n) -> { currentObject.setConditionalAccessCondition(n.getEnumValue(ConditionalAccessConditions.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("ruleSatisfied", (n) -> { currentObject.setRuleSatisfied(n.getEnumValue(ConditionalAccessRule.class)); });

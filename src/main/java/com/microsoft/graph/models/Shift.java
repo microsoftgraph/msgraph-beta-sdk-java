@@ -51,7 +51,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Shift currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("draftShift", (n) -> { currentObject.setDraftShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
             this.put("isStagedForDeletion", (n) -> { currentObject.setIsStagedForDeletion(n.getBooleanValue()); });
             this.put("schedulingGroupId", (n) -> { currentObject.setSchedulingGroupId(n.getStringValue()); });

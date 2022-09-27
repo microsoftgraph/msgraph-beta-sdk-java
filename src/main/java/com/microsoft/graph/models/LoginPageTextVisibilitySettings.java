@@ -58,7 +58,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LoginPageTextVisibilitySettings currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("hideAccountResetCredentials", (n) -> { currentObject.setHideAccountResetCredentials(n.getBooleanValue()); });
             this.put("hideCannotAccessYourAccount", (n) -> { currentObject.setHideCannotAccessYourAccount(n.getBooleanValue()); });
             this.put("hideForgotMyPassword", (n) -> { currentObject.setHideForgotMyPassword(n.getBooleanValue()); });

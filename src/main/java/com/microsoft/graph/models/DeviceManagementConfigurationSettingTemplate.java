@@ -38,7 +38,7 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("settingDefinitions", (n) -> { currentObject.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
             this.put("settingInstanceTemplate", (n) -> { currentObject.setSettingInstanceTemplate(n.getObjectValue(DeviceManagementConfigurationSettingInstanceTemplate::createFromDiscriminatorValue)); });
         }};

@@ -48,7 +48,7 @@ public class RevokeLicensesPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RevokeLicensesPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("notifyManagedDevices", (n) -> { currentObject.setNotifyManagedDevices(n.getBooleanValue()); });
             this.put("revokeUntrackedLicenses", (n) -> { currentObject.setRevokeUntrackedLicenses(n.getBooleanValue()); });
         }};

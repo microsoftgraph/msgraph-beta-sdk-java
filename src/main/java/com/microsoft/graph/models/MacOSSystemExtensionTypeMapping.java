@@ -59,7 +59,7 @@ public class MacOSSystemExtensionTypeMapping implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSSystemExtensionTypeMapping currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("allowedTypes", (n) -> { currentObject.setAllowedTypes(n.getEnumValue(MacOSSystemExtensionType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("teamIdentifier", (n) -> { currentObject.setTeamIdentifier(n.getStringValue()); });

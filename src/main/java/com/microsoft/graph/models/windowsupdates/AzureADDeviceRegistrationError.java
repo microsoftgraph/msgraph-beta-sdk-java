@@ -35,7 +35,7 @@ public class AzureADDeviceRegistrationError extends UpdatableAssetError implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AzureADDeviceRegistrationError currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("reason", (n) -> { currentObject.setReason(n.getEnumValue(AzureADDeviceRegistrationErrorReason.class)); });
         }};
     }

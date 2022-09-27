@@ -54,7 +54,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10AppsForceUpdateSchedule currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getEnumValue(Windows10AppsUpdateRecurrence.class)); });
             this.put("runImmediatelyIfAfterStartDateTime", (n) -> { currentObject.setRunImmediatelyIfAfterStartDateTime(n.getBooleanValue()); });

@@ -69,7 +69,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HybridAgentUpdaterConfiguration currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("allowUpdateConfigurationOverride", (n) -> { currentObject.setAllowUpdateConfigurationOverride(n.getBooleanValue()); });
             this.put("deferUpdateDateTime", (n) -> { currentObject.setDeferUpdateDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

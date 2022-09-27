@@ -51,7 +51,7 @@ public class UpdateWindow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateWindow currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("updateWindowEndTime", (n) -> { currentObject.setUpdateWindowEndTime(n.getLocalTimeValue()); });
             this.put("updateWindowStartTime", (n) -> { currentObject.setUpdateWindowStartTime(n.getLocalTimeValue()); });

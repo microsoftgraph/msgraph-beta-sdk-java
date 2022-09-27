@@ -2,6 +2,7 @@ package com.microsoft.graph.print.reports.getrelyingpartydetailedsummarywithperi
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
+import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -32,8 +33,8 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder {
     public GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter, @javax.annotation.Nullable final String period) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/print/reports/microsoft.graph.getRelyingPartyDetailedSummary(period='{period}')";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/print/reports/microsoft.graph.getRelyingPartyDetailedSummary(period='{period}'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         urlTplParams.put("period", period);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -45,8 +46,8 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder {
      * @return a void
      */
     public GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/print/reports/microsoft.graph.getRelyingPartyDetailedSummary(period='{period}')";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/print/reports/microsoft.graph.getRelyingPartyDetailedSummary(period='{period}'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -75,6 +76,7 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder {
         if (requestConfiguration != null) {
             final GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
@@ -87,7 +89,7 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetRelyingPartyDetailedSummaryWithPeriodResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -104,7 +106,7 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetRelyingPartyDetailedSummaryWithPeriodResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -122,7 +124,7 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetRelyingPartyDetailedSummaryWithPeriodResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -131,6 +133,37 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
+    /** Invoke function getRelyingPartyDetailedSummary */
+    public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetQueryParameters {
+        /** Include count of items */
+        @QueryParameter(name = "%24count")
+        @javax.annotation.Nullable
+        public Boolean count;
+        /** Filter items by property values */
+        @QueryParameter(name = "%24filter")
+        @javax.annotation.Nullable
+        public String filter;
+        /** Order items by property values */
+        @QueryParameter(name = "%24orderby")
+        @javax.annotation.Nullable
+        public String[] orderby;
+        /** Search items by search phrases */
+        @QueryParameter(name = "%24search")
+        @javax.annotation.Nullable
+        public String search;
+        /** Select properties to be returned */
+        @QueryParameter(name = "%24select")
+        @javax.annotation.Nullable
+        public String[] select;
+        /** Skip the first n items */
+        @QueryParameter(name = "%24skip")
+        @javax.annotation.Nullable
+        public Integer skip;
+        /** Show only the first n items */
+        @QueryParameter(name = "%24top")
+        @javax.annotation.Nullable
+        public Integer top;
+    }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration {
         /** Request headers */
@@ -138,7 +171,10 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
+        /** Request query parameters */
+        @javax.annotation.Nullable
+        public GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetQueryParameters queryParameters = new GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetQueryParameters();
         /**
          * Instantiates a new getRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void

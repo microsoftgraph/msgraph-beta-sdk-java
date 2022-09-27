@@ -54,7 +54,7 @@ public class QualityUpdateReference extends WindowsUpdateReference implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final QualityUpdateReference currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(QualityUpdateClassification.class)); });
             this.put("releaseDateTime", (n) -> { currentObject.setReleaseDateTime(n.getOffsetDateTimeValue()); });
         }};

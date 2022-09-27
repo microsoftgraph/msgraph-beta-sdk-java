@@ -163,7 +163,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationTaskExecution currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<String, Consumer<ParseNode>>(15) {{
             this.put("activityIdentifier", (n) -> { currentObject.setActivityIdentifier(n.getStringValue()); });
             this.put("countEntitled", (n) -> { currentObject.setCountEntitled(n.getLongValue()); });
             this.put("countEntitledForProvisioning", (n) -> { currentObject.setCountEntitledForProvisioning(n.getLongValue()); });

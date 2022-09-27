@@ -53,7 +53,7 @@ public class ProtectSite extends LabelActionBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProtectSite currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessType", (n) -> { currentObject.setAccessType(n.getEnumValue(SiteAccessType.class)); });
             this.put("conditionalAccessProtectionLevelId", (n) -> { currentObject.setConditionalAccessProtectionLevelId(n.getStringValue()); });
         }};

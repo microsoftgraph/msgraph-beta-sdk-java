@@ -35,7 +35,7 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationEventsPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("onSignupStart", (n) -> { currentObject.setOnSignupStart(n.getCollectionOfObjectValues(AuthenticationListener::createFromDiscriminatorValue)); });
         }};
     }

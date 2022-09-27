@@ -83,7 +83,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskWin32App currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classicAppPath", (n) -> { currentObject.setClassicAppPath(n.getStringValue()); });
             this.put("edgeKiosk", (n) -> { currentObject.setEdgeKiosk(n.getStringValue()); });
             this.put("edgeKioskIdleTimeoutMinutes", (n) -> { currentObject.setEdgeKioskIdleTimeoutMinutes(n.getIntegerValue()); });

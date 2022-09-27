@@ -64,7 +64,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkFeaturesConfiguration currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("emailToSendLogsAndFeedback", (n) -> { currentObject.setEmailToSendLogsAndFeedback(n.getStringValue()); });
             this.put("isAutoScreenShareEnabled", (n) -> { currentObject.setIsAutoScreenShareEnabled(n.getBooleanValue()); });
             this.put("isBluetoothBeaconingEnabled", (n) -> { currentObject.setIsBluetoothBeaconingEnabled(n.getBooleanValue()); });

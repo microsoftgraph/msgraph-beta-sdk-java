@@ -50,7 +50,7 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TranslationLanguageOverride currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("translationBehavior", (n) -> { currentObject.setTranslationBehavior(n.getEnumValue(TranslationBehavior.class)); });

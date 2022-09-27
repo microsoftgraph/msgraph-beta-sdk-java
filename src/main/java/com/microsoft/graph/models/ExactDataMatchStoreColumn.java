@@ -54,7 +54,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExactDataMatchStoreColumn currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("ignoredDelimiters", (n) -> { currentObject.setIgnoredDelimiters(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("isCaseInsensitive", (n) -> { currentObject.setIsCaseInsensitive(n.getBooleanValue()); });
             this.put("isSearchable", (n) -> { currentObject.setIsSearchable(n.getBooleanValue()); });

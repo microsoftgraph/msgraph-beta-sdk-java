@@ -37,7 +37,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RegistryKeyEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("registryHive", (n) -> { currentObject.setRegistryHive(n.getStringValue()); });
             this.put("registryKey", (n) -> { currentObject.setRegistryKey(n.getStringValue()); });
         }};

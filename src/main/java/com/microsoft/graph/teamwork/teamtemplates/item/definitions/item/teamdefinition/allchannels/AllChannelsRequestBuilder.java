@@ -40,7 +40,7 @@ public class AllChannelsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/allChannels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -52,13 +52,13 @@ public class AllChannelsRequestBuilder {
      */
     public AllChannelsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/allChannels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List of channels either hosted in or shared with the team (incoming channels).
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class AllChannelsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List of channels either hosted in or shared with the team (incoming channels).
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,13 +88,13 @@ public class AllChannelsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of channels either hosted in or shared with the team (incoming channels).
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @return a CompletableFuture of ChannelCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ChannelCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -104,14 +104,14 @@ public class AllChannelsRequestBuilder {
         }
     }
     /**
-     * List of channels either hosted in or shared with the team (incoming channels).
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChannelCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ChannelCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AllChannelsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -121,7 +121,7 @@ public class AllChannelsRequestBuilder {
         }
     }
     /**
-     * List of channels either hosted in or shared with the team (incoming channels).
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ChannelCollectionResponse
@@ -129,7 +129,7 @@ public class AllChannelsRequestBuilder {
     public java.util.concurrent.CompletableFuture<ChannelCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AllChannelsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,7 +138,7 @@ public class AllChannelsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List of channels either hosted in or shared with the team (incoming channels). */
+    /** Get the list of channels either in this team or shared with this team (incoming channels). */
     public class AllChannelsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -180,7 +180,7 @@ public class AllChannelsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AllChannelsRequestBuilderGetQueryParameters queryParameters = new AllChannelsRequestBuilderGetQueryParameters();

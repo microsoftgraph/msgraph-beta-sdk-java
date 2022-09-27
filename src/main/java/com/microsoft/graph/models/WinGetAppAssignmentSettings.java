@@ -39,7 +39,7 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WinGetAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("installTimeSettings", (n) -> { currentObject.setInstallTimeSettings(n.getObjectValue(WinGetAppInstallTimeSettings::createFromDiscriminatorValue)); });
             this.put("notifications", (n) -> { currentObject.setNotifications(n.getEnumValue(WinGetAppNotification.class)); });
             this.put("restartSettings", (n) -> { currentObject.setRestartSettings(n.getObjectValue(WinGetAppRestartSettings::createFromDiscriminatorValue)); });

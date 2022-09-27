@@ -49,7 +49,7 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateStatusPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("note", (n) -> { currentObject.setNote(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceAppManagementTaskStatus.class)); });
         }};

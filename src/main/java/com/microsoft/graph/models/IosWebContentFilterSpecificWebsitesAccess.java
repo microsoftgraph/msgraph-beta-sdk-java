@@ -37,7 +37,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosWebContentFilterSpecificWebsitesAccess currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("specificWebsitesOnly", (n) -> { currentObject.setSpecificWebsitesOnly(n.getCollectionOfObjectValues(IosBookmark::createFromDiscriminatorValue)); });
             this.put("websiteList", (n) -> { currentObject.setWebsiteList(n.getCollectionOfObjectValues(IosBookmark::createFromDiscriminatorValue)); });
         }};

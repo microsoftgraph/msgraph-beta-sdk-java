@@ -35,7 +35,7 @@ public class DeviceManagementAbstractComplexSettingDefinition extends DeviceMana
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementAbstractComplexSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("implementations", (n) -> { currentObject.setImplementations(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

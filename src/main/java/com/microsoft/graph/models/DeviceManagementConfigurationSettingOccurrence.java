@@ -50,7 +50,7 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingOccurrence currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("maxDeviceOccurrence", (n) -> { currentObject.setMaxDeviceOccurrence(n.getIntegerValue()); });
             this.put("minDeviceOccurrence", (n) -> { currentObject.setMinDeviceOccurrence(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

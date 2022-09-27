@@ -43,7 +43,7 @@ public class WindowsWebApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsWebApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appUrl", (n) -> { currentObject.setAppUrl(n.getStringValue()); });
         }};
     }

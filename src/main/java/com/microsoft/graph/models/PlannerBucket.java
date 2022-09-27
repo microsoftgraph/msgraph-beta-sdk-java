@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PlannerBucket extends PlannerDelta implements Parsable {
     /** Name of the bucket. */
     private String _name;
@@ -42,7 +42,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerBucket currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
             this.put("planId", (n) -> { currentObject.setPlanId(n.getStringValue()); });

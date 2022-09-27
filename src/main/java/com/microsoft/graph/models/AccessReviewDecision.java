@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class AccessReviewDecision extends Entity implements Parsable {
     /** The feature- generated recommendation shown to the reviewer, one of Approve, Deny or NotAvailable. */
     private String _accessRecommendation;
@@ -93,7 +93,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewDecision currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessRecommendation", (n) -> { currentObject.setAccessRecommendation(n.getStringValue()); });
             this.put("accessReviewId", (n) -> { currentObject.setAccessReviewId(n.getStringValue()); });
             this.put("appliedBy", (n) -> { currentObject.setAppliedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });

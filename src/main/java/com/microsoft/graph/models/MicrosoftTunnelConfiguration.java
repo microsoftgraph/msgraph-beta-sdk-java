@@ -36,7 +36,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     /** The domains that will be resolved using the provided dns servers */
     private java.util.List<String> _splitDNS;
     /**
-     * Instantiates a new MicrosoftTunnelConfiguration and sets the default values.
+     * Instantiates a new microsoftTunnelConfiguration and sets the default values.
      * @return a void
      */
     public MicrosoftTunnelConfiguration() {
@@ -46,7 +46,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftTunnelConfiguration
+     * @return a microsoftTunnelConfiguration
      */
     @javax.annotation.Nonnull
     public static MicrosoftTunnelConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -108,7 +108,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftTunnelConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("advancedSettings", (n) -> { currentObject.setAdvancedSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("defaultDomainSuffix", (n) -> { currentObject.setDefaultDomainSuffix(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });

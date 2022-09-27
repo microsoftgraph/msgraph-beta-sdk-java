@@ -76,7 +76,7 @@ public class Workspace extends Place implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Workspace currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("building", (n) -> { currentObject.setBuilding(n.getStringValue()); });
             this.put("capacity", (n) -> { currentObject.setCapacity(n.getIntegerValue()); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });

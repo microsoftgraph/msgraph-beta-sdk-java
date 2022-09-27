@@ -51,7 +51,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EventMessageRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowNewTimeProposals", (n) -> { currentObject.setAllowNewTimeProposals(n.getBooleanValue()); });
             this.put("previousEndDateTime", (n) -> { currentObject.setPreviousEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("previousLocation", (n) -> { currentObject.setPreviousLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });

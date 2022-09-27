@@ -69,7 +69,7 @@ public class OrganizationalMessageInsights implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageInsights currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("clicks", (n) -> { currentObject.setClicks(n.getIntegerValue()); });
             this.put("dismisses", (n) -> { currentObject.setDismisses(n.getIntegerValue()); });
             this.put("impressions", (n) -> { currentObject.setImpressions(n.getIntegerValue()); });

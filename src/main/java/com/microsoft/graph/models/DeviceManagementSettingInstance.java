@@ -64,7 +64,7 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("definitionId", (n) -> { currentObject.setDefinitionId(n.getStringValue()); });
             this.put("valueJson", (n) -> { currentObject.setValueJson(n.getStringValue()); });
         }};

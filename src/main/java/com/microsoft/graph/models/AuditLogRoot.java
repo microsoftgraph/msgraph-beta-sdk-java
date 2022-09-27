@@ -19,8 +19,6 @@ public class AuditLogRoot implements AdditionalDataHolder, Parsable {
     private String _odataType;
     /** The provisioning property */
     private java.util.List<ProvisioningObjectSummary> _provisioning;
-    /** The restrictedSignIns property */
-    private java.util.List<RestrictedSignIn> _restrictedSignIns;
     /** The signIns property */
     private java.util.List<SignIn> _signIns;
     /**
@@ -72,12 +70,11 @@ public class AuditLogRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditLogRoot currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("directoryAudits", (n) -> { currentObject.setDirectoryAudits(n.getCollectionOfObjectValues(DirectoryAudit::createFromDiscriminatorValue)); });
             this.put("directoryProvisioning", (n) -> { currentObject.setDirectoryProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provisioning", (n) -> { currentObject.setProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
-            this.put("restrictedSignIns", (n) -> { currentObject.setRestrictedSignIns(n.getCollectionOfObjectValues(RestrictedSignIn::createFromDiscriminatorValue)); });
             this.put("signIns", (n) -> { currentObject.setSignIns(n.getCollectionOfObjectValues(SignIn::createFromDiscriminatorValue)); });
         }};
     }
@@ -98,14 +95,6 @@ public class AuditLogRoot implements AdditionalDataHolder, Parsable {
         return this._provisioning;
     }
     /**
-     * Gets the restrictedSignIns property value. The restrictedSignIns property
-     * @return a restrictedSignIn
-     */
-    @javax.annotation.Nullable
-    public java.util.List<RestrictedSignIn> getRestrictedSignIns() {
-        return this._restrictedSignIns;
-    }
-    /**
      * Gets the signIns property value. The signIns property
      * @return a signIn
      */
@@ -124,7 +113,6 @@ public class AuditLogRoot implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("directoryProvisioning", this.getDirectoryProvisioning());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("provisioning", this.getProvisioning());
-        writer.writeCollectionOfObjectValues("restrictedSignIns", this.getRestrictedSignIns());
         writer.writeCollectionOfObjectValues("signIns", this.getSignIns());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -167,14 +155,6 @@ public class AuditLogRoot implements AdditionalDataHolder, Parsable {
      */
     public void setProvisioning(@javax.annotation.Nullable final java.util.List<ProvisioningObjectSummary> value) {
         this._provisioning = value;
-    }
-    /**
-     * Sets the restrictedSignIns property value. The restrictedSignIns property
-     * @param value Value to set for the restrictedSignIns property.
-     * @return a void
-     */
-    public void setRestrictedSignIns(@javax.annotation.Nullable final java.util.List<RestrictedSignIn> value) {
-        this._restrictedSignIns = value;
     }
     /**
      * Sets the signIns property value. The signIns property

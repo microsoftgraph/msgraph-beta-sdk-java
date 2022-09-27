@@ -88,7 +88,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("categoryDescription", (n) -> { currentObject.setCategoryDescription(n.getStringValue()); });
             this.put("childCategoryIds", (n) -> { currentObject.setChildCategoryIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });

@@ -16,7 +16,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     /** Access this property from the derived type itemInsights. */
     private java.util.List<UsedInsight> _used;
     /**
-     * Instantiates a new OfficeGraphInsights and sets the default values.
+     * Instantiates a new officeGraphInsights and sets the default values.
      * @return a void
      */
     public OfficeGraphInsights() {
@@ -26,7 +26,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OfficeGraphInsights
+     * @return a officeGraphInsights
      */
     @javax.annotation.Nonnull
     public static OfficeGraphInsights createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfficeGraphInsights currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("shared", (n) -> { currentObject.setShared(n.getCollectionOfObjectValues(SharedInsight::createFromDiscriminatorValue)); });
             this.put("trending", (n) -> { currentObject.setTrending(n.getCollectionOfObjectValues(Trending::createFromDiscriminatorValue)); });
             this.put("used", (n) -> { currentObject.setUsed(n.getCollectionOfObjectValues(UsedInsight::createFromDiscriminatorValue)); });

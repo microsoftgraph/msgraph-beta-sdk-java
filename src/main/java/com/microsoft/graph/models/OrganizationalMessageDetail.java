@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This will allow the admin to see the specific details of an organizational message that has been created for their tenant */
 public class OrganizationalMessageDetail extends Entity implements Parsable {
     /** The content that will be displayed to clients for the message. This includes the text portion of the message and the displayed logo */
     private OrganizationalMessageContent _content;
@@ -36,7 +37,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
     /** Indicates the corresponding variant for the experience */
     private String _variant;
     /**
-     * Instantiates a new OrganizationalMessageDetail and sets the default values.
+     * Instantiates a new organizationalMessageDetail and sets the default values.
      * @return a void
      */
     public OrganizationalMessageDetail() {
@@ -46,7 +47,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OrganizationalMessageDetail
+     * @return a organizationalMessageDetail
      */
     @javax.annotation.Nonnull
     public static OrganizationalMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -84,7 +85,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(OrganizationalMessageContent::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });

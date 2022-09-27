@@ -68,7 +68,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RegionalFormatOverrides currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("calendar", (n) -> { currentObject.setCalendar(n.getStringValue()); });
             this.put("firstDayOfWeek", (n) -> { currentObject.setFirstDayOfWeek(n.getStringValue()); });
             this.put("longDateFormat", (n) -> { currentObject.setLongDateFormat(n.getStringValue()); });

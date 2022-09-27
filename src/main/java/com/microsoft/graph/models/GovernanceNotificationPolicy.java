@@ -58,7 +58,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceNotificationPolicy currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("enabledTemplateTypes", (n) -> { currentObject.setEnabledTemplateTypes(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("notificationTemplates", (n) -> { currentObject.setNotificationTemplates(n.getCollectionOfObjectValues(GovernanceNotificationTemplate::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

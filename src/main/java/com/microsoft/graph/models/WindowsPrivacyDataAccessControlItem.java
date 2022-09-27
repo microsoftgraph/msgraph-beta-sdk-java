@@ -74,7 +74,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPrivacyDataAccessControlItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessLevel", (n) -> { currentObject.setAccessLevel(n.getEnumValue(WindowsPrivacyDataAccessLevel.class)); });
             this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
             this.put("appPackageFamilyName", (n) -> { currentObject.setAppPackageFamilyName(n.getStringValue()); });

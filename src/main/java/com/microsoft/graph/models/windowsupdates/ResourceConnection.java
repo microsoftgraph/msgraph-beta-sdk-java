@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ResourceConnection extends Entity implements Parsable {
     /** The state of the connection. The possible values are: connected, notAuthorized, notFound, unknownFutureValue. */
     private ResourceConnectionState _state;
@@ -45,7 +45,7 @@ public class ResourceConnection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ResourceConnectionState.class)); });
         }};
     }

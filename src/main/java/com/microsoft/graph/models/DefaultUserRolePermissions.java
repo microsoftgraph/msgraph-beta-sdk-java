@@ -15,6 +15,8 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     private Boolean _allowedToCreateApps;
     /** Indicates whether the default user role can create security groups. */
     private Boolean _allowedToCreateSecurityGroups;
+    /** Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role. */
+    private Boolean _allowedToReadBitlockerKeysForOwnedDevice;
     /** Indicates whether the default user role can read other users. */
     private Boolean _allowedToReadOtherUsers;
     /** The OdataType property */
@@ -62,6 +64,14 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         return this._allowedToCreateSecurityGroups;
     }
     /**
+     * Gets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getAllowedToReadBitlockerKeysForOwnedDevice() {
+        return this._allowedToReadBitlockerKeysForOwnedDevice;
+    }
+    /**
      * Gets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users.
      * @return a boolean
      */
@@ -76,9 +86,10 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DefaultUserRolePermissions currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("allowedToCreateApps", (n) -> { currentObject.setAllowedToCreateApps(n.getBooleanValue()); });
             this.put("allowedToCreateSecurityGroups", (n) -> { currentObject.setAllowedToCreateSecurityGroups(n.getBooleanValue()); });
+            this.put("allowedToReadBitlockerKeysForOwnedDevice", (n) -> { currentObject.setAllowedToReadBitlockerKeysForOwnedDevice(n.getBooleanValue()); });
             this.put("allowedToReadOtherUsers", (n) -> { currentObject.setAllowedToReadOtherUsers(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
@@ -100,6 +111,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowedToCreateApps", this.getAllowedToCreateApps());
         writer.writeBooleanValue("allowedToCreateSecurityGroups", this.getAllowedToCreateSecurityGroups());
+        writer.writeBooleanValue("allowedToReadBitlockerKeysForOwnedDevice", this.getAllowedToReadBitlockerKeysForOwnedDevice());
         writer.writeBooleanValue("allowedToReadOtherUsers", this.getAllowedToReadOtherUsers());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -127,6 +139,14 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     public void setAllowedToCreateSecurityGroups(@javax.annotation.Nullable final Boolean value) {
         this._allowedToCreateSecurityGroups = value;
+    }
+    /**
+     * Sets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
+     * @param value Value to set for the allowedToReadBitlockerKeysForOwnedDevice property.
+     * @return a void
+     */
+    public void setAllowedToReadBitlockerKeysForOwnedDevice(@javax.annotation.Nullable final Boolean value) {
+        this._allowedToReadBitlockerKeysForOwnedDevice = value;
     }
     /**
      * Sets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users.

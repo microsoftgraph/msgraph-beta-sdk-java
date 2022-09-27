@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class DelegatedAdminServiceManagementDetail extends Entity implements Parsable {
     /** The URL of the management portal for the managed service. Read-only. */
     private String _serviceManagementUrl;
@@ -38,7 +38,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedAdminServiceManagementDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("serviceManagementUrl", (n) -> { currentObject.setServiceManagementUrl(n.getStringValue()); });
             this.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });
         }};

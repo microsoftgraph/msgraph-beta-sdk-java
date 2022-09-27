@@ -128,7 +128,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterEvaluationSummary currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("assignmentFilterDisplayName", (n) -> { currentObject.setAssignmentFilterDisplayName(n.getStringValue()); });
             this.put("assignmentFilterId", (n) -> { currentObject.setAssignmentFilterId(n.getStringValue()); });
             this.put("assignmentFilterLastModifiedDateTime", (n) -> { currentObject.setAssignmentFilterLastModifiedDateTime(n.getOffsetDateTimeValue()); });

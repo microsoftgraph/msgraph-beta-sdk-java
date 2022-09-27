@@ -35,7 +35,7 @@ public class FeatureUpdateReference extends WindowsUpdateReference implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FeatureUpdateReference currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
         }};
     }

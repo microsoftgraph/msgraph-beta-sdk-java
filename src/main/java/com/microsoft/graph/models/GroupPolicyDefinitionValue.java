@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The definition value entity stores the value for a single group policy definition. */
 public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     /** Group Policy Configuration Type */
     private GroupPolicyConfigurationType _configurationType;
@@ -79,7 +78,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyDefinitionValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configurationType", (n) -> { currentObject.setConfigurationType(n.getEnumValue(GroupPolicyConfigurationType.class)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("definition", (n) -> { currentObject.setDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });

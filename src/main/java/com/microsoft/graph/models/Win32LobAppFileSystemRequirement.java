@@ -57,7 +57,7 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppFileSystemRequirement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
             this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getEnumValue(Win32LobAppFileSystemDetectionType.class)); });
             this.put("fileOrFolderName", (n) -> { currentObject.setFileOrFolderName(n.getStringValue()); });

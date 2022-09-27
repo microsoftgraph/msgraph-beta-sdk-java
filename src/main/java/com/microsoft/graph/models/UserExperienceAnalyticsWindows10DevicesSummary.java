@@ -49,7 +49,7 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsWindows10DevicesSummary currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("unsupportedOSversionDeviceCount", (n) -> { currentObject.setUnsupportedOSversionDeviceCount(n.getIntegerValue()); });
         }};

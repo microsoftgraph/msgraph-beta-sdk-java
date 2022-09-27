@@ -98,7 +98,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOsVppAppRevokeLicensesActionResult currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("actionFailureReason", (n) -> { currentObject.setActionFailureReason(n.getEnumValue(VppTokenActionFailureReason.class)); });
             this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
             this.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });

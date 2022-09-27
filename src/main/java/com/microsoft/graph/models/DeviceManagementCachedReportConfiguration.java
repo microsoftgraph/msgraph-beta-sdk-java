@@ -59,7 +59,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementCachedReportConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
             this.put("lastRefreshDateTime", (n) -> { currentObject.setLastRefreshDateTime(n.getOffsetDateTimeValue()); });

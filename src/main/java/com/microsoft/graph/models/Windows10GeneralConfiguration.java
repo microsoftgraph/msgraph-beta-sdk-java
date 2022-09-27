@@ -19,7 +19,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _appManagementMSIAllowUserControlOverInstall;
     /** This policy setting directs Windows Installer to use elevated permissions when it installs any program on the system. */
     private Boolean _appManagementMSIAlwaysInstallWithElevatedPrivileges;
-    /** List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.​ */
+    /** List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon. */
     private java.util.List<String> _appManagementPackageFamilyNamesToLaunchAfterLogOn;
     /** State Management Setting. */
     private StateManagementSetting _appsAllowTrustedAppsSideloading;
@@ -79,7 +79,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Integer _defenderCloudExtendedTimeoutInSeconds;
     /** Number of days before deleting quarantined malware. Valid values 0 to 90 */
     private Integer _defenderDaysBeforeDeletingQuarantinedMalware;
-    /** Gets or sets Defender’s actions to take on detected Malware per threat level. */
+    /** Gets or sets Defenders actions to take on detected Malware per threat level. */
     private DefenderDetectedMalwareActions _defenderDetectedMalwareActions;
     /** When blocked, catch-up scans for scheduled full scans will be turned off. */
     private Boolean _defenderDisableCatchupFullScan;
@@ -91,7 +91,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private java.util.List<String> _defenderFilesAndFoldersToExclude;
     /** Possible values for monitoring file activity. */
     private DefenderMonitorFileActivity _defenderMonitorFileActivity;
-    /** Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit. */
+    /** Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit. */
     private DefenderPotentiallyUnwantedAppAction _defenderPotentiallyUnwantedAppAction;
     /** Possible values of Defender PUA Protection */
     private DefenderProtectionType _defenderPotentiallyUnwantedAppActionSetting;
@@ -309,7 +309,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _microsoftAccountBlockSettingsSync;
     /** Values for the SignInAssistantSettings. */
     private SignInAssistantOptions _microsoftAccountSignInAssistantSettings;
-    /** If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM. */
+    /** If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM. */
     private Boolean _networkProxyApplySettingsDeviceWide;
     /** Address to the proxy auto-config (PAC) script you want to use. */
     private String _networkProxyAutomaticConfigurationUrl;
@@ -381,7 +381,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _privacyBlockInputPersonalization;
     /** Blocks the shared experiences/discovery of recently used resources in task switcher etc. */
     private Boolean _privacyBlockPublishUserActivities;
-    /** This policy prevents the privacy experience from launching during user logon for new and upgraded users.​ */
+    /** This policy prevents the privacy experience from launching during user logon for new and upgraded users. */
     private Boolean _privacyDisableLaunchExperience;
     /** Indicates whether or not to Block the user from reset protection mode. */
     private Boolean _resetProtectionModeBlocked;
@@ -407,7 +407,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _searchDisableUseLocation;
     /** Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops. */
     private Boolean _searchEnableAutomaticIndexSizeManangement;
-    /** Indicates whether or not to block remote queries of this computer’s index. */
+    /** Indicates whether or not to block remote queries of this computers index. */
     private Boolean _searchEnableRemoteQueries;
     /** Specify whether to allow automatic device encryption during OOBE when the device is Azure AD joined (desktop only). */
     private Boolean _securityBlockAzureADJoinedDevicesAutoEncryption;
@@ -553,7 +553,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _windowsSpotlightBlocked;
     /** Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce users to what is new or changed */
     private Boolean _windowsSpotlightBlockOnActionCenter;
-    /** Block personalized content in Windows spotlight based on user’s device usage. */
+    /** Block personalized content in Windows spotlight based on users device usage. */
     private Boolean _windowsSpotlightBlockTailoredExperiences;
     /** Block third party content delivered via Windows Spotlight */
     private Boolean _windowsSpotlightBlockThirdPartyNotifications;
@@ -634,7 +634,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._appManagementMSIAlwaysInstallWithElevatedPrivileges;
     }
     /**
-     * Gets the appManagementPackageFamilyNamesToLaunchAfterLogOn property value. List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.​
+     * Gets the appManagementPackageFamilyNamesToLaunchAfterLogOn property value. List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -874,7 +874,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._defenderDaysBeforeDeletingQuarantinedMalware;
     }
     /**
-     * Gets the defenderDetectedMalwareActions property value. Gets or sets Defender’s actions to take on detected Malware per threat level.
+     * Gets the defenderDetectedMalwareActions property value. Gets or sets Defenders actions to take on detected Malware per threat level.
      * @return a defenderDetectedMalwareActions
      */
     @javax.annotation.Nullable
@@ -922,7 +922,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._defenderMonitorFileActivity;
     }
     /**
-     * Gets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
+     * Gets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
      * @return a defenderPotentiallyUnwantedAppAction
      */
     @javax.annotation.Nullable
@@ -1640,7 +1640,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10GeneralConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountsBlockAddingNonMicrosoftAccountEmail", (n) -> { currentObject.setAccountsBlockAddingNonMicrosoftAccountEmail(n.getBooleanValue()); });
             this.put("activateAppsWithVoice", (n) -> { currentObject.setActivateAppsWithVoice(n.getEnumValue(Enablement.class)); });
             this.put("antiTheftModeBlocked", (n) -> { currentObject.setAntiTheftModeBlocked(n.getBooleanValue()); });
@@ -2087,7 +2087,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._microsoftAccountSignInAssistantSettings;
     }
     /**
-     * Gets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
+     * Gets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2375,7 +2375,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._privacyBlockPublishUserActivities;
     }
     /**
-     * Gets the privacyDisableLaunchExperience property value. This policy prevents the privacy experience from launching during user logon for new and upgraded users.​
+     * Gets the privacyDisableLaunchExperience property value. This policy prevents the privacy experience from launching during user logon for new and upgraded users.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2479,7 +2479,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._searchEnableAutomaticIndexSizeManangement;
     }
     /**
-     * Gets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computer’s index.
+     * Gets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computers index.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -3063,7 +3063,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._windowsSpotlightBlockOnActionCenter;
     }
     /**
-     * Gets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on user’s device usage.
+     * Gets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on users device usage.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -3483,7 +3483,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._appManagementMSIAlwaysInstallWithElevatedPrivileges = value;
     }
     /**
-     * Sets the appManagementPackageFamilyNamesToLaunchAfterLogOn property value. List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.​
+     * Sets the appManagementPackageFamilyNamesToLaunchAfterLogOn property value. List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.
      * @param value Value to set for the appManagementPackageFamilyNamesToLaunchAfterLogOn property.
      * @return a void
      */
@@ -3723,7 +3723,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._defenderDaysBeforeDeletingQuarantinedMalware = value;
     }
     /**
-     * Sets the defenderDetectedMalwareActions property value. Gets or sets Defender’s actions to take on detected Malware per threat level.
+     * Sets the defenderDetectedMalwareActions property value. Gets or sets Defenders actions to take on detected Malware per threat level.
      * @param value Value to set for the defenderDetectedMalwareActions property.
      * @return a void
      */
@@ -3771,7 +3771,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._defenderMonitorFileActivity = value;
     }
     /**
-     * Sets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
+     * Sets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
      * @param value Value to set for the defenderPotentiallyUnwantedAppAction property.
      * @return a void
      */
@@ -4643,7 +4643,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._microsoftAccountSignInAssistantSettings = value;
     }
     /**
-     * Sets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
+     * Sets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM.
      * @param value Value to set for the networkProxyApplySettingsDeviceWide property.
      * @return a void
      */
@@ -4931,7 +4931,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._privacyBlockPublishUserActivities = value;
     }
     /**
-     * Sets the privacyDisableLaunchExperience property value. This policy prevents the privacy experience from launching during user logon for new and upgraded users.​
+     * Sets the privacyDisableLaunchExperience property value. This policy prevents the privacy experience from launching during user logon for new and upgraded users.
      * @param value Value to set for the privacyDisableLaunchExperience property.
      * @return a void
      */
@@ -5035,7 +5035,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._searchEnableAutomaticIndexSizeManangement = value;
     }
     /**
-     * Sets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computer’s index.
+     * Sets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computers index.
      * @param value Value to set for the searchEnableRemoteQueries property.
      * @return a void
      */
@@ -5619,7 +5619,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._windowsSpotlightBlockOnActionCenter = value;
     }
     /**
-     * Sets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on user’s device usage.
+     * Sets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on users device usage.
      * @param value Value to set for the windowsSpotlightBlockTailoredExperiences property.
      * @return a void
      */

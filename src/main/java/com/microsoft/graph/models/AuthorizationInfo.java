@@ -11,7 +11,7 @@ import java.util.Objects;
 public class AuthorizationInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The certificateUserIds property */
+    /** The collection of unique identifiers that can be associated with a user and can be used to bind the Azure AD user to a certificate for authentication and authorization into non-Azure AD environments. The identifiers must be unique in the tenant. */
     private java.util.List<String> _certificateUserIds;
     /** The OdataType property */
     private String _odataType;
@@ -42,7 +42,7 @@ public class AuthorizationInfo implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the certificateUserIds property value. The certificateUserIds property
+     * Gets the certificateUserIds property value. The collection of unique identifiers that can be associated with a user and can be used to bind the Azure AD user to a certificate for authentication and authorization into non-Azure AD environments. The identifiers must be unique in the tenant.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -56,7 +56,7 @@ public class AuthorizationInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthorizationInfo currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("certificateUserIds", (n) -> { currentObject.setCertificateUserIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
@@ -89,7 +89,7 @@ public class AuthorizationInfo implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the certificateUserIds property value. The certificateUserIds property
+     * Sets the certificateUserIds property value. The collection of unique identifiers that can be associated with a user and can be used to bind the Azure AD user to a certificate for authentication and authorization into non-Azure AD environments. The identifiers must be unique in the tenant.
      * @param value Value to set for the certificateUserIds property.
      * @return a void
      */

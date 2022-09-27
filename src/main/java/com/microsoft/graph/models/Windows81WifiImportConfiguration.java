@@ -39,7 +39,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows81WifiImportConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("payload", (n) -> { currentObject.setPayload(n.getByteArrayValue()); });
             this.put("payloadFileName", (n) -> { currentObject.setPayloadFileName(n.getStringValue()); });
             this.put("profileName", (n) -> { currentObject.setProfileName(n.getStringValue()); });

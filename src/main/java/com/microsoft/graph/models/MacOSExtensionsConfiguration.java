@@ -47,7 +47,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSExtensionsConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("kernelExtensionAllowedTeamIdentifiers", (n) -> { currentObject.setKernelExtensionAllowedTeamIdentifiers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("kernelExtensionOverridesAllowed", (n) -> { currentObject.setKernelExtensionOverridesAllowed(n.getBooleanValue()); });
             this.put("kernelExtensionsAllowed", (n) -> { currentObject.setKernelExtensionsAllowed(n.getCollectionOfObjectValues(MacOSKernelExtension::createFromDiscriminatorValue)); });

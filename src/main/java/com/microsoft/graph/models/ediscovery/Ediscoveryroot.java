@@ -44,7 +44,7 @@ public class Ediscoveryroot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Ediscoveryroot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cases", (n) -> { currentObject.setCases(n.getCollectionOfObjectValues(Case_escaped::createFromDiscriminatorValue)); });
         }};
     }

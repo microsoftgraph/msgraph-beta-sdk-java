@@ -35,7 +35,7 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationReferenceSettingValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("note", (n) -> { currentObject.setNote(n.getStringValue()); });
         }};
     }

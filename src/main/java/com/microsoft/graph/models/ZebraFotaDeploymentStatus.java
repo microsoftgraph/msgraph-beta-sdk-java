@@ -92,7 +92,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ZebraFotaDeploymentStatus currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<String, Consumer<ParseNode>>(15) {{
             this.put("cancelRequested", (n) -> { currentObject.setCancelRequested(n.getBooleanValue()); });
             this.put("completeOrCanceledDateTime", (n) -> { currentObject.setCompleteOrCanceledDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });

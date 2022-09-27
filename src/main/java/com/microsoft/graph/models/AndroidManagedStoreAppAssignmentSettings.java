@@ -53,7 +53,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedStoreAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("androidManagedStoreAppTrackIds", (n) -> { currentObject.setAndroidManagedStoreAppTrackIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("autoUpdateMode", (n) -> { currentObject.setAutoUpdateMode(n.getEnumValue(AndroidManagedStoreAutoUpdateMode.class)); });
         }};

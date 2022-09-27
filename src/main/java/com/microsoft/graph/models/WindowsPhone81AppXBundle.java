@@ -43,7 +43,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhone81AppXBundle currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appXPackageInformationList", (n) -> { currentObject.setAppXPackageInformationList(n.getCollectionOfObjectValues(WindowsPackageInformation::createFromDiscriminatorValue)); });
         }};
     }

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class CalendarGroup extends Entity implements Parsable {
     /** The calendars in the calendar group. Navigation property. Read-only. Nullable. */
     private java.util.List<Calendar> _calendars;
@@ -17,7 +18,7 @@ public class CalendarGroup extends Entity implements Parsable {
     /** The group name. */
     private String _name;
     /**
-     * Instantiates a new CalendarGroup and sets the default values.
+     * Instantiates a new calendarGroup and sets the default values.
      * @return a void
      */
     public CalendarGroup() {
@@ -27,7 +28,7 @@ public class CalendarGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CalendarGroup
+     * @return a calendarGroup
      */
     @javax.annotation.Nonnull
     public static CalendarGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +66,7 @@ public class CalendarGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("calendars", (n) -> { currentObject.setCalendars(n.getCollectionOfObjectValues(Calendar::createFromDiscriminatorValue)); });
             this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
             this.put("classId", (n) -> { currentObject.setClassId(n.getStringValue()); });

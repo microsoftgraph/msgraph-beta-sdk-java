@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class AttributeSet extends Entity implements Parsable {
     /** Description of the attribute set. Can be up to 128 characters long and include Unicode characters. Can be changed later. */
     private String _description;
@@ -46,7 +46,7 @@ public class AttributeSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("maxAttributesPerSet", (n) -> { currentObject.setMaxAttributesPerSet(n.getIntegerValue()); });
         }};

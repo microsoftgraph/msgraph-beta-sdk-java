@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ManagedDeviceCompliance extends Entity implements Parsable {
     /** Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. Optional. Read-only. */
     private String _complianceStatus;
@@ -80,7 +80,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceCompliance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("complianceStatus", (n) -> { currentObject.setComplianceStatus(n.getStringValue()); });
             this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getStringValue()); });
             this.put("inGracePeriodUntilDateTime", (n) -> { currentObject.setInGracePeriodUntilDateTime(n.getOffsetDateTimeValue()); });

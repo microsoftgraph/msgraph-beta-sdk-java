@@ -85,7 +85,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BitLockerRecoveryOptions currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("blockDataRecoveryAgent", (n) -> { currentObject.setBlockDataRecoveryAgent(n.getBooleanValue()); });
             this.put("enableBitLockerAfterRecoveryInformationToStore", (n) -> { currentObject.setEnableBitLockerAfterRecoveryInformationToStore(n.getBooleanValue()); });
             this.put("enableRecoveryInformationSaveToStore", (n) -> { currentObject.setEnableRecoveryInformationSaveToStore(n.getBooleanValue()); });

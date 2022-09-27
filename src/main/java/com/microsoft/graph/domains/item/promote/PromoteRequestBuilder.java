@@ -32,7 +32,7 @@ public class PromoteRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/domains/{domain%2Did}/microsoft.graph.promote";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -44,13 +44,13 @@ public class PromoteRequestBuilder {
      */
     public PromoteRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/domains/{domain%2Did}/microsoft.graph.promote";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action promote
+     * Promote a verified subdomain to the root domain. A verified domain has its **isVerified** property set to `true`.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -58,7 +58,7 @@ public class PromoteRequestBuilder {
         return createPostRequestInformation(null);
     }
     /**
-     * Invoke action promote
+     * Promote a verified subdomain to the root domain. A verified domain has its **isVerified** property set to `true`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -79,13 +79,13 @@ public class PromoteRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action promote
+     * Promote a verified subdomain to the root domain. A verified domain has its **isVerified** property set to `true`.
      * @return a CompletableFuture of promoteResponse
      */
     public java.util.concurrent.CompletableFuture<PromoteResponse> post() {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -95,14 +95,14 @@ public class PromoteRequestBuilder {
         }
     }
     /**
-     * Invoke action promote
+     * Promote a verified subdomain to the root domain. A verified domain has its **isVerified** property set to `true`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of promoteResponse
      */
     public java.util.concurrent.CompletableFuture<PromoteResponse> post(@javax.annotation.Nullable final java.util.function.Consumer<PromoteRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -112,7 +112,7 @@ public class PromoteRequestBuilder {
         }
     }
     /**
-     * Invoke action promote
+     * Promote a verified subdomain to the root domain. A verified domain has its **isVerified** property set to `true`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of promoteResponse
@@ -120,7 +120,7 @@ public class PromoteRequestBuilder {
     public java.util.concurrent.CompletableFuture<PromoteResponse> post(@javax.annotation.Nullable final java.util.function.Consumer<PromoteRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -136,7 +136,7 @@ public class PromoteRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new promoteRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

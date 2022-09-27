@@ -118,7 +118,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TrustFrameworkKey currentObject = this;
-        return new HashMap<>(17) {{
+        return new HashMap<String, Consumer<ParseNode>>(17) {{
             this.put("d", (n) -> { currentObject.setD(n.getStringValue()); });
             this.put("dp", (n) -> { currentObject.setDp(n.getStringValue()); });
             this.put("dq", (n) -> { currentObject.setDq(n.getStringValue()); });

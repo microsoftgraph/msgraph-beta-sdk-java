@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ApprovalStep extends Entity implements Parsable {
     /** Indicates whether the step is assigned to the calling user to review. Read-only. */
     private Boolean _assignedToMe;
@@ -65,7 +65,7 @@ public class ApprovalStep extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApprovalStep currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedToMe", (n) -> { currentObject.setAssignedToMe(n.getBooleanValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });

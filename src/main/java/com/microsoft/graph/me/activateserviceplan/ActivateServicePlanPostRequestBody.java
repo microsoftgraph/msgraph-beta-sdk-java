@@ -48,7 +48,7 @@ public class ActivateServicePlanPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActivateServicePlanPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("servicePlanId", (n) -> { currentObject.setServicePlanId(n.getStringValue()); });
             this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
         }};

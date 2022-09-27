@@ -41,7 +41,7 @@ public class LanguagesRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/profile/languages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class LanguagesRequestBuilder {
      */
     public LanguagesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/me/profile/languages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents detailed information about languages that a user has added to their profile.
+     * Retrieve a list of languageProficiency objects from a user's profile.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class LanguagesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents detailed information about languages that a user has added to their profile.
+     * Retrieve a list of languageProficiency objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class LanguagesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to languages for me
+     * Use this API to create a new languageProficiency object in a user's profile.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class LanguagesRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to languages for me
+     * Use this API to create a new languageProficiency object in a user's profile.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class LanguagesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents detailed information about languages that a user has added to their profile.
+     * Retrieve a list of languageProficiency objects from a user's profile.
      * @return a CompletableFuture of LanguageProficiencyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<LanguageProficiencyCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class LanguagesRequestBuilder {
         }
     }
     /**
-     * Represents detailed information about languages that a user has added to their profile.
+     * Retrieve a list of languageProficiency objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of LanguageProficiencyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<LanguageProficiencyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<LanguagesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class LanguagesRequestBuilder {
         }
     }
     /**
-     * Represents detailed information about languages that a user has added to their profile.
+     * Retrieve a list of languageProficiency objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of LanguageProficiencyCollectionResponse
@@ -163,7 +163,7 @@ public class LanguagesRequestBuilder {
     public java.util.concurrent.CompletableFuture<LanguageProficiencyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<LanguagesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class LanguagesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to languages for me
+     * Use this API to create a new languageProficiency object in a user's profile.
      * @param body 
      * @return a CompletableFuture of languageProficiency
      */
     public java.util.concurrent.CompletableFuture<LanguageProficiency> post(@javax.annotation.Nonnull final LanguageProficiency body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class LanguagesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to languages for me
+     * Use this API to create a new languageProficiency object in a user's profile.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of languageProficiency
@@ -198,7 +198,7 @@ public class LanguagesRequestBuilder {
     public java.util.concurrent.CompletableFuture<LanguageProficiency> post(@javax.annotation.Nonnull final LanguageProficiency body, @javax.annotation.Nullable final java.util.function.Consumer<LanguagesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class LanguagesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to languages for me
+     * Use this API to create a new languageProficiency object in a user's profile.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class LanguagesRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class LanguagesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents detailed information about languages that a user has added to their profile. */
+    /** Retrieve a list of languageProficiency objects from a user's profile. */
     public class LanguagesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class LanguagesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public LanguagesRequestBuilderGetQueryParameters queryParameters = new LanguagesRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class LanguagesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new languagesRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

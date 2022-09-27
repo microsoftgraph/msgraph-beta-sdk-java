@@ -3,7 +3,7 @@ package com.microsoft.graph.models.windowsupdates;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum DeploymentStateReasonValue implements ValuedEnum {
     ScheduledByOfferWindow("scheduledByOfferWindow"),
     OfferingByRequest("offeringByRequest"),

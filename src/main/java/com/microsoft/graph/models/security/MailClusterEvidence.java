@@ -69,7 +69,7 @@ public class MailClusterEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailClusterEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("clusterBy", (n) -> { currentObject.setClusterBy(n.getStringValue()); });
             this.put("clusterByValue", (n) -> { currentObject.setClusterByValue(n.getStringValue()); });
             this.put("emailCount", (n) -> { currentObject.setEmailCount(n.getLongValue()); });

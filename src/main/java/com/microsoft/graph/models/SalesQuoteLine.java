@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class SalesQuoteLine extends Entity implements Parsable {
     /** The account property */
     private Account _account;
@@ -151,7 +151,7 @@ public class SalesQuoteLine extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SalesQuoteLine currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("account", (n) -> { currentObject.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
             this.put("accountId", (n) -> { currentObject.setAccountId(n.getStringValue()); });
             this.put("amountExcludingTax", (n) -> { currentObject.setAmountExcludingTax(n.getBigDecimalValue()); });

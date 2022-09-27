@@ -161,7 +161,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsWiredNetworkConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationBlockPeriodInMinutes", (n) -> { currentObject.setAuthenticationBlockPeriodInMinutes(n.getIntegerValue()); });
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(WiredNetworkAuthenticationMethod.class)); });
             this.put("authenticationPeriodInSeconds", (n) -> { currentObject.setAuthenticationPeriodInSeconds(n.getIntegerValue()); });

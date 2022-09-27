@@ -63,7 +63,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RelyingPartyDetailedSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("failedSignInCount", (n) -> { currentObject.setFailedSignInCount(n.getLongValue()); });
             this.put("migrationStatus", (n) -> { currentObject.setMigrationStatus(n.getEnumValue(MigrationStatus.class)); });
             this.put("migrationValidationDetails", (n) -> { currentObject.setMigrationValidationDetails(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });

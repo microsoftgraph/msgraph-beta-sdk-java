@@ -58,7 +58,7 @@ public class InformationalUrls implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InformationalUrls currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("appSignUpUrl", (n) -> { currentObject.setAppSignUpUrl(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("singleSignOnDocumentationUrl", (n) -> { currentObject.setSingleSignOnDocumentationUrl(n.getStringValue()); });

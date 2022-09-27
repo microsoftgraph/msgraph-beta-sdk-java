@@ -87,7 +87,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassificationInnerError currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("activityId", (n) -> { currentObject.setActivityId(n.getStringValue()); });
             this.put("clientRequestId", (n) -> { currentObject.setClientRequestId(n.getStringValue()); });
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });

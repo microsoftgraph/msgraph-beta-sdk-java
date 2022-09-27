@@ -55,7 +55,6 @@ import com.microsoft.graph.datapolicyoperations.DataPolicyOperationsRequestBuild
 import com.microsoft.graph.datapolicyoperations.item.DataPolicyOperationItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.DeviceAppManagementRequestBuilder;
 import com.microsoft.graph.devicemanagement.DeviceManagementRequestBuilder;
-import com.microsoft.graph.deviceregistrationpolicy.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.devices.DevicesRequestBuilder;
 import com.microsoft.graph.devices.item.DeviceItemRequestBuilder;
 import com.microsoft.graph.directory.DirectoryRequestBuilder;
@@ -115,6 +114,7 @@ import com.microsoft.graph.messagetraces.item.MessageTraceItemRequestBuilder;
 import com.microsoft.graph.messagetraces.MessageTracesRequestBuilder;
 import com.microsoft.graph.mobilitymanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder;
 import com.microsoft.graph.mobilitymanagementpolicies.MobilityManagementPoliciesRequestBuilder;
+import com.microsoft.graph.monitoring.MonitoringRequestBuilder;
 import com.microsoft.graph.oauth2permissiongrants.item.OAuth2PermissionGrantItemRequestBuilder;
 import com.microsoft.graph.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.officeconfiguration.OfficeConfigurationRequestBuilder;
@@ -182,6 +182,8 @@ import com.microsoft.graph.teams.item.TeamItemRequestBuilder;
 import com.microsoft.graph.teams.TeamsRequestBuilder;
 import com.microsoft.graph.teamstemplates.item.TeamsTemplateItemRequestBuilder;
 import com.microsoft.graph.teamstemplates.TeamsTemplatesRequestBuilder;
+import com.microsoft.graph.teamtemplatedefinition.item.TeamTemplateDefinitionItemRequestBuilder;
+import com.microsoft.graph.teamtemplatedefinition.TeamTemplateDefinitionRequestBuilder;
 import com.microsoft.graph.teamwork.TeamworkRequestBuilder;
 import com.microsoft.graph.tenantrelationships.TenantRelationshipsRequestBuilder;
 import com.microsoft.graph.termstore.TermStoreRequestBuilder;
@@ -368,11 +370,6 @@ public class BaseGraphServiceClient {
     public DeviceManagementRequestBuilder deviceManagement() {
         return new DeviceManagementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceRegistrationPolicy property */
-    @javax.annotation.Nonnull
-    public DeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
-        return new DeviceRegistrationPolicyRequestBuilder(pathParameters, requestAdapter);
-    }
     /** The devices property */
     @javax.annotation.Nonnull
     public DevicesRequestBuilder devices() {
@@ -547,6 +544,11 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public MobilityManagementPoliciesRequestBuilder mobilityManagementPolicies() {
         return new MobilityManagementPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The monitoring property */
+    @javax.annotation.Nonnull
+    public MonitoringRequestBuilder monitoring() {
+        return new MonitoringRequestBuilder(pathParameters, requestAdapter);
     }
     /** The oauth2PermissionGrants property */
     @javax.annotation.Nonnull
@@ -747,6 +749,11 @@ public class BaseGraphServiceClient {
     public TeamsTemplatesRequestBuilder teamsTemplates() {
         return new TeamsTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The teamTemplateDefinition property */
+    @javax.annotation.Nonnull
+    public TeamTemplateDefinitionRequestBuilder teamTemplateDefinition() {
+        return new TeamTemplateDefinitionRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The teamwork property */
     @javax.annotation.Nonnull
     public TeamworkRequestBuilder teamwork() {
@@ -792,7 +799,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public AccessReviewDecisionItemRequestBuilder accessReviewDecisions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessReviewDecision%2Did", id);
         return new AccessReviewDecisionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -804,7 +811,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public AccessReviewItemRequestBuilder accessReviews(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessReview%2Did", id);
         return new AccessReviewItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -816,7 +823,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ActivityStatisticsItemRequestBuilder activitystatistics(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("activityStatistics%2Did", id);
         return new ActivityStatisticsItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -828,7 +835,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public AdministrativeUnitItemRequestBuilder administrativeUnits(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("administrativeUnit%2Did", id);
         return new AdministrativeUnitItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -840,7 +847,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public AgreementAcceptanceItemRequestBuilder agreementAcceptances(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("agreementAcceptance%2Did", id);
         return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -852,7 +859,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public AgreementItemRequestBuilder agreements(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("agreement%2Did", id);
         return new AgreementItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -864,7 +871,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public AllowedDataLocationItemRequestBuilder allowedDataLocations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("allowedDataLocation%2Did", id);
         return new AllowedDataLocationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -876,7 +883,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ApplicationItemRequestBuilder applications(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("application%2Did", id);
         return new ApplicationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -888,7 +895,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ApplicationTemplateItemRequestBuilder applicationTemplates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("applicationTemplate%2Did", id);
         return new ApplicationTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -900,7 +907,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public AppRoleAssignmentItemRequestBuilder appRoleAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("appRoleAssignment%2Did", id);
         return new AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -912,7 +919,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ApprovalWorkflowProviderItemRequestBuilder approvalWorkflowProviders(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("approvalWorkflowProvider%2Did", id);
         return new ApprovalWorkflowProviderItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -924,7 +931,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public AuthenticationMethodConfigurationItemRequestBuilder authenticationMethodConfigurations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("authenticationMethodConfiguration%2Did", id);
         return new AuthenticationMethodConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -936,7 +943,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public BookingBusinessItemRequestBuilder bookingBusinesses(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("bookingBusiness%2Did", id);
         return new BookingBusinessItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -948,7 +955,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public BookingCurrencyItemRequestBuilder bookingCurrencies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("bookingCurrency%2Did", id);
         return new BookingCurrencyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -960,7 +967,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public BusinessFlowTemplateItemRequestBuilder businessFlowTemplates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("businessFlowTemplate%2Did", id);
         return new BusinessFlowTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -972,7 +979,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public CertificateBasedAuthConfigurationItemRequestBuilder certificateBasedAuthConfiguration(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("certificateBasedAuthConfiguration%2Did", id);
         return new CertificateBasedAuthConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -984,7 +991,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ChatItemRequestBuilder chats(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("chat%2Did", id);
         return new ChatItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -996,7 +1003,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public CommandItemRequestBuilder commands(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("command%2Did", id);
         return new CommandItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1008,7 +1015,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ExternalConnectionItemRequestBuilder connections(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("externalConnection%2Did", id);
         return new ExternalConnectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1038,7 +1045,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public OrgContactItemRequestBuilder contacts(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("orgContact%2Did", id);
         return new OrgContactItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1050,7 +1057,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ContractItemRequestBuilder contracts(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("contract%2Did", id);
         return new ContractItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1062,7 +1069,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DataPolicyOperationItemRequestBuilder dataPolicyOperations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("dataPolicyOperation%2Did", id);
         return new DataPolicyOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1074,7 +1081,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DeviceItemRequestBuilder devices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("device%2Did", id);
         return new DeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1086,7 +1093,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder directoryObjects(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1098,7 +1105,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DirectoryRoleItemRequestBuilder directoryRoles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryRole%2Did", id);
         return new DirectoryRoleItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1110,7 +1117,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DirectoryRoleTemplateItemRequestBuilder directoryRoleTemplates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryRoleTemplate%2Did", id);
         return new DirectoryRoleTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1122,7 +1129,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DirectorySettingTemplateItemRequestBuilder directorySettingTemplates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directorySettingTemplate%2Did", id);
         return new DirectorySettingTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1134,7 +1141,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DomainDnsRecordItemRequestBuilder domainDnsRecords(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("domainDnsRecord%2Did", id);
         return new DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1146,7 +1153,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DomainItemRequestBuilder domains(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("domain%2Did", id);
         return new DomainItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1158,7 +1165,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder drives(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("drive%2Did", id);
         return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1170,7 +1177,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public FilterOperatorSchemaItemRequestBuilder filterOperators(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("filterOperatorSchema%2Did", id);
         return new FilterOperatorSchemaItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1182,7 +1189,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public AttributeMappingFunctionSchemaItemRequestBuilder functions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("attributeMappingFunctionSchema%2Did", id);
         return new AttributeMappingFunctionSchemaItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1194,7 +1201,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public GovernanceResourceItemRequestBuilder governanceResources(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("governanceResource%2Did", id);
         return new GovernanceResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1206,7 +1213,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public GovernanceRoleAssignmentRequestItemRequestBuilder governanceRoleAssignmentRequests(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("governanceRoleAssignmentRequest%2Did", id);
         return new GovernanceRoleAssignmentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1218,7 +1225,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public GovernanceRoleAssignmentItemRequestBuilder governanceRoleAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("governanceRoleAssignment%2Did", id);
         return new GovernanceRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1230,7 +1237,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public GovernanceRoleDefinitionItemRequestBuilder governanceRoleDefinitions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("governanceRoleDefinition%2Did", id);
         return new GovernanceRoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1242,7 +1249,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public GovernanceRoleSettingItemRequestBuilder governanceRoleSettings(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("governanceRoleSetting%2Did", id);
         return new GovernanceRoleSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1254,7 +1261,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public GovernanceSubjectItemRequestBuilder governanceSubjects(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("governanceSubject%2Did", id);
         return new GovernanceSubjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1266,7 +1273,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public GroupLifecyclePolicyItemRequestBuilder groupLifecyclePolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("groupLifecyclePolicy%2Did", id);
         return new GroupLifecyclePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1278,7 +1285,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public GroupItemRequestBuilder groups(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("group%2Did", id);
         return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1290,7 +1297,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public IdentityProviderItemRequestBuilder identityProviders(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("identityProvider%2Did", id);
         return new IdentityProviderItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1302,7 +1309,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public InvitationItemRequestBuilder invitations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("invitation%2Did", id);
         return new InvitationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1314,7 +1321,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public MessageEventItemRequestBuilder messageEvents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("messageEvent%2Did", id);
         return new MessageEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1326,7 +1333,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public MessageRecipientItemRequestBuilder messageRecipients(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("messageRecipient%2Did", id);
         return new MessageRecipientItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1338,7 +1345,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public MessageTraceItemRequestBuilder messageTraces(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("messageTrace%2Did", id);
         return new MessageTraceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1350,7 +1357,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public MobilityManagementPolicyItemRequestBuilder mobilityManagementPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mobilityManagementPolicy%2Did", id);
         return new MobilityManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1362,7 +1369,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public OAuth2PermissionGrantItemRequestBuilder oauth2PermissionGrants(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("oAuth2PermissionGrant%2Did", id);
         return new OAuth2PermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1374,7 +1381,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public OnPremisesPublishingProfileItemRequestBuilder onPremisesPublishingProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("onPremisesPublishingProfile%2Did", id);
         return new OnPremisesPublishingProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1386,7 +1393,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public OrganizationItemRequestBuilder organization(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("organization%2Did", id);
         return new OrganizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1398,7 +1405,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public PayloadResponseItemRequestBuilder payloadResponse(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("payloadResponse%2Did", id);
         return new PayloadResponseItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1410,7 +1417,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ResourceSpecificPermissionGrantItemRequestBuilder permissionGrants(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("resourceSpecificPermissionGrant%2Did", id);
         return new ResourceSpecificPermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1422,7 +1429,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public PlaceItemRequestBuilder places(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("place%2Did", id);
         return new PlaceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1434,7 +1441,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public PrivilegedAccessItemRequestBuilder privilegedAccess(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("privilegedAccess%2Did", id);
         return new PrivilegedAccessItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1446,7 +1453,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public PrivilegedApprovalItemRequestBuilder privilegedApproval(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("privilegedApproval%2Did", id);
         return new PrivilegedApprovalItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1458,7 +1465,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public PrivilegedOperationEventItemRequestBuilder privilegedOperationEvents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("privilegedOperationEvent%2Did", id);
         return new PrivilegedOperationEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1470,7 +1477,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public PrivilegedRoleAssignmentRequestItemRequestBuilder privilegedRoleAssignmentRequests(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("privilegedRoleAssignmentRequest%2Did", id);
         return new PrivilegedRoleAssignmentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1482,7 +1489,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public PrivilegedRoleAssignmentItemRequestBuilder privilegedRoleAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("privilegedRoleAssignment%2Did", id);
         return new PrivilegedRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1494,7 +1501,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public PrivilegedRoleItemRequestBuilder privilegedRoles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("privilegedRole%2Did", id);
         return new PrivilegedRoleItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1506,7 +1513,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public PrivilegedSignupStatusItemRequestBuilder privilegedSignupStatus(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("privilegedSignupStatus%2Did", id);
         return new PrivilegedSignupStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1518,7 +1525,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ProgramControlItemRequestBuilder programControls(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("programControl%2Did", id);
         return new ProgramControlItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1530,7 +1537,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ProgramControlTypeItemRequestBuilder programControlTypes(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("programControlType%2Did", id);
         return new ProgramControlTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1542,7 +1549,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ProgramItemRequestBuilder programs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("program%2Did", id);
         return new ProgramItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1554,7 +1561,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public RiskDetectionItemRequestBuilder riskDetections(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("riskDetection%2Did", id);
         return new RiskDetectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1566,7 +1573,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public RiskyUserItemRequestBuilder riskyUsers(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("riskyUser%2Did", id);
         return new RiskyUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1578,7 +1585,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public SchemaExtensionItemRequestBuilder schemaExtensions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("schemaExtension%2Did", id);
         return new SchemaExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1590,7 +1597,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ScopedRoleMembershipItemRequestBuilder scopedRoleMemberships(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("scopedRoleMembership%2Did", id);
         return new ScopedRoleMembershipItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1602,7 +1609,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public ServicePrincipalItemRequestBuilder servicePrincipals(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("servicePrincipal%2Did", id);
         return new ServicePrincipalItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1614,7 +1621,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DirectorySettingItemRequestBuilder settings(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directorySetting%2Did", id);
         return new DirectorySettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1626,7 +1633,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public SharedDriveItemItemRequestBuilder shares(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("sharedDriveItem%2Did", id);
         return new SharedDriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1638,7 +1645,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public SiteItemRequestBuilder sites(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("site%2Did", id);
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1650,7 +1657,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public SubscribedSkuItemRequestBuilder subscribedSkus(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("subscribedSku%2Did", id);
         return new SubscribedSkuItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1662,7 +1669,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public SubscriptionItemRequestBuilder subscriptions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("subscription%2Did", id);
         return new SubscriptionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1674,7 +1681,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public TeamItemRequestBuilder teams(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("team%2Did", id);
         return new TeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1686,9 +1693,21 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public TeamsTemplateItemRequestBuilder teamsTemplates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("teamsTemplate%2Did", id);
         return new TeamsTemplateItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.teamTemplateDefinition.item collection
+     * @param id Unique identifier of the item
+     * @return a TeamTemplateDefinitionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamTemplateDefinitionItemRequestBuilder teamTemplateDefinition(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("teamTemplateDefinition%2Did", id);
+        return new TeamTemplateDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the com.Microsoft.Graph.users.item collection
@@ -1698,7 +1717,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public UserItemRequestBuilder users(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("user%2Did", id);
         return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1710,7 +1729,7 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public DriveItemItemRequestBuilder workbooks(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("driveItem%2Did", id);
         return new DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }

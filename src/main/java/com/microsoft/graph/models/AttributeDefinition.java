@@ -102,7 +102,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeDefinition currentObject = this;
-        return new HashMap<>(13) {{
+        return new HashMap<String, Consumer<ParseNode>>(13) {{
             this.put("anchor", (n) -> { currentObject.setAnchor(n.getBooleanValue()); });
             this.put("apiExpressions", (n) -> { currentObject.setApiExpressions(n.getCollectionOfObjectValues(StringKeyStringValuePair::createFromDiscriminatorValue)); });
             this.put("caseExact", (n) -> { currentObject.setCaseExact(n.getBooleanValue()); });

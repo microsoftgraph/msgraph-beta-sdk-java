@@ -52,7 +52,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitiveContentEvidence currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("length", (n) -> { currentObject.setLength(n.getIntegerValue()); });
             this.put("match", (n) -> { currentObject.setMatch(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

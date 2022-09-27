@@ -22,7 +22,7 @@ public class Account extends Entity implements Parsable {
     /** The subCategory property */
     private String _subCategory;
     /**
-     * Instantiates a new Account and sets the default values.
+     * Instantiates a new account and sets the default values.
      * @return a void
      */
     public Account() {
@@ -32,7 +32,7 @@ public class Account extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Account
+     * @return a account
      */
     @javax.annotation.Nonnull
     public static Account createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class Account extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Account currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("blocked", (n) -> { currentObject.setBlocked(n.getBooleanValue()); });
             this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

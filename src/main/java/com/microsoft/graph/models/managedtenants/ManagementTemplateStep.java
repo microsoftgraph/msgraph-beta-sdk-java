@@ -10,7 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ManagementTemplateStep extends Entity implements Parsable {
     /** The acceptedVersion property */
     private ManagementTemplateStepVersion _acceptedVersion;
@@ -109,7 +108,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementTemplateStep currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("acceptedVersion", (n) -> { currentObject.setAcceptedVersion(n.getObjectValue(ManagementTemplateStepVersion::createFromDiscriminatorValue)); });
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ManagementCategory.class)); });
             this.put("createdByUserId", (n) -> { currentObject.setCreatedByUserId(n.getStringValue()); });

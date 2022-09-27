@@ -47,7 +47,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsQualityUpdateCatalogItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(WindowsQualityUpdateClassification.class)); });
             this.put("isExpeditable", (n) -> { currentObject.setIsExpeditable(n.getBooleanValue()); });
             this.put("kbArticleId", (n) -> { currentObject.setKbArticleId(n.getStringValue()); });

@@ -87,7 +87,7 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements Addition
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeliveryOptimizationBandwidthBusinessHoursLimit currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("bandwidthBeginBusinessHours", (n) -> { currentObject.setBandwidthBeginBusinessHours(n.getIntegerValue()); });
             this.put("bandwidthEndBusinessHours", (n) -> { currentObject.setBandwidthEndBusinessHours(n.getIntegerValue()); });
             this.put("bandwidthPercentageDuringBusinessHours", (n) -> { currentObject.setBandwidthPercentageDuringBusinessHours(n.getIntegerValue()); });

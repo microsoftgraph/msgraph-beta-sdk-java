@@ -35,7 +35,7 @@ public class InformationProtectionPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InformationProtectionPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfObjectValues(InformationProtectionLabel::createFromDiscriminatorValue)); });
         }};
     }

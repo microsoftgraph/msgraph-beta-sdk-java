@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AccessReviewInstanceDecisionItem extends Entity implements Parsable {
     /** The identifier of the accessReviewInstance parent. Supports $select. Read-only. */
     private String _accessReviewId;
@@ -42,7 +42,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     private UserIdentity _reviewedBy;
     /** The timestamp when the review decision occurred. Supports $select. Read-only. */
     private OffsetDateTime _reviewedDateTime;
-    /** The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0. */
+    /** The target of this specific decision. Decision targets can be of different types  each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0. */
     private AccessReviewInstanceDecisionItemTarget _target;
     /**
      * Instantiates a new accessReviewInstanceDecisionItem and sets the default values.
@@ -109,7 +109,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessReviewId", (n) -> { currentObject.setAccessReviewId(n.getStringValue()); });
             this.put("appliedBy", (n) -> { currentObject.setAppliedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
             this.put("appliedDateTime", (n) -> { currentObject.setAppliedDateTime(n.getOffsetDateTimeValue()); });
@@ -218,7 +218,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this._reviewedDateTime;
     }
     /**
-     * Gets the target property value. The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
+     * Gets the target property value. The target of this specific decision. Decision targets can be of different types  each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
      * @return a accessReviewInstanceDecisionItemTarget
      */
     @javax.annotation.Nullable
@@ -380,7 +380,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this._reviewedDateTime = value;
     }
     /**
-     * Sets the target property value. The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
+     * Sets the target property value. The target of this specific decision. Decision targets can be of different types  each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
      * @param value Value to set for the target property.
      * @return a void
      */

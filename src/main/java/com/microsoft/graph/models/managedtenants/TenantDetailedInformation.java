@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TenantDetailedInformation extends Entity implements Parsable {
     /** The city where the managed tenant is located. Optional. Read-only. */
     private String _city;
@@ -95,7 +95,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantDetailedInformation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
             this.put("countryCode", (n) -> { currentObject.setCountryCode(n.getStringValue()); });
             this.put("countryName", (n) -> { currentObject.setCountryName(n.getStringValue()); });

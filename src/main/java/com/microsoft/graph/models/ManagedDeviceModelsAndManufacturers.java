@@ -67,7 +67,7 @@ public class ManagedDeviceModelsAndManufacturers implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceModelsAndManufacturers currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("deviceManufacturers", (n) -> { currentObject.setDeviceManufacturers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("deviceModels", (n) -> { currentObject.setDeviceModels(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

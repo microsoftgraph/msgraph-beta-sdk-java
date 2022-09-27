@@ -54,7 +54,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateAdDomainPasswordPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("adDomainPassword", (n) -> { currentObject.setAdDomainPassword(n.getStringValue()); });
         }};
     }

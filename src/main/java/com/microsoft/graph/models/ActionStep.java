@@ -60,7 +60,7 @@ public class ActionStep implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActionStep currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("actionUrl", (n) -> { currentObject.setActionUrl(n.getObjectValue(ActionUrl::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("stepNumber", (n) -> { currentObject.setStepNumber(n.getLongValue()); });

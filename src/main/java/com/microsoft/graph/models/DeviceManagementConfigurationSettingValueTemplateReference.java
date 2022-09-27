@@ -51,7 +51,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingValueTemplateReference currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("settingValueTemplateId", (n) -> { currentObject.setSettingValueTemplateId(n.getStringValue()); });
             this.put("useTemplateDefault", (n) -> { currentObject.setUseTemplateDefault(n.getBooleanValue()); });

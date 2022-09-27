@@ -72,7 +72,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDisplayConfiguration currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("configuredDisplays", (n) -> { currentObject.setConfiguredDisplays(n.getCollectionOfObjectValues(TeamworkConfiguredPeripheral::createFromDiscriminatorValue)); });
             this.put("displayCount", (n) -> { currentObject.setDisplayCount(n.getIntegerValue()); });
             this.put("inBuiltDisplayScreenConfiguration", (n) -> { currentObject.setInBuiltDisplayScreenConfiguration(n.getObjectValue(TeamworkDisplayScreenConfiguration::createFromDiscriminatorValue)); });

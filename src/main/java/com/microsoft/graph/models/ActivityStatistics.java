@@ -86,7 +86,7 @@ public class ActivityStatistics extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActivityStatistics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activity", (n) -> { currentObject.setActivity(n.getEnumValue(AnalyticsActivityType.class)); });
             this.put("duration", (n) -> { currentObject.setDuration(n.getPeriodValue()); });
             this.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });

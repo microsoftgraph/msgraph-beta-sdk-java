@@ -60,7 +60,7 @@ public class TeamworkLoginStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkLoginStatus currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("exchangeConnection", (n) -> { currentObject.setExchangeConnection(n.getObjectValue(TeamworkConnection::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("skypeConnection", (n) -> { currentObject.setSkypeConnection(n.getObjectValue(TeamworkConnection::createFromDiscriminatorValue)); });

@@ -113,7 +113,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfficeClientCheckinStatus currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("appliedPolicies", (n) -> { currentObject.setAppliedPolicies(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("checkinDateTime", (n) -> { currentObject.setCheckinDateTime(n.getOffsetDateTimeValue()); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });

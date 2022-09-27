@@ -45,7 +45,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommunicationsApplicationIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationType", (n) -> { currentObject.setApplicationType(n.getStringValue()); });
             this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
         }};

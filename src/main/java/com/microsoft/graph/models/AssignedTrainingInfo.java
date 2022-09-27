@@ -76,7 +76,7 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignedTrainingInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("assignedUserCount", (n) -> { currentObject.setAssignedUserCount(n.getIntegerValue()); });
             this.put("completedUserCount", (n) -> { currentObject.setCompletedUserCount(n.getIntegerValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

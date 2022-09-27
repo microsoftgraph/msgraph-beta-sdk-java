@@ -23,7 +23,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     /** Describes the OfficeSuiteApp file format types that can be selected. */
     private OfficeSuiteDefaultFileFormatType _officeSuiteAppDefaultFileFormat;
     /** The Product Ids that represent the Office365 Suite SKU. */
-    private java.util.List<String> _productIds;
+    private java.util.List<OfficeProductId> _productIds;
     /** The property to determine whether to uninstall existing Office MSI if an Office365 app suite is deployed to the device or not. */
     private Boolean _shouldUninstallOlderVersionsOfOffice;
     /** The property to represent the specific target version for the Office365 app suite that should be remained deployed on the devices. */
@@ -75,7 +75,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfficeSuiteApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("autoAcceptEula", (n) -> { currentObject.setAutoAcceptEula(n.getBooleanValue()); });
             this.put("excludedApps", (n) -> { currentObject.setExcludedApps(n.getObjectValue(ExcludedApps::createFromDiscriminatorValue)); });
             this.put("installProgressDisplayLevel", (n) -> { currentObject.setInstallProgressDisplayLevel(n.getEnumValue(OfficeSuiteInstallProgressDisplayLevel.class)); });
@@ -83,7 +83,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
             this.put("officeConfigurationXml", (n) -> { currentObject.setOfficeConfigurationXml(n.getByteArrayValue()); });
             this.put("officePlatformArchitecture", (n) -> { currentObject.setOfficePlatformArchitecture(n.getEnumValue(WindowsArchitecture.class)); });
             this.put("officeSuiteAppDefaultFileFormat", (n) -> { currentObject.setOfficeSuiteAppDefaultFileFormat(n.getEnumValue(OfficeSuiteDefaultFileFormatType.class)); });
-            this.put("productIds", (n) -> { currentObject.setProductIds(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("productIds", (n) -> { currentObject.setProductIds(n.getCollectionOfEnumValues(OfficeProductId.class)); });
             this.put("shouldUninstallOlderVersionsOfOffice", (n) -> { currentObject.setShouldUninstallOlderVersionsOfOffice(n.getBooleanValue()); });
             this.put("targetVersion", (n) -> { currentObject.setTargetVersion(n.getStringValue()); });
             this.put("updateChannel", (n) -> { currentObject.setUpdateChannel(n.getEnumValue(OfficeUpdateChannel.class)); });
@@ -133,10 +133,10 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the productIds property value. The Product Ids that represent the Office365 Suite SKU.
-     * @return a string
+     * @return a officeProductId
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getProductIds() {
+    public java.util.List<OfficeProductId> getProductIds() {
         return this._productIds;
     }
     /**
@@ -194,7 +194,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         writer.writeByteArrayValue("officeConfigurationXml", this.getOfficeConfigurationXml());
         writer.writeEnumValue("officePlatformArchitecture", this.getOfficePlatformArchitecture());
         writer.writeEnumValue("officeSuiteAppDefaultFileFormat", this.getOfficeSuiteAppDefaultFileFormat());
-        writer.writeCollectionOfPrimitiveValues("productIds", this.getProductIds());
+        writer.writeCollectionOfEnumValues("productIds", this.getProductIds());
         writer.writeBooleanValue("shouldUninstallOlderVersionsOfOffice", this.getShouldUninstallOlderVersionsOfOffice());
         writer.writeStringValue("targetVersion", this.getTargetVersion());
         writer.writeEnumValue("updateChannel", this.getUpdateChannel());
@@ -262,7 +262,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
      * @param value Value to set for the productIds property.
      * @return a void
      */
-    public void setProductIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setProductIds(@javax.annotation.Nullable final java.util.List<OfficeProductId> value) {
         this._productIds = value;
     }
     /**

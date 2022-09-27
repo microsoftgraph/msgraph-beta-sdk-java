@@ -37,7 +37,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationOAuth2ClientCredentialsConnectionSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
             this.put("tokenUrl", (n) -> { currentObject.setTokenUrl(n.getStringValue()); });
         }};

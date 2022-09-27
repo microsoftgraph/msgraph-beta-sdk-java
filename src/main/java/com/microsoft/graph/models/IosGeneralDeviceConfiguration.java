@@ -288,9 +288,9 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     private Boolean _nfcBlocked;
     /** Indicates whether or not to allow notifications settings modification (iOS 9.3 and later). */
     private Boolean _notificationsBlockSettingsModification;
-    /** Disables connections to Siri servers so that users can’t use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later. */
+    /** Disables connections to Siri servers so that users cant use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later. */
     private Boolean _onDeviceOnlyDictationForced;
-    /** When set to TRUE, the setting disables connections to Siri servers so that users can’t use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later. */
+    /** When set to TRUE, the setting disables connections to Siri servers so that users cant use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later. */
     private Boolean _onDeviceOnlyTranslationForced;
     /** Block modification of registered Touch ID fingerprints when in supervised mode. */
     private Boolean _passcodeBlockFingerprintModification;
@@ -911,7 +911,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountBlockModification", (n) -> { currentObject.setAccountBlockModification(n.getBooleanValue()); });
             this.put("activationLockAllowWhenSupervised", (n) -> { currentObject.setActivationLockAllowWhenSupervised(n.getBooleanValue()); });
             this.put("airDropBlocked", (n) -> { currentObject.setAirDropBlocked(n.getBooleanValue()); });
@@ -1718,7 +1718,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this._notificationsBlockSettingsModification;
     }
     /**
-     * Gets the onDeviceOnlyDictationForced property value. Disables connections to Siri servers so that users can’t use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
+     * Gets the onDeviceOnlyDictationForced property value. Disables connections to Siri servers so that users cant use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1726,7 +1726,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this._onDeviceOnlyDictationForced;
     }
     /**
-     * Gets the onDeviceOnlyTranslationForced property value. When set to TRUE, the setting disables connections to Siri servers so that users can’t use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.
+     * Gets the onDeviceOnlyTranslationForced property value. When set to TRUE, the setting disables connections to Siri servers so that users cant use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -3410,7 +3410,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this._notificationsBlockSettingsModification = value;
     }
     /**
-     * Sets the onDeviceOnlyDictationForced property value. Disables connections to Siri servers so that users can’t use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
+     * Sets the onDeviceOnlyDictationForced property value. Disables connections to Siri servers so that users cant use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
      * @param value Value to set for the onDeviceOnlyDictationForced property.
      * @return a void
      */
@@ -3418,7 +3418,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this._onDeviceOnlyDictationForced = value;
     }
     /**
-     * Sets the onDeviceOnlyTranslationForced property value. When set to TRUE, the setting disables connections to Siri servers so that users can’t use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.
+     * Sets the onDeviceOnlyTranslationForced property value. When set to TRUE, the setting disables connections to Siri servers so that users cant use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.
      * @param value Value to set for the onDeviceOnlyTranslationForced property.
      * @return a void
      */

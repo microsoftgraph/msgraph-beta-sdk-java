@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SynchronizationJob extends Entity implements Parsable {
     /** Schedule used to run the job. Read-only. */
     private SynchronizationSchedule _schedule;
@@ -44,7 +44,7 @@ public class SynchronizationJob extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationJob currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(SynchronizationSchedule::createFromDiscriminatorValue)); });
             this.put("schema", (n) -> { currentObject.setSchema(n.getObjectValue(SynchronizationSchema::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(SynchronizationStatus::createFromDiscriminatorValue)); });

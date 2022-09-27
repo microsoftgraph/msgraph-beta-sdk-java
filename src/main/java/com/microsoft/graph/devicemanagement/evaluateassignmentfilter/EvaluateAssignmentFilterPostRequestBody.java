@@ -55,7 +55,7 @@ public class EvaluateAssignmentFilterPostRequestBody implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateAssignmentFilterPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("data", (n) -> { currentObject.setData(n.getObjectValue(AssignmentFilterEvaluateRequest::createFromDiscriminatorValue)); });
         }};
     }

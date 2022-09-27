@@ -51,7 +51,7 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AdminConsent currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("shareAPNSData", (n) -> { currentObject.setShareAPNSData(n.getEnumValue(AdminConsentState.class)); });
             this.put("shareUserExperienceAnalyticsData", (n) -> { currentObject.setShareUserExperienceAnalyticsData(n.getEnumValue(AdminConsentState.class)); });

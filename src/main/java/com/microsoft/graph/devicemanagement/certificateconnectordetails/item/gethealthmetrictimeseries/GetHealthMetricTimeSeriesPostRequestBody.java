@@ -47,7 +47,7 @@ public class GetHealthMetricTimeSeriesPostRequestBody implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetHealthMetricTimeSeriesPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("timeSeries", (n) -> { currentObject.setTimeSeries(n.getObjectValue(TimeSeriesParameter::createFromDiscriminatorValue)); });
         }};
     }

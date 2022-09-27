@@ -58,7 +58,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BufferEncryptionResult currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("encryptedBuffer", (n) -> { currentObject.setEncryptedBuffer(n.getByteArrayValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("publishingLicense", (n) -> { currentObject.setPublishingLicense(n.getByteArrayValue()); });

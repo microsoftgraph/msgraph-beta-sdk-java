@@ -70,7 +70,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordSingleSignOnField currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("customizedLabel", (n) -> { currentObject.setCustomizedLabel(n.getStringValue()); });
             this.put("defaultLabel", (n) -> { currentObject.setDefaultLabel(n.getStringValue()); });
             this.put("fieldId", (n) -> { currentObject.setFieldId(n.getStringValue()); });

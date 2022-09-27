@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device performance entity contains device performance details. */
 public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity implements Parsable {
     /** The friendly name of the application for which the event occurred. */
     private String _appDisplayName;
@@ -24,7 +25,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     /** The type of the event. */
     private String _eventType;
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthDevicePerformanceDetails and sets the default values.
+     * Instantiates a new userExperienceAnalyticsAppHealthDevicePerformanceDetails and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsAppHealthDevicePerformanceDetails() {
@@ -34,7 +35,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceDetails
+     * @return a userExperienceAnalyticsAppHealthDevicePerformanceDetails
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthDevicePerformanceDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -104,7 +105,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsAppHealthDevicePerformanceDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
             this.put("appPublisher", (n) -> { currentObject.setAppPublisher(n.getStringValue()); });
             this.put("appVersion", (n) -> { currentObject.setAppVersion(n.getStringValue()); });

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics baseline entity contains baseline values against which to compare the user experience analytics scores. */
 public class UserExperienceAnalyticsBaseline extends Entity implements Parsable {
     /** The user experience analytics app health metrics. */
     private UserExperienceAnalyticsCategory _appHealthMetrics;
@@ -30,7 +31,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     /** The user experience analytics work from anywhere metrics. */
     private UserExperienceAnalyticsCategory _workFromAnywhereMetrics;
     /**
-     * Instantiates a new UserExperienceAnalyticsBaseline and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBaseline and sets the default values.
      * @return a void
      */
     public UserExperienceAnalyticsBaseline() {
@@ -40,7 +41,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBaseline
+     * @return a userExperienceAnalyticsBaseline
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBaseline createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -102,7 +103,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsBaseline currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appHealthMetrics", (n) -> { currentObject.setAppHealthMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
             this.put("batteryHealthMetrics", (n) -> { currentObject.setBatteryHealthMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
             this.put("bestPracticesMetrics", (n) -> { currentObject.setBestPracticesMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });

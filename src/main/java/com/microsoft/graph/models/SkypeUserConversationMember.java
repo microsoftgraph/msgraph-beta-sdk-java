@@ -35,7 +35,7 @@ public class SkypeUserConversationMember extends ConversationMember implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SkypeUserConversationMember currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("skypeId", (n) -> { currentObject.setSkypeId(n.getStringValue()); });
         }};
     }

@@ -35,7 +35,7 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedAppleDeviceIdentityResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("status", (n) -> { currentObject.setStatus(n.getBooleanValue()); });
         }};
     }

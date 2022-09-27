@@ -64,7 +64,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleSuccessStatistics currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("permanentFail", (n) -> { currentObject.setPermanentFail(n.getLongValue()); });
             this.put("permanentSuccess", (n) -> { currentObject.setPermanentSuccess(n.getLongValue()); });

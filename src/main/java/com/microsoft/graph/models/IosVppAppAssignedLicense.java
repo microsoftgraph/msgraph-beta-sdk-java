@@ -52,7 +52,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVppAppAssignedLicense currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userEmailAddress", (n) -> { currentObject.setUserEmailAddress(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
             this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });

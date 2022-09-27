@@ -37,7 +37,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingStringLengthConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maximumLength", (n) -> { currentObject.setMaximumLength(n.getIntegerValue()); });
             this.put("minimumLength", (n) -> { currentObject.setMinimumLength(n.getIntegerValue()); });
         }};

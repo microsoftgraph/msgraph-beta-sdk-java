@@ -47,7 +47,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecordOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("completionReason", (n) -> { currentObject.setCompletionReason(n.getEnumValue(RecordCompletionReason.class)); });
             this.put("recordingAccessToken", (n) -> { currentObject.setRecordingAccessToken(n.getStringValue()); });
             this.put("recordingLocation", (n) -> { currentObject.setRecordingLocation(n.getStringValue()); });

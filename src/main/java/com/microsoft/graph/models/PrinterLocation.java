@@ -116,7 +116,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterLocation currentObject = this;
-        return new HashMap<>(20) {{
+        return new HashMap<String, Consumer<ParseNode>>(20) {{
             this.put("altitudeInMeters", (n) -> { currentObject.setAltitudeInMeters(n.getIntegerValue()); });
             this.put("building", (n) -> { currentObject.setBuilding(n.getStringValue()); });
             this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });

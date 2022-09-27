@@ -55,7 +55,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PropertyRule currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operation", (n) -> { currentObject.setOperation(n.getEnumValue(RuleOperation.class)); });
             this.put("property", (n) -> { currentObject.setProperty(n.getStringValue()); });

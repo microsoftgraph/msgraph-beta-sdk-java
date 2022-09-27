@@ -50,7 +50,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftManagedDesktop currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("profile", (n) -> { currentObject.setProfile(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(MicrosoftManagedDesktopType.class)); });

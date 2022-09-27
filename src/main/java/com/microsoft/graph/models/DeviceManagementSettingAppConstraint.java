@@ -35,7 +35,7 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingAppConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("supportedTypes", (n) -> { currentObject.setSupportedTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

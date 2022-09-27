@@ -67,7 +67,7 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateDefinitionValuesPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("added", (n) -> { currentObject.setAdded(n.getCollectionOfObjectValues(GroupPolicyDefinitionValue::createFromDiscriminatorValue)); });
             this.put("deletedIds", (n) -> { currentObject.setDeletedIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("updated", (n) -> { currentObject.setUpdated(n.getCollectionOfObjectValues(GroupPolicyDefinitionValue::createFromDiscriminatorValue)); });

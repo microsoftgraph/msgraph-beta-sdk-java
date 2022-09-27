@@ -36,7 +36,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     /** Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy. */
     private Integer _version;
     /**
-     * Instantiates a new TermsAndConditions and sets the default values.
+     * Instantiates a new termsAndConditions and sets the default values.
      * @return a void
      */
     public TermsAndConditions() {
@@ -46,7 +46,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TermsAndConditions
+     * @return a termsAndConditions
      */
     @javax.annotation.Nonnull
     public static TermsAndConditions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -116,7 +116,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermsAndConditions currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("acceptanceStatement", (n) -> { currentObject.setAcceptanceStatement(n.getStringValue()); });
             this.put("acceptanceStatuses", (n) -> { currentObject.setAcceptanceStatuses(n.getCollectionOfObjectValues(TermsAndConditionsAcceptanceStatus::createFromDiscriminatorValue)); });
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(TermsAndConditionsAssignment::createFromDiscriminatorValue)); });

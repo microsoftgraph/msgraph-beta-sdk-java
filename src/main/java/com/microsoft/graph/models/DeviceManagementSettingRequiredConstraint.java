@@ -35,7 +35,7 @@ public class DeviceManagementSettingRequiredConstraint extends DeviceManagementC
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingRequiredConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("notConfiguredValue", (n) -> { currentObject.setNotConfiguredValue(n.getStringValue()); });
         }};
     }

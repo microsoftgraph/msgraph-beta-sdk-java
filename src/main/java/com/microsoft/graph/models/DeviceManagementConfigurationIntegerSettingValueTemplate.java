@@ -47,7 +47,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationIntegerSettingValueTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefaultTemplate::createFromDiscriminatorValue)); });
             this.put("recommendedValueDefinition", (n) -> { currentObject.setRecommendedValueDefinition(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
             this.put("requiredValueDefinition", (n) -> { currentObject.setRequiredValueDefinition(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });

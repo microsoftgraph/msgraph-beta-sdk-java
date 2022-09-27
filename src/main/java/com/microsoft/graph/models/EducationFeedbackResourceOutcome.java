@@ -45,7 +45,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationFeedbackResourceOutcome currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("feedbackResource", (n) -> { currentObject.setFeedbackResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
             this.put("resourceStatus", (n) -> { currentObject.setResourceStatus(n.getEnumValue(EducationFeedbackResourceOutcomeStatus.class)); });
         }};

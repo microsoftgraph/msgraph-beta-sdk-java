@@ -81,7 +81,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cloudName", (n) -> { currentObject.setCloudName(n.getStringValue()); });
             this.put("derivedCredentialSettings", (n) -> { currentObject.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
             this.put("excludeList", (n) -> { currentObject.setExcludeList(n.getCollectionOfPrimitiveValues(String.class)); });

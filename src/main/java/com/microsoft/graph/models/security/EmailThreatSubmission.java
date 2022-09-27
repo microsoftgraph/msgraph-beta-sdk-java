@@ -70,7 +70,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailThreatSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("attackSimulationInfo", (n) -> { currentObject.setAttackSimulationInfo(n.getObjectValue(AttackSimulationInfo::createFromDiscriminatorValue)); });
             this.put("internetMessageId", (n) -> { currentObject.setInternetMessageId(n.getStringValue()); });
             this.put("originalCategory", (n) -> { currentObject.setOriginalCategory(n.getEnumValue(SubmissionCategory.class)); });

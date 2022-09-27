@@ -41,7 +41,7 @@ public class MembersRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/planner/rosters/{plannerRoster%2Did}/members{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class MembersRequestBuilder {
      */
     public MembersRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/planner/rosters/{plannerRoster%2Did}/members{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Retrieves the members of the plannerRoster.
+     * Get the list of plannerRosterMembers from a plannerRoster.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class MembersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieves the members of the plannerRoster.
+     * Get the list of plannerRosterMembers from a plannerRoster.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class MembersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to members for planner
+     * Add a member to the plannerRoster object.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class MembersRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to members for planner
+     * Add a member to the plannerRoster object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class MembersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieves the members of the plannerRoster.
+     * Get the list of plannerRosterMembers from a plannerRoster.
      * @return a CompletableFuture of PlannerRosterMemberCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PlannerRosterMemberCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class MembersRequestBuilder {
         }
     }
     /**
-     * Retrieves the members of the plannerRoster.
+     * Get the list of plannerRosterMembers from a plannerRoster.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PlannerRosterMemberCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PlannerRosterMemberCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<MembersRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class MembersRequestBuilder {
         }
     }
     /**
-     * Retrieves the members of the plannerRoster.
+     * Get the list of plannerRosterMembers from a plannerRoster.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PlannerRosterMemberCollectionResponse
@@ -163,7 +163,7 @@ public class MembersRequestBuilder {
     public java.util.concurrent.CompletableFuture<PlannerRosterMemberCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<MembersRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class MembersRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to members for planner
+     * Add a member to the plannerRoster object.
      * @param body 
      * @return a CompletableFuture of plannerRosterMember
      */
     public java.util.concurrent.CompletableFuture<PlannerRosterMember> post(@javax.annotation.Nonnull final PlannerRosterMember body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class MembersRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to members for planner
+     * Add a member to the plannerRoster object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerRosterMember
@@ -198,7 +198,7 @@ public class MembersRequestBuilder {
     public java.util.concurrent.CompletableFuture<PlannerRosterMember> post(@javax.annotation.Nonnull final PlannerRosterMember body, @javax.annotation.Nullable final java.util.function.Consumer<MembersRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class MembersRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to members for planner
+     * Add a member to the plannerRoster object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class MembersRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class MembersRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Retrieves the members of the plannerRoster. */
+    /** Get the list of plannerRosterMembers from a plannerRoster. */
     public class MembersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class MembersRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public MembersRequestBuilderGetQueryParameters queryParameters = new MembersRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class MembersRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new membersRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

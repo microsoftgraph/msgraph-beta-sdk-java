@@ -1,0 +1,128 @@
+package com.microsoft.graph.me.drives.item.items.item.assignsensitivitylabel;
+
+import com.microsoft.graph.models.SensitivityLabelAssignmentMethod;
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+/** Provides operations to call the assignSensitivityLabel method. */
+public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, Parsable {
+    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    private Map<String, Object> _additionalData;
+    /** The assignmentMethod property */
+    private SensitivityLabelAssignmentMethod _assignmentMethod;
+    /** The justificationText property */
+    private String _justificationText;
+    /** The sensitivityLabelId property */
+    private String _sensitivityLabelId;
+    /**
+     * Instantiates a new assignSensitivityLabelPostRequestBody and sets the default values.
+     * @return a void
+     */
+    public AssignSensitivityLabelPostRequestBody() {
+        this.setAdditionalData(new HashMap<>());
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a assignSensitivityLabelPostRequestBody
+     */
+    @javax.annotation.Nonnull
+    public static AssignSensitivityLabelPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new AssignSensitivityLabelPostRequestBody();
+    }
+    /**
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a Map<String, Object>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        return this._additionalData;
+    }
+    /**
+     * Gets the assignmentMethod property value. The assignmentMethod property
+     * @return a sensitivityLabelAssignmentMethod
+     */
+    @javax.annotation.Nullable
+    public SensitivityLabelAssignmentMethod getAssignmentMethod() {
+        return this._assignmentMethod;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final AssignSensitivityLabelPostRequestBody currentObject = this;
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
+            this.put("assignmentMethod", (n) -> { currentObject.setAssignmentMethod(n.getEnumValue(SensitivityLabelAssignmentMethod.class)); });
+            this.put("justificationText", (n) -> { currentObject.setJustificationText(n.getStringValue()); });
+            this.put("sensitivityLabelId", (n) -> { currentObject.setSensitivityLabelId(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the justificationText property value. The justificationText property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getJustificationText() {
+        return this._justificationText;
+    }
+    /**
+     * Gets the sensitivityLabelId property value. The sensitivityLabelId property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getSensitivityLabelId() {
+        return this._sensitivityLabelId;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        writer.writeEnumValue("assignmentMethod", this.getAssignmentMethod());
+        writer.writeStringValue("justificationText", this.getJustificationText());
+        writer.writeStringValue("sensitivityLabelId", this.getSensitivityLabelId());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     * @return a void
+     */
+    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+        this._additionalData = value;
+    }
+    /**
+     * Sets the assignmentMethod property value. The assignmentMethod property
+     * @param value Value to set for the assignmentMethod property.
+     * @return a void
+     */
+    public void setAssignmentMethod(@javax.annotation.Nullable final SensitivityLabelAssignmentMethod value) {
+        this._assignmentMethod = value;
+    }
+    /**
+     * Sets the justificationText property value. The justificationText property
+     * @param value Value to set for the justificationText property.
+     * @return a void
+     */
+    public void setJustificationText(@javax.annotation.Nullable final String value) {
+        this._justificationText = value;
+    }
+    /**
+     * Sets the sensitivityLabelId property value. The sensitivityLabelId property
+     * @param value Value to set for the sensitivityLabelId property.
+     * @return a void
+     */
+    public void setSensitivityLabelId(@javax.annotation.Nullable final String value) {
+        this._sensitivityLabelId = value;
+    }
+}

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Device Configuration. */
 public class WindowsWifiConfiguration extends DeviceConfiguration implements Parsable {
     /** Specify whether the wifi connection should connect automatically when in range. */
     private Boolean _connectAutomatically;
@@ -36,7 +37,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     /** Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise. */
     private WiFiSecurityType _wifiSecurityType;
     /**
-     * Instantiates a new WindowsWifiConfiguration and sets the default values.
+     * Instantiates a new windowsWifiConfiguration and sets the default values.
      * @return a void
      */
     public WindowsWifiConfiguration() {
@@ -46,7 +47,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsWifiConfiguration
+     * @return a windowsWifiConfiguration
      */
     @javax.annotation.Nonnull
     public static WindowsWifiConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -91,7 +92,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsWifiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("connectAutomatically", (n) -> { currentObject.setConnectAutomatically(n.getBooleanValue()); });
             this.put("connectToPreferredNetwork", (n) -> { currentObject.setConnectToPreferredNetwork(n.getBooleanValue()); });
             this.put("connectWhenNetworkNameIsHidden", (n) -> { currentObject.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });

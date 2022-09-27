@@ -87,7 +87,7 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OemWarranty currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("additionalWarranties", (n) -> { currentObject.setAdditionalWarranties(n.getCollectionOfObjectValues(WarrantyOffer::createFromDiscriminatorValue)); });
             this.put("baseWarranties", (n) -> { currentObject.setBaseWarranties(n.getCollectionOfObjectValues(WarrantyOffer::createFromDiscriminatorValue)); });
             this.put("deviceConfigurationUrl", (n) -> { currentObject.setDeviceConfigurationUrl(n.getStringValue()); });

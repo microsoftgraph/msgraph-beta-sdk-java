@@ -2,6 +2,7 @@ package com.microsoft.graph.devicemanagement.virtualendpoint.snapshots.getstorag
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
+import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -32,8 +33,8 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder {
     public GetStorageAccountsWithSubscriptionIdRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter, @javax.annotation.Nullable final String subscriptionId) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/deviceManagement/virtualEndpoint/snapshots/microsoft.graph.getStorageAccounts(subscriptionId='{subscriptionId}')";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/deviceManagement/virtualEndpoint/snapshots/microsoft.graph.getStorageAccounts(subscriptionId='{subscriptionId}'){?%24top,%24skip,%24search,%24filter,%24count}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         urlTplParams.put("subscriptionId", subscriptionId);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -45,8 +46,8 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder {
      * @return a void
      */
     public GetStorageAccountsWithSubscriptionIdRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/deviceManagement/virtualEndpoint/snapshots/microsoft.graph.getStorageAccounts(subscriptionId='{subscriptionId}')";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/deviceManagement/virtualEndpoint/snapshots/microsoft.graph.getStorageAccounts(subscriptionId='{subscriptionId}'){?%24top,%24skip,%24search,%24filter,%24count}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -75,6 +76,7 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder {
         if (requestConfiguration != null) {
             final GetStorageAccountsWithSubscriptionIdRequestBuilderGetRequestConfiguration requestConfig = new GetStorageAccountsWithSubscriptionIdRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
@@ -87,7 +89,7 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetStorageAccountsWithSubscriptionIdResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -104,7 +106,7 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetStorageAccountsWithSubscriptionIdResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetStorageAccountsWithSubscriptionIdRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -122,7 +124,7 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder {
     public java.util.concurrent.CompletableFuture<GetStorageAccountsWithSubscriptionIdResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetStorageAccountsWithSubscriptionIdRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -131,6 +133,29 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
+    /** Invoke function getStorageAccounts */
+    public class GetStorageAccountsWithSubscriptionIdRequestBuilderGetQueryParameters {
+        /** Include count of items */
+        @QueryParameter(name = "%24count")
+        @javax.annotation.Nullable
+        public Boolean count;
+        /** Filter items by property values */
+        @QueryParameter(name = "%24filter")
+        @javax.annotation.Nullable
+        public String filter;
+        /** Search items by search phrases */
+        @QueryParameter(name = "%24search")
+        @javax.annotation.Nullable
+        public String search;
+        /** Skip the first n items */
+        @QueryParameter(name = "%24skip")
+        @javax.annotation.Nullable
+        public Integer skip;
+        /** Show only the first n items */
+        @QueryParameter(name = "%24top")
+        @javax.annotation.Nullable
+        public Integer top;
+    }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class GetStorageAccountsWithSubscriptionIdRequestBuilderGetRequestConfiguration {
         /** Request headers */
@@ -138,7 +163,10 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
+        /** Request query parameters */
+        @javax.annotation.Nullable
+        public GetStorageAccountsWithSubscriptionIdRequestBuilderGetQueryParameters queryParameters = new GetStorageAccountsWithSubscriptionIdRequestBuilderGetQueryParameters();
         /**
          * Instantiates a new getStorageAccountsWithSubscriptionIdRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void

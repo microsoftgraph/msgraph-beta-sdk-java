@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A Domain Join Connector is a connector that is responsible to allocate (and delete) machine account blobs */
 public class DeviceManagementDomainJoinConnector extends Entity implements Parsable {
     /** The connector display name. */
     private String _displayName;
@@ -18,7 +19,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     /** The version of the connector. */
     private String _version;
     /**
-     * Instantiates a new DeviceManagementDomainJoinConnector and sets the default values.
+     * Instantiates a new deviceManagementDomainJoinConnector and sets the default values.
      * @return a void
      */
     public DeviceManagementDomainJoinConnector() {
@@ -28,7 +29,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementDomainJoinConnector
+     * @return a deviceManagementDomainJoinConnector
      */
     @javax.annotation.Nonnull
     public static DeviceManagementDomainJoinConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +51,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementDomainJoinConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastConnectionDateTime", (n) -> { currentObject.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(DeviceManagementDomainJoinConnectorState.class)); });

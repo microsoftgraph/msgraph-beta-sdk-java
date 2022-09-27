@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CustomTaskExtensionCallbackData extends CustomExtensionData implements Parsable {
-    /** The operationStatus property */
+    /** Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue. */
     private CustomTaskExtensionOperationStatus _operationStatus;
     /**
      * Instantiates a new CustomTaskExtensionCallbackData and sets the default values.
@@ -36,12 +36,12 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomTaskExtensionCallbackData currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("operationStatus", (n) -> { currentObject.setOperationStatus(n.getEnumValue(CustomTaskExtensionOperationStatus.class)); });
         }};
     }
     /**
-     * Gets the operationStatus property value. The operationStatus property
+     * Gets the operationStatus property value. Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
      * @return a customTaskExtensionOperationStatus
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
         writer.writeEnumValue("operationStatus", this.getOperationStatus());
     }
     /**
-     * Sets the operationStatus property value. The operationStatus property
+     * Sets the operationStatus property value. Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
      * @param value Value to set for the operationStatus property.
      * @return a void
      */

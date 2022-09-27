@@ -43,7 +43,7 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingAbstractImplementationConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedAbstractImplementationDefinitionIds", (n) -> { currentObject.setAllowedAbstractImplementationDefinitionIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

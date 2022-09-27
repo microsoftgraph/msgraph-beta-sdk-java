@@ -60,7 +60,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluatePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("evaluationInput", (n) -> { currentObject.setEvaluationInput(n.getObjectValue(DlpEvaluationInput::createFromDiscriminatorValue)); });
             this.put("notificationInfo", (n) -> { currentObject.setNotificationInfo(n.getObjectValue(DlpNotification::createFromDiscriminatorValue)); });
             this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });

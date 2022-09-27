@@ -47,7 +47,7 @@ public class WindowsPrivacyAccessControlsPostRequestBody implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPrivacyAccessControlsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("windowsPrivacyAccessControls", (n) -> { currentObject.setWindowsPrivacyAccessControls(n.getCollectionOfObjectValues(WindowsPrivacyDataAccessControlItem::createFromDiscriminatorValue)); });
         }};
     }

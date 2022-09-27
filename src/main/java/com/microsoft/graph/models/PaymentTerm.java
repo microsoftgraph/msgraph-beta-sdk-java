@@ -97,7 +97,7 @@ public class PaymentTerm extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PaymentTerm currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("calculateDiscountOnCreditMemos", (n) -> { currentObject.setCalculateDiscountOnCreditMemos(n.getBooleanValue()); });
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("discountDateCalculation", (n) -> { currentObject.setDiscountDateCalculation(n.getStringValue()); });

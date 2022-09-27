@@ -112,7 +112,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StrongAuthenticationPhoneAppDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationType", (n) -> { currentObject.setAuthenticationType(n.getStringValue()); });
             this.put("authenticatorFlavor", (n) -> { currentObject.setAuthenticatorFlavor(n.getStringValue()); });
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });

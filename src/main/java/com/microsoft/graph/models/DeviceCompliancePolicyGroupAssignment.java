@@ -55,7 +55,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceCompliancePolicyGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceCompliancePolicy", (n) -> { currentObject.setDeviceCompliancePolicy(n.getObjectValue(DeviceCompliancePolicy::createFromDiscriminatorValue)); });
             this.put("excludeGroup", (n) -> { currentObject.setExcludeGroup(n.getBooleanValue()); });
             this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });

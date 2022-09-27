@@ -58,7 +58,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ThreatSubmissionRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("emailThreats", (n) -> { currentObject.setEmailThreats(n.getCollectionOfObjectValues(EmailThreatSubmission::createFromDiscriminatorValue)); });
             this.put("emailThreatSubmissionPolicies", (n) -> { currentObject.setEmailThreatSubmissionPolicies(n.getCollectionOfObjectValues(EmailThreatSubmissionPolicy::createFromDiscriminatorValue)); });
             this.put("fileThreats", (n) -> { currentObject.setFileThreats(n.getCollectionOfObjectValues(FileThreatSubmission::createFromDiscriminatorValue)); });

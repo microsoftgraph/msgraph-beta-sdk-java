@@ -52,7 +52,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeploymentState currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reasons", (n) -> { currentObject.setReasons(n.getCollectionOfObjectValues(DeploymentStateReason::createFromDiscriminatorValue)); });
             this.put("requestedValue", (n) -> { currentObject.setRequestedValue(n.getEnumValue(RequestedDeploymentStateValue.class)); });

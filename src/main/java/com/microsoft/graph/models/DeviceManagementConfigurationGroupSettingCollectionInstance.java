@@ -35,7 +35,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstance extends
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationGroupSettingCollectionInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("groupSettingCollectionValue", (n) -> { currentObject.setGroupSettingCollectionValue(n.getCollectionOfObjectValues(DeviceManagementConfigurationGroupSettingValue::createFromDiscriminatorValue)); });
         }};
     }

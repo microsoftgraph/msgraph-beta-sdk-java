@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class OutlookTaskGroup extends Entity implements Parsable {
     /** The version of the task group. */
     private String _changeKey;
@@ -52,7 +52,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutlookTaskGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
             this.put("groupKey", (n) -> { currentObject.setGroupKey(n.getStringValue()); });
             this.put("isDefaultGroup", (n) -> { currentObject.setIsDefaultGroup(n.getBooleanValue()); });

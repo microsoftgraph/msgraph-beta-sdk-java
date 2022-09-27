@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Participant extends Entity implements Parsable {
     /** The info property */
     private ParticipantInfo _info;
@@ -48,7 +48,7 @@ public class Participant extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Participant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
             this.put("isIdentityAnonymized", (n) -> { currentObject.setIsIdentityAnonymized(n.getBooleanValue()); });
             this.put("isInLobby", (n) -> { currentObject.setIsInLobby(n.getBooleanValue()); });

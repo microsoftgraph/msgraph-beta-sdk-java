@@ -35,7 +35,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestEnumeratedSiteLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("urls", (n) -> { currentObject.setUrls(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class TenantGroup extends Entity implements Parsable {
     /** A flag indicating whether all managed tenant are included in the tenant group. Required. Read-only. */
     private Boolean _allTenantsIncluded;
@@ -61,7 +61,7 @@ public class TenantGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allTenantsIncluded", (n) -> { currentObject.setAllTenantsIncluded(n.getBooleanValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("managementActions", (n) -> { currentObject.setManagementActions(n.getCollectionOfObjectValues(ManagementActionInfo::createFromDiscriminatorValue)); });

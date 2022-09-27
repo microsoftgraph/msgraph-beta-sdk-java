@@ -70,7 +70,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomExtensionHandlerInstance currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("customExtensionId", (n) -> { currentObject.setCustomExtensionId(n.getStringValue()); });
             this.put("externalCorrelationId", (n) -> { currentObject.setExternalCorrelationId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

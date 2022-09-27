@@ -43,7 +43,7 @@ public class ExpeditedQualityUpdateReference extends QualityUpdateReference impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExpeditedQualityUpdateReference currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("equivalentContent", (n) -> { currentObject.setEquivalentContent(n.getEnumValue(EquivalentContentOption.class)); });
         }};
     }

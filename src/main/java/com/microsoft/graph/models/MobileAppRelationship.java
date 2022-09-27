@@ -54,7 +54,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppRelationship currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("targetDisplayName", (n) -> { currentObject.setTargetDisplayName(n.getStringValue()); });
             this.put("targetDisplayVersion", (n) -> { currentObject.setTargetDisplayVersion(n.getStringValue()); });
             this.put("targetId", (n) -> { currentObject.setTargetId(n.getStringValue()); });

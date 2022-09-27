@@ -35,7 +35,7 @@ public class DeviceManagementConfigurationSimpleSettingInstanceTemplate extends 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSimpleSettingInstanceTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("simpleSettingValueTemplate", (n) -> { currentObject.setSimpleSettingValueTemplate(n.getObjectValue(DeviceManagementConfigurationSimpleSettingValueTemplate::createFromDiscriminatorValue)); });
         }};
     }

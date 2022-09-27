@@ -9,25 +9,26 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Devices that are managed or pre-enrolled through Intune */
 public class ManagedDevice extends Entity implements Parsable {
     /** Whether the device is Azure Active Directory registered. This property is read-only. */
-    private Boolean _aadRegistered;
+    private final Boolean _aadRegistered;
     /** Code that allows the Activation Lock on a device to be bypassed. This property is read-only. */
-    private String _activationLockBypassCode;
+    private final String _activationLockBypassCode;
     /** Android security patch level. This property is read-only. */
-    private String _androidSecurityPatchLevel;
+    private final String _androidSecurityPatchLevel;
     /** Managed device mobile app configuration states for this device. */
     private java.util.List<AssignmentFilterEvaluationStatusDetails> _assignmentFilterEvaluationStatusDetails;
     /** Reports if the managed device is enrolled via auto-pilot. This property is read-only. */
-    private Boolean _autopilotEnrolled;
+    private final Boolean _autopilotEnrolled;
     /** The unique identifier for the Azure Active Directory device. Read only. This property is read-only. */
-    private String _azureActiveDirectoryDeviceId;
+    private final String _azureActiveDirectoryDeviceId;
     /** The unique identifier for the Azure Active Directory device. Read only. This property is read-only. */
-    private String _azureADDeviceId;
+    private final String _azureADDeviceId;
     /** Whether the device is Azure Active Directory registered. This property is read-only. */
-    private Boolean _azureADRegistered;
+    private final Boolean _azureADRegistered;
     /** Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. To get, include BootstrapTokenEscrowed in the select clause and query with a device id. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only. */
-    private Boolean _bootstrapTokenEscrowed;
+    private final Boolean _bootstrapTokenEscrowed;
     /** Chassis type. */
     private ChassisType _chassisType;
     /** List of properties of the ChromeOS Device. */
@@ -35,11 +36,11 @@ public class ManagedDevice extends Entity implements Parsable {
     /** The cloudPcRemoteActionResults property */
     private java.util.List<CloudPcRemoteActionResult> _cloudPcRemoteActionResults;
     /** The DateTime when device compliance grace period expires. This property is read-only. */
-    private OffsetDateTime _complianceGracePeriodExpirationDateTime;
+    private final OffsetDateTime _complianceGracePeriodExpirationDateTime;
     /** Compliance state. */
     private ComplianceState _complianceState;
     /** ConfigrMgr client enabled features. This property is read-only. */
-    private ConfigurationManagerClientEnabledFeatures _configurationManagerClientEnabledFeatures;
+    private final ConfigurationManagerClientEnabledFeatures _configurationManagerClientEnabledFeatures;
     /** Configuration manager client health state, valid only for devices managed by MDM/ConfigMgr Agent */
     private ConfigurationManagerClientHealthState _configurationManagerClientHealthState;
     /** Configuration manager client information, valid only for devices managed, duel-managed or tri-managed by ConfigMgr Agent */
@@ -47,11 +48,11 @@ public class ManagedDevice extends Entity implements Parsable {
     /** All applications currently installed on the device */
     private java.util.List<DetectedApp> _detectedApps;
     /** List of ComplexType deviceActionResult objects. This property is read-only. */
-    private java.util.List<DeviceActionResult> _deviceActionResults;
+    private final java.util.List<DeviceActionResult> _deviceActionResults;
     /** Device category */
     private DeviceCategory _deviceCategory;
     /** Device category display name. This property is read-only. */
-    private String _deviceCategoryDisplayName;
+    private final String _deviceCategoryDisplayName;
     /** Device compliance policy states for this device. */
     private java.util.List<DeviceCompliancePolicyState> _deviceCompliancePolicyStates;
     /** Device configuration states for this device. */
@@ -61,51 +62,51 @@ public class ManagedDevice extends Entity implements Parsable {
     /** Indicates whether the device is DFCI managed. When TRUE the device is DFCI managed. When FALSE, the device is not DFCI managed. The default value is FALSE. */
     private Boolean _deviceFirmwareConfigurationInterfaceManaged;
     /** The device health attestation state. This property is read-only. */
-    private DeviceHealthAttestationState _deviceHealthAttestationState;
+    private final DeviceHealthAttestationState _deviceHealthAttestationState;
     /** Name of the device. This property is read-only. */
-    private String _deviceName;
+    private final String _deviceName;
     /** Device registration status. */
     private DeviceRegistrationState _deviceRegistrationState;
     /** Device type. */
     private DeviceType _deviceType;
     /** Whether the device is Exchange ActiveSync activated. This property is read-only. */
-    private Boolean _easActivated;
+    private final Boolean _easActivated;
     /** Exchange ActivationSync activation time of the device. This property is read-only. */
-    private OffsetDateTime _easActivationDateTime;
+    private final OffsetDateTime _easActivationDateTime;
     /** Exchange ActiveSync Id of the device. This property is read-only. */
-    private String _easDeviceId;
+    private final String _easDeviceId;
     /** Email(s) for the user associated with the device. This property is read-only. */
-    private String _emailAddress;
+    private final String _emailAddress;
     /** Enrollment time of the device. This property is read-only. */
-    private OffsetDateTime _enrolledDateTime;
+    private final OffsetDateTime _enrolledDateTime;
     /** Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only. */
-    private String _enrollmentProfileName;
+    private final String _enrollmentProfileName;
     /** Ethernet MAC. This property is read-only. */
-    private String _ethernetMacAddress;
+    private final String _ethernetMacAddress;
     /** Device Exchange Access State. */
     private DeviceManagementExchangeAccessState _exchangeAccessState;
     /** Device Exchange Access State Reason. */
     private DeviceManagementExchangeAccessStateReason _exchangeAccessStateReason;
     /** Last time the device contacted Exchange. This property is read-only. */
-    private OffsetDateTime _exchangeLastSuccessfulSyncDateTime;
+    private final OffsetDateTime _exchangeLastSuccessfulSyncDateTime;
     /** Free Storage in Bytes. This property is read-only. */
-    private Long _freeStorageSpaceInBytes;
+    private final Long _freeStorageSpaceInBytes;
     /** The hardward details for the device.  Includes information such as storage space, manufacturer, serial number, etc. This property is read-only. */
-    private HardwareInformation _hardwareInformation;
+    private final HardwareInformation _hardwareInformation;
     /** Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only. */
-    private String _iccid;
+    private final String _iccid;
     /** IMEI. This property is read-only. */
-    private String _imei;
+    private final String _imei;
     /** Device encryption status. This property is read-only. */
-    private Boolean _isEncrypted;
+    private final Boolean _isEncrypted;
     /** Device supervised status. This property is read-only. */
-    private Boolean _isSupervised;
+    private final Boolean _isSupervised;
     /** whether the device is jail broken or rooted. This property is read-only. */
-    private String _jailBroken;
+    private final String _jailBroken;
     /** Device enrollment join type. */
     private JoinType _joinType;
     /** The date and time that the device last completed a successful sync with Intune. This property is read-only. */
-    private OffsetDateTime _lastSyncDateTime;
+    private final OffsetDateTime _lastSyncDateTime;
     /** List of log collection requests */
     private java.util.List<DeviceLogCollectionResponse> _logCollectionRequests;
     /** State of lost mode, indicating if lost mode is enabled or disabled */
@@ -119,81 +120,81 @@ public class ManagedDevice extends Entity implements Parsable {
     /** Management agent type. */
     private ManagementAgentType _managementAgent;
     /** Reports device management certificate expiration date. This property is read-only. */
-    private OffsetDateTime _managementCertificateExpirationDate;
+    private final OffsetDateTime _managementCertificateExpirationDate;
     /** Device management features. */
     private ManagedDeviceManagementFeatures _managementFeatures;
     /** Management state of device in Microsoft Intune. */
     private ManagementState _managementState;
     /** Manufacturer of the device. This property is read-only. */
-    private String _manufacturer;
+    private final String _manufacturer;
     /** MEID. This property is read-only. */
-    private String _meid;
+    private final String _meid;
     /** Model of the device. This property is read-only. */
-    private String _model;
+    private final String _model;
     /** Notes on the device created by IT Admin */
     private String _notes;
     /** Operating system of the device. Windows, iOS, etc. This property is read-only. */
-    private String _operatingSystem;
+    private final String _operatingSystem;
     /** Operating system version of the device. This property is read-only. */
-    private String _osVersion;
+    private final String _osVersion;
     /** Owner type of device. */
     private OwnerType _ownerType;
     /** Available health states for the Device Health API */
     private ManagedDevicePartnerReportedHealthState _partnerReportedThreatState;
     /** Phone number of the device. This property is read-only. */
-    private String _phoneNumber;
+    private final String _phoneNumber;
     /** Total Memory in Bytes. This property is read-only. */
-    private Long _physicalMemoryInBytes;
+    private final Long _physicalMemoryInBytes;
     /** Reports the DateTime the preferMdmOverGroupPolicy setting was set.  When set, the Intune MDM settings will override Group Policy settings if there is a conflict. Read Only. This property is read-only. */
-    private OffsetDateTime _preferMdmOverGroupPolicyAppliedDateTime;
+    private final OffsetDateTime _preferMdmOverGroupPolicyAppliedDateTime;
     /** Processor architecture */
     private ManagedDeviceArchitecture _processorArchitecture;
     /** An error string that identifies issues when creating Remote Assistance session objects. This property is read-only. */
-    private String _remoteAssistanceSessionErrorDetails;
+    private final String _remoteAssistanceSessionErrorDetails;
     /** Url that allows a Remote Assistance session to be established with the device. This property is read-only. */
-    private String _remoteAssistanceSessionUrl;
+    private final String _remoteAssistanceSessionUrl;
     /** Reports if the managed iOS device is user approval enrollment. This property is read-only. */
-    private Boolean _requireUserEnrollmentApproval;
+    private final Boolean _requireUserEnrollmentApproval;
     /** Indicates the time after when a device will be auto retired because of scheduled action. This property is read-only. */
-    private OffsetDateTime _retireAfterDateTime;
+    private final OffsetDateTime _retireAfterDateTime;
     /** List of Scope Tag IDs for this Device instance. */
     private java.util.List<String> _roleScopeTagIds;
     /** Security baseline states for this device. */
     private java.util.List<SecurityBaselineState> _securityBaselineStates;
     /** SerialNumber. This property is read-only. */
-    private String _serialNumber;
+    private final String _serialNumber;
     /** Device sku family */
     private String _skuFamily;
     /** Device sku number, see also: https://docs.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only. */
-    private Integer _skuNumber;
+    private final Integer _skuNumber;
     /** Specification version. This property is read-only. */
-    private String _specificationVersion;
+    private final String _specificationVersion;
     /** Subscriber Carrier. This property is read-only. */
-    private String _subscriberCarrier;
+    private final String _subscriberCarrier;
     /** Total Storage in Bytes. This property is read-only. */
-    private Long _totalStorageSpaceInBytes;
+    private final Long _totalStorageSpaceInBytes;
     /** Unique Device Identifier for iOS and macOS devices. This property is read-only. */
-    private String _udid;
+    private final String _udid;
     /** User display name. This property is read-only. */
-    private String _userDisplayName;
+    private final String _userDisplayName;
     /** Unique Identifier for the user associated with the device. This property is read-only. */
-    private String _userId;
+    private final String _userId;
     /** Device user principal name. This property is read-only. */
-    private String _userPrincipalName;
+    private final String _userPrincipalName;
     /** The primary users associated with the managed device. */
     private java.util.List<User> _users;
     /** Indicates the last logged on users of a device. This property is read-only. */
-    private java.util.List<LoggedOnUser> _usersLoggedOn;
+    private final java.util.List<LoggedOnUser> _usersLoggedOn;
     /** Wi-Fi MAC. This property is read-only. */
-    private String _wiFiMacAddress;
+    private final String _wiFiMacAddress;
     /** Count of active malware for this windows device. This property is read-only. */
-    private Integer _windowsActiveMalwareCount;
+    private final Integer _windowsActiveMalwareCount;
     /** The device protection status. This property is read-only. */
     private WindowsProtectionState _windowsProtectionState;
     /** Count of remediated malware for this windows device. This property is read-only. */
-    private Integer _windowsRemediatedMalwareCount;
+    private final Integer _windowsRemediatedMalwareCount;
     /**
-     * Instantiates a new ManagedDevice and sets the default values.
+     * Instantiates a new managedDevice and sets the default values.
      * @return a void
      */
     public ManagedDevice() {
@@ -203,7 +204,7 @@ public class ManagedDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDevice
+     * @return a managedDevice
      */
     @javax.annotation.Nonnull
     public static ManagedDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -536,7 +537,7 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("aadRegistered", (n) -> { currentObject.setAadRegistered(n.getBooleanValue()); });
             this.put("activationLockBypassCode", (n) -> { currentObject.setActivationLockBypassCode(n.getStringValue()); });
             this.put("androidSecurityPatchLevel", (n) -> { currentObject.setAndroidSecurityPatchLevel(n.getStringValue()); });
@@ -1054,97 +1055,41 @@ public class ManagedDevice extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("aadRegistered", this.getAadRegistered());
-        writer.writeStringValue("activationLockBypassCode", this.getActivationLockBypassCode());
-        writer.writeStringValue("androidSecurityPatchLevel", this.getAndroidSecurityPatchLevel());
         writer.writeCollectionOfObjectValues("assignmentFilterEvaluationStatusDetails", this.getAssignmentFilterEvaluationStatusDetails());
-        writer.writeBooleanValue("autopilotEnrolled", this.getAutopilotEnrolled());
-        writer.writeStringValue("azureActiveDirectoryDeviceId", this.getAzureActiveDirectoryDeviceId());
-        writer.writeStringValue("azureADDeviceId", this.getAzureADDeviceId());
-        writer.writeBooleanValue("azureADRegistered", this.getAzureADRegistered());
-        writer.writeBooleanValue("bootstrapTokenEscrowed", this.getBootstrapTokenEscrowed());
         writer.writeEnumValue("chassisType", this.getChassisType());
         writer.writeCollectionOfObjectValues("chromeOSDeviceInfo", this.getChromeOSDeviceInfo());
         writer.writeCollectionOfObjectValues("cloudPcRemoteActionResults", this.getCloudPcRemoteActionResults());
-        writer.writeOffsetDateTimeValue("complianceGracePeriodExpirationDateTime", this.getComplianceGracePeriodExpirationDateTime());
         writer.writeEnumValue("complianceState", this.getComplianceState());
-        writer.writeObjectValue("configurationManagerClientEnabledFeatures", this.getConfigurationManagerClientEnabledFeatures());
         writer.writeObjectValue("configurationManagerClientHealthState", this.getConfigurationManagerClientHealthState());
         writer.writeObjectValue("configurationManagerClientInformation", this.getConfigurationManagerClientInformation());
         writer.writeCollectionOfObjectValues("detectedApps", this.getDetectedApps());
-        writer.writeCollectionOfObjectValues("deviceActionResults", this.getDeviceActionResults());
         writer.writeObjectValue("deviceCategory", this.getDeviceCategory());
-        writer.writeStringValue("deviceCategoryDisplayName", this.getDeviceCategoryDisplayName());
         writer.writeCollectionOfObjectValues("deviceCompliancePolicyStates", this.getDeviceCompliancePolicyStates());
         writer.writeCollectionOfObjectValues("deviceConfigurationStates", this.getDeviceConfigurationStates());
         writer.writeEnumValue("deviceEnrollmentType", this.getDeviceEnrollmentType());
         writer.writeBooleanValue("deviceFirmwareConfigurationInterfaceManaged", this.getDeviceFirmwareConfigurationInterfaceManaged());
-        writer.writeObjectValue("deviceHealthAttestationState", this.getDeviceHealthAttestationState());
-        writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeEnumValue("deviceRegistrationState", this.getDeviceRegistrationState());
         writer.writeEnumValue("deviceType", this.getDeviceType());
-        writer.writeBooleanValue("easActivated", this.getEasActivated());
-        writer.writeOffsetDateTimeValue("easActivationDateTime", this.getEasActivationDateTime());
-        writer.writeStringValue("easDeviceId", this.getEasDeviceId());
-        writer.writeStringValue("emailAddress", this.getEmailAddress());
-        writer.writeOffsetDateTimeValue("enrolledDateTime", this.getEnrolledDateTime());
-        writer.writeStringValue("enrollmentProfileName", this.getEnrollmentProfileName());
-        writer.writeStringValue("ethernetMacAddress", this.getEthernetMacAddress());
         writer.writeEnumValue("exchangeAccessState", this.getExchangeAccessState());
         writer.writeEnumValue("exchangeAccessStateReason", this.getExchangeAccessStateReason());
-        writer.writeOffsetDateTimeValue("exchangeLastSuccessfulSyncDateTime", this.getExchangeLastSuccessfulSyncDateTime());
-        writer.writeLongValue("freeStorageSpaceInBytes", this.getFreeStorageSpaceInBytes());
-        writer.writeObjectValue("hardwareInformation", this.getHardwareInformation());
-        writer.writeStringValue("iccid", this.getIccid());
-        writer.writeStringValue("imei", this.getImei());
-        writer.writeBooleanValue("isEncrypted", this.getIsEncrypted());
-        writer.writeBooleanValue("isSupervised", this.getIsSupervised());
-        writer.writeStringValue("jailBroken", this.getJailBroken());
         writer.writeEnumValue("joinType", this.getJoinType());
-        writer.writeOffsetDateTimeValue("lastSyncDateTime", this.getLastSyncDateTime());
         writer.writeCollectionOfObjectValues("logCollectionRequests", this.getLogCollectionRequests());
         writer.writeEnumValue("lostModeState", this.getLostModeState());
         writer.writeCollectionOfObjectValues("managedDeviceMobileAppConfigurationStates", this.getManagedDeviceMobileAppConfigurationStates());
         writer.writeStringValue("managedDeviceName", this.getManagedDeviceName());
         writer.writeEnumValue("managedDeviceOwnerType", this.getManagedDeviceOwnerType());
         writer.writeEnumValue("managementAgent", this.getManagementAgent());
-        writer.writeOffsetDateTimeValue("managementCertificateExpirationDate", this.getManagementCertificateExpirationDate());
         writer.writeEnumValue("managementFeatures", this.getManagementFeatures());
         writer.writeEnumValue("managementState", this.getManagementState());
-        writer.writeStringValue("manufacturer", this.getManufacturer());
-        writer.writeStringValue("meid", this.getMeid());
-        writer.writeStringValue("model", this.getModel());
         writer.writeStringValue("notes", this.getNotes());
-        writer.writeStringValue("operatingSystem", this.getOperatingSystem());
-        writer.writeStringValue("osVersion", this.getOsVersion());
         writer.writeEnumValue("ownerType", this.getOwnerType());
         writer.writeEnumValue("partnerReportedThreatState", this.getPartnerReportedThreatState());
-        writer.writeStringValue("phoneNumber", this.getPhoneNumber());
-        writer.writeLongValue("physicalMemoryInBytes", this.getPhysicalMemoryInBytes());
-        writer.writeOffsetDateTimeValue("preferMdmOverGroupPolicyAppliedDateTime", this.getPreferMdmOverGroupPolicyAppliedDateTime());
         writer.writeEnumValue("processorArchitecture", this.getProcessorArchitecture());
-        writer.writeStringValue("remoteAssistanceSessionErrorDetails", this.getRemoteAssistanceSessionErrorDetails());
-        writer.writeStringValue("remoteAssistanceSessionUrl", this.getRemoteAssistanceSessionUrl());
-        writer.writeBooleanValue("requireUserEnrollmentApproval", this.getRequireUserEnrollmentApproval());
-        writer.writeOffsetDateTimeValue("retireAfterDateTime", this.getRetireAfterDateTime());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeCollectionOfObjectValues("securityBaselineStates", this.getSecurityBaselineStates());
-        writer.writeStringValue("serialNumber", this.getSerialNumber());
         writer.writeStringValue("skuFamily", this.getSkuFamily());
-        writer.writeIntegerValue("skuNumber", this.getSkuNumber());
-        writer.writeStringValue("specificationVersion", this.getSpecificationVersion());
-        writer.writeStringValue("subscriberCarrier", this.getSubscriberCarrier());
-        writer.writeLongValue("totalStorageSpaceInBytes", this.getTotalStorageSpaceInBytes());
-        writer.writeStringValue("udid", this.getUdid());
-        writer.writeStringValue("userDisplayName", this.getUserDisplayName());
-        writer.writeStringValue("userId", this.getUserId());
-        writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeCollectionOfObjectValues("users", this.getUsers());
-        writer.writeCollectionOfObjectValues("usersLoggedOn", this.getUsersLoggedOn());
-        writer.writeStringValue("wiFiMacAddress", this.getWiFiMacAddress());
-        writer.writeIntegerValue("windowsActiveMalwareCount", this.getWindowsActiveMalwareCount());
         writer.writeObjectValue("windowsProtectionState", this.getWindowsProtectionState());
-        writer.writeIntegerValue("windowsRemediatedMalwareCount", this.getWindowsRemediatedMalwareCount());
     }
     /**
      * Sets the aadRegistered property value. Whether the device is Azure Active Directory registered. This property is read-only.

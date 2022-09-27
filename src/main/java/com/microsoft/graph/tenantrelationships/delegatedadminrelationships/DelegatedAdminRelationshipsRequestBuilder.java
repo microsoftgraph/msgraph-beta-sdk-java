@@ -41,7 +41,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/tenantRelationships/delegatedAdminRelationships{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,13 +53,13 @@ public class DelegatedAdminRelationshipsRequestBuilder {
      */
     public DelegatedAdminRelationshipsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/tenantRelationships/delegatedAdminRelationships{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to delegatedAdminRelationships for tenantRelationships
+     * Create a new delegatedAdminRelationship object.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to delegatedAdminRelationships for tenantRelationships
+     * Create a new delegatedAdminRelationship object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,13 +122,13 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @return a CompletableFuture of DelegatedAdminRelationshipCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -138,14 +138,14 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         }
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DelegatedAdminRelationshipCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -155,7 +155,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         }
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DelegatedAdminRelationshipCollectionResponse
@@ -163,7 +163,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -173,14 +173,14 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to delegatedAdminRelationships for tenantRelationships
+     * Create a new delegatedAdminRelationship object.
      * @param body 
      * @return a CompletableFuture of delegatedAdminRelationship
      */
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> post(@javax.annotation.Nonnull final DelegatedAdminRelationship body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -190,7 +190,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to delegatedAdminRelationships for tenantRelationships
+     * Create a new delegatedAdminRelationship object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedAdminRelationship
@@ -198,7 +198,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> post(@javax.annotation.Nonnull final DelegatedAdminRelationship body, @javax.annotation.Nullable final java.util.function.Consumer<DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -208,7 +208,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to delegatedAdminRelationships for tenantRelationships
+     * Create a new delegatedAdminRelationship object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -218,7 +218,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -227,7 +227,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant. */
+    /** Get a list of the delegatedAdminRelationship objects and their properties. */
     public class DelegatedAdminRelationshipsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +269,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DelegatedAdminRelationshipsRequestBuilderGetQueryParameters queryParameters = new DelegatedAdminRelationshipsRequestBuilderGetQueryParameters();
@@ -287,7 +287,7 @@ public class DelegatedAdminRelationshipsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new delegatedAdminRelationshipsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

@@ -58,7 +58,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingDependedOnBy currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("dependedOnBy", (n) -> { currentObject.setDependedOnBy(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });

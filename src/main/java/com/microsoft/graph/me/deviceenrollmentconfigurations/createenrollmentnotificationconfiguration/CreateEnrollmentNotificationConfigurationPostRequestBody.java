@@ -55,7 +55,7 @@ public class CreateEnrollmentNotificationConfigurationPostRequestBody implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateEnrollmentNotificationConfigurationPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("deviceEnrollmentNotificationConfigurations", (n) -> { currentObject.setDeviceEnrollmentNotificationConfigurations(n.getCollectionOfObjectValues(DeviceEnrollmentConfiguration::createFromDiscriminatorValue)); });
         }};
     }

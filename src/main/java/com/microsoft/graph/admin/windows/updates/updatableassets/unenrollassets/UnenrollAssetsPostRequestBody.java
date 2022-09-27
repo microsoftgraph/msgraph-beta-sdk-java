@@ -58,7 +58,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnenrollAssetsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("assets", (n) -> { currentObject.setAssets(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
             this.put("updateCategory", (n) -> { currentObject.setUpdateCategory(n.getEnumValue(UpdateCategory.class)); });
         }};

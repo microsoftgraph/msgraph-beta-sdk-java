@@ -33,7 +33,7 @@ public class StopHoldMusicRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/communications/calls/{call%2Did}/participants/{participant%2Did}/microsoft.graph.stopHoldMusic";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -45,13 +45,13 @@ public class StopHoldMusicRequestBuilder {
      */
     public StopHoldMusicRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/communications/calls/{call%2Did}/participants/{participant%2Did}/microsoft.graph.stopHoldMusic";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action stopHoldMusic
+     * Reincorporate a participant previously put on hold to the call.
      * @param body 
      * @return a RequestInformation
      */
@@ -60,7 +60,7 @@ public class StopHoldMusicRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Invoke action stopHoldMusic
+     * Reincorporate a participant previously put on hold to the call.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -84,14 +84,14 @@ public class StopHoldMusicRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action stopHoldMusic
+     * Reincorporate a participant previously put on hold to the call.
      * @param body 
      * @return a CompletableFuture of stopHoldMusicOperation
      */
     public java.util.concurrent.CompletableFuture<StopHoldMusicOperation> post(@javax.annotation.Nonnull final StopHoldMusicPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -101,7 +101,7 @@ public class StopHoldMusicRequestBuilder {
         }
     }
     /**
-     * Invoke action stopHoldMusic
+     * Reincorporate a participant previously put on hold to the call.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of stopHoldMusicOperation
@@ -109,7 +109,7 @@ public class StopHoldMusicRequestBuilder {
     public java.util.concurrent.CompletableFuture<StopHoldMusicOperation> post(@javax.annotation.Nonnull final StopHoldMusicPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StopHoldMusicRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -119,7 +119,7 @@ public class StopHoldMusicRequestBuilder {
         }
     }
     /**
-     * Invoke action stopHoldMusic
+     * Reincorporate a participant previously put on hold to the call.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -129,7 +129,7 @@ public class StopHoldMusicRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -145,7 +145,7 @@ public class StopHoldMusicRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new stopHoldMusicRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

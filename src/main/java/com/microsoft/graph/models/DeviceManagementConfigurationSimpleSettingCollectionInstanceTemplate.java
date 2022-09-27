@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowUnmanagedValues", (n) -> { currentObject.setAllowUnmanagedValues(n.getBooleanValue()); });
             this.put("simpleSettingCollectionValueTemplate", (n) -> { currentObject.setSimpleSettingCollectionValueTemplate(n.getCollectionOfObjectValues(DeviceManagementConfigurationSimpleSettingValueTemplate::createFromDiscriminatorValue)); });
         }};

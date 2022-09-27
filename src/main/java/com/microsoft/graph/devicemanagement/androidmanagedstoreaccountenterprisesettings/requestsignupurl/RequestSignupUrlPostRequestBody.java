@@ -46,7 +46,7 @@ public class RequestSignupUrlPostRequestBody implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RequestSignupUrlPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("hostName", (n) -> { currentObject.setHostName(n.getStringValue()); });
         }};
     }

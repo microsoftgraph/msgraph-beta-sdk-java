@@ -67,7 +67,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementExchangeAccessRule currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("accessLevel", (n) -> { currentObject.setAccessLevel(n.getEnumValue(DeviceManagementExchangeAccessLevel.class)); });
             this.put("deviceClass", (n) -> { currentObject.setDeviceClass(n.getObjectValue(DeviceManagementExchangeDeviceClass::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

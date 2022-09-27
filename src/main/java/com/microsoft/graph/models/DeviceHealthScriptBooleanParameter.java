@@ -43,7 +43,7 @@ public class DeviceHealthScriptBooleanParameter extends DeviceHealthScriptParame
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptBooleanParameter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getBooleanValue()); });
         }};
     }

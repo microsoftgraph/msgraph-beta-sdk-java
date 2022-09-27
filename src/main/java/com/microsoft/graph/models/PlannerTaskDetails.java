@@ -12,6 +12,8 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     private PlannerChecklistItems _checklist;
     /** Description of the task. */
     private String _description;
+    /** The notes property */
+    private ItemBody _notes;
     /** This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task. */
     private PlannerPreviewType _previewType;
     /** The collection of references on the task. */
@@ -57,12 +59,21 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerTaskDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("checklist", (n) -> { currentObject.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+            this.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
             this.put("previewType", (n) -> { currentObject.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
             this.put("references", (n) -> { currentObject.setReferences(n.getObjectValue(PlannerExternalReferences::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the notes property value. The notes property
+     * @return a itemBody
+     */
+    @javax.annotation.Nullable
+    public ItemBody getNotes() {
+        return this._notes;
     }
     /**
      * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
@@ -90,6 +101,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("checklist", this.getChecklist());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeObjectValue("notes", this.getNotes());
         writer.writeEnumValue("previewType", this.getPreviewType());
         writer.writeObjectValue("references", this.getReferences());
     }
@@ -108,6 +120,14 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      */
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
+    }
+    /**
+     * Sets the notes property value. The notes property
+     * @param value Value to set for the notes property.
+     * @return a void
+     */
+    public void setNotes(@javax.annotation.Nullable final ItemBody value) {
+        this._notes = value;
     }
     /**
      * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.

@@ -47,7 +47,7 @@ public class CompleteSetupPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CompleteSetupPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("tenantSetupInfo", (n) -> { currentObject.setTenantSetupInfo(n.getObjectValue(TenantSetupInfo::createFromDiscriminatorValue)); });
         }};
     }

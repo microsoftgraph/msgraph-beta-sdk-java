@@ -11,13 +11,13 @@ import java.util.Objects;
 public class EducationSynchronizationProfileStatus extends Entity implements Parsable {
     /** Number of errors during synchronization. */
     private Long _errorCount;
-    /** Represents the time when most recent changes were observed in profile. */
+    /** Date and time when most recent changes were observed in the profile. */
     private OffsetDateTime _lastActivityDateTime;
-    /** Represents the time of the most recent successful  synchronization. */
+    /** Date and time of the most recent successful synchronization. */
     private OffsetDateTime _lastSynchronizationDateTime;
     /** The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating. */
     private EducationSynchronizationStatus _status;
-    /** Status message for the current profile's synchronization stage. */
+    /** Status message for the synchronization stage of the current profile. */
     private String _statusMessage;
     /**
      * Instantiates a new educationSynchronizationProfileStatus and sets the default values.
@@ -52,7 +52,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationProfileStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("errorCount", (n) -> { currentObject.setErrorCount(n.getLongValue()); });
             this.put("lastActivityDateTime", (n) -> { currentObject.setLastActivityDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastSynchronizationDateTime", (n) -> { currentObject.setLastSynchronizationDateTime(n.getOffsetDateTimeValue()); });
@@ -61,7 +61,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
         }};
     }
     /**
-     * Gets the lastActivityDateTime property value. Represents the time when most recent changes were observed in profile.
+     * Gets the lastActivityDateTime property value. Date and time when most recent changes were observed in the profile.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -69,7 +69,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
         return this._lastActivityDateTime;
     }
     /**
-     * Gets the lastSynchronizationDateTime property value. Represents the time of the most recent successful  synchronization.
+     * Gets the lastSynchronizationDateTime property value. Date and time of the most recent successful synchronization.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -85,7 +85,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
         return this._status;
     }
     /**
-     * Gets the statusMessage property value. Status message for the current profile's synchronization stage.
+     * Gets the statusMessage property value. Status message for the synchronization stage of the current profile.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
         this._errorCount = value;
     }
     /**
-     * Sets the lastActivityDateTime property value. Represents the time when most recent changes were observed in profile.
+     * Sets the lastActivityDateTime property value. Date and time when most recent changes were observed in the profile.
      * @param value Value to set for the lastActivityDateTime property.
      * @return a void
      */
@@ -123,7 +123,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
         this._lastActivityDateTime = value;
     }
     /**
-     * Sets the lastSynchronizationDateTime property value. Represents the time of the most recent successful  synchronization.
+     * Sets the lastSynchronizationDateTime property value. Date and time of the most recent successful synchronization.
      * @param value Value to set for the lastSynchronizationDateTime property.
      * @return a void
      */
@@ -139,7 +139,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
         this._status = value;
     }
     /**
-     * Sets the statusMessage property value. Status message for the current profile's synchronization stage.
+     * Sets the statusMessage property value. Status message for the synchronization stage of the current profile.
      * @param value Value to set for the statusMessage property.
      * @return a void
      */

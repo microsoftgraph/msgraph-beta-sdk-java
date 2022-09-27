@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Connector extends Entity implements Parsable {
     /** The external IP address as detected by the the connector server. Read-only. */
     private String _externalIp;
@@ -50,7 +50,7 @@ public class Connector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Connector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("externalIp", (n) -> { currentObject.setExternalIp(n.getStringValue()); });
             this.put("machineName", (n) -> { currentObject.setMachineName(n.getStringValue()); });
             this.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(ConnectorGroup::createFromDiscriminatorValue)); });

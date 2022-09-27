@@ -35,7 +35,7 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupWritebackConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("onPremisesGroupType", (n) -> { currentObject.setOnPremisesGroupType(n.getStringValue()); });
         }};
     }

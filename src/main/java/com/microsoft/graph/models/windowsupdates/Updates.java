@@ -58,7 +58,7 @@ public class Updates extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Updates currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("catalog", (n) -> { currentObject.setCatalog(n.getObjectValue(Catalog::createFromDiscriminatorValue)); });
             this.put("deployments", (n) -> { currentObject.setDeployments(n.getCollectionOfObjectValues(Deployment::createFromDiscriminatorValue)); });
             this.put("resourceConnections", (n) -> { currentObject.setResourceConnections(n.getCollectionOfObjectValues(ResourceConnection::createFromDiscriminatorValue)); });

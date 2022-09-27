@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class CustomSecurityAttributeDefinition extends Entity implements Parsable {
     /** Values that are predefined for this custom security attribute.This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues. */
     private java.util.List<AllowedValue> _allowedValues;
@@ -76,7 +76,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomSecurityAttributeDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedValues", (n) -> { currentObject.setAllowedValues(n.getCollectionOfObjectValues(AllowedValue::createFromDiscriminatorValue)); });
             this.put("attributeSet", (n) -> { currentObject.setAttributeSet(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });

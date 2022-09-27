@@ -65,7 +65,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDateTimeConfiguration currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("dateFormat", (n) -> { currentObject.setDateFormat(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("officeHoursEndTime", (n) -> { currentObject.setOfficeHoursEndTime(n.getLocalTimeValue()); });

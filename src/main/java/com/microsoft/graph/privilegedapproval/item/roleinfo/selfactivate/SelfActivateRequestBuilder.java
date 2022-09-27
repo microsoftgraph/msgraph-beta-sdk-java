@@ -33,7 +33,7 @@ public class SelfActivateRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/privilegedApproval/{privilegedApproval%2Did}/roleInfo/microsoft.graph.selfActivate";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -45,13 +45,13 @@ public class SelfActivateRequestBuilder {
      */
     public SelfActivateRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/privilegedApproval/{privilegedApproval%2Did}/roleInfo/microsoft.graph.selfActivate";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action selfActivate
+     * Activate the role that is assigned to the requester.
      * @param body 
      * @return a RequestInformation
      */
@@ -60,7 +60,7 @@ public class SelfActivateRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Invoke action selfActivate
+     * Activate the role that is assigned to the requester.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -84,14 +84,14 @@ public class SelfActivateRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action selfActivate
+     * Activate the role that is assigned to the requester.
      * @param body 
      * @return a CompletableFuture of privilegedRoleAssignment
      */
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@javax.annotation.Nonnull final SelfActivatePostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -101,7 +101,7 @@ public class SelfActivateRequestBuilder {
         }
     }
     /**
-     * Invoke action selfActivate
+     * Activate the role that is assigned to the requester.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of privilegedRoleAssignment
@@ -109,7 +109,7 @@ public class SelfActivateRequestBuilder {
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@javax.annotation.Nonnull final SelfActivatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<SelfActivateRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -119,7 +119,7 @@ public class SelfActivateRequestBuilder {
         }
     }
     /**
-     * Invoke action selfActivate
+     * Activate the role that is assigned to the requester.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -129,7 +129,7 @@ public class SelfActivateRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -145,7 +145,7 @@ public class SelfActivateRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new selfActivateRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

@@ -60,7 +60,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceKey currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("keyMaterial", (n) -> { currentObject.setKeyMaterial(n.getByteArrayValue()); });
             this.put("keyType", (n) -> { currentObject.setKeyType(n.getStringValue()); });

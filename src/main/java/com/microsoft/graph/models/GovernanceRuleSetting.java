@@ -50,7 +50,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceRuleSetting currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("ruleIdentifier", (n) -> { currentObject.setRuleIdentifier(n.getStringValue()); });
             this.put("setting", (n) -> { currentObject.setSetting(n.getStringValue()); });

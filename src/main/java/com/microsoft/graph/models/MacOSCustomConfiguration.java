@@ -49,7 +49,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSCustomConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deploymentChannel", (n) -> { currentObject.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel.class)); });
             this.put("payload", (n) -> { currentObject.setPayload(n.getByteArrayValue()); });
             this.put("payloadFileName", (n) -> { currentObject.setPayloadFileName(n.getStringValue()); });

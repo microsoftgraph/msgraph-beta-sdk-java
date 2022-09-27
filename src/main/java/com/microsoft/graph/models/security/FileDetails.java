@@ -62,7 +62,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileDetails currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
             this.put("filePath", (n) -> { currentObject.setFilePath(n.getStringValue()); });
             this.put("filePublisher", (n) -> { currentObject.setFilePublisher(n.getStringValue()); });

@@ -24,7 +24,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     /** The number of devices enrolled in MDM */
     private Integer _mdmEnrolledCount;
     /**
-     * Instantiates a new ManagedDeviceOverview and sets the default values.
+     * Instantiates a new managedDeviceOverview and sets the default values.
      * @return a void
      */
     public ManagedDeviceOverview() {
@@ -34,7 +34,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDeviceOverview
+     * @return a managedDeviceOverview
      */
     @javax.annotation.Nonnull
     public static ManagedDeviceOverview createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -80,7 +80,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceOverview currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceExchangeAccessStateSummary", (n) -> { currentObject.setDeviceExchangeAccessStateSummary(n.getObjectValue(DeviceExchangeAccessStateSummary::createFromDiscriminatorValue)); });
             this.put("deviceOperatingSystemSummary", (n) -> { currentObject.setDeviceOperatingSystemSummary(n.getObjectValue(DeviceOperatingSystemSummary::createFromDiscriminatorValue)); });
             this.put("dualEnrolledDeviceCount", (n) -> { currentObject.setDualEnrolledDeviceCount(n.getIntegerValue()); });

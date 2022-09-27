@@ -46,7 +46,7 @@ public class GetPasswordSingleSignOnCredentialsPostRequestBody implements Additi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetPasswordSingleSignOnCredentialsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
         }};
     }

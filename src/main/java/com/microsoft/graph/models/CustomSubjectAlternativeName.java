@@ -51,7 +51,7 @@ public class CustomSubjectAlternativeName implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomSubjectAlternativeName currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sanType", (n) -> { currentObject.setSanType(n.getEnumValue(SubjectAlternativeNameType.class)); });

@@ -66,7 +66,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedAdminAccessContainer currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("accessContainerId", (n) -> { currentObject.setAccessContainerId(n.getStringValue()); });
             this.put("accessContainerType", (n) -> { currentObject.setAccessContainerType(n.getEnumValue(DelegatedAdminAccessContainerType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

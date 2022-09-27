@@ -53,7 +53,7 @@ public class RiskyUsersRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identityProtection/riskyUsers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -65,13 +65,13 @@ public class RiskyUsersRequestBuilder {
      */
     public RiskyUsersRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/identityProtection/riskyUsers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Retrieve the properties and relationships of a collection of **riskyUser** objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class RiskyUsersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Retrieve the properties and relationships of a collection of **riskyUser** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,13 +134,13 @@ public class RiskyUsersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Retrieve the properties and relationships of a collection of **riskyUser** objects.
      * @return a CompletableFuture of RiskyUserCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<RiskyUserCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -150,14 +150,14 @@ public class RiskyUsersRequestBuilder {
         }
     }
     /**
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Retrieve the properties and relationships of a collection of **riskyUser** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RiskyUserCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<RiskyUserCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<RiskyUsersRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -167,7 +167,7 @@ public class RiskyUsersRequestBuilder {
         }
     }
     /**
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Retrieve the properties and relationships of a collection of **riskyUser** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of RiskyUserCollectionResponse
@@ -175,7 +175,7 @@ public class RiskyUsersRequestBuilder {
     public java.util.concurrent.CompletableFuture<RiskyUserCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<RiskyUsersRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -192,7 +192,7 @@ public class RiskyUsersRequestBuilder {
     public java.util.concurrent.CompletableFuture<RiskyUser> post(@javax.annotation.Nonnull final RiskyUser body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -210,7 +210,7 @@ public class RiskyUsersRequestBuilder {
     public java.util.concurrent.CompletableFuture<RiskyUser> post(@javax.annotation.Nonnull final RiskyUser body, @javax.annotation.Nullable final java.util.function.Consumer<RiskyUsersRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -230,7 +230,7 @@ public class RiskyUsersRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -239,7 +239,7 @@ public class RiskyUsersRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Users that are flagged as at-risk by Azure AD Identity Protection. */
+    /** Retrieve the properties and relationships of a collection of **riskyUser** objects. */
     public class RiskyUsersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -281,7 +281,7 @@ public class RiskyUsersRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public RiskyUsersRequestBuilderGetQueryParameters queryParameters = new RiskyUsersRequestBuilderGetQueryParameters();
@@ -299,7 +299,7 @@ public class RiskyUsersRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new riskyUsersRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

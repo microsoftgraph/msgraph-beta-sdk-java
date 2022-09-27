@@ -111,7 +111,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsFirewallRule currentObject = this;
-        return new HashMap<>(17) {{
+        return new HashMap<String, Consumer<ParseNode>>(17) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(StateManagementSetting.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

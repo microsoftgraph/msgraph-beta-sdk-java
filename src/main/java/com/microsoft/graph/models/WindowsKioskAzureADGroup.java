@@ -45,7 +45,7 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskAzureADGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
         }};

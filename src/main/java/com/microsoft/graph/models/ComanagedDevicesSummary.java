@@ -13,25 +13,25 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** Number of devices with CompliancePolicy swung-over. This property is read-only. */
-    private Integer _compliancePolicyCount;
+    private final Integer _compliancePolicyCount;
     /** Number of devices with ConfigurationSettings swung-over. This property is read-only. */
-    private Integer _configurationSettingsCount;
+    private final Integer _configurationSettingsCount;
     /** Number of devices with EndpointProtection swung-over. This property is read-only. */
-    private Integer _endpointProtectionCount;
+    private final Integer _endpointProtectionCount;
     /** Number of devices with Inventory swung-over. This property is read-only. */
-    private Integer _inventoryCount;
+    private final Integer _inventoryCount;
     /** Number of devices with ModernApps swung-over. This property is read-only. */
-    private Integer _modernAppsCount;
+    private final Integer _modernAppsCount;
     /** The OdataType property */
     private String _odataType;
     /** Number of devices with OfficeApps swung-over. This property is read-only. */
-    private Integer _officeAppsCount;
+    private final Integer _officeAppsCount;
     /** Number of devices with ResourceAccess swung-over. This property is read-only. */
-    private Integer _resourceAccessCount;
+    private final Integer _resourceAccessCount;
     /** Number of Co-Managed Devices. This property is read-only. */
-    private Integer _totalComanagedCount;
+    private final Integer _totalComanagedCount;
     /** Number of devices with WindowsUpdateForBusiness swung-over. This property is read-only. */
-    private Integer _windowsUpdateForBusinessCount;
+    private final Integer _windowsUpdateForBusinessCount;
     /**
      * Instantiates a new comanagedDevicesSummary and sets the default values.
      * @return a void
@@ -89,7 +89,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ComanagedDevicesSummary currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("compliancePolicyCount", (n) -> { currentObject.setCompliancePolicyCount(n.getIntegerValue()); });
             this.put("configurationSettingsCount", (n) -> { currentObject.setConfigurationSettingsCount(n.getIntegerValue()); });
             this.put("endpointProtectionCount", (n) -> { currentObject.setEndpointProtectionCount(n.getIntegerValue()); });
@@ -165,16 +165,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeIntegerValue("compliancePolicyCount", this.getCompliancePolicyCount());
-        writer.writeIntegerValue("configurationSettingsCount", this.getConfigurationSettingsCount());
-        writer.writeIntegerValue("endpointProtectionCount", this.getEndpointProtectionCount());
-        writer.writeIntegerValue("inventoryCount", this.getInventoryCount());
-        writer.writeIntegerValue("modernAppsCount", this.getModernAppsCount());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeIntegerValue("officeAppsCount", this.getOfficeAppsCount());
-        writer.writeIntegerValue("resourceAccessCount", this.getResourceAccessCount());
-        writer.writeIntegerValue("totalComanagedCount", this.getTotalComanagedCount());
-        writer.writeIntegerValue("windowsUpdateForBusinessCount", this.getWindowsUpdateForBusinessCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

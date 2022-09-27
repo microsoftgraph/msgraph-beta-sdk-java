@@ -64,7 +64,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersonNamePronounciation currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("first", (n) -> { currentObject.setFirst(n.getStringValue()); });
             this.put("last", (n) -> { currentObject.setLast(n.getStringValue()); });

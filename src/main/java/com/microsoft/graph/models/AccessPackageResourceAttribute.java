@@ -82,7 +82,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageResourceAttribute currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("attributeDestination", (n) -> { currentObject.setAttributeDestination(n.getObjectValue(AccessPackageResourceAttributeDestination::createFromDiscriminatorValue)); });
             this.put("attributeName", (n) -> { currentObject.setAttributeName(n.getStringValue()); });
             this.put("attributeSource", (n) -> { currentObject.setAttributeSource(n.getObjectValue(AccessPackageResourceAttributeSource::createFromDiscriminatorValue)); });

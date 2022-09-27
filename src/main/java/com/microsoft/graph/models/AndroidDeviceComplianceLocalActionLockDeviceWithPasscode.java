@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends AndroidDeviceComplianceLocalActionBase implements Parsable {
     /** Passcode to reset to Android device. This property is read-only. */
-    private String _passcode;
+    private final String _passcode;
     /** Number of sign in failures before wiping device, the value can be 4-11. Valid values 4 to 11 */
     private Integer _passcodeSignInFailureCountBeforeWipe;
     /**
@@ -37,7 +37,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("passcode", (n) -> { currentObject.setPasscode(n.getStringValue()); });
             this.put("passcodeSignInFailureCountBeforeWipe", (n) -> { currentObject.setPasscodeSignInFailureCountBeforeWipe(n.getIntegerValue()); });
         }};
@@ -66,7 +66,6 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("passcode", this.getPasscode());
         writer.writeIntegerValue("passcodeSignInFailureCountBeforeWipe", this.getPasscodeSignInFailureCountBeforeWipe());
     }
     /**

@@ -57,7 +57,7 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SpecifiedCaptiveNetworkPlugins currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("allowedBundleIdentifiers", (n) -> { currentObject.setAllowedBundleIdentifiers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

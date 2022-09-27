@@ -40,7 +40,7 @@ public class DeviceHealthScriptAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("runRemediationScript", (n) -> { currentObject.setRunRemediationScript(n.getBooleanValue()); });
             this.put("runSchedule", (n) -> { currentObject.setRunSchedule(n.getObjectValue(DeviceHealthScriptRunSchedule::createFromDiscriminatorValue)); });
             this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });

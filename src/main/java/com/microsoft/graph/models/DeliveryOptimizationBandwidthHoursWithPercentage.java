@@ -53,7 +53,7 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeliveryOptimizationBandwidthHoursWithPercentage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bandwidthBackgroundPercentageHours", (n) -> { currentObject.setBandwidthBackgroundPercentageHours(n.getObjectValue(DeliveryOptimizationBandwidthBusinessHoursLimit::createFromDiscriminatorValue)); });
             this.put("bandwidthForegroundPercentageHours", (n) -> { currentObject.setBandwidthForegroundPercentageHours(n.getObjectValue(DeliveryOptimizationBandwidthBusinessHoursLimit::createFromDiscriminatorValue)); });
         }};
