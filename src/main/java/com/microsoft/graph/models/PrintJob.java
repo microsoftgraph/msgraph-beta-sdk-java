@@ -59,6 +59,15 @@ public class PrintJob extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime createdDateTime;
 
     /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
+    @Expose
+	@Nullable
+    public String displayName;
+
+    /**
      * The Is Fetchable.
      * If true, document can be fetched by printer.
      */

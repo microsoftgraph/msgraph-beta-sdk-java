@@ -73,6 +73,16 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<Organ
      * @return the InsightsSettingsRequestBuilder instance
      */
     @Nonnull
+    public com.microsoft.graph.requests.InsightsSettingsRequestBuilder contactInsights() {
+        return new com.microsoft.graph.requests.InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("contactInsights"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for InsightsSettings
+     *
+     * @return the InsightsSettingsRequestBuilder instance
+     */
+    @Nonnull
     public com.microsoft.graph.requests.InsightsSettingsRequestBuilder itemInsights() {
         return new com.microsoft.graph.requests.InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
     }
