@@ -47,6 +47,7 @@ import com.microsoft.graph.models.DeviceManagementReportsGetAllCertificatesRepor
 import com.microsoft.graph.models.DeviceManagementReportsGetCertificatesReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetZebraFotaDeploymentReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetMobileApplicationManagementAppRegistrationSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetRemoteAssistanceSessionsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCachedReportParameterSet;
@@ -481,6 +482,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportRequestBuilder getGroupPolicySettingsDeviceSettingsReport(@Nonnull final DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportParameterSet parameters) {
         return new DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getGroupPolicySettingsDeviceSettingsReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetMobileApplicationManagementAppRegistrationSummaryReportRequestBuilder getMobileApplicationManagementAppRegistrationSummaryReport(@Nonnull final DeviceManagementReportsGetMobileApplicationManagementAppRegistrationSummaryReportParameterSet parameters) {
+        return new DeviceManagementReportsGetMobileApplicationManagementAppRegistrationSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMobileApplicationManagementAppRegistrationSummaryReport"), getClient(), null, parameters);
     }
 
     /**

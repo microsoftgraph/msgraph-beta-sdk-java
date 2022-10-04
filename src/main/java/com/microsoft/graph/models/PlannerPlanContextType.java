@@ -32,6 +32,10 @@ public enum PlannerPlanContextType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * loop Page
+    */
+    LOOP_PAGE,
+    /**
     * For PlannerPlanContextType values that were not expected from the service
     */
     UNEXPECTED_VALUE

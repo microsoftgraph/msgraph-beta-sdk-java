@@ -18,6 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.MicrosoftTunnelServerCreateServerLogCollectionRequestParameterSet;
+import com.microsoft.graph.models.MicrosoftTunnelServerGenerateServerLogCollectionRequestParameterSet;
 import com.microsoft.graph.models.MicrosoftTunnelServerGetHealthMetricsParameterSet;
 import com.microsoft.graph.models.MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSet;
 
@@ -71,6 +72,16 @@ public class MicrosoftTunnelServerRequestBuilder extends BaseRequestBuilder<Micr
     @Nonnull
     public MicrosoftTunnelServerCreateServerLogCollectionRequestRequestBuilder createServerLogCollectionRequest(@Nonnull final MicrosoftTunnelServerCreateServerLogCollectionRequestParameterSet parameters) {
         return new MicrosoftTunnelServerCreateServerLogCollectionRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createServerLogCollectionRequest"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public MicrosoftTunnelServerGenerateServerLogCollectionRequestRequestBuilder generateServerLogCollectionRequest(@Nonnull final MicrosoftTunnelServerGenerateServerLogCollectionRequestParameterSet parameters) {
+        return new MicrosoftTunnelServerGenerateServerLogCollectionRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.generateServerLogCollectionRequest"), getClient(), null, parameters);
     }
 
     /**

@@ -300,7 +300,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Publisher Name.
-     * 
+     * The name of the Azure AD tenant that published the application.
      */
     @SerializedName(value = "publisherName", alternate = {"PublisherName"})
     @Expose

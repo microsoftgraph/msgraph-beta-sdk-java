@@ -39,6 +39,15 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
     public MicrosoftApplicationDataAccessSettings microsoftApplicationDataAccess;
 
     /**
+     * The Contact Insights.
+     * Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user's contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
+     */
+    @SerializedName(value = "contactInsights", alternate = {"ContactInsights"})
+    @Expose
+	@Nullable
+    public InsightsSettings contactInsights;
+
+    /**
      * The Item Insights.
      * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
      */

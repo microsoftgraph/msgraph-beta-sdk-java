@@ -17,6 +17,7 @@ import com.microsoft.graph.models.ManagedAppRemediationAction;
 import com.microsoft.graph.models.ManagedAppPhoneNumberRedirectLevel;
 import com.microsoft.graph.models.ManagedBrowserType;
 import com.microsoft.graph.models.ManagedAppDeviceThreatLevel;
+import com.microsoft.graph.models.MobileThreatDefensePartnerPriority;
 import com.microsoft.graph.models.ManagedAppNotificationRestriction;
 import com.microsoft.graph.models.ManagedAppPinCharacterSet;
 import com.microsoft.graph.models.ManagedAppPolicy;
@@ -314,6 +315,15 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
     @Expose
 	@Nullable
     public String minimumWipeOsVersion;
+
+    /**
+     * The Mobile Threat Defense Partner Priority.
+     * Indicates how to prioritize which Mobile Threat Defense (MTD) partner is enabled for a given platform, when more than one is enabled. An app can only be actively using a single Mobile Threat Defense partner. When NULL, Microsoft Defender will be given preference. Otherwise setting the value to defenderOverThirdPartyPartner or thirdPartyPartnerOverDefender will make explicit which partner to prioritize. Possible values are: null, defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender and unknownFutureValue. Default value is null. Possible values are: defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender, unknownFutureValue.
+     */
+    @SerializedName(value = "mobileThreatDefensePartnerPriority", alternate = {"MobileThreatDefensePartnerPriority"})
+    @Expose
+	@Nullable
+    public MobileThreatDefensePartnerPriority mobileThreatDefensePartnerPriority;
 
     /**
      * The Mobile Threat Defense Remediation Action.

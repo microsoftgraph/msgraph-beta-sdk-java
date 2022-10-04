@@ -31,7 +31,7 @@ public class Task extends Entity implements IJsonBackedObject {
 
     /**
      * The Arguments.
-     * Arguments included within the task.
+     * Arguments included within the task.  For guidance to configure this property, see Configure the arguments for built-in Lifecycle Workflow tasks.
      */
     @SerializedName(value = "arguments", alternate = {"Arguments"})
     @Expose

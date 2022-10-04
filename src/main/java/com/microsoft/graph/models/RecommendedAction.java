@@ -48,7 +48,7 @@ public class RecommendedAction implements IJsonBackedObject {
 
     /**
      * The Potential Score Impact.
-     * Potential improvement in security score of the tenant from the recommended action.
+     * Potential improvement in the tenant security score from the recommended action.
      */
     @SerializedName(value = "potentialScoreImpact", alternate = {"PotentialScoreImpact"})
     @Expose

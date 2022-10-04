@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.ConditionalAccessFilter;
 
 
 import com.google.gson.JsonObject;
@@ -55,6 +56,15 @@ public class ConditionalAccessClientApplications implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<String> includeServicePrincipals;
+
+    /**
+     * The Service Principal Filter.
+     * 
+     */
+    @SerializedName(value = "servicePrincipalFilter", alternate = {"ServicePrincipalFilter"})
+    @Expose
+	@Nullable
+    public ConditionalAccessFilter servicePrincipalFilter;
 
 
     /**

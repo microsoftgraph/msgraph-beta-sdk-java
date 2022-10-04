@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.AndroidWorkProfileRequiredPasswordType;
+import com.microsoft.graph.models.AndroidRequiredPasswordComplexity;
 import com.microsoft.graph.models.AndroidWorkProfileCrossProfileDataSharingType;
 import com.microsoft.graph.models.AndroidWorkProfileDefaultAppPermissionPolicyType;
 import com.microsoft.graph.models.DeviceConfiguration;
@@ -117,6 +118,15 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public Integer passwordSignInFailureCountBeforeFactoryReset;
+
+    /**
+     * The Required Password Complexity.
+     * Indicates the required device password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 12+. Possible values are: none, low, medium, high.
+     */
+    @SerializedName(value = "requiredPasswordComplexity", alternate = {"RequiredPasswordComplexity"})
+    @Expose
+	@Nullable
+    public AndroidRequiredPasswordComplexity requiredPasswordComplexity;
 
     /**
      * The Security Require Verify Apps.
@@ -405,6 +415,15 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public Integer workProfilePasswordSignInFailureCountBeforeFactoryReset;
+
+    /**
+     * The Work Profile Required Password Complexity.
+     * Indicates the required work profile password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 12+. Possible values are: none, low, medium, high.
+     */
+    @SerializedName(value = "workProfileRequiredPasswordComplexity", alternate = {"WorkProfileRequiredPasswordComplexity"})
+    @Expose
+	@Nullable
+    public AndroidRequiredPasswordComplexity workProfileRequiredPasswordComplexity;
 
     /**
      * The Work Profile Require Password.
