@@ -8,7 +8,6 @@ import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.authentication.AnonymousAuthenticationProvider;
 import com.microsoft.kiota.authentication.AuthenticationProvider;
 import com.microsoft.kiota.authentication.AzureIdentityAuthenticationProvider;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import okhttp3.OkHttpClient;
 
@@ -45,6 +44,7 @@ public class GraphServiceClient extends microsoft.graph.BaseGraphServiceClient {
      * @param tokenCredential The TokenCredential for this GraphServiceClient.
      * @param scopes The Scopes for this GraphServiceClient.
      */
+    @SuppressWarnings("LambdaLast")
     public GraphServiceClient(TokenCredential tokenCredential, String... scopes) {
         this(new AzureIdentityAuthenticationProvider(tokenCredential, null, scopes));
     }
