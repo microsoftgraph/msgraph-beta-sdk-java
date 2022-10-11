@@ -21,6 +21,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * Instantiates a new setScheduledRetireStatePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SetScheduledRetireStatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,7 +50,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SetScheduledRetireStatePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("managedDeviceIds", (n) -> { currentObject.setManagedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ScheduledRetireState.class)); });
         }};
@@ -75,6 +76,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("managedDeviceIds", this.getManagedDeviceIds());
@@ -86,6 +88,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +97,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the managedDeviceIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._managedDeviceIds = value;
     }
@@ -102,6 +106,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ScheduledRetireState value) {
         this._state = value;
     }

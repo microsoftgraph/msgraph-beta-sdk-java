@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class TeamsTab extends Entity implements Parsable {
     /** Container for custom settings applied to a tab. The tab is considered configured only once this property is set. */
     private TeamsTabConfiguration _configuration;
@@ -27,6 +27,7 @@ public class TeamsTab extends Entity implements Parsable {
      * Instantiates a new teamsTab and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsTab() {
         super();
         this.setOdataType("#microsoft.graph.teamsTab");
@@ -64,7 +65,7 @@ public class TeamsTab extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsTab currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configuration", (n) -> { currentObject.setConfiguration(n.getObjectValue(TeamsTabConfiguration::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("messageId", (n) -> { currentObject.setMessageId(n.getStringValue()); });
@@ -119,6 +120,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the configuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfiguration(@javax.annotation.Nullable final TeamsTabConfiguration value) {
         this._configuration = value;
     }
@@ -143,6 +146,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -151,6 +155,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the messageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageId(@javax.annotation.Nullable final String value) {
         this._messageId = value;
     }
@@ -159,6 +164,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the sortOrderIndex property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSortOrderIndex(@javax.annotation.Nullable final String value) {
         this._sortOrderIndex = value;
     }
@@ -167,6 +173,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the teamsApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsApp(@javax.annotation.Nullable final TeamsApp value) {
         this._teamsApp = value;
     }
@@ -175,6 +182,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the teamsAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
         this._teamsAppId = value;
     }
@@ -183,6 +191,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

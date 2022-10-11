@@ -14,6 +14,7 @@ public class DeviceManagementSettingEnrollmentTypeConstraint extends DeviceManag
      * Instantiates a new DeviceManagementSettingEnrollmentTypeConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingEnrollmentTypeConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint");
@@ -43,7 +44,7 @@ public class DeviceManagementSettingEnrollmentTypeConstraint extends DeviceManag
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingEnrollmentTypeConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enrollmentTypes", (n) -> { currentObject.setEnrollmentTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceManagementSettingEnrollmentTypeConstraint extends DeviceManag
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementSettingEnrollmentTypeConstraint extends DeviceManag
      * @param value Value to set for the enrollmentTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._enrollmentTypes = value;
     }

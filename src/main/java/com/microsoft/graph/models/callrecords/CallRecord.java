@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public class CallRecord extends Entity implements Parsable {
     /** UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _endDateTime;
@@ -19,7 +19,7 @@ public class CallRecord extends Entity implements Parsable {
     /** UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _lastModifiedDateTime;
     /** List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue. */
-    private java.util.List<String> _modalities;
+    private java.util.List<Modality> _modalities;
     /** The organizing party's identity. */
     private IdentitySet _organizer;
     /** List of distinct identities involved in the call. */
@@ -36,6 +36,7 @@ public class CallRecord extends Entity implements Parsable {
      * Instantiates a new callRecord and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CallRecord() {
         super();
         this.setOdataType("#microsoft.graph.callRecords.callRecord");
@@ -65,11 +66,11 @@ public class CallRecord extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("modalities", (n) -> { currentObject.setModalities(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("modalities", (n) -> { currentObject.setModalities(n.getCollectionOfEnumValues(Modality.class)); });
             this.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
             this.put("sessions", (n) -> { currentObject.setSessions(n.getCollectionOfObjectValues(Session::createFromDiscriminatorValue)); });
@@ -96,10 +97,10 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     * @return a string
+     * @return a modality
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getModalities() {
+    public java.util.List<Modality> getModalities() {
         return this._modalities;
     }
     /**
@@ -155,13 +156,14 @@ public class CallRecord extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeStringValue("joinWebUrl", this.getJoinWebUrl());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
-        writer.writeCollectionOfPrimitiveValues("modalities", this.getModalities());
+        writer.writeCollectionOfEnumValues("modalities", this.getModalities());
         writer.writeObjectValue("organizer", this.getOrganizer());
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
@@ -174,6 +176,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -182,6 +185,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the joinWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinWebUrl(@javax.annotation.Nullable final String value) {
         this._joinWebUrl = value;
     }
@@ -190,6 +194,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -198,7 +203,8 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the modalities property.
      * @return a void
      */
-    public void setModalities(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
         this._modalities = value;
     }
     /**
@@ -206,6 +212,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the organizer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizer(@javax.annotation.Nullable final IdentitySet value) {
         this._organizer = value;
     }
@@ -214,6 +221,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the participants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final java.util.List<IdentitySet> value) {
         this._participants = value;
     }
@@ -222,6 +230,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the sessions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessions(@javax.annotation.Nullable final java.util.List<Session> value) {
         this._sessions = value;
     }
@@ -230,6 +239,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -238,6 +248,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final CallType value) {
         this._type = value;
     }
@@ -246,6 +257,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Long value) {
         this._version = value;
     }

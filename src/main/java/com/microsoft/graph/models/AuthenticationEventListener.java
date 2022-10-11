@@ -21,6 +21,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * Instantiates a new AuthenticationEventListener and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationEventListener() {
         super();
         this.setOdataType("#microsoft.graph.authenticationEventListener");
@@ -65,7 +66,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationEventListener currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationEventsFlowId", (n) -> { currentObject.setAuthenticationEventsFlowId(n.getStringValue()); });
             this.put("conditions", (n) -> { currentObject.setConditions(n.getObjectValue(AuthenticationConditions::createFromDiscriminatorValue)); });
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
@@ -93,6 +94,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -106,6 +108,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the authenticationEventsFlowId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationEventsFlowId(@javax.annotation.Nullable final String value) {
         this._authenticationEventsFlowId = value;
     }
@@ -114,6 +117,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the conditions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditions(@javax.annotation.Nullable final AuthenticationConditions value) {
         this._conditions = value;
     }
@@ -122,6 +126,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -130,6 +135,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._tags = value;
     }

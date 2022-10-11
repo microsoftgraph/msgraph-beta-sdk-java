@@ -30,6 +30,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Instantiates a new deviceLogCollectionResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceLogCollectionResponse() {
         super();
         this.setOdataType("#microsoft.graph.deviceLogCollectionResponse");
@@ -67,7 +68,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceLogCollectionResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getLongValue()); });
             this.put("expirationDateTimeUTC", (n) -> { currentObject.setExpirationDateTimeUTC(n.getOffsetDateTimeValue()); });
             this.put("initiatedByUserPrincipalName", (n) -> { currentObject.setInitiatedByUserPrincipalName(n.getStringValue()); });
@@ -131,6 +132,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +150,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Long value) {
         this._errorCode = value;
     }
@@ -156,6 +159,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTimeUTC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTimeUTC = value;
     }
@@ -164,6 +168,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the initiatedByUserPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedByUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._initiatedByUserPrincipalName = value;
     }
@@ -172,6 +177,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -180,6 +186,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the receivedDateTimeUTC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
         this._receivedDateTimeUTC = value;
     }
@@ -188,6 +195,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the requestedDateTimeUTC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestedDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
         this._requestedDateTimeUTC = value;
     }
@@ -196,6 +204,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Double value) {
         this._size = value;
     }
@@ -204,6 +213,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

@@ -14,6 +14,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
      * Instantiates a new UserEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.userEvidence");
@@ -35,7 +36,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userAccount", (n) -> { currentObject.setUserAccount(n.getObjectValue(UserAccount::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the userAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAccount(@javax.annotation.Nullable final UserAccount value) {
         this._userAccount = value;
     }

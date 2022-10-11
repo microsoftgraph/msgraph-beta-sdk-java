@@ -25,6 +25,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * Instantiates a new WindowsInformationProtectionWipeAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionWipeAction() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtectionWipeAction");
@@ -46,7 +47,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionWipeAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lastCheckInDateTime", (n) -> { currentObject.setLastCheckInDateTime(n.getOffsetDateTimeValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ActionState.class)); });
             this.put("targetedDeviceMacAddress", (n) -> { currentObject.setTargetedDeviceMacAddress(n.getStringValue()); });
@@ -108,6 +109,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +125,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * @param value Value to set for the lastCheckInDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastCheckInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastCheckInDateTime = value;
     }
@@ -131,6 +134,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ActionState value) {
         this._status = value;
     }
@@ -139,6 +143,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * @param value Value to set for the targetedDeviceMacAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedDeviceMacAddress(@javax.annotation.Nullable final String value) {
         this._targetedDeviceMacAddress = value;
     }
@@ -147,6 +152,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * @param value Value to set for the targetedDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedDeviceName(@javax.annotation.Nullable final String value) {
         this._targetedDeviceName = value;
     }
@@ -155,6 +161,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * @param value Value to set for the targetedDeviceRegistrationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedDeviceRegistrationId(@javax.annotation.Nullable final String value) {
         this._targetedDeviceRegistrationId = value;
     }
@@ -163,6 +170,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * @param value Value to set for the targetedUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedUserId(@javax.annotation.Nullable final String value) {
         this._targetedUserId = value;
     }

@@ -28,6 +28,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      * Instantiates a new getAssignmentFiltersStatusDetailsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetAssignmentFiltersStatusDetailsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,7 +65,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetAssignmentFiltersStatusDetailsPostRequestBody currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("assignmentFilterIds", (n) -> { currentObject.setAssignmentFilterIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
             this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
@@ -118,6 +119,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("assignmentFilterIds", this.getAssignmentFilterIds());
@@ -133,6 +135,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      * @param value Value to set for the assignmentFilterIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._assignmentFilterIds = value;
     }
@@ -149,6 +153,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -157,6 +162,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      * @param value Value to set for the payloadId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadId(@javax.annotation.Nullable final String value) {
         this._payloadId = value;
     }
@@ -165,6 +171,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      * @param value Value to set for the skip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkip(@javax.annotation.Nullable final Integer value) {
         this._skip = value;
     }
@@ -173,6 +180,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      * @param value Value to set for the top property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTop(@javax.annotation.Nullable final Integer value) {
         this._top = value;
     }
@@ -181,6 +189,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

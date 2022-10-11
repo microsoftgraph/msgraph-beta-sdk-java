@@ -82,6 +82,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Instantiates a new Windows81GeneralConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows81GeneralConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows81GeneralConfiguration");
@@ -271,7 +272,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows81GeneralConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountsBlockAddingNonMicrosoftAccountEmail", (n) -> { currentObject.setAccountsBlockAddingNonMicrosoftAccountEmail(n.getBooleanValue()); });
             this.put("applyOnlyToWindows81", (n) -> { currentObject.setApplyOnlyToWindows81(n.getBooleanValue()); });
             this.put("browserBlockAutofill", (n) -> { currentObject.setBrowserBlockAutofill(n.getBooleanValue()); });
@@ -426,11 +427,11 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("accountsBlockAddingNonMicrosoftAccountEmail", this.getAccountsBlockAddingNonMicrosoftAccountEmail());
-        writer.writeBooleanValue("applyOnlyToWindows81", this.getApplyOnlyToWindows81());
         writer.writeBooleanValue("browserBlockAutofill", this.getBrowserBlockAutofill());
         writer.writeBooleanValue("browserBlockAutomaticDetectionOfIntranetSites", this.getBrowserBlockAutomaticDetectionOfIntranetSites());
         writer.writeBooleanValue("browserBlockEnterpriseModeAccess", this.getBrowserBlockEnterpriseModeAccess());
@@ -470,6 +471,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the accountsBlockAddingNonMicrosoftAccountEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountsBlockAddingNonMicrosoftAccountEmail(@javax.annotation.Nullable final Boolean value) {
         this._accountsBlockAddingNonMicrosoftAccountEmail = value;
     }
@@ -478,6 +480,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the applyOnlyToWindows81 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplyOnlyToWindows81(@javax.annotation.Nullable final Boolean value) {
         this._applyOnlyToWindows81 = value;
     }
@@ -486,6 +489,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockAutofill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockAutofill(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockAutofill = value;
     }
@@ -494,6 +498,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockAutomaticDetectionOfIntranetSites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockAutomaticDetectionOfIntranetSites(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockAutomaticDetectionOfIntranetSites = value;
     }
@@ -502,6 +507,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockEnterpriseModeAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockEnterpriseModeAccess(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockEnterpriseModeAccess = value;
     }
@@ -510,6 +516,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockJavaScript property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockJavaScript(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockJavaScript = value;
     }
@@ -518,6 +525,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockPlugins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockPlugins(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockPlugins = value;
     }
@@ -526,6 +534,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockPopups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockPopups(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockPopups = value;
     }
@@ -534,6 +543,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockSendingDoNotTrackHeader property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockSendingDoNotTrackHeader(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockSendingDoNotTrackHeader = value;
     }
@@ -542,6 +552,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockSingleWordEntryOnIntranetSites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockSingleWordEntryOnIntranetSites(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockSingleWordEntryOnIntranetSites = value;
     }
@@ -550,6 +561,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserEnterpriseModeSiteListLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserEnterpriseModeSiteListLocation(@javax.annotation.Nullable final String value) {
         this._browserEnterpriseModeSiteListLocation = value;
     }
@@ -558,6 +570,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserInternetSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserInternetSecurityLevel(@javax.annotation.Nullable final InternetSiteSecurityLevel value) {
         this._browserInternetSecurityLevel = value;
     }
@@ -566,6 +579,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserIntranetSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserIntranetSecurityLevel(@javax.annotation.Nullable final SiteSecurityLevel value) {
         this._browserIntranetSecurityLevel = value;
     }
@@ -574,6 +588,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserLoggingReportLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserLoggingReportLocation(@javax.annotation.Nullable final String value) {
         this._browserLoggingReportLocation = value;
     }
@@ -582,6 +597,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserRequireFirewall property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserRequireFirewall(@javax.annotation.Nullable final Boolean value) {
         this._browserRequireFirewall = value;
     }
@@ -590,6 +606,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserRequireFraudWarning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserRequireFraudWarning(@javax.annotation.Nullable final Boolean value) {
         this._browserRequireFraudWarning = value;
     }
@@ -598,6 +615,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserRequireHighSecurityForRestrictedSites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserRequireHighSecurityForRestrictedSites(@javax.annotation.Nullable final Boolean value) {
         this._browserRequireHighSecurityForRestrictedSites = value;
     }
@@ -606,6 +624,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserRequireSmartScreen property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserRequireSmartScreen(@javax.annotation.Nullable final Boolean value) {
         this._browserRequireSmartScreen = value;
     }
@@ -614,6 +633,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserTrustedSitesSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserTrustedSitesSecurityLevel(@javax.annotation.Nullable final SiteSecurityLevel value) {
         this._browserTrustedSitesSecurityLevel = value;
     }
@@ -622,6 +642,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockDataRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockDataRoaming(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockDataRoaming = value;
     }
@@ -630,6 +651,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the diagnosticsBlockDataSubmission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiagnosticsBlockDataSubmission(@javax.annotation.Nullable final Boolean value) {
         this._diagnosticsBlockDataSubmission = value;
     }
@@ -638,6 +660,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the minimumAutoInstallClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumAutoInstallClassification(@javax.annotation.Nullable final UpdateClassification value) {
         this._minimumAutoInstallClassification = value;
     }
@@ -646,6 +669,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordBlockPicturePasswordAndPin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockPicturePasswordAndPin(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockPicturePasswordAndPin = value;
     }
@@ -654,6 +678,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -662,6 +687,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumCharacterSetCount = value;
     }
@@ -670,6 +696,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -678,6 +705,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -686,6 +714,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -694,6 +723,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -702,6 +732,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._passwordSignInFailureCountBeforeFactoryReset = value;
     }
@@ -710,6 +741,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the storageRequireDeviceEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireDeviceEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireDeviceEncryption = value;
     }
@@ -718,6 +750,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the updatesMinimumAutoInstallClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdatesMinimumAutoInstallClassification(@javax.annotation.Nullable final UpdateClassification value) {
         this._updatesMinimumAutoInstallClassification = value;
     }
@@ -726,6 +759,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the updatesRequireAutomaticUpdates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdatesRequireAutomaticUpdates(@javax.annotation.Nullable final Boolean value) {
         this._updatesRequireAutomaticUpdates = value;
     }
@@ -734,6 +768,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the userAccountControlSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAccountControlSettings(@javax.annotation.Nullable final WindowsUserAccountControlSettings value) {
         this._userAccountControlSettings = value;
     }
@@ -742,6 +777,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the workFoldersUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkFoldersUrl(@javax.annotation.Nullable final String value) {
         this._workFoldersUrl = value;
     }

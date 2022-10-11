@@ -14,6 +14,7 @@ public class DeviceManagementSettingBooleanConstraint extends DeviceManagementCo
      * Instantiates a new DeviceManagementSettingBooleanConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingBooleanConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingBooleanConstraint");
@@ -35,7 +36,7 @@ public class DeviceManagementSettingBooleanConstraint extends DeviceManagementCo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingBooleanConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("value", (n) -> { currentObject.setValue(n.getBooleanValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceManagementSettingBooleanConstraint extends DeviceManagementCo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementSettingBooleanConstraint extends DeviceManagementCo
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Boolean value) {
         this._value = value;
     }

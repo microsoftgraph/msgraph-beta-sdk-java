@@ -11,18 +11,19 @@ import java.util.Objects;
 public class EducationSynchronizationProfileStatus extends Entity implements Parsable {
     /** Number of errors during synchronization. */
     private Long _errorCount;
-    /** Represents the time when most recent changes were observed in profile. */
+    /** Date and time when most recent changes were observed in the profile. */
     private OffsetDateTime _lastActivityDateTime;
-    /** Represents the time of the most recent successful  synchronization. */
+    /** Date and time of the most recent successful synchronization. */
     private OffsetDateTime _lastSynchronizationDateTime;
     /** The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating. */
     private EducationSynchronizationStatus _status;
-    /** Status message for the current profile's synchronization stage. */
+    /** Status message for the synchronization stage of the current profile. */
     private String _statusMessage;
     /**
      * Instantiates a new educationSynchronizationProfileStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationSynchronizationProfileStatus() {
         super();
         this.setOdataType("#microsoft.graph.educationSynchronizationProfileStatus");
@@ -52,7 +53,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationProfileStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("errorCount", (n) -> { currentObject.setErrorCount(n.getLongValue()); });
             this.put("lastActivityDateTime", (n) -> { currentObject.setLastActivityDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastSynchronizationDateTime", (n) -> { currentObject.setLastSynchronizationDateTime(n.getOffsetDateTimeValue()); });
@@ -61,7 +62,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
         }};
     }
     /**
-     * Gets the lastActivityDateTime property value. Represents the time when most recent changes were observed in profile.
+     * Gets the lastActivityDateTime property value. Date and time when most recent changes were observed in the profile.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -69,7 +70,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
         return this._lastActivityDateTime;
     }
     /**
-     * Gets the lastSynchronizationDateTime property value. Represents the time of the most recent successful  synchronization.
+     * Gets the lastSynchronizationDateTime property value. Date and time of the most recent successful synchronization.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -85,7 +86,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
         return this._status;
     }
     /**
-     * Gets the statusMessage property value. Status message for the current profile's synchronization stage.
+     * Gets the statusMessage property value. Status message for the synchronization stage of the current profile.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -97,6 +98,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,22 +113,25 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * @param value Value to set for the errorCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCount(@javax.annotation.Nullable final Long value) {
         this._errorCount = value;
     }
     /**
-     * Sets the lastActivityDateTime property value. Represents the time when most recent changes were observed in profile.
+     * Sets the lastActivityDateTime property value. Date and time when most recent changes were observed in the profile.
      * @param value Value to set for the lastActivityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastActivityDateTime = value;
     }
     /**
-     * Sets the lastSynchronizationDateTime property value. Represents the time of the most recent successful  synchronization.
+     * Sets the lastSynchronizationDateTime property value. Date and time of the most recent successful synchronization.
      * @param value Value to set for the lastSynchronizationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSynchronizationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSynchronizationDateTime = value;
     }
@@ -135,14 +140,16 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final EducationSynchronizationStatus value) {
         this._status = value;
     }
     /**
-     * Sets the statusMessage property value. Status message for the current profile's synchronization stage.
+     * Sets the statusMessage property value. Status message for the synchronization stage of the current profile.
      * @param value Value to set for the statusMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatusMessage(@javax.annotation.Nullable final String value) {
         this._statusMessage = value;
     }

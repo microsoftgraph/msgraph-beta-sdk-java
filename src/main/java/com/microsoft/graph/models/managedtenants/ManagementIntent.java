@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ManagementIntent extends Entity implements Parsable {
     /** The display name for the management intent. Optional. Read-only. */
     private String _displayName;
@@ -20,6 +20,7 @@ public class ManagementIntent extends Entity implements Parsable {
      * Instantiates a new managementIntent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagementIntent() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.managementIntent");
@@ -49,7 +50,7 @@ public class ManagementIntent extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementIntent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isGlobal", (n) -> { currentObject.setIsGlobal(n.getBooleanValue()); });
             this.put("managementTemplates", (n) -> { currentObject.setManagementTemplates(n.getCollectionOfObjectValues(ManagementTemplateDetailedInfo::createFromDiscriminatorValue)); });
@@ -76,6 +77,7 @@ public class ManagementIntent extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -88,6 +90,7 @@ public class ManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -96,6 +99,7 @@ public class ManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the isGlobal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsGlobal(@javax.annotation.Nullable final Boolean value) {
         this._isGlobal = value;
     }
@@ -104,6 +108,7 @@ public class ManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the managementTemplates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementTemplates(@javax.annotation.Nullable final java.util.List<ManagementTemplateDetailedInfo> value) {
         this._managementTemplates = value;
     }

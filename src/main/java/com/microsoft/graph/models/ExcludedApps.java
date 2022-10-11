@@ -48,6 +48,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * Instantiates a new excludedApps and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExcludedApps() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.excludedApps");
@@ -101,7 +102,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExcludedApps currentObject = this;
-        return new HashMap<>(16) {{
+        return new HashMap<String, Consumer<ParseNode>>(16) {{
             this.put("access", (n) -> { currentObject.setAccess(n.getBooleanValue()); });
             this.put("bing", (n) -> { currentObject.setBing(n.getBooleanValue()); });
             this.put("excel", (n) -> { currentObject.setExcel(n.getBooleanValue()); });
@@ -229,6 +230,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("access", this.getAccess());
@@ -254,6 +256,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the access property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccess(@javax.annotation.Nullable final Boolean value) {
         this._access = value;
     }
@@ -262,6 +265,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -270,6 +274,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBing(@javax.annotation.Nullable final Boolean value) {
         this._bing = value;
     }
@@ -278,6 +283,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the excel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcel(@javax.annotation.Nullable final Boolean value) {
         this._excel = value;
     }
@@ -286,6 +292,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the groove property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroove(@javax.annotation.Nullable final Boolean value) {
         this._groove = value;
     }
@@ -294,6 +301,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the infoPath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfoPath(@javax.annotation.Nullable final Boolean value) {
         this._infoPath = value;
     }
@@ -302,6 +310,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLync(@javax.annotation.Nullable final Boolean value) {
         this._lync = value;
     }
@@ -310,6 +319,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -318,6 +328,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the oneDrive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOneDrive(@javax.annotation.Nullable final Boolean value) {
         this._oneDrive = value;
     }
@@ -326,6 +337,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the oneNote property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOneNote(@javax.annotation.Nullable final Boolean value) {
         this._oneNote = value;
     }
@@ -334,6 +346,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the outlook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutlook(@javax.annotation.Nullable final Boolean value) {
         this._outlook = value;
     }
@@ -342,6 +355,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the powerPoint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerPoint(@javax.annotation.Nullable final Boolean value) {
         this._powerPoint = value;
     }
@@ -350,6 +364,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final Boolean value) {
         this._publisher = value;
     }
@@ -358,6 +373,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharePointDesigner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharePointDesigner(@javax.annotation.Nullable final Boolean value) {
         this._sharePointDesigner = value;
     }
@@ -366,6 +382,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the teams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeams(@javax.annotation.Nullable final Boolean value) {
         this._teams = value;
     }
@@ -374,6 +391,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the visio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisio(@javax.annotation.Nullable final Boolean value) {
         this._visio = value;
     }
@@ -382,6 +400,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the word property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWord(@javax.annotation.Nullable final Boolean value) {
         this._word = value;
     }

@@ -16,6 +16,7 @@ public class CloudPcSubscription extends Entity implements Parsable {
      * Instantiates a new cloudPcSubscription and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcSubscription() {
         super();
         this.setOdataType("#microsoft.graph.cloudPcSubscription");
@@ -37,7 +38,7 @@ public class CloudPcSubscription extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcSubscription currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
             this.put("subscriptionName", (n) -> { currentObject.setSubscriptionName(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class CloudPcSubscription extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class CloudPcSubscription extends Entity implements Parsable {
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionId(@javax.annotation.Nullable final String value) {
         this._subscriptionId = value;
     }
@@ -82,6 +85,7 @@ public class CloudPcSubscription extends Entity implements Parsable {
      * @param value Value to set for the subscriptionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionName(@javax.annotation.Nullable final String value) {
         this._subscriptionName = value;
     }

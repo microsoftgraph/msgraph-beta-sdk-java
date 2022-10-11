@@ -35,6 +35,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * Instantiates a new roleSuccessStatistics and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RoleSuccessStatistics() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.roleSuccessStatistics");
@@ -64,7 +65,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleSuccessStatistics currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("permanentFail", (n) -> { currentObject.setPermanentFail(n.getLongValue()); });
             this.put("permanentSuccess", (n) -> { currentObject.setPermanentSuccess(n.getLongValue()); });
@@ -162,6 +163,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -181,6 +183,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -189,6 +192,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -197,6 +201,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the permanentFail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermanentFail(@javax.annotation.Nullable final Long value) {
         this._permanentFail = value;
     }
@@ -205,6 +210,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the permanentSuccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermanentSuccess(@javax.annotation.Nullable final Long value) {
         this._permanentSuccess = value;
     }
@@ -213,6 +219,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the removeFail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoveFail(@javax.annotation.Nullable final Long value) {
         this._removeFail = value;
     }
@@ -221,6 +228,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the removeSuccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoveSuccess(@javax.annotation.Nullable final Long value) {
         this._removeSuccess = value;
     }
@@ -229,6 +237,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleId(@javax.annotation.Nullable final String value) {
         this._roleId = value;
     }
@@ -237,6 +246,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roleName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleName(@javax.annotation.Nullable final String value) {
         this._roleName = value;
     }
@@ -245,6 +255,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the temporaryFail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemporaryFail(@javax.annotation.Nullable final Long value) {
         this._temporaryFail = value;
     }
@@ -253,6 +264,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the temporarySuccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemporarySuccess(@javax.annotation.Nullable final Long value) {
         this._temporarySuccess = value;
     }
@@ -261,6 +273,7 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the unknownFail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownFail(@javax.annotation.Nullable final Long value) {
         this._unknownFail = value;
     }

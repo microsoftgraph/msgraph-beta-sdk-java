@@ -24,6 +24,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * Instantiates a new connectorGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConnectorGroup() {
         super();
         this.setOdataType("#microsoft.graph.connectorGroup");
@@ -61,7 +62,7 @@ public class ConnectorGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConnectorGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applications", (n) -> { currentObject.setApplications(n.getCollectionOfObjectValues(Application::createFromDiscriminatorValue)); });
             this.put("connectorGroupType", (n) -> { currentObject.setConnectorGroupType(n.getEnumValue(ConnectorGroupType.class)); });
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
@@ -107,6 +108,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the applications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplications(@javax.annotation.Nullable final java.util.List<Application> value) {
         this._applications = value;
     }
@@ -130,6 +133,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the connectorGroupType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectorGroupType(@javax.annotation.Nullable final ConnectorGroupType value) {
         this._connectorGroupType = value;
     }
@@ -138,6 +142,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
         this._isDefault = value;
     }
@@ -146,6 +151,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<Connector> value) {
         this._members = value;
     }
@@ -154,6 +160,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -162,6 +169,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the region property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegion(@javax.annotation.Nullable final ConnectorGroupRegion value) {
         this._region = value;
     }

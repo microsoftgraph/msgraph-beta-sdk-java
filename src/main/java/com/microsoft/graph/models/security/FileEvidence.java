@@ -18,6 +18,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
      * Instantiates a new FileEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.fileEvidence");
@@ -47,7 +48,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("detectionStatus", (n) -> { currentObject.setDetectionStatus(n.getEnumValue(DetectionStatus.class)); });
             this.put("fileDetails", (n) -> { currentObject.setFileDetails(n.getObjectValue(FileDetails::createFromDiscriminatorValue)); });
             this.put("mdeDeviceId", (n) -> { currentObject.setMdeDeviceId(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the detectionStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionStatus(@javax.annotation.Nullable final DetectionStatus value) {
         this._detectionStatus = value;
     }
@@ -94,6 +97,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the fileDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileDetails(@javax.annotation.Nullable final FileDetails value) {
         this._fileDetails = value;
     }
@@ -102,6 +106,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the mdeDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdeDeviceId(@javax.annotation.Nullable final String value) {
         this._mdeDeviceId = value;
     }

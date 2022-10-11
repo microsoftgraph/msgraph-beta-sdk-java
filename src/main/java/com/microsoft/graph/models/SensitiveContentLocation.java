@@ -27,6 +27,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      * Instantiates a new sensitiveContentLocation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SensitiveContentLocation() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.sensitiveContentLocation");
@@ -72,7 +73,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitiveContentLocation currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
             this.put("evidences", (n) -> { currentObject.setEvidences(n.getCollectionOfObjectValues(SensitiveContentEvidence::createFromDiscriminatorValue)); });
             this.put("idMatch", (n) -> { currentObject.setIdMatch(n.getStringValue()); });
@@ -118,6 +119,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("confidence", this.getConfidence());
@@ -133,6 +135,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the confidence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfidence(@javax.annotation.Nullable final Integer value) {
         this._confidence = value;
     }
@@ -149,6 +153,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the evidences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvidences(@javax.annotation.Nullable final java.util.List<SensitiveContentEvidence> value) {
         this._evidences = value;
     }
@@ -157,6 +162,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the idMatch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdMatch(@javax.annotation.Nullable final String value) {
         this._idMatch = value;
     }
@@ -165,6 +171,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the length property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLength(@javax.annotation.Nullable final Integer value) {
         this._length = value;
     }
@@ -173,6 +180,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -181,6 +189,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the offset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffset(@javax.annotation.Nullable final Integer value) {
         this._offset = value;
     }

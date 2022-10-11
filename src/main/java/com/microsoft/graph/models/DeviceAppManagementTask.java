@@ -36,6 +36,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * Instantiates a new DeviceAppManagementTask and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceAppManagementTask() {
         super();
         this.setOdataType("#microsoft.graph.deviceAppManagementTask");
@@ -130,7 +131,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceAppManagementTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(DeviceAppManagementTaskCategory.class)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -164,6 +165,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,6 +185,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final String value) {
         this._assignedTo = value;
     }
@@ -191,6 +194,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final DeviceAppManagementTaskCategory value) {
         this._category = value;
     }
@@ -199,6 +203,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -207,6 +212,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the creator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreator(@javax.annotation.Nullable final String value) {
         this._creator = value;
     }
@@ -215,6 +221,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the creatorNotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatorNotes(@javax.annotation.Nullable final String value) {
         this._creatorNotes = value;
     }
@@ -223,6 +230,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -231,6 +239,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -239,6 +248,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._dueDateTime = value;
     }
@@ -247,6 +257,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final DeviceAppManagementTaskPriority value) {
         this._priority = value;
     }
@@ -255,6 +266,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DeviceAppManagementTaskStatus value) {
         this._status = value;
     }

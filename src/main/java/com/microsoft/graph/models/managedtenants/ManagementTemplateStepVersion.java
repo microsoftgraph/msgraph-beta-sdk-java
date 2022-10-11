@@ -36,6 +36,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * Instantiates a new managementTemplateStepVersion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagementTemplateStepVersion() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.managementTemplateStepVersion");
@@ -97,7 +98,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementTemplateStepVersion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("acceptedFor", (n) -> { currentObject.setAcceptedFor(n.getObjectValue(ManagementTemplateStep::createFromDiscriminatorValue)); });
             this.put("contentMarkdown", (n) -> { currentObject.setContentMarkdown(n.getStringValue()); });
             this.put("createdByUserId", (n) -> { currentObject.setCreatedByUserId(n.getStringValue()); });
@@ -164,6 +165,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -184,6 +186,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param value Value to set for the acceptedFor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcceptedFor(@javax.annotation.Nullable final ManagementTemplateStep value) {
         this._acceptedFor = value;
     }
@@ -192,6 +195,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param value Value to set for the contentMarkdown property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentMarkdown(@javax.annotation.Nullable final String value) {
         this._contentMarkdown = value;
     }
@@ -200,6 +204,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param value Value to set for the createdByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
         this._createdByUserId = value;
     }
@@ -208,6 +213,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -216,6 +222,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param value Value to set for the deployments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployments(@javax.annotation.Nullable final java.util.List<ManagementTemplateStepDeployment> value) {
         this._deployments = value;
     }
@@ -224,6 +231,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param value Value to set for the lastActionByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
         this._lastActionByUserId = value;
     }
@@ -232,6 +240,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastActionDateTime = value;
     }
@@ -240,6 +249,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -248,6 +258,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param value Value to set for the templateStep property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateStep(@javax.annotation.Nullable final ManagementTemplateStep value) {
         this._templateStep = value;
     }
@@ -256,6 +267,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }
@@ -264,6 +276,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
      * @param value Value to set for the versionInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersionInformation(@javax.annotation.Nullable final String value) {
         this._versionInformation = value;
     }

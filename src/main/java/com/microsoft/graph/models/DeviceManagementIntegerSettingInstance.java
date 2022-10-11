@@ -14,6 +14,7 @@ public class DeviceManagementIntegerSettingInstance extends DeviceManagementSett
      * Instantiates a new DeviceManagementIntegerSettingInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementIntegerSettingInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementIntegerSettingInstance");
@@ -35,7 +36,7 @@ public class DeviceManagementIntegerSettingInstance extends DeviceManagementSett
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementIntegerSettingInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("value", (n) -> { currentObject.setValue(n.getIntegerValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceManagementIntegerSettingInstance extends DeviceManagementSett
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementIntegerSettingInstance extends DeviceManagementSett
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Integer value) {
         this._value = value;
     }

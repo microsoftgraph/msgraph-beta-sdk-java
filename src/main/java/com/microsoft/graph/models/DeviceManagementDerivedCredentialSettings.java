@@ -22,6 +22,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * Instantiates a new deviceManagementDerivedCredentialSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementDerivedCredentialSettings");
@@ -51,7 +52,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementDerivedCredentialSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("helpUrl", (n) -> { currentObject.setHelpUrl(n.getStringValue()); });
             this.put("issuer", (n) -> { currentObject.setIssuer(n.getEnumValue(DeviceManagementDerivedCredentialIssuer.class)); });
@@ -96,6 +97,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -118,6 +121,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the helpUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHelpUrl(@javax.annotation.Nullable final String value) {
         this._helpUrl = value;
     }
@@ -126,6 +130,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the issuer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuer(@javax.annotation.Nullable final DeviceManagementDerivedCredentialIssuer value) {
         this._issuer = value;
     }
@@ -134,6 +139,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the notificationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationType(@javax.annotation.Nullable final DeviceManagementDerivedCredentialNotificationType value) {
         this._notificationType = value;
     }
@@ -142,6 +148,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the renewalThresholdPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
         this._renewalThresholdPercentage = value;
     }

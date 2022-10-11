@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device scores entity consolidates the various endpoint analytics scores. */
 public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsable {
     /** The user experience analytics device app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _appReliabilityScore;
@@ -27,9 +28,10 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     /** The user experience analytics device work From anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
     private Double _workFromAnywhereScore;
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceScores and sets the default values.
+     * Instantiates a new userExperienceAnalyticsDeviceScores and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsDeviceScores() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsDeviceScores");
@@ -37,7 +39,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceScores
+     * @return a userExperienceAnalyticsDeviceScores
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceScores createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +85,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsDeviceScores currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appReliabilityScore", (n) -> { currentObject.setAppReliabilityScore(n.getDoubleValue()); });
             this.put("batteryHealthScore", (n) -> { currentObject.setBatteryHealthScore(n.getDoubleValue()); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
@@ -140,6 +142,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +161,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the appReliabilityScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppReliabilityScore(@javax.annotation.Nullable final Double value) {
         this._appReliabilityScore = value;
     }
@@ -166,6 +170,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the batteryHealthScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryHealthScore(@javax.annotation.Nullable final Double value) {
         this._batteryHealthScore = value;
     }
@@ -174,6 +179,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -182,6 +188,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the endpointAnalyticsScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointAnalyticsScore(@javax.annotation.Nullable final Double value) {
         this._endpointAnalyticsScore = value;
     }
@@ -190,6 +197,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this._healthStatus = value;
     }
@@ -198,6 +206,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -206,6 +215,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -214,6 +224,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the startupPerformanceScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartupPerformanceScore(@javax.annotation.Nullable final Double value) {
         this._startupPerformanceScore = value;
     }
@@ -222,6 +233,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the workFromAnywhereScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkFromAnywhereScore(@javax.annotation.Nullable final Double value) {
         this._workFromAnywhereScore = value;
     }

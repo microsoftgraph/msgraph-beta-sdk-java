@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class AgreementFileLocalization extends AgreementFileProperties implements Parsable {
     /** Read-only. Customized versions of the terms of use agreement in the Azure AD tenant. */
     private java.util.List<AgreementFileVersion> _versions;
@@ -15,6 +15,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
      * Instantiates a new agreementFileLocalization and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AgreementFileLocalization() {
         super();
         this.setOdataType("#microsoft.graph.agreementFileLocalization");
@@ -36,7 +37,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AgreementFileLocalization currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("versions", (n) -> { currentObject.setVersions(n.getCollectionOfObjectValues(AgreementFileVersion::createFromDiscriminatorValue)); });
         }};
     }
@@ -53,6 +54,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
      * @param value Value to set for the versions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersions(@javax.annotation.Nullable final java.util.List<AgreementFileVersion> value) {
         this._versions = value;
     }

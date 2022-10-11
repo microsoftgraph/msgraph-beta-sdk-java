@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AttachmentContentProperties;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -26,6 +27,7 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
      * Instantiates a new contentProperties and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ContentProperties() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.contentProperties");
@@ -38,6 +40,13 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static ContentProperties createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.attachmentContentProperties": return new AttachmentContentProperties();
+            }
+        }
         return new ContentProperties();
     }
     /**
@@ -63,7 +72,7 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContentProperties currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -108,6 +117,7 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("extensions", this.getExtensions());
@@ -122,6 +132,7 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +141,7 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._extensions = value;
     }
@@ -138,6 +150,7 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final String value) {
         this._lastModifiedBy = value;
     }
@@ -146,6 +159,7 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -154,6 +168,7 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final ContentMetadata value) {
         this._metadata = value;
     }
@@ -162,6 +177,7 @@ public class ContentProperties implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

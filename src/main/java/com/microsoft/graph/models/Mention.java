@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Mention extends Entity implements Parsable {
     /** The name of the application where the mention is created. Optional. Not used and defaulted as null for message. */
     private String _application;
@@ -30,6 +30,7 @@ public class Mention extends Entity implements Parsable {
      * Instantiates a new mention and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Mention() {
         super();
         this.setOdataType("#microsoft.graph.mention");
@@ -91,7 +92,7 @@ public class Mention extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Mention currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("application", (n) -> { currentObject.setApplication(n.getStringValue()); });
             this.put("clientReference", (n) -> { currentObject.setClientReference(n.getStringValue()); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
@@ -131,6 +132,7 @@ public class Mention extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +150,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the application property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplication(@javax.annotation.Nullable final String value) {
         this._application = value;
     }
@@ -156,6 +159,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the clientReference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientReference(@javax.annotation.Nullable final String value) {
         this._clientReference = value;
     }
@@ -164,6 +168,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final EmailAddress value) {
         this._createdBy = value;
     }
@@ -172,6 +177,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -180,6 +186,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the deepLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeepLink(@javax.annotation.Nullable final String value) {
         this._deepLink = value;
     }
@@ -188,6 +195,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the mentioned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentioned(@javax.annotation.Nullable final EmailAddress value) {
         this._mentioned = value;
     }
@@ -196,6 +204,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the mentionText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentionText(@javax.annotation.Nullable final String value) {
         this._mentionText = value;
     }
@@ -204,6 +213,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the serverCreatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServerCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._serverCreatedDateTime = value;
     }

@@ -13,7 +13,7 @@ public enum AppLockerApplicationControlType implements ValuedEnum {
     AuditComponentsAndStoreApps("auditComponentsAndStoreApps"),
     /** Enforce Windows components, store apps and smart locker. */
     EnforceComponentsStoreAppsAndSmartlocker("enforceComponentsStoreAppsAndSmartlocker"),
-    /** Audit Windows components, store apps and smart locker​. */
+    /** Audit Windows components, store apps and smart locker. */
     AuditComponentsStoreAppsAndSmartlocker("auditComponentsStoreAppsAndSmartlocker");
     public final String value;
     AppLockerApplicationControlType(final String value) {

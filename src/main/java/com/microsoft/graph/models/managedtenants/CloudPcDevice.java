@@ -9,36 +9,37 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class CloudPcDevice extends Entity implements Parsable {
     /** The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only. */
     private String _cloudPcStatus;
-    /** The deviceSpecification property */
+    /** The specification of the cloud PC device. Required. Read-only. */
     private String _deviceSpecification;
-    /** The display name for the cloud PC. Required. Read-only. */
+    /** The display name  of the cloud PC device. Required. Read-only. */
     private String _displayName;
     /** Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only. */
     private OffsetDateTime _lastRefreshedDateTime;
-    /** The managed device identifier for the cloud PC. Optional. Read-only. */
+    /** The managed device identifier of the cloud PC device. Optional. Read-only. */
     private String _managedDeviceId;
-    /** The managed device display name for the cloud PC. Optional. Read-only. */
+    /** The managed device display name of the cloud PC device. Optional. Read-only. */
     private String _managedDeviceName;
-    /** The provisioning policy identifier for the cloud PC. Required. Read-only. */
+    /** The provisioning policy identifier for the cloud PC device. Required. Read-only. */
     private String _provisioningPolicyId;
-    /** The service plan name for the cloud PC. Required. Read-only. */
+    /** The service plan name of the cloud PC device. Required. Read-only. */
     private String _servicePlanName;
-    /** The servicePlanType property */
+    /** The service plan type of the cloud PC device. Required. Read-only. */
     private String _servicePlanType;
     /** The display name for the managed tenant. Required. Read-only. */
     private String _tenantDisplayName;
     /** The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only. */
     private String _tenantId;
-    /** The user principal name (UPN) of the user assigned to the cloud PC. Required. Read-only. */
+    /** The user principal name (UPN) of the user assigned to the cloud PC device. Required. Read-only. */
     private String _userPrincipalName;
     /**
      * Instantiates a new cloudPcDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcDevice() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.cloudPcDevice");
@@ -62,7 +63,7 @@ public class CloudPcDevice extends Entity implements Parsable {
         return this._cloudPcStatus;
     }
     /**
-     * Gets the deviceSpecification property value. The deviceSpecification property
+     * Gets the deviceSpecification property value. The specification of the cloud PC device. Required. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -70,7 +71,7 @@ public class CloudPcDevice extends Entity implements Parsable {
         return this._deviceSpecification;
     }
     /**
-     * Gets the displayName property value. The display name for the cloud PC. Required. Read-only.
+     * Gets the displayName property value. The display name  of the cloud PC device. Required. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +85,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cloudPcStatus", (n) -> { currentObject.setCloudPcStatus(n.getStringValue()); });
             this.put("deviceSpecification", (n) -> { currentObject.setDeviceSpecification(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -108,7 +109,7 @@ public class CloudPcDevice extends Entity implements Parsable {
         return this._lastRefreshedDateTime;
     }
     /**
-     * Gets the managedDeviceId property value. The managed device identifier for the cloud PC. Optional. Read-only.
+     * Gets the managedDeviceId property value. The managed device identifier of the cloud PC device. Optional. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -116,7 +117,7 @@ public class CloudPcDevice extends Entity implements Parsable {
         return this._managedDeviceId;
     }
     /**
-     * Gets the managedDeviceName property value. The managed device display name for the cloud PC. Optional. Read-only.
+     * Gets the managedDeviceName property value. The managed device display name of the cloud PC device. Optional. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -124,7 +125,7 @@ public class CloudPcDevice extends Entity implements Parsable {
         return this._managedDeviceName;
     }
     /**
-     * Gets the provisioningPolicyId property value. The provisioning policy identifier for the cloud PC. Required. Read-only.
+     * Gets the provisioningPolicyId property value. The provisioning policy identifier for the cloud PC device. Required. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -132,7 +133,7 @@ public class CloudPcDevice extends Entity implements Parsable {
         return this._provisioningPolicyId;
     }
     /**
-     * Gets the servicePlanName property value. The service plan name for the cloud PC. Required. Read-only.
+     * Gets the servicePlanName property value. The service plan name of the cloud PC device. Required. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -140,7 +141,7 @@ public class CloudPcDevice extends Entity implements Parsable {
         return this._servicePlanName;
     }
     /**
-     * Gets the servicePlanType property value. The servicePlanType property
+     * Gets the servicePlanType property value. The service plan type of the cloud PC device. Required. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -164,7 +165,7 @@ public class CloudPcDevice extends Entity implements Parsable {
         return this._tenantId;
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (UPN) of the user assigned to the cloud PC. Required. Read-only.
+     * Gets the userPrincipalName property value. The user principal name (UPN) of the user assigned to the cloud PC device. Required. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -176,6 +177,7 @@ public class CloudPcDevice extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -197,22 +199,25 @@ public class CloudPcDevice extends Entity implements Parsable {
      * @param value Value to set for the cloudPcStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcStatus(@javax.annotation.Nullable final String value) {
         this._cloudPcStatus = value;
     }
     /**
-     * Sets the deviceSpecification property value. The deviceSpecification property
+     * Sets the deviceSpecification property value. The specification of the cloud PC device. Required. Read-only.
      * @param value Value to set for the deviceSpecification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceSpecification(@javax.annotation.Nullable final String value) {
         this._deviceSpecification = value;
     }
     /**
-     * Sets the displayName property value. The display name for the cloud PC. Required. Read-only.
+     * Sets the displayName property value. The display name  of the cloud PC device. Required. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -221,46 +226,52 @@ public class CloudPcDevice extends Entity implements Parsable {
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastRefreshedDateTime = value;
     }
     /**
-     * Sets the managedDeviceId property value. The managed device identifier for the cloud PC. Optional. Read-only.
+     * Sets the managedDeviceId property value. The managed device identifier of the cloud PC device. Optional. Read-only.
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
     /**
-     * Sets the managedDeviceName property value. The managed device display name for the cloud PC. Optional. Read-only.
+     * Sets the managedDeviceName property value. The managed device display name of the cloud PC device. Optional. Read-only.
      * @param value Value to set for the managedDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceName(@javax.annotation.Nullable final String value) {
         this._managedDeviceName = value;
     }
     /**
-     * Sets the provisioningPolicyId property value. The provisioning policy identifier for the cloud PC. Required. Read-only.
+     * Sets the provisioningPolicyId property value. The provisioning policy identifier for the cloud PC device. Required. Read-only.
      * @param value Value to set for the provisioningPolicyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningPolicyId(@javax.annotation.Nullable final String value) {
         this._provisioningPolicyId = value;
     }
     /**
-     * Sets the servicePlanName property value. The service plan name for the cloud PC. Required. Read-only.
+     * Sets the servicePlanName property value. The service plan name of the cloud PC device. Required. Read-only.
      * @param value Value to set for the servicePlanName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePlanName(@javax.annotation.Nullable final String value) {
         this._servicePlanName = value;
     }
     /**
-     * Sets the servicePlanType property value. The servicePlanType property
+     * Sets the servicePlanType property value. The service plan type of the cloud PC device. Required. Read-only.
      * @param value Value to set for the servicePlanType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePlanType(@javax.annotation.Nullable final String value) {
         this._servicePlanType = value;
     }
@@ -269,6 +280,7 @@ public class CloudPcDevice extends Entity implements Parsable {
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
         this._tenantDisplayName = value;
     }
@@ -277,14 +289,16 @@ public class CloudPcDevice extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (UPN) of the user assigned to the cloud PC. Required. Read-only.
+     * Sets the userPrincipalName property value. The user principal name (UPN) of the user assigned to the cloud PC device. Required. Read-only.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

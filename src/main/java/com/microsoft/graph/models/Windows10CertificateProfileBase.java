@@ -13,6 +13,7 @@ public class Windows10CertificateProfileBase extends WindowsCertificateProfileBa
      * Instantiates a new Windows10CertificateProfileBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10CertificateProfileBase() {
         super();
         this.setOdataType("#microsoft.graph.windows10CertificateProfileBase");
@@ -41,7 +42,7 @@ public class Windows10CertificateProfileBase extends WindowsCertificateProfileBa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10CertificateProfileBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -49,6 +50,7 @@ public class Windows10CertificateProfileBase extends WindowsCertificateProfileBa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

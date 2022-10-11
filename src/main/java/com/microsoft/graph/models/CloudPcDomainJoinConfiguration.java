@@ -23,6 +23,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      * Instantiates a new cloudPcDomainJoinConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcDomainJoinConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.cloudPcDomainJoinConfiguration");
@@ -52,7 +53,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcDomainJoinConfiguration currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("onPremisesConnectionId", (n) -> { currentObject.setOnPremisesConnectionId(n.getStringValue()); });
             this.put("regionName", (n) -> { currentObject.setRegionName(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -109,6 +111,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -125,6 +129,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      * @param value Value to set for the onPremisesConnectionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesConnectionId(@javax.annotation.Nullable final String value) {
         this._onPremisesConnectionId = value;
     }
@@ -133,6 +138,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      * @param value Value to set for the regionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegionName(@javax.annotation.Nullable final String value) {
         this._regionName = value;
     }
@@ -141,6 +147,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final CloudPcDomainJoinType value) {
         this._type = value;
     }

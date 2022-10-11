@@ -14,6 +14,7 @@ public class UserInsightsSettings extends Entity implements Parsable {
      * Instantiates a new userInsightsSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserInsightsSettings() {
         super();
         this.setOdataType("#microsoft.graph.userInsightsSettings");
@@ -35,7 +36,7 @@ public class UserInsightsSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserInsightsSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class UserInsightsSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class UserInsightsSettings extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }

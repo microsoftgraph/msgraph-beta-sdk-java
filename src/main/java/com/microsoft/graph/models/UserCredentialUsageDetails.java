@@ -28,6 +28,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      * Instantiates a new userCredentialUsageDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserCredentialUsageDetails() {
         super();
         this.setOdataType("#microsoft.graph.userCredentialUsageDetails");
@@ -81,7 +82,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserCredentialUsageDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authMethod", (n) -> { currentObject.setAuthMethod(n.getEnumValue(UsageAuthMethod.class)); });
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
             this.put("failureReason", (n) -> { currentObject.setFailureReason(n.getStringValue()); });
@@ -120,6 +121,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,6 +138,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      * @param value Value to set for the authMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthMethod(@javax.annotation.Nullable final UsageAuthMethod value) {
         this._authMethod = value;
     }
@@ -144,6 +147,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
     }
@@ -152,6 +156,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      * @param value Value to set for the failureReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailureReason(@javax.annotation.Nullable final String value) {
         this._failureReason = value;
     }
@@ -160,6 +165,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      * @param value Value to set for the feature property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeature(@javax.annotation.Nullable final FeatureType value) {
         this._feature = value;
     }
@@ -168,6 +174,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      * @param value Value to set for the isSuccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSuccess(@javax.annotation.Nullable final Boolean value) {
         this._isSuccess = value;
     }
@@ -176,6 +183,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
         this._userDisplayName = value;
     }
@@ -184,6 +192,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

@@ -11,6 +11,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Event representing an general failure. */
 public class DeviceManagementTroubleshootingEvent extends Entity implements Parsable {
     /** A set of string key and string value pairs which provides additional information on the Troubleshooting event */
     private java.util.List<KeyValuePair> _additionalInformation;
@@ -23,9 +24,10 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     /** Object containing detailed information about the error and its remediation. */
     private DeviceManagementTroubleshootingErrorDetails _troubleshootingErrorDetails;
     /**
-     * Instantiates a new DeviceManagementTroubleshootingEvent and sets the default values.
+     * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementTroubleshootingEvent() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementTroubleshootingEvent");
@@ -33,7 +35,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementTroubleshootingEvent
+     * @return a deviceManagementTroubleshootingEvent
      */
     @javax.annotation.Nonnull
     public static DeviceManagementTroubleshootingEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -88,7 +90,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementTroubleshootingEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
@@ -109,6 +111,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +126,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      * @param value Value to set for the additionalInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalInformation(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._additionalInformation = value;
     }
@@ -131,6 +135,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      * @param value Value to set for the correlationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCorrelationId(@javax.annotation.Nullable final String value) {
         this._correlationId = value;
     }
@@ -139,6 +144,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
     }
@@ -147,6 +153,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      * @param value Value to set for the eventName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventName(@javax.annotation.Nullable final String value) {
         this._eventName = value;
     }
@@ -155,6 +162,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      * @param value Value to set for the troubleshootingErrorDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTroubleshootingErrorDetails(@javax.annotation.Nullable final DeviceManagementTroubleshootingErrorDetails value) {
         this._troubleshootingErrorDetails = value;
     }

@@ -14,6 +14,7 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
      * Instantiates a new DeviceManagementConfigurationGroupSettingInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationGroupSettingInstance");
@@ -35,7 +36,7 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationGroupSettingInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("groupSettingValue", (n) -> { currentObject.setGroupSettingValue(n.getObjectValue(DeviceManagementConfigurationGroupSettingValue::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
      * @param value Value to set for the groupSettingValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupSettingValue(@javax.annotation.Nullable final DeviceManagementConfigurationGroupSettingValue value) {
         this._groupSettingValue = value;
     }

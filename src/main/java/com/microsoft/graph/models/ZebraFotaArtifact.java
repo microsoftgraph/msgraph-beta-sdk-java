@@ -25,6 +25,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      * Instantiates a new zebraFotaArtifact and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ZebraFotaArtifact() {
         super();
         this.setOdataType("#microsoft.graph.zebraFotaArtifact");
@@ -70,7 +71,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ZebraFotaArtifact currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("boardSupportPackageVersion", (n) -> { currentObject.setBoardSupportPackageVersion(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
@@ -108,6 +109,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +125,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      * @param value Value to set for the boardSupportPackageVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBoardSupportPackageVersion(@javax.annotation.Nullable final String value) {
         this._boardSupportPackageVersion = value;
     }
@@ -131,6 +134,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -139,6 +143,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
         this._deviceModel = value;
     }
@@ -147,6 +152,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -155,6 +161,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      * @param value Value to set for the patchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPatchVersion(@javax.annotation.Nullable final String value) {
         this._patchVersion = value;
     }
@@ -163,6 +170,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      * @param value Value to set for the releaseNotesUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReleaseNotesUrl(@javax.annotation.Nullable final String value) {
         this._releaseNotesUrl = value;
     }

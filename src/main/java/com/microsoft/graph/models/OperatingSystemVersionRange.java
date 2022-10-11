@@ -24,6 +24,7 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
      * Instantiates a new operatingSystemVersionRange and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OperatingSystemVersionRange() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.operatingSystemVersionRange");
@@ -61,7 +62,7 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OperatingSystemVersionRange currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("highestVersion", (n) -> { currentObject.setHighestVersion(n.getStringValue()); });
             this.put("lowestVersion", (n) -> { currentObject.setLowestVersion(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -110,6 +112,7 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -126,6 +130,7 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
      * @param value Value to set for the highestVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHighestVersion(@javax.annotation.Nullable final String value) {
         this._highestVersion = value;
     }
@@ -134,6 +139,7 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
      * @param value Value to set for the lowestVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLowestVersion(@javax.annotation.Nullable final String value) {
         this._lowestVersion = value;
     }
@@ -142,6 +148,7 @@ public class OperatingSystemVersionRange implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

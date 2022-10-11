@@ -18,6 +18,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * Instantiates a new AccessReviewInstanceDecisionItemUserTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItemUserTarget() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemUserTarget");
@@ -39,7 +40,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItemUserTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
         this._userDisplayName = value;
     }
@@ -94,6 +97,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -102,6 +106,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

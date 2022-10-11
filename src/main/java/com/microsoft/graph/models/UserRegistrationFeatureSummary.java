@@ -25,6 +25,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * Instantiates a new UserRegistrationFeatureSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserRegistrationFeatureSummary() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.userRegistrationFeatureSummary");
@@ -54,7 +55,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserRegistrationFeatureSummary currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("totalUserCount", (n) -> { currentObject.setTotalUserCount(n.getLongValue()); });
             this.put("userRegistrationFeatureCounts", (n) -> { currentObject.setUserRegistrationFeatureCounts(n.getCollectionOfObjectValues(UserRegistrationFeatureCount::createFromDiscriminatorValue)); });
@@ -107,6 +108,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -121,6 +123,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -137,6 +141,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * @param value Value to set for the totalUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUserCount(@javax.annotation.Nullable final Long value) {
         this._totalUserCount = value;
     }
@@ -145,6 +150,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * @param value Value to set for the userRegistrationFeatureCounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRegistrationFeatureCounts(@javax.annotation.Nullable final java.util.List<UserRegistrationFeatureCount> value) {
         this._userRegistrationFeatureCounts = value;
     }
@@ -153,6 +159,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * @param value Value to set for the userRoles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRoles(@javax.annotation.Nullable final IncludedUserRoles value) {
         this._userRoles = value;
     }
@@ -161,6 +168,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * @param value Value to set for the userTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserTypes(@javax.annotation.Nullable final IncludedUserTypes value) {
         this._userTypes = value;
     }

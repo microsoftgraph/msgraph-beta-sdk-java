@@ -24,6 +24,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
      * Instantiates a new cloudPcConnectivityResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcConnectivityResult() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.cloudPcConnectivityResult");
@@ -61,7 +62,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcConnectivityResult currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("failedHealthCheckItems", (n) -> { currentObject.setFailedHealthCheckItems(n.getCollectionOfObjectValues(CloudPcHealthCheckItem::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CloudPcConnectivityStatus.class)); });
@@ -97,6 +98,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("failedHealthCheckItems", this.getFailedHealthCheckItems());
@@ -110,6 +112,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
      * @param value Value to set for the failedHealthCheckItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedHealthCheckItems(@javax.annotation.Nullable final java.util.List<CloudPcHealthCheckItem> value) {
         this._failedHealthCheckItems = value;
     }
@@ -126,6 +130,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -134,6 +139,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CloudPcConnectivityStatus value) {
         this._status = value;
     }
@@ -142,6 +148,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
      * @param value Value to set for the updatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._updatedDateTime = value;
     }

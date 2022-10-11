@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device startup process details. */
 public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implements Parsable {
     /** The user experience analytics device id. */
     private String _managedDeviceId;
@@ -19,9 +20,10 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
     /** User experience analytics device startup process impact in milliseconds. */
     private Integer _startupImpactInMs;
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceStartupProcess and sets the default values.
+     * Instantiates a new userExperienceAnalyticsDeviceStartupProcess and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupProcess() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsDeviceStartupProcess");
@@ -29,7 +31,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceStartupProcess
+     * @return a userExperienceAnalyticsDeviceStartupProcess
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceStartupProcess createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +45,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsDeviceStartupProcess currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
             this.put("processName", (n) -> { currentObject.setProcessName(n.getStringValue()); });
             this.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
@@ -96,6 +98,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +113,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -118,6 +122,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * @param value Value to set for the processName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessName(@javax.annotation.Nullable final String value) {
         this._processName = value;
     }
@@ -126,6 +131,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * @param value Value to set for the productName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductName(@javax.annotation.Nullable final String value) {
         this._productName = value;
     }
@@ -134,6 +140,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -142,6 +149,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * @param value Value to set for the startupImpactInMs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartupImpactInMs(@javax.annotation.Nullable final Integer value) {
         this._startupImpactInMs = value;
     }

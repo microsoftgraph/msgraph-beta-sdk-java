@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A class containing the properties used for PolicySet. */
 public class PolicySet extends Entity implements Parsable {
     /** Assignments of the PolicySet. */
     private java.util.List<PolicySetAssignment> _assignments;
@@ -31,9 +30,10 @@ public class PolicySet extends Entity implements Parsable {
     /** The enum to specify the status of PolicySet. */
     private PolicySetStatus _status;
     /**
-     * Instantiates a new policySet and sets the default values.
+     * Instantiates a new PolicySet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PolicySet() {
         super();
         this.setOdataType("#microsoft.graph.policySet");
@@ -41,7 +41,7 @@ public class PolicySet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policySet
+     * @return a PolicySet
      */
     @javax.annotation.Nonnull
     public static PolicySet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -95,7 +95,7 @@ public class PolicySet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PolicySet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(PolicySetAssignment::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -153,6 +153,7 @@ public class PolicySet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,6 +173,7 @@ public class PolicySet extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<PolicySetAssignment> value) {
         this._assignments = value;
     }
@@ -180,6 +182,7 @@ public class PolicySet extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -188,6 +191,7 @@ public class PolicySet extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -196,6 +200,7 @@ public class PolicySet extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -204,6 +209,7 @@ public class PolicySet extends Entity implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final ErrorCode value) {
         this._errorCode = value;
     }
@@ -212,6 +218,7 @@ public class PolicySet extends Entity implements Parsable {
      * @param value Value to set for the guidedDeploymentTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGuidedDeploymentTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._guidedDeploymentTags = value;
     }
@@ -220,6 +227,7 @@ public class PolicySet extends Entity implements Parsable {
      * @param value Value to set for the items property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<PolicySetItem> value) {
         this._items = value;
     }
@@ -228,6 +236,7 @@ public class PolicySet extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -236,6 +245,7 @@ public class PolicySet extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTags = value;
     }
@@ -244,6 +254,7 @@ public class PolicySet extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final PolicySetStatus value) {
         this._status = value;
     }

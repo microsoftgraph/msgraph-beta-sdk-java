@@ -19,8 +19,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _contentSources;
     /** This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional. */
     private Boolean _enableTopResults;
-    /** One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required. */
-    private java.util.List<String> _entityTypes;
+    /** One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required. */
+    private java.util.List<EntityType> _entityTypes;
     /** Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional. */
     private java.util.List<String> _fields;
     /** Specifies the offset for the search results. Offset 0 returns the very first result. Optional. */
@@ -31,10 +31,12 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     private SearchQuery _query;
     /** Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional. */
     private SearchAlterationOptions _queryAlterationOptions;
-    /** The region property */
+    /** Required for searches that use application permissions. Represents the geographic location for the search. For details, see Get the region value. */
     private String _region;
     /** Provides the search result templates options for rendering connectors search results. */
     private ResultTemplateOption _resultTemplateOptions;
+    /** Indicates the kind of contents to be searched when a search is performed using application permissions. Optional. */
+    private SharePointOneDriveOptions _sharePointOneDriveOptions;
     /** The size of the page to be retrieved. Optional. */
     private Integer _size;
     /** Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional. */
@@ -47,6 +49,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Instantiates a new searchRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SearchRequest() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.searchRequest");
@@ -102,11 +105,11 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._enableTopResults;
     }
     /**
-     * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
-     * @return a string
+     * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
+     * @return a entityType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getEntityTypes() {
+    public java.util.List<EntityType> getEntityTypes() {
         return this._entityTypes;
     }
     /**
@@ -116,12 +119,12 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchRequest currentObject = this;
-        return new HashMap<>(16) {{
+        return new HashMap<String, Consumer<ParseNode>>(17) {{
             this.put("aggregationFilters", (n) -> { currentObject.setAggregationFilters(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("aggregations", (n) -> { currentObject.setAggregations(n.getCollectionOfObjectValues(AggregationOption::createFromDiscriminatorValue)); });
             this.put("contentSources", (n) -> { currentObject.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("enableTopResults", (n) -> { currentObject.setEnableTopResults(n.getBooleanValue()); });
-            this.put("entityTypes", (n) -> { currentObject.setEntityTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("entityTypes", (n) -> { currentObject.setEntityTypes(n.getCollectionOfEnumValues(EntityType.class)); });
             this.put("fields", (n) -> { currentObject.setFields(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("from", (n) -> { currentObject.setFrom(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -129,6 +132,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
             this.put("queryAlterationOptions", (n) -> { currentObject.setQueryAlterationOptions(n.getObjectValue(SearchAlterationOptions::createFromDiscriminatorValue)); });
             this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
             this.put("resultTemplateOptions", (n) -> { currentObject.setResultTemplateOptions(n.getObjectValue(ResultTemplateOption::createFromDiscriminatorValue)); });
+            this.put("sharePointOneDriveOptions", (n) -> { currentObject.setSharePointOneDriveOptions(n.getObjectValue(SharePointOneDriveOptions::createFromDiscriminatorValue)); });
             this.put("size", (n) -> { currentObject.setSize(n.getIntegerValue()); });
             this.put("sortProperties", (n) -> { currentObject.setSortProperties(n.getCollectionOfObjectValues(SortProperty::createFromDiscriminatorValue)); });
             this.put("stored_fields", (n) -> { currentObject.setStored_fields(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -176,7 +180,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._queryAlterationOptions;
     }
     /**
-     * Gets the region property value. The region property
+     * Gets the region property value. Required for searches that use application permissions. Represents the geographic location for the search. For details, see Get the region value.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -190,6 +194,14 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ResultTemplateOption getResultTemplateOptions() {
         return this._resultTemplateOptions;
+    }
+    /**
+     * Gets the sharePointOneDriveOptions property value. Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
+     * @return a sharePointOneDriveOptions
+     */
+    @javax.annotation.Nullable
+    public SharePointOneDriveOptions getSharePointOneDriveOptions() {
+        return this._sharePointOneDriveOptions;
     }
     /**
      * Gets the size property value. The size of the page to be retrieved. Optional.
@@ -228,13 +240,14 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("aggregationFilters", this.getAggregationFilters());
         writer.writeCollectionOfObjectValues("aggregations", this.getAggregations());
         writer.writeCollectionOfPrimitiveValues("contentSources", this.getContentSources());
         writer.writeBooleanValue("enableTopResults", this.getEnableTopResults());
-        writer.writeCollectionOfPrimitiveValues("entityTypes", this.getEntityTypes());
+        writer.writeCollectionOfEnumValues("entityTypes", this.getEntityTypes());
         writer.writeCollectionOfPrimitiveValues("fields", this.getFields());
         writer.writeIntegerValue("from", this.getFrom());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -242,6 +255,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("queryAlterationOptions", this.getQueryAlterationOptions());
         writer.writeStringValue("region", this.getRegion());
         writer.writeObjectValue("resultTemplateOptions", this.getResultTemplateOptions());
+        writer.writeObjectValue("sharePointOneDriveOptions", this.getSharePointOneDriveOptions());
         writer.writeIntegerValue("size", this.getSize());
         writer.writeCollectionOfObjectValues("sortProperties", this.getSortProperties());
         writer.writeCollectionOfPrimitiveValues("stored_fields", this.getStored_fields());
@@ -253,6 +267,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -261,6 +276,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the aggregationFilters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAggregationFilters(@javax.annotation.Nullable final java.util.List<String> value) {
         this._aggregationFilters = value;
     }
@@ -269,6 +285,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the aggregations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAggregations(@javax.annotation.Nullable final java.util.List<AggregationOption> value) {
         this._aggregations = value;
     }
@@ -277,6 +294,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentSources(@javax.annotation.Nullable final java.util.List<String> value) {
         this._contentSources = value;
     }
@@ -285,15 +303,17 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enableTopResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableTopResults(@javax.annotation.Nullable final Boolean value) {
         this._enableTopResults = value;
     }
     /**
-     * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+     * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
      * @param value Value to set for the entityTypes property.
      * @return a void
      */
-    public void setEntityTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setEntityTypes(@javax.annotation.Nullable final java.util.List<EntityType> value) {
         this._entityTypes = value;
     }
     /**
@@ -301,6 +321,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fields property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFields(@javax.annotation.Nullable final java.util.List<String> value) {
         this._fields = value;
     }
@@ -309,6 +330,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the from property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrom(@javax.annotation.Nullable final Integer value) {
         this._from = value;
     }
@@ -317,6 +339,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -325,6 +348,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the query property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuery(@javax.annotation.Nullable final SearchQuery value) {
         this._query = value;
     }
@@ -333,14 +357,16 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the queryAlterationOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryAlterationOptions(@javax.annotation.Nullable final SearchAlterationOptions value) {
         this._queryAlterationOptions = value;
     }
     /**
-     * Sets the region property value. The region property
+     * Sets the region property value. Required for searches that use application permissions. Represents the geographic location for the search. For details, see Get the region value.
      * @param value Value to set for the region property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegion(@javax.annotation.Nullable final String value) {
         this._region = value;
     }
@@ -349,14 +375,25 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resultTemplateOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultTemplateOptions(@javax.annotation.Nullable final ResultTemplateOption value) {
         this._resultTemplateOptions = value;
+    }
+    /**
+     * Sets the sharePointOneDriveOptions property value. Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
+     * @param value Value to set for the sharePointOneDriveOptions property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSharePointOneDriveOptions(@javax.annotation.Nullable final SharePointOneDriveOptions value) {
+        this._sharePointOneDriveOptions = value;
     }
     /**
      * Sets the size property value. The size of the page to be retrieved. Optional.
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Integer value) {
         this._size = value;
     }
@@ -365,6 +402,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sortProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSortProperties(@javax.annotation.Nullable final java.util.List<SortProperty> value) {
         this._sortProperties = value;
     }
@@ -373,6 +411,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the stored_fields property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStored_fields(@javax.annotation.Nullable final java.util.List<String> value) {
         this._stored_fields = value;
     }
@@ -381,6 +420,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the trimDuplicates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrimDuplicates(@javax.annotation.Nullable final Boolean value) {
         this._trimDuplicates = value;
     }

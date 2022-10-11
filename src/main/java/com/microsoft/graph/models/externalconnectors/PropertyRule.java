@@ -26,6 +26,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      * Instantiates a new propertyRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PropertyRule() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.externalConnectors.propertyRule");
@@ -55,7 +56,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PropertyRule currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operation", (n) -> { currentObject.setOperation(n.getEnumValue(RuleOperation.class)); });
             this.put("property", (n) -> { currentObject.setProperty(n.getStringValue()); });
@@ -108,6 +109,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -122,6 +124,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -138,6 +142,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the operation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperation(@javax.annotation.Nullable final RuleOperation value) {
         this._operation = value;
     }
@@ -146,6 +151,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the property property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProperty(@javax.annotation.Nullable final String value) {
         this._property = value;
     }
@@ -154,6 +160,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final java.util.List<String> value) {
         this._values = value;
     }
@@ -162,6 +169,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the valuesJoinedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValuesJoinedBy(@javax.annotation.Nullable final BinaryOperator value) {
         this._valuesJoinedBy = value;
     }

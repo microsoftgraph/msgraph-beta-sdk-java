@@ -3,7 +3,7 @@ package com.microsoft.graph.models.ediscovery;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the compliance singleton. */
 public enum CaseAction implements ValuedEnum {
     ContentExport("contentExport"),
     ApplyTags("applyTags"),

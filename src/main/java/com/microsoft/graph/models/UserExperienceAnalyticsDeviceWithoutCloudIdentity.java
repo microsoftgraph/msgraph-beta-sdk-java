@@ -7,15 +7,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics Device without Cloud Identity. */
 public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity implements Parsable {
     /** Azure Active Directory Device Id */
     private String _azureAdDeviceId;
     /** The tenant attach device's name. */
     private String _deviceName;
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceWithoutCloudIdentity and sets the default values.
+     * Instantiates a new userExperienceAnalyticsDeviceWithoutCloudIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsDeviceWithoutCloudIdentity() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsDeviceWithoutCloudIdentity");
@@ -23,7 +25,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceWithoutCloudIdentity
+     * @return a userExperienceAnalyticsDeviceWithoutCloudIdentity
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceWithoutCloudIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +55,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsDeviceWithoutCloudIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureAdDeviceId", (n) -> { currentObject.setAzureAdDeviceId(n.getStringValue()); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
         }};
@@ -63,6 +65,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +77,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
      * @param value Value to set for the azureAdDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdDeviceId(@javax.annotation.Nullable final String value) {
         this._azureAdDeviceId = value;
     }
@@ -82,6 +86,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }

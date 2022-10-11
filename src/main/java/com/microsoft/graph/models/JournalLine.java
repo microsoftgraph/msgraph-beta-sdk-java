@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class JournalLine extends Entity implements Parsable {
     /** The account property */
     private Account _account;
@@ -36,9 +37,10 @@ public class JournalLine extends Entity implements Parsable {
     /** The postingDate property */
     private LocalDate _postingDate;
     /**
-     * Instantiates a new JournalLine and sets the default values.
+     * Instantiates a new journalLine and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public JournalLine() {
         super();
         this.setOdataType("#microsoft.graph.journalLine");
@@ -46,7 +48,7 @@ public class JournalLine extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a JournalLine
+     * @return a journalLine
      */
     @javax.annotation.Nonnull
     public static JournalLine createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -124,7 +126,7 @@ public class JournalLine extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final JournalLine currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("account", (n) -> { currentObject.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
             this.put("accountId", (n) -> { currentObject.setAccountId(n.getStringValue()); });
             this.put("accountNumber", (n) -> { currentObject.setAccountNumber(n.getStringValue()); });
@@ -176,6 +178,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -197,6 +200,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the account property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccount(@javax.annotation.Nullable final Account value) {
         this._account = value;
     }
@@ -205,6 +209,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the accountId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountId(@javax.annotation.Nullable final String value) {
         this._accountId = value;
     }
@@ -213,6 +218,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the accountNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountNumber(@javax.annotation.Nullable final String value) {
         this._accountNumber = value;
     }
@@ -221,6 +227,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the amount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAmount(@javax.annotation.Nullable final BigDecimal value) {
         this._amount = value;
     }
@@ -229,6 +236,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the comment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final String value) {
         this._comment = value;
     }
@@ -237,6 +245,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -245,6 +254,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the documentNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDocumentNumber(@javax.annotation.Nullable final String value) {
         this._documentNumber = value;
     }
@@ -253,6 +263,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the externalDocumentNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalDocumentNumber(@javax.annotation.Nullable final String value) {
         this._externalDocumentNumber = value;
     }
@@ -261,6 +272,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the journalDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJournalDisplayName(@javax.annotation.Nullable final String value) {
         this._journalDisplayName = value;
     }
@@ -269,6 +281,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -277,6 +290,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the lineNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLineNumber(@javax.annotation.Nullable final Integer value) {
         this._lineNumber = value;
     }
@@ -285,6 +299,7 @@ public class JournalLine extends Entity implements Parsable {
      * @param value Value to set for the postingDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostingDate(@javax.annotation.Nullable final LocalDate value) {
         this._postingDate = value;
     }

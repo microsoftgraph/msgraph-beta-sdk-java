@@ -37,6 +37,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * Instantiates a new retrieveRemoteHelpSessionResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RetrieveRemoteHelpSessionResponse() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.retrieveRemoteHelpSessionResponse");
@@ -106,7 +107,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RetrieveRemoteHelpSessionResponse currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("acsGroupId", (n) -> { currentObject.setAcsGroupId(n.getStringValue()); });
             this.put("acsHelperUserId", (n) -> { currentObject.setAcsHelperUserId(n.getStringValue()); });
             this.put("acsHelperUserToken", (n) -> { currentObject.setAcsHelperUserToken(n.getStringValue()); });
@@ -164,6 +165,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("acsGroupId", this.getAcsGroupId());
@@ -183,6 +185,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the acsGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcsGroupId(@javax.annotation.Nullable final String value) {
         this._acsGroupId = value;
     }
@@ -191,6 +194,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the acsHelperUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcsHelperUserId(@javax.annotation.Nullable final String value) {
         this._acsHelperUserId = value;
     }
@@ -199,6 +203,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the acsHelperUserToken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcsHelperUserToken(@javax.annotation.Nullable final String value) {
         this._acsHelperUserToken = value;
     }
@@ -207,6 +212,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the acsSharerUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcsSharerUserId(@javax.annotation.Nullable final String value) {
         this._acsSharerUserId = value;
     }
@@ -215,6 +221,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -223,6 +230,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -231,6 +239,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -239,6 +248,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the pubSubGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPubSubGroupId(@javax.annotation.Nullable final String value) {
         this._pubSubGroupId = value;
     }
@@ -247,6 +257,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the pubSubHelperAccessUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPubSubHelperAccessUri(@javax.annotation.Nullable final String value) {
         this._pubSubHelperAccessUri = value;
     }
@@ -255,6 +266,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the sessionExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._sessionExpirationDateTime = value;
     }
@@ -263,6 +275,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the sessionKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionKey(@javax.annotation.Nullable final String value) {
         this._sessionKey = value;
     }

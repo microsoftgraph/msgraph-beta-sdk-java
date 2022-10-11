@@ -24,6 +24,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * Instantiates a new DeviceManagementConfigurationStringSettingValueDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationStringSettingValueDefinition() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition");
@@ -45,7 +46,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationStringSettingValueDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fileTypes", (n) -> { currentObject.setFileTypes(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("format", (n) -> { currentObject.setFormat(n.getEnumValue(DeviceManagementConfigurationStringFormat.class)); });
             this.put("inputValidationSchema", (n) -> { currentObject.setInputValidationSchema(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * @param value Value to set for the fileTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._fileTypes = value;
     }
@@ -130,6 +133,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final DeviceManagementConfigurationStringFormat value) {
         this._format = value;
     }
@@ -138,6 +142,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * @param value Value to set for the inputValidationSchema property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInputValidationSchema(@javax.annotation.Nullable final String value) {
         this._inputValidationSchema = value;
     }
@@ -146,6 +151,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * @param value Value to set for the isSecret property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSecret(@javax.annotation.Nullable final Boolean value) {
         this._isSecret = value;
     }
@@ -154,6 +160,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * @param value Value to set for the maximumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumLength(@javax.annotation.Nullable final Long value) {
         this._maximumLength = value;
     }
@@ -162,6 +169,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * @param value Value to set for the minimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumLength(@javax.annotation.Nullable final Long value) {
         this._minimumLength = value;
     }

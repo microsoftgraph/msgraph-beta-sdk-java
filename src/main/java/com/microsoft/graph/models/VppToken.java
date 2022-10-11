@@ -47,6 +47,7 @@ public class VppToken extends Entity implements Parsable {
      * Instantiates a new VppToken and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VppToken() {
         super();
         this.setOdataType("#microsoft.graph.vppToken");
@@ -124,7 +125,7 @@ public class VppToken extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VppToken currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
             this.put("automaticallyUpdateApps", (n) -> { currentObject.setAutomaticallyUpdateApps(n.getBooleanValue()); });
             this.put("claimTokenManagementFromExternalMdm", (n) -> { currentObject.setClaimTokenManagementFromExternalMdm(n.getBooleanValue()); });
@@ -229,6 +230,7 @@ public class VppToken extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -255,6 +257,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the appleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleId(@javax.annotation.Nullable final String value) {
         this._appleId = value;
     }
@@ -263,6 +266,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the automaticallyUpdateApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutomaticallyUpdateApps(@javax.annotation.Nullable final Boolean value) {
         this._automaticallyUpdateApps = value;
     }
@@ -271,6 +275,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the claimTokenManagementFromExternalMdm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClaimTokenManagementFromExternalMdm(@javax.annotation.Nullable final Boolean value) {
         this._claimTokenManagementFromExternalMdm = value;
     }
@@ -279,6 +284,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the countryOrRegion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryOrRegion(@javax.annotation.Nullable final String value) {
         this._countryOrRegion = value;
     }
@@ -287,6 +293,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the dataSharingConsentGranted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSharingConsentGranted(@javax.annotation.Nullable final Boolean value) {
         this._dataSharingConsentGranted = value;
     }
@@ -295,6 +302,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -303,6 +311,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -311,6 +320,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -319,6 +329,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -327,6 +338,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the lastSyncStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncStatus(@javax.annotation.Nullable final VppTokenSyncStatus value) {
         this._lastSyncStatus = value;
     }
@@ -335,6 +347,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the locationName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationName(@javax.annotation.Nullable final String value) {
         this._locationName = value;
     }
@@ -343,6 +356,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the organizationName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizationName(@javax.annotation.Nullable final String value) {
         this._organizationName = value;
     }
@@ -351,6 +365,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -359,6 +374,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final VppTokenState value) {
         this._state = value;
     }
@@ -367,6 +383,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the token property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToken(@javax.annotation.Nullable final String value) {
         this._token = value;
     }
@@ -375,6 +392,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the tokenActionResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenActionResults(@javax.annotation.Nullable final java.util.List<VppTokenActionResult> value) {
         this._tokenActionResults = value;
     }
@@ -383,6 +401,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the vppTokenAccountType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVppTokenAccountType(@javax.annotation.Nullable final VppTokenAccountType value) {
         this._vppTokenAccountType = value;
     }

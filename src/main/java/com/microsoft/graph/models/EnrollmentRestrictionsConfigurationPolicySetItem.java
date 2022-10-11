@@ -16,6 +16,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
      * Instantiates a new EnrollmentRestrictionsConfigurationPolicySetItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EnrollmentRestrictionsConfigurationPolicySetItem() {
         super();
         this.setOdataType("#microsoft.graph.enrollmentRestrictionsConfigurationPolicySetItem");
@@ -37,7 +38,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EnrollmentRestrictionsConfigurationPolicySetItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("limit", (n) -> { currentObject.setLimit(n.getIntegerValue()); });
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
         }};
@@ -63,6 +64,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
      * @param value Value to set for the limit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLimit(@javax.annotation.Nullable final Integer value) {
         this._limit = value;
     }
@@ -82,6 +85,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }

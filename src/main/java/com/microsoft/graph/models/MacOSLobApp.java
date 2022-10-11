@@ -32,6 +32,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * Instantiates a new MacOSLobApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSLobApp() {
         super();
         this.setOdataType("#microsoft.graph.macOSLobApp");
@@ -77,7 +78,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSLobApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
             this.put("childApps", (n) -> { currentObject.setChildApps(n.getCollectionOfObjectValues(MacOSLobChildApp::createFromDiscriminatorValue)); });
@@ -151,6 +152,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,6 +172,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the buildNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBuildNumber(@javax.annotation.Nullable final String value) {
         this._buildNumber = value;
     }
@@ -178,6 +181,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the bundleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBundleId(@javax.annotation.Nullable final String value) {
         this._bundleId = value;
     }
@@ -186,6 +190,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the childApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildApps(@javax.annotation.Nullable final java.util.List<MacOSLobChildApp> value) {
         this._childApps = value;
     }
@@ -194,6 +199,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityVersion(@javax.annotation.Nullable final String value) {
         this._identityVersion = value;
     }
@@ -202,6 +208,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the ignoreVersionDetection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIgnoreVersionDetection(@javax.annotation.Nullable final Boolean value) {
         this._ignoreVersionDetection = value;
     }
@@ -210,6 +217,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the installAsManaged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallAsManaged(@javax.annotation.Nullable final Boolean value) {
         this._installAsManaged = value;
     }
@@ -218,6 +226,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the md5Hash property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMd5Hash(@javax.annotation.Nullable final java.util.List<String> value) {
         this._md5Hash = value;
     }
@@ -226,6 +235,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the md5HashChunkSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMd5HashChunkSize(@javax.annotation.Nullable final Integer value) {
         this._md5HashChunkSize = value;
     }
@@ -234,6 +244,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final MacOSMinimumOperatingSystem value) {
         this._minimumSupportedOperatingSystem = value;
     }
@@ -242,6 +253,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the versionNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersionNumber(@javax.annotation.Nullable final String value) {
         this._versionNumber = value;
     }

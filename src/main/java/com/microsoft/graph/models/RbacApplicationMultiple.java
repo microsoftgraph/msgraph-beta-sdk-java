@@ -18,6 +18,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      * Instantiates a new RbacApplicationMultiple and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RbacApplicationMultiple() {
         super();
         this.setOdataType("#microsoft.graph.rbacApplicationMultiple");
@@ -39,7 +40,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RbacApplicationMultiple currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("resourceNamespaces", (n) -> { currentObject.setResourceNamespaces(n.getCollectionOfObjectValues(UnifiedRbacResourceNamespace::createFromDiscriminatorValue)); });
             this.put("roleAssignments", (n) -> { currentObject.setRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignmentMultiple::createFromDiscriminatorValue)); });
             this.put("roleDefinitions", (n) -> { currentObject.setRoleDefinitions(n.getCollectionOfObjectValues(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      * @param value Value to set for the resourceNamespaces property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceNamespaces(@javax.annotation.Nullable final java.util.List<UnifiedRbacResourceNamespace> value) {
         this._resourceNamespaces = value;
     }
@@ -94,6 +97,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentMultiple> value) {
         this._roleAssignments = value;
     }
@@ -102,6 +106,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
         this._roleDefinitions = value;
     }

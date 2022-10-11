@@ -44,6 +44,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Instantiates a new managedDeviceMobileAppConfigurationSettingState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationSettingState() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.managedDeviceMobileAppConfigurationSettingState");
@@ -97,7 +98,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceMobileAppConfigurationSettingState currentObject = this;
-        return new HashMap<>(14) {{
+        return new HashMap<String, Consumer<ParseNode>>(14) {{
             this.put("currentValue", (n) -> { currentObject.setCurrentValue(n.getStringValue()); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getLongValue()); });
             this.put("errorDescription", (n) -> { currentObject.setErrorDescription(n.getStringValue()); });
@@ -207,6 +208,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("currentValue", this.getCurrentValue());
@@ -230,6 +232,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -238,6 +241,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the currentValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrentValue(@javax.annotation.Nullable final String value) {
         this._currentValue = value;
     }
@@ -246,6 +250,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Long value) {
         this._errorCode = value;
     }
@@ -254,6 +259,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the errorDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDescription(@javax.annotation.Nullable final String value) {
         this._errorDescription = value;
     }
@@ -262,6 +268,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the instanceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstanceDisplayName(@javax.annotation.Nullable final String value) {
         this._instanceDisplayName = value;
     }
@@ -270,6 +277,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -278,6 +286,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the setting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSetting(@javax.annotation.Nullable final String value) {
         this._setting = value;
     }
@@ -286,6 +295,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the settingInstanceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingInstanceId(@javax.annotation.Nullable final String value) {
         this._settingInstanceId = value;
     }
@@ -294,6 +304,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the settingName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
         this._settingName = value;
     }
@@ -302,6 +313,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the sources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSources(@javax.annotation.Nullable final java.util.List<SettingSource> value) {
         this._sources = value;
     }
@@ -310,6 +322,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
         this._state = value;
     }
@@ -318,6 +331,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the userEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEmail(@javax.annotation.Nullable final String value) {
         this._userEmail = value;
     }
@@ -326,6 +340,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -334,6 +349,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }
@@ -342,6 +358,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

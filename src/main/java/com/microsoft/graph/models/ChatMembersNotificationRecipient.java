@@ -14,6 +14,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
      * Instantiates a new ChatMembersNotificationRecipient and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatMembersNotificationRecipient() {
         super();
         this.setOdataType("#microsoft.graph.chatMembersNotificationRecipient");
@@ -43,7 +44,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMembersNotificationRecipient currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("chatId", (n) -> { currentObject.setChatId(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
      * @param value Value to set for the chatId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChatId(@javax.annotation.Nullable final String value) {
         this._chatId = value;
     }

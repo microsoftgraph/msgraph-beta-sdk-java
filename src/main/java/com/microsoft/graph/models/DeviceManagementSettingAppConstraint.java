@@ -14,6 +14,7 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
      * Instantiates a new DeviceManagementSettingAppConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingAppConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingAppConstraint");
@@ -35,7 +36,7 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingAppConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("supportedTypes", (n) -> { currentObject.setSupportedTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
      * @param value Value to set for the supportedTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedTypes = value;
     }

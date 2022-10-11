@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Device Co-Management eligibility state */
 public class ComanagementEligibleDevice extends Entity implements Parsable {
     /** Device registration status. */
     private DeviceRegistrationState _clientRegistrationStatus;
@@ -47,9 +48,10 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     /** UserName */
     private String _userName;
     /**
-     * Instantiates a new ComanagementEligibleDevice and sets the default values.
+     * Instantiates a new comanagementEligibleDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ComanagementEligibleDevice() {
         super();
         this.setOdataType("#microsoft.graph.comanagementEligibleDevice");
@@ -57,7 +59,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ComanagementEligibleDevice
+     * @return a comanagementEligibleDevice
      */
     @javax.annotation.Nonnull
     public static ComanagementEligibleDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -103,7 +105,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ComanagementEligibleDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("clientRegistrationStatus", (n) -> { currentObject.setClientRegistrationStatus(n.getEnumValue(DeviceRegistrationState.class)); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getEnumValue(DeviceType.class)); });
@@ -250,6 +252,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -278,6 +281,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the clientRegistrationStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientRegistrationStatus(@javax.annotation.Nullable final DeviceRegistrationState value) {
         this._clientRegistrationStatus = value;
     }
@@ -286,6 +290,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -294,6 +299,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceType(@javax.annotation.Nullable final DeviceType value) {
         this._deviceType = value;
     }
@@ -302,6 +308,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the entitySource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEntitySource(@javax.annotation.Nullable final Integer value) {
         this._entitySource = value;
     }
@@ -310,6 +317,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the managementAgents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementAgents(@javax.annotation.Nullable final ManagementAgentType value) {
         this._managementAgents = value;
     }
@@ -318,6 +326,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the managementState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementState(@javax.annotation.Nullable final ManagementState value) {
         this._managementState = value;
     }
@@ -326,6 +335,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -334,6 +344,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the mdmStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmStatus(@javax.annotation.Nullable final String value) {
         this._mdmStatus = value;
     }
@@ -342,6 +353,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -350,6 +362,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the osDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsDescription(@javax.annotation.Nullable final String value) {
         this._osDescription = value;
     }
@@ -358,6 +371,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -366,6 +380,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the ownerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerType(@javax.annotation.Nullable final OwnerType value) {
         this._ownerType = value;
     }
@@ -374,6 +389,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the referenceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferenceId(@javax.annotation.Nullable final String value) {
         this._referenceId = value;
     }
@@ -382,6 +398,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
         this._serialNumber = value;
     }
@@ -390,6 +407,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ComanagementEligibleType value) {
         this._status = value;
     }
@@ -398,6 +416,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the upn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpn(@javax.annotation.Nullable final String value) {
         this._upn = value;
     }
@@ -406,6 +425,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the userEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEmail(@javax.annotation.Nullable final String value) {
         this._userEmail = value;
     }
@@ -414,6 +434,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -422,6 +443,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }

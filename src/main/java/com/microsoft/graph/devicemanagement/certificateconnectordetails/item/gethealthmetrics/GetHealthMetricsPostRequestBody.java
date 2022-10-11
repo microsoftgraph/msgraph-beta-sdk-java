@@ -18,6 +18,7 @@ public class GetHealthMetricsPostRequestBody implements AdditionalDataHolder, Pa
      * Instantiates a new getHealthMetricsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetHealthMetricsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,7 +47,7 @@ public class GetHealthMetricsPostRequestBody implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetHealthMetricsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("metricNames", (n) -> { currentObject.setMetricNames(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -63,6 +64,7 @@ public class GetHealthMetricsPostRequestBody implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("metricNames", this.getMetricNames());
@@ -73,6 +75,7 @@ public class GetHealthMetricsPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class GetHealthMetricsPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the metricNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetricNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._metricNames = value;
     }

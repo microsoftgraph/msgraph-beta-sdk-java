@@ -15,9 +15,10 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
     /** The metric values for the user experience analytics operating system regression. */
     private java.util.List<UserExperienceAnalyticsMetric> _operatingSystemRegression;
     /**
-     * Instantiates a new UserExperienceAnalyticsRegressionSummary and sets the default values.
+     * Instantiates a new userExperienceAnalyticsRegressionSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsRegressionSummary() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsRegressionSummary");
@@ -25,7 +26,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsRegressionSummary
+     * @return a userExperienceAnalyticsRegressionSummary
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsRegressionSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +40,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsRegressionSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("manufacturerRegression", (n) -> { currentObject.setManufacturerRegression(n.getCollectionOfObjectValues(UserExperienceAnalyticsMetric::createFromDiscriminatorValue)); });
             this.put("modelRegression", (n) -> { currentObject.setModelRegression(n.getCollectionOfObjectValues(UserExperienceAnalyticsMetric::createFromDiscriminatorValue)); });
             this.put("operatingSystemRegression", (n) -> { currentObject.setOperatingSystemRegression(n.getCollectionOfObjectValues(UserExperienceAnalyticsMetric::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
      * @param value Value to set for the manufacturerRegression property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturerRegression(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetric> value) {
         this._manufacturerRegression = value;
     }
@@ -94,6 +97,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
      * @param value Value to set for the modelRegression property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModelRegression(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetric> value) {
         this._modelRegression = value;
     }
@@ -102,6 +106,7 @@ public class UserExperienceAnalyticsRegressionSummary extends Entity implements 
      * @param value Value to set for the operatingSystemRegression property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystemRegression(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetric> value) {
         this._operatingSystemRegression = value;
     }

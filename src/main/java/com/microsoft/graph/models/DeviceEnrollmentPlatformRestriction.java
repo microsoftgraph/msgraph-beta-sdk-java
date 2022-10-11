@@ -30,6 +30,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * Instantiates a new deviceEnrollmentPlatformRestriction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceEnrollmentPlatformRestriction");
@@ -75,7 +76,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceEnrollmentPlatformRestriction currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("blockedManufacturers", (n) -> { currentObject.setBlockedManufacturers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("blockedSkus", (n) -> { currentObject.setBlockedSkus(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -130,6 +131,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("blockedManufacturers", this.getBlockedManufacturers());
@@ -146,6 +148,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +157,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the blockedManufacturers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockedManufacturers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._blockedManufacturers = value;
     }
@@ -162,6 +166,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the blockedSkus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockedSkus(@javax.annotation.Nullable final java.util.List<String> value) {
         this._blockedSkus = value;
     }
@@ -170,6 +175,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -178,6 +184,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._osMaximumVersion = value;
     }
@@ -186,6 +193,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._osMinimumVersion = value;
     }
@@ -194,6 +202,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the personalDeviceEnrollmentBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalDeviceEnrollmentBlocked(@javax.annotation.Nullable final Boolean value) {
         this._personalDeviceEnrollmentBlocked = value;
     }
@@ -202,6 +211,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the platformBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformBlocked(@javax.annotation.Nullable final Boolean value) {
         this._platformBlocked = value;
     }

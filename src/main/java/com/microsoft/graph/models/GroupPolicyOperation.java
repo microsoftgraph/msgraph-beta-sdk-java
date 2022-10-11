@@ -22,6 +22,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * Instantiates a new groupPolicyOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyOperation() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyOperation");
@@ -43,7 +44,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("operationStatus", (n) -> { currentObject.setOperationStatus(n.getEnumValue(GroupPolicyOperationStatus.class)); });
             this.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(GroupPolicyOperationType.class)); });
@@ -87,6 +88,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +102,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -108,6 +111,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the operationStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperationStatus(@javax.annotation.Nullable final GroupPolicyOperationStatus value) {
         this._operationStatus = value;
     }
@@ -116,6 +120,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the operationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperationType(@javax.annotation.Nullable final GroupPolicyOperationType value) {
         this._operationType = value;
     }
@@ -124,6 +129,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the statusDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatusDetails(@javax.annotation.Nullable final String value) {
         this._statusDetails = value;
     }

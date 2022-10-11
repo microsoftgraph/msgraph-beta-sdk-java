@@ -10,6 +10,8 @@ import com.microsoft.graph.policies.appmanagementpolicies.AppManagementPoliciesR
 import com.microsoft.graph.policies.appmanagementpolicies.item.AppManagementPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.authenticationflowspolicy.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.policies.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.policies.authenticationstrengthpolicies.AuthenticationStrengthPoliciesRequestBuilder;
+import com.microsoft.graph.policies.authenticationstrengthpolicies.item.AuthenticationStrengthPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.authorizationpolicy.AuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.policies.authorizationpolicy.item.AuthorizationPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.b2cauthenticationmethodspolicy.B2cAuthenticationMethodsPolicyRequestBuilder;
@@ -27,6 +29,7 @@ import com.microsoft.graph.policies.featurerolloutpolicies.item.FeatureRolloutPo
 import com.microsoft.graph.policies.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
 import com.microsoft.graph.policies.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.identitysecuritydefaultsenforcementpolicy.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.policies.mobileappmanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.mobileappmanagementpolicies.MobileAppManagementPoliciesRequestBuilder;
 import com.microsoft.graph.policies.mobiledevicemanagementpolicies.MobileDeviceManagementPoliciesRequestBuilder;
 import com.microsoft.graph.policies.permissiongrantpolicies.item.PermissionGrantPolicyItemRequestBuilder;
@@ -46,7 +49,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -86,6 +88,11 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new AuthenticationMethodsPolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The authenticationStrengthPolicies property */
+    @javax.annotation.Nonnull
+    public AuthenticationStrengthPoliciesRequestBuilder authenticationStrengthPolicies() {
+        return new AuthenticationStrengthPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The authorizationPolicy property */
     @javax.annotation.Nonnull
@@ -158,14 +165,14 @@ public class PoliciesRequestBuilder {
         return new MobileDeviceManagementPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The permissionGrantPolicies property */
     @javax.annotation.Nonnull
     public PermissionGrantPoliciesRequestBuilder permissionGrantPolicies() {
         return new PermissionGrantPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The roleManagementPolicies property */
     @javax.annotation.Nonnull
     public RoleManagementPoliciesRequestBuilder roleManagementPolicies() {
@@ -192,7 +199,7 @@ public class PoliciesRequestBuilder {
         return new TokenLifetimePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Gets an item from the com.Microsoft.Graph.policies.activityBasedTimeoutPolicies.item collection
      * @param id Unique identifier of the item
@@ -201,7 +208,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public ActivityBasedTimeoutPolicyItemRequestBuilder activityBasedTimeoutPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("activityBasedTimeoutPolicy%2Did", id);
         return new ActivityBasedTimeoutPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -213,9 +220,21 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public AppManagementPolicyItemRequestBuilder appManagementPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("appManagementPolicy%2Did", id);
         return new AppManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.policies.authenticationStrengthPolicies.item collection
+     * @param id Unique identifier of the item
+     * @return a AuthenticationStrengthPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AuthenticationStrengthPolicyItemRequestBuilder authenticationStrengthPolicies(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("authenticationStrengthPolicy%2Did", id);
+        return new AuthenticationStrengthPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the com.Microsoft.Graph.policies.authorizationPolicy.item collection
@@ -225,7 +244,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public AuthorizationPolicyItemRequestBuilder authorizationPolicy(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("authorizationPolicy%2Did", id);
         return new AuthorizationPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -237,7 +256,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public ClaimsMappingPolicyItemRequestBuilder claimsMappingPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("claimsMappingPolicy%2Did", id);
         return new ClaimsMappingPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -249,7 +268,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public ConditionalAccessPolicyItemRequestBuilder conditionalAccessPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("conditionalAccessPolicy%2Did", id);
         return new ConditionalAccessPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -259,11 +278,12 @@ public class PoliciesRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PoliciesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/policies{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -273,9 +293,10 @@ public class PoliciesRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PoliciesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/policies{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -333,6 +354,7 @@ public class PoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PoliciesRequestBuilderPatchRequestConfiguration requestConfig = new PoliciesRequestBuilderPatchRequestConfiguration();
@@ -350,7 +372,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public FeatureRolloutPolicyItemRequestBuilder featureRolloutPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("featureRolloutPolicy%2Did", id);
         return new FeatureRolloutPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -358,16 +380,19 @@ public class PoliciesRequestBuilder {
      * Get policies
      * @return a CompletableFuture of PolicyRoot
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyRoot> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, PolicyRoot::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, PolicyRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<PolicyRoot>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -375,34 +400,19 @@ public class PoliciesRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PolicyRoot
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<PoliciesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, PolicyRoot::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, PolicyRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Get policies
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of PolicyRoot
-     */
-    public java.util.concurrent.CompletableFuture<PolicyRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<PoliciesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<PolicyRoot>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, PolicyRoot::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -413,7 +423,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public HomeRealmDiscoveryPolicyItemRequestBuilder homeRealmDiscoveryPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("homeRealmDiscoveryPolicy%2Did", id);
         return new HomeRealmDiscoveryPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -425,7 +435,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.policies.mobileappmanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder mobileAppManagementPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mobilityManagementPolicy%2Did", id);
         return new com.microsoft.graph.policies.mobileappmanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -437,63 +447,50 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.policies.mobiledevicemanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder mobileDeviceManagementPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mobilityManagementPolicy%2Did", id);
         return new com.microsoft.graph.policies.mobiledevicemanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update policies
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of PolicyRoot
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final PolicyRoot body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<PolicyRoot> patch(@javax.annotation.Nonnull final PolicyRoot body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, PolicyRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<PolicyRoot>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update policies
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of PolicyRoot
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final PolicyRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PoliciesRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update policies
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final PolicyRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PoliciesRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<PolicyRoot> patch(@javax.annotation.Nonnull final PolicyRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PoliciesRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, PolicyRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<PolicyRoot>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -504,7 +501,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public PermissionGrantPolicyItemRequestBuilder permissionGrantPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("permissionGrantPolicy%2Did", id);
         return new PermissionGrantPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -516,7 +513,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public UnifiedRoleManagementPolicyItemRequestBuilder roleManagementPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleManagementPolicy%2Did", id);
         return new UnifiedRoleManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -528,7 +525,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public UnifiedRoleManagementPolicyAssignmentItemRequestBuilder roleManagementPolicyAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleManagementPolicyAssignment%2Did", id);
         return new UnifiedRoleManagementPolicyAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -540,7 +537,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public ServicePrincipalCreationPolicyItemRequestBuilder servicePrincipalCreationPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("servicePrincipalCreationPolicy%2Did", id);
         return new ServicePrincipalCreationPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -552,7 +549,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public TokenIssuancePolicyItemRequestBuilder tokenIssuancePolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tokenIssuancePolicy%2Did", id);
         return new TokenIssuancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -564,7 +561,7 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public TokenLifetimePolicyItemRequestBuilder tokenLifetimePolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tokenLifetimePolicy%2Did", id);
         return new TokenLifetimePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -586,7 +583,7 @@ public class PoliciesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public PoliciesRequestBuilderGetQueryParameters queryParameters = new PoliciesRequestBuilderGetQueryParameters();
@@ -594,6 +591,7 @@ public class PoliciesRequestBuilder {
          * Instantiates a new policiesRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public PoliciesRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -604,11 +602,12 @@ public class PoliciesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new policiesRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public PoliciesRequestBuilderPatchRequestConfiguration() {
         }
     }

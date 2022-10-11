@@ -17,6 +17,7 @@ public class AttributeSet extends Entity implements Parsable {
      * Instantiates a new attributeSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttributeSet() {
         super();
         this.setOdataType("#microsoft.graph.attributeSet");
@@ -46,7 +47,7 @@ public class AttributeSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("maxAttributesPerSet", (n) -> { currentObject.setMaxAttributesPerSet(n.getIntegerValue()); });
         }};
@@ -64,6 +65,7 @@ public class AttributeSet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class AttributeSet extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -83,6 +86,7 @@ public class AttributeSet extends Entity implements Parsable {
      * @param value Value to set for the maxAttributesPerSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxAttributesPerSet(@javax.annotation.Nullable final Integer value) {
         this._maxAttributesPerSet = value;
     }

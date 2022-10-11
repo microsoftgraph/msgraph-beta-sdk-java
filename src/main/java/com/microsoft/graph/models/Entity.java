@@ -44,6 +44,7 @@ import com.microsoft.graph.models.AgreementFile;
 import com.microsoft.graph.models.AgreementFileLocalization;
 import com.microsoft.graph.models.AgreementFileProperties;
 import com.microsoft.graph.models.AgreementFileVersion;
+import com.microsoft.graph.models.Alert;
 import com.microsoft.graph.models.AllowedDataLocation;
 import com.microsoft.graph.models.AllowedValue;
 import com.microsoft.graph.models.AndroidCertificateProfileBase;
@@ -158,7 +159,9 @@ import com.microsoft.graph.models.AttendanceRecord;
 import com.microsoft.graph.models.AttributeMappingFunctionSchema;
 import com.microsoft.graph.models.AttributeSet;
 import com.microsoft.graph.models.AudioRoutingGroup;
+import com.microsoft.graph.models.AuditEvent;
 import com.microsoft.graph.models.Authentication;
+import com.microsoft.graph.models.AuthenticationCombinationConfiguration;
 import com.microsoft.graph.models.AuthenticationContextClassReference;
 import com.microsoft.graph.models.AuthenticationEventListener;
 import com.microsoft.graph.models.AuthenticationEventsPolicy;
@@ -166,14 +169,14 @@ import com.microsoft.graph.models.AuthenticationFlowsPolicy;
 import com.microsoft.graph.models.AuthenticationListener;
 import com.microsoft.graph.models.AuthenticationMethod;
 import com.microsoft.graph.models.AuthenticationMethodConfiguration;
+import com.microsoft.graph.models.AuthenticationMethodModeDetail;
 import com.microsoft.graph.models.AuthenticationMethodsPolicy;
 import com.microsoft.graph.models.AuthenticationMethodsRoot;
 import com.microsoft.graph.models.AuthenticationMethodTarget;
+import com.microsoft.graph.models.AuthenticationStrengthPolicy;
+import com.microsoft.graph.models.AuthenticationStrengthRoot;
 import com.microsoft.graph.models.AuthoredNote;
 import com.microsoft.graph.models.AuthorizationPolicy;
-import com.microsoft.graph.models.AzureADFeatureUsage;
-import com.microsoft.graph.models.AzureADLicenseUsage;
-import com.microsoft.graph.models.AzureADUserFeatureUsage;
 import com.microsoft.graph.models.AzureADWindowsAutopilotDeploymentProfile;
 import com.microsoft.graph.models.B2cAuthenticationMethodsPolicy;
 import com.microsoft.graph.models.B2cIdentityUserFlow;
@@ -227,12 +230,14 @@ import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.CloudPcAuditEvent;
 import com.microsoft.graph.models.CloudPCConnectivityIssue;
 import com.microsoft.graph.models.CloudPcDeviceImage;
+import com.microsoft.graph.models.CloudPcExportJob;
 import com.microsoft.graph.models.CloudPcExternalPartnerSetting;
 import com.microsoft.graph.models.CloudPcGalleryImage;
 import com.microsoft.graph.models.CloudPcOnPremisesConnection;
 import com.microsoft.graph.models.CloudPcOrganizationSettings;
 import com.microsoft.graph.models.CloudPcProvisioningPolicy;
 import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignment;
+import com.microsoft.graph.models.CloudPcReports;
 import com.microsoft.graph.models.CloudPcServicePlan;
 import com.microsoft.graph.models.CloudPcSnapshot;
 import com.microsoft.graph.models.CloudPcSupportedRegion;
@@ -248,8 +253,10 @@ import com.microsoft.graph.models.CompanyInformation;
 import com.microsoft.graph.models.ComplianceManagementPartner;
 import com.microsoft.graph.models.ConditionalAccessPolicy;
 import com.microsoft.graph.models.ConditionalAccessRoot;
+import com.microsoft.graph.models.ConditionalAccessTemplate;
 import com.microsoft.graph.models.ConfigManagerCollection;
 import com.microsoft.graph.models.ConnectedOrganization;
+import com.microsoft.graph.models.ConnectionOperation;
 import com.microsoft.graph.models.Connector;
 import com.microsoft.graph.models.ConnectorGroup;
 import com.microsoft.graph.models.Contact;
@@ -350,6 +357,9 @@ import com.microsoft.graph.models.DeviceHealthScriptRunSummary;
 import com.microsoft.graph.models.DeviceInstallState;
 import com.microsoft.graph.models.DeviceLogCollectionResponse;
 import com.microsoft.graph.models.DeviceManagement;
+import com.microsoft.graph.models.devicemanagement.AlertRecord;
+import com.microsoft.graph.models.devicemanagement.AlertRule;
+import com.microsoft.graph.models.devicemanagement.Monitoring;
 import com.microsoft.graph.models.DeviceManagementAbstractComplexSettingDefinition;
 import com.microsoft.graph.models.DeviceManagementAbstractComplexSettingInstance;
 import com.microsoft.graph.models.DeviceManagementAutopilotEvent;
@@ -448,6 +458,7 @@ import com.microsoft.graph.models.ediscovery.AddToReviewSetOperation;
 import com.microsoft.graph.models.ediscovery.CaseExportOperation;
 import com.microsoft.graph.models.ediscovery.CaseHoldOperation;
 import com.microsoft.graph.models.ediscovery.CaseIndexOperation;
+import com.microsoft.graph.models.ediscovery.CaseOperation;
 import com.microsoft.graph.models.ediscovery.CaseSettings;
 import com.microsoft.graph.models.ediscovery.Custodian;
 import com.microsoft.graph.models.ediscovery.Ediscoveryroot;
@@ -458,7 +469,9 @@ import com.microsoft.graph.models.ediscovery.PurgeDataOperation;
 import com.microsoft.graph.models.ediscovery.ReviewSet;
 import com.microsoft.graph.models.ediscovery.ReviewSetQuery;
 import com.microsoft.graph.models.ediscovery.SourceCollection;
+import com.microsoft.graph.models.ediscovery.Tag;
 import com.microsoft.graph.models.ediscovery.TagOperation;
+import com.microsoft.graph.models.ediscovery.UnifiedGroupSource;
 import com.microsoft.graph.models.EditionUpgradeConfiguration;
 import com.microsoft.graph.models.EducationalActivity;
 import com.microsoft.graph.models.EducationAssignment;
@@ -512,18 +525,22 @@ import com.microsoft.graph.models.ExactMatchUploadAgent;
 import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.ExtensionProperty;
 import com.microsoft.graph.models.External;
+import com.microsoft.graph.models.ExternalConnection;
 import com.microsoft.graph.models.externalconnectors.ConnectionQuota;
 import com.microsoft.graph.models.externalconnectors.ExternalActivity;
 import com.microsoft.graph.models.externalconnectors.ExternalActivityResult;
 import com.microsoft.graph.models.externalconnectors.Identity;
 import com.microsoft.graph.models.ExternalDomainName;
+import com.microsoft.graph.models.ExternalGroup;
 import com.microsoft.graph.models.ExternalIdentitiesPolicy;
+import com.microsoft.graph.models.ExternalItem;
 import com.microsoft.graph.models.ExternalMeetingRegistrant;
 import com.microsoft.graph.models.ExternalMeetingRegistration;
 import com.microsoft.graph.models.FeatureRolloutPolicy;
 import com.microsoft.graph.models.FederatedIdentityCredential;
 import com.microsoft.graph.models.Fido2AuthenticationMethod;
 import com.microsoft.graph.models.Fido2AuthenticationMethodConfiguration;
+import com.microsoft.graph.models.Fido2CombinationConfiguration;
 import com.microsoft.graph.models.FieldValueSet;
 import com.microsoft.graph.models.FileAssessmentRequest;
 import com.microsoft.graph.models.FileAttachment;
@@ -540,6 +557,7 @@ import com.microsoft.graph.models.GovernanceRoleAssignmentRequest;
 import com.microsoft.graph.models.GovernanceRoleDefinition;
 import com.microsoft.graph.models.GovernanceRoleSetting;
 import com.microsoft.graph.models.GovernanceSubject;
+import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.GroupLifecyclePolicy;
 import com.microsoft.graph.models.GroupPolicyCategory;
 import com.microsoft.graph.models.GroupPolicyConfiguration;
@@ -598,6 +616,7 @@ import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentityUpload;
 import com.microsoft.graph.models.InferenceClassification;
 import com.microsoft.graph.models.InferenceClassificationOverride;
+import com.microsoft.graph.models.InformationProtection;
 import com.microsoft.graph.models.InformationProtectionLabel;
 import com.microsoft.graph.models.InformationProtectionPolicy;
 import com.microsoft.graph.models.InsightsSettings;
@@ -743,9 +762,17 @@ import com.microsoft.graph.models.managedtenants.CloudPcDevice;
 import com.microsoft.graph.models.managedtenants.CloudPcOverview;
 import com.microsoft.graph.models.managedtenants.ConditionalAccessPolicyCoverage;
 import com.microsoft.graph.models.managedtenants.CredentialUserRegistrationsSummary;
+import com.microsoft.graph.models.managedtenants.DeviceCompliancePolicySettingStateSummary;
 import com.microsoft.graph.models.managedtenants.ManagedDeviceCompliance;
 import com.microsoft.graph.models.managedtenants.ManagedDeviceComplianceTrend;
 import com.microsoft.graph.models.managedtenants.ManagedTenant;
+import com.microsoft.graph.models.managedtenants.ManagedTenantAlert;
+import com.microsoft.graph.models.managedtenants.ManagedTenantAlertLog;
+import com.microsoft.graph.models.managedtenants.ManagedTenantAlertRule;
+import com.microsoft.graph.models.managedtenants.ManagedTenantAlertRuleDefinition;
+import com.microsoft.graph.models.managedtenants.ManagedTenantApiNotification;
+import com.microsoft.graph.models.managedtenants.ManagedTenantEmailNotification;
+import com.microsoft.graph.models.managedtenants.ManagedTenantTicketingEndpoint;
 import com.microsoft.graph.models.managedtenants.ManagementAction;
 import com.microsoft.graph.models.managedtenants.ManagementActionTenantDeploymentStatus;
 import com.microsoft.graph.models.managedtenants.ManagementIntent;
@@ -964,7 +991,6 @@ import com.microsoft.graph.models.Request;
 import com.microsoft.graph.models.ResourceOperation;
 import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.RestrictedAppsViolation;
-import com.microsoft.graph.models.RestrictedSignIn;
 import com.microsoft.graph.models.RichLongRunningOperation;
 import com.microsoft.graph.models.RiskDetection;
 import com.microsoft.graph.models.RiskyServicePrincipal;
@@ -990,6 +1016,7 @@ import com.microsoft.graph.models.SamlOrWsFedProvider;
 import com.microsoft.graph.models.Schedule;
 import com.microsoft.graph.models.ScheduleChangeRequest;
 import com.microsoft.graph.models.SchedulingGroup;
+import com.microsoft.graph.models.Schema;
 import com.microsoft.graph.models.SchemaExtension;
 import com.microsoft.graph.models.ScopedRoleMembership;
 import com.microsoft.graph.models.search.Acronym;
@@ -1000,8 +1027,12 @@ import com.microsoft.graph.models.SearchEntity;
 import com.microsoft.graph.models.SectionGroup;
 import com.microsoft.graph.models.SecureScore;
 import com.microsoft.graph.models.SecureScoreControlProfile;
+import com.microsoft.graph.models.Security;
+import com.microsoft.graph.models.security.Case_escaped;
 import com.microsoft.graph.models.security.CasesRoot;
 import com.microsoft.graph.models.security.DataSet;
+import com.microsoft.graph.models.security.DataSource;
+import com.microsoft.graph.models.security.DataSourceContainer;
 import com.microsoft.graph.models.security.DispositionReviewStage;
 import com.microsoft.graph.models.security.EdiscoveryAddToReviewSetOperation;
 import com.microsoft.graph.models.security.EdiscoveryCase;
@@ -1031,15 +1062,18 @@ import com.microsoft.graph.models.security.FileUrlThreatSubmission;
 import com.microsoft.graph.models.security.Incident;
 import com.microsoft.graph.models.security.InformationProtectionPolicySetting;
 import com.microsoft.graph.models.security.LabelsRoot;
+import com.microsoft.graph.models.security.PolicyBase;
 import com.microsoft.graph.models.security.RetentionEvent;
 import com.microsoft.graph.models.security.RetentionEventType;
 import com.microsoft.graph.models.security.RetentionLabel;
 import com.microsoft.graph.models.security.Search;
+import com.microsoft.graph.models.security.SiteSource;
 import com.microsoft.graph.models.security.ThreatSubmission;
 import com.microsoft.graph.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.models.security.TriggersRoot;
 import com.microsoft.graph.models.security.TriggerTypesRoot;
 import com.microsoft.graph.models.security.UrlThreatSubmission;
+import com.microsoft.graph.models.security.UserSource;
 import com.microsoft.graph.models.SecurityAction;
 import com.microsoft.graph.models.SecurityBaselineCategoryStateSummary;
 import com.microsoft.graph.models.SecurityBaselineDeviceState;
@@ -1050,6 +1084,7 @@ import com.microsoft.graph.models.SecurityBaselineTemplate;
 import com.microsoft.graph.models.SecurityConfigurationTask;
 import com.microsoft.graph.models.SecurityReportsRoot;
 import com.microsoft.graph.models.SensitiveType;
+import com.microsoft.graph.models.SensitivityLabel;
 import com.microsoft.graph.models.SensitivityPolicySettings;
 import com.microsoft.graph.models.ServiceAnnouncement;
 import com.microsoft.graph.models.ServiceAnnouncementAttachment;
@@ -1106,6 +1141,7 @@ import com.microsoft.graph.models.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.TargetedManagedAppConfigurationPolicySetItem;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.TargetedManagedAppProtection;
+import com.microsoft.graph.models.Task;
 import com.microsoft.graph.models.TaskFileAttachment;
 import com.microsoft.graph.models.TaskList;
 import com.microsoft.graph.models.Tasks;
@@ -1209,6 +1245,8 @@ import com.microsoft.graph.models.UserAppInstallStatus;
 import com.microsoft.graph.models.UserConfiguration;
 import com.microsoft.graph.models.UserConsentRequest;
 import com.microsoft.graph.models.UserCredentialUsageDetails;
+import com.microsoft.graph.models.UserExperienceAnalyticsAnomaly;
+import com.microsoft.graph.models.UserExperienceAnalyticsAnomalyDevice;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthApplicationPerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails;
@@ -1314,6 +1352,7 @@ import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalP
 import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus;
 import com.microsoft.graph.models.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary;
 import com.microsoft.graph.models.WindowsDeliveryOptimizationConfiguration;
+import com.microsoft.graph.models.WindowsDeviceMalwareState;
 import com.microsoft.graph.models.WindowsDomainJoinConfiguration;
 import com.microsoft.graph.models.WindowsDriverUpdateInventory;
 import com.microsoft.graph.models.WindowsDriverUpdateProfile;
@@ -1356,6 +1395,7 @@ import com.microsoft.graph.models.WindowsPhone81VpnConfiguration;
 import com.microsoft.graph.models.WindowsPhoneEASEmailProfileConfiguration;
 import com.microsoft.graph.models.WindowsPhoneXAP;
 import com.microsoft.graph.models.WindowsPrivacyDataAccessControlItem;
+import com.microsoft.graph.models.WindowsProtectionState;
 import com.microsoft.graph.models.WindowsQualityUpdateCatalogItem;
 import com.microsoft.graph.models.WindowsQualityUpdateProfile;
 import com.microsoft.graph.models.WindowsQualityUpdateProfileAssignment;
@@ -1449,7 +1489,7 @@ import java.util.Objects;
 public class Entity implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The id property */
+    /** The unique identifier for an entity. Read-only. */
     private String _id;
     /** The OdataType property */
     private String _odataType;
@@ -1457,6 +1497,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * Instantiates a new entity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Entity() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.entity");
@@ -1634,6 +1675,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.audioRoutingGroup": return new AudioRoutingGroup();
                 case "#microsoft.graph.auditEvent": return new AuditEvent();
                 case "#microsoft.graph.authentication": return new Authentication();
+                case "#microsoft.graph.authenticationCombinationConfiguration": return new AuthenticationCombinationConfiguration();
                 case "#microsoft.graph.authenticationContextClassReference": return new AuthenticationContextClassReference();
                 case "#microsoft.graph.authenticationEventListener": return new AuthenticationEventListener();
                 case "#microsoft.graph.authenticationEventsPolicy": return new AuthenticationEventsPolicy();
@@ -1641,14 +1683,14 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.authenticationListener": return new AuthenticationListener();
                 case "#microsoft.graph.authenticationMethod": return new AuthenticationMethod();
                 case "#microsoft.graph.authenticationMethodConfiguration": return new AuthenticationMethodConfiguration();
+                case "#microsoft.graph.authenticationMethodModeDetail": return new AuthenticationMethodModeDetail();
                 case "#microsoft.graph.authenticationMethodsPolicy": return new AuthenticationMethodsPolicy();
                 case "#microsoft.graph.authenticationMethodsRoot": return new AuthenticationMethodsRoot();
                 case "#microsoft.graph.authenticationMethodTarget": return new AuthenticationMethodTarget();
+                case "#microsoft.graph.authenticationStrengthPolicy": return new AuthenticationStrengthPolicy();
+                case "#microsoft.graph.authenticationStrengthRoot": return new AuthenticationStrengthRoot();
                 case "#microsoft.graph.authoredNote": return new AuthoredNote();
                 case "#microsoft.graph.authorizationPolicy": return new AuthorizationPolicy();
-                case "#microsoft.graph.azureADFeatureUsage": return new AzureADFeatureUsage();
-                case "#microsoft.graph.azureADLicenseUsage": return new AzureADLicenseUsage();
-                case "#microsoft.graph.azureADUserFeatureUsage": return new AzureADUserFeatureUsage();
                 case "#microsoft.graph.azureADWindowsAutopilotDeploymentProfile": return new AzureADWindowsAutopilotDeploymentProfile();
                 case "#microsoft.graph.b2cAuthenticationMethodsPolicy": return new B2cAuthenticationMethodsPolicy();
                 case "#microsoft.graph.b2cIdentityUserFlow": return new B2cIdentityUserFlow();
@@ -1702,12 +1744,14 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.cloudPcAuditEvent": return new CloudPcAuditEvent();
                 case "#microsoft.graph.cloudPCConnectivityIssue": return new CloudPCConnectivityIssue();
                 case "#microsoft.graph.cloudPcDeviceImage": return new CloudPcDeviceImage();
+                case "#microsoft.graph.cloudPcExportJob": return new CloudPcExportJob();
                 case "#microsoft.graph.cloudPcExternalPartnerSetting": return new CloudPcExternalPartnerSetting();
                 case "#microsoft.graph.cloudPcGalleryImage": return new CloudPcGalleryImage();
                 case "#microsoft.graph.cloudPcOnPremisesConnection": return new CloudPcOnPremisesConnection();
                 case "#microsoft.graph.cloudPcOrganizationSettings": return new CloudPcOrganizationSettings();
                 case "#microsoft.graph.cloudPcProvisioningPolicy": return new CloudPcProvisioningPolicy();
                 case "#microsoft.graph.cloudPcProvisioningPolicyAssignment": return new CloudPcProvisioningPolicyAssignment();
+                case "#microsoft.graph.cloudPcReports": return new CloudPcReports();
                 case "#microsoft.graph.cloudPcServicePlan": return new CloudPcServicePlan();
                 case "#microsoft.graph.cloudPcSnapshot": return new CloudPcSnapshot();
                 case "#microsoft.graph.cloudPcSupportedRegion": return new CloudPcSupportedRegion();
@@ -1723,6 +1767,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.complianceManagementPartner": return new ComplianceManagementPartner();
                 case "#microsoft.graph.conditionalAccessPolicy": return new ConditionalAccessPolicy();
                 case "#microsoft.graph.conditionalAccessRoot": return new ConditionalAccessRoot();
+                case "#microsoft.graph.conditionalAccessTemplate": return new ConditionalAccessTemplate();
                 case "#microsoft.graph.configManagerCollection": return new ConfigManagerCollection();
                 case "#microsoft.graph.connectedOrganization": return new ConnectedOrganization();
                 case "#microsoft.graph.connectionOperation": return new ConnectionOperation();
@@ -1827,6 +1872,9 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.deviceInstallState": return new DeviceInstallState();
                 case "#microsoft.graph.deviceLogCollectionResponse": return new DeviceLogCollectionResponse();
                 case "#microsoft.graph.deviceManagement": return new DeviceManagement();
+                case "#microsoft.graph.deviceManagement.alertRecord": return new AlertRecord();
+                case "#microsoft.graph.deviceManagement.alertRule": return new AlertRule();
+                case "#microsoft.graph.deviceManagement.monitoring": return new Monitoring();
                 case "#microsoft.graph.deviceManagementAbstractComplexSettingDefinition": return new DeviceManagementAbstractComplexSettingDefinition();
                 case "#microsoft.graph.deviceManagementAbstractComplexSettingInstance": return new DeviceManagementAbstractComplexSettingInstance();
                 case "#microsoft.graph.deviceManagementAutopilotEvent": return new DeviceManagementAutopilotEvent();
@@ -2017,6 +2065,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.federatedIdentityCredential": return new FederatedIdentityCredential();
                 case "#microsoft.graph.fido2AuthenticationMethod": return new Fido2AuthenticationMethod();
                 case "#microsoft.graph.fido2AuthenticationMethodConfiguration": return new Fido2AuthenticationMethodConfiguration();
+                case "#microsoft.graph.fido2CombinationConfiguration": return new Fido2CombinationConfiguration();
                 case "#microsoft.graph.fieldValueSet": return new FieldValueSet();
                 case "#microsoft.graph.fileAssessmentRequest": return new FileAssessmentRequest();
                 case "#microsoft.graph.fileAttachment": return new FileAttachment();
@@ -2244,6 +2293,13 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.managedTenants.managedDeviceCompliance": return new ManagedDeviceCompliance();
                 case "#microsoft.graph.managedTenants.managedDeviceComplianceTrend": return new ManagedDeviceComplianceTrend();
                 case "#microsoft.graph.managedTenants.managedTenant": return new ManagedTenant();
+                case "#microsoft.graph.managedTenants.managedTenantAlert": return new ManagedTenantAlert();
+                case "#microsoft.graph.managedTenants.managedTenantAlertLog": return new ManagedTenantAlertLog();
+                case "#microsoft.graph.managedTenants.managedTenantAlertRule": return new ManagedTenantAlertRule();
+                case "#microsoft.graph.managedTenants.managedTenantAlertRuleDefinition": return new ManagedTenantAlertRuleDefinition();
+                case "#microsoft.graph.managedTenants.managedTenantApiNotification": return new ManagedTenantApiNotification();
+                case "#microsoft.graph.managedTenants.managedTenantEmailNotification": return new ManagedTenantEmailNotification();
+                case "#microsoft.graph.managedTenants.managedTenantTicketingEndpoint": return new ManagedTenantTicketingEndpoint();
                 case "#microsoft.graph.managedTenants.managementAction": return new ManagementAction();
                 case "#microsoft.graph.managedTenants.managementActionTenantDeploymentStatus": return new ManagementActionTenantDeploymentStatus();
                 case "#microsoft.graph.managedTenants.managementIntent": return new ManagementIntent();
@@ -2465,7 +2521,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.resourceOperation": return new ResourceOperation();
                 case "#microsoft.graph.resourceSpecificPermissionGrant": return new ResourceSpecificPermissionGrant();
                 case "#microsoft.graph.restrictedAppsViolation": return new RestrictedAppsViolation();
-                case "#microsoft.graph.restrictedSignIn": return new RestrictedSignIn();
                 case "#microsoft.graph.richLongRunningOperation": return new RichLongRunningOperation();
                 case "#microsoft.graph.riskDetection": return new RiskDetection();
                 case "#microsoft.graph.riskyServicePrincipal": return new RiskyServicePrincipal();
@@ -2728,6 +2783,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.userConfiguration": return new UserConfiguration();
                 case "#microsoft.graph.userConsentRequest": return new UserConsentRequest();
                 case "#microsoft.graph.userCredentialUsageDetails": return new UserCredentialUsageDetails();
+                case "#microsoft.graph.userExperienceAnalyticsAnomaly": return new UserExperienceAnalyticsAnomaly();
+                case "#microsoft.graph.userExperienceAnalyticsAnomalyDevice": return new UserExperienceAnalyticsAnomalyDevice();
                 case "#microsoft.graph.userExperienceAnalyticsAppHealthApplicationPerformance": return new UserExperienceAnalyticsAppHealthApplicationPerformance();
                 case "#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersion": return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion();
                 case "#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails": return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails();
@@ -2978,13 +3035,13 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Entity currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The unique identifier for an entity. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -3004,6 +3061,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
@@ -3015,14 +3073,16 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The unique identifier for an entity. Read-only.
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -3031,6 +3091,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

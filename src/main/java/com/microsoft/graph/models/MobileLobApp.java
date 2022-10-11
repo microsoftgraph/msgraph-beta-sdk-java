@@ -31,6 +31,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      * Instantiates a new MobileLobApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileLobApp() {
         super();
         this.setOdataType("#microsoft.graph.mobileLobApp");
@@ -85,7 +86,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileLobApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("committedContentVersion", (n) -> { currentObject.setCommittedContentVersion(n.getStringValue()); });
             this.put("contentVersions", (n) -> { currentObject.setContentVersions(n.getCollectionOfObjectValues(MobileAppContent::createFromDiscriminatorValue)); });
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
@@ -113,6 +114,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -126,6 +128,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      * @param value Value to set for the committedContentVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCommittedContentVersion(@javax.annotation.Nullable final String value) {
         this._committedContentVersion = value;
     }
@@ -134,6 +137,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      * @param value Value to set for the contentVersions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentVersions(@javax.annotation.Nullable final java.util.List<MobileAppContent> value) {
         this._contentVersions = value;
     }
@@ -142,6 +146,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
         this._fileName = value;
     }
@@ -150,6 +155,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
         this._size = value;
     }

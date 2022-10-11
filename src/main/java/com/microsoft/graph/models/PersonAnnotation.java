@@ -18,6 +18,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
      * Instantiates a new PersonAnnotation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PersonAnnotation() {
         super();
         this.setOdataType("#microsoft.graph.personAnnotation");
@@ -55,7 +56,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersonAnnotation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("detail", (n) -> { currentObject.setDetail(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
      * @param value Value to set for the detail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetail(@javax.annotation.Nullable final ItemBody value) {
         this._detail = value;
     }
@@ -94,6 +97,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -102,6 +106,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
         this._thumbnailUrl = value;
     }

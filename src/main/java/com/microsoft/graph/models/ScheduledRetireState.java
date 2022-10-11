@@ -5,9 +5,9 @@ import java.util.Objects;
 
 /** Provides operations to call the setScheduledRetireState method. */
 public enum ScheduledRetireState implements ValuedEnum {
-    /** Cancel retire. */
+    /** CancelRetire */
     CancelRetire("cancelRetire"),
-    /** Retire these devices. */
+    /** ConfirmRetire */
     ConfirmRetire("confirmRetire"),
     /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");

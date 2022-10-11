@@ -31,9 +31,10 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
     /** The count of devices in an organization eligible for windows upgrade. Valid values -2147483648 to 2147483647 */
     private Integer _upgradeEligibleDeviceCount;
     /**
-     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric and sets the default values.
+     * Instantiates a new userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric");
@@ -41,7 +42,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     * @return a userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +56,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("osCheckFailedPercentage", (n) -> { currentObject.setOsCheckFailedPercentage(n.getDoubleValue()); });
             this.put("processor64BitCheckFailedPercentage", (n) -> { currentObject.setProcessor64BitCheckFailedPercentage(n.getDoubleValue()); });
             this.put("processorCoreCountCheckFailedPercentage", (n) -> { currentObject.setProcessorCoreCountCheckFailedPercentage(n.getDoubleValue()); });
@@ -162,6 +163,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +184,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the osCheckFailedPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsCheckFailedPercentage(@javax.annotation.Nullable final Double value) {
         this._osCheckFailedPercentage = value;
     }
@@ -190,6 +193,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the processor64BitCheckFailedPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessor64BitCheckFailedPercentage(@javax.annotation.Nullable final Double value) {
         this._processor64BitCheckFailedPercentage = value;
     }
@@ -198,6 +202,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the processorCoreCountCheckFailedPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessorCoreCountCheckFailedPercentage(@javax.annotation.Nullable final Double value) {
         this._processorCoreCountCheckFailedPercentage = value;
     }
@@ -206,6 +211,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the processorFamilyCheckFailedPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessorFamilyCheckFailedPercentage(@javax.annotation.Nullable final Double value) {
         this._processorFamilyCheckFailedPercentage = value;
     }
@@ -214,6 +220,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the processorSpeedCheckFailedPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessorSpeedCheckFailedPercentage(@javax.annotation.Nullable final Double value) {
         this._processorSpeedCheckFailedPercentage = value;
     }
@@ -222,6 +229,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the ramCheckFailedPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRamCheckFailedPercentage(@javax.annotation.Nullable final Double value) {
         this._ramCheckFailedPercentage = value;
     }
@@ -230,6 +238,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the secureBootCheckFailedPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecureBootCheckFailedPercentage(@javax.annotation.Nullable final Double value) {
         this._secureBootCheckFailedPercentage = value;
     }
@@ -238,6 +247,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the storageCheckFailedPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageCheckFailedPercentage(@javax.annotation.Nullable final Double value) {
         this._storageCheckFailedPercentage = value;
     }
@@ -246,6 +256,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the totalDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._totalDeviceCount = value;
     }
@@ -254,6 +265,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the tpmCheckFailedPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTpmCheckFailedPercentage(@javax.annotation.Nullable final Double value) {
         this._tpmCheckFailedPercentage = value;
     }
@@ -262,6 +274,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
      * @param value Value to set for the upgradeEligibleDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpgradeEligibleDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._upgradeEligibleDeviceCount = value;
     }

@@ -42,6 +42,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * Instantiates a new ManagedEBook and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedEBook() {
         super();
         this.setOdataType("#microsoft.graph.managedEBook");
@@ -118,7 +119,7 @@ public class ManagedEBook extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedEBook currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(ManagedEBookAssignment::createFromDiscriminatorValue)); });
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(ManagedEBookCategory::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -204,6 +205,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -227,6 +229,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<ManagedEBookAssignment> value) {
         this._assignments = value;
     }
@@ -235,6 +238,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<ManagedEBookCategory> value) {
         this._categories = value;
     }
@@ -243,6 +247,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -251,6 +256,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -259,6 +265,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the deviceStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStates(@javax.annotation.Nullable final java.util.List<DeviceInstallState> value) {
         this._deviceStates = value;
     }
@@ -267,6 +274,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -275,6 +283,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the informationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInformationUrl(@javax.annotation.Nullable final String value) {
         this._informationUrl = value;
     }
@@ -283,6 +292,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the installSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallSummary(@javax.annotation.Nullable final EBookInstallSummary value) {
         this._installSummary = value;
     }
@@ -291,6 +301,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the largeCover property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLargeCover(@javax.annotation.Nullable final MimeContent value) {
         this._largeCover = value;
     }
@@ -299,6 +310,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -307,6 +319,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the privacyInformationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyInformationUrl(@javax.annotation.Nullable final String value) {
         this._privacyInformationUrl = value;
     }
@@ -315,6 +328,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the publishedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._publishedDateTime = value;
     }
@@ -323,6 +337,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -331,6 +346,7 @@ public class ManagedEBook extends Entity implements Parsable {
      * @param value Value to set for the userStateSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStateSummary(@javax.annotation.Nullable final java.util.List<UserInstallStateSummary> value) {
         this._userStateSummary = value;
     }

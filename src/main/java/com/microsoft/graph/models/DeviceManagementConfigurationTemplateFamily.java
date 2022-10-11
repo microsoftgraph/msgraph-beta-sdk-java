@@ -21,6 +21,8 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
     EndpointSecurityAccountProtection("endpointSecurityAccountProtection"),
     /** Template Family for ApplicationControl that helps mitigate security threats by restricting the applications that users can run and the code that runs in the System Core (kernel) */
     EndpointSecurityApplicationControl("endpointSecurityApplicationControl"),
+    /** Template Family for EnrollmentConfiguration */
+    EnrollmentConfiguration("enrollmentConfiguration"),
     /** Template Family for Baseline */
     Baseline("baseline");
     public final String value;
@@ -41,6 +43,7 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
             case "endpointSecurityAttackSurfaceReduction": return EndpointSecurityAttackSurfaceReduction;
             case "endpointSecurityAccountProtection": return EndpointSecurityAccountProtection;
             case "endpointSecurityApplicationControl": return EndpointSecurityApplicationControl;
+            case "enrollmentConfiguration": return EnrollmentConfiguration;
             case "baseline": return Baseline;
             default: return null;
         }

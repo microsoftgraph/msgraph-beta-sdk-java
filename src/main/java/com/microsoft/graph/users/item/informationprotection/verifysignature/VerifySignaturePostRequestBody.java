@@ -22,6 +22,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      * Instantiates a new verifySignaturePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VerifySignaturePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -58,7 +59,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VerifySignaturePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("digest", (n) -> { currentObject.setDigest(n.getByteArrayValue()); });
             this.put("signature", (n) -> { currentObject.setSignature(n.getByteArrayValue()); });
             this.put("signingKeyId", (n) -> { currentObject.setSigningKeyId(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("digest", this.getDigest());
@@ -97,6 +99,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the digest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDigest(@javax.annotation.Nullable final byte[] value) {
         this._digest = value;
     }
@@ -113,6 +117,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the signature property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignature(@javax.annotation.Nullable final byte[] value) {
         this._signature = value;
     }
@@ -121,6 +126,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the signingKeyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSigningKeyId(@javax.annotation.Nullable final String value) {
         this._signingKeyId = value;
     }

@@ -22,6 +22,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * Instantiates a new ProtectOnlineMeetingAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProtectOnlineMeetingAction() {
         super();
         this.setOdataType("#microsoft.graph.protectOnlineMeetingAction");
@@ -59,7 +60,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProtectOnlineMeetingAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedForwarders", (n) -> { currentObject.setAllowedForwarders(n.getEnumValue(OnlineMeetingForwarders.class)); });
             this.put("allowedPresenters", (n) -> { currentObject.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
             this.put("isCopyToClipboardEnabled", (n) -> { currentObject.setIsCopyToClipboardEnabled(n.getBooleanValue()); });
@@ -96,6 +97,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * @param value Value to set for the allowedForwarders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedForwarders(@javax.annotation.Nullable final OnlineMeetingForwarders value) {
         this._allowedForwarders = value;
     }
@@ -118,6 +121,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * @param value Value to set for the allowedPresenters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedPresenters(@javax.annotation.Nullable final OnlineMeetingPresenters value) {
         this._allowedPresenters = value;
     }
@@ -126,6 +130,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * @param value Value to set for the isCopyToClipboardEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCopyToClipboardEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isCopyToClipboardEnabled = value;
     }
@@ -134,6 +139,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * @param value Value to set for the isLobbyEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsLobbyEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isLobbyEnabled = value;
     }
@@ -142,6 +148,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * @param value Value to set for the lobbyBypassSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLobbyBypassSettings(@javax.annotation.Nullable final LobbyBypassSettings value) {
         this._lobbyBypassSettings = value;
     }

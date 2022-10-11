@@ -18,6 +18,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
      * Instantiates a new AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerDerivedCredentialAuthenticationConfiguration");
@@ -55,7 +56,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateAccessType", (n) -> { currentObject.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
             this.put("derivedCredentialSettings", (n) -> { currentObject.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
             this.put("silentCertificateAccessDetails", (n) -> { currentObject.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
      * @param value Value to set for the certificateAccessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateAccessType(@javax.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
         this._certificateAccessType = value;
     }
@@ -94,6 +97,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
         this._derivedCredentialSettings = value;
     }
@@ -102,6 +106,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
      * @param value Value to set for the silentCertificateAccessDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSilentCertificateAccessDetails(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerSilentCertificateAccess> value) {
         this._silentCertificateAccessDetails = value;
     }

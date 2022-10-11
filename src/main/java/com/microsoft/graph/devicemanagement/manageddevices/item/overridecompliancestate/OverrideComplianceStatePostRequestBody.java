@@ -21,6 +21,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
      * Instantiates a new overrideComplianceStatePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OverrideComplianceStatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,7 +58,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OverrideComplianceStatePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("complianceState", (n) -> { currentObject.setComplianceState(n.getEnumValue(AdministratorConfiguredDeviceComplianceState.class)); });
             this.put("remediationUrl", (n) -> { currentObject.setRemediationUrl(n.getStringValue()); });
         }};
@@ -75,6 +76,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("complianceState", this.getComplianceState());
@@ -86,6 +88,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +97,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the complianceState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceState(@javax.annotation.Nullable final AdministratorConfiguredDeviceComplianceState value) {
         this._complianceState = value;
     }
@@ -102,6 +106,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the remediationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediationUrl(@javax.annotation.Nullable final String value) {
         this._remediationUrl = value;
     }
