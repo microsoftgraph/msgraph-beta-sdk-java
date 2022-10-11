@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.PayloadByFilter;
 import com.microsoft.graph.models.DevicePlatformType;
 import com.microsoft.graph.models.Entity;
 
@@ -62,6 +63,15 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
     @Expose
 	@Nullable
     public java.time.OffsetDateTime lastModifiedDateTime;
+
+    /**
+     * The Payloads.
+     * Associated assignments for a specific filter
+     */
+    @SerializedName(value = "payloads", alternate = {"Payloads"})
+    @Expose
+	@Nullable
+    public java.util.List<PayloadByFilter> payloads;
 
     /**
      * The Platform.

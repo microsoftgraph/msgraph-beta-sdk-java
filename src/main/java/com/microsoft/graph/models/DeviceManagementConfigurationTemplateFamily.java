@@ -44,6 +44,10 @@ public enum DeviceManagementConfigurationTemplateFamily
     */
     ENDPOINT_SECURITY_APPLICATION_CONTROL,
     /**
+    * enrollment Configuration
+    */
+    ENROLLMENT_CONFIGURATION,
+    /**
     * baseline
     */
     BASELINE,

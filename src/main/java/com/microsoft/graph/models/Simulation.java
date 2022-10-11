@@ -105,7 +105,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Automated.
-     * Flag representing if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
+     * Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      */
     @SerializedName(value = "isAutomated", alternate = {"IsAutomated"})
     @Expose

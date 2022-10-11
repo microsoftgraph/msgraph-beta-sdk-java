@@ -20,6 +20,7 @@ import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.PublicClientApplication;
 import com.microsoft.graph.models.RequestSignatureVerification;
 import com.microsoft.graph.models.RequiredResourceAccess;
+import com.microsoft.graph.models.ServicePrincipalLockConfiguration;
 import com.microsoft.graph.models.SpaApplication;
 import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.WebApplication;
@@ -70,7 +71,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Roles.
-     * The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+     * The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      */
     @SerializedName(value = "appRoles", alternate = {"AppRoles"})
     @Expose
@@ -274,6 +275,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String serviceManagementReference;
+
+    /**
+     * The Service Principal Lock Configuration.
+     * 
+     */
+    @SerializedName(value = "servicePrincipalLockConfiguration", alternate = {"ServicePrincipalLockConfiguration"})
+    @Expose
+	@Nullable
+    public ServicePrincipalLockConfiguration servicePrincipalLockConfiguration;
 
     /**
      * The Sign In Audience.

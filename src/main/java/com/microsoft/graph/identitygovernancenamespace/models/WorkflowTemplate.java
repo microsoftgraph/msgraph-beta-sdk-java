@@ -31,7 +31,7 @@ public class WorkflowTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * The category of the workflow template. The possible values are: joiner, leaver.
+     * The category of the workflow template. The possible values are: joiner, leaver. Supports $filter (eq).
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose

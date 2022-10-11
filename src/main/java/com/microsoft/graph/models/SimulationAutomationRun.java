@@ -55,7 +55,7 @@ public class SimulationAutomationRun extends Entity implements IJsonBackedObject
 
     /**
      * The Status.
-     * Status of the run of an attack simulation automation. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
+     * Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

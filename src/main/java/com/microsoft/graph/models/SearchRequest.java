@@ -14,6 +14,7 @@ import com.microsoft.graph.models.EntityType;
 import com.microsoft.graph.models.SearchQuery;
 import com.microsoft.graph.models.SearchAlterationOptions;
 import com.microsoft.graph.models.ResultTemplateOption;
+import com.microsoft.graph.models.SharePointOneDriveOptions;
 import com.microsoft.graph.models.SortProperty;
 
 
@@ -82,7 +83,7 @@ public class SearchRequest implements IJsonBackedObject {
 
     /**
      * The Entity Types.
-     * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+     * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
      */
     @SerializedName(value = "entityTypes", alternate = {"EntityTypes"})
     @Expose
@@ -127,7 +128,7 @@ public class SearchRequest implements IJsonBackedObject {
 
     /**
      * The Region.
-     * 
+     * Required for searches that use application permissions. Represents the geographic location for the search. For details, see Get the region value.
      */
     @SerializedName(value = "region", alternate = {"Region"})
     @Expose
@@ -142,6 +143,15 @@ public class SearchRequest implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ResultTemplateOption resultTemplateOptions;
+
+    /**
+     * The Share Point One Drive Options.
+     * Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
+     */
+    @SerializedName(value = "sharePointOneDriveOptions", alternate = {"SharePointOneDriveOptions"})
+    @Expose
+	@Nullable
+    public SharePointOneDriveOptions sharePointOneDriveOptions;
 
     /**
      * The Size.

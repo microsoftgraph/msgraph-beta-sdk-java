@@ -16,6 +16,10 @@ public enum TeamworkTagType
     */
     STANDARD,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For TeamworkTagType values that were not expected from the service
     */
     UNEXPECTED_VALUE

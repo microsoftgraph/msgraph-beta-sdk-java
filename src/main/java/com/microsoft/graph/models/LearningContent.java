@@ -45,13 +45,13 @@ public class LearningContent extends Entity implements IJsonBackedObject {
     public String contentWebUrl;
 
     /**
-     * The Contributor.
-     * The author, creator, or contributor of the learning content. Optional.
+     * The Contributors.
+     * The authors, creators, or contributors of the learning content. Optional.
      */
-    @SerializedName(value = "contributor", alternate = {"Contributor"})
+    @SerializedName(value = "contributors", alternate = {"Contributors"})
     @Expose
 	@Nullable
-    public String contributor;
+    public java.util.List<String> contributors;
 
     /**
      * The Created Date Time.

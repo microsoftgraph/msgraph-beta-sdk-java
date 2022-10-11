@@ -47,7 +47,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
 
     /**
      * The Description.
-     * The MicrosoftTunnelConfiguration's description
+     * The configuration's description (optional)
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -56,7 +56,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
 
     /**
      * The Disable Udp Connections.
-     * When DisableUdpConnections is set, the clients and VPN server will not use DTLS connections to tansfer data.
+     * When DisableUdpConnections is set, the clients and VPN server will not use DTLS connections to transfer data.
      */
     @SerializedName(value = "disableUdpConnections", alternate = {"DisableUdpConnections"})
     @Expose
@@ -65,7 +65,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
 
     /**
      * The Display Name.
-     * The MicrosoftTunnelConfiguration's display name
+     * The display name for the server configuration. This property is required when a server is created.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -83,7 +83,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
 
     /**
      * The Last Update Date Time.
-     * When the MicrosoftTunnelConfiguration was last updated
+     * When the configuration was last updated
      */
     @SerializedName(value = "lastUpdateDateTime", alternate = {"LastUpdateDateTime"})
     @Expose
@@ -110,7 +110,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
 
     /**
      * The Role Scope Tag Ids.
-     * List of Scope Tags for this Entity instance.
+     * List of Scope Tags for this Entity instance
      */
     @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
@@ -118,8 +118,26 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
     public java.util.List<String> roleScopeTagIds;
 
     /**
-     * The Routes Exclude.
+     * The Route Excludes.
      * Subsets of the routes that will not be routed by the server
+     */
+    @SerializedName(value = "routeExcludes", alternate = {"RouteExcludes"})
+    @Expose
+	@Nullable
+    public java.util.List<String> routeExcludes;
+
+    /**
+     * The Route Includes.
+     * The routes that will be routed by the server
+     */
+    @SerializedName(value = "routeIncludes", alternate = {"RouteIncludes"})
+    @Expose
+	@Nullable
+    public java.util.List<String> routeIncludes;
+
+    /**
+     * The Routes Exclude.
+     * Subsets of the routes that will not be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteExcludes'.
      */
     @SerializedName(value = "routesExclude", alternate = {"RoutesExclude"})
     @Expose
@@ -128,7 +146,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements IJsonBackedO
 
     /**
      * The Routes Include.
-     * The routs that will be routed by the server
+     * The routes that will be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteIncludes'.
      */
     @SerializedName(value = "routesInclude", alternate = {"RoutesInclude"})
     @Expose

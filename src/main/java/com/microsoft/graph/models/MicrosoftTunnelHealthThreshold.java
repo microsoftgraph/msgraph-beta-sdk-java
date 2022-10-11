@@ -27,7 +27,7 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements IJsonBacke
 
     /**
      * The Default Healthy Threshold.
-     * The default threshold for being healthy
+     * The threshold for being healthy based on default health status metrics: CPU usage healthy &amp;lt; 50%, Memory usage healthy &amp;lt; 50%, Disk space healthy &amp;gt; 5GB, Latency healthy &amp;lt; 10ms, health metrics can be customized. Read-only.
      */
     @SerializedName(value = "defaultHealthyThreshold", alternate = {"DefaultHealthyThreshold"})
     @Expose
@@ -36,7 +36,7 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements IJsonBacke
 
     /**
      * The Default Unhealthy Threshold.
-     * The default threshold for being unhealthy
+     * The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy &amp;gt; 75%, Memory usage unhealthy &amp;gt; 75%, Disk space &amp;lt; 3GB, Latency unhealthy &amp;gt; 20ms, health metrics can be customized. Read-only.
      */
     @SerializedName(value = "defaultUnhealthyThreshold", alternate = {"DefaultUnhealthyThreshold"})
     @Expose
@@ -45,7 +45,7 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements IJsonBacke
 
     /**
      * The Healthy Threshold.
-     * The threshold for being healthy
+     * The threshold for being healthy based on default health status metrics: CPU usage healthy &amp;lt; 50%, Memory usage healthy &amp;lt; 50%, Disk space healthy &amp;gt; 5GB, Latency healthy &amp;lt; 10ms, health metrics can be customized.
      */
     @SerializedName(value = "healthyThreshold", alternate = {"HealthyThreshold"})
     @Expose
@@ -54,7 +54,7 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements IJsonBacke
 
     /**
      * The Unhealthy Threshold.
-     * The threshold for being unhealthy
+     * The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy &amp;gt; 75%, Memory usage unhealthy &amp;gt; 75%, Disk space &amp;lt; 3GB, Latency Unhealthy &amp;gt; 20ms, health metrics can be customized.
      */
     @SerializedName(value = "unhealthyThreshold", alternate = {"UnhealthyThreshold"})
     @Expose

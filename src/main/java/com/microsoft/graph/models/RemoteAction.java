@@ -108,6 +108,22 @@ public enum RemoteAction
     */
     ACTIVATE_DEVICE_ESIM,
     /**
+    * deprovision
+    */
+    DEPROVISION,
+    /**
+    * disable
+    */
+    DISABLE,
+    /**
+    * reenable
+    */
+    REENABLE,
+    /**
+    * move Device To Organizational Unit
+    */
+    MOVE_DEVICE_TO_ORGANIZATIONAL_UNIT,
+    /**
     * For RemoteAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

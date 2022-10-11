@@ -37,7 +37,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements IJs
 
     /**
      * The Last Activity Date Time.
-     * Represents the time when most recent changes were observed in profile.
+     * Date and time when most recent changes were observed in the profile.
      */
     @SerializedName(value = "lastActivityDateTime", alternate = {"LastActivityDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements IJs
 
     /**
      * The Last Synchronization Date Time.
-     * Represents the time of the most recent successful  synchronization.
+     * Date and time of the most recent successful synchronization.
      */
     @SerializedName(value = "lastSynchronizationDateTime", alternate = {"LastSynchronizationDateTime"})
     @Expose
@@ -64,7 +64,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements IJs
 
     /**
      * The Status Message.
-     * Status message for the current profile's synchronization stage.
+     * Status message for the synchronization stage of the current profile.
      */
     @SerializedName(value = "statusMessage", alternate = {"StatusMessage"})
     @Expose

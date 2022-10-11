@@ -24,6 +24,10 @@ public enum PlannerContainerType
     */
     ROSTER,
     /**
+    * project
+    */
+    PROJECT,
+    /**
     * For PlannerContainerType values that were not expected from the service
     */
     UNEXPECTED_VALUE

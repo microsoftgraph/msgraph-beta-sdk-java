@@ -75,7 +75,7 @@ public class UserTrainingContentEventInfo implements IJsonBackedObject {
 
     /**
      * The Potential Score Impact.
-     * Potential improvement in security posture of the tenant after completion of the training by the user.
+     * Potential improvement in the tenant security posture after completion of the training by the user.
      */
     @SerializedName(value = "potentialScoreImpact", alternate = {"PotentialScoreImpact"})
     @Expose

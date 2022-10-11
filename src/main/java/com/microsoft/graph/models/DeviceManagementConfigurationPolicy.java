@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementConfigurationPlatforms;
+import com.microsoft.graph.models.DeviceManagementPriorityMetaData;
 import com.microsoft.graph.models.DeviceManagementConfigurationTechnologies;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicyTemplateReference;
 import com.microsoft.graph.models.Entity;
@@ -93,6 +94,15 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
     @Expose
 	@Nullable
     public EnumSet<DeviceManagementConfigurationPlatforms> platforms;
+
+    /**
+     * The Priority Meta Data.
+     * Indicates the priority of each policies that are selected by the admin during enrollment process
+     */
+    @SerializedName(value = "priorityMetaData", alternate = {"PriorityMetaData"})
+    @Expose
+	@Nullable
+    public DeviceManagementPriorityMetaData priorityMetaData;
 
     /**
      * The Role Scope Tag Ids.

@@ -412,6 +412,15 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder<Windo
     }
 
     /**
+     * Trigger comanagement enrollment action on ConfigurationManager client
+     * @return the request builder
+     */
+    @Nonnull
+    public ManagedDeviceEnrollNowActionRequestBuilder enrollNowAction() {
+        return new ManagedDeviceEnrollNowActionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.enrollNowAction"), getClient(), null);
+    }
+
+    /**
      * Locate a device
      * @return the request builder
      */

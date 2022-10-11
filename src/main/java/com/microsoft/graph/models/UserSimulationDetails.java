@@ -79,7 +79,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The Is Compromised.
-     * Flag representing if user was compromised in an attack simulation and training campaign.
+     * Indicates whether a user was compromised in an attack simulation and training campaign.
      */
     @SerializedName(value = "isCompromised", alternate = {"IsCompromised"})
     @Expose
@@ -88,7 +88,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The Reported Phish Date Time.
-     * Date and time when user reported delivered payload as phish in the attack simulation and training campaign.
+     * Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
      */
     @SerializedName(value = "reportedPhishDateTime", alternate = {"ReportedPhishDateTime"})
     @Expose
@@ -106,7 +106,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The Simulation User.
-     * User in an attack simulation and training campaign.
+     * The user in an attack simulation and training campaign.
      */
     @SerializedName(value = "simulationUser", alternate = {"SimulationUser"})
     @Expose

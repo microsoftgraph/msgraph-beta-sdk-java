@@ -39,7 +39,7 @@ public class CallOptions implements IJsonBackedObject {
 
     /**
      * The Hide Bot After Escalation.
-     * 
+     * Indicates whether to hide the app after the call is escalated.
      */
     @SerializedName(value = "hideBotAfterEscalation", alternate = {"HideBotAfterEscalation"})
     @Expose

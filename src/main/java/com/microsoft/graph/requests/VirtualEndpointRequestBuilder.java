@@ -206,6 +206,16 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
     public com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder provisioningPolicies(@Nonnull final String id) {
         return new com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("provisioningPolicies") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for CloudPcReports
+     *
+     * @return the CloudPcReportsRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CloudPcReportsRequestBuilder reports() {
+        return new com.microsoft.graph.requests.CloudPcReportsRequestBuilder(getRequestUrlWithAdditionalSegment("reports"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the CloudPcServicePlan collection
      *

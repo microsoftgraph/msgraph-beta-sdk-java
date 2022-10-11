@@ -39,7 +39,7 @@ public class AttackSimulationInfo implements IJsonBackedObject {
 
     /**
      * The Attack Sim Date Time.
-     * Specifies the date time of the attack simulation.
+     * The date and time of the attack simulation.
      */
     @SerializedName(value = "attackSimDateTime", alternate = {"AttackSimDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class AttackSimulationInfo implements IJsonBackedObject {
 
     /**
      * The Attack Sim Duration Time.
-     * Specifies the duration (in time) for the attack simulation
+     * The duration (in time) for the attack simulation.
      */
     @SerializedName(value = "attackSimDurationTime", alternate = {"AttackSimDurationTime"})
     @Expose
@@ -57,7 +57,7 @@ public class AttackSimulationInfo implements IJsonBackedObject {
 
     /**
      * The Attack Sim Id.
-     * Specifies the activity id for the attack simulation.
+     * The activity ID for the attack simulation.
      */
     @SerializedName(value = "attackSimId", alternate = {"AttackSimId"})
     @Expose
@@ -66,7 +66,7 @@ public class AttackSimulationInfo implements IJsonBackedObject {
 
     /**
      * The Attack Sim User Id.
-     * Specifies the user id of the user who got the attack simulation email
+     * The unique identifier for the user who got the attack simulation email.
      */
     @SerializedName(value = "attackSimUserId", alternate = {"AttackSimUserId"})
     @Expose

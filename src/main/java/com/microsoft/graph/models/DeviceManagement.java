@@ -17,6 +17,7 @@ import com.microsoft.graph.models.DeviceProtectionOverview;
 import com.microsoft.graph.models.ManagedDeviceCleanupSettings;
 import com.microsoft.graph.models.DeviceManagementSubscriptions;
 import com.microsoft.graph.models.DeviceManagementSubscriptionState;
+import com.microsoft.graph.models.UserExperienceAnalyticsAnomalySeverityOverview;
 import com.microsoft.graph.models.UserExperienceAnalyticsSettings;
 import com.microsoft.graph.models.WindowsMalwareOverview;
 import com.microsoft.graph.devicemanagement.models.Monitoring;
@@ -91,6 +92,8 @@ import com.microsoft.graph.requests.DeviceShellScriptCollectionPage;
 import com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage;
 import com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionPage;
 import com.microsoft.graph.requests.RemoteActionAuditCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyDeviceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage;
@@ -316,6 +319,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceManagementSubscriptionState subscriptionState;
+
+    /**
+     * The User Experience Analytics Anomaly Severity Overview.
+     * The user experience analytics anomaly severity overview entity contains the count information for each severity of anomaly.
+     */
+    @SerializedName(value = "userExperienceAnalyticsAnomalySeverityOverview", alternate = {"UserExperienceAnalyticsAnomalySeverityOverview"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsAnomalySeverityOverview userExperienceAnalyticsAnomalySeverityOverview;
 
     /**
      * The User Experience Analytics Settings.
@@ -946,6 +958,24 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TenantAttachRBAC tenantAttachRBAC;
+
+    /**
+     * The User Experience Analytics Anomaly.
+     * The user experience analytics anomaly entity contains anomaly details.
+     */
+    @SerializedName(value = "userExperienceAnalyticsAnomaly", alternate = {"UserExperienceAnalyticsAnomaly"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCollectionPage userExperienceAnalyticsAnomaly;
+
+    /**
+     * The User Experience Analytics Anomaly Device.
+     * The user experience analytics anomaly entity contains device details.
+     */
+    @SerializedName(value = "userExperienceAnalyticsAnomalyDevice", alternate = {"UserExperienceAnalyticsAnomalyDevice"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyDeviceCollectionPage userExperienceAnalyticsAnomalyDevice;
 
     /**
      * The User Experience Analytics App Health Application Performance.
@@ -1981,6 +2011,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("remoteActionAudits")) {
             remoteActionAudits = serializer.deserializeObject(json.get("remoteActionAudits"), com.microsoft.graph.requests.RemoteActionAuditCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAnomaly")) {
+            userExperienceAnalyticsAnomaly = serializer.deserializeObject(json.get("userExperienceAnalyticsAnomaly"), com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAnomalyDevice")) {
+            userExperienceAnalyticsAnomalyDevice = serializer.deserializeObject(json.get("userExperienceAnalyticsAnomalyDevice"), com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyDeviceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAppHealthApplicationPerformance")) {

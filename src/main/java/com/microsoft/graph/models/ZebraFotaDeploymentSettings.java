@@ -86,6 +86,15 @@ public class ZebraFotaDeploymentSettings implements IJsonBackedObject {
     public java.time.OffsetDateTime downloadRuleStartDateTime;
 
     /**
+     * The Firmware Target Artifact Description.
+     * A description provided by Zebra for the the firmware artifact to update the device to (e.g.: LifeGuard Update 120 (released 29-June-2022).
+     */
+    @SerializedName(value = "firmwareTargetArtifactDescription", alternate = {"FirmwareTargetArtifactDescription"})
+    @Expose
+	@Nullable
+    public String firmwareTargetArtifactDescription;
+
+    /**
      * The Firmware Target Board Support Package Version.
      * Deployment's Board Support Package (BSP. E.g.: '01.18.02.00'). Required only for custom update type.
      */
