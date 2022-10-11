@@ -2,7 +2,7 @@ name: Java CI with Gradle
 
 on:
   pull_request:
-    branches: [ dev ]
+    branches: [ dev, feature/6.0 ]
     paths-ignore:
       - '.gradle/wrapper'
       - '.gitignore'
