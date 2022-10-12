@@ -55,7 +55,7 @@ jobs:
             Scripts/**
   
   compare-packages:
-    needs: build 
+    needs: build
     runs-on: ubuntu-latest
     env: 
       CURRENT_PKG_DIFF: ./artifacts/current/build/libs/msgraph-beta-sdk-java.jar 
@@ -81,7 +81,7 @@ jobs:
           branch: dev
           event: push
           name: drop
-          path: artifacts/previous/      
+          path: artifacts/previous/
       - name: Run PKG Diff 
         continue-on-error: true
         run: |
