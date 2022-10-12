@@ -51,7 +51,7 @@ public class AttackSimulationTrainingUserCoverage implements IJsonBackedObject {
 
     /**
      * The User Trainings.
-     * List of assigned trainings' and their statuses for the user.
+     * List of assigned trainings and their statuses for the user.
      */
     @SerializedName(value = "userTrainings", alternate = {"UserTrainings"})
     @Expose

@@ -58,7 +58,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements IJs
 
     /**
      * The Template Family.
-     * Template Family of the referenced Template. This property is read-only. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline.
+     * Template Family of the referenced Template. This property is read-only. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, enrollmentConfiguration, baseline.
      */
     @SerializedName(value = "templateFamily", alternate = {"TemplateFamily"})
     @Expose

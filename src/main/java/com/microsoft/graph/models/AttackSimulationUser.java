@@ -57,7 +57,7 @@ public class AttackSimulationUser implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * This is the id property value of the user resource that represents the user in the Azure AD tenant.
+     * This is the id property value of the user resource that represents the user in the Azure Active Directory tenant.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

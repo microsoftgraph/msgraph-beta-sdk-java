@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.PlannerChecklistItems;
+import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.PlannerPreviewType;
 import com.microsoft.graph.models.PlannerExternalReferences;
 import com.microsoft.graph.models.PlannerDelta;
@@ -45,6 +46,15 @@ public class PlannerTaskDetails extends PlannerDelta implements IJsonBackedObjec
     @Expose
 	@Nullable
     public String description;
+
+    /**
+     * The Notes.
+     * 
+     */
+    @SerializedName(value = "notes", alternate = {"Notes"})
+    @Expose
+	@Nullable
+    public ItemBody notes;
 
     /**
      * The Preview Type.

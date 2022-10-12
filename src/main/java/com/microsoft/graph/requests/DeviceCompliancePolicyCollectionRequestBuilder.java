@@ -25,6 +25,7 @@ import com.microsoft.graph.requests.DeviceCompliancePolicyCollectionRequestBuild
 import com.microsoft.graph.requests.DeviceCompliancePolicyRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicyCollectionRequest;
 import com.microsoft.graph.requests.DeviceCompliancePolicyHasPayloadLinksCollectionRequestBuilder;
+import com.microsoft.graph.requests.DeviceCompliancePolicyGetNoncompliantDevicesToRetireRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicyRefreshDeviceComplianceReportSummarizationRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicySetScheduledRetireStateRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicyValidateComplianceScriptRequestBuilder;
@@ -34,6 +35,7 @@ import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
 import com.microsoft.graph.models.DeviceCompliancePolicyAssignParameterSet;
 import com.microsoft.graph.models.DeviceCompliancePolicyHasPayloadLinksParameterSet;
+import com.microsoft.graph.models.DeviceCompliancePolicyGetNoncompliantDevicesToRetireParameterSet;
 import com.microsoft.graph.models.DeviceCompliancePolicySetScheduledRetireStateParameterSet;
 import com.microsoft.graph.models.DeviceCompliancePolicyValidateComplianceScriptParameterSet;
 import com.microsoft.graph.models.DeviceCompliancePolicyScheduleActionsForRulesParameterSet;
@@ -65,6 +67,16 @@ public class DeviceCompliancePolicyCollectionRequestBuilder extends BaseCollecti
     @Nonnull
     public DeviceCompliancePolicyHasPayloadLinksCollectionRequestBuilder hasPayloadLinks(@Nonnull final DeviceCompliancePolicyHasPayloadLinksParameterSet parameters) {
         return new DeviceCompliancePolicyHasPayloadLinksCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hasPayloadLinks"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceCompliancePolicyGetNoncompliantDevicesToRetireRequestBuilder getNoncompliantDevicesToRetire(@Nonnull final DeviceCompliancePolicyGetNoncompliantDevicesToRetireParameterSet parameters) {
+        return new DeviceCompliancePolicyGetNoncompliantDevicesToRetireRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getNoncompliantDevicesToRetire"), getClient(), null, parameters);
     }
 
     /**

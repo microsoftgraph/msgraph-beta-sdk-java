@@ -39,7 +39,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V10_10.
-     * Mac OS 10.10 or later.
+     * When TRUE, indicates macOS 10.10 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      */
     @SerializedName(value = "v10_10", alternate = {"V10_10"})
     @Expose
@@ -48,7 +48,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V10_11.
-     * Mac OS 10.11 or later.
+     * When TRUE, indicates macOS 10.11 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      */
     @SerializedName(value = "v10_11", alternate = {"V10_11"})
     @Expose
@@ -57,7 +57,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V10_12.
-     * Mac OS 10.12 or later.
+     * When TRUE, indicates macOS 10.12 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      */
     @SerializedName(value = "v10_12", alternate = {"V10_12"})
     @Expose
@@ -66,7 +66,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V10_13.
-     * Mac OS 10.13 or later.
+     * When TRUE, indicates macOS 10.13 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      */
     @SerializedName(value = "v10_13", alternate = {"V10_13"})
     @Expose
@@ -75,7 +75,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V10_14.
-     * Mac OS 10.14 or later.
+     * When TRUE, indicates macOS 10.14 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      */
     @SerializedName(value = "v10_14", alternate = {"V10_14"})
     @Expose
@@ -84,7 +84,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V10_15.
-     * Mac OS 10.15 or later.
+     * When TRUE, indicates macOS 10.15 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      */
     @SerializedName(value = "v10_15", alternate = {"V10_15"})
     @Expose
@@ -93,7 +93,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V10_7.
-     * Mac OS 10.7 or later.
+     * When TRUE, indicates macOS 10.7 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      */
     @SerializedName(value = "v10_7", alternate = {"V10_7"})
     @Expose
@@ -102,7 +102,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V10_8.
-     * Mac OS 10.8 or later.
+     * When TRUE, indicates macOS 10.8 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      */
     @SerializedName(value = "v10_8", alternate = {"V10_8"})
     @Expose
@@ -111,7 +111,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V10_9.
-     * Mac OS 10.9 or later.
+     * When TRUE, indicates macOS 10.9 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      */
     @SerializedName(value = "v10_9", alternate = {"V10_9"})
     @Expose
@@ -120,7 +120,7 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V11_0.
-     * Mac OS 11.0 or later.
+     * When TRUE, indicates macOS 11.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      */
     @SerializedName(value = "v11_0", alternate = {"V11_0"})
     @Expose
@@ -129,12 +129,21 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V12_0.
-     * Mac OS 12.0 or later.
+     * When TRUE, indicates macOS 12.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      */
     @SerializedName(value = "v12_0", alternate = {"V12_0"})
     @Expose
 	@Nullable
     public Boolean v12_0;
+
+    /**
+     * The V13_0.
+     * When TRUE, indicates macOS 13.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     */
+    @SerializedName(value = "v13_0", alternate = {"V13_0"})
+    @Expose
+	@Nullable
+    public Boolean v13_0;
 
 
     /**

@@ -36,6 +36,15 @@ public class RemoteAssistanceSettings extends Entity implements IJsonBackedObjec
     public Boolean allowSessionsToUnenrolledDevices;
 
     /**
+     * The Block Chat.
+     * Indicates if sessions to block chat function. This setting is configurable by the admin. Default value is false.
+     */
+    @SerializedName(value = "blockChat", alternate = {"BlockChat"})
+    @Expose
+	@Nullable
+    public Boolean blockChat;
+
+    /**
      * The Remote Assistance State.
      * The current state of remote assistance for the account. Possible values are: disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a disabled state. Returned by default. Possible values are: disabled, enabled.
      */

@@ -40,7 +40,7 @@ public class ConditionalAccessExternalTenants implements IJsonBackedObject {
 
     /**
      * The Membership Kind.
-     * 
+     * Represents the membership kind. The possible values are: all, enumerated, unknownFutureValue. enumerated references an object of conditionalAccessEnumeratedExternalTenants derived type.
      */
     @SerializedName(value = "membershipKind", alternate = {"MembershipKind"})
     @Expose

@@ -67,7 +67,7 @@ public class UserTrainingStatusInfo implements IJsonBackedObject {
 
     /**
      * The Training Status.
-     * Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      */
     @SerializedName(value = "trainingStatus", alternate = {"TrainingStatus"})
     @Expose

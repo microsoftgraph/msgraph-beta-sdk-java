@@ -37,7 +37,7 @@ public class MicrosoftTunnelServer extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The MicrosoftTunnelServer's display name
+     * The display name for the server. This property is required when a server is created and cannot be cleared during updates.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class MicrosoftTunnelServer extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Checkin Date Time.
-     * When the MicrosoftTunnelServer last checked in
+     * Indicates when the server last checked in
      */
     @SerializedName(value = "lastCheckinDateTime", alternate = {"LastCheckinDateTime"})
     @Expose
@@ -64,7 +64,7 @@ public class MicrosoftTunnelServer extends Entity implements IJsonBackedObject {
 
     /**
      * The Tunnel Server Health Status.
-     * The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
+     * Indicates the server's health Status as of the last evaluation time. Health is evaluated every 60 seconds, and the possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed, unknownFutureValue.
      */
     @SerializedName(value = "tunnelServerHealthStatus", alternate = {"TunnelServerHealthStatus"})
     @Expose

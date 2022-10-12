@@ -67,7 +67,7 @@ public class AttackSimulationSimulationUserCoverage implements IJsonBackedObject
 
     /**
      * The Latest Simulation Date Time.
-     * Date and time of latest attack simulation and training campaign that the user was included in.
+     * Date and time of the latest attack simulation and training campaign that the user was included in.
      */
     @SerializedName(value = "latestSimulationDateTime", alternate = {"LatestSimulationDateTime"})
     @Expose

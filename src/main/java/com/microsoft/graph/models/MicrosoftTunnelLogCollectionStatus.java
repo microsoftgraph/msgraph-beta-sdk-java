@@ -24,6 +24,10 @@ public enum MicrosoftTunnelLogCollectionStatus
     */
     FAILED,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For MicrosoftTunnelLogCollectionStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE
