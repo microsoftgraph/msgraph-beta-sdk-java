@@ -3,7 +3,7 @@ package com.microsoft.graph.models.externalconnectors;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum ExternalActivityType implements ValuedEnum {
     Viewed("viewed"),
     Modified("modified"),

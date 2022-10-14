@@ -34,6 +34,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Instantiates a new AndroidDeviceOwnerVpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerVpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerVpnConfiguration");
@@ -103,7 +104,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("alwaysOn", (n) -> { currentObject.setAlwaysOn(n.getBooleanValue()); });
             this.put("alwaysOnLockdown", (n) -> { currentObject.setAlwaysOnLockdown(n.getBooleanValue()); });
             this.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(AndroidVpnConnectionType.class)); });
@@ -162,6 +163,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +184,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the alwaysOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlwaysOn(@javax.annotation.Nullable final Boolean value) {
         this._alwaysOn = value;
     }
@@ -190,6 +193,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the alwaysOnLockdown property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlwaysOnLockdown(@javax.annotation.Nullable final Boolean value) {
         this._alwaysOnLockdown = value;
     }
@@ -198,6 +202,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the connectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionType(@javax.annotation.Nullable final AndroidVpnConnectionType value) {
         this._connectionType = value;
     }
@@ -206,6 +211,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the customData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomData(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
         this._customData = value;
     }
@@ -214,6 +220,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the customKeyValueData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomKeyValueData(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._customKeyValueData = value;
     }
@@ -222,6 +229,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
         this._derivedCredentialSettings = value;
     }
@@ -230,6 +238,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final AndroidDeviceOwnerCertificateProfileBase value) {
         this._identityCertificate = value;
     }
@@ -238,6 +247,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the microsoftTunnelSiteId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftTunnelSiteId(@javax.annotation.Nullable final String value) {
         this._microsoftTunnelSiteId = value;
     }
@@ -246,6 +256,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the proxyServer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyServer(@javax.annotation.Nullable final VpnProxyServer value) {
         this._proxyServer = value;
     }
@@ -254,6 +265,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the targetedMobileApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedMobileApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._targetedMobileApps = value;
     }
@@ -262,6 +274,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param value Value to set for the targetedPackageIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedPackageIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._targetedPackageIds = value;
     }

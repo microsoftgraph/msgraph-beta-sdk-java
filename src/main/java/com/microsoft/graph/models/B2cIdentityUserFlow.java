@@ -26,6 +26,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * Instantiates a new B2cIdentityUserFlow and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public B2cIdentityUserFlow() {
         super();
         this.setOdataType("#microsoft.graph.b2cIdentityUserFlow");
@@ -63,7 +64,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final B2cIdentityUserFlow currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("apiConnectorConfiguration", (n) -> { currentObject.setApiConnectorConfiguration(n.getObjectValue(UserFlowApiConnectorConfiguration::createFromDiscriminatorValue)); });
             this.put("defaultLanguageTag", (n) -> { currentObject.setDefaultLanguageTag(n.getStringValue()); });
             this.put("identityProviders", (n) -> { currentObject.setIdentityProviders(n.getCollectionOfObjectValues(IdentityProvider::createFromDiscriminatorValue)); });
@@ -118,6 +119,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +136,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * @param value Value to set for the apiConnectorConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApiConnectorConfiguration(@javax.annotation.Nullable final UserFlowApiConnectorConfiguration value) {
         this._apiConnectorConfiguration = value;
     }
@@ -142,6 +145,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * @param value Value to set for the defaultLanguageTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLanguageTag(@javax.annotation.Nullable final String value) {
         this._defaultLanguageTag = value;
     }
@@ -150,6 +154,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * @param value Value to set for the identityProviders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityProviders(@javax.annotation.Nullable final java.util.List<IdentityProvider> value) {
         this._identityProviders = value;
     }
@@ -158,6 +163,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * @param value Value to set for the isLanguageCustomizationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsLanguageCustomizationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isLanguageCustomizationEnabled = value;
     }
@@ -166,6 +172,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * @param value Value to set for the languages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguages(@javax.annotation.Nullable final java.util.List<UserFlowLanguageConfiguration> value) {
         this._languages = value;
     }
@@ -174,6 +181,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * @param value Value to set for the userAttributeAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAttributeAssignments(@javax.annotation.Nullable final java.util.List<IdentityUserFlowAttributeAssignment> value) {
         this._userAttributeAssignments = value;
     }
@@ -182,6 +190,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * @param value Value to set for the userFlowIdentityProviders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserFlowIdentityProviders(@javax.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
         this._userFlowIdentityProviders = value;
     }

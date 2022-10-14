@@ -37,6 +37,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Instantiates a new deviceManagementConfigurationPolicyTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationPolicyTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationPolicyTemplate");
@@ -98,7 +99,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationPolicyTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowUnmanagedSettings", (n) -> { currentObject.setAllowUnmanagedSettings(n.getBooleanValue()); });
             this.put("baseId", (n) -> { currentObject.setBaseId(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -174,6 +175,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -184,17 +186,16 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         writer.writeStringValue("displayVersion", this.getDisplayVersion());
         writer.writeEnumValue("lifecycleState", this.getLifecycleState());
         writer.writeEnumValue("platforms", this.getPlatforms());
-        writer.writeIntegerValue("settingTemplateCount", this.getSettingTemplateCount());
         writer.writeCollectionOfObjectValues("settingTemplates", this.getSettingTemplates());
         writer.writeEnumValue("technologies", this.getTechnologies());
         writer.writeEnumValue("templateFamily", this.getTemplateFamily());
-        writer.writeIntegerValue("version", this.getVersion());
     }
     /**
      * Sets the allowUnmanagedSettings property value. Allow unmanaged setting templates
      * @param value Value to set for the allowUnmanagedSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowUnmanagedSettings(@javax.annotation.Nullable final Boolean value) {
         this._allowUnmanagedSettings = value;
     }
@@ -203,6 +204,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param value Value to set for the baseId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBaseId(@javax.annotation.Nullable final String value) {
         this._baseId = value;
     }
@@ -211,6 +213,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -219,6 +222,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -227,6 +231,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param value Value to set for the displayVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayVersion(@javax.annotation.Nullable final String value) {
         this._displayVersion = value;
     }
@@ -235,6 +240,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param value Value to set for the lifecycleState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLifecycleState(@javax.annotation.Nullable final DeviceManagementTemplateLifecycleState value) {
         this._lifecycleState = value;
     }
@@ -243,6 +249,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param value Value to set for the platforms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatforms(@javax.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
         this._platforms = value;
     }
@@ -251,6 +258,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param value Value to set for the settingTemplateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingTemplateCount(@javax.annotation.Nullable final Integer value) {
         this._settingTemplateCount = value;
     }
@@ -259,6 +267,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param value Value to set for the settingTemplates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingTemplates(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingTemplate> value) {
         this._settingTemplates = value;
     }
@@ -267,6 +276,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param value Value to set for the technologies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTechnologies(@javax.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
         this._technologies = value;
     }
@@ -275,6 +285,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param value Value to set for the templateFamily property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateFamily(@javax.annotation.Nullable final DeviceManagementConfigurationTemplateFamily value) {
         this._templateFamily = value;
     }
@@ -283,6 +294,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }

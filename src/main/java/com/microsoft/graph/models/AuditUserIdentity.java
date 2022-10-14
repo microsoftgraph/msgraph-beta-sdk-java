@@ -16,6 +16,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * Instantiates a new AuditUserIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuditUserIdentity() {
         super();
         this.setOdataType("#microsoft.graph.auditUserIdentity");
@@ -37,7 +38,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditUserIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("homeTenantId", (n) -> { currentObject.setHomeTenantId(n.getStringValue()); });
             this.put("homeTenantName", (n) -> { currentObject.setHomeTenantName(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * @param value Value to set for the homeTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeTenantId(@javax.annotation.Nullable final String value) {
         this._homeTenantId = value;
     }
@@ -82,6 +85,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * @param value Value to set for the homeTenantName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeTenantName(@javax.annotation.Nullable final String value) {
         this._homeTenantName = value;
     }

@@ -13,7 +13,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -40,9 +39,9 @@ public class UpdatableAssetsRequestBuilder {
         return new EnrollAssetsByIdRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The unenrollAssets property */
     @javax.annotation.Nonnull
     public UnenrollAssetsRequestBuilder unenrollAssets() {
@@ -54,18 +53,19 @@ public class UpdatableAssetsRequestBuilder {
         return new UnenrollAssetsByIdRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new UpdatableAssetsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdatableAssetsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/admin/windows/updates/updatableAssets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -75,15 +75,16 @@ public class UpdatableAssetsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdatableAssetsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/admin/windows/updates/updatableAssets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Assets registered with the deployment service that can receive updates. Read-only.
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -91,7 +92,7 @@ public class UpdatableAssetsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Assets registered with the deployment service that can receive updates. Read-only.
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -113,7 +114,7 @@ public class UpdatableAssetsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to updatableAssets for admin
+     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
      * @param body 
      * @return a RequestInformation
      */
@@ -122,7 +123,7 @@ public class UpdatableAssetsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to updatableAssets for admin
+     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -146,112 +147,87 @@ public class UpdatableAssetsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Assets registered with the deployment service that can receive updates. Read-only.
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      * @return a CompletableFuture of UpdatableAssetCollectionResponse
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Assets registered with the deployment service that can receive updates. Read-only.
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UpdatableAssetCollectionResponse
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<UpdatableAssetsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Assets registered with the deployment service that can receive updates. Read-only.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of UpdatableAssetCollectionResponse
-     */
-    public java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<UpdatableAssetsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
-     * Create new navigation property to updatableAssets for admin
+     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
      * @param body 
      * @return a CompletableFuture of updatableAsset
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@javax.annotation.Nonnull final UpdatableAsset body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAsset::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, UpdatableAsset::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<UpdatableAsset>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Create new navigation property to updatableAssets for admin
+     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of updatableAsset
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@javax.annotation.Nonnull final UpdatableAsset body, @javax.annotation.Nullable final java.util.function.Consumer<UpdatableAssetsRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAsset::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to updatableAssets for admin
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of updatableAsset
-     */
-    public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@javax.annotation.Nonnull final UpdatableAsset body, @javax.annotation.Nullable final java.util.function.Consumer<UpdatableAssetsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAsset::createFromDiscriminatorValue, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, UpdatableAsset::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<UpdatableAsset>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
-    /** Assets registered with the deployment service that can receive updates. Read-only. */
+    /** Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types. */
     public class UpdatableAssetsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -293,7 +269,7 @@ public class UpdatableAssetsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public UpdatableAssetsRequestBuilderGetQueryParameters queryParameters = new UpdatableAssetsRequestBuilderGetQueryParameters();
@@ -301,6 +277,7 @@ public class UpdatableAssetsRequestBuilder {
          * Instantiates a new updatableAssetsRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public UpdatableAssetsRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -311,11 +288,12 @@ public class UpdatableAssetsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new updatableAssetsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public UpdatableAssetsRequestBuilderPostRequestConfiguration() {
         }
     }

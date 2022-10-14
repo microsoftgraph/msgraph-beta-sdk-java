@@ -9,7 +9,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -26,22 +25,23 @@ public class WebAccountsRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new WebAccountsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WebAccountsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/profile/webAccounts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -51,15 +51,16 @@ public class WebAccountsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WebAccountsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/me/profile/webAccounts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents web accounts the user has indicated they use or has added to their user profile.
+     * Retrieve a list of webAccounts objects from the user's profile.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +68,7 @@ public class WebAccountsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents web accounts the user has indicated they use or has added to their user profile.
+     * Retrieve a list of webAccounts objects from the user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +90,7 @@ public class WebAccountsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to webAccounts for me
+     * Create a new webAccount object in a user's profile.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +99,7 @@ public class WebAccountsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to webAccounts for me
+     * Create a new webAccount object in a user's profile.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -122,112 +123,87 @@ public class WebAccountsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents web accounts the user has indicated they use or has added to their user profile.
+     * Retrieve a list of webAccounts objects from the user's profile.
      * @return a CompletableFuture of WebAccountCollectionResponse
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WebAccountCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, WebAccountCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, WebAccountCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<WebAccountCollectionResponse>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Represents web accounts the user has indicated they use or has added to their user profile.
+     * Retrieve a list of webAccounts objects from the user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WebAccountCollectionResponse
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WebAccountCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<WebAccountsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, WebAccountCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, WebAccountCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Represents web accounts the user has indicated they use or has added to their user profile.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of WebAccountCollectionResponse
-     */
-    public java.util.concurrent.CompletableFuture<WebAccountCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<WebAccountsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<WebAccountCollectionResponse>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, WebAccountCollectionResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
-     * Create new navigation property to webAccounts for me
+     * Create a new webAccount object in a user's profile.
      * @param body 
      * @return a CompletableFuture of webAccount
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WebAccount> post(@javax.annotation.Nonnull final WebAccount body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, WebAccount::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, WebAccount::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<WebAccount>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Create new navigation property to webAccounts for me
+     * Create a new webAccount object in a user's profile.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of webAccount
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WebAccount> post(@javax.annotation.Nonnull final WebAccount body, @javax.annotation.Nullable final java.util.function.Consumer<WebAccountsRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, WebAccount::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to webAccounts for me
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of webAccount
-     */
-    public java.util.concurrent.CompletableFuture<WebAccount> post(@javax.annotation.Nonnull final WebAccount body, @javax.annotation.Nullable final java.util.function.Consumer<WebAccountsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, WebAccount::createFromDiscriminatorValue, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, WebAccount::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<WebAccount>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
-    /** Represents web accounts the user has indicated they use or has added to their user profile. */
+    /** Retrieve a list of webAccounts objects from the user's profile. */
     public class WebAccountsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +245,7 @@ public class WebAccountsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public WebAccountsRequestBuilderGetQueryParameters queryParameters = new WebAccountsRequestBuilderGetQueryParameters();
@@ -277,6 +253,7 @@ public class WebAccountsRequestBuilder {
          * Instantiates a new webAccountsRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public WebAccountsRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -287,11 +264,12 @@ public class WebAccountsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new webAccountsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public WebAccountsRequestBuilderPostRequestConfiguration() {
         }
     }

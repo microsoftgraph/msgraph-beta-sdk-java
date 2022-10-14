@@ -16,6 +16,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      * Instantiates a new ExactMatchLookupJob and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExactMatchLookupJob() {
         super();
         this.setOdataType("#microsoft.graph.exactMatchLookupJob");
@@ -37,7 +38,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExactMatchLookupJob currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("matchingRows", (n) -> { currentObject.setMatchingRows(n.getCollectionOfObjectValues(LookupResultRow::createFromDiscriminatorValue)); });
             this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      * @param value Value to set for the matchingRows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatchingRows(@javax.annotation.Nullable final java.util.List<LookupResultRow> value) {
         this._matchingRows = value;
     }
@@ -82,6 +85,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
         this._state = value;
     }

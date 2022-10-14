@@ -16,6 +16,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      * Instantiates a new EducationSynchronizationOAuth2ClientCredentialsConnectionSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationSynchronizationOAuth2ClientCredentialsConnectionSettings() {
         super();
         this.setOdataType("#microsoft.graph.educationSynchronizationOAuth2ClientCredentialsConnectionSettings");
@@ -37,7 +38,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationOAuth2ClientCredentialsConnectionSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
             this.put("tokenUrl", (n) -> { currentObject.setTokenUrl(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final String value) {
         this._scope = value;
     }
@@ -82,6 +85,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      * @param value Value to set for the tokenUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenUrl(@javax.annotation.Nullable final String value) {
         this._tokenUrl = value;
     }

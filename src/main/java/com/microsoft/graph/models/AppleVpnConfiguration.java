@@ -59,6 +59,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * Instantiates a new AppleVpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppleVpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.appleVpnConfiguration");
@@ -185,7 +186,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("associatedDomains", (n) -> { currentObject.setAssociatedDomains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });
             this.put("connectionName", (n) -> { currentObject.setConnectionName(n.getStringValue()); });
@@ -295,6 +296,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -326,6 +328,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the associatedDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssociatedDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._associatedDomains = value;
     }
@@ -334,6 +337,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final VpnAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -342,6 +346,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the connectionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionName(@javax.annotation.Nullable final String value) {
         this._connectionName = value;
     }
@@ -350,6 +355,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the connectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionType(@javax.annotation.Nullable final AppleVpnConnectionType value) {
         this._connectionType = value;
     }
@@ -358,6 +364,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the customData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomData(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
         this._customData = value;
     }
@@ -366,6 +373,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the customKeyValueData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomKeyValueData(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._customKeyValueData = value;
     }
@@ -374,6 +382,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the disableOnDemandUserOverride property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableOnDemandUserOverride(@javax.annotation.Nullable final Boolean value) {
         this._disableOnDemandUserOverride = value;
     }
@@ -382,6 +391,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the disconnectOnIdle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisconnectOnIdle(@javax.annotation.Nullable final Boolean value) {
         this._disconnectOnIdle = value;
     }
@@ -390,6 +400,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the disconnectOnIdleTimerInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisconnectOnIdleTimerInSeconds(@javax.annotation.Nullable final Integer value) {
         this._disconnectOnIdleTimerInSeconds = value;
     }
@@ -398,6 +409,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the enablePerApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnablePerApp(@javax.annotation.Nullable final Boolean value) {
         this._enablePerApp = value;
     }
@@ -406,6 +418,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the enableSplitTunneling property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableSplitTunneling(@javax.annotation.Nullable final Boolean value) {
         this._enableSplitTunneling = value;
     }
@@ -414,6 +427,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the excludedDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludedDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._excludedDomains = value;
     }
@@ -422,6 +436,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the identifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentifier(@javax.annotation.Nullable final String value) {
         this._identifier = value;
     }
@@ -430,6 +445,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the loginGroupOrDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoginGroupOrDomain(@javax.annotation.Nullable final String value) {
         this._loginGroupOrDomain = value;
     }
@@ -438,6 +454,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the onDemandRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnDemandRules(@javax.annotation.Nullable final java.util.List<VpnOnDemandRule> value) {
         this._onDemandRules = value;
     }
@@ -446,6 +463,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the optInToDeviceIdSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOptInToDeviceIdSharing(@javax.annotation.Nullable final Boolean value) {
         this._optInToDeviceIdSharing = value;
     }
@@ -454,6 +472,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the providerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProviderType(@javax.annotation.Nullable final VpnProviderType value) {
         this._providerType = value;
     }
@@ -462,6 +481,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the proxyServer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyServer(@javax.annotation.Nullable final VpnProxyServer value) {
         this._proxyServer = value;
     }
@@ -470,6 +490,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the realm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRealm(@javax.annotation.Nullable final String value) {
         this._realm = value;
     }
@@ -478,6 +499,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final String value) {
         this._role = value;
     }
@@ -486,6 +508,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the safariDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafariDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._safariDomains = value;
     }
@@ -494,6 +517,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the server property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServer(@javax.annotation.Nullable final VpnServer value) {
         this._server = value;
     }

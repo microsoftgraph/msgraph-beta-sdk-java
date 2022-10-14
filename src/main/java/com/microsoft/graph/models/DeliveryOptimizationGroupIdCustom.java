@@ -14,6 +14,7 @@ public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroup
      * Instantiates a new DeliveryOptimizationGroupIdCustom and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeliveryOptimizationGroupIdCustom() {
         super();
         this.setOdataType("#microsoft.graph.deliveryOptimizationGroupIdCustom");
@@ -35,7 +36,7 @@ public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroup
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeliveryOptimizationGroupIdCustom currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("groupIdCustom", (n) -> { currentObject.setGroupIdCustom(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroup
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroup
      * @param value Value to set for the groupIdCustom property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupIdCustom(@javax.annotation.Nullable final String value) {
         this._groupIdCustom = value;
     }

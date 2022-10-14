@@ -5,6 +5,7 @@ import com.microsoft.graph.dataclassification.classifyfile.ClassifyFileRequestBu
 import com.microsoft.graph.dataclassification.classifyfilejobs.ClassifyFileJobsRequestBuilder;
 import com.microsoft.graph.dataclassification.classifytext.ClassifyTextRequestBuilder;
 import com.microsoft.graph.dataclassification.classifytextjobs.ClassifyTextJobsRequestBuilder;
+import com.microsoft.graph.dataclassification.classifytextjobs.item.JobResponseBaseItemRequestBuilder;
 import com.microsoft.graph.dataclassification.evaluatedlppoliciesjobs.EvaluateDlpPoliciesJobsRequestBuilder;
 import com.microsoft.graph.dataclassification.evaluatelabeljobs.EvaluateLabelJobsRequestBuilder;
 import com.microsoft.graph.dataclassification.exactmatchdatastores.ExactMatchDataStoresRequestBuilder;
@@ -23,7 +24,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -85,9 +85,9 @@ public class DataClassificationRequestBuilder {
         return new JobsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The sensitiveTypes property */
     @javax.annotation.Nonnull
     public SensitiveTypesRequestBuilder sensitiveTypes() {
@@ -99,7 +99,7 @@ public class DataClassificationRequestBuilder {
         return new SensitivityLabelsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Gets an item from the com.Microsoft.Graph.dataClassification.classifyFileJobs.item collection
      * @param id Unique identifier of the item
@@ -108,7 +108,7 @@ public class DataClassificationRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.dataclassification.classifyfilejobs.item.JobResponseBaseItemRequestBuilder classifyFileJobs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("jobResponseBase%2Did", id);
         return new com.microsoft.graph.dataclassification.classifyfilejobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -120,7 +120,7 @@ public class DataClassificationRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.dataclassification.classifytextjobs.item.JobResponseBaseItemRequestBuilder classifyTextJobs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("jobResponseBase%2Did", id);
         return new com.microsoft.graph.dataclassification.classifytextjobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -130,11 +130,12 @@ public class DataClassificationRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DataClassificationRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/dataClassification{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -144,9 +145,10 @@ public class DataClassificationRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DataClassificationRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/dataClassification{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -204,6 +206,7 @@ public class DataClassificationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DataClassificationRequestBuilderPatchRequestConfiguration requestConfig = new DataClassificationRequestBuilderPatchRequestConfiguration();
@@ -221,7 +224,7 @@ public class DataClassificationRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.dataclassification.evaluatedlppoliciesjobs.item.JobResponseBaseItemRequestBuilder evaluateDlpPoliciesJobs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("jobResponseBase%2Did", id);
         return new com.microsoft.graph.dataclassification.evaluatedlppoliciesjobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -233,7 +236,7 @@ public class DataClassificationRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.dataclassification.evaluatelabeljobs.item.JobResponseBaseItemRequestBuilder evaluateLabelJobs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("jobResponseBase%2Did", id);
         return new com.microsoft.graph.dataclassification.evaluatelabeljobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -245,7 +248,7 @@ public class DataClassificationRequestBuilder {
     @javax.annotation.Nonnull
     public ExactMatchDataStoreItemRequestBuilder exactMatchDataStores(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("exactMatchDataStore%2Did", id);
         return new ExactMatchDataStoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -257,7 +260,7 @@ public class DataClassificationRequestBuilder {
     @javax.annotation.Nonnull
     public ExactMatchUploadAgentItemRequestBuilder exactMatchUploadAgents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("exactMatchUploadAgent%2Did", id);
         return new ExactMatchUploadAgentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -265,16 +268,19 @@ public class DataClassificationRequestBuilder {
      * Get dataClassification
      * @return a CompletableFuture of dataClassificationService
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataClassificationService> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DataClassificationService::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DataClassificationService::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DataClassificationService>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -282,34 +288,19 @@ public class DataClassificationRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of dataClassificationService
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataClassificationService> get(@javax.annotation.Nullable final java.util.function.Consumer<DataClassificationRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DataClassificationService::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DataClassificationService::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Get dataClassification
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of dataClassificationService
-     */
-    public java.util.concurrent.CompletableFuture<DataClassificationService> get(@javax.annotation.Nullable final java.util.function.Consumer<DataClassificationRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<DataClassificationService>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DataClassificationService::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -320,63 +311,50 @@ public class DataClassificationRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.dataclassification.jobs.item.JobResponseBaseItemRequestBuilder jobs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("jobResponseBase%2Did", id);
         return new com.microsoft.graph.dataclassification.jobs.item.JobResponseBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update dataClassification
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of dataClassificationService
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DataClassificationService body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DataClassificationService> patch(@javax.annotation.Nonnull final DataClassificationService body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DataClassificationService::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DataClassificationService>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update dataClassification
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of dataClassificationService
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DataClassificationService body, @javax.annotation.Nullable final java.util.function.Consumer<DataClassificationRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update dataClassification
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DataClassificationService body, @javax.annotation.Nullable final java.util.function.Consumer<DataClassificationRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DataClassificationService> patch(@javax.annotation.Nonnull final DataClassificationService body, @javax.annotation.Nullable final java.util.function.Consumer<DataClassificationRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DataClassificationService::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DataClassificationService>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -387,7 +365,7 @@ public class DataClassificationRequestBuilder {
     @javax.annotation.Nonnull
     public SensitiveTypeItemRequestBuilder sensitiveTypes(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("sensitiveType%2Did", id);
         return new SensitiveTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -399,7 +377,7 @@ public class DataClassificationRequestBuilder {
     @javax.annotation.Nonnull
     public SensitivityLabelItemRequestBuilder sensitivityLabels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("sensitivityLabel%2Did", id);
         return new SensitivityLabelItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -421,7 +399,7 @@ public class DataClassificationRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DataClassificationRequestBuilderGetQueryParameters queryParameters = new DataClassificationRequestBuilderGetQueryParameters();
@@ -429,6 +407,7 @@ public class DataClassificationRequestBuilder {
          * Instantiates a new dataClassificationRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public DataClassificationRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -439,11 +418,12 @@ public class DataClassificationRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new dataClassificationRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public DataClassificationRequestBuilderPatchRequestConfiguration() {
         }
     }

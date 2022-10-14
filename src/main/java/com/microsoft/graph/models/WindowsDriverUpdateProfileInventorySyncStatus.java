@@ -23,6 +23,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
      * Instantiates a new windowsDriverUpdateProfileInventorySyncStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDriverUpdateProfileInventorySyncStatus() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.windowsDriverUpdateProfileInventorySyncStatus");
@@ -60,7 +61,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDriverUpdateProfileInventorySyncStatus currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("driverInventorySyncState", (n) -> { currentObject.setDriverInventorySyncState(n.getEnumValue(WindowsDriverUpdateProfileInventorySyncState.class)); });
             this.put("lastSuccessfulSyncDateTime", (n) -> { currentObject.setLastSuccessfulSyncDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -87,6 +88,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("driverInventorySyncState", this.getDriverInventorySyncState());
@@ -99,6 +101,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -107,6 +110,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
      * @param value Value to set for the driverInventorySyncState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriverInventorySyncState(@javax.annotation.Nullable final WindowsDriverUpdateProfileInventorySyncState value) {
         this._driverInventorySyncState = value;
     }
@@ -115,6 +119,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
      * @param value Value to set for the lastSuccessfulSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSuccessfulSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSuccessfulSyncDateTime = value;
     }
@@ -123,6 +128,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

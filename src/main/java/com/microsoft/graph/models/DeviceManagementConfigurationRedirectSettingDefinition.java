@@ -18,6 +18,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      * Instantiates a new DeviceManagementConfigurationRedirectSettingDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationRedirectSettingDefinition() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationRedirectSettingDefinition");
@@ -47,7 +48,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationRedirectSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deepLink", (n) -> { currentObject.setDeepLink(n.getStringValue()); });
             this.put("redirectMessage", (n) -> { currentObject.setRedirectMessage(n.getStringValue()); });
             this.put("redirectReason", (n) -> { currentObject.setRedirectReason(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      * @param value Value to set for the deepLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeepLink(@javax.annotation.Nullable final String value) {
         this._deepLink = value;
     }
@@ -94,6 +97,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      * @param value Value to set for the redirectMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRedirectMessage(@javax.annotation.Nullable final String value) {
         this._redirectMessage = value;
     }
@@ -102,6 +106,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      * @param value Value to set for the redirectReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRedirectReason(@javax.annotation.Nullable final String value) {
         this._redirectReason = value;
     }

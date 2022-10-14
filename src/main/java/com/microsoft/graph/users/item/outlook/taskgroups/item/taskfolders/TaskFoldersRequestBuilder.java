@@ -9,7 +9,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -26,22 +25,23 @@ public class TaskFoldersRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new TaskFoldersRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TaskFoldersRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/users/{user%2Did}/outlook/taskGroups/{outlookTaskGroup%2Did}/taskFolders{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -51,15 +51,16 @@ public class TaskFoldersRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TaskFoldersRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/users/{user%2Did}/outlook/taskGroups/{outlookTaskGroup%2Did}/taskFolders{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The collection of task folders in the task group. Read-only. Nullable.
+     * Get Outlook task folders in a specific outlookTaskGroup.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +68,7 @@ public class TaskFoldersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of task folders in the task group. Read-only. Nullable.
+     * Get Outlook task folders in a specific outlookTaskGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,54 +123,42 @@ public class TaskFoldersRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of task folders in the task group. Read-only. Nullable.
+     * Get Outlook task folders in a specific outlookTaskGroup.
      * @return a CompletableFuture of OutlookTaskFolderCollectionResponse
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookTaskFolderCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolderCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolderCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<OutlookTaskFolderCollectionResponse>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * The collection of task folders in the task group. Read-only. Nullable.
+     * Get Outlook task folders in a specific outlookTaskGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OutlookTaskFolderCollectionResponse
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookTaskFolderCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TaskFoldersRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolderCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolderCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * The collection of task folders in the task group. Read-only. Nullable.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of OutlookTaskFolderCollectionResponse
-     */
-    public java.util.concurrent.CompletableFuture<OutlookTaskFolderCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TaskFoldersRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<OutlookTaskFolderCollectionResponse>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolderCollectionResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -177,16 +166,19 @@ public class TaskFoldersRequestBuilder {
      * @param body 
      * @return a CompletableFuture of outlookTaskFolder
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookTaskFolder> post(@javax.annotation.Nonnull final OutlookTaskFolder body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolder::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolder::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<OutlookTaskFolder>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -195,39 +187,23 @@ public class TaskFoldersRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of outlookTaskFolder
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookTaskFolder> post(@javax.annotation.Nonnull final OutlookTaskFolder body, @javax.annotation.Nullable final java.util.function.Consumer<TaskFoldersRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolder::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to taskFolders for users
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of outlookTaskFolder
-     */
-    public java.util.concurrent.CompletableFuture<OutlookTaskFolder> post(@javax.annotation.Nonnull final OutlookTaskFolder body, @javax.annotation.Nullable final java.util.function.Consumer<TaskFoldersRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolder::createFromDiscriminatorValue, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OutlookTaskFolder::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<OutlookTaskFolder>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
-    /** The collection of task folders in the task group. Read-only. Nullable. */
+    /** Get Outlook task folders in a specific outlookTaskGroup. */
     public class TaskFoldersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -261,7 +237,7 @@ public class TaskFoldersRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TaskFoldersRequestBuilderGetQueryParameters queryParameters = new TaskFoldersRequestBuilderGetQueryParameters();
@@ -269,6 +245,7 @@ public class TaskFoldersRequestBuilder {
          * Instantiates a new taskFoldersRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public TaskFoldersRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -279,11 +256,12 @@ public class TaskFoldersRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new taskFoldersRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public TaskFoldersRequestBuilderPostRequestConfiguration() {
         }
     }

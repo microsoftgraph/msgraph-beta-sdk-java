@@ -60,6 +60,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * Instantiates a new MacOSEndpointProtectionConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSEndpointProtectionConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSEndpointProtectionConfiguration");
@@ -145,7 +146,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSEndpointProtectionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("advancedThreatProtectionAutomaticSampleSubmission", (n) -> { currentObject.setAdvancedThreatProtectionAutomaticSampleSubmission(n.getEnumValue(Enablement.class)); });
             this.put("advancedThreatProtectionCloudDelivered", (n) -> { currentObject.setAdvancedThreatProtectionCloudDelivered(n.getEnumValue(Enablement.class)); });
             this.put("advancedThreatProtectionDiagnosticDataCollection", (n) -> { currentObject.setAdvancedThreatProtectionDiagnosticDataCollection(n.getEnumValue(Enablement.class)); });
@@ -305,6 +306,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -338,6 +340,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the advancedThreatProtectionAutomaticSampleSubmission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionAutomaticSampleSubmission(@javax.annotation.Nullable final Enablement value) {
         this._advancedThreatProtectionAutomaticSampleSubmission = value;
     }
@@ -346,6 +349,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the advancedThreatProtectionCloudDelivered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionCloudDelivered(@javax.annotation.Nullable final Enablement value) {
         this._advancedThreatProtectionCloudDelivered = value;
     }
@@ -354,6 +358,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the advancedThreatProtectionDiagnosticDataCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionDiagnosticDataCollection(@javax.annotation.Nullable final Enablement value) {
         this._advancedThreatProtectionDiagnosticDataCollection = value;
     }
@@ -362,6 +367,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the advancedThreatProtectionExcludedExtensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionExcludedExtensions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._advancedThreatProtectionExcludedExtensions = value;
     }
@@ -370,6 +376,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the advancedThreatProtectionExcludedFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionExcludedFiles(@javax.annotation.Nullable final java.util.List<String> value) {
         this._advancedThreatProtectionExcludedFiles = value;
     }
@@ -378,6 +385,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the advancedThreatProtectionExcludedFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionExcludedFolders(@javax.annotation.Nullable final java.util.List<String> value) {
         this._advancedThreatProtectionExcludedFolders = value;
     }
@@ -386,6 +394,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the advancedThreatProtectionExcludedProcesses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionExcludedProcesses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._advancedThreatProtectionExcludedProcesses = value;
     }
@@ -394,6 +403,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the advancedThreatProtectionRealTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionRealTime(@javax.annotation.Nullable final Enablement value) {
         this._advancedThreatProtectionRealTime = value;
     }
@@ -402,6 +412,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the fileVaultAllowDeferralUntilSignOut property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultAllowDeferralUntilSignOut(@javax.annotation.Nullable final Boolean value) {
         this._fileVaultAllowDeferralUntilSignOut = value;
     }
@@ -410,6 +421,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the fileVaultDisablePromptAtSignOut property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultDisablePromptAtSignOut(@javax.annotation.Nullable final Boolean value) {
         this._fileVaultDisablePromptAtSignOut = value;
     }
@@ -418,6 +430,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the fileVaultEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultEnabled(@javax.annotation.Nullable final Boolean value) {
         this._fileVaultEnabled = value;
     }
@@ -426,6 +439,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the fileVaultHidePersonalRecoveryKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultHidePersonalRecoveryKey(@javax.annotation.Nullable final Boolean value) {
         this._fileVaultHidePersonalRecoveryKey = value;
     }
@@ -434,6 +448,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the fileVaultInstitutionalRecoveryKeyCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultInstitutionalRecoveryKeyCertificate(@javax.annotation.Nullable final byte[] value) {
         this._fileVaultInstitutionalRecoveryKeyCertificate = value;
     }
@@ -442,6 +457,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the fileVaultInstitutionalRecoveryKeyCertificateFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultInstitutionalRecoveryKeyCertificateFileName(@javax.annotation.Nullable final String value) {
         this._fileVaultInstitutionalRecoveryKeyCertificateFileName = value;
     }
@@ -450,6 +466,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the fileVaultNumberOfTimesUserCanIgnore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultNumberOfTimesUserCanIgnore(@javax.annotation.Nullable final Integer value) {
         this._fileVaultNumberOfTimesUserCanIgnore = value;
     }
@@ -458,6 +475,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the fileVaultPersonalRecoveryKeyHelpMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultPersonalRecoveryKeyHelpMessage(@javax.annotation.Nullable final String value) {
         this._fileVaultPersonalRecoveryKeyHelpMessage = value;
     }
@@ -466,6 +484,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the fileVaultPersonalRecoveryKeyRotationInMonths property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultPersonalRecoveryKeyRotationInMonths(@javax.annotation.Nullable final Integer value) {
         this._fileVaultPersonalRecoveryKeyRotationInMonths = value;
     }
@@ -474,6 +493,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the fileVaultSelectedRecoveryKeyTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultSelectedRecoveryKeyTypes(@javax.annotation.Nullable final MacOSFileVaultRecoveryKeyTypes value) {
         this._fileVaultSelectedRecoveryKeyTypes = value;
     }
@@ -482,6 +502,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the firewallApplications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallApplications(@javax.annotation.Nullable final java.util.List<MacOSFirewallApplication> value) {
         this._firewallApplications = value;
     }
@@ -490,6 +511,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the firewallBlockAllIncoming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallBlockAllIncoming(@javax.annotation.Nullable final Boolean value) {
         this._firewallBlockAllIncoming = value;
     }
@@ -498,6 +520,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the firewallEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallEnabled(@javax.annotation.Nullable final Boolean value) {
         this._firewallEnabled = value;
     }
@@ -506,6 +529,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the firewallEnableStealthMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallEnableStealthMode(@javax.annotation.Nullable final Boolean value) {
         this._firewallEnableStealthMode = value;
     }
@@ -514,6 +538,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the gatekeeperAllowedAppSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGatekeeperAllowedAppSource(@javax.annotation.Nullable final MacOSGatekeeperAppSources value) {
         this._gatekeeperAllowedAppSource = value;
     }
@@ -522,6 +547,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the gatekeeperBlockOverride property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGatekeeperBlockOverride(@javax.annotation.Nullable final Boolean value) {
         this._gatekeeperBlockOverride = value;
     }

@@ -17,6 +17,7 @@ public class MessageUnpinnedEventMessageDetail extends EventMessageDetail implem
      * Instantiates a new MessageUnpinnedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MessageUnpinnedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.messageUnpinnedEventMessageDetail");
@@ -46,7 +47,7 @@ public class MessageUnpinnedEventMessageDetail extends EventMessageDetail implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageUnpinnedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         }};
@@ -64,6 +65,7 @@ public class MessageUnpinnedEventMessageDetail extends EventMessageDetail implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class MessageUnpinnedEventMessageDetail extends EventMessageDetail implem
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
     }
@@ -83,6 +86,7 @@ public class MessageUnpinnedEventMessageDetail extends EventMessageDetail implem
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }

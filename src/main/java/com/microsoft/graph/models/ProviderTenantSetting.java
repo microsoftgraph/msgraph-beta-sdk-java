@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ProviderTenantSetting extends Entity implements Parsable {
     /** The azureTenantId property */
     private String _azureTenantId;
@@ -20,9 +21,10 @@ public class ProviderTenantSetting extends Entity implements Parsable {
     /** The vendor property */
     private String _vendor;
     /**
-     * Instantiates a new ProviderTenantSetting and sets the default values.
+     * Instantiates a new providerTenantSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProviderTenantSetting() {
         super();
         this.setOdataType("#microsoft.graph.providerTenantSetting");
@@ -30,7 +32,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ProviderTenantSetting
+     * @return a providerTenantSetting
      */
     @javax.annotation.Nonnull
     public static ProviderTenantSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +62,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProviderTenantSetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -97,6 +99,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +114,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -119,6 +123,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enabled = value;
     }
@@ -127,6 +132,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -135,6 +141,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      * @param value Value to set for the provider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvider(@javax.annotation.Nullable final String value) {
         this._provider = value;
     }
@@ -143,6 +150,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      * @param value Value to set for the vendor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendor(@javax.annotation.Nullable final String value) {
         this._vendor = value;
     }

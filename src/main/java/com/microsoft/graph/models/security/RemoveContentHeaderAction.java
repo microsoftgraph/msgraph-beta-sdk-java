@@ -14,6 +14,7 @@ public class RemoveContentHeaderAction extends InformationProtectionAction imple
      * Instantiates a new RemoveContentHeaderAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemoveContentHeaderAction() {
         super();
         this.setOdataType("#microsoft.graph.security.removeContentHeaderAction");
@@ -35,7 +36,7 @@ public class RemoveContentHeaderAction extends InformationProtectionAction imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoveContentHeaderAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("uiElementNames", (n) -> { currentObject.setUiElementNames(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class RemoveContentHeaderAction extends InformationProtectionAction imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class RemoveContentHeaderAction extends InformationProtectionAction imple
      * @param value Value to set for the uiElementNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUiElementNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._uiElementNames = value;
     }

@@ -24,6 +24,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * Instantiates a new deviceManagementIntentDeviceStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementIntentDeviceStateSummary() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementIntentDeviceStateSummary");
@@ -69,7 +70,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementIntentDeviceStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("conflictCount", (n) -> { currentObject.setConflictCount(n.getIntegerValue()); });
             this.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
             this.put("failedCount", (n) -> { currentObject.setFailedCount(n.getIntegerValue()); });
@@ -107,6 +108,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * @param value Value to set for the conflictCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictCount(@javax.annotation.Nullable final Integer value) {
         this._conflictCount = value;
     }
@@ -130,6 +133,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * @param value Value to set for the errorCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCount(@javax.annotation.Nullable final Integer value) {
         this._errorCount = value;
     }
@@ -138,6 +142,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * @param value Value to set for the failedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedCount(@javax.annotation.Nullable final Integer value) {
         this._failedCount = value;
     }
@@ -146,6 +151,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * @param value Value to set for the notApplicableCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableCount(@javax.annotation.Nullable final Integer value) {
         this._notApplicableCount = value;
     }
@@ -154,6 +160,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * @param value Value to set for the notApplicablePlatformCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicablePlatformCount(@javax.annotation.Nullable final Integer value) {
         this._notApplicablePlatformCount = value;
     }
@@ -162,6 +169,7 @@ public class DeviceManagementIntentDeviceStateSummary extends Entity implements 
      * @param value Value to set for the successCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessCount(@javax.annotation.Nullable final Integer value) {
         this._successCount = value;
     }

@@ -13,7 +13,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -35,16 +34,16 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The requests property */
     @javax.annotation.Nonnull
     public RequestsRequestBuilder requests() {
         return new RequestsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Gets an item from the com.Microsoft.Graph.tenantRelationships.delegatedAdminRelationships.item.accessAssignments.item collection
      * @param id Unique identifier of the item
@@ -53,7 +52,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
     @javax.annotation.Nonnull
     public DelegatedAdminAccessAssignmentItemRequestBuilder accessAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("delegatedAdminAccessAssignment%2Did", id);
         return new DelegatedAdminAccessAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -63,11 +62,12 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedAdminRelationshipItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -77,9 +77,10 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedAdminRelationshipItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -165,6 +166,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration requestConfig = new DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration();
@@ -178,16 +180,19 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
      * Delete navigation property delegatedAdminRelationships for tenantRelationships
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -195,50 +200,38 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DelegatedAdminRelationshipItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property delegatedAdminRelationships for tenantRelationships
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DelegatedAdminRelationshipItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
      * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
      * @return a CompletableFuture of delegatedAdminRelationship
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DelegatedAdminRelationship::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DelegatedAdminRelationship::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DelegatedAdminRelationship>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -246,34 +239,19 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedAdminRelationship
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> get(@javax.annotation.Nullable final java.util.function.Consumer<DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DelegatedAdminRelationship::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DelegatedAdminRelationship::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of delegatedAdminRelationship
-     */
-    public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> get(@javax.annotation.Nullable final java.util.function.Consumer<DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<DelegatedAdminRelationship>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DelegatedAdminRelationship::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -284,63 +262,50 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
     @javax.annotation.Nonnull
     public DelegatedAdminRelationshipOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("delegatedAdminRelationshipOperation%2Did", id);
         return new DelegatedAdminRelationshipOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property delegatedAdminRelationships in tenantRelationships
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of delegatedAdminRelationship
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DelegatedAdminRelationship body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> patch(@javax.annotation.Nonnull final DelegatedAdminRelationship body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DelegatedAdminRelationship::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DelegatedAdminRelationship>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property delegatedAdminRelationships in tenantRelationships
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of delegatedAdminRelationship
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DelegatedAdminRelationship body, @javax.annotation.Nullable final java.util.function.Consumer<DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property delegatedAdminRelationships in tenantRelationships
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DelegatedAdminRelationship body, @javax.annotation.Nullable final java.util.function.Consumer<DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> patch(@javax.annotation.Nonnull final DelegatedAdminRelationship body, @javax.annotation.Nullable final java.util.function.Consumer<DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DelegatedAdminRelationship::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DelegatedAdminRelationship>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -351,7 +316,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
     @javax.annotation.Nonnull
     public DelegatedAdminRelationshipRequestItemRequestBuilder requests(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("delegatedAdminRelationshipRequest%2Did", id);
         return new DelegatedAdminRelationshipRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -362,11 +327,12 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DelegatedAdminRelationshipItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public DelegatedAdminRelationshipItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
@@ -388,7 +354,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DelegatedAdminRelationshipItemRequestBuilderGetQueryParameters queryParameters = new DelegatedAdminRelationshipItemRequestBuilderGetQueryParameters();
@@ -396,6 +362,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
          * Instantiates a new DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -406,11 +373,12 @@ public class DelegatedAdminRelationshipItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration() {
         }
     }

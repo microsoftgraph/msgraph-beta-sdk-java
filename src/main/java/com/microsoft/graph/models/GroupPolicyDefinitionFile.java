@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The entity represents an ADMX (Administrative Template) XML file. The ADMX file contains a collection of group policy definitions and their locations by category path. The group policy definition file also contains the languages supported as determined by the language dependent ADML (Administrative Template) language files. */
 public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     /** The group policy definitions associated with the file. */
     private java.util.List<GroupPolicyDefinition> _definitions;
@@ -34,6 +35,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * Instantiates a new groupPolicyDefinitionFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyDefinitionFile() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyDefinitionFile");
@@ -86,7 +88,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyDefinitionFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("definitions", (n) -> { currentObject.setDefinitions(n.getCollectionOfObjectValues(GroupPolicyDefinition::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -160,6 +162,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -179,6 +182,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param value Value to set for the definitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitions(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinition> value) {
         this._definitions = value;
     }
@@ -187,6 +191,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -195,6 +200,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -203,6 +209,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
         this._fileName = value;
     }
@@ -211,6 +218,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param value Value to set for the languageCodes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageCodes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._languageCodes = value;
     }
@@ -219,6 +227,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -227,6 +236,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param value Value to set for the policyType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyType(@javax.annotation.Nullable final GroupPolicyType value) {
         this._policyType = value;
     }
@@ -235,6 +245,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param value Value to set for the revision property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRevision(@javax.annotation.Nullable final String value) {
         this._revision = value;
     }
@@ -243,6 +254,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param value Value to set for the targetNamespace property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetNamespace(@javax.annotation.Nullable final String value) {
         this._targetNamespace = value;
     }
@@ -251,6 +263,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param value Value to set for the targetPrefix property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetPrefix(@javax.annotation.Nullable final String value) {
         this._targetPrefix = value;
     }

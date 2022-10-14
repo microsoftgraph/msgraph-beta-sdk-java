@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PrivilegedApproval extends Entity implements Parsable {
     /** The approvalDuration property */
     private Period _approvalDuration;
@@ -33,9 +34,10 @@ public class PrivilegedApproval extends Entity implements Parsable {
     /** The userId property */
     private String _userId;
     /**
-     * Instantiates a new PrivilegedApproval and sets the default values.
+     * Instantiates a new privilegedApproval and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivilegedApproval() {
         super();
         this.setOdataType("#microsoft.graph.privilegedApproval");
@@ -43,7 +45,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedApproval
+     * @return a privilegedApproval
      */
     @javax.annotation.Nonnull
     public static PrivilegedApproval createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -97,7 +99,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedApproval currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("approvalDuration", (n) -> { currentObject.setApprovalDuration(n.getPeriodValue()); });
             this.put("approvalState", (n) -> { currentObject.setApprovalState(n.getEnumValue(ApprovalState.class)); });
             this.put("approvalType", (n) -> { currentObject.setApprovalType(n.getStringValue()); });
@@ -164,6 +166,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -184,6 +187,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the approvalDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovalDuration(@javax.annotation.Nullable final Period value) {
         this._approvalDuration = value;
     }
@@ -192,6 +196,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the approvalState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovalState(@javax.annotation.Nullable final ApprovalState value) {
         this._approvalState = value;
     }
@@ -200,6 +205,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the approvalType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovalType(@javax.annotation.Nullable final String value) {
         this._approvalType = value;
     }
@@ -208,6 +214,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the approverReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApproverReason(@javax.annotation.Nullable final String value) {
         this._approverReason = value;
     }
@@ -216,6 +223,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -224,6 +232,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the request property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequest(@javax.annotation.Nullable final PrivilegedRoleAssignmentRequest value) {
         this._request = value;
     }
@@ -232,6 +241,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the requestorReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestorReason(@javax.annotation.Nullable final String value) {
         this._requestorReason = value;
     }
@@ -240,6 +250,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the roleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleId(@javax.annotation.Nullable final String value) {
         this._roleId = value;
     }
@@ -248,6 +259,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the roleInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleInfo(@javax.annotation.Nullable final PrivilegedRole value) {
         this._roleInfo = value;
     }
@@ -256,6 +268,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -264,6 +277,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

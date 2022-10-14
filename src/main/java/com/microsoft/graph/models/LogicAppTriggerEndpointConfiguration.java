@@ -18,6 +18,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * Instantiates a new LogicAppTriggerEndpointConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LogicAppTriggerEndpointConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.logicAppTriggerEndpointConfiguration");
@@ -39,7 +40,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LogicAppTriggerEndpointConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("logicAppWorkflowName", (n) -> { currentObject.setLogicAppWorkflowName(n.getStringValue()); });
             this.put("resourceGroupName", (n) -> { currentObject.setResourceGroupName(n.getStringValue()); });
             this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * @param value Value to set for the logicAppWorkflowName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogicAppWorkflowName(@javax.annotation.Nullable final String value) {
         this._logicAppWorkflowName = value;
     }
@@ -94,6 +97,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * @param value Value to set for the resourceGroupName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceGroupName(@javax.annotation.Nullable final String value) {
         this._resourceGroupName = value;
     }
@@ -102,6 +106,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionId(@javax.annotation.Nullable final String value) {
         this._subscriptionId = value;
     }

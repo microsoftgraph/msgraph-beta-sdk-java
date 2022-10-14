@@ -30,6 +30,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * Instantiates a new Windows10PkcsCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10PkcsCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windows10PkcsCertificateProfile");
@@ -99,7 +100,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10PkcsCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
             this.put("certificateTemplateName", (n) -> { currentObject.setCertificateTemplateName(n.getStringValue()); });
             this.put("certificationAuthority", (n) -> { currentObject.setCertificationAuthority(n.getStringValue()); });
@@ -140,6 +141,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +160,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * @param value Value to set for the certificateStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateStore(@javax.annotation.Nullable final CertificateStore value) {
         this._certificateStore = value;
     }
@@ -166,6 +169,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * @param value Value to set for the certificateTemplateName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateTemplateName(@javax.annotation.Nullable final String value) {
         this._certificateTemplateName = value;
     }
@@ -174,6 +178,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * @param value Value to set for the certificationAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthority(@javax.annotation.Nullable final String value) {
         this._certificationAuthority = value;
     }
@@ -182,6 +187,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * @param value Value to set for the certificationAuthorityName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthorityName(@javax.annotation.Nullable final String value) {
         this._certificationAuthorityName = value;
     }
@@ -190,6 +196,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * @param value Value to set for the customSubjectAlternativeNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSubjectAlternativeNames(@javax.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
         this._customSubjectAlternativeNames = value;
     }
@@ -198,6 +205,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * @param value Value to set for the extendedKeyUsages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtendedKeyUsages(@javax.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
         this._extendedKeyUsages = value;
     }
@@ -206,6 +214,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
         this._managedDeviceCertificateStates = value;
     }
@@ -214,6 +223,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
         this._subjectAlternativeNameFormatString = value;
     }
@@ -222,6 +232,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * @param value Value to set for the subjectNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
         this._subjectNameFormatString = value;
     }

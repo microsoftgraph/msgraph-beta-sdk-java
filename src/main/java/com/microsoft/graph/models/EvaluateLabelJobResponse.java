@@ -14,6 +14,7 @@ public class EvaluateLabelJobResponse extends JobResponseBase implements Parsabl
      * Instantiates a new EvaluateLabelJobResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EvaluateLabelJobResponse() {
         super();
         this.setOdataType("#microsoft.graph.evaluateLabelJobResponse");
@@ -35,7 +36,7 @@ public class EvaluateLabelJobResponse extends JobResponseBase implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateLabelJobResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("result", (n) -> { currentObject.setResult(n.getObjectValue(EvaluateLabelJobResultGroup::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class EvaluateLabelJobResponse extends JobResponseBase implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EvaluateLabelJobResponse extends JobResponseBase implements Parsabl
      * @param value Value to set for the result property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResult(@javax.annotation.Nullable final EvaluateLabelJobResultGroup value) {
         this._result = value;
     }

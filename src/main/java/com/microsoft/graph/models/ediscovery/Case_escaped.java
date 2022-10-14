@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Case_escaped extends Entity implements Parsable {
     /** The user who closed the case. */
     private IdentitySet _closedBy;
@@ -50,6 +50,7 @@ public class Case_escaped extends Entity implements Parsable {
      * Instantiates a new case_escaped and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Case_escaped() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.case");
@@ -127,7 +128,7 @@ public class Case_escaped extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Case_escaped currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("closedBy", (n) -> { currentObject.setClosedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("closedDateTime", (n) -> { currentObject.setClosedDateTime(n.getOffsetDateTimeValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -232,6 +233,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -258,6 +260,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the closedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClosedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._closedBy = value;
     }
@@ -266,6 +269,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the closedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClosedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._closedDateTime = value;
     }
@@ -274,6 +278,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -282,6 +287,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the custodians property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustodians(@javax.annotation.Nullable final java.util.List<Custodian> value) {
         this._custodians = value;
     }
@@ -290,6 +296,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -298,6 +305,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -306,6 +314,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
     }
@@ -314,6 +323,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -322,6 +332,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -330,6 +341,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the legalHolds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLegalHolds(@javax.annotation.Nullable final java.util.List<LegalHold> value) {
         this._legalHolds = value;
     }
@@ -338,6 +350,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the noncustodialDataSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNoncustodialDataSources(@javax.annotation.Nullable final java.util.List<NoncustodialDataSource> value) {
         this._noncustodialDataSources = value;
     }
@@ -346,6 +359,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<CaseOperation> value) {
         this._operations = value;
     }
@@ -354,6 +368,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the reviewSets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewSets(@javax.annotation.Nullable final java.util.List<ReviewSet> value) {
         this._reviewSets = value;
     }
@@ -362,6 +377,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final CaseSettings value) {
         this._settings = value;
     }
@@ -370,6 +386,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the sourceCollections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceCollections(@javax.annotation.Nullable final java.util.List<SourceCollection> value) {
         this._sourceCollections = value;
     }
@@ -378,6 +395,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CaseStatus value) {
         this._status = value;
     }
@@ -386,6 +404,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<Tag> value) {
         this._tags = value;
     }

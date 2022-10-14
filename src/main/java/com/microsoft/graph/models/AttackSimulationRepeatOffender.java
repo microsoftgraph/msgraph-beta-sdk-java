@@ -11,7 +11,7 @@ import java.util.Objects;
 public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** User in an attack simulation and training campaign. */
+    /** The user in an attack simulation and training campaign. */
     private AttackSimulationUser _attackSimulationUser;
     /** The OdataType property */
     private String _odataType;
@@ -21,6 +21,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * Instantiates a new attackSimulationRepeatOffender and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttackSimulationRepeatOffender() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.attackSimulationRepeatOffender");
@@ -44,7 +45,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
         return this._additionalData;
     }
     /**
-     * Gets the attackSimulationUser property value. User in an attack simulation and training campaign.
+     * Gets the attackSimulationUser property value. The user in an attack simulation and training campaign.
      * @return a attackSimulationUser
      */
     @javax.annotation.Nullable
@@ -58,7 +59,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationRepeatOffender currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("attackSimulationUser", (n) -> { currentObject.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("repeatOffenceCount", (n) -> { currentObject.setRepeatOffenceCount(n.getIntegerValue()); });
@@ -85,6 +86,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attackSimulationUser", this.getAttackSimulationUser());
@@ -97,14 +99,16 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the attackSimulationUser property value. User in an attack simulation and training campaign.
+     * Sets the attackSimulationUser property value. The user in an attack simulation and training campaign.
      * @param value Value to set for the attackSimulationUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttackSimulationUser(@javax.annotation.Nullable final AttackSimulationUser value) {
         this._attackSimulationUser = value;
     }
@@ -113,6 +117,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * @param value Value to set for the repeatOffenceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRepeatOffenceCount(@javax.annotation.Nullable final Integer value) {
         this._repeatOffenceCount = value;
     }

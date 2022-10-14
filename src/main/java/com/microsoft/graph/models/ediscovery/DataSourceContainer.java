@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class DataSourceContainer extends Entity implements Parsable {
     /** Created date and time of the dataSourceContainer entity. */
     private OffsetDateTime _createdDateTime;
@@ -31,6 +31,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      * Instantiates a new dataSourceContainer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DataSourceContainer() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.dataSourceContainer");
@@ -76,7 +77,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DataSourceContainer currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("holdStatus", (n) -> { currentObject.setHoldStatus(n.getEnumValue(DataSourceHoldStatus.class)); });
@@ -131,6 +132,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,6 +149,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -155,6 +158,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -163,6 +167,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      * @param value Value to set for the holdStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHoldStatus(@javax.annotation.Nullable final DataSourceHoldStatus value) {
         this._holdStatus = value;
     }
@@ -171,6 +176,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      * @param value Value to set for the lastIndexOperation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastIndexOperation(@javax.annotation.Nullable final CaseIndexOperation value) {
         this._lastIndexOperation = value;
     }
@@ -179,6 +185,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -187,6 +194,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      * @param value Value to set for the releasedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReleasedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._releasedDateTime = value;
     }
@@ -195,6 +203,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DataSourceContainerStatus value) {
         this._status = value;
     }

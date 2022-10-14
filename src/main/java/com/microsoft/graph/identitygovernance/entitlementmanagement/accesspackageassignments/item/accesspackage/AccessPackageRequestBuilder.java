@@ -6,10 +6,12 @@ import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackag
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.AccessPackageResourceRoleScopesRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.item.AccessPackageResourceRoleScopeItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.AccessPackagesIncompatibleWithRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.getapplicablepolicyrequirements.GetApplicablePolicyRequirementsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatibleaccesspackages.IncompatibleAccessPackagesRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatiblegroups.IncompatibleGroupsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatiblegroups.item.GroupItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.movetocatalog.MoveToCatalogRequestBuilder;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
@@ -17,7 +19,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -63,12 +64,17 @@ public class AccessPackageRequestBuilder {
     public IncompatibleGroupsRequestBuilder incompatibleGroups() {
         return new IncompatibleGroupsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The moveToCatalog property */
+    @javax.annotation.Nonnull
+    public MoveToCatalogRequestBuilder moveToCatalog() {
+        return new MoveToCatalogRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item.accessPackage.accessPackageAssignmentPolicies.item collection
      * @param id Unique identifier of the item
@@ -77,7 +83,7 @@ public class AccessPackageRequestBuilder {
     @javax.annotation.Nonnull
     public AccessPackageAssignmentPolicyItemRequestBuilder accessPackageAssignmentPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessPackageAssignmentPolicy%2Did", id);
         return new AccessPackageAssignmentPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -89,7 +95,7 @@ public class AccessPackageRequestBuilder {
     @javax.annotation.Nonnull
     public AccessPackageResourceRoleScopeItemRequestBuilder accessPackageResourceRoleScopes(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessPackageResourceRoleScope%2Did", id);
         return new AccessPackageResourceRoleScopeItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -101,7 +107,7 @@ public class AccessPackageRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder accessPackagesIncompatibleWith(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessPackage%2Did", id);
         return new com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -111,11 +117,12 @@ public class AccessPackageRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackage{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -125,9 +132,10 @@ public class AccessPackageRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackage{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -213,6 +221,7 @@ public class AccessPackageRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AccessPackageRequestBuilderPatchRequestConfiguration requestConfig = new AccessPackageRequestBuilderPatchRequestConfiguration();
@@ -226,16 +235,19 @@ public class AccessPackageRequestBuilder {
      * Delete navigation property accessPackage for identityGovernance
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -243,50 +255,38 @@ public class AccessPackageRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<AccessPackageRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property accessPackage for identityGovernance
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<AccessPackageRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
      * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
      * @return a CompletableFuture of accessPackage
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, AccessPackage::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AccessPackage::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<AccessPackage>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -294,34 +294,19 @@ public class AccessPackageRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackage
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> get(@javax.annotation.Nullable final java.util.function.Consumer<AccessPackageRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, AccessPackage::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AccessPackage::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of accessPackage
-     */
-    public java.util.concurrent.CompletableFuture<AccessPackage> get(@javax.annotation.Nullable final java.util.function.Consumer<AccessPackageRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<AccessPackage>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, AccessPackage::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -332,7 +317,7 @@ public class AccessPackageRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder incompatibleAccessPackages(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("accessPackage%2Did", id);
         return new com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -344,63 +329,50 @@ public class AccessPackageRequestBuilder {
     @javax.annotation.Nonnull
     public GroupItemRequestBuilder incompatibleGroups(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("group%2Did", id);
         return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property accessPackage in identityGovernance
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of accessPackage
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final AccessPackage body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<AccessPackage> patch(@javax.annotation.Nonnull final AccessPackage body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AccessPackage::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<AccessPackage>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property accessPackage in identityGovernance
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of accessPackage
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final AccessPackage body, @javax.annotation.Nullable final java.util.function.Consumer<AccessPackageRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property accessPackage in identityGovernance
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final AccessPackage body, @javax.annotation.Nullable final java.util.function.Consumer<AccessPackageRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<AccessPackage> patch(@javax.annotation.Nonnull final AccessPackage body, @javax.annotation.Nullable final java.util.function.Consumer<AccessPackageRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AccessPackage::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<AccessPackage>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
@@ -410,11 +382,12 @@ public class AccessPackageRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new accessPackageRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public AccessPackageRequestBuilderDeleteRequestConfiguration() {
         }
     }
@@ -436,7 +409,7 @@ public class AccessPackageRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AccessPackageRequestBuilderGetQueryParameters queryParameters = new AccessPackageRequestBuilderGetQueryParameters();
@@ -444,6 +417,7 @@ public class AccessPackageRequestBuilder {
          * Instantiates a new accessPackageRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public AccessPackageRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -454,11 +428,12 @@ public class AccessPackageRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new accessPackageRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public AccessPackageRequestBuilderPatchRequestConfiguration() {
         }
     }

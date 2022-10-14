@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class SecureScoreControlProfile extends Entity implements Parsable {
     /** Control action type (Config, Review, Behavior). */
     private String _actionType;
@@ -48,9 +49,10 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     /** The vendorInformation property */
     private SecurityVendorInformation _vendorInformation;
     /**
-     * Instantiates a new SecureScoreControlProfile and sets the default values.
+     * Instantiates a new secureScoreControlProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecureScoreControlProfile() {
         super();
         this.setOdataType("#microsoft.graph.secureScoreControlProfile");
@@ -58,7 +60,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecureScoreControlProfile
+     * @return a secureScoreControlProfile
      */
     @javax.annotation.Nonnull
     public static SecureScoreControlProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -128,7 +130,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecureScoreControlProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionType", (n) -> { currentObject.setActionType(n.getStringValue()); });
             this.put("actionUrl", (n) -> { currentObject.setActionUrl(n.getStringValue()); });
             this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
@@ -251,6 +253,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -279,6 +282,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the actionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionType(@javax.annotation.Nullable final String value) {
         this._actionType = value;
     }
@@ -287,6 +291,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the actionUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionUrl(@javax.annotation.Nullable final String value) {
         this._actionUrl = value;
     }
@@ -295,6 +300,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -303,6 +309,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the complianceInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceInformation(@javax.annotation.Nullable final java.util.List<ComplianceInformation> value) {
         this._complianceInformation = value;
     }
@@ -311,6 +318,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the controlCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setControlCategory(@javax.annotation.Nullable final String value) {
         this._controlCategory = value;
     }
@@ -319,6 +327,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the controlStateUpdates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setControlStateUpdates(@javax.annotation.Nullable final java.util.List<SecureScoreControlStateUpdate> value) {
         this._controlStateUpdates = value;
     }
@@ -327,6 +336,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the deprecated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeprecated(@javax.annotation.Nullable final Boolean value) {
         this._deprecated = value;
     }
@@ -335,6 +345,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the implementationCost property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImplementationCost(@javax.annotation.Nullable final String value) {
         this._implementationCost = value;
     }
@@ -343,6 +354,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -351,6 +363,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the maxScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxScore(@javax.annotation.Nullable final Double value) {
         this._maxScore = value;
     }
@@ -359,6 +372,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the rank property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRank(@javax.annotation.Nullable final Integer value) {
         this._rank = value;
     }
@@ -367,6 +381,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the remediation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediation(@javax.annotation.Nullable final String value) {
         this._remediation = value;
     }
@@ -375,6 +390,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the remediationImpact property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediationImpact(@javax.annotation.Nullable final String value) {
         this._remediationImpact = value;
     }
@@ -383,6 +399,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the service property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
         this._service = value;
     }
@@ -391,6 +408,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the threats property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThreats(@javax.annotation.Nullable final java.util.List<String> value) {
         this._threats = value;
     }
@@ -399,6 +417,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the tier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTier(@javax.annotation.Nullable final String value) {
         this._tier = value;
     }
@@ -407,6 +426,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }
@@ -415,6 +435,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the userImpact property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserImpact(@javax.annotation.Nullable final String value) {
         this._userImpact = value;
     }
@@ -423,6 +444,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
         this._vendorInformation = value;
     }

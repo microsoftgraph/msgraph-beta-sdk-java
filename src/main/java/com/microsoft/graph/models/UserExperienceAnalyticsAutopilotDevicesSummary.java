@@ -24,6 +24,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
      * Instantiates a new userExperienceAnalyticsAutopilotDevicesSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsAutopilotDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsAutopilotDevicesSummary");
@@ -69,7 +70,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsAutopilotDevicesSummary currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("devicesNotAutopilotRegistered", (n) -> { currentObject.setDevicesNotAutopilotRegistered(n.getIntegerValue()); });
             this.put("devicesWithoutAutopilotProfileAssigned", (n) -> { currentObject.setDevicesWithoutAutopilotProfileAssigned(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("devicesNotAutopilotRegistered", this.getDevicesNotAutopilotRegistered());
@@ -110,6 +112,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
      * @param value Value to set for the devicesNotAutopilotRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicesNotAutopilotRegistered(@javax.annotation.Nullable final Integer value) {
         this._devicesNotAutopilotRegistered = value;
     }
@@ -126,6 +130,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
      * @param value Value to set for the devicesWithoutAutopilotProfileAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicesWithoutAutopilotProfileAssigned(@javax.annotation.Nullable final Integer value) {
         this._devicesWithoutAutopilotProfileAssigned = value;
     }
@@ -134,6 +139,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -142,6 +148,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
      * @param value Value to set for the totalWindows10DevicesWithoutTenantAttached property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalWindows10DevicesWithoutTenantAttached(@javax.annotation.Nullable final Integer value) {
         this._totalWindows10DevicesWithoutTenantAttached = value;
     }

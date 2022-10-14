@@ -57,7 +57,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -159,9 +158,9 @@ public class ManagedTenantsRequestBuilder {
         return new MyRolesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The tenantGroups property */
     @javax.annotation.Nonnull
     public TenantGroupsRequestBuilder tenantGroups() {
@@ -188,7 +187,7 @@ public class ManagedTenantsRequestBuilder {
         return new TenantTagsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /** The windowsDeviceMalwareStates property */
     @javax.annotation.Nonnull
     public WindowsDeviceMalwareStatesRequestBuilder windowsDeviceMalwareStates() {
@@ -207,7 +206,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public AggregatedPolicyComplianceItemRequestBuilder aggregatedPolicyCompliances(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("aggregatedPolicyCompliance%2Did", id);
         return new AggregatedPolicyComplianceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -219,7 +218,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public AuditEventItemRequestBuilder auditEvents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("auditEvent%2Did", id);
         return new AuditEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -231,7 +230,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public CloudPcConnectionItemRequestBuilder cloudPcConnections(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcConnection%2Did", id);
         return new CloudPcConnectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -243,7 +242,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public CloudPcDeviceItemRequestBuilder cloudPcDevices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcDevice%2Did", id);
         return new CloudPcDeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -255,7 +254,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public CloudPcOverviewTenantItemRequestBuilder cloudPcsOverview(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcOverview%2DtenantId", id);
         return new CloudPcOverviewTenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -267,7 +266,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public ConditionalAccessPolicyCoverageItemRequestBuilder conditionalAccessPolicyCoverages(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("conditionalAccessPolicyCoverage%2Did", id);
         return new ConditionalAccessPolicyCoverageItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -277,11 +276,12 @@ public class ManagedTenantsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedTenantsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/tenantRelationships/managedTenants{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -291,9 +291,10 @@ public class ManagedTenantsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedTenantsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/tenantRelationships/managedTenants{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -379,6 +380,7 @@ public class ManagedTenantsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ManagedTenantsRequestBuilderPatchRequestConfiguration requestConfig = new ManagedTenantsRequestBuilderPatchRequestConfiguration();
@@ -396,7 +398,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public CredentialUserRegistrationsSummaryItemRequestBuilder credentialUserRegistrationsSummaries(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("credentialUserRegistrationsSummary%2Did", id);
         return new CredentialUserRegistrationsSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -404,16 +406,19 @@ public class ManagedTenantsRequestBuilder {
      * Delete navigation property managedTenants for tenantRelationships
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -421,34 +426,19 @@ public class ManagedTenantsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property managedTenants for tenantRelationships
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -459,7 +449,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceCompliancePolicySettingStateSummaryItemRequestBuilder deviceCompliancePolicySettingStateSummaries(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceCompliancePolicySettingStateSummary%2Did", id);
         return new DeviceCompliancePolicySettingStateSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -467,16 +457,19 @@ public class ManagedTenantsRequestBuilder {
      * The operations available to interact with the multi-tenant management platform.
      * @return a CompletableFuture of managedTenant
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenant> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ManagedTenant>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -484,34 +477,19 @@ public class ManagedTenantsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedTenant
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenant> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * The operations available to interact with the multi-tenant management platform.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of managedTenant
-     */
-    public java.util.concurrent.CompletableFuture<ManagedTenant> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<ManagedTenant>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -522,7 +500,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public ManagedDeviceComplianceItemRequestBuilder managedDeviceCompliances(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedDeviceCompliance%2Did", id);
         return new ManagedDeviceComplianceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -534,7 +512,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public ManagedDeviceComplianceTrendItemRequestBuilder managedDeviceComplianceTrends(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedDeviceComplianceTrend%2Did", id);
         return new ManagedDeviceComplianceTrendItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -546,7 +524,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public ManagementActionItemRequestBuilder managementActions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementAction%2Did", id);
         return new ManagementActionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -558,7 +536,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public ManagementActionTenantDeploymentStatusItemRequestBuilder managementActionTenantDeploymentStatuses(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementActionTenantDeploymentStatus%2Did", id);
         return new ManagementActionTenantDeploymentStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -570,7 +548,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public ManagementIntentItemRequestBuilder managementIntents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementIntent%2Did", id);
         return new ManagementIntentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -582,7 +560,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public ManagementTemplateCollectionItemRequestBuilder managementTemplateCollections(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementTemplateCollection%2Did", id);
         return new ManagementTemplateCollectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -594,7 +572,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public ManagementTemplateItemRequestBuilder managementTemplates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementTemplate%2Did", id);
         return new ManagementTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -606,7 +584,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public ManagementTemplateStepItemRequestBuilder managementTemplateSteps(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementTemplateStep%2Did", id);
         return new ManagementTemplateStepItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -618,7 +596,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public ManagementTemplateStepVersionItemRequestBuilder managementTemplateStepVersions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementTemplateStepVersion%2Did", id);
         return new ManagementTemplateStepVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -630,63 +608,50 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public MyRoleTenantItemRequestBuilder myRoles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("myRole%2DtenantId", id);
         return new MyRoleTenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property managedTenants in tenantRelationships
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of managedTenant
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ManagedTenant body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedTenant> patch(@javax.annotation.Nonnull final ManagedTenant body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ManagedTenant>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property managedTenants in tenantRelationships
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of managedTenant
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ManagedTenant body, @javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property managedTenants in tenantRelationships
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ManagedTenant body, @javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedTenant> patch(@javax.annotation.Nonnull final ManagedTenant body, @javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ManagedTenant>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -697,7 +662,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public TenantGroupItemRequestBuilder tenantGroups(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tenantGroup%2Did", id);
         return new TenantGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -709,7 +674,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public TenantItemRequestBuilder tenants(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tenant%2Did", id);
         return new TenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -721,7 +686,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public TenantCustomizedInformationItemRequestBuilder tenantsCustomizedInformation(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tenantCustomizedInformation%2Did", id);
         return new TenantCustomizedInformationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -733,7 +698,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public TenantDetailedInformationItemRequestBuilder tenantsDetailedInformation(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tenantDetailedInformation%2Did", id);
         return new TenantDetailedInformationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -745,7 +710,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public TenantTagItemRequestBuilder tenantTags(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tenantTag%2Did", id);
         return new TenantTagItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -757,7 +722,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public WindowsDeviceMalwareStateItemRequestBuilder windowsDeviceMalwareStates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsDeviceMalwareState%2Did", id);
         return new WindowsDeviceMalwareStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -769,7 +734,7 @@ public class ManagedTenantsRequestBuilder {
     @javax.annotation.Nonnull
     public WindowsProtectionStateItemRequestBuilder windowsProtectionStates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsProtectionState%2Did", id);
         return new WindowsProtectionStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -780,11 +745,12 @@ public class ManagedTenantsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new managedTenantsRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public ManagedTenantsRequestBuilderDeleteRequestConfiguration() {
         }
     }
@@ -806,7 +772,7 @@ public class ManagedTenantsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ManagedTenantsRequestBuilderGetQueryParameters queryParameters = new ManagedTenantsRequestBuilderGetQueryParameters();
@@ -814,6 +780,7 @@ public class ManagedTenantsRequestBuilder {
          * Instantiates a new managedTenantsRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public ManagedTenantsRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -824,11 +791,12 @@ public class ManagedTenantsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new managedTenantsRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public ManagedTenantsRequestBuilderPatchRequestConfiguration() {
         }
     }

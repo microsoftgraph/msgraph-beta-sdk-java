@@ -14,6 +14,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
      * Instantiates a new MicrosoftAccountUserConversationMember and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftAccountUserConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.microsoftAccountUserConversationMember");
@@ -35,7 +36,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftAccountUserConversationMember currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This will allow the admin to see the different templated organizational messages that can be created */
 public class OrganizationalMessageGuidedContent extends Entity implements Parsable {
     /** Example of the logo that will be displayed to customers and its size requirements */
     private OrganizationalMessageLogoGuide _logo;
@@ -19,9 +20,10 @@ public class OrganizationalMessageGuidedContent extends Entity implements Parsab
     /** Indicates the theme for the guided content */
     private OrganizationalMessageTheme _theme;
     /**
-     * Instantiates a new OrganizationalMessageGuidedContent and sets the default values.
+     * Instantiates a new organizationalMessageGuidedContent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalMessageGuidedContent() {
         super();
         this.setOdataType("#microsoft.graph.organizationalMessageGuidedContent");
@@ -29,7 +31,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OrganizationalMessageGuidedContent
+     * @return a organizationalMessageGuidedContent
      */
     @javax.annotation.Nonnull
     public static OrganizationalMessageGuidedContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +45,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageGuidedContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("logo", (n) -> { currentObject.setLogo(n.getObjectValue(OrganizationalMessageLogoGuide::createFromDiscriminatorValue)); });
             this.put("placementDetails", (n) -> { currentObject.setPlacementDetails(n.getCollectionOfObjectValues(OrganizationalMessagePlacementDetail::createFromDiscriminatorValue)); });
             this.put("scenario", (n) -> { currentObject.setScenario(n.getEnumValue(OrganizationalMessageScenario.class)); });
@@ -96,6 +98,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +113,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements Parsab
      * @param value Value to set for the logo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogo(@javax.annotation.Nullable final OrganizationalMessageLogoGuide value) {
         this._logo = value;
     }
@@ -118,6 +122,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements Parsab
      * @param value Value to set for the placementDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlacementDetails(@javax.annotation.Nullable final java.util.List<OrganizationalMessagePlacementDetail> value) {
         this._placementDetails = value;
     }
@@ -126,6 +131,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements Parsab
      * @param value Value to set for the scenario property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScenario(@javax.annotation.Nullable final OrganizationalMessageScenario value) {
         this._scenario = value;
     }
@@ -134,6 +140,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements Parsab
      * @param value Value to set for the surface property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurface(@javax.annotation.Nullable final OrganizationalMessageSurface value) {
         this._surface = value;
     }
@@ -142,6 +149,7 @@ public class OrganizationalMessageGuidedContent extends Entity implements Parsab
      * @param value Value to set for the theme property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTheme(@javax.annotation.Nullable final OrganizationalMessageTheme value) {
         this._theme = value;
     }

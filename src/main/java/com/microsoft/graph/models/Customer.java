@@ -59,6 +59,7 @@ public class Customer extends Entity implements Parsable {
      * Instantiates a new customer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Customer() {
         super();
         this.setOdataType("#microsoft.graph.customer");
@@ -136,7 +137,7 @@ public class Customer extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Customer currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
             this.put("blocked", (n) -> { currentObject.setBlocked(n.getStringValue()); });
             this.put("currency", (n) -> { currentObject.setCurrency(n.getObjectValue(Currency::createFromDiscriminatorValue)); });
@@ -295,6 +296,7 @@ public class Customer extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -327,6 +329,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final PostalAddressType value) {
         this._address = value;
     }
@@ -335,6 +338,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the blocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlocked(@javax.annotation.Nullable final String value) {
         this._blocked = value;
     }
@@ -343,6 +347,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the currency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrency(@javax.annotation.Nullable final Currency value) {
         this._currency = value;
     }
@@ -351,6 +356,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the currencyCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrencyCode(@javax.annotation.Nullable final String value) {
         this._currencyCode = value;
     }
@@ -359,6 +365,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the currencyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrencyId(@javax.annotation.Nullable final String value) {
         this._currencyId = value;
     }
@@ -367,6 +374,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -375,6 +383,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -383,6 +392,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -391,6 +401,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final String value) {
         this._number = value;
     }
@@ -399,6 +410,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the paymentMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPaymentMethod(@javax.annotation.Nullable final PaymentMethod value) {
         this._paymentMethod = value;
     }
@@ -407,6 +419,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the paymentMethodId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPaymentMethodId(@javax.annotation.Nullable final String value) {
         this._paymentMethodId = value;
     }
@@ -415,6 +428,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the paymentTerm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPaymentTerm(@javax.annotation.Nullable final PaymentTerm value) {
         this._paymentTerm = value;
     }
@@ -423,6 +437,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the paymentTermsId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPaymentTermsId(@javax.annotation.Nullable final String value) {
         this._paymentTermsId = value;
     }
@@ -431,6 +446,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneNumber(@javax.annotation.Nullable final String value) {
         this._phoneNumber = value;
     }
@@ -439,6 +455,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the picture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPicture(@javax.annotation.Nullable final java.util.List<Picture> value) {
         this._picture = value;
     }
@@ -447,6 +464,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the shipmentMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShipmentMethod(@javax.annotation.Nullable final ShipmentMethod value) {
         this._shipmentMethod = value;
     }
@@ -455,6 +473,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the shipmentMethodId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShipmentMethodId(@javax.annotation.Nullable final String value) {
         this._shipmentMethodId = value;
     }
@@ -463,6 +482,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the taxAreaDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxAreaDisplayName(@javax.annotation.Nullable final String value) {
         this._taxAreaDisplayName = value;
     }
@@ -471,6 +491,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the taxAreaId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxAreaId(@javax.annotation.Nullable final String value) {
         this._taxAreaId = value;
     }
@@ -479,6 +500,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the taxLiable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxLiable(@javax.annotation.Nullable final Boolean value) {
         this._taxLiable = value;
     }
@@ -487,6 +509,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the taxRegistrationNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxRegistrationNumber(@javax.annotation.Nullable final String value) {
         this._taxRegistrationNumber = value;
     }
@@ -495,6 +518,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
@@ -503,6 +527,7 @@ public class Customer extends Entity implements Parsable {
      * @param value Value to set for the website property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebsite(@javax.annotation.Nullable final String value) {
         this._website = value;
     }

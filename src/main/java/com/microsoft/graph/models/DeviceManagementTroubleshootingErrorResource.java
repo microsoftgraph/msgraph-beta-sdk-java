@@ -22,6 +22,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * Instantiates a new deviceManagementTroubleshootingErrorResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementTroubleshootingErrorResource() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceManagementTroubleshootingErrorResource");
@@ -51,7 +52,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementTroubleshootingErrorResource currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("link", (n) -> { currentObject.setLink(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("link", this.getLink());
@@ -98,6 +100,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * @param value Value to set for the link property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLink(@javax.annotation.Nullable final String value) {
         this._link = value;
     }
@@ -114,6 +118,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -122,6 +127,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
         this._text = value;
     }

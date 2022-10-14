@@ -15,6 +15,7 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
      * Instantiates a new AppleExpeditedCheckinConfigurationBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppleExpeditedCheckinConfigurationBase() {
         super();
         this.setOdataType("#microsoft.graph.appleExpeditedCheckinConfigurationBase");
@@ -51,7 +52,7 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleExpeditedCheckinConfigurationBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enableExpeditedCheckin", (n) -> { currentObject.setEnableExpeditedCheckin(n.getBooleanValue()); });
         }};
     }
@@ -60,6 +61,7 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,6 +72,7 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
      * @param value Value to set for the enableExpeditedCheckin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableExpeditedCheckin(@javax.annotation.Nullable final Boolean value) {
         this._enableExpeditedCheckin = value;
     }

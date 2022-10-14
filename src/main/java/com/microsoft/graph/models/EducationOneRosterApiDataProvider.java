@@ -24,6 +24,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * Instantiates a new EducationOneRosterApiDataProvider and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationOneRosterApiDataProvider() {
         super();
         this.setOdataType("#microsoft.graph.educationOneRosterApiDataProvider");
@@ -69,7 +70,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationOneRosterApiDataProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("connectionSettings", (n) -> { currentObject.setConnectionSettings(n.getObjectValue(EducationSynchronizationConnectionSettings::createFromDiscriminatorValue)); });
             this.put("connectionUrl", (n) -> { currentObject.setConnectionUrl(n.getStringValue()); });
             this.put("customizations", (n) -> { currentObject.setCustomizations(n.getObjectValue(EducationSynchronizationCustomizations::createFromDiscriminatorValue)); });
@@ -107,6 +108,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * @param value Value to set for the connectionSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionSettings(@javax.annotation.Nullable final EducationSynchronizationConnectionSettings value) {
         this._connectionSettings = value;
     }
@@ -130,6 +133,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * @param value Value to set for the connectionUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionUrl(@javax.annotation.Nullable final String value) {
         this._connectionUrl = value;
     }
@@ -138,6 +142,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * @param value Value to set for the customizations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomizations(@javax.annotation.Nullable final EducationSynchronizationCustomizations value) {
         this._customizations = value;
     }
@@ -146,6 +151,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * @param value Value to set for the providerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProviderName(@javax.annotation.Nullable final String value) {
         this._providerName = value;
     }
@@ -154,6 +160,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * @param value Value to set for the schoolsIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchoolsIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._schoolsIds = value;
     }
@@ -162,6 +169,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      * @param value Value to set for the termIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._termIds = value;
     }

@@ -12,7 +12,7 @@ import java.util.Objects;
 public class PrinterShareViewpoint implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The lastUsedDateTime property */
+    /** Date and time when the printer was last used by the signed-in user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _lastUsedDateTime;
     /** The OdataType property */
     private String _odataType;
@@ -20,6 +20,7 @@ public class PrinterShareViewpoint implements AdditionalDataHolder, Parsable {
      * Instantiates a new printerShareViewpoint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrinterShareViewpoint() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.printerShareViewpoint");
@@ -49,13 +50,13 @@ public class PrinterShareViewpoint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterShareViewpoint currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("lastUsedDateTime", (n) -> { currentObject.setLastUsedDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the lastUsedDateTime property value. The lastUsedDateTime property
+     * Gets the lastUsedDateTime property value. Date and time when the printer was last used by the signed-in user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -75,6 +76,7 @@ public class PrinterShareViewpoint implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastUsedDateTime", this.getLastUsedDateTime());
@@ -86,14 +88,16 @@ public class PrinterShareViewpoint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the lastUsedDateTime property value. The lastUsedDateTime property
+     * Sets the lastUsedDateTime property value. Date and time when the printer was last used by the signed-in user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastUsedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUsedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUsedDateTime = value;
     }
@@ -102,6 +106,7 @@ public class PrinterShareViewpoint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

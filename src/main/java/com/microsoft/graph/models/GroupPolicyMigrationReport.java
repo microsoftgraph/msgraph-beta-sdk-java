@@ -42,6 +42,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Instantiates a new groupPolicyMigrationReport and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyMigrationReport() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyMigrationReport");
@@ -79,7 +80,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyMigrationReport currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("groupPolicyCreatedDateTime", (n) -> { currentObject.setGroupPolicyCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -197,6 +198,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -220,6 +222,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -228,6 +231,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -236,6 +240,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyCreatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._groupPolicyCreatedDateTime = value;
     }
@@ -244,6 +249,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyLastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._groupPolicyLastModifiedDateTime = value;
     }
@@ -252,6 +258,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyObjectId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyObjectId(@javax.annotation.Nullable final String value) {
         this._groupPolicyObjectId = value;
     }
@@ -260,6 +267,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the groupPolicySettingMappings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicySettingMappings(@javax.annotation.Nullable final java.util.List<GroupPolicySettingMapping> value) {
         this._groupPolicySettingMappings = value;
     }
@@ -268,6 +276,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -276,6 +285,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the migrationReadiness property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMigrationReadiness(@javax.annotation.Nullable final GroupPolicyMigrationReadiness value) {
         this._migrationReadiness = value;
     }
@@ -284,6 +294,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the ouDistinguishedName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOuDistinguishedName(@javax.annotation.Nullable final String value) {
         this._ouDistinguishedName = value;
     }
@@ -292,6 +303,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the supportedSettingsCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedSettingsCount(@javax.annotation.Nullable final Integer value) {
         this._supportedSettingsCount = value;
     }
@@ -300,6 +312,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the supportedSettingsPercent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedSettingsPercent(@javax.annotation.Nullable final Integer value) {
         this._supportedSettingsPercent = value;
     }
@@ -308,6 +321,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the targetedInActiveDirectory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedInActiveDirectory(@javax.annotation.Nullable final Boolean value) {
         this._targetedInActiveDirectory = value;
     }
@@ -316,6 +330,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the totalSettingsCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalSettingsCount(@javax.annotation.Nullable final Integer value) {
         this._totalSettingsCount = value;
     }
@@ -324,6 +339,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param value Value to set for the unsupportedGroupPolicyExtensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnsupportedGroupPolicyExtensions(@javax.annotation.Nullable final java.util.List<UnsupportedGroupPolicyExtension> value) {
         this._unsupportedGroupPolicyExtensions = value;
     }

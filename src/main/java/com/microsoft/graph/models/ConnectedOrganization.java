@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ConnectedOrganization extends Entity implements Parsable {
     /** UPN of the user who created this resource. Read-only. */
     private String _createdBy;
@@ -33,6 +34,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * Instantiates a new connectedOrganization and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConnectedOrganization() {
         super();
         this.setOdataType("#microsoft.graph.connectedOrganization");
@@ -94,7 +96,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConnectedOrganization currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getStringValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -152,6 +154,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,6 +174,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final String value) {
         this._createdBy = value;
     }
@@ -179,6 +183,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -187,6 +192,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -195,6 +201,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -203,6 +210,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param value Value to set for the externalSponsors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalSponsors(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._externalSponsors = value;
     }
@@ -211,6 +219,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param value Value to set for the identitySources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentitySources(@javax.annotation.Nullable final java.util.List<IdentitySource> value) {
         this._identitySources = value;
     }
@@ -219,6 +228,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param value Value to set for the internalSponsors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternalSponsors(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._internalSponsors = value;
     }
@@ -227,6 +237,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param value Value to set for the modifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedBy(@javax.annotation.Nullable final String value) {
         this._modifiedBy = value;
     }
@@ -235,6 +246,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._modifiedDateTime = value;
     }
@@ -243,6 +255,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ConnectedOrganizationState value) {
         this._state = value;
     }

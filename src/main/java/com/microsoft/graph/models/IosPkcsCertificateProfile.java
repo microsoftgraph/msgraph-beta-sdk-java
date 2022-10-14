@@ -28,6 +28,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      * Instantiates a new IosPkcsCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosPkcsCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.iosPkcsCertificateProfile");
@@ -89,7 +90,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosPkcsCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
             this.put("certificateTemplateName", (n) -> { currentObject.setCertificateTemplateName(n.getStringValue()); });
             this.put("certificationAuthority", (n) -> { currentObject.setCertificationAuthority(n.getStringValue()); });
@@ -129,6 +130,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      * @param value Value to set for the certificateStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateStore(@javax.annotation.Nullable final CertificateStore value) {
         this._certificateStore = value;
     }
@@ -154,6 +157,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      * @param value Value to set for the certificateTemplateName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateTemplateName(@javax.annotation.Nullable final String value) {
         this._certificateTemplateName = value;
     }
@@ -162,6 +166,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      * @param value Value to set for the certificationAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthority(@javax.annotation.Nullable final String value) {
         this._certificationAuthority = value;
     }
@@ -170,6 +175,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      * @param value Value to set for the certificationAuthorityName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthorityName(@javax.annotation.Nullable final String value) {
         this._certificationAuthorityName = value;
     }
@@ -178,6 +184,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      * @param value Value to set for the customSubjectAlternativeNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSubjectAlternativeNames(@javax.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
         this._customSubjectAlternativeNames = value;
     }
@@ -186,6 +193,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
         this._managedDeviceCertificateStates = value;
     }
@@ -194,6 +202,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
         this._subjectAlternativeNameFormatString = value;
     }
@@ -202,6 +211,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      * @param value Value to set for the subjectNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
         this._subjectNameFormatString = value;
     }

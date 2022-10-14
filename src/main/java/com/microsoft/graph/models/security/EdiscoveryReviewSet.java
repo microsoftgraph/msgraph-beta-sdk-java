@@ -16,6 +16,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
      * Instantiates a new EdiscoveryReviewSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoveryReviewSet() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryReviewSet");
@@ -37,7 +38,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryReviewSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("files", (n) -> { currentObject.setFiles(n.getCollectionOfObjectValues(EdiscoveryFile::createFromDiscriminatorValue)); });
             this.put("queries", (n) -> { currentObject.setQueries(n.getCollectionOfObjectValues(EdiscoveryReviewSetQuery::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
      * @param value Value to set for the files property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFiles(@javax.annotation.Nullable final java.util.List<EdiscoveryFile> value) {
         this._files = value;
     }
@@ -82,6 +85,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
      * @param value Value to set for the queries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueries(@javax.annotation.Nullable final java.util.List<EdiscoveryReviewSetQuery> value) {
         this._queries = value;
     }

@@ -29,6 +29,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * Instantiates a new AndroidDeviceOwnerCertificateProfileBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerCertificateProfileBase() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerCertificateProfileBase");
@@ -83,7 +84,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerCertificateProfileBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateValidityPeriodScale", (n) -> { currentObject.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
             this.put("certificateValidityPeriodValue", (n) -> { currentObject.setCertificateValidityPeriodValue(n.getIntegerValue()); });
             this.put("extendedKeyUsages", (n) -> { currentObject.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
@@ -130,6 +131,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateValidityPeriodScale(@javax.annotation.Nullable final CertificateValidityPeriodScale value) {
         this._certificateValidityPeriodScale = value;
     }
@@ -154,6 +157,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * @param value Value to set for the certificateValidityPeriodValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateValidityPeriodValue(@javax.annotation.Nullable final Integer value) {
         this._certificateValidityPeriodValue = value;
     }
@@ -162,6 +166,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * @param value Value to set for the extendedKeyUsages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtendedKeyUsages(@javax.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
         this._extendedKeyUsages = value;
     }
@@ -170,6 +175,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * @param value Value to set for the renewalThresholdPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
         this._renewalThresholdPercentage = value;
     }
@@ -178,6 +184,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * @param value Value to set for the rootCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificate(@javax.annotation.Nullable final AndroidDeviceOwnerTrustedRootCertificate value) {
         this._rootCertificate = value;
     }
@@ -186,6 +193,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * @param value Value to set for the subjectAlternativeNameType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameType(@javax.annotation.Nullable final SubjectAlternativeNameType value) {
         this._subjectAlternativeNameType = value;
     }
@@ -194,6 +202,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * @param value Value to set for the subjectNameFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormat(@javax.annotation.Nullable final SubjectNameFormat value) {
         this._subjectNameFormat = value;
     }

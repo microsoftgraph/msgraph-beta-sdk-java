@@ -18,6 +18,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      * Instantiates a new SecurityBaselineTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityBaselineTemplate() {
         super();
         this.setOdataType("#microsoft.graph.securityBaselineTemplate");
@@ -63,7 +64,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityBaselineTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("categoryDeviceStateSummaries", (n) -> { currentObject.setCategoryDeviceStateSummaries(n.getCollectionOfObjectValues(SecurityBaselineCategoryStateSummary::createFromDiscriminatorValue)); });
             this.put("deviceStates", (n) -> { currentObject.setDeviceStates(n.getCollectionOfObjectValues(SecurityBaselineDeviceState::createFromDiscriminatorValue)); });
             this.put("deviceStateSummary", (n) -> { currentObject.setDeviceStateSummary(n.getObjectValue(SecurityBaselineStateSummary::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      * @param value Value to set for the categoryDeviceStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategoryDeviceStateSummaries(@javax.annotation.Nullable final java.util.List<SecurityBaselineCategoryStateSummary> value) {
         this._categoryDeviceStateSummaries = value;
     }
@@ -94,6 +97,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      * @param value Value to set for the deviceStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStates(@javax.annotation.Nullable final java.util.List<SecurityBaselineDeviceState> value) {
         this._deviceStates = value;
     }
@@ -102,6 +106,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      * @param value Value to set for the deviceStateSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStateSummary(@javax.annotation.Nullable final SecurityBaselineStateSummary value) {
         this._deviceStateSummary = value;
     }

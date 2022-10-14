@@ -15,7 +15,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _expiration;
-    /** The interval between synchronization iterations. */
+    /** The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month. */
     private Period _interval;
     /** The OdataType property */
     private String _odataType;
@@ -25,6 +25,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      * Instantiates a new synchronizationSchedule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationSchedule() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.synchronizationSchedule");
@@ -62,7 +63,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationSchedule currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("expiration", (n) -> { currentObject.setExpiration(n.getOffsetDateTimeValue()); });
             this.put("interval", (n) -> { currentObject.setInterval(n.getPeriodValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -70,7 +71,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the interval property value. The interval between synchronization iterations.
+     * Gets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
      * @return a Period
      */
     @javax.annotation.Nullable
@@ -98,6 +99,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("expiration", this.getExpiration());
@@ -111,6 +113,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -119,14 +122,16 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the expiration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpiration(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expiration = value;
     }
     /**
-     * Sets the interval property value. The interval between synchronization iterations.
+     * Sets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
      * @param value Value to set for the interval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInterval(@javax.annotation.Nullable final Period value) {
         this._interval = value;
     }
@@ -135,6 +140,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -143,6 +149,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final SynchronizationScheduleState value) {
         this._state = value;
     }

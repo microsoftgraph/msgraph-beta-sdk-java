@@ -9,29 +9,31 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Task extends Entity implements Parsable {
-    /** The arguments property */
+    /** Arguments included within the task.  For guidance to configure this property, see Configure the arguments for built-in Lifecycle Workflow tasks. */
     private java.util.List<KeyValuePair> _arguments;
     /** The category property */
     private LifecycleTaskCategory _category;
-    /** The continueOnError property */
+    /** A boolean value that determines if the failure of this task stops the subsequent workflows from running. */
     private Boolean _continueOnError;
-    /** The description property */
+    /** A string that describes the purpose of the task for administrative use. */
     private String _description;
-    /** The displayName property */
+    /** A unique string that identifies the task. Supports $filter(eq) and orderBy. */
     private String _displayName;
-    /** The executionSequence property */
+    /** An integer that states in what order the task will run in a workflow. */
     private Integer _executionSequence;
-    /** The isEnabled property */
+    /** A boolean value that denotes whether the task is set to run or not. Supports $filter(eq, ne) and orderBy. */
     private Boolean _isEnabled;
-    /** The taskDefinitionId property */
+    /** A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks */
     private String _taskDefinitionId;
-    /** The taskProcessingResults property */
+    /** The result of processing the task. */
     private java.util.List<TaskProcessingResult> _taskProcessingResults;
     /**
-     * Instantiates a new Task and sets the default values.
+     * Instantiates a new task and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Task() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.task");
@@ -39,7 +41,7 @@ public class Task extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Task
+     * @return a task
      */
     @javax.annotation.Nonnull
     public static Task createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +49,7 @@ public class Task extends Entity implements Parsable {
         return new Task();
     }
     /**
-     * Gets the arguments property value. The arguments property
+     * Gets the arguments property value. Arguments included within the task.  For guidance to configure this property, see Configure the arguments for built-in Lifecycle Workflow tasks.
      * @return a keyValuePair
      */
     @javax.annotation.Nullable
@@ -63,7 +65,7 @@ public class Task extends Entity implements Parsable {
         return this._category;
     }
     /**
-     * Gets the continueOnError property value. The continueOnError property
+     * Gets the continueOnError property value. A boolean value that determines if the failure of this task stops the subsequent workflows from running.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -71,7 +73,7 @@ public class Task extends Entity implements Parsable {
         return this._continueOnError;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A string that describes the purpose of the task for administrative use.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +81,7 @@ public class Task extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. A unique string that identifies the task. Supports $filter(eq) and orderBy.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -87,7 +89,7 @@ public class Task extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the executionSequence property value. The executionSequence property
+     * Gets the executionSequence property value. An integer that states in what order the task will run in a workflow.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -101,7 +103,7 @@ public class Task extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Task currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("arguments", (n) -> { currentObject.setArguments(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(LifecycleTaskCategory.class)); });
             this.put("continueOnError", (n) -> { currentObject.setContinueOnError(n.getBooleanValue()); });
@@ -114,7 +116,7 @@ public class Task extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. A boolean value that denotes whether the task is set to run or not. Supports $filter(eq, ne) and orderBy.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -122,7 +124,7 @@ public class Task extends Entity implements Parsable {
         return this._isEnabled;
     }
     /**
-     * Gets the taskDefinitionId property value. The taskDefinitionId property
+     * Gets the taskDefinitionId property value. A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks
      * @return a string
      */
     @javax.annotation.Nullable
@@ -130,7 +132,7 @@ public class Task extends Entity implements Parsable {
         return this._taskDefinitionId;
     }
     /**
-     * Gets the taskProcessingResults property value. The taskProcessingResults property
+     * Gets the taskProcessingResults property value. The result of processing the task.
      * @return a taskProcessingResult
      */
     @javax.annotation.Nullable
@@ -142,6 +144,7 @@ public class Task extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -156,10 +159,11 @@ public class Task extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("taskProcessingResults", this.getTaskProcessingResults());
     }
     /**
-     * Sets the arguments property value. The arguments property
+     * Sets the arguments property value. Arguments included within the task.  For guidance to configure this property, see Configure the arguments for built-in Lifecycle Workflow tasks.
      * @param value Value to set for the arguments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setArguments(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._arguments = value;
     }
@@ -168,62 +172,70 @@ public class Task extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final LifecycleTaskCategory value) {
         this._category = value;
     }
     /**
-     * Sets the continueOnError property value. The continueOnError property
+     * Sets the continueOnError property value. A boolean value that determines if the failure of this task stops the subsequent workflows from running.
      * @param value Value to set for the continueOnError property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContinueOnError(@javax.annotation.Nullable final Boolean value) {
         this._continueOnError = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A string that describes the purpose of the task for administrative use.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. A unique string that identifies the task. Supports $filter(eq) and orderBy.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
     /**
-     * Sets the executionSequence property value. The executionSequence property
+     * Sets the executionSequence property value. An integer that states in what order the task will run in a workflow.
      * @param value Value to set for the executionSequence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExecutionSequence(@javax.annotation.Nullable final Integer value) {
         this._executionSequence = value;
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. A boolean value that denotes whether the task is set to run or not. Supports $filter(eq, ne) and orderBy.
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
     /**
-     * Sets the taskDefinitionId property value. The taskDefinitionId property
+     * Sets the taskDefinitionId property value. A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks
      * @param value Value to set for the taskDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskDefinitionId(@javax.annotation.Nullable final String value) {
         this._taskDefinitionId = value;
     }
     /**
-     * Sets the taskProcessingResults property value. The taskProcessingResults property
+     * Sets the taskProcessingResults property value. The result of processing the task.
      * @param value Value to set for the taskProcessingResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskProcessingResults(@javax.annotation.Nullable final java.util.List<TaskProcessingResult> value) {
         this._taskProcessingResults = value;
     }

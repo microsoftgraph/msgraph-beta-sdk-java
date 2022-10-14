@@ -15,12 +15,13 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     private Map<String, Object> _additionalData;
     /** The OdataType property */
     private String _odataType;
-    /** The timeoutDuration property */
+    /** Callback time out in ISO 8601 time duration. Accepted time durations are between five minutes to three hours. For example, PT5M for five minutes and PT3H for three hours. */
     private Period _timeoutDuration;
     /**
      * Instantiates a new customExtensionCallbackConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomExtensionCallbackConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.customExtensionCallbackConfiguration");
@@ -57,7 +58,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomExtensionCallbackConfiguration currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("timeoutDuration", (n) -> { currentObject.setTimeoutDuration(n.getPeriodValue()); });
         }};
@@ -71,7 +72,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
         return this._odataType;
     }
     /**
-     * Gets the timeoutDuration property value. The timeoutDuration property
+     * Gets the timeoutDuration property value. Callback time out in ISO 8601 time duration. Accepted time durations are between five minutes to three hours. For example, PT5M for five minutes and PT3H for three hours.
      * @return a Period
      */
     @javax.annotation.Nullable
@@ -83,6 +84,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -94,6 +96,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -102,14 +105,16 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
     /**
-     * Sets the timeoutDuration property value. The timeoutDuration property
+     * Sets the timeoutDuration property value. Callback time out in ISO 8601 time duration. Accepted time durations are between five minutes to three hours. For example, PT5M for five minutes and PT3H for three hours.
      * @param value Value to set for the timeoutDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeoutDuration(@javax.annotation.Nullable final Period value) {
         this._timeoutDuration = value;
     }

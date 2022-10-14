@@ -22,6 +22,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * Instantiates a new WindowsDomainJoinConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDomainJoinConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsDomainJoinConfiguration");
@@ -67,7 +68,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDomainJoinConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeDirectoryDomainName", (n) -> { currentObject.setActiveDirectoryDomainName(n.getStringValue()); });
             this.put("computerNameStaticPrefix", (n) -> { currentObject.setComputerNameStaticPrefix(n.getStringValue()); });
             this.put("computerNameSuffixRandomCharCount", (n) -> { currentObject.setComputerNameSuffixRandomCharCount(n.getIntegerValue()); });
@@ -96,6 +97,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the activeDirectoryDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDirectoryDomainName(@javax.annotation.Nullable final String value) {
         this._activeDirectoryDomainName = value;
     }
@@ -118,6 +121,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the computerNameStaticPrefix property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComputerNameStaticPrefix(@javax.annotation.Nullable final String value) {
         this._computerNameStaticPrefix = value;
     }
@@ -126,6 +130,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the computerNameSuffixRandomCharCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComputerNameSuffixRandomCharCount(@javax.annotation.Nullable final Integer value) {
         this._computerNameSuffixRandomCharCount = value;
     }
@@ -134,6 +139,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the networkAccessConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkAccessConfigurations(@javax.annotation.Nullable final java.util.List<DeviceConfiguration> value) {
         this._networkAccessConfigurations = value;
     }
@@ -142,6 +148,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the organizationalUnit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizationalUnit(@javax.annotation.Nullable final String value) {
         this._organizationalUnit = value;
     }

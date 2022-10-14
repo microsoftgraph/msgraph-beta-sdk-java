@@ -14,6 +14,7 @@ public class DeviceManagementSettingRequiredConstraint extends DeviceManagementC
      * Instantiates a new DeviceManagementSettingRequiredConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingRequiredConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingRequiredConstraint");
@@ -35,7 +36,7 @@ public class DeviceManagementSettingRequiredConstraint extends DeviceManagementC
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingRequiredConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("notConfiguredValue", (n) -> { currentObject.setNotConfiguredValue(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceManagementSettingRequiredConstraint extends DeviceManagementC
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementSettingRequiredConstraint extends DeviceManagementC
      * @param value Value to set for the notConfiguredValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotConfiguredValue(@javax.annotation.Nullable final String value) {
         this._notConfiguredValue = value;
     }

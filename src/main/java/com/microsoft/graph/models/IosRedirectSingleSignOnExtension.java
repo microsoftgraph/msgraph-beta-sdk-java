@@ -20,6 +20,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      * Instantiates a new IosRedirectSingleSignOnExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosRedirectSingleSignOnExtension() {
         super();
         this.setOdataType("#microsoft.graph.iosRedirectSingleSignOnExtension");
@@ -57,7 +58,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosRedirectSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configurations", (n) -> { currentObject.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
             this.put("extensionIdentifier", (n) -> { currentObject.setExtensionIdentifier(n.getStringValue()); });
             this.put("teamIdentifier", (n) -> { currentObject.setTeamIdentifier(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the configurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurations(@javax.annotation.Nullable final java.util.List<KeyTypedValuePair> value) {
         this._configurations = value;
     }
@@ -106,6 +109,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the extensionIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionIdentifier(@javax.annotation.Nullable final String value) {
         this._extensionIdentifier = value;
     }
@@ -114,6 +118,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the teamIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamIdentifier(@javax.annotation.Nullable final String value) {
         this._teamIdentifier = value;
     }
@@ -122,6 +127,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the urlPrefixes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrlPrefixes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._urlPrefixes = value;
     }

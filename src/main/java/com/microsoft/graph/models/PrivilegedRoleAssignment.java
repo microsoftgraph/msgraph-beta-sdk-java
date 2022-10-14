@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PrivilegedRoleAssignment extends Entity implements Parsable {
     /** The UTC DateTime when the temporary privileged role assignment will be expired. For permanent role assignment, the value is null. */
     private OffsetDateTime _expirationDateTime;
@@ -26,6 +26,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      * Instantiates a new privilegedRoleAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivilegedRoleAssignment() {
         super();
         this.setOdataType("#microsoft.graph.privilegedRoleAssignment");
@@ -55,7 +56,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedRoleAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("isElevated", (n) -> { currentObject.setIsElevated(n.getBooleanValue()); });
             this.put("resultMessage", (n) -> { currentObject.setResultMessage(n.getStringValue()); });
@@ -109,6 +110,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,6 +126,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -132,6 +135,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the isElevated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsElevated(@javax.annotation.Nullable final Boolean value) {
         this._isElevated = value;
     }
@@ -140,6 +144,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the resultMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultMessage(@javax.annotation.Nullable final String value) {
         this._resultMessage = value;
     }
@@ -148,6 +153,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the roleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleId(@javax.annotation.Nullable final String value) {
         this._roleId = value;
     }
@@ -156,6 +162,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the roleInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleInfo(@javax.annotation.Nullable final PrivilegedRole value) {
         this._roleInfo = value;
     }
@@ -164,6 +171,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

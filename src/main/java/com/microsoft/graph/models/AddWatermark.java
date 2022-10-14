@@ -14,6 +14,7 @@ public class AddWatermark extends MarkContent implements Parsable {
      * Instantiates a new AddWatermark and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddWatermark() {
         super();
         this.setOdataType("#microsoft.graph.addWatermark");
@@ -35,7 +36,7 @@ public class AddWatermark extends MarkContent implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddWatermark currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("orientation", (n) -> { currentObject.setOrientation(n.getEnumValue(PageOrientation.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class AddWatermark extends MarkContent implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class AddWatermark extends MarkContent implements Parsable {
      * @param value Value to set for the orientation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrientation(@javax.annotation.Nullable final PageOrientation value) {
         this._orientation = value;
     }

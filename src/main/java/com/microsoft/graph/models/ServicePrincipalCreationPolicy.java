@@ -18,6 +18,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
      * Instantiates a new ServicePrincipalCreationPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServicePrincipalCreationPolicy() {
         super();
         this.setOdataType("#microsoft.graph.servicePrincipalCreationPolicy");
@@ -47,7 +48,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServicePrincipalCreationPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("excludes", (n) -> { currentObject.setExcludes(n.getCollectionOfObjectValues(ServicePrincipalCreationConditionSet::createFromDiscriminatorValue)); });
             this.put("includes", (n) -> { currentObject.setIncludes(n.getCollectionOfObjectValues(ServicePrincipalCreationConditionSet::createFromDiscriminatorValue)); });
             this.put("isBuiltIn", (n) -> { currentObject.setIsBuiltIn(n.getBooleanValue()); });
@@ -74,6 +75,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
      * @param value Value to set for the excludes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludes(@javax.annotation.Nullable final java.util.List<ServicePrincipalCreationConditionSet> value) {
         this._excludes = value;
     }
@@ -94,6 +97,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
      * @param value Value to set for the includes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludes(@javax.annotation.Nullable final java.util.List<ServicePrincipalCreationConditionSet> value) {
         this._includes = value;
     }
@@ -102,6 +106,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
      * @param value Value to set for the isBuiltIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBuiltIn(@javax.annotation.Nullable final Boolean value) {
         this._isBuiltIn = value;
     }

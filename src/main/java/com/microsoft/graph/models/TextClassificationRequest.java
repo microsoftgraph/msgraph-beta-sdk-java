@@ -22,6 +22,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * Instantiates a new TextClassificationRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TextClassificationRequest() {
         super();
         this.setOdataType("#microsoft.graph.textClassificationRequest");
@@ -43,7 +44,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TextClassificationRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fileExtension", (n) -> { currentObject.setFileExtension(n.getStringValue()); });
             this.put("matchTolerancesToInclude", (n) -> { currentObject.setMatchTolerancesToInclude(n.getEnumValue(MlClassificationMatchTolerance.class)); });
             this.put("scopesToRun", (n) -> { currentObject.setScopesToRun(n.getEnumValue(SensitiveTypeScope.class)); });
@@ -96,6 +97,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the fileExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileExtension(@javax.annotation.Nullable final String value) {
         this._fileExtension = value;
     }
@@ -118,6 +121,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the matchTolerancesToInclude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatchTolerancesToInclude(@javax.annotation.Nullable final MlClassificationMatchTolerance value) {
         this._matchTolerancesToInclude = value;
     }
@@ -126,6 +130,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the scopesToRun property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopesToRun(@javax.annotation.Nullable final SensitiveTypeScope value) {
         this._scopesToRun = value;
     }
@@ -134,6 +139,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the sensitiveTypeIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sensitiveTypeIds = value;
     }
@@ -142,6 +148,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
         this._text = value;
     }

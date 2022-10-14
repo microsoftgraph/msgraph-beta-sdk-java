@@ -16,6 +16,7 @@ public class WinGetApp extends MobileApp implements Parsable {
      * Instantiates a new WinGetApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WinGetApp() {
         super();
         this.setOdataType("#microsoft.graph.winGetApp");
@@ -37,7 +38,7 @@ public class WinGetApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WinGetApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("installExperience", (n) -> { currentObject.setInstallExperience(n.getObjectValue(WinGetAppInstallExperience::createFromDiscriminatorValue)); });
             this.put("packageIdentifier", (n) -> { currentObject.setPackageIdentifier(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class WinGetApp extends MobileApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class WinGetApp extends MobileApp implements Parsable {
      * @param value Value to set for the installExperience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallExperience(@javax.annotation.Nullable final WinGetAppInstallExperience value) {
         this._installExperience = value;
     }
@@ -82,6 +85,7 @@ public class WinGetApp extends MobileApp implements Parsable {
      * @param value Value to set for the packageIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageIdentifier(@javax.annotation.Nullable final String value) {
         this._packageIdentifier = value;
     }

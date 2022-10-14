@@ -14,6 +14,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
      * Instantiates a new EducationCsvDataProvider and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationCsvDataProvider() {
         super();
         this.setOdataType("#microsoft.graph.educationCsvDataProvider");
@@ -43,7 +44,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationCsvDataProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customizations", (n) -> { currentObject.setCustomizations(n.getObjectValue(EducationSynchronizationCustomizations::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
      * @param value Value to set for the customizations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomizations(@javax.annotation.Nullable final EducationSynchronizationCustomizations value) {
         this._customizations = value;
     }

@@ -16,6 +16,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
      * Instantiates a new DeliveryOptimizationBandwidthAbsolute and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeliveryOptimizationBandwidthAbsolute() {
         super();
         this.setOdataType("#microsoft.graph.deliveryOptimizationBandwidthAbsolute");
@@ -37,7 +38,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeliveryOptimizationBandwidthAbsolute currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maximumDownloadBandwidthInKilobytesPerSecond", (n) -> { currentObject.setMaximumDownloadBandwidthInKilobytesPerSecond(n.getLongValue()); });
             this.put("maximumUploadBandwidthInKilobytesPerSecond", (n) -> { currentObject.setMaximumUploadBandwidthInKilobytesPerSecond(n.getLongValue()); });
         }};
@@ -63,6 +64,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
      * @param value Value to set for the maximumDownloadBandwidthInKilobytesPerSecond property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumDownloadBandwidthInKilobytesPerSecond(@javax.annotation.Nullable final Long value) {
         this._maximumDownloadBandwidthInKilobytesPerSecond = value;
     }
@@ -82,6 +85,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
      * @param value Value to set for the maximumUploadBandwidthInKilobytesPerSecond property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumUploadBandwidthInKilobytesPerSecond(@javax.annotation.Nullable final Long value) {
         this._maximumUploadBandwidthInKilobytesPerSecond = value;
     }

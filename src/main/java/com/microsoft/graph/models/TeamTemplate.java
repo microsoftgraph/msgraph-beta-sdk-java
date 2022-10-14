@@ -7,13 +7,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TeamTemplate extends Entity implements Parsable {
     /** The definitions property */
     private java.util.List<TeamTemplateDefinition> _definitions;
     /**
-     * Instantiates a new TeamTemplate and sets the default values.
+     * Instantiates a new teamTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamTemplate() {
         super();
         this.setOdataType("#microsoft.graph.teamTemplate");
@@ -21,7 +23,7 @@ public class TeamTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamTemplate
+     * @return a teamTemplate
      */
     @javax.annotation.Nonnull
     public static TeamTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +45,7 @@ public class TeamTemplate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("definitions", (n) -> { currentObject.setDefinitions(n.getCollectionOfObjectValues(TeamTemplateDefinition::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +54,7 @@ public class TeamTemplate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +65,7 @@ public class TeamTemplate extends Entity implements Parsable {
      * @param value Value to set for the definitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitions(@javax.annotation.Nullable final java.util.List<TeamTemplateDefinition> value) {
         this._definitions = value;
     }

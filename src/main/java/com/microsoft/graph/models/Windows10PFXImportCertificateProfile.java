@@ -14,6 +14,7 @@ public class Windows10PFXImportCertificateProfile extends DeviceConfiguration im
      * Instantiates a new Windows10PFXImportCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10PFXImportCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windows10PFXImportCertificateProfile");
@@ -35,7 +36,7 @@ public class Windows10PFXImportCertificateProfile extends DeviceConfiguration im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10PFXImportCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("keyStorageProvider", (n) -> { currentObject.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class Windows10PFXImportCertificateProfile extends DeviceConfiguration im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class Windows10PFXImportCertificateProfile extends DeviceConfiguration im
      * @param value Value to set for the keyStorageProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyStorageProvider(@javax.annotation.Nullable final KeyStorageProviderOption value) {
         this._keyStorageProvider = value;
     }

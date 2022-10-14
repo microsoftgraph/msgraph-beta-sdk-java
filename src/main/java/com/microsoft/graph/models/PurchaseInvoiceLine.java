@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class PurchaseInvoiceLine extends Entity implements Parsable {
     /** The account property */
     private Account _account;
@@ -57,9 +58,10 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
     /** The unitCost property */
     private BigDecimal _unitCost;
     /**
-     * Instantiates a new PurchaseInvoiceLine and sets the default values.
+     * Instantiates a new purchaseInvoiceLine and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PurchaseInvoiceLine() {
         super();
         this.setOdataType("#microsoft.graph.purchaseInvoiceLine");
@@ -67,7 +69,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PurchaseInvoiceLine
+     * @return a purchaseInvoiceLine
      */
     @javax.annotation.Nonnull
     public static PurchaseInvoiceLine createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -161,7 +163,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PurchaseInvoiceLine currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("account", (n) -> { currentObject.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
             this.put("accountId", (n) -> { currentObject.setAccountId(n.getStringValue()); });
             this.put("amountExcludingTax", (n) -> { currentObject.setAmountExcludingTax(n.getBigDecimalValue()); });
@@ -296,6 +298,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -328,6 +331,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the account property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccount(@javax.annotation.Nullable final Account value) {
         this._account = value;
     }
@@ -336,6 +340,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the accountId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountId(@javax.annotation.Nullable final String value) {
         this._accountId = value;
     }
@@ -344,6 +349,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the amountExcludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAmountExcludingTax(@javax.annotation.Nullable final BigDecimal value) {
         this._amountExcludingTax = value;
     }
@@ -352,6 +358,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the amountIncludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAmountIncludingTax(@javax.annotation.Nullable final BigDecimal value) {
         this._amountIncludingTax = value;
     }
@@ -360,6 +367,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -368,6 +376,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the discountAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountAmount(@javax.annotation.Nullable final BigDecimal value) {
         this._discountAmount = value;
     }
@@ -376,6 +385,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the discountAppliedBeforeTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountAppliedBeforeTax(@javax.annotation.Nullable final Boolean value) {
         this._discountAppliedBeforeTax = value;
     }
@@ -384,6 +394,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the discountPercent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountPercent(@javax.annotation.Nullable final BigDecimal value) {
         this._discountPercent = value;
     }
@@ -392,6 +403,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the documentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDocumentId(@javax.annotation.Nullable final String value) {
         this._documentId = value;
     }
@@ -400,6 +412,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the expectedReceiptDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpectedReceiptDate(@javax.annotation.Nullable final LocalDate value) {
         this._expectedReceiptDate = value;
     }
@@ -408,6 +421,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the invoiceDiscountAllocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceDiscountAllocation(@javax.annotation.Nullable final BigDecimal value) {
         this._invoiceDiscountAllocation = value;
     }
@@ -416,6 +430,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the item property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItem(@javax.annotation.Nullable final Item value) {
         this._item = value;
     }
@@ -424,6 +439,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the itemId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemId(@javax.annotation.Nullable final String value) {
         this._itemId = value;
     }
@@ -432,6 +448,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the lineType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLineType(@javax.annotation.Nullable final String value) {
         this._lineType = value;
     }
@@ -440,6 +457,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the netAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetAmount(@javax.annotation.Nullable final BigDecimal value) {
         this._netAmount = value;
     }
@@ -448,6 +466,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the netAmountIncludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetAmountIncludingTax(@javax.annotation.Nullable final BigDecimal value) {
         this._netAmountIncludingTax = value;
     }
@@ -456,6 +475,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the netTaxAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetTaxAmount(@javax.annotation.Nullable final BigDecimal value) {
         this._netTaxAmount = value;
     }
@@ -464,6 +484,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the quantity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuantity(@javax.annotation.Nullable final BigDecimal value) {
         this._quantity = value;
     }
@@ -472,6 +493,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the sequence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSequence(@javax.annotation.Nullable final Integer value) {
         this._sequence = value;
     }
@@ -480,6 +502,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the taxCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxCode(@javax.annotation.Nullable final String value) {
         this._taxCode = value;
     }
@@ -488,6 +511,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the taxPercent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxPercent(@javax.annotation.Nullable final BigDecimal value) {
         this._taxPercent = value;
     }
@@ -496,6 +520,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the totalTaxAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalTaxAmount(@javax.annotation.Nullable final BigDecimal value) {
         this._totalTaxAmount = value;
     }
@@ -504,6 +529,7 @@ public class PurchaseInvoiceLine extends Entity implements Parsable {
      * @param value Value to set for the unitCost property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnitCost(@javax.annotation.Nullable final BigDecimal value) {
         this._unitCost = value;
     }
