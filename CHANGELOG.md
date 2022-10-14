@@ -11,6 +11,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.58.0] - 2022-10-12
+
+### Added
+ 
+- AccessPackageMoveToCatalog models and related requests.
+- CloudPcExportJob models and related requests. 
+- CloudPcReports models and related requests. 
+- ConditionalAccessTemplate model and related requests. 
+- DeviceCompliancePolicyGetNoncompliantDevicesToRetire models and related requests. 
+- DeviceManagementGetOrganizationalMessageTenantConsent models and related requests. 
+- DeviceManagementPostOrganizationalMessageTenantConsent models and related requests. 
+- DeviceManagementReportsGetMobileApplicationManagementAppRegistrationSummaryReport models and related requests. 
+- DeviceManagementUpdateOrganizationalMessageTenantConsent models and related requests. 
+- ManagedDeviceEnrollNowAction models and related requests. 
+- MicrosoftTunnelServerGenerateServerLog models and related requests. 
+- MicrosoftTunnelServerLogCollectionResponseGenerateDownloadUrl models and related requests. 
+- UserExperienceAnalyticsAnomaly models and related requests. 
+- AssociatedAssignmentPayloadType model.
+- CloudPcReportName model.
+- ConditionalAccessPolicyDetail model. 
+- DeviceManagementPriorityMetaData model. 
+- MobileThreatDefensePartnerPriority model. 
+- OrganizationalMessageTenantConsent model. 
+- PayloadByFilter model. 
+- SearchContent model. 
+- ServicePrincipalLockConfiguration model. 
+- SharePointOneDriveOptions model. 
+- TemplateScenarios model. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests.
+
 ## [0.57.0] - 2022-09-22
 
 ### Added

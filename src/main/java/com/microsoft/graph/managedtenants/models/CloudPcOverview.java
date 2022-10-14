@@ -171,7 +171,7 @@ public class CloudPcOverview extends Entity implements IJsonBackedObject {
 
     /**
      * The Total Business Licenses.
-     * 
+     * The total number of cloud PC devices that have the Business SKU. Optional. Read-only.
      */
     @SerializedName(value = "totalBusinessLicenses", alternate = {"TotalBusinessLicenses"})
     @Expose
@@ -198,7 +198,7 @@ public class CloudPcOverview extends Entity implements IJsonBackedObject {
 
     /**
      * The Total Enterprise Licenses.
-     * 
+     * The total number of cloud PC devices that have the Enterprise SKU. Optional. Read-only.
      */
     @SerializedName(value = "totalEnterpriseLicenses", alternate = {"TotalEnterpriseLicenses"})
     @Expose

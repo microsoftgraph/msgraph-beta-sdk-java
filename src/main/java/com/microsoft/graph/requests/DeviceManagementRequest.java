@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagement;
 import com.microsoft.graph.models.AssignmentFilterEvaluateRequest;
 import com.microsoft.graph.models.AssignmentFilterStatusDetails;
+import com.microsoft.graph.models.OrganizationalMessageTenantConsent;
 import com.microsoft.graph.models.RolePermission;
 import com.microsoft.graph.models.ComanagedDevicesSummary;
 import com.microsoft.graph.models.ComanagementEligibleDevicesSummary;

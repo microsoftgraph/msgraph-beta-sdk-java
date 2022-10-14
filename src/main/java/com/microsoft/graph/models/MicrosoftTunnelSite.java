@@ -30,7 +30,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The MicrosoftTunnelSite's description
+     * The site's description (optional)
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -39,7 +39,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The MicrosoftTunnelSite's display name
+     * The display name for the site. This property is required when a site is created.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Internal Network Probe Url.
-     * The MicrosoftTunnelSite's Internal Network Access Probe URL
+     * The site's Internal Network Access Probe URL
      */
     @SerializedName(value = "internalNetworkProbeUrl", alternate = {"InternalNetworkProbeUrl"})
     @Expose
@@ -66,7 +66,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Public Address.
-     * The MicrosoftTunnelSite's public domain name or IP address
+     * The site's public domain name or IP address
      */
     @SerializedName(value = "publicAddress", alternate = {"PublicAddress"})
     @Expose
@@ -75,7 +75,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Scope Tag Ids.
-     * List of Scope Tags for this Entity instance.
+     * List of Scope Tags for this Entity instance
      */
     @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
@@ -93,7 +93,7 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Upgrade Available.
-     * True if an upgrade is available
+     * The site provides the state of when an upgrade is available
      */
     @SerializedName(value = "upgradeAvailable", alternate = {"UpgradeAvailable"})
     @Expose

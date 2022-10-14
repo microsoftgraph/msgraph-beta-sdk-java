@@ -65,4 +65,13 @@ public class MicrosoftTunnelServerLogCollectionResponseRequestBuilder extends Ba
     public MicrosoftTunnelServerLogCollectionResponseCreateDownloadUrlRequestBuilder createDownloadUrl() {
         return new MicrosoftTunnelServerLogCollectionResponseCreateDownloadUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createDownloadUrl"), getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public MicrosoftTunnelServerLogCollectionResponseGenerateDownloadUrlRequestBuilder generateDownloadUrl() {
+        return new MicrosoftTunnelServerLogCollectionResponseGenerateDownloadUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.generateDownloadUrl"), getClient(), null);
+    }
 }

@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.DeviceThreatProtectionLevel;
 import com.microsoft.graph.models.AndroidRequiredPasswordType;
+import com.microsoft.graph.models.AndroidRequiredPasswordComplexity;
 import com.microsoft.graph.models.AndroidSafetyNetEvaluationType;
 import com.microsoft.graph.models.DeviceCompliancePolicy;
 
@@ -144,6 +145,15 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     @Expose
 	@Nullable
     public Integer passwordSignInFailureCountBeforeFactoryReset;
+
+    /**
+     * The Required Password Complexity.
+     * Indicates the required device password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android API 12+. Possible values are: none, low, medium, high.
+     */
+    @SerializedName(value = "requiredPasswordComplexity", alternate = {"RequiredPasswordComplexity"})
+    @Expose
+	@Nullable
+    public AndroidRequiredPasswordComplexity requiredPasswordComplexity;
 
     /**
      * The Security Block Jailbroken Devices.

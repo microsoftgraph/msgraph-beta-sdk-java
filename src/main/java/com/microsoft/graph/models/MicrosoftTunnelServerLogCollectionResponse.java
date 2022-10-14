@@ -82,7 +82,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
 
     /**
      * The Status.
-     * The status of log collection. Possible values are: pending, completed, failed.
+     * The status of log collection. Possible values are: pending, completed, failed. Possible values are: pending, completed, failed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

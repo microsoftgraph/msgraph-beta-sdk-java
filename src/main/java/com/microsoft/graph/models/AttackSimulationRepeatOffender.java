@@ -40,7 +40,7 @@ public class AttackSimulationRepeatOffender implements IJsonBackedObject {
 
     /**
      * The Attack Simulation User.
-     * User in an attack simulation and training campaign.
+     * The user in an attack simulation and training campaign.
      */
     @SerializedName(value = "attackSimulationUser", alternate = {"AttackSimulationUser"})
     @Expose

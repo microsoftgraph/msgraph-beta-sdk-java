@@ -51,7 +51,7 @@ public class SimulationReport implements IJsonBackedObject {
 
     /**
      * The Simulation Users.
-     * Represents users of a tenant and their online actions in an attack simulation and training campaign.
+     * The tenant users and their online actions in an attack simulation and training campaign.
      */
     @SerializedName(value = "simulationUsers", alternate = {"SimulationUsers"})
     @Expose
