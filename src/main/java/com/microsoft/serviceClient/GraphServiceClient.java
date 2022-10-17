@@ -20,6 +20,7 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
      * Sets a few basic values for the GraphClientOptions to pass to the client.
      * @return the GraphClientOptions instance for the GraphServiceClient.
      */
+    @Nonnull
     public static GraphClientOption getGraphClientOptions() {
         GraphClientOption graphClientOptions = new GraphClientOption();
         graphClientOptions.setGraphServiceTargetVersion("beta");
