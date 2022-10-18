@@ -22,6 +22,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new unenrollAssetsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnenrollAssetsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -58,7 +59,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnenrollAssetsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("assets", (n) -> { currentObject.setAssets(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
             this.put("updateCategory", (n) -> { currentObject.setUpdateCategory(n.getEnumValue(UpdateCategory.class)); });
         }};
@@ -76,6 +77,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("assets", this.getAssets());
@@ -87,6 +89,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -95,6 +98,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the assets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssets(@javax.annotation.Nullable final java.util.List<UpdatableAsset> value) {
         this._assets = value;
     }
@@ -103,6 +107,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the updateCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateCategory(@javax.annotation.Nullable final UpdateCategory value) {
         this._updateCategory = value;
     }

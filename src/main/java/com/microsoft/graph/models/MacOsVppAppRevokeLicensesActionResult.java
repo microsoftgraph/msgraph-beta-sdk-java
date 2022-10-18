@@ -37,6 +37,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * Instantiates a new macOsVppAppRevokeLicensesActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOsVppAppRevokeLicensesActionResult() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.macOsVppAppRevokeLicensesActionResult");
@@ -98,7 +99,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOsVppAppRevokeLicensesActionResult currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("actionFailureReason", (n) -> { currentObject.setActionFailureReason(n.getEnumValue(VppTokenActionFailureReason.class)); });
             this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
             this.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
@@ -164,6 +165,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("actionFailureReason", this.getActionFailureReason());
@@ -183,6 +185,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param value Value to set for the actionFailureReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionFailureReason(@javax.annotation.Nullable final VppTokenActionFailureReason value) {
         this._actionFailureReason = value;
     }
@@ -191,6 +194,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param value Value to set for the actionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionName(@javax.annotation.Nullable final String value) {
         this._actionName = value;
     }
@@ -199,6 +203,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param value Value to set for the actionState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionState(@javax.annotation.Nullable final ActionState value) {
         this._actionState = value;
     }
@@ -207,6 +212,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -215,6 +221,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param value Value to set for the failedLicensesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedLicensesCount(@javax.annotation.Nullable final Integer value) {
         this._failedLicensesCount = value;
     }
@@ -223,6 +230,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
     }
@@ -231,6 +239,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -239,6 +248,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -247,6 +257,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -255,6 +266,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param value Value to set for the totalLicensesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalLicensesCount(@javax.annotation.Nullable final Integer value) {
         this._totalLicensesCount = value;
     }
@@ -263,6 +275,7 @@ public class MacOsVppAppRevokeLicensesActionResult implements AdditionalDataHold
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

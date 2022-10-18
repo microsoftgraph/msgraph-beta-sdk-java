@@ -24,6 +24,7 @@ public class OrganizationalMessageContent implements AdditionalDataHolder, Parsa
      * Instantiates a new organizationalMessageContent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalMessageContent() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.organizationalMessageContent");
@@ -53,7 +54,7 @@ public class OrganizationalMessageContent implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageContent currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("guidedContentId", (n) -> { currentObject.setGuidedContentId(n.getStringValue()); });
             this.put("logoInfo", (n) -> { currentObject.setLogoInfo(n.getObjectValue(OrganizationalMessageLogo::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class OrganizationalMessageContent implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("guidedContentId", this.getGuidedContentId());
@@ -110,6 +112,7 @@ public class OrganizationalMessageContent implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class OrganizationalMessageContent implements AdditionalDataHolder, Parsa
      * @param value Value to set for the guidedContentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGuidedContentId(@javax.annotation.Nullable final String value) {
         this._guidedContentId = value;
     }
@@ -126,6 +130,7 @@ public class OrganizationalMessageContent implements AdditionalDataHolder, Parsa
      * @param value Value to set for the logoInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoInfo(@javax.annotation.Nullable final OrganizationalMessageLogo value) {
         this._logoInfo = value;
     }
@@ -134,6 +139,7 @@ public class OrganizationalMessageContent implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -142,6 +148,7 @@ public class OrganizationalMessageContent implements AdditionalDataHolder, Parsa
      * @param value Value to set for the placementDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlacementDetails(@javax.annotation.Nullable final java.util.List<OrganizationalMessagePlacementDetail> value) {
         this._placementDetails = value;
     }

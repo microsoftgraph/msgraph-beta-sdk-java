@@ -21,6 +21,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * Instantiates a new deviceManagementComplianceActionItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementComplianceActionItem() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementComplianceActionItem");
@@ -50,7 +51,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementComplianceActionItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionType", (n) -> { currentObject.setActionType(n.getEnumValue(DeviceManagementComplianceActionType.class)); });
             this.put("gracePeriodHours", (n) -> { currentObject.setGracePeriodHours(n.getIntegerValue()); });
             this.put("notificationMessageCCList", (n) -> { currentObject.setNotificationMessageCCList(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -86,6 +87,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param value Value to set for the actionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionType(@javax.annotation.Nullable final DeviceManagementComplianceActionType value) {
         this._actionType = value;
     }
@@ -107,6 +110,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param value Value to set for the gracePeriodHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGracePeriodHours(@javax.annotation.Nullable final Integer value) {
         this._gracePeriodHours = value;
     }
@@ -115,6 +119,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param value Value to set for the notificationMessageCCList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationMessageCCList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notificationMessageCCList = value;
     }
@@ -123,6 +128,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param value Value to set for the notificationTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationTemplateId(@javax.annotation.Nullable final String value) {
         this._notificationTemplateId = value;
     }

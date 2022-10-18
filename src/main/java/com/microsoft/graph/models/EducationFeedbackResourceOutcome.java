@@ -16,6 +16,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * Instantiates a new EducationFeedbackResourceOutcome and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationFeedbackResourceOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationFeedbackResourceOutcome");
@@ -45,7 +46,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationFeedbackResourceOutcome currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("feedbackResource", (n) -> { currentObject.setFeedbackResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
             this.put("resourceStatus", (n) -> { currentObject.setResourceStatus(n.getEnumValue(EducationFeedbackResourceOutcomeStatus.class)); });
         }};
@@ -63,6 +64,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * @param value Value to set for the feedbackResource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeedbackResource(@javax.annotation.Nullable final EducationResource value) {
         this._feedbackResource = value;
     }
@@ -82,6 +85,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * @param value Value to set for the resourceStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceStatus(@javax.annotation.Nullable final EducationFeedbackResourceOutcomeStatus value) {
         this._resourceStatus = value;
     }

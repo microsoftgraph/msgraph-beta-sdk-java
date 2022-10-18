@@ -60,6 +60,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * Instantiates a new DepEnrollmentProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DepEnrollmentProfile() {
         super();
         this.setOdataType("#microsoft.graph.depEnrollmentProfile");
@@ -121,7 +122,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DepEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appleIdDisabled", (n) -> { currentObject.setAppleIdDisabled(n.getBooleanValue()); });
             this.put("applePayDisabled", (n) -> { currentObject.setApplePayDisabled(n.getBooleanValue()); });
             this.put("awaitDeviceConfiguredConfirmation", (n) -> { currentObject.setAwaitDeviceConfiguredConfirmation(n.getBooleanValue()); });
@@ -305,6 +306,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -338,6 +340,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the appleIdDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleIdDisabled(@javax.annotation.Nullable final Boolean value) {
         this._appleIdDisabled = value;
     }
@@ -346,6 +349,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the applePayDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplePayDisabled(@javax.annotation.Nullable final Boolean value) {
         this._applePayDisabled = value;
     }
@@ -354,6 +358,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the awaitDeviceConfiguredConfirmation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAwaitDeviceConfiguredConfirmation(@javax.annotation.Nullable final Boolean value) {
         this._awaitDeviceConfiguredConfirmation = value;
     }
@@ -362,6 +367,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the diagnosticsDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiagnosticsDisabled(@javax.annotation.Nullable final Boolean value) {
         this._diagnosticsDisabled = value;
     }
@@ -370,6 +376,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the enableSharedIPad property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableSharedIPad(@javax.annotation.Nullable final Boolean value) {
         this._enableSharedIPad = value;
     }
@@ -378,6 +385,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
         this._isDefault = value;
     }
@@ -386,6 +394,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the isMandatory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMandatory(@javax.annotation.Nullable final Boolean value) {
         this._isMandatory = value;
     }
@@ -394,6 +403,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the iTunesPairingMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setITunesPairingMode(@javax.annotation.Nullable final ITunesPairingMode value) {
         this._iTunesPairingMode = value;
     }
@@ -402,6 +412,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the locationDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationDisabled(@javax.annotation.Nullable final Boolean value) {
         this._locationDisabled = value;
     }
@@ -410,6 +421,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the macOSFileVaultDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOSFileVaultDisabled(@javax.annotation.Nullable final Boolean value) {
         this._macOSFileVaultDisabled = value;
     }
@@ -418,6 +430,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the macOSRegistrationDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOSRegistrationDisabled(@javax.annotation.Nullable final Boolean value) {
         this._macOSRegistrationDisabled = value;
     }
@@ -426,6 +439,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the managementCertificates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementCertificates(@javax.annotation.Nullable final java.util.List<ManagementCertificateWithThumbprint> value) {
         this._managementCertificates = value;
     }
@@ -434,6 +448,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the passCodeDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassCodeDisabled(@javax.annotation.Nullable final Boolean value) {
         this._passCodeDisabled = value;
     }
@@ -442,6 +457,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the profileRemovalDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileRemovalDisabled(@javax.annotation.Nullable final Boolean value) {
         this._profileRemovalDisabled = value;
     }
@@ -450,6 +466,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the restoreBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestoreBlocked(@javax.annotation.Nullable final Boolean value) {
         this._restoreBlocked = value;
     }
@@ -458,6 +475,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the restoreFromAndroidDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestoreFromAndroidDisabled(@javax.annotation.Nullable final Boolean value) {
         this._restoreFromAndroidDisabled = value;
     }
@@ -466,6 +484,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the sharedIPadMaximumUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedIPadMaximumUserCount(@javax.annotation.Nullable final Integer value) {
         this._sharedIPadMaximumUserCount = value;
     }
@@ -474,6 +493,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the siriDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiriDisabled(@javax.annotation.Nullable final Boolean value) {
         this._siriDisabled = value;
     }
@@ -482,6 +502,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the supervisedModeEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupervisedModeEnabled(@javax.annotation.Nullable final Boolean value) {
         this._supervisedModeEnabled = value;
     }
@@ -490,6 +511,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the supportDepartment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportDepartment(@javax.annotation.Nullable final String value) {
         this._supportDepartment = value;
     }
@@ -498,6 +520,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the supportPhoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportPhoneNumber(@javax.annotation.Nullable final String value) {
         this._supportPhoneNumber = value;
     }
@@ -506,6 +529,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the termsAndConditionsDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsAndConditionsDisabled(@javax.annotation.Nullable final Boolean value) {
         this._termsAndConditionsDisabled = value;
     }
@@ -514,6 +538,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the touchIdDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTouchIdDisabled(@javax.annotation.Nullable final Boolean value) {
         this._touchIdDisabled = value;
     }
@@ -522,6 +547,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the zoomDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setZoomDisabled(@javax.annotation.Nullable final Boolean value) {
         this._zoomDisabled = value;
     }

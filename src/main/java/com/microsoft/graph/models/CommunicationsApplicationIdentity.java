@@ -16,6 +16,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      * Instantiates a new CommunicationsApplicationIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CommunicationsApplicationIdentity() {
         super();
         this.setOdataType("#microsoft.graph.communicationsApplicationIdentity");
@@ -45,7 +46,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommunicationsApplicationIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationType", (n) -> { currentObject.setApplicationType(n.getStringValue()); });
             this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
         }};
@@ -63,6 +64,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      * @param value Value to set for the applicationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationType(@javax.annotation.Nullable final String value) {
         this._applicationType = value;
     }
@@ -82,6 +85,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      * @param value Value to set for the hidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHidden(@javax.annotation.Nullable final Boolean value) {
         this._hidden = value;
     }

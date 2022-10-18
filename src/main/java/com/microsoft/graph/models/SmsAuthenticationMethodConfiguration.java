@@ -14,6 +14,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
      * Instantiates a new SmsAuthenticationMethodConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SmsAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.smsAuthenticationMethodConfiguration");
@@ -35,7 +36,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SmsAuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(SmsAuthenticationMethodTarget::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<SmsAuthenticationMethodTarget> value) {
         this._includeTargets = value;
     }

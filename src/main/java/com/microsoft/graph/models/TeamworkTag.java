@@ -25,6 +25,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * Instantiates a new teamworkTag and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkTag() {
         super();
         this.setOdataType("#microsoft.graph.teamworkTag");
@@ -62,7 +63,7 @@ public class TeamworkTag extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkTag currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("memberCount", (n) -> { currentObject.setMemberCount(n.getIntegerValue()); });
@@ -108,6 +109,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +125,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -131,6 +134,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -139,6 +143,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the memberCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberCount(@javax.annotation.Nullable final Integer value) {
         this._memberCount = value;
     }
@@ -147,6 +152,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<TeamworkTagMember> value) {
         this._members = value;
     }
@@ -155,6 +161,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the tagType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTagType(@javax.annotation.Nullable final TeamworkTagType value) {
         this._tagType = value;
     }
@@ -163,6 +170,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the teamId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamId(@javax.annotation.Nullable final String value) {
         this._teamId = value;
     }

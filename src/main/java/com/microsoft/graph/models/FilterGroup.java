@@ -21,6 +21,7 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
      * Instantiates a new filterGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FilterGroup() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.filterGroup");
@@ -58,7 +59,7 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FilterGroup currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("clauses", (n) -> { currentObject.setClauses(n.getCollectionOfObjectValues(FilterClause::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("clauses", this.getClauses());
@@ -97,6 +99,7 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the clauses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClauses(@javax.annotation.Nullable final java.util.List<FilterClause> value) {
         this._clauses = value;
     }
@@ -113,6 +117,7 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -121,6 +126,7 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

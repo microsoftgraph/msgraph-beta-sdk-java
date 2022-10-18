@@ -34,6 +34,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * Instantiates a new AndroidDeviceOwnerPkcsCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerPkcsCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerPkcsCertificateProfile");
@@ -111,7 +112,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerPkcsCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateAccessType", (n) -> { currentObject.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
             this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
             this.put("certificateTemplateName", (n) -> { currentObject.setCertificateTemplateName(n.getStringValue()); });
@@ -162,6 +163,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +184,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the certificateAccessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateAccessType(@javax.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
         this._certificateAccessType = value;
     }
@@ -190,6 +193,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the certificateStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateStore(@javax.annotation.Nullable final CertificateStore value) {
         this._certificateStore = value;
     }
@@ -198,6 +202,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the certificateTemplateName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateTemplateName(@javax.annotation.Nullable final String value) {
         this._certificateTemplateName = value;
     }
@@ -206,6 +211,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the certificationAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthority(@javax.annotation.Nullable final String value) {
         this._certificationAuthority = value;
     }
@@ -214,6 +220,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the certificationAuthorityName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthorityName(@javax.annotation.Nullable final String value) {
         this._certificationAuthorityName = value;
     }
@@ -222,6 +229,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the certificationAuthorityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthorityType(@javax.annotation.Nullable final DeviceManagementCertificationAuthority value) {
         this._certificationAuthorityType = value;
     }
@@ -230,6 +238,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the customSubjectAlternativeNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSubjectAlternativeNames(@javax.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
         this._customSubjectAlternativeNames = value;
     }
@@ -238,6 +247,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
         this._managedDeviceCertificateStates = value;
     }
@@ -246,6 +256,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the silentCertificateAccessDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSilentCertificateAccessDetails(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerSilentCertificateAccess> value) {
         this._silentCertificateAccessDetails = value;
     }
@@ -254,6 +265,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
         this._subjectAlternativeNameFormatString = value;
     }
@@ -262,6 +274,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the subjectNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
         this._subjectNameFormatString = value;
     }

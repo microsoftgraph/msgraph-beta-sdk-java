@@ -23,6 +23,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
      * Instantiates a new AndroidForWorkWiFiConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidForWorkWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidForWorkWiFiConfiguration");
@@ -67,7 +68,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkWiFiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("connectAutomatically", (n) -> { currentObject.setConnectAutomatically(n.getBooleanValue()); });
             this.put("connectWhenNetworkNameIsHidden", (n) -> { currentObject.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
             this.put("networkName", (n) -> { currentObject.setNetworkName(n.getStringValue()); });
@@ -104,6 +105,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,6 +120,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the connectAutomatically property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectAutomatically(@javax.annotation.Nullable final Boolean value) {
         this._connectAutomatically = value;
     }
@@ -126,6 +129,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectWhenNetworkNameIsHidden(@javax.annotation.Nullable final Boolean value) {
         this._connectWhenNetworkNameIsHidden = value;
     }
@@ -134,6 +138,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the networkName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkName(@javax.annotation.Nullable final String value) {
         this._networkName = value;
     }
@@ -142,6 +147,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the ssid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSsid(@javax.annotation.Nullable final String value) {
         this._ssid = value;
     }
@@ -150,6 +156,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the wiFiSecurityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiSecurityType(@javax.annotation.Nullable final AndroidWiFiSecurityType value) {
         this._wiFiSecurityType = value;
     }

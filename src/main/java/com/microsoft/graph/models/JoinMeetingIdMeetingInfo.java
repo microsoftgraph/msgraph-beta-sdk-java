@@ -16,6 +16,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * Instantiates a new JoinMeetingIdMeetingInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public JoinMeetingIdMeetingInfo() {
         super();
         this.setOdataType("#microsoft.graph.joinMeetingIdMeetingInfo");
@@ -37,7 +38,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final JoinMeetingIdMeetingInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("joinMeetingId", (n) -> { currentObject.setJoinMeetingId(n.getStringValue()); });
             this.put("passcode", (n) -> { currentObject.setPasscode(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * @param value Value to set for the joinMeetingId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinMeetingId(@javax.annotation.Nullable final String value) {
         this._joinMeetingId = value;
     }
@@ -82,6 +85,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * @param value Value to set for the passcode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscode(@javax.annotation.Nullable final String value) {
         this._passcode = value;
     }

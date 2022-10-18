@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics resource performance entity. */
 public class UserExperienceAnalyticsResourcePerformance extends Entity implements Parsable {
     /** AverageSpikeTimeScore of a device or a model type. Valid values 0 to 100 */
     private Integer _averageSpikeTimeScore;
@@ -35,9 +36,10 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     /** The user experience analytics device RAM spike time score. Valid values 0 to 100 */
     private Integer _ramSpikeTimeScore;
     /**
-     * Instantiates a new UserExperienceAnalyticsResourcePerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsResourcePerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsResourcePerformance() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsResourcePerformance");
@@ -45,7 +47,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsResourcePerformance
+     * @return a userExperienceAnalyticsResourcePerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsResourcePerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -123,7 +125,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsResourcePerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("averageSpikeTimeScore", (n) -> { currentObject.setAverageSpikeTimeScore(n.getIntegerValue()); });
             this.put("cpuSpikeTimePercentage", (n) -> { currentObject.setCpuSpikeTimePercentage(n.getDoubleValue()); });
             this.put("cpuSpikeTimePercentageThreshold", (n) -> { currentObject.setCpuSpikeTimePercentageThreshold(n.getDoubleValue()); });
@@ -184,6 +186,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -206,6 +209,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the averageSpikeTimeScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageSpikeTimeScore(@javax.annotation.Nullable final Integer value) {
         this._averageSpikeTimeScore = value;
     }
@@ -214,6 +218,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the cpuSpikeTimePercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCpuSpikeTimePercentage(@javax.annotation.Nullable final Double value) {
         this._cpuSpikeTimePercentage = value;
     }
@@ -222,6 +227,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the cpuSpikeTimePercentageThreshold property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCpuSpikeTimePercentageThreshold(@javax.annotation.Nullable final Double value) {
         this._cpuSpikeTimePercentageThreshold = value;
     }
@@ -230,6 +236,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the cpuSpikeTimeScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCpuSpikeTimeScore(@javax.annotation.Nullable final Integer value) {
         this._cpuSpikeTimeScore = value;
     }
@@ -238,6 +245,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Long value) {
         this._deviceCount = value;
     }
@@ -246,6 +254,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -254,6 +263,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -262,6 +272,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the deviceResourcePerformanceScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceResourcePerformanceScore(@javax.annotation.Nullable final Integer value) {
         this._deviceResourcePerformanceScore = value;
     }
@@ -270,6 +281,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -278,6 +290,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -286,6 +299,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the ramSpikeTimePercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRamSpikeTimePercentage(@javax.annotation.Nullable final Double value) {
         this._ramSpikeTimePercentage = value;
     }
@@ -294,6 +308,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the ramSpikeTimePercentageThreshold property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRamSpikeTimePercentageThreshold(@javax.annotation.Nullable final Double value) {
         this._ramSpikeTimePercentageThreshold = value;
     }
@@ -302,6 +317,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the ramSpikeTimeScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRamSpikeTimeScore(@javax.annotation.Nullable final Integer value) {
         this._ramSpikeTimeScore = value;
     }

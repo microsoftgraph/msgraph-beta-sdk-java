@@ -18,6 +18,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
      * Instantiates a new GroupPolicyPresentationTextBox and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationTextBox() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationTextBox");
@@ -47,7 +48,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationTextBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
             this.put("maxLength", (n) -> { currentObject.setMaxLength(n.getLongValue()); });
             this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
@@ -74,6 +75,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final String value) {
         this._defaultValue = value;
     }
@@ -94,6 +97,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
      * @param value Value to set for the maxLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxLength(@javax.annotation.Nullable final Long value) {
         this._maxLength = value;
     }
@@ -102,6 +106,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
      * @param value Value to set for the required property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequired(@javax.annotation.Nullable final Boolean value) {
         this._required = value;
     }

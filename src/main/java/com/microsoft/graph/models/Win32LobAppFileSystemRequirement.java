@@ -20,6 +20,7 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
      * Instantiates a new Win32LobAppFileSystemRequirement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppFileSystemRequirement() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppFileSystemRequirement");
@@ -57,7 +58,7 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppFileSystemRequirement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
             this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getEnumValue(Win32LobAppFileSystemDetectionType.class)); });
             this.put("fileOrFolderName", (n) -> { currentObject.setFileOrFolderName(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
      * @param value Value to set for the check32BitOn64System property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCheck32BitOn64System(@javax.annotation.Nullable final Boolean value) {
         this._check32BitOn64System = value;
     }
@@ -106,6 +109,7 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
      * @param value Value to set for the detectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionType(@javax.annotation.Nullable final Win32LobAppFileSystemDetectionType value) {
         this._detectionType = value;
     }
@@ -114,6 +118,7 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
      * @param value Value to set for the fileOrFolderName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileOrFolderName(@javax.annotation.Nullable final String value) {
         this._fileOrFolderName = value;
     }
@@ -122,6 +127,7 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
      * @param value Value to set for the path property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPath(@javax.annotation.Nullable final String value) {
         this._path = value;
     }

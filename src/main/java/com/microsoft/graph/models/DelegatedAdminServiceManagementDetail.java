@@ -17,6 +17,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * Instantiates a new delegatedAdminServiceManagementDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedAdminServiceManagementDetail() {
         super();
         this.setOdataType("#microsoft.graph.delegatedAdminServiceManagementDetail");
@@ -38,7 +39,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedAdminServiceManagementDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("serviceManagementUrl", (n) -> { currentObject.setServiceManagementUrl(n.getStringValue()); });
             this.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });
         }};
@@ -64,6 +65,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param value Value to set for the serviceManagementUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceManagementUrl(@javax.annotation.Nullable final String value) {
         this._serviceManagementUrl = value;
     }
@@ -83,6 +86,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param value Value to set for the serviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceName(@javax.annotation.Nullable final String value) {
         this._serviceName = value;
     }

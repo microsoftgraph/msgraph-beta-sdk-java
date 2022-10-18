@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class CustomCalloutExtension extends Entity implements Parsable {
     /** Configuration for securing the API call to the logic app. For example, using OAuth client credentials flow. */
     private CustomExtensionAuthenticationConfiguration _authenticationConfiguration;
@@ -27,6 +27,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * Instantiates a new customCalloutExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomCalloutExtension() {
         super();
         this.setOdataType("#microsoft.graph.customCalloutExtension");
@@ -98,7 +99,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomCalloutExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationConfiguration", (n) -> { currentObject.setAuthenticationConfiguration(n.getObjectValue(CustomExtensionAuthenticationConfiguration::createFromDiscriminatorValue)); });
             this.put("clientConfiguration", (n) -> { currentObject.setClientConfiguration(n.getObjectValue(CustomExtensionClientConfiguration::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -111,6 +112,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -125,6 +127,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param value Value to set for the authenticationConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationConfiguration(@javax.annotation.Nullable final CustomExtensionAuthenticationConfiguration value) {
         this._authenticationConfiguration = value;
     }
@@ -133,6 +136,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param value Value to set for the clientConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientConfiguration(@javax.annotation.Nullable final CustomExtensionClientConfiguration value) {
         this._clientConfiguration = value;
     }
@@ -141,6 +145,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -149,6 +154,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -157,6 +163,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param value Value to set for the endpointConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointConfiguration(@javax.annotation.Nullable final CustomExtensionEndpointConfiguration value) {
         this._endpointConfiguration = value;
     }

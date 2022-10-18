@@ -20,6 +20,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * Instantiates a new OauthApplicationEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OauthApplicationEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.oauthApplicationEvidence");
@@ -57,7 +58,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OauthApplicationEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -106,6 +109,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -114,6 +118,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the objectId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setObjectId(@javax.annotation.Nullable final String value) {
         this._objectId = value;
     }
@@ -122,6 +127,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }

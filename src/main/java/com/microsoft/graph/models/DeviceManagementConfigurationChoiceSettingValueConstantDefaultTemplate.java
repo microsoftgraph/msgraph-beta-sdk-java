@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTempl
      * Instantiates a new DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate");
@@ -45,7 +46,7 @@ public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTempl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstanceTemplate::createFromDiscriminatorValue)); });
             this.put("settingDefinitionOptionId", (n) -> { currentObject.setSettingDefinitionOptionId(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTempl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTempl
      * @param value Value to set for the children property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildren(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingInstanceTemplate> value) {
         this._children = value;
     }
@@ -82,6 +85,7 @@ public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTempl
      * @param value Value to set for the settingDefinitionOptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingDefinitionOptionId(@javax.annotation.Nullable final String value) {
         this._settingDefinitionOptionId = value;
     }

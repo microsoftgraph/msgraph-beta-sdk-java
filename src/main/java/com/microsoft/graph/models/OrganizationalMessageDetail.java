@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This will allow the admin to see the specific details of an organizational message that has been created for their tenant */
 public class OrganizationalMessageDetail extends Entity implements Parsable {
     /** The content that will be displayed to clients for the message. This includes the text portion of the message and the displayed logo */
     private OrganizationalMessageContent _content;
@@ -36,9 +37,10 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
     /** Indicates the corresponding variant for the experience */
     private String _variant;
     /**
-     * Instantiates a new OrganizationalMessageDetail and sets the default values.
+     * Instantiates a new organizationalMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.organizationalMessageDetail");
@@ -46,7 +48,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OrganizationalMessageDetail
+     * @return a organizationalMessageDetail
      */
     @javax.annotation.Nonnull
     public static OrganizationalMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -84,7 +86,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(OrganizationalMessageContent::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -185,6 +187,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -207,6 +210,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final OrganizationalMessageContent value) {
         this._content = value;
     }
@@ -215,6 +219,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -223,6 +228,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -231,6 +237,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the frequency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrequency(@javax.annotation.Nullable final OrganizationalMessageFrequency value) {
         this._frequency = value;
     }
@@ -239,6 +246,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -247,6 +255,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the scenario property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScenario(@javax.annotation.Nullable final OrganizationalMessageScenario value) {
         this._scenario = value;
     }
@@ -255,6 +264,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -263,6 +273,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final OrganizationalMessageStatus value) {
         this._status = value;
     }
@@ -271,6 +282,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the surface property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurface(@javax.annotation.Nullable final OrganizationalMessageSurface value) {
         this._surface = value;
     }
@@ -279,6 +291,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the targeting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargeting(@javax.annotation.Nullable final OrganizationalMessageTargeting value) {
         this._targeting = value;
     }
@@ -287,6 +300,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the theme property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTheme(@javax.annotation.Nullable final OrganizationalMessageTheme value) {
         this._theme = value;
     }
@@ -295,6 +309,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the userEngagementStatistics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEngagementStatistics(@javax.annotation.Nullable final OrganizationalMessageInsights value) {
         this._userEngagementStatistics = value;
     }
@@ -303,6 +318,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the variant property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVariant(@javax.annotation.Nullable final String value) {
         this._variant = value;
     }

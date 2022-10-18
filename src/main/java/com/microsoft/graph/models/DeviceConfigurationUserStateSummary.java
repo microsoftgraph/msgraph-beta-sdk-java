@@ -26,6 +26,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * Instantiates a new deviceConfigurationUserStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfigurationUserStateSummary() {
         super();
         this.setOdataType("#microsoft.graph.deviceConfigurationUserStateSummary");
@@ -71,7 +72,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfigurationUserStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("compliantUserCount", (n) -> { currentObject.setCompliantUserCount(n.getIntegerValue()); });
             this.put("conflictUserCount", (n) -> { currentObject.setConflictUserCount(n.getIntegerValue()); });
             this.put("errorUserCount", (n) -> { currentObject.setErrorUserCount(n.getIntegerValue()); });
@@ -118,6 +119,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +136,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the compliantUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantUserCount(@javax.annotation.Nullable final Integer value) {
         this._compliantUserCount = value;
     }
@@ -142,6 +145,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the conflictUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictUserCount(@javax.annotation.Nullable final Integer value) {
         this._conflictUserCount = value;
     }
@@ -150,6 +154,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the errorUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorUserCount(@javax.annotation.Nullable final Integer value) {
         this._errorUserCount = value;
     }
@@ -158,6 +163,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the nonCompliantUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNonCompliantUserCount(@javax.annotation.Nullable final Integer value) {
         this._nonCompliantUserCount = value;
     }
@@ -166,6 +172,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the notApplicableUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableUserCount(@javax.annotation.Nullable final Integer value) {
         this._notApplicableUserCount = value;
     }
@@ -174,6 +181,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the remediatedUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediatedUserCount(@javax.annotation.Nullable final Integer value) {
         this._remediatedUserCount = value;
     }
@@ -182,6 +190,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the unknownUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownUserCount(@javax.annotation.Nullable final Integer value) {
         this._unknownUserCount = value;
     }

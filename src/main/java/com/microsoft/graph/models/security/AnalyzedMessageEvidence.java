@@ -9,13 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
-    /** Direction of the email relative to your network. The possible values are: Inbound, Outbound or Intraorg. */
+    /** Direction of the email relative to your network. The possible values are: inbound, outbound or intraorg. */
     private String _antiSpamDirection;
     /** Number of attachments in the email. */
     private Long _attachmentsCount;
-    /** Delivery action of the email. The possible values are: Delivered, DeliveredAsSpam, Junked, Blocked, or Replaced. */
+    /** Delivery action of the email. The possible values are: delivered, deliveredAsSpam, junked, blocked, or replaced. */
     private String _deliveryAction;
-    /** Location where the email was delivered. The possible values are: Inbox, External, JunkFolder, Quarantine, Failed, Dropped, DeletedFolder or Forwarded. */
+    /** Location where the email was delivered. The possible values are: inbox, external, junkFolder, quarantine, failed, dropped, deletedFolder or forwarded. */
     private String _deliveryLocation;
     /** Public-facing identifier for the email that is set by the sending email system. */
     private String _internetMessageId;
@@ -49,6 +49,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * Instantiates a new AnalyzedMessageEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AnalyzedMessageEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.analyzedMessageEvidence");
@@ -64,7 +65,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
         return new AnalyzedMessageEvidence();
     }
     /**
-     * Gets the antiSpamDirection property value. Direction of the email relative to your network. The possible values are: Inbound, Outbound or Intraorg.
+     * Gets the antiSpamDirection property value. Direction of the email relative to your network. The possible values are: inbound, outbound or intraorg.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -80,7 +81,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
         return this._attachmentsCount;
     }
     /**
-     * Gets the deliveryAction property value. Delivery action of the email. The possible values are: Delivered, DeliveredAsSpam, Junked, Blocked, or Replaced.
+     * Gets the deliveryAction property value. Delivery action of the email. The possible values are: delivered, deliveredAsSpam, junked, blocked, or replaced.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -88,7 +89,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
         return this._deliveryAction;
     }
     /**
-     * Gets the deliveryLocation property value. Location where the email was delivered. The possible values are: Inbox, External, JunkFolder, Quarantine, Failed, Dropped, DeletedFolder or Forwarded.
+     * Gets the deliveryLocation property value. Location where the email was delivered. The possible values are: inbox, external, junkFolder, quarantine, failed, dropped, deletedFolder or forwarded.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -102,7 +103,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AnalyzedMessageEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("antiSpamDirection", (n) -> { currentObject.setAntiSpamDirection(n.getStringValue()); });
             this.put("attachmentsCount", (n) -> { currentObject.setAttachmentsCount(n.getLongValue()); });
             this.put("deliveryAction", (n) -> { currentObject.setDeliveryAction(n.getStringValue()); });
@@ -240,6 +241,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -263,10 +265,11 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("urn", this.getUrn());
     }
     /**
-     * Sets the antiSpamDirection property value. Direction of the email relative to your network. The possible values are: Inbound, Outbound or Intraorg.
+     * Sets the antiSpamDirection property value. Direction of the email relative to your network. The possible values are: inbound, outbound or intraorg.
      * @param value Value to set for the antiSpamDirection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAntiSpamDirection(@javax.annotation.Nullable final String value) {
         this._antiSpamDirection = value;
     }
@@ -275,22 +278,25 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the attachmentsCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachmentsCount(@javax.annotation.Nullable final Long value) {
         this._attachmentsCount = value;
     }
     /**
-     * Sets the deliveryAction property value. Delivery action of the email. The possible values are: Delivered, DeliveredAsSpam, Junked, Blocked, or Replaced.
+     * Sets the deliveryAction property value. Delivery action of the email. The possible values are: delivered, deliveredAsSpam, junked, blocked, or replaced.
      * @param value Value to set for the deliveryAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeliveryAction(@javax.annotation.Nullable final String value) {
         this._deliveryAction = value;
     }
     /**
-     * Sets the deliveryLocation property value. Location where the email was delivered. The possible values are: Inbox, External, JunkFolder, Quarantine, Failed, Dropped, DeletedFolder or Forwarded.
+     * Sets the deliveryLocation property value. Location where the email was delivered. The possible values are: inbox, external, junkFolder, quarantine, failed, dropped, deletedFolder or forwarded.
      * @param value Value to set for the deliveryLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeliveryLocation(@javax.annotation.Nullable final String value) {
         this._deliveryLocation = value;
     }
@@ -299,6 +305,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the internetMessageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternetMessageId(@javax.annotation.Nullable final String value) {
         this._internetMessageId = value;
     }
@@ -307,6 +314,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the language property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguage(@javax.annotation.Nullable final String value) {
         this._language = value;
     }
@@ -315,6 +323,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the networkMessageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkMessageId(@javax.annotation.Nullable final String value) {
         this._networkMessageId = value;
     }
@@ -323,6 +332,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the p1Sender property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setP1Sender(@javax.annotation.Nullable final EmailSender value) {
         this._p1Sender = value;
     }
@@ -331,6 +341,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the p2Sender property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setP2Sender(@javax.annotation.Nullable final EmailSender value) {
         this._p2Sender = value;
     }
@@ -339,6 +350,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the receivedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._receivedDateTime = value;
     }
@@ -347,6 +359,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the recipientEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientEmailAddress(@javax.annotation.Nullable final String value) {
         this._recipientEmailAddress = value;
     }
@@ -355,6 +368,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the senderIp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSenderIp(@javax.annotation.Nullable final String value) {
         this._senderIp = value;
     }
@@ -363,6 +377,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }
@@ -371,6 +386,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the threatDetectionMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThreatDetectionMethods(@javax.annotation.Nullable final java.util.List<String> value) {
         this._threatDetectionMethods = value;
     }
@@ -379,6 +395,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the threats property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThreats(@javax.annotation.Nullable final java.util.List<String> value) {
         this._threats = value;
     }
@@ -387,6 +404,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the urlCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrlCount(@javax.annotation.Nullable final Long value) {
         this._urlCount = value;
     }
@@ -395,6 +413,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the urls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._urls = value;
     }
@@ -403,6 +422,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the urn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrn(@javax.annotation.Nullable final String value) {
         this._urn = value;
     }

@@ -31,6 +31,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      * Instantiates a new customSecurityAttributeDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomSecurityAttributeDefinition() {
         super();
         this.setOdataType("#microsoft.graph.customSecurityAttributeDefinition");
@@ -76,7 +77,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomSecurityAttributeDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedValues", (n) -> { currentObject.setAllowedValues(n.getCollectionOfObjectValues(AllowedValue::createFromDiscriminatorValue)); });
             this.put("attributeSet", (n) -> { currentObject.setAttributeSet(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -141,6 +142,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +161,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      * @param value Value to set for the allowedValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedValues(@javax.annotation.Nullable final java.util.List<AllowedValue> value) {
         this._allowedValues = value;
     }
@@ -167,6 +170,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      * @param value Value to set for the attributeSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttributeSet(@javax.annotation.Nullable final String value) {
         this._attributeSet = value;
     }
@@ -175,6 +179,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -183,6 +188,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      * @param value Value to set for the isCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCollection(@javax.annotation.Nullable final Boolean value) {
         this._isCollection = value;
     }
@@ -191,6 +197,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      * @param value Value to set for the isSearchable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSearchable(@javax.annotation.Nullable final Boolean value) {
         this._isSearchable = value;
     }
@@ -199,6 +206,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -207,6 +215,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }
@@ -215,6 +224,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
@@ -223,6 +233,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
      * @param value Value to set for the usePreDefinedValuesOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsePreDefinedValuesOnly(@javax.annotation.Nullable final Boolean value) {
         this._usePreDefinedValuesOnly = value;
     }

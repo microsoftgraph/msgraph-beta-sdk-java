@@ -8,14 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttackSimulationRoot extends Entity implements Parsable {
-    /** Represents simulation automations created to run on a tenant. */
+    /** Represents simulation automation created to run on a tenant. */
     private java.util.List<SimulationAutomation> _simulationAutomations;
     /** Represents an attack simulation training campaign in a tenant. */
     private java.util.List<Simulation> _simulations;
     /**
-     * Instantiates a new AttackSimulationRoot and sets the default values.
+     * Instantiates a new attackSimulationRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttackSimulationRoot() {
         super();
         this.setOdataType("#microsoft.graph.attackSimulationRoot");
@@ -23,7 +24,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttackSimulationRoot
+     * @return a attackSimulationRoot
      */
     @javax.annotation.Nonnull
     public static AttackSimulationRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -37,13 +38,13 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("simulationAutomations", (n) -> { currentObject.setSimulationAutomations(n.getCollectionOfObjectValues(SimulationAutomation::createFromDiscriminatorValue)); });
             this.put("simulations", (n) -> { currentObject.setSimulations(n.getCollectionOfObjectValues(Simulation::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the simulationAutomations property value. Represents simulation automations created to run on a tenant.
+     * Gets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
      * @return a simulationAutomation
      */
     @javax.annotation.Nullable
@@ -63,6 +64,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,10 +72,11 @@ public class AttackSimulationRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("simulations", this.getSimulations());
     }
     /**
-     * Sets the simulationAutomations property value. Represents simulation automations created to run on a tenant.
+     * Sets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
      * @param value Value to set for the simulationAutomations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimulationAutomations(@javax.annotation.Nullable final java.util.List<SimulationAutomation> value) {
         this._simulationAutomations = value;
     }
@@ -82,6 +85,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param value Value to set for the simulations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimulations(@javax.annotation.Nullable final java.util.List<Simulation> value) {
         this._simulations = value;
     }

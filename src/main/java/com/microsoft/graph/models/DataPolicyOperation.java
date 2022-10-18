@@ -25,6 +25,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * Instantiates a new DataPolicyOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DataPolicyOperation() {
         super();
         this.setOdataType("#microsoft.graph.dataPolicyOperation");
@@ -54,7 +55,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DataPolicyOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
             this.put("progress", (n) -> { currentObject.setProgress(n.getDoubleValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DataPolicyOperationStatus.class)); });
@@ -108,6 +109,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +125,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completedDateTime = value;
     }
@@ -131,6 +134,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the progress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgress(@javax.annotation.Nullable final Double value) {
         this._progress = value;
     }
@@ -139,6 +143,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DataPolicyOperationStatus value) {
         this._status = value;
     }
@@ -147,6 +152,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the storageLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageLocation(@javax.annotation.Nullable final String value) {
         this._storageLocation = value;
     }
@@ -155,6 +161,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the submittedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubmittedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._submittedDateTime = value;
     }
@@ -163,6 +170,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

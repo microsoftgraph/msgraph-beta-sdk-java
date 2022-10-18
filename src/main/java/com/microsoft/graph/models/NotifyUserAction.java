@@ -23,6 +23,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
      * Instantiates a new NotifyUserAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public NotifyUserAction() {
         super();
         this.setOdataType("#microsoft.graph.notifyUserAction");
@@ -60,7 +61,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NotifyUserAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionLastModifiedDateTime", (n) -> { currentObject.setActionLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("emailText", (n) -> { currentObject.setEmailText(n.getStringValue()); });
             this.put("overrideOption", (n) -> { currentObject.setOverrideOption(n.getEnumValue(OverrideOption.class)); });
@@ -97,6 +98,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
      * @param value Value to set for the actionLastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._actionLastModifiedDateTime = value;
     }
@@ -119,6 +122,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
      * @param value Value to set for the emailText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailText(@javax.annotation.Nullable final String value) {
         this._emailText = value;
     }
@@ -127,6 +131,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
      * @param value Value to set for the overrideOption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOverrideOption(@javax.annotation.Nullable final OverrideOption value) {
         this._overrideOption = value;
     }
@@ -135,6 +140,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
      * @param value Value to set for the policyTip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyTip(@javax.annotation.Nullable final String value) {
         this._policyTip = value;
     }
@@ -143,6 +149,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
      * @param value Value to set for the recipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipients(@javax.annotation.Nullable final java.util.List<String> value) {
         this._recipients = value;
     }

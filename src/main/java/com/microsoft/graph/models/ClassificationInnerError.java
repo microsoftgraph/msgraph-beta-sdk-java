@@ -26,6 +26,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
      * Instantiates a new classificationInnerError and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClassificationInnerError() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.classificationInnerError");
@@ -87,7 +88,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassificationInnerError currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("activityId", (n) -> { currentObject.setActivityId(n.getStringValue()); });
             this.put("clientRequestId", (n) -> { currentObject.setClientRequestId(n.getStringValue()); });
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
@@ -108,6 +109,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activityId", this.getActivityId());
@@ -122,6 +124,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the activityId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityId(@javax.annotation.Nullable final String value) {
         this._activityId = value;
     }
@@ -130,6 +133,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -138,6 +142,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the clientRequestId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientRequestId(@javax.annotation.Nullable final String value) {
         this._clientRequestId = value;
     }
@@ -146,6 +151,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
         this._code = value;
     }
@@ -154,6 +160,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the errorDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._errorDateTime = value;
     }
@@ -162,6 +169,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

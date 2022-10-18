@@ -24,6 +24,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Parsab
      * Instantiates a new selfActivatePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SelfActivatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -60,7 +61,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SelfActivatePostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("duration", (n) -> { currentObject.setDuration(n.getStringValue()); });
             this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
             this.put("ticketNumber", (n) -> { currentObject.setTicketNumber(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("duration", this.getDuration());
@@ -109,6 +111,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the duration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDuration(@javax.annotation.Nullable final String value) {
         this._duration = value;
     }
@@ -125,6 +129,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
         this._reason = value;
     }
@@ -133,6 +138,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the ticketNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTicketNumber(@javax.annotation.Nullable final String value) {
         this._ticketNumber = value;
     }
@@ -141,6 +147,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the ticketSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTicketSystem(@javax.annotation.Nullable final String value) {
         this._ticketSystem = value;
     }

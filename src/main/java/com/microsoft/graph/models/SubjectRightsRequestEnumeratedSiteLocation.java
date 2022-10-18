@@ -14,6 +14,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      * Instantiates a new SubjectRightsRequestEnumeratedSiteLocation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubjectRightsRequestEnumeratedSiteLocation() {
         super();
         this.setOdataType("#microsoft.graph.subjectRightsRequestEnumeratedSiteLocation");
@@ -35,7 +36,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestEnumeratedSiteLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("urls", (n) -> { currentObject.setUrls(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      * @param value Value to set for the urls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._urls = value;
     }

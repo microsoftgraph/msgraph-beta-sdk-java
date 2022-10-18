@@ -16,6 +16,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
      * Instantiates a new RegistryKeyEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RegistryKeyEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.registryKeyEvidence");
@@ -37,7 +38,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RegistryKeyEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("registryHive", (n) -> { currentObject.setRegistryHive(n.getStringValue()); });
             this.put("registryKey", (n) -> { currentObject.setRegistryKey(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the registryHive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistryHive(@javax.annotation.Nullable final String value) {
         this._registryHive = value;
     }
@@ -82,6 +85,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the registryKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistryKey(@javax.annotation.Nullable final String value) {
         this._registryKey = value;
     }

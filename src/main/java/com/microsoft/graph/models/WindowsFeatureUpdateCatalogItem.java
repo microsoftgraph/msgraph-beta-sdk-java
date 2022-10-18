@@ -14,6 +14,7 @@ public class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * Instantiates a new WindowsFeatureUpdateCatalogItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsFeatureUpdateCatalogItem() {
         super();
         this.setOdataType("#microsoft.graph.windowsFeatureUpdateCatalogItem");
@@ -35,7 +36,7 @@ public class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsFeatureUpdateCatalogItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

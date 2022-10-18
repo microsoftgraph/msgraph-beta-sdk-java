@@ -14,6 +14,7 @@ public class DeviceManagementStringSettingInstance extends DeviceManagementSetti
      * Instantiates a new DeviceManagementStringSettingInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementStringSettingInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementStringSettingInstance");
@@ -35,7 +36,7 @@ public class DeviceManagementStringSettingInstance extends DeviceManagementSetti
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementStringSettingInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceManagementStringSettingInstance extends DeviceManagementSetti
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementStringSettingInstance extends DeviceManagementSetti
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
         this._value = value;
     }

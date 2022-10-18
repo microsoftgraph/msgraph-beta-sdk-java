@@ -27,6 +27,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Instantiates a new AuthenticationMethodsPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationMethodsPolicy() {
         super();
         this.setOdataType("#microsoft.graph.authenticationMethodsPolicy");
@@ -72,7 +73,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationMethodsPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationMethodConfigurations", (n) -> { currentObject.setAuthenticationMethodConfigurations(n.getCollectionOfObjectValues(AuthenticationMethodConfiguration::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -119,6 +120,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethodConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethodConfigurations(@javax.annotation.Nullable final java.util.List<AuthenticationMethodConfiguration> value) {
         this._authenticationMethodConfigurations = value;
     }
@@ -143,6 +146,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -151,6 +155,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -159,6 +164,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -167,6 +173,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the policyVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyVersion(@javax.annotation.Nullable final String value) {
         this._policyVersion = value;
     }
@@ -175,6 +182,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the reconfirmationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReconfirmationInDays(@javax.annotation.Nullable final Integer value) {
         this._reconfirmationInDays = value;
     }
@@ -183,6 +191,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the registrationEnforcement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistrationEnforcement(@javax.annotation.Nullable final RegistrationEnforcement value) {
         this._registrationEnforcement = value;
     }

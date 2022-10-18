@@ -18,6 +18,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
      * Instantiates a new DeviceCompliancePolicyGroupAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceCompliancePolicyGroupAssignment() {
         super();
         this.setOdataType("#microsoft.graph.deviceCompliancePolicyGroupAssignment");
@@ -55,7 +56,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceCompliancePolicyGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceCompliancePolicy", (n) -> { currentObject.setDeviceCompliancePolicy(n.getObjectValue(DeviceCompliancePolicy::createFromDiscriminatorValue)); });
             this.put("excludeGroup", (n) -> { currentObject.setExcludeGroup(n.getBooleanValue()); });
             this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
      * @param value Value to set for the deviceCompliancePolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicy(@javax.annotation.Nullable final DeviceCompliancePolicy value) {
         this._deviceCompliancePolicy = value;
     }
@@ -94,6 +97,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
      * @param value Value to set for the excludeGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludeGroup(@javax.annotation.Nullable final Boolean value) {
         this._excludeGroup = value;
     }
@@ -102,6 +106,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
      * @param value Value to set for the targetGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetGroupId(@javax.annotation.Nullable final String value) {
         this._targetGroupId = value;
     }

@@ -17,6 +17,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
      * Instantiates a new customExtensionHandler and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomExtensionHandler() {
         super();
         this.setOdataType("#microsoft.graph.customExtensionHandler");
@@ -46,7 +47,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomExtensionHandler currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customExtension", (n) -> { currentObject.setCustomExtension(n.getObjectValue(CustomAccessPackageWorkflowExtension::createFromDiscriminatorValue)); });
             this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(AccessPackageCustomExtensionStage.class)); });
         }};
@@ -64,6 +65,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
      * @param value Value to set for the customExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomExtension(@javax.annotation.Nullable final CustomAccessPackageWorkflowExtension value) {
         this._customExtension = value;
     }
@@ -83,6 +86,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
      * @param value Value to set for the stage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStage(@javax.annotation.Nullable final AccessPackageCustomExtensionStage value) {
         this._stage = value;
     }

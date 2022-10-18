@@ -14,6 +14,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      * Instantiates a new PlayPromptOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlayPromptOperation() {
         super();
         this.setOdataType("#microsoft.graph.playPromptOperation");
@@ -43,7 +44,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlayPromptOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("completionReason", (n) -> { currentObject.setCompletionReason(n.getEnumValue(PlayPromptCompletionReason.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      * @param value Value to set for the completionReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletionReason(@javax.annotation.Nullable final PlayPromptCompletionReason value) {
         this._completionReason = value;
     }

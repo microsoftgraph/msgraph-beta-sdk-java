@@ -11,11 +11,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Simple setting value */
 public class DeviceManagementConfigurationSimpleSettingValue extends DeviceManagementConfigurationSettingValue implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationSimpleSettingValue and sets the default values.
+     * Instantiates a new deviceManagementConfigurationSimpleSettingValue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSimpleSettingValue() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationSimpleSettingValue");
@@ -23,7 +25,7 @@ public class DeviceManagementConfigurationSimpleSettingValue extends DeviceManag
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationSimpleSettingValue
+     * @return a deviceManagementConfigurationSimpleSettingValue
      */
     @javax.annotation.Nonnull
     public static DeviceManagementConfigurationSimpleSettingValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +49,7 @@ public class DeviceManagementConfigurationSimpleSettingValue extends DeviceManag
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSimpleSettingValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -55,6 +57,7 @@ public class DeviceManagementConfigurationSimpleSettingValue extends DeviceManag
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

@@ -14,6 +14,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * Instantiates a new CloudPcManagementGroupAssignmentTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcManagementGroupAssignmentTarget() {
         super();
         this.setOdataType("#microsoft.graph.cloudPcManagementGroupAssignmentTarget");
@@ -35,7 +36,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcManagementGroupAssignmentTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * @param value Value to set for the groupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupId(@javax.annotation.Nullable final String value) {
         this._groupId = value;
     }

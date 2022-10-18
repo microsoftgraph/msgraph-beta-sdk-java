@@ -15,6 +15,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
      * Instantiates a new TenantRelationshipAccessPolicyBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantRelationshipAccessPolicyBase() {
         super();
         this.setOdataType("#microsoft.graph.tenantRelationshipAccessPolicyBase");
@@ -51,7 +52,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantRelationshipAccessPolicyBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("definition", (n) -> { currentObject.setDefinition(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -60,6 +61,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,6 +72,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
      * @param value Value to set for the definition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinition(@javax.annotation.Nullable final java.util.List<String> value) {
         this._definition = value;
     }

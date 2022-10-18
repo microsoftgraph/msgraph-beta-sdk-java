@@ -5,7 +5,7 @@ import java.util.Objects;
 
 /** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum EdgeTelemetryMode implements ValuedEnum {
-    /** Default – No telemetry data collected or sent */
+    /** Default  No telemetry data collected or sent */
     NotConfigured("notConfigured"),
     /** Allow sending intranet history only: Only send browsing history data for intranet sites */
     Intranet("intranet"),

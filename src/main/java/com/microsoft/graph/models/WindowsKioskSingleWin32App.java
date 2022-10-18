@@ -14,6 +14,7 @@ public class WindowsKioskSingleWin32App extends WindowsKioskAppConfiguration imp
      * Instantiates a new WindowsKioskSingleWin32App and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskSingleWin32App() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskSingleWin32App");
@@ -35,7 +36,7 @@ public class WindowsKioskSingleWin32App extends WindowsKioskAppConfiguration imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskSingleWin32App currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("win32App", (n) -> { currentObject.setWin32App(n.getObjectValue(WindowsKioskWin32App::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class WindowsKioskSingleWin32App extends WindowsKioskAppConfiguration imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class WindowsKioskSingleWin32App extends WindowsKioskAppConfiguration imp
      * @param value Value to set for the win32App property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWin32App(@javax.annotation.Nullable final WindowsKioskWin32App value) {
         this._win32App = value;
     }

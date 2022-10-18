@@ -12,6 +12,7 @@ public class ProtectAdhocAction extends InformationProtectionAction implements P
      * Instantiates a new ProtectAdhocAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProtectAdhocAction() {
         super();
         this.setOdataType("#microsoft.graph.protectAdhocAction");
@@ -33,7 +34,7 @@ public class ProtectAdhocAction extends InformationProtectionAction implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProtectAdhocAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -41,6 +42,7 @@ public class ProtectAdhocAction extends InformationProtectionAction implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

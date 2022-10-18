@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class PrivilegedAccess extends Entity implements Parsable {
     /** The display name of the provider managed by PIM. */
     private String _displayName;
@@ -21,9 +22,10 @@ public class PrivilegedAccess extends Entity implements Parsable {
     /** A collection of role settings for the provider. */
     private java.util.List<GovernanceRoleSetting> _roleSettings;
     /**
-     * Instantiates a new PrivilegedAccess and sets the default values.
+     * Instantiates a new privilegedAccess and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivilegedAccess() {
         super();
         this.setOdataType("#microsoft.graph.privilegedAccess");
@@ -31,7 +33,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedAccess
+     * @return a privilegedAccess
      */
     @javax.annotation.Nonnull
     public static PrivilegedAccess createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +55,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedAccess currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(GovernanceResource::createFromDiscriminatorValue)); });
             this.put("roleAssignmentRequests", (n) -> { currentObject.setRoleAssignmentRequests(n.getCollectionOfObjectValues(GovernanceRoleAssignmentRequest::createFromDiscriminatorValue)); });
@@ -107,6 +109,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +125,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -130,6 +134,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the resources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResources(@javax.annotation.Nullable final java.util.List<GovernanceResource> value) {
         this._resources = value;
     }
@@ -138,6 +143,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the roleAssignmentRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentRequests(@javax.annotation.Nullable final java.util.List<GovernanceRoleAssignmentRequest> value) {
         this._roleAssignmentRequests = value;
     }
@@ -146,6 +152,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<GovernanceRoleAssignment> value) {
         this._roleAssignments = value;
     }
@@ -154,6 +161,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<GovernanceRoleDefinition> value) {
         this._roleDefinitions = value;
     }
@@ -162,6 +170,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the roleSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleSettings(@javax.annotation.Nullable final java.util.List<GovernanceRoleSetting> value) {
         this._roleSettings = value;
     }

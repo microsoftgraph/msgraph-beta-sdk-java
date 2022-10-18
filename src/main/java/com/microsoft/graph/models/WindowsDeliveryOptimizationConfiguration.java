@@ -14,7 +14,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     private DeliveryOptimizationBandwidth _bandwidthMode;
     /** Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000. */
     private Integer _cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds;
-    /** Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​ */
+    /** Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000. */
     private Integer _cacheServerForegroundDownloadFallbackToHttpDelayInSeconds;
     /** Specifies cache servers host names. */
     private java.util.List<String> _cacheServerHostNames;
@@ -46,6 +46,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * Instantiates a new WindowsDeliveryOptimizationConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDeliveryOptimizationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsDeliveryOptimizationConfiguration");
@@ -85,7 +86,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
         return this._cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds;
     }
     /**
-     * Gets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​
+     * Gets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -115,7 +116,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDeliveryOptimizationConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("backgroundDownloadFromHttpDelayInSeconds", (n) -> { currentObject.setBackgroundDownloadFromHttpDelayInSeconds(n.getLongValue()); });
             this.put("bandwidthMode", (n) -> { currentObject.setBandwidthMode(n.getObjectValue(DeliveryOptimizationBandwidth::createFromDiscriminatorValue)); });
             this.put("cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds", (n) -> { currentObject.setCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds(n.getIntegerValue()); });
@@ -228,6 +229,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -254,6 +256,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the backgroundDownloadFromHttpDelayInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundDownloadFromHttpDelayInSeconds(@javax.annotation.Nullable final Long value) {
         this._backgroundDownloadFromHttpDelayInSeconds = value;
     }
@@ -262,6 +265,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the bandwidthMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBandwidthMode(@javax.annotation.Nullable final DeliveryOptimizationBandwidth value) {
         this._bandwidthMode = value;
     }
@@ -270,14 +274,16 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds(@javax.annotation.Nullable final Integer value) {
         this._cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds = value;
     }
     /**
-     * Sets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​
+     * Sets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.
      * @param value Value to set for the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheServerForegroundDownloadFallbackToHttpDelayInSeconds(@javax.annotation.Nullable final Integer value) {
         this._cacheServerForegroundDownloadFallbackToHttpDelayInSeconds = value;
     }
@@ -286,6 +292,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the cacheServerHostNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheServerHostNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._cacheServerHostNames = value;
     }
@@ -294,6 +301,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the deliveryOptimizationMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeliveryOptimizationMode(@javax.annotation.Nullable final WindowsDeliveryOptimizationMode value) {
         this._deliveryOptimizationMode = value;
     }
@@ -302,6 +310,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the foregroundDownloadFromHttpDelayInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setForegroundDownloadFromHttpDelayInSeconds(@javax.annotation.Nullable final Long value) {
         this._foregroundDownloadFromHttpDelayInSeconds = value;
     }
@@ -310,6 +319,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the groupIdSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupIdSource(@javax.annotation.Nullable final DeliveryOptimizationGroupIdSource value) {
         this._groupIdSource = value;
     }
@@ -318,6 +328,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the maximumCacheAgeInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumCacheAgeInDays(@javax.annotation.Nullable final Integer value) {
         this._maximumCacheAgeInDays = value;
     }
@@ -326,6 +337,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the maximumCacheSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumCacheSize(@javax.annotation.Nullable final DeliveryOptimizationMaxCacheSize value) {
         this._maximumCacheSize = value;
     }
@@ -334,6 +346,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the minimumBatteryPercentageAllowedToUpload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumBatteryPercentageAllowedToUpload(@javax.annotation.Nullable final Integer value) {
         this._minimumBatteryPercentageAllowedToUpload = value;
     }
@@ -342,6 +355,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the minimumDiskSizeAllowedToPeerInGigabytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumDiskSizeAllowedToPeerInGigabytes(@javax.annotation.Nullable final Integer value) {
         this._minimumDiskSizeAllowedToPeerInGigabytes = value;
     }
@@ -350,6 +364,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the minimumFileSizeToCacheInMegabytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumFileSizeToCacheInMegabytes(@javax.annotation.Nullable final Integer value) {
         this._minimumFileSizeToCacheInMegabytes = value;
     }
@@ -358,6 +373,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the minimumRamAllowedToPeerInGigabytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRamAllowedToPeerInGigabytes(@javax.annotation.Nullable final Integer value) {
         this._minimumRamAllowedToPeerInGigabytes = value;
     }
@@ -366,6 +382,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the modifyCacheLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifyCacheLocation(@javax.annotation.Nullable final String value) {
         this._modifyCacheLocation = value;
     }
@@ -374,6 +391,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the restrictPeerSelectionBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestrictPeerSelectionBy(@javax.annotation.Nullable final DeliveryOptimizationRestrictPeerSelectionByOptions value) {
         this._restrictPeerSelectionBy = value;
     }
@@ -382,6 +400,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the vpnPeerCaching property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVpnPeerCaching(@javax.annotation.Nullable final Enablement value) {
         this._vpnPeerCaching = value;
     }

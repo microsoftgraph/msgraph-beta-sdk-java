@@ -22,6 +22,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      * Instantiates a new MacOSDmgApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSDmgApp() {
         super();
         this.setOdataType("#microsoft.graph.macOSDmgApp");
@@ -43,7 +44,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSDmgApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("ignoreVersionDetection", (n) -> { currentObject.setIgnoreVersionDetection(n.getBooleanValue()); });
             this.put("includedApps", (n) -> { currentObject.setIncludedApps(n.getCollectionOfObjectValues(MacOSIncludedApp::createFromDiscriminatorValue)); });
             this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(MacOSMinimumOperatingSystem::createFromDiscriminatorValue)); });
@@ -96,6 +97,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the ignoreVersionDetection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIgnoreVersionDetection(@javax.annotation.Nullable final Boolean value) {
         this._ignoreVersionDetection = value;
     }
@@ -118,6 +121,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the includedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludedApps(@javax.annotation.Nullable final java.util.List<MacOSIncludedApp> value) {
         this._includedApps = value;
     }
@@ -126,6 +130,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final MacOSMinimumOperatingSystem value) {
         this._minimumSupportedOperatingSystem = value;
     }
@@ -134,6 +139,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the primaryBundleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryBundleId(@javax.annotation.Nullable final String value) {
         this._primaryBundleId = value;
     }
@@ -142,6 +148,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the primaryBundleVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryBundleVersion(@javax.annotation.Nullable final String value) {
         this._primaryBundleVersion = value;
     }

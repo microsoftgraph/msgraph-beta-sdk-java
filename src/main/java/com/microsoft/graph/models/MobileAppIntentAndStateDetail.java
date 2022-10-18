@@ -30,6 +30,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      * Instantiates a new mobileAppIntentAndStateDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppIntentAndStateDetail() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.mobileAppIntentAndStateDetail");
@@ -83,7 +84,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppIntentAndStateDetail currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("displayVersion", (n) -> { currentObject.setDisplayVersion(n.getStringValue()); });
@@ -130,6 +131,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationId", this.getApplicationId());
@@ -146,6 +148,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +157,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      * @param value Value to set for the applicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationId(@javax.annotation.Nullable final String value) {
         this._applicationId = value;
     }
@@ -162,6 +166,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -170,6 +175,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      * @param value Value to set for the displayVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayVersion(@javax.annotation.Nullable final String value) {
         this._displayVersion = value;
     }
@@ -178,6 +184,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      * @param value Value to set for the installState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallState(@javax.annotation.Nullable final ResultantAppState value) {
         this._installState = value;
     }
@@ -186,6 +193,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      * @param value Value to set for the mobileAppIntent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppIntent(@javax.annotation.Nullable final MobileAppIntent value) {
         this._mobileAppIntent = value;
     }
@@ -194,6 +202,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -202,6 +211,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Pars
      * @param value Value to set for the supportedDeviceTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedDeviceTypes(@javax.annotation.Nullable final java.util.List<MobileAppSupportedDeviceType> value) {
         this._supportedDeviceTypes = value;
     }

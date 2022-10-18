@@ -42,6 +42,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Instantiates a new synchronizationStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationStatus() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.synchronizationStatus");
@@ -95,7 +96,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationStatus currentObject = this;
-        return new HashMap<>(13) {{
+        return new HashMap<String, Consumer<ParseNode>>(13) {{
             this.put("code", (n) -> { currentObject.setCode(n.getEnumValue(SynchronizationStatusCode.class)); });
             this.put("countSuccessiveCompleteFailures", (n) -> { currentObject.setCountSuccessiveCompleteFailures(n.getLongValue()); });
             this.put("escrowsPruned", (n) -> { currentObject.setEscrowsPruned(n.getBooleanValue()); });
@@ -196,6 +197,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("code", this.getCode());
@@ -218,6 +220,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -226,6 +229,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final SynchronizationStatusCode value) {
         this._code = value;
     }
@@ -234,6 +238,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the countSuccessiveCompleteFailures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountSuccessiveCompleteFailures(@javax.annotation.Nullable final Long value) {
         this._countSuccessiveCompleteFailures = value;
     }
@@ -242,6 +247,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the escrowsPruned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEscrowsPruned(@javax.annotation.Nullable final Boolean value) {
         this._escrowsPruned = value;
     }
@@ -250,6 +256,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastExecution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastExecution(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
         this._lastExecution = value;
     }
@@ -258,6 +265,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastSuccessfulExecution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSuccessfulExecution(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
         this._lastSuccessfulExecution = value;
     }
@@ -266,6 +274,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastSuccessfulExecutionWithExports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSuccessfulExecutionWithExports(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
         this._lastSuccessfulExecutionWithExports = value;
     }
@@ -274,6 +283,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -282,6 +292,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the progress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgress(@javax.annotation.Nullable final java.util.List<SynchronizationProgress> value) {
         this._progress = value;
     }
@@ -290,6 +301,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the quarantine property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuarantine(@javax.annotation.Nullable final SynchronizationQuarantine value) {
         this._quarantine = value;
     }
@@ -298,6 +310,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the steadyStateFirstAchievedTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSteadyStateFirstAchievedTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._steadyStateFirstAchievedTime = value;
     }
@@ -306,6 +319,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the steadyStateLastAchievedTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSteadyStateLastAchievedTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._steadyStateLastAchievedTime = value;
     }
@@ -314,6 +328,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the synchronizedEntryCountByType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSynchronizedEntryCountByType(@javax.annotation.Nullable final java.util.List<StringKeyLongValuePair> value) {
         this._synchronizedEntryCountByType = value;
     }
@@ -322,6 +337,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the troubleshootingUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTroubleshootingUrl(@javax.annotation.Nullable final String value) {
         this._troubleshootingUrl = value;
     }

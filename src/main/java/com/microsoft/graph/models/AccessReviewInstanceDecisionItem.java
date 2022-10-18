@@ -42,12 +42,13 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     private UserIdentity _reviewedBy;
     /** The timestamp when the review decision occurred. Supports $select. Read-only. */
     private OffsetDateTime _reviewedDateTime;
-    /** The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0. */
+    /** The target of this specific decision. Decision targets can be of different types  each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0. */
     private AccessReviewInstanceDecisionItemTarget _target;
     /**
      * Instantiates a new accessReviewInstanceDecisionItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItem() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItem");
@@ -109,7 +110,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessReviewId", (n) -> { currentObject.setAccessReviewId(n.getStringValue()); });
             this.put("appliedBy", (n) -> { currentObject.setAppliedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
             this.put("appliedDateTime", (n) -> { currentObject.setAppliedDateTime(n.getOffsetDateTimeValue()); });
@@ -218,7 +219,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this._reviewedDateTime;
     }
     /**
-     * Gets the target property value. The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
+     * Gets the target property value. The target of this specific decision. Decision targets can be of different types  each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
      * @return a accessReviewInstanceDecisionItemTarget
      */
     @javax.annotation.Nullable
@@ -230,6 +231,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -256,6 +258,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the accessReviewId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessReviewId(@javax.annotation.Nullable final String value) {
         this._accessReviewId = value;
     }
@@ -264,6 +267,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the appliedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliedBy(@javax.annotation.Nullable final UserIdentity value) {
         this._appliedBy = value;
     }
@@ -272,6 +276,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the appliedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._appliedDateTime = value;
     }
@@ -280,6 +285,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the applyResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplyResult(@javax.annotation.Nullable final String value) {
         this._applyResult = value;
     }
@@ -288,6 +294,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the decision property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecision(@javax.annotation.Nullable final String value) {
         this._decision = value;
     }
@@ -296,6 +303,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the insights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsights(@javax.annotation.Nullable final java.util.List<GovernanceInsight> value) {
         this._insights = value;
     }
@@ -304,6 +312,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the instance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstance(@javax.annotation.Nullable final AccessReviewInstance value) {
         this._instance = value;
     }
@@ -312,6 +321,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the justification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
         this._justification = value;
     }
@@ -320,6 +330,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the principal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipal(@javax.annotation.Nullable final Identity value) {
         this._principal = value;
     }
@@ -328,6 +339,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the principalLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalLink(@javax.annotation.Nullable final String value) {
         this._principalLink = value;
     }
@@ -336,6 +348,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the principalResourceMembership property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalResourceMembership(@javax.annotation.Nullable final DecisionItemPrincipalResourceMembership value) {
         this._principalResourceMembership = value;
     }
@@ -344,6 +357,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the recommendation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendation(@javax.annotation.Nullable final String value) {
         this._recommendation = value;
     }
@@ -352,6 +366,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final AccessReviewInstanceDecisionItemResource value) {
         this._resource = value;
     }
@@ -360,6 +375,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the resourceLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceLink(@javax.annotation.Nullable final String value) {
         this._resourceLink = value;
     }
@@ -368,6 +384,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the reviewedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewedBy(@javax.annotation.Nullable final UserIdentity value) {
         this._reviewedBy = value;
     }
@@ -376,14 +393,16 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the reviewedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._reviewedDateTime = value;
     }
     /**
-     * Sets the target property value. The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
+     * Sets the target property value. The target of this specific decision. Decision targets can be of different types  each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final AccessReviewInstanceDecisionItemTarget value) {
         this._target = value;
     }

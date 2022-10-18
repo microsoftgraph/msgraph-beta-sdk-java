@@ -14,6 +14,7 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
      * Instantiates a new MicrosoftStoreForBusinessContainedApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftStoreForBusinessContainedApp() {
         super();
         this.setOdataType("#microsoft.graph.microsoftStoreForBusinessContainedApp");
@@ -43,7 +44,7 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftStoreForBusinessContainedApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appUserModelId", (n) -> { currentObject.setAppUserModelId(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
      * @param value Value to set for the appUserModelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppUserModelId(@javax.annotation.Nullable final String value) {
         this._appUserModelId = value;
     }

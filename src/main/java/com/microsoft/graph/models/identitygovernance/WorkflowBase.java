@@ -17,28 +17,33 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The category property */
     private LifecycleWorkflowCategory _category;
-    /** The createdBy property */
+    /** The user who created the workflow. */
     private User _createdBy;
-    /** The createdDateTime property */
+    /** When a workflow was created. */
     private OffsetDateTime _createdDateTime;
-    /** The description property */
+    /** A string that describes the purpose of the workflow. */
     private String _description;
-    /** The displayName property */
+    /** A string to identify the workflow. */
     private String _displayName;
-    /** The executionConditions property */
+    /** Defines when and for who the workflow will run. */
     private WorkflowExecutionConditions _executionConditions;
-    /** The lastModifiedBy property */
+    /** Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true. */
+    private Boolean _isEnabled;
+    /** If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false). */
+    private Boolean _isSchedulingEnabled;
+    /** The user who last modified the workflow. */
     private User _lastModifiedBy;
-    /** The lastModifiedDateTime property */
+    /** When the workflow was last modified. */
     private OffsetDateTime _lastModifiedDateTime;
     /** The OdataType property */
     private String _odataType;
-    /** The tasks property */
+    /** The tasks in the workflow. */
     private java.util.List<Task> _tasks;
     /**
      * Instantiates a new workflowBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkflowBase() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.identityGovernance.workflowBase");
@@ -78,7 +83,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._category;
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The user who created the workflow.
      * @return a user
      */
     @javax.annotation.Nullable
@@ -86,7 +91,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. When a workflow was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -94,7 +99,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A string that describes the purpose of the workflow.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -102,7 +107,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. A string to identify the workflow.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -110,7 +115,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._displayName;
     }
     /**
-     * Gets the executionConditions property value. The executionConditions property
+     * Gets the executionConditions property value. Defines when and for who the workflow will run.
      * @return a workflowExecutionConditions
      */
     @javax.annotation.Nullable
@@ -124,13 +129,15 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkflowBase currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(LifecycleWorkflowCategory.class)); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(User::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("executionConditions", (n) -> { currentObject.setExecutionConditions(n.getObjectValue(WorkflowExecutionConditions::createFromDiscriminatorValue)); });
+            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+            this.put("isSchedulingEnabled", (n) -> { currentObject.setIsSchedulingEnabled(n.getBooleanValue()); });
             this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(User::createFromDiscriminatorValue)); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -138,7 +145,23 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the isEnabled property value. Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsEnabled() {
+        return this._isEnabled;
+    }
+    /**
+     * Gets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsSchedulingEnabled() {
+        return this._isSchedulingEnabled;
+    }
+    /**
+     * Gets the lastModifiedBy property value. The user who last modified the workflow.
      * @return a user
      */
     @javax.annotation.Nullable
@@ -146,7 +169,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. When the workflow was last modified.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -162,7 +185,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the tasks property value. The tasks property
+     * Gets the tasks property value. The tasks in the workflow.
      * @return a task
      */
     @javax.annotation.Nullable
@@ -174,6 +197,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("category", this.getCategory());
@@ -182,6 +206,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("executionConditions", this.getExecutionConditions());
+        writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+        writer.writeBooleanValue("isSchedulingEnabled", this.getIsSchedulingEnabled());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -193,6 +219,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -201,62 +228,88 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final LifecycleWorkflowCategory value) {
         this._category = value;
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The user who created the workflow.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final User value) {
         this._createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. When a workflow was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A string that describes the purpose of the workflow.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. A string to identify the workflow.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
     /**
-     * Sets the executionConditions property value. The executionConditions property
+     * Sets the executionConditions property value. Defines when and for who the workflow will run.
      * @param value Value to set for the executionConditions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExecutionConditions(@javax.annotation.Nullable final WorkflowExecutionConditions value) {
         this._executionConditions = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the isEnabled property value. Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
+     * @param value Value to set for the isEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._isEnabled = value;
+    }
+    /**
+     * Sets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+     * @param value Value to set for the isSchedulingEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsSchedulingEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._isSchedulingEnabled = value;
+    }
+    /**
+     * Sets the lastModifiedBy property value. The user who last modified the workflow.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final User value) {
         this._lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. When the workflow was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -265,14 +318,16 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
     /**
-     * Sets the tasks property value. The tasks property
+     * Sets the tasks property value. The tasks in the workflow.
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<Task> value) {
         this._tasks = value;
     }

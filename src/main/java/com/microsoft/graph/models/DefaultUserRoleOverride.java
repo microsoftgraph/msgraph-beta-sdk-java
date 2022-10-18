@@ -17,6 +17,7 @@ public class DefaultUserRoleOverride extends Entity implements Parsable {
      * Instantiates a new defaultUserRoleOverride and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DefaultUserRoleOverride() {
         super();
         this.setOdataType("#microsoft.graph.defaultUserRoleOverride");
@@ -38,7 +39,7 @@ public class DefaultUserRoleOverride extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DefaultUserRoleOverride currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
             this.put("rolePermissions", (n) -> { currentObject.setRolePermissions(n.getCollectionOfObjectValues(UnifiedRolePermission::createFromDiscriminatorValue)); });
         }};
@@ -64,6 +65,7 @@ public class DefaultUserRoleOverride extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class DefaultUserRoleOverride extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
         this._isDefault = value;
     }
@@ -83,6 +86,7 @@ public class DefaultUserRoleOverride extends Entity implements Parsable {
      * @param value Value to set for the rolePermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRolePermissions(@javax.annotation.Nullable final java.util.List<UnifiedRolePermission> value) {
         this._rolePermissions = value;
     }

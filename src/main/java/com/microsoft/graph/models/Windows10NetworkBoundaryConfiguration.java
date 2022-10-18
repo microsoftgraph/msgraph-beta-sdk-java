@@ -14,6 +14,7 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
      * Instantiates a new Windows10NetworkBoundaryConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10NetworkBoundaryConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10NetworkBoundaryConfiguration");
@@ -35,7 +36,7 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10NetworkBoundaryConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("windowsNetworkIsolationPolicy", (n) -> { currentObject.setWindowsNetworkIsolationPolicy(n.getObjectValue(WindowsNetworkIsolationPolicy::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
      * @param value Value to set for the windowsNetworkIsolationPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsNetworkIsolationPolicy(@javax.annotation.Nullable final WindowsNetworkIsolationPolicy value) {
         this._windowsNetworkIsolationPolicy = value;
     }

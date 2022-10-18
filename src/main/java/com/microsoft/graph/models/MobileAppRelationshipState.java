@@ -35,6 +35,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * Instantiates a new mobileAppRelationshipState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppRelationshipState() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.mobileAppRelationshipState");
@@ -80,7 +81,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppRelationshipState currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
             this.put("installState", (n) -> { currentObject.setInstallState(n.getEnumValue(ResultantAppState.class)); });
@@ -153,6 +154,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceId", this.getDeviceId());
@@ -171,6 +173,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -179,6 +182,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -187,6 +191,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Integer value) {
         this._errorCode = value;
     }
@@ -195,6 +200,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the installState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallState(@javax.annotation.Nullable final ResultantAppState value) {
         this._installState = value;
     }
@@ -203,6 +209,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the installStateDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallStateDetail(@javax.annotation.Nullable final ResultantAppStateDetail value) {
         this._installStateDetail = value;
     }
@@ -211,6 +218,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -219,6 +227,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the sourceIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sourceIds = value;
     }
@@ -227,6 +236,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the targetDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetDisplayName(@javax.annotation.Nullable final String value) {
         this._targetDisplayName = value;
     }
@@ -235,6 +245,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the targetId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetId(@javax.annotation.Nullable final String value) {
         this._targetId = value;
     }
@@ -243,6 +254,7 @@ public class MobileAppRelationshipState implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the targetLastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._targetLastSyncDateTime = value;
     }

@@ -27,6 +27,7 @@ public class Deployment extends Entity implements Parsable {
      * Instantiates a new deployment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Deployment() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.deployment");
@@ -72,7 +73,7 @@ public class Deployment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Deployment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("audience", (n) -> { currentObject.setAudience(n.getObjectValue(DeploymentAudience::createFromDiscriminatorValue)); });
             this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(DeployableContent::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -110,6 +111,7 @@ public class Deployment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -125,6 +127,7 @@ public class Deployment extends Entity implements Parsable {
      * @param value Value to set for the audience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudience(@javax.annotation.Nullable final DeploymentAudience value) {
         this._audience = value;
     }
@@ -133,6 +136,7 @@ public class Deployment extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final DeployableContent value) {
         this._content = value;
     }
@@ -141,6 +145,7 @@ public class Deployment extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -149,6 +154,7 @@ public class Deployment extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -157,6 +163,7 @@ public class Deployment extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final DeploymentSettings value) {
         this._settings = value;
     }
@@ -165,6 +172,7 @@ public class Deployment extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final DeploymentState value) {
         this._state = value;
     }

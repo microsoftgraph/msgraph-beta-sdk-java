@@ -41,6 +41,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Instantiates a new retireScheduledManagedDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RetireScheduledManagedDevice() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.retireScheduledManagedDevice");
@@ -102,7 +103,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RetireScheduledManagedDevice currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("complianceState", (n) -> { currentObject.setComplianceState(n.getEnumValue(ComplianceStatus.class)); });
             this.put("deviceCompliancePolicyId", (n) -> { currentObject.setDeviceCompliancePolicyId(n.getStringValue()); });
             this.put("deviceCompliancePolicyName", (n) -> { currentObject.setDeviceCompliancePolicyName(n.getStringValue()); });
@@ -186,6 +187,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("complianceState", this.getComplianceState());
@@ -207,6 +209,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -215,6 +218,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the complianceState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceState(@javax.annotation.Nullable final ComplianceStatus value) {
         this._complianceState = value;
     }
@@ -223,6 +227,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deviceCompliancePolicyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicyId(@javax.annotation.Nullable final String value) {
         this._deviceCompliancePolicyId = value;
     }
@@ -231,6 +236,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deviceCompliancePolicyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicyName(@javax.annotation.Nullable final String value) {
         this._deviceCompliancePolicyName = value;
     }
@@ -239,6 +245,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceType(@javax.annotation.Nullable final DeviceType value) {
         this._deviceType = value;
     }
@@ -247,6 +254,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -255,6 +263,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -263,6 +272,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the managedDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceName(@javax.annotation.Nullable final String value) {
         this._managedDeviceName = value;
     }
@@ -271,6 +281,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the managementAgent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementAgent(@javax.annotation.Nullable final ManagementAgentType value) {
         this._managementAgent = value;
     }
@@ -279,6 +290,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -287,6 +299,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the ownerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerType(@javax.annotation.Nullable final ManagedDeviceOwnerType value) {
         this._ownerType = value;
     }
@@ -295,6 +308,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the retireAfterDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRetireAfterDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._retireAfterDateTime = value;
     }
@@ -303,6 +317,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }

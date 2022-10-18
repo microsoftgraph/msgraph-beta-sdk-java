@@ -24,6 +24,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      * Instantiates a new bulkRestoreCloudPcPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BulkRestoreCloudPcPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -52,7 +53,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BulkRestoreCloudPcPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("managedDeviceIds", (n) -> { currentObject.setManagedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("restorePointDateTime", (n) -> { currentObject.setRestorePointDateTime(n.getOffsetDateTimeValue()); });
             this.put("timeRange", (n) -> { currentObject.setTimeRange(n.getEnumValue(RestoreTimeRange.class)); });
@@ -87,6 +88,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("managedDeviceIds", this.getManagedDeviceIds());
@@ -99,6 +101,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -107,6 +110,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the managedDeviceIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._managedDeviceIds = value;
     }
@@ -115,6 +119,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the restorePointDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestorePointDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._restorePointDateTime = value;
     }
@@ -123,6 +128,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the timeRange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeRange(@javax.annotation.Nullable final RestoreTimeRange value) {
         this._timeRange = value;
     }

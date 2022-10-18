@@ -24,6 +24,7 @@ public class OrganizationalMessageInsights implements AdditionalDataHolder, Pars
      * Instantiates a new organizationalMessageInsights and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalMessageInsights() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.organizationalMessageInsights");
@@ -69,7 +70,7 @@ public class OrganizationalMessageInsights implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageInsights currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("clicks", (n) -> { currentObject.setClicks(n.getIntegerValue()); });
             this.put("dismisses", (n) -> { currentObject.setDismisses(n.getIntegerValue()); });
             this.put("impressions", (n) -> { currentObject.setImpressions(n.getIntegerValue()); });
@@ -97,6 +98,7 @@ public class OrganizationalMessageInsights implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("clicks", this.getClicks());
@@ -110,6 +112,7 @@ public class OrganizationalMessageInsights implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class OrganizationalMessageInsights implements AdditionalDataHolder, Pars
      * @param value Value to set for the clicks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClicks(@javax.annotation.Nullable final Integer value) {
         this._clicks = value;
     }
@@ -126,6 +130,7 @@ public class OrganizationalMessageInsights implements AdditionalDataHolder, Pars
      * @param value Value to set for the dismisses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDismisses(@javax.annotation.Nullable final Integer value) {
         this._dismisses = value;
     }
@@ -134,6 +139,7 @@ public class OrganizationalMessageInsights implements AdditionalDataHolder, Pars
      * @param value Value to set for the impressions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImpressions(@javax.annotation.Nullable final Integer value) {
         this._impressions = value;
     }
@@ -142,6 +148,7 @@ public class OrganizationalMessageInsights implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

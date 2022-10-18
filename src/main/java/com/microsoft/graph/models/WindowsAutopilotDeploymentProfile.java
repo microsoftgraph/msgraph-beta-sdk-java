@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Autopilot Deployment Profile */
 public class WindowsAutopilotDeploymentProfile extends Entity implements Parsable {
     /** The list of assigned devices for the profile. */
     private java.util.List<WindowsAutopilotDeviceIdentity> _assignedDevices;
@@ -42,9 +43,10 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
     /** Scope tags for the profile. */
     private java.util.List<String> _roleScopeTagIds;
     /**
-     * Instantiates a new WindowsAutopilotDeploymentProfile and sets the default values.
+     * Instantiates a new windowsAutopilotDeploymentProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsAutopilotDeploymentProfile() {
         super();
         this.setOdataType("#microsoft.graph.windowsAutopilotDeploymentProfile");
@@ -52,7 +54,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsAutopilotDeploymentProfile
+     * @return a windowsAutopilotDeploymentProfile
      */
     @javax.annotation.Nonnull
     public static WindowsAutopilotDeploymentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -154,7 +156,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsAutopilotDeploymentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedDevices", (n) -> { currentObject.setAssignedDevices(n.getCollectionOfObjectValues(WindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsAutopilotDeploymentProfileAssignment::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -217,6 +219,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -241,6 +244,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the assignedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedDevices(@javax.annotation.Nullable final java.util.List<WindowsAutopilotDeviceIdentity> value) {
         this._assignedDevices = value;
     }
@@ -249,6 +253,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<WindowsAutopilotDeploymentProfileAssignment> value) {
         this._assignments = value;
     }
@@ -257,6 +262,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -265,6 +271,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -273,6 +280,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the deviceNameTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceNameTemplate(@javax.annotation.Nullable final String value) {
         this._deviceNameTemplate = value;
     }
@@ -281,6 +289,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the deviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceType(@javax.annotation.Nullable final WindowsAutopilotDeviceType value) {
         this._deviceType = value;
     }
@@ -289,6 +298,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -297,6 +307,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the enableWhiteGlove property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableWhiteGlove(@javax.annotation.Nullable final Boolean value) {
         this._enableWhiteGlove = value;
     }
@@ -305,6 +316,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the enrollmentStatusScreenSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentStatusScreenSettings(@javax.annotation.Nullable final WindowsEnrollmentStatusScreenSettings value) {
         this._enrollmentStatusScreenSettings = value;
     }
@@ -313,6 +325,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the extractHardwareHash property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtractHardwareHash(@javax.annotation.Nullable final Boolean value) {
         this._extractHardwareHash = value;
     }
@@ -321,6 +334,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the language property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguage(@javax.annotation.Nullable final String value) {
         this._language = value;
     }
@@ -329,6 +343,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -337,6 +352,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the managementServiceAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementServiceAppId(@javax.annotation.Nullable final String value) {
         this._managementServiceAppId = value;
     }
@@ -345,6 +361,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the outOfBoxExperienceSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutOfBoxExperienceSettings(@javax.annotation.Nullable final OutOfBoxExperienceSettings value) {
         this._outOfBoxExperienceSettings = value;
     }
@@ -353,6 +370,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }

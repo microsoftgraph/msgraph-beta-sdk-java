@@ -32,6 +32,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * Instantiates a new WindowsKioskConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskConfiguration");
@@ -61,7 +62,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("edgeKioskEnablePublicBrowsing", (n) -> { currentObject.setEdgeKioskEnablePublicBrowsing(n.getBooleanValue()); });
             this.put("kioskBrowserBlockedUrlExceptions", (n) -> { currentObject.setKioskBrowserBlockedUrlExceptions(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("kioskBrowserBlockedURLs", (n) -> { currentObject.setKioskBrowserBlockedURLs(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -151,6 +152,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,6 +172,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the edgeKioskEnablePublicBrowsing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeKioskEnablePublicBrowsing(@javax.annotation.Nullable final Boolean value) {
         this._edgeKioskEnablePublicBrowsing = value;
     }
@@ -178,6 +181,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the kioskBrowserBlockedUrlExceptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskBrowserBlockedUrlExceptions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._kioskBrowserBlockedUrlExceptions = value;
     }
@@ -186,6 +190,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the kioskBrowserBlockedURLs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskBrowserBlockedURLs(@javax.annotation.Nullable final java.util.List<String> value) {
         this._kioskBrowserBlockedURLs = value;
     }
@@ -194,6 +199,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the kioskBrowserDefaultUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskBrowserDefaultUrl(@javax.annotation.Nullable final String value) {
         this._kioskBrowserDefaultUrl = value;
     }
@@ -202,6 +208,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the kioskBrowserEnableEndSessionButton property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskBrowserEnableEndSessionButton(@javax.annotation.Nullable final Boolean value) {
         this._kioskBrowserEnableEndSessionButton = value;
     }
@@ -210,6 +217,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the kioskBrowserEnableHomeButton property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskBrowserEnableHomeButton(@javax.annotation.Nullable final Boolean value) {
         this._kioskBrowserEnableHomeButton = value;
     }
@@ -218,6 +226,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the kioskBrowserEnableNavigationButtons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskBrowserEnableNavigationButtons(@javax.annotation.Nullable final Boolean value) {
         this._kioskBrowserEnableNavigationButtons = value;
     }
@@ -226,6 +235,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the kioskBrowserRestartOnIdleTimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskBrowserRestartOnIdleTimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._kioskBrowserRestartOnIdleTimeInMinutes = value;
     }
@@ -234,6 +244,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the kioskProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskProfiles(@javax.annotation.Nullable final java.util.List<WindowsKioskProfile> value) {
         this._kioskProfiles = value;
     }
@@ -242,6 +253,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the windowsKioskForceUpdateSchedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsKioskForceUpdateSchedule(@javax.annotation.Nullable final WindowsKioskForceUpdateSchedule value) {
         this._windowsKioskForceUpdateSchedule = value;
     }

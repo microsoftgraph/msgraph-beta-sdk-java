@@ -23,6 +23,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * Instantiates a new deviceManagementExchangeOnPremisesPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementExchangeOnPremisesPolicy() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementExchangeOnPremisesPolicy");
@@ -68,7 +69,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementExchangeOnPremisesPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessRules", (n) -> { currentObject.setAccessRules(n.getCollectionOfObjectValues(DeviceManagementExchangeAccessRule::createFromDiscriminatorValue)); });
             this.put("conditionalAccessSettings", (n) -> { currentObject.setConditionalAccessSettings(n.getObjectValue(OnPremisesConditionalAccessSettings::createFromDiscriminatorValue)); });
             this.put("defaultAccessLevel", (n) -> { currentObject.setDefaultAccessLevel(n.getEnumValue(DeviceManagementExchangeAccessLevel.class)); });
@@ -97,6 +98,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * @param value Value to set for the accessRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessRules(@javax.annotation.Nullable final java.util.List<DeviceManagementExchangeAccessRule> value) {
         this._accessRules = value;
     }
@@ -119,6 +122,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * @param value Value to set for the conditionalAccessSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessSettings(@javax.annotation.Nullable final OnPremisesConditionalAccessSettings value) {
         this._conditionalAccessSettings = value;
     }
@@ -127,6 +131,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * @param value Value to set for the defaultAccessLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultAccessLevel(@javax.annotation.Nullable final DeviceManagementExchangeAccessLevel value) {
         this._defaultAccessLevel = value;
     }
@@ -135,6 +140,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * @param value Value to set for the knownDeviceClasses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKnownDeviceClasses(@javax.annotation.Nullable final java.util.List<DeviceManagementExchangeDeviceClass> value) {
         this._knownDeviceClasses = value;
     }
@@ -143,6 +149,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * @param value Value to set for the notificationContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationContent(@javax.annotation.Nullable final byte[] value) {
         this._notificationContent = value;
     }
