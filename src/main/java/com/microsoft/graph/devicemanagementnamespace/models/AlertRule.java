@@ -32,7 +32,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Alert Rule Template.
-     * 
+     * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
      */
     @SerializedName(value = "alertRuleTemplate", alternate = {"AlertRuleTemplate"})
     @Expose
@@ -41,7 +41,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The rule description.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -50,7 +50,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name of the rule.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -59,7 +59,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Enabled.
-     * 
+     * The status of the rule that indicates whether the rule is enabled or disabled. If true, the rule is enabled; otherwise, the rule is disabled.
      */
     @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
@@ -68,7 +68,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Is System Rule.
-     * 
+     * Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only
      */
     @SerializedName(value = "isSystemRule", alternate = {"IsSystemRule"})
     @Expose

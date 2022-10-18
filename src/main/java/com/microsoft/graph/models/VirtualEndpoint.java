@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.CloudPcCrossCloudGovernmentOrganizationMapping;
 import com.microsoft.graph.models.CloudPcOrganizationSettings;
 import com.microsoft.graph.models.CloudPcReports;
 import com.microsoft.graph.models.Entity;
@@ -56,6 +57,15 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.CloudPCCollectionPage cloudPCs;
+
+    /**
+     * The Cross Cloud Government Organization Mapping.
+     * Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
+     */
+    @SerializedName(value = "crossCloudGovernmentOrganizationMapping", alternate = {"CrossCloudGovernmentOrganizationMapping"})
+    @Expose
+	@Nullable
+    public CloudPcCrossCloudGovernmentOrganizationMapping crossCloudGovernmentOrganizationMapping;
 
     /**
      * The Device Images.

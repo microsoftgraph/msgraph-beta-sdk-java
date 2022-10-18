@@ -42,7 +42,7 @@ public class NotificationChannel implements IJsonBackedObject {
 
     /**
      * The Notification Channel Type.
-     * 
+     * The type of the notification channel. The possible values are: portal, email, phoneCall, sms, unknownFutureValue.
      */
     @SerializedName(value = "notificationChannelType", alternate = {"NotificationChannelType"})
     @Expose
@@ -51,7 +51,7 @@ public class NotificationChannel implements IJsonBackedObject {
 
     /**
      * The Notification Receivers.
-     * 
+     * Information about the notification receivers, such as locale and contact information. For example, en-us for locale and serena.davis@contoso.com for contact information.
      */
     @SerializedName(value = "notificationReceivers", alternate = {"NotificationReceivers"})
     @Expose
@@ -60,7 +60,7 @@ public class NotificationChannel implements IJsonBackedObject {
 
     /**
      * The Receivers.
-     * 
+     * The contact information about the notification receivers, such as email addresses. For portal notifications, receivers can be left blank. For email notifications, receivers consists of email addresses such as serena.davis@contoso.com.
      */
     @SerializedName(value = "receivers", alternate = {"Receivers"})
     @Expose
