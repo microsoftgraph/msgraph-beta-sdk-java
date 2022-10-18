@@ -20,6 +20,7 @@ repositories {
 
 apply plugin: "com.android.library"
 apply plugin: "com.github.ben-manes.versions"
+apply plugin: "com.github.ManifestClasspath" version "0.1.0-RELEASE"
 
 android {
     namespace 'com.microsoft.graph'
