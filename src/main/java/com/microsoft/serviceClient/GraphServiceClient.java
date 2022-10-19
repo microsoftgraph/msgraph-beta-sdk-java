@@ -8,11 +8,11 @@ import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.authentication.AnonymousAuthenticationProvider;
 import com.microsoft.kiota.authentication.AuthenticationProvider;
 import com.microsoft.kiota.authentication.AzureIdentityAuthenticationProvider;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import okhttp3.OkHttpClient;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClient {
 
@@ -37,7 +37,7 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
      * Instantiate the GraphServiceClient using an AuthenticationProvider.
      * @param authenticationProvider The AuthenticationProvider for this GraphServiceClient.
      */
-    public GraphServiceClient(AuthenticationProvider authenticationProvider) {
+    public GraphServiceClient(@Nonnull AuthenticationProvider authenticationProvider) {
         super(new BaseGraphRequestAdapter(authenticationProvider, null, "beta" , getGraphClientOptions()));
     }
     /**
@@ -45,14 +45,15 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
      * @param tokenCredential The TokenCredential for this GraphServiceClient.
      * @param scopes The Scopes for this GraphServiceClient.
      */
-    public GraphServiceClient(TokenCredential tokenCredential, String... scopes) {
+    @SuppressWarnings("LambdaLast")
+    public GraphServiceClient(@Nonnull TokenCredential tokenCredential, @Nullable String... scopes) {
         this(new AzureIdentityAuthenticationProvider(tokenCredential, null, scopes));
     }
     /**
      * Instantiate the GraphServiceClient using an OkHttpClient
      * @param client The OkHttpClient for the GraphServiceClient.
      */
-    public GraphServiceClient(OkHttpClient client) {
+    public GraphServiceClient(@Nonnull OkHttpClient client) {
         super(new BaseGraphRequestAdapter(new AnonymousAuthenticationProvider(), null, "beta", client));
     }
 }
