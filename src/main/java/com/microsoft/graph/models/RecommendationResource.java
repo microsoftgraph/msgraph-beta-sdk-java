@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class RecommendationResource extends Entity implements Parsable {
     /** The addedDateTime property */
     private OffsetDateTime _addedDateTime;
@@ -34,6 +34,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * Instantiates a new recommendationResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RecommendationResource() {
         super();
         this.setOdataType("#microsoft.graph.recommendationResource");
@@ -87,7 +88,7 @@ public class RecommendationResource extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecommendationResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("addedDateTime", (n) -> { currentObject.setAddedDateTime(n.getOffsetDateTimeValue()); });
             this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
             this.put("apiUrl", (n) -> { currentObject.setApiUrl(n.getStringValue()); });
@@ -153,6 +154,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,6 +174,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * @param value Value to set for the addedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._addedDateTime = value;
     }
@@ -180,6 +183,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalDetails(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
         this._additionalDetails = value;
     }
@@ -188,6 +192,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * @param value Value to set for the apiUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApiUrl(@javax.annotation.Nullable final String value) {
         this._apiUrl = value;
     }
@@ -196,6 +201,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -204,6 +210,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final String value) {
         this._owner = value;
     }
@@ -212,6 +219,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * @param value Value to set for the portalUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPortalUrl(@javax.annotation.Nullable final String value) {
         this._portalUrl = value;
     }
@@ -220,6 +228,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * @param value Value to set for the rank property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRank(@javax.annotation.Nullable final Integer value) {
         this._rank = value;
     }
@@ -228,6 +237,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * @param value Value to set for the recommendationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationId(@javax.annotation.Nullable final String value) {
         this._recommendationId = value;
     }
@@ -236,6 +246,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * @param value Value to set for the resourceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceType(@javax.annotation.Nullable final String value) {
         this._resourceType = value;
     }
@@ -244,6 +255,7 @@ public class RecommendationResource extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final RecommendationStatus value) {
         this._status = value;
     }

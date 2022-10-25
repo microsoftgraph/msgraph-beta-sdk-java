@@ -16,6 +16,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
      * Instantiates a new UserExperienceAnalyticsDeviceWithoutCloudIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsDeviceWithoutCloudIdentity() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsDeviceWithoutCloudIdentity");
@@ -53,7 +54,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsDeviceWithoutCloudIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureAdDeviceId", (n) -> { currentObject.setAzureAdDeviceId(n.getStringValue()); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
      * @param value Value to set for the azureAdDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdDeviceId(@javax.annotation.Nullable final String value) {
         this._azureAdDeviceId = value;
     }
@@ -82,6 +85,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }

@@ -18,6 +18,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
      * Instantiates a new plannerPlanDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerPlanDetails() {
         super();
         this.setOdataType("#microsoft.graph.plannerPlanDetails");
@@ -55,7 +56,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerPlanDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("categoryDescriptions", (n) -> { currentObject.setCategoryDescriptions(n.getObjectValue(PlannerCategoryDescriptions::createFromDiscriminatorValue)); });
             this.put("contextDetails", (n) -> { currentObject.setContextDetails(n.getObjectValue(PlannerPlanContextDetailsCollection::createFromDiscriminatorValue)); });
             this.put("sharedWith", (n) -> { currentObject.setSharedWith(n.getObjectValue(PlannerUserIds::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
      * @param value Value to set for the categoryDescriptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategoryDescriptions(@javax.annotation.Nullable final PlannerCategoryDescriptions value) {
         this._categoryDescriptions = value;
     }
@@ -94,6 +97,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
      * @param value Value to set for the contextDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContextDetails(@javax.annotation.Nullable final PlannerPlanContextDetailsCollection value) {
         this._contextDetails = value;
     }
@@ -102,6 +106,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
      * @param value Value to set for the sharedWith property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedWith(@javax.annotation.Nullable final PlannerUserIds value) {
         this._sharedWith = value;
     }

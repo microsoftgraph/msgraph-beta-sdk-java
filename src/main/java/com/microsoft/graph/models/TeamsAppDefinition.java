@@ -8,9 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class TeamsAppDefinition extends Entity implements Parsable {
-    /** A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data. */
+    /** A collection of scopes where the Teams app can be installed. Possible values are:team  Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat   Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal  Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data. */
     private TeamsAppInstallationScopes _allowedInstallationScopes;
     /** The WebApplicationInfo.Id from the Teams app manifest. */
     private String _azureADAppId;
@@ -28,7 +28,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** The outline version of the Teams app's icon. */
     private TeamsAppIcon _outlineIcon;
-    /** The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin. */
+    /** The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin. */
     private TeamsAppPublishingState _publishingState;
     /** The shortdescription property */
     private String _shortdescription;
@@ -40,6 +40,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Instantiates a new teamsAppDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsAppDefinition() {
         super();
         this.setOdataType("#microsoft.graph.teamsAppDefinition");
@@ -55,7 +56,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return new TeamsAppDefinition();
     }
     /**
-     * Gets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
+     * Gets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:team  Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat   Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal  Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
      * @return a teamsAppInstallationScopes
      */
     @javax.annotation.Nullable
@@ -117,7 +118,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsAppDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedInstallationScopes", (n) -> { currentObject.setAllowedInstallationScopes(n.getEnumValue(TeamsAppInstallationScopes.class)); });
             this.put("azureADAppId", (n) -> { currentObject.setAzureADAppId(n.getStringValue()); });
             this.put("bot", (n) -> { currentObject.setBot(n.getObjectValue(TeamworkBot::createFromDiscriminatorValue)); });
@@ -150,7 +151,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return this._outlineIcon;
     }
     /**
-     * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
+     * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
      * @return a teamsAppPublishingState
      */
     @javax.annotation.Nullable
@@ -186,6 +187,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -204,10 +206,11 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
+     * Sets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:team  Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat   Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal  Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
      * @param value Value to set for the allowedInstallationScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedInstallationScopes(@javax.annotation.Nullable final TeamsAppInstallationScopes value) {
         this._allowedInstallationScopes = value;
     }
@@ -216,6 +219,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the azureADAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureADAppId(@javax.annotation.Nullable final String value) {
         this._azureADAppId = value;
     }
@@ -224,6 +228,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the bot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBot(@javax.annotation.Nullable final TeamworkBot value) {
         this._bot = value;
     }
@@ -232,6 +237,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the colorIcon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColorIcon(@javax.annotation.Nullable final TeamsAppIcon value) {
         this._colorIcon = value;
     }
@@ -240,6 +246,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -248,6 +255,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -256,6 +264,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -264,6 +273,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -272,14 +282,16 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the outlineIcon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutlineIcon(@javax.annotation.Nullable final TeamsAppIcon value) {
         this._outlineIcon = value;
     }
     /**
-     * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
+     * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
      * @param value Value to set for the publishingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingState(@javax.annotation.Nullable final TeamsAppPublishingState value) {
         this._publishingState = value;
     }
@@ -288,6 +300,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the shortdescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShortdescription(@javax.annotation.Nullable final String value) {
         this._shortdescription = value;
     }
@@ -296,6 +309,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the teamsAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
         this._teamsAppId = value;
     }
@@ -304,6 +318,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

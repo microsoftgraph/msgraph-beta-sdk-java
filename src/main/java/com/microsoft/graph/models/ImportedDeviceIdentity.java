@@ -30,6 +30,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * Instantiates a new ImportedDeviceIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImportedDeviceIdentity() {
         super();
         this.setOdataType("#microsoft.graph.importedDeviceIdentity");
@@ -82,7 +83,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedDeviceIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("enrollmentState", (n) -> { currentObject.setEnrollmentState(n.getEnumValue(EnrollmentState.class)); });
@@ -138,6 +139,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -155,6 +157,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -163,6 +166,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -171,6 +175,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the enrollmentState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentState(@javax.annotation.Nullable final EnrollmentState value) {
         this._enrollmentState = value;
     }
@@ -179,6 +184,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the importedDeviceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportedDeviceIdentifier(@javax.annotation.Nullable final String value) {
         this._importedDeviceIdentifier = value;
     }
@@ -187,6 +193,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the importedDeviceIdentityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportedDeviceIdentityType(@javax.annotation.Nullable final ImportedDeviceIdentityType value) {
         this._importedDeviceIdentityType = value;
     }
@@ -195,6 +202,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the lastContactedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastContactedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastContactedDateTime = value;
     }
@@ -203,6 +211,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -211,6 +220,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final Platform value) {
         this._platform = value;
     }

@@ -12,6 +12,7 @@ public class SubjectRightsRequestAllMailboxLocation extends SubjectRightsRequest
      * Instantiates a new SubjectRightsRequestAllMailboxLocation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubjectRightsRequestAllMailboxLocation() {
         super();
         this.setOdataType("#microsoft.graph.subjectRightsRequestAllMailboxLocation");
@@ -33,7 +34,7 @@ public class SubjectRightsRequestAllMailboxLocation extends SubjectRightsRequest
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestAllMailboxLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -41,6 +42,7 @@ public class SubjectRightsRequestAllMailboxLocation extends SubjectRightsRequest
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

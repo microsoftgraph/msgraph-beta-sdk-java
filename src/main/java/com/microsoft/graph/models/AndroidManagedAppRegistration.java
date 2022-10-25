@@ -14,6 +14,7 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
      * Instantiates a new AndroidManagedAppRegistration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedAppRegistration() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedAppRegistration");
@@ -35,7 +36,7 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedAppRegistration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("patchVersion", (n) -> { currentObject.setPatchVersion(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
      * @param value Value to set for the patchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPatchVersion(@javax.annotation.Nullable final String value) {
         this._patchVersion = value;
     }

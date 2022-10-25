@@ -21,6 +21,7 @@ public class CloudCommunications extends Entity implements Parsable {
      * Instantiates a new CloudCommunications and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudCommunications() {
         super();
         this.setOdataType("#microsoft.graph.cloudCommunications");
@@ -58,7 +59,7 @@ public class CloudCommunications extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudCommunications currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("callRecords", (n) -> { currentObject.setCallRecords(n.getCollectionOfObjectValues(CallRecord::createFromDiscriminatorValue)); });
             this.put("calls", (n) -> { currentObject.setCalls(n.getCollectionOfObjectValues(Call::createFromDiscriminatorValue)); });
             this.put("onlineMeetings", (n) -> { currentObject.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
@@ -86,6 +87,7 @@ public class CloudCommunications extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class CloudCommunications extends Entity implements Parsable {
      * @param value Value to set for the callRecords property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallRecords(@javax.annotation.Nullable final java.util.List<CallRecord> value) {
         this._callRecords = value;
     }
@@ -107,6 +110,7 @@ public class CloudCommunications extends Entity implements Parsable {
      * @param value Value to set for the calls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalls(@javax.annotation.Nullable final java.util.List<Call> value) {
         this._calls = value;
     }
@@ -115,6 +119,7 @@ public class CloudCommunications extends Entity implements Parsable {
      * @param value Value to set for the onlineMeetings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineMeetings(@javax.annotation.Nullable final java.util.List<OnlineMeeting> value) {
         this._onlineMeetings = value;
     }
@@ -123,6 +128,7 @@ public class CloudCommunications extends Entity implements Parsable {
      * @param value Value to set for the presences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPresences(@javax.annotation.Nullable final java.util.List<Presence> value) {
         this._presences = value;
     }

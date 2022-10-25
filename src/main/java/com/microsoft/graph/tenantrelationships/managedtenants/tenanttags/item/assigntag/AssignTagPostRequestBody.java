@@ -18,6 +18,7 @@ public class AssignTagPostRequestBody implements AdditionalDataHolder, Parsable 
      * Instantiates a new assignTagPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignTagPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,7 +47,7 @@ public class AssignTagPostRequestBody implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignTagPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("tenantIds", (n) -> { currentObject.setTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -63,6 +64,7 @@ public class AssignTagPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("tenantIds", this.getTenantIds());
@@ -73,6 +75,7 @@ public class AssignTagPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class AssignTagPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the tenantIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tenantIds = value;
     }

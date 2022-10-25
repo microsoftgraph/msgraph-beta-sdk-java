@@ -60,6 +60,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Instantiates a new WindowsWiredNetworkConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsWiredNetworkConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsWiredNetworkConfiguration");
@@ -161,7 +162,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsWiredNetworkConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationBlockPeriodInMinutes", (n) -> { currentObject.setAuthenticationBlockPeriodInMinutes(n.getIntegerValue()); });
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(WiredNetworkAuthenticationMethod.class)); });
             this.put("authenticationPeriodInSeconds", (n) -> { currentObject.setAuthenticationPeriodInSeconds(n.getIntegerValue()); });
@@ -305,6 +306,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -338,6 +340,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the authenticationBlockPeriodInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationBlockPeriodInMinutes(@javax.annotation.Nullable final Integer value) {
         this._authenticationBlockPeriodInMinutes = value;
     }
@@ -346,6 +349,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final WiredNetworkAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -354,6 +358,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the authenticationPeriodInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
         this._authenticationPeriodInSeconds = value;
     }
@@ -362,6 +367,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the authenticationRetryDelayPeriodInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationRetryDelayPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
         this._authenticationRetryDelayPeriodInSeconds = value;
     }
@@ -370,6 +376,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the authenticationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationType(@javax.annotation.Nullable final WiredNetworkAuthenticationType value) {
         this._authenticationType = value;
     }
@@ -378,6 +385,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the cacheCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheCredentials(@javax.annotation.Nullable final Boolean value) {
         this._cacheCredentials = value;
     }
@@ -386,6 +394,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the disableUserPromptForServerValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableUserPromptForServerValidation(@javax.annotation.Nullable final Boolean value) {
         this._disableUserPromptForServerValidation = value;
     }
@@ -394,6 +403,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the eapolStartPeriodInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapolStartPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
         this._eapolStartPeriodInSeconds = value;
     }
@@ -402,6 +412,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the eapType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapType(@javax.annotation.Nullable final EapType value) {
         this._eapType = value;
     }
@@ -410,6 +421,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the enforce8021X property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforce8021X(@javax.annotation.Nullable final Boolean value) {
         this._enforce8021X = value;
     }
@@ -418,6 +430,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the forceFIPSCompliance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setForceFIPSCompliance(@javax.annotation.Nullable final Boolean value) {
         this._forceFIPSCompliance = value;
     }
@@ -426,6 +439,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final WindowsCertificateProfileBase value) {
         this._identityCertificateForClientAuthentication = value;
     }
@@ -434,6 +448,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the innerAuthenticationProtocolForEAPTTLS property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInnerAuthenticationProtocolForEAPTTLS(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
         this._innerAuthenticationProtocolForEAPTTLS = value;
     }
@@ -442,6 +457,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the maximumAuthenticationFailures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumAuthenticationFailures(@javax.annotation.Nullable final Integer value) {
         this._maximumAuthenticationFailures = value;
     }
@@ -450,6 +466,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the maximumEAPOLStartMessages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumEAPOLStartMessages(@javax.annotation.Nullable final Integer value) {
         this._maximumEAPOLStartMessages = value;
     }
@@ -458,6 +475,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
         this._outerIdentityPrivacyTemporaryValue = value;
     }
@@ -466,6 +484,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the performServerValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPerformServerValidation(@javax.annotation.Nullable final Boolean value) {
         this._performServerValidation = value;
     }
@@ -474,6 +493,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the requireCryptographicBinding property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireCryptographicBinding(@javax.annotation.Nullable final Boolean value) {
         this._requireCryptographicBinding = value;
     }
@@ -482,6 +502,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the rootCertificateForClientValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificateForClientValidation(@javax.annotation.Nullable final Windows81TrustedRootCertificate value) {
         this._rootCertificateForClientValidation = value;
     }
@@ -490,6 +511,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the rootCertificatesForServerValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificatesForServerValidation(@javax.annotation.Nullable final java.util.List<Windows81TrustedRootCertificate> value) {
         this._rootCertificatesForServerValidation = value;
     }
@@ -498,6 +520,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the secondaryAuthenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecondaryAuthenticationMethod(@javax.annotation.Nullable final WiredNetworkAuthenticationMethod value) {
         this._secondaryAuthenticationMethod = value;
     }
@@ -506,6 +529,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the secondaryIdentityCertificateForClientAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecondaryIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final WindowsCertificateProfileBase value) {
         this._secondaryIdentityCertificateForClientAuthentication = value;
     }
@@ -514,6 +538,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the secondaryRootCertificateForClientValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecondaryRootCertificateForClientValidation(@javax.annotation.Nullable final Windows81TrustedRootCertificate value) {
         this._secondaryRootCertificateForClientValidation = value;
     }
@@ -522,6 +547,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the trustedServerCertificateNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._trustedServerCertificateNames = value;
     }

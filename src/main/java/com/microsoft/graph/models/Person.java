@@ -52,6 +52,7 @@ public class Person extends Entity implements Parsable {
      * Instantiates a new Person and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Person() {
         super();
         this.setOdataType("#microsoft.graph.person");
@@ -113,7 +114,7 @@ public class Person extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Person currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("birthday", (n) -> { currentObject.setBirthday(n.getStringValue()); });
             this.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
             this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
@@ -261,6 +262,7 @@ public class Person extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -290,6 +292,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the birthday property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBirthday(@javax.annotation.Nullable final String value) {
         this._birthday = value;
     }
@@ -298,6 +301,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the companyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompanyName(@javax.annotation.Nullable final String value) {
         this._companyName = value;
     }
@@ -306,6 +310,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the department property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDepartment(@javax.annotation.Nullable final String value) {
         this._department = value;
     }
@@ -314,6 +319,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -322,6 +328,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the emailAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddresses(@javax.annotation.Nullable final java.util.List<RankedEmailAddress> value) {
         this._emailAddresses = value;
     }
@@ -330,6 +337,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the givenName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGivenName(@javax.annotation.Nullable final String value) {
         this._givenName = value;
     }
@@ -338,6 +346,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the isFavorite property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsFavorite(@javax.annotation.Nullable final Boolean value) {
         this._isFavorite = value;
     }
@@ -346,6 +355,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the mailboxType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxType(@javax.annotation.Nullable final String value) {
         this._mailboxType = value;
     }
@@ -354,6 +364,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the officeLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeLocation(@javax.annotation.Nullable final String value) {
         this._officeLocation = value;
     }
@@ -362,6 +373,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the personNotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonNotes(@javax.annotation.Nullable final String value) {
         this._personNotes = value;
     }
@@ -370,6 +382,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the personType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonType(@javax.annotation.Nullable final String value) {
         this._personType = value;
     }
@@ -378,6 +391,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the phones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhones(@javax.annotation.Nullable final java.util.List<Phone> value) {
         this._phones = value;
     }
@@ -386,6 +400,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the postalAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostalAddresses(@javax.annotation.Nullable final java.util.List<Location> value) {
         this._postalAddresses = value;
     }
@@ -394,6 +409,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the profession property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfession(@javax.annotation.Nullable final String value) {
         this._profession = value;
     }
@@ -402,6 +418,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the sources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSources(@javax.annotation.Nullable final java.util.List<PersonDataSource> value) {
         this._sources = value;
     }
@@ -410,6 +427,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the surname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurname(@javax.annotation.Nullable final String value) {
         this._surname = value;
     }
@@ -418,6 +436,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }
@@ -426,6 +445,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -434,6 +454,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the websites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebsites(@javax.annotation.Nullable final java.util.List<Website> value) {
         this._websites = value;
     }
@@ -442,6 +463,7 @@ public class Person extends Entity implements Parsable {
      * @param value Value to set for the yomiCompany property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYomiCompany(@javax.annotation.Nullable final String value) {
         this._yomiCompany = value;
     }

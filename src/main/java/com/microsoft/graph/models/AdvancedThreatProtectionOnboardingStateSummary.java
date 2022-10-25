@@ -27,9 +27,10 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     /** Number of unknown devices */
     private Integer _unknownDeviceCount;
     /**
-     * Instantiates a new advancedThreatProtectionOnboardingStateSummary and sets the default values.
+     * Instantiates a new AdvancedThreatProtectionOnboardingStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AdvancedThreatProtectionOnboardingStateSummary() {
         super();
         this.setOdataType("#microsoft.graph.advancedThreatProtectionOnboardingStateSummary");
@@ -37,7 +38,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a advancedThreatProtectionOnboardingStateSummary
+     * @return a AdvancedThreatProtectionOnboardingStateSummary
      */
     @javax.annotation.Nonnull
     public static AdvancedThreatProtectionOnboardingStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +84,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AdvancedThreatProtectionOnboardingStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("advancedThreatProtectionOnboardingDeviceSettingStates", (n) -> { currentObject.setAdvancedThreatProtectionOnboardingDeviceSettingStates(n.getCollectionOfObjectValues(AdvancedThreatProtectionOnboardingDeviceSettingState::createFromDiscriminatorValue)); });
             this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
             this.put("conflictDeviceCount", (n) -> { currentObject.setConflictDeviceCount(n.getIntegerValue()); });
@@ -140,6 +141,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +160,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param value Value to set for the advancedThreatProtectionOnboardingDeviceSettingStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionOnboardingDeviceSettingStates(@javax.annotation.Nullable final java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> value) {
         this._advancedThreatProtectionOnboardingDeviceSettingStates = value;
     }
@@ -166,6 +169,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._compliantDeviceCount = value;
     }
@@ -174,6 +178,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param value Value to set for the conflictDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._conflictDeviceCount = value;
     }
@@ -182,6 +187,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._errorDeviceCount = value;
     }
@@ -190,6 +196,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param value Value to set for the nonCompliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNonCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._nonCompliantDeviceCount = value;
     }
@@ -198,6 +205,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param value Value to set for the notApplicableDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._notApplicableDeviceCount = value;
     }
@@ -206,6 +214,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param value Value to set for the notAssignedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotAssignedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._notAssignedDeviceCount = value;
     }
@@ -214,6 +223,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param value Value to set for the remediatedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediatedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._remediatedDeviceCount = value;
     }
@@ -222,6 +232,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._unknownDeviceCount = value;
     }

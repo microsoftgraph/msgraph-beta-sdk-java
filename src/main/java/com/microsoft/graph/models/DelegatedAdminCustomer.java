@@ -18,6 +18,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      * Instantiates a new DelegatedAdminCustomer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedAdminCustomer() {
         super();
         this.setOdataType("#microsoft.graph.delegatedAdminCustomer");
@@ -47,7 +48,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedAdminCustomer currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("serviceManagementDetails", (n) -> { currentObject.setServiceManagementDetails(n.getCollectionOfObjectValues(DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue)); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -94,6 +97,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      * @param value Value to set for the serviceManagementDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceManagementDetails(@javax.annotation.Nullable final java.util.List<DelegatedAdminServiceManagementDetail> value) {
         this._serviceManagementDetails = value;
     }
@@ -102,6 +106,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

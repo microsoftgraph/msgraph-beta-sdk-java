@@ -42,6 +42,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Instantiates a new teamworkSystemConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkSystemConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teamworkSystemConfiguration");
@@ -95,7 +96,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkSystemConfiguration currentObject = this;
-        return new HashMap<>(13) {{
+        return new HashMap<String, Consumer<ParseNode>>(13) {{
             this.put("dateTimeConfiguration", (n) -> { currentObject.setDateTimeConfiguration(n.getObjectValue(TeamworkDateTimeConfiguration::createFromDiscriminatorValue)); });
             this.put("defaultPassword", (n) -> { currentObject.setDefaultPassword(n.getStringValue()); });
             this.put("deviceLockTimeout", (n) -> { currentObject.setDeviceLockTimeout(n.getPeriodValue()); });
@@ -196,6 +197,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("dateTimeConfiguration", this.getDateTimeConfiguration());
@@ -218,6 +220,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -226,6 +229,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the dateTimeConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateTimeConfiguration(@javax.annotation.Nullable final TeamworkDateTimeConfiguration value) {
         this._dateTimeConfiguration = value;
     }
@@ -234,6 +238,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the defaultPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultPassword(@javax.annotation.Nullable final String value) {
         this._defaultPassword = value;
     }
@@ -242,6 +247,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the deviceLockTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceLockTimeout(@javax.annotation.Nullable final Period value) {
         this._deviceLockTimeout = value;
     }
@@ -250,6 +256,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the isDeviceLockEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeviceLockEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isDeviceLockEnabled = value;
     }
@@ -258,6 +265,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the isLoggingEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsLoggingEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isLoggingEnabled = value;
     }
@@ -266,6 +274,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the isPowerSavingEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPowerSavingEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isPowerSavingEnabled = value;
     }
@@ -274,6 +283,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the isScreenCaptureEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsScreenCaptureEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isScreenCaptureEnabled = value;
     }
@@ -282,6 +292,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the isSilentModeEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSilentModeEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isSilentModeEnabled = value;
     }
@@ -290,6 +301,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the language property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguage(@javax.annotation.Nullable final String value) {
         this._language = value;
     }
@@ -298,6 +310,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the lockPin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockPin(@javax.annotation.Nullable final String value) {
         this._lockPin = value;
     }
@@ -306,6 +319,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the loggingLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoggingLevel(@javax.annotation.Nullable final String value) {
         this._loggingLevel = value;
     }
@@ -314,6 +328,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the networkConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkConfiguration(@javax.annotation.Nullable final TeamworkNetworkConfiguration value) {
         this._networkConfiguration = value;
     }
@@ -322,6 +337,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

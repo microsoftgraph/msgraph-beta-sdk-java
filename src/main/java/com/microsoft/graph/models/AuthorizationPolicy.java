@@ -14,9 +14,11 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     private Boolean _allowedToUseSSPR;
     /** Indicates whether a user can join the tenant by email validation. */
     private Boolean _allowEmailVerifiedUsersToJoinOrganization;
-    /** Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. See more in the table below. */
+    /** Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below. */
     private AllowInvitesFrom _allowInvitesFrom;
-    /** To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph. */
+    /** Indicates whether user consent for risky apps is allowed. We recommend to keep this as false. */
+    private Boolean _allowUserConsentForRiskyApps;
+    /** To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This does not affect Azure AD Connect or Microsoft Graph. */
     private Boolean _blockMsolPowerShell;
     /** The defaultUserRoleOverrides property */
     private java.util.List<DefaultUserRoleOverride> _defaultUserRoleOverrides;
@@ -32,6 +34,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * Instantiates a new AuthorizationPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthorizationPolicy() {
         super();
         this.setOdataType("#microsoft.graph.authorizationPolicy");
@@ -71,7 +74,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return this._allowEmailVerifiedUsersToJoinOrganization;
     }
     /**
-     * Gets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * Gets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
      * @return a allowInvitesFrom
      */
     @javax.annotation.Nullable
@@ -79,7 +82,15 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return this._allowInvitesFrom;
     }
     /**
-     * Gets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
+     * Gets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. We recommend to keep this as false.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getAllowUserConsentForRiskyApps() {
+        return this._allowUserConsentForRiskyApps;
+    }
+    /**
+     * Gets the blockMsolPowerShell property value. To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This does not affect Azure AD Connect or Microsoft Graph.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -117,11 +128,12 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthorizationPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedToSignUpEmailBasedSubscriptions", (n) -> { currentObject.setAllowedToSignUpEmailBasedSubscriptions(n.getBooleanValue()); });
             this.put("allowedToUseSSPR", (n) -> { currentObject.setAllowedToUseSSPR(n.getBooleanValue()); });
             this.put("allowEmailVerifiedUsersToJoinOrganization", (n) -> { currentObject.setAllowEmailVerifiedUsersToJoinOrganization(n.getBooleanValue()); });
             this.put("allowInvitesFrom", (n) -> { currentObject.setAllowInvitesFrom(n.getEnumValue(AllowInvitesFrom.class)); });
+            this.put("allowUserConsentForRiskyApps", (n) -> { currentObject.setAllowUserConsentForRiskyApps(n.getBooleanValue()); });
             this.put("blockMsolPowerShell", (n) -> { currentObject.setBlockMsolPowerShell(n.getBooleanValue()); });
             this.put("defaultUserRoleOverrides", (n) -> { currentObject.setDefaultUserRoleOverrides(n.getCollectionOfObjectValues(DefaultUserRoleOverride::createFromDiscriminatorValue)); });
             this.put("defaultUserRolePermissions", (n) -> { currentObject.setDefaultUserRolePermissions(n.getObjectValue(DefaultUserRolePermissions::createFromDiscriminatorValue)); });
@@ -151,6 +163,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +171,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         writer.writeBooleanValue("allowedToUseSSPR", this.getAllowedToUseSSPR());
         writer.writeBooleanValue("allowEmailVerifiedUsersToJoinOrganization", this.getAllowEmailVerifiedUsersToJoinOrganization());
         writer.writeEnumValue("allowInvitesFrom", this.getAllowInvitesFrom());
+        writer.writeBooleanValue("allowUserConsentForRiskyApps", this.getAllowUserConsentForRiskyApps());
         writer.writeBooleanValue("blockMsolPowerShell", this.getBlockMsolPowerShell());
         writer.writeCollectionOfObjectValues("defaultUserRoleOverrides", this.getDefaultUserRoleOverrides());
         writer.writeObjectValue("defaultUserRolePermissions", this.getDefaultUserRolePermissions());
@@ -170,6 +184,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowedToSignUpEmailBasedSubscriptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedToSignUpEmailBasedSubscriptions(@javax.annotation.Nullable final Boolean value) {
         this._allowedToSignUpEmailBasedSubscriptions = value;
     }
@@ -178,6 +193,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowedToUseSSPR property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedToUseSSPR(@javax.annotation.Nullable final Boolean value) {
         this._allowedToUseSSPR = value;
     }
@@ -186,22 +202,34 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowEmailVerifiedUsersToJoinOrganization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowEmailVerifiedUsersToJoinOrganization(@javax.annotation.Nullable final Boolean value) {
         this._allowEmailVerifiedUsersToJoinOrganization = value;
     }
     /**
-     * Sets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * Sets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
      * @param value Value to set for the allowInvitesFrom property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowInvitesFrom(@javax.annotation.Nullable final AllowInvitesFrom value) {
         this._allowInvitesFrom = value;
     }
     /**
-     * Sets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
+     * Sets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. We recommend to keep this as false.
+     * @param value Value to set for the allowUserConsentForRiskyApps property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAllowUserConsentForRiskyApps(@javax.annotation.Nullable final Boolean value) {
+        this._allowUserConsentForRiskyApps = value;
+    }
+    /**
+     * Sets the blockMsolPowerShell property value. To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This does not affect Azure AD Connect or Microsoft Graph.
      * @param value Value to set for the blockMsolPowerShell property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockMsolPowerShell(@javax.annotation.Nullable final Boolean value) {
         this._blockMsolPowerShell = value;
     }
@@ -210,6 +238,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the defaultUserRoleOverrides property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultUserRoleOverrides(@javax.annotation.Nullable final java.util.List<DefaultUserRoleOverride> value) {
         this._defaultUserRoleOverrides = value;
     }
@@ -218,6 +247,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the defaultUserRolePermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultUserRolePermissions(@javax.annotation.Nullable final DefaultUserRolePermissions value) {
         this._defaultUserRolePermissions = value;
     }
@@ -226,6 +256,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the enabledPreviewFeatures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabledPreviewFeatures(@javax.annotation.Nullable final java.util.List<String> value) {
         this._enabledPreviewFeatures = value;
     }
@@ -234,6 +265,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the guestUserRoleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGuestUserRoleId(@javax.annotation.Nullable final String value) {
         this._guestUserRoleId = value;
     }
@@ -242,6 +274,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the permissionGrantPolicyIdsAssignedToDefaultUserRole property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionGrantPolicyIdsAssignedToDefaultUserRole(@javax.annotation.Nullable final java.util.List<String> value) {
         this._permissionGrantPolicyIdsAssignedToDefaultUserRole = value;
     }

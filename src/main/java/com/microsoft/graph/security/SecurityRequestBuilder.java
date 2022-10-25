@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Security;
 import com.microsoft.graph.security.alerts_v2.Alerts_v2RequestBuilder;
 import com.microsoft.graph.security.alerts.AlertsRequestBuilder;
+import com.microsoft.graph.security.alerts.item.AlertItemRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
 import com.microsoft.graph.security.cases.CasesRequestBuilder;
 import com.microsoft.graph.security.cloudappsecurityprofiles.CloudAppSecurityProfilesRequestBuilder;
@@ -43,7 +44,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -115,14 +115,14 @@ public class SecurityRequestBuilder {
         return new LabelsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The providerTenantSettings property */
     @javax.annotation.Nonnull
     public ProviderTenantSettingsRequestBuilder providerTenantSettings() {
         return new ProviderTenantSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The runHuntingQuery property */
     @javax.annotation.Nonnull
     public RunHuntingQueryRequestBuilder runHuntingQuery() {
@@ -169,7 +169,7 @@ public class SecurityRequestBuilder {
         return new TriggerTypesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /** The userSecurityProfiles property */
     @javax.annotation.Nonnull
     public UserSecurityProfilesRequestBuilder userSecurityProfiles() {
@@ -183,7 +183,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.security.alerts.item.AlertItemRequestBuilder alerts(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("alert%2Did", id);
         return new com.microsoft.graph.security.alerts.item.AlertItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -195,7 +195,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder alerts_v2(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("alert%2Did", id);
         return new com.microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -207,7 +207,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public CloudAppSecurityProfileItemRequestBuilder cloudAppSecurityProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudAppSecurityProfile%2Did", id);
         return new CloudAppSecurityProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -217,11 +217,12 @@ public class SecurityRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/security{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -231,9 +232,10 @@ public class SecurityRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/security{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -291,6 +293,7 @@ public class SecurityRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SecurityRequestBuilderPatchRequestConfiguration requestConfig = new SecurityRequestBuilderPatchRequestConfiguration();
@@ -308,7 +311,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public DomainSecurityProfileItemRequestBuilder domainSecurityProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("domainSecurityProfile%2Did", id);
         return new DomainSecurityProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -320,7 +323,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public FileSecurityProfileItemRequestBuilder fileSecurityProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("fileSecurityProfile%2Did", id);
         return new FileSecurityProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -328,16 +331,19 @@ public class SecurityRequestBuilder {
      * Get security
      * @return a CompletableFuture of security
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Security> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, Security::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Security::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Security>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -345,34 +351,19 @@ public class SecurityRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of security
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Security> get(@javax.annotation.Nullable final java.util.function.Consumer<SecurityRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, Security::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Security::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Get security
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of security
-     */
-    public java.util.concurrent.CompletableFuture<Security> get(@javax.annotation.Nullable final java.util.function.Consumer<SecurityRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<Security>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, Security::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -383,7 +374,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public HostSecurityProfileItemRequestBuilder hostSecurityProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("hostSecurityProfile%2Did", id);
         return new HostSecurityProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -395,7 +386,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public IncidentItemRequestBuilder incidents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("incident%2Did", id);
         return new IncidentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -407,63 +398,50 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public IpSecurityProfileItemRequestBuilder ipSecurityProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("ipSecurityProfile%2Did", id);
         return new IpSecurityProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update security
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of security
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Security body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Security> patch(@javax.annotation.Nonnull final Security body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Security::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Security>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update security
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of security
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Security body, @javax.annotation.Nullable final java.util.function.Consumer<SecurityRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update security
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Security body, @javax.annotation.Nullable final java.util.function.Consumer<SecurityRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Security> patch(@javax.annotation.Nonnull final Security body, @javax.annotation.Nullable final java.util.function.Consumer<SecurityRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Security::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Security>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -474,7 +452,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public ProviderTenantSettingItemRequestBuilder providerTenantSettings(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("providerTenantSetting%2Did", id);
         return new ProviderTenantSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -486,7 +464,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public SecureScoreControlProfileItemRequestBuilder secureScoreControlProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("secureScoreControlProfile%2Did", id);
         return new SecureScoreControlProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -498,7 +476,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public SecureScoreItemRequestBuilder secureScores(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("secureScore%2Did", id);
         return new SecureScoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -510,7 +488,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public SecurityActionItemRequestBuilder securityActions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("securityAction%2Did", id);
         return new SecurityActionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -522,7 +500,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public SubjectRightsRequestItemRequestBuilder subjectRightsRequests(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("subjectRightsRequest%2Did", id);
         return new SubjectRightsRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -534,7 +512,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public TiIndicatorItemRequestBuilder tiIndicators(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tiIndicator%2Did", id);
         return new TiIndicatorItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -546,7 +524,7 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public UserSecurityProfileItemRequestBuilder userSecurityProfiles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userSecurityProfile%2Did", id);
         return new UserSecurityProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -568,7 +546,7 @@ public class SecurityRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SecurityRequestBuilderGetQueryParameters queryParameters = new SecurityRequestBuilderGetQueryParameters();
@@ -576,6 +554,7 @@ public class SecurityRequestBuilder {
          * Instantiates a new securityRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public SecurityRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -586,11 +565,12 @@ public class SecurityRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new securityRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public SecurityRequestBuilderPatchRequestConfiguration() {
         }
     }

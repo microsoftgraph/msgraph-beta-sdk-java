@@ -16,6 +16,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
      * Instantiates a new AppleDeviceFeaturesConfigurationBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppleDeviceFeaturesConfigurationBase() {
         super();
         this.setOdataType("#microsoft.graph.appleDeviceFeaturesConfigurationBase");
@@ -53,7 +54,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleDeviceFeaturesConfigurationBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("airPrintDestinations", (n) -> { currentObject.setAirPrintDestinations(n.getCollectionOfObjectValues(AirPrintDestination::createFromDiscriminatorValue)); });
         }};
     }
@@ -62,6 +63,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -72,6 +74,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
      * @param value Value to set for the airPrintDestinations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAirPrintDestinations(@javax.annotation.Nullable final java.util.List<AirPrintDestination> value) {
         this._airPrintDestinations = value;
     }

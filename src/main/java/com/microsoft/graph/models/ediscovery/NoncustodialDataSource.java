@@ -7,16 +7,16 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class NoncustodialDataSource extends DataSourceContainer implements Parsable {
     /** Indicates if hold is applied to non-custodial data source (such as mailbox or site). */
     private Boolean _applyHoldToSource;
     /** User source or SharePoint site data source as non-custodial data source. */
     private DataSource _dataSource;
     /**
-     * Instantiates a new noncustodialDataSource and sets the default values.
+     * Instantiates a new NoncustodialDataSource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public NoncustodialDataSource() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.noncustodialDataSource");
@@ -24,7 +24,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a noncustodialDataSource
+     * @return a NoncustodialDataSource
      */
     @javax.annotation.Nonnull
     public static NoncustodialDataSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NoncustodialDataSource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applyHoldToSource", (n) -> { currentObject.setApplyHoldToSource(n.getBooleanValue()); });
             this.put("dataSource", (n) -> { currentObject.setDataSource(n.getObjectValue(DataSource::createFromDiscriminatorValue)); });
         }};
@@ -64,6 +64,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +76,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
      * @param value Value to set for the applyHoldToSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplyHoldToSource(@javax.annotation.Nullable final Boolean value) {
         this._applyHoldToSource = value;
     }
@@ -83,6 +85,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
      * @param value Value to set for the dataSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSource(@javax.annotation.Nullable final DataSource value) {
         this._dataSource = value;
     }

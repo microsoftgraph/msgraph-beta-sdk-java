@@ -16,6 +16,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      * Instantiates a new ChannelMembersNotificationRecipient and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChannelMembersNotificationRecipient() {
         super();
         this.setOdataType("#microsoft.graph.channelMembersNotificationRecipient");
@@ -45,7 +46,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChannelMembersNotificationRecipient currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
             this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      * @param value Value to set for the channelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChannelId(@javax.annotation.Nullable final String value) {
         this._channelId = value;
     }
@@ -82,6 +85,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      * @param value Value to set for the teamId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamId(@javax.annotation.Nullable final String value) {
         this._teamId = value;
     }

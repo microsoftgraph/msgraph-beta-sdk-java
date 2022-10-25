@@ -14,6 +14,7 @@ public class EmailUrlThreatSubmission extends EmailThreatSubmission implements P
      * Instantiates a new EmailUrlThreatSubmission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmailUrlThreatSubmission() {
         super();
         this.setOdataType("#microsoft.graph.security.emailUrlThreatSubmission");
@@ -35,7 +36,7 @@ public class EmailUrlThreatSubmission extends EmailThreatSubmission implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailUrlThreatSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("messageUrl", (n) -> { currentObject.setMessageUrl(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class EmailUrlThreatSubmission extends EmailThreatSubmission implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EmailUrlThreatSubmission extends EmailThreatSubmission implements P
      * @param value Value to set for the messageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageUrl(@javax.annotation.Nullable final String value) {
         this._messageUrl = value;
     }

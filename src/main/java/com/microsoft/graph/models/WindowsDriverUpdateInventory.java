@@ -32,6 +32,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * Instantiates a new windowsDriverUpdateInventory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDriverUpdateInventory() {
         super();
         this.setOdataType("#microsoft.graph.windowsDriverUpdateInventory");
@@ -93,7 +94,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDriverUpdateInventory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicableDeviceCount", (n) -> { currentObject.setApplicableDeviceCount(n.getIntegerValue()); });
             this.put("approvalStatus", (n) -> { currentObject.setApprovalStatus(n.getEnumValue(DriverApprovalStatus.class)); });
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(DriverCategory.class)); });
@@ -142,6 +143,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * @param value Value to set for the applicableDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicableDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._applicableDeviceCount = value;
     }
@@ -168,6 +171,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * @param value Value to set for the approvalStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovalStatus(@javax.annotation.Nullable final DriverApprovalStatus value) {
         this._approvalStatus = value;
     }
@@ -176,6 +180,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final DriverCategory value) {
         this._category = value;
     }
@@ -184,6 +189,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * @param value Value to set for the deployDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._deployDateTime = value;
     }
@@ -192,6 +198,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * @param value Value to set for the driverClass property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriverClass(@javax.annotation.Nullable final String value) {
         this._driverClass = value;
     }
@@ -200,6 +207,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -208,6 +216,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -216,6 +225,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * @param value Value to set for the releaseDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReleaseDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._releaseDateTime = value;
     }
@@ -224,6 +234,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

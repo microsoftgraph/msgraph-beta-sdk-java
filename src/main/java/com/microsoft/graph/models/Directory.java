@@ -34,6 +34,7 @@ public class Directory extends Entity implements Parsable {
      * Instantiates a new Directory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Directory() {
         super();
         this.setOdataType("#microsoft.graph.directory");
@@ -103,7 +104,7 @@ public class Directory extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Directory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("administrativeUnits", (n) -> { currentObject.setAdministrativeUnits(n.getCollectionOfObjectValues(AdministrativeUnit::createFromDiscriminatorValue)); });
             this.put("attributeSets", (n) -> { currentObject.setAttributeSets(n.getCollectionOfObjectValues(AttributeSet::createFromDiscriminatorValue)); });
             this.put("customSecurityAttributeDefinitions", (n) -> { currentObject.setCustomSecurityAttributeDefinitions(n.getCollectionOfObjectValues(CustomSecurityAttributeDefinition::createFromDiscriminatorValue)); });
@@ -162,6 +163,7 @@ public class Directory extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +184,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the administrativeUnits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdministrativeUnits(@javax.annotation.Nullable final java.util.List<AdministrativeUnit> value) {
         this._administrativeUnits = value;
     }
@@ -190,6 +193,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the attributeSets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttributeSets(@javax.annotation.Nullable final java.util.List<AttributeSet> value) {
         this._attributeSets = value;
     }
@@ -198,6 +202,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the customSecurityAttributeDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSecurityAttributeDefinitions(@javax.annotation.Nullable final java.util.List<CustomSecurityAttributeDefinition> value) {
         this._customSecurityAttributeDefinitions = value;
     }
@@ -206,6 +211,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the deletedItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedItems(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._deletedItems = value;
     }
@@ -214,6 +220,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the featureRolloutPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureRolloutPolicies(@javax.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
         this._featureRolloutPolicies = value;
     }
@@ -222,6 +229,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the federationConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFederationConfigurations(@javax.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
         this._federationConfigurations = value;
     }
@@ -230,6 +238,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the impactedResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImpactedResources(@javax.annotation.Nullable final java.util.List<RecommendationResource> value) {
         this._impactedResources = value;
     }
@@ -238,6 +247,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the inboundSharedUserProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInboundSharedUserProfiles(@javax.annotation.Nullable final java.util.List<InboundSharedUserProfile> value) {
         this._inboundSharedUserProfiles = value;
     }
@@ -246,6 +256,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the outboundSharedUserProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutboundSharedUserProfiles(@javax.annotation.Nullable final java.util.List<OutboundSharedUserProfile> value) {
         this._outboundSharedUserProfiles = value;
     }
@@ -254,6 +265,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the recommendations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendations(@javax.annotation.Nullable final java.util.List<Recommendation> value) {
         this._recommendations = value;
     }
@@ -262,6 +274,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the sharedEmailDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedEmailDomains(@javax.annotation.Nullable final java.util.List<SharedEmailDomain> value) {
         this._sharedEmailDomains = value;
     }

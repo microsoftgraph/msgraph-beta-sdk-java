@@ -23,6 +23,7 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
      * Instantiates a new teamworkContentCameraConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkContentCameraConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teamworkContentCameraConfiguration");
@@ -52,7 +53,7 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkContentCameraConfiguration currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("isContentCameraInverted", (n) -> { currentObject.setIsContentCameraInverted(n.getBooleanValue()); });
             this.put("isContentCameraOptional", (n) -> { currentObject.setIsContentCameraOptional(n.getBooleanValue()); });
             this.put("isContentEnhancementEnabled", (n) -> { currentObject.setIsContentEnhancementEnabled(n.getBooleanValue()); });
@@ -96,6 +97,7 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isContentCameraInverted", this.getIsContentCameraInverted());
@@ -109,6 +111,7 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the isContentCameraInverted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsContentCameraInverted(@javax.annotation.Nullable final Boolean value) {
         this._isContentCameraInverted = value;
     }
@@ -125,6 +129,7 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the isContentCameraOptional property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsContentCameraOptional(@javax.annotation.Nullable final Boolean value) {
         this._isContentCameraOptional = value;
     }
@@ -133,6 +138,7 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the isContentEnhancementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsContentEnhancementEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isContentEnhancementEnabled = value;
     }
@@ -141,6 +147,7 @@ public class TeamworkContentCameraConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

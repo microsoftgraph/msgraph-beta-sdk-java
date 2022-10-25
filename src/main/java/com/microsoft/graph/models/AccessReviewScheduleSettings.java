@@ -44,6 +44,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * Instantiates a new accessReviewScheduleSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessReviewScheduleSettings");
@@ -113,7 +114,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewScheduleSettings currentObject = this;
-        return new HashMap<>(14) {{
+        return new HashMap<String, Consumer<ParseNode>>(14) {{
             this.put("applyActions", (n) -> { currentObject.setApplyActions(n.getCollectionOfObjectValues(AccessReviewApplyAction::createFromDiscriminatorValue)); });
             this.put("autoApplyDecisionsEnabled", (n) -> { currentObject.setAutoApplyDecisionsEnabled(n.getBooleanValue()); });
             this.put("decisionHistoriesForReviewersEnabled", (n) -> { currentObject.setDecisionHistoriesForReviewersEnabled(n.getBooleanValue()); });
@@ -207,6 +208,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("applyActions", this.getApplyActions());
@@ -230,6 +232,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -238,6 +241,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the applyActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplyActions(@javax.annotation.Nullable final java.util.List<AccessReviewApplyAction> value) {
         this._applyActions = value;
     }
@@ -246,6 +250,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the autoApplyDecisionsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoApplyDecisionsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._autoApplyDecisionsEnabled = value;
     }
@@ -254,6 +259,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the decisionHistoriesForReviewersEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecisionHistoriesForReviewersEnabled(@javax.annotation.Nullable final Boolean value) {
         this._decisionHistoriesForReviewersEnabled = value;
     }
@@ -262,6 +268,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the defaultDecision property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultDecision(@javax.annotation.Nullable final String value) {
         this._defaultDecision = value;
     }
@@ -270,6 +277,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the defaultDecisionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultDecisionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._defaultDecisionEnabled = value;
     }
@@ -278,6 +286,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the instanceDurationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstanceDurationInDays(@javax.annotation.Nullable final Integer value) {
         this._instanceDurationInDays = value;
     }
@@ -286,6 +295,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the justificationRequiredOnApproval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustificationRequiredOnApproval(@javax.annotation.Nullable final Boolean value) {
         this._justificationRequiredOnApproval = value;
     }
@@ -294,6 +304,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the mailNotificationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNotificationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._mailNotificationsEnabled = value;
     }
@@ -302,6 +313,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -310,6 +322,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the recommendationInsightSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationInsightSettings(@javax.annotation.Nullable final java.util.List<AccessReviewRecommendationInsightSetting> value) {
         this._recommendationInsightSettings = value;
     }
@@ -318,6 +331,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the recommendationLookBackDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationLookBackDuration(@javax.annotation.Nullable final Period value) {
         this._recommendationLookBackDuration = value;
     }
@@ -326,6 +340,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the recommendationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._recommendationsEnabled = value;
     }
@@ -334,6 +349,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the recurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
         this._recurrence = value;
     }
@@ -342,6 +358,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the reminderNotificationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReminderNotificationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._reminderNotificationsEnabled = value;
     }

@@ -31,6 +31,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * Instantiates a new AppleUserInitiatedEnrollmentProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppleUserInitiatedEnrollmentProfile() {
         super();
         this.setOdataType("#microsoft.graph.appleUserInitiatedEnrollmentProfile");
@@ -100,7 +101,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleUserInitiatedEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(AppleEnrollmentProfileAssignment::createFromDiscriminatorValue)); });
             this.put("availableEnrollmentTypeOptions", (n) -> { currentObject.setAvailableEnrollmentTypeOptions(n.getCollectionOfObjectValues(AppleOwnerTypeEnrollmentType::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -141,6 +142,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +161,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<AppleEnrollmentProfileAssignment> value) {
         this._assignments = value;
     }
@@ -167,6 +170,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the availableEnrollmentTypeOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailableEnrollmentTypeOptions(@javax.annotation.Nullable final java.util.List<AppleOwnerTypeEnrollmentType> value) {
         this._availableEnrollmentTypeOptions = value;
     }
@@ -175,6 +179,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -183,6 +188,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the defaultEnrollmentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultEnrollmentType(@javax.annotation.Nullable final AppleUserInitiatedEnrollmentType value) {
         this._defaultEnrollmentType = value;
     }
@@ -191,6 +197,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -199,6 +206,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -207,6 +215,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -215,6 +224,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final DevicePlatformType value) {
         this._platform = value;
     }
@@ -223,6 +233,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }

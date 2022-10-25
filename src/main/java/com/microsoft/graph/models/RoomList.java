@@ -18,6 +18,7 @@ public class RoomList extends Place implements Parsable {
      * Instantiates a new RoomList and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RoomList() {
         super();
         this.setOdataType("#microsoft.graph.roomList");
@@ -47,7 +48,7 @@ public class RoomList extends Place implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoomList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
             this.put("rooms", (n) -> { currentObject.setRooms(n.getCollectionOfObjectValues(Room::createFromDiscriminatorValue)); });
             this.put("workspaces", (n) -> { currentObject.setWorkspaces(n.getCollectionOfObjectValues(Workspace::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class RoomList extends Place implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class RoomList extends Place implements Parsable {
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
         this._emailAddress = value;
     }
@@ -94,6 +97,7 @@ public class RoomList extends Place implements Parsable {
      * @param value Value to set for the rooms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRooms(@javax.annotation.Nullable final java.util.List<Room> value) {
         this._rooms = value;
     }
@@ -102,6 +106,7 @@ public class RoomList extends Place implements Parsable {
      * @param value Value to set for the workspaces property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkspaces(@javax.annotation.Nullable final java.util.List<Workspace> value) {
         this._workspaces = value;
     }

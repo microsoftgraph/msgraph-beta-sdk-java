@@ -14,6 +14,7 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
      * Instantiates a new GroupPolicyPresentationValueList and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationValueList() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationValueList");
@@ -35,7 +36,7 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationValueList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._values = value;
     }

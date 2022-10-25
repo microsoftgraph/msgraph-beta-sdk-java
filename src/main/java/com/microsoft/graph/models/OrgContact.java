@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to orgContact. */
 public class OrgContact extends DirectoryObject implements Parsable {
     /** Postal addresses for this organizational contact. For now a contact can only have one physical address. */
     private java.util.List<PhysicalOfficeAddress> _addresses;
@@ -48,9 +49,10 @@ public class OrgContact extends DirectoryObject implements Parsable {
     /** The transitive reports for a contact. Read-only. */
     private java.util.List<DirectoryObject> _transitiveReports;
     /**
-     * Instantiates a new OrgContact and sets the default values.
+     * Instantiates a new orgContact and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrgContact() {
         super();
         this.setOdataType("#microsoft.graph.orgContact");
@@ -58,7 +60,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OrgContact
+     * @return a orgContact
      */
     @javax.annotation.Nonnull
     public static OrgContact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -112,7 +114,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrgContact currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("addresses", (n) -> { currentObject.setAddresses(n.getCollectionOfObjectValues(PhysicalOfficeAddress::createFromDiscriminatorValue)); });
             this.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
             this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
@@ -251,6 +253,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -279,6 +282,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the addresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddresses(@javax.annotation.Nullable final java.util.List<PhysicalOfficeAddress> value) {
         this._addresses = value;
     }
@@ -287,6 +291,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the companyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompanyName(@javax.annotation.Nullable final String value) {
         this._companyName = value;
     }
@@ -295,6 +300,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the department property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDepartment(@javax.annotation.Nullable final String value) {
         this._department = value;
     }
@@ -303,6 +309,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the directReports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectReports(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._directReports = value;
     }
@@ -311,6 +318,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -319,6 +327,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the givenName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGivenName(@javax.annotation.Nullable final String value) {
         this._givenName = value;
     }
@@ -327,6 +336,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the jobTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobTitle(@javax.annotation.Nullable final String value) {
         this._jobTitle = value;
     }
@@ -335,6 +345,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the mail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMail(@javax.annotation.Nullable final String value) {
         this._mail = value;
     }
@@ -343,6 +354,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNickname(@javax.annotation.Nullable final String value) {
         this._mailNickname = value;
     }
@@ -351,6 +363,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the manager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManager(@javax.annotation.Nullable final DirectoryObject value) {
         this._manager = value;
     }
@@ -359,6 +372,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the memberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._memberOf = value;
     }
@@ -367,6 +381,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._onPremisesLastSyncDateTime = value;
     }
@@ -375,6 +390,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesProvisioningErrors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesProvisioningErrors(@javax.annotation.Nullable final java.util.List<OnPremisesProvisioningError> value) {
         this._onPremisesProvisioningErrors = value;
     }
@@ -383,6 +399,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
         this._onPremisesSyncEnabled = value;
     }
@@ -391,6 +408,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the phones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhones(@javax.annotation.Nullable final java.util.List<Phone> value) {
         this._phones = value;
     }
@@ -399,6 +417,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the proxyAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._proxyAddresses = value;
     }
@@ -407,6 +426,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the surname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurname(@javax.annotation.Nullable final String value) {
         this._surname = value;
     }
@@ -415,6 +435,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveMemberOf = value;
     }
@@ -423,6 +444,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveReports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveReports(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveReports = value;
     }

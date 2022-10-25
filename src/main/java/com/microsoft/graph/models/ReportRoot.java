@@ -38,6 +38,7 @@ public class ReportRoot extends Entity implements Parsable {
      * Instantiates a new ReportRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReportRoot() {
         super();
         this.setOdataType("#microsoft.graph.reportRoot");
@@ -115,7 +116,7 @@ public class ReportRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReportRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationSignInDetailedSummary", (n) -> { currentObject.setApplicationSignInDetailedSummary(n.getCollectionOfObjectValues(ApplicationSignInDetailedSummary::createFromDiscriminatorValue)); });
             this.put("authenticationMethods", (n) -> { currentObject.setAuthenticationMethods(n.getObjectValue(AuthenticationMethodsRoot::createFromDiscriminatorValue)); });
             this.put("credentialUserRegistrationDetails", (n) -> { currentObject.setCredentialUserRegistrationDetails(n.getCollectionOfObjectValues(CredentialUserRegistrationDetails::createFromDiscriminatorValue)); });
@@ -184,6 +185,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -206,6 +208,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the applicationSignInDetailedSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationSignInDetailedSummary(@javax.annotation.Nullable final java.util.List<ApplicationSignInDetailedSummary> value) {
         this._applicationSignInDetailedSummary = value;
     }
@@ -214,6 +217,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethods(@javax.annotation.Nullable final AuthenticationMethodsRoot value) {
         this._authenticationMethods = value;
     }
@@ -222,6 +226,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the credentialUserRegistrationDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCredentialUserRegistrationDetails(@javax.annotation.Nullable final java.util.List<CredentialUserRegistrationDetails> value) {
         this._credentialUserRegistrationDetails = value;
     }
@@ -230,6 +235,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the dailyPrintUsageByPrinter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDailyPrintUsageByPrinter(@javax.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this._dailyPrintUsageByPrinter = value;
     }
@@ -238,6 +244,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the dailyPrintUsageByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDailyPrintUsageByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this._dailyPrintUsageByUser = value;
     }
@@ -246,6 +253,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the dailyPrintUsageSummariesByPrinter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDailyPrintUsageSummariesByPrinter(@javax.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this._dailyPrintUsageSummariesByPrinter = value;
     }
@@ -254,6 +262,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the dailyPrintUsageSummariesByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDailyPrintUsageSummariesByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this._dailyPrintUsageSummariesByUser = value;
     }
@@ -262,6 +271,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the monthlyPrintUsageByPrinter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMonthlyPrintUsageByPrinter(@javax.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this._monthlyPrintUsageByPrinter = value;
     }
@@ -270,6 +280,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the monthlyPrintUsageByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMonthlyPrintUsageByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this._monthlyPrintUsageByUser = value;
     }
@@ -278,6 +289,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the monthlyPrintUsageSummariesByPrinter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMonthlyPrintUsageSummariesByPrinter(@javax.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this._monthlyPrintUsageSummariesByPrinter = value;
     }
@@ -286,6 +298,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the monthlyPrintUsageSummariesByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMonthlyPrintUsageSummariesByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this._monthlyPrintUsageSummariesByUser = value;
     }
@@ -294,6 +307,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the security property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurity(@javax.annotation.Nullable final SecurityReportsRoot value) {
         this._security = value;
     }
@@ -302,6 +316,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the userCredentialUsageDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserCredentialUsageDetails(@javax.annotation.Nullable final java.util.List<UserCredentialUsageDetails> value) {
         this._userCredentialUsageDetails = value;
     }

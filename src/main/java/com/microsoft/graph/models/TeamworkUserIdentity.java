@@ -8,12 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkUserIdentity extends Identity implements Parsable {
-    /** Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, and emailUser. */
+    /** Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, emailUser and azureCommunicationServicesUser. */
     private TeamworkUserIdentityType _userIdentityType;
     /**
      * Instantiates a new TeamworkUserIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkUserIdentity() {
         super();
         this.setOdataType("#microsoft.graph.teamworkUserIdentity");
@@ -35,12 +36,12 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkUserIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userIdentityType", (n) -> { currentObject.setUserIdentityType(n.getEnumValue(TeamworkUserIdentityType.class)); });
         }};
     }
     /**
-     * Gets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, and emailUser.
+     * Gets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, emailUser and azureCommunicationServicesUser.
      * @return a teamworkUserIdentityType
      */
     @javax.annotation.Nullable
@@ -52,16 +53,18 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("userIdentityType", this.getUserIdentityType());
     }
     /**
-     * Sets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, and emailUser.
+     * Sets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, emailUser and azureCommunicationServicesUser.
      * @param value Value to set for the userIdentityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserIdentityType(@javax.annotation.Nullable final TeamworkUserIdentityType value) {
         this._userIdentityType = value;
     }

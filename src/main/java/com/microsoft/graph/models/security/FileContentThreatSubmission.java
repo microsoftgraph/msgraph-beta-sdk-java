@@ -14,6 +14,7 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
      * Instantiates a new FileContentThreatSubmission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileContentThreatSubmission() {
         super();
         this.setOdataType("#microsoft.graph.security.fileContentThreatSubmission");
@@ -35,7 +36,7 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileContentThreatSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fileContent", (n) -> { currentObject.setFileContent(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
      * @param value Value to set for the fileContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileContent(@javax.annotation.Nullable final String value) {
         this._fileContent = value;
     }

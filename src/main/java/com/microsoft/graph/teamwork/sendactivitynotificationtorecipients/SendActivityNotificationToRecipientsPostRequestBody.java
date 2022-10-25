@@ -34,6 +34,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      * Instantiates a new sendActivityNotificationToRecipientsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SendActivityNotificationToRecipientsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -78,7 +79,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SendActivityNotificationToRecipientsPostRequestBody currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("activityType", (n) -> { currentObject.setActivityType(n.getStringValue()); });
             this.put("chainId", (n) -> { currentObject.setChainId(n.getLongValue()); });
             this.put("previewText", (n) -> { currentObject.setPreviewText(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
@@ -133,6 +134,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activityType", this.getActivityType());
@@ -149,6 +151,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      * @param value Value to set for the activityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityType(@javax.annotation.Nullable final String value) {
         this._activityType = value;
     }
@@ -157,6 +160,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -165,6 +169,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      * @param value Value to set for the chainId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChainId(@javax.annotation.Nullable final Long value) {
         this._chainId = value;
     }
@@ -173,6 +178,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      * @param value Value to set for the previewText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviewText(@javax.annotation.Nullable final ItemBody value) {
         this._previewText = value;
     }
@@ -181,6 +187,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      * @param value Value to set for the recipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipients(@javax.annotation.Nullable final java.util.List<TeamworkNotificationRecipient> value) {
         this._recipients = value;
     }
@@ -189,6 +196,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      * @param value Value to set for the teamsAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
         this._teamsAppId = value;
     }
@@ -197,6 +205,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      * @param value Value to set for the templateParameters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateParameters(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._templateParameters = value;
     }
@@ -205,6 +214,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      * @param value Value to set for the topic property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTopic(@javax.annotation.Nullable final TeamworkActivityTopic value) {
         this._topic = value;
     }

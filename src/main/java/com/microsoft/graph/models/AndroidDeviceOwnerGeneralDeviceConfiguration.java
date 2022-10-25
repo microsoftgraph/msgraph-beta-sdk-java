@@ -54,7 +54,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     private AndroidDeviceOwnerGlobalProxy _globalProxy;
     /** Indicates whether or not google accounts will be blocked. */
     private Boolean _googleAccountsBlocked;
-    /** Indicates whether a user can access the device's Settings app while in Kiosk Mode. */
+    /** Indicateswhether a user can access the device's Settings app while in Kiosk Mode. */
     private Boolean _kioskCustomizationDeviceSettingsBlocked;
     /** Whether the power menu is shown when a user long presses the Power button of a device in Kiosk Mode. */
     private Boolean _kioskCustomizationPowerButtonActionsBlocked;
@@ -169,7 +169,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     /** Indicates whether or not the keyguard is disabled. */
     private Boolean _passwordBlockKeyguard;
     /** List of device keyguard features to block. This collection can contain a maximum of 7 elements. */
-    private java.util.List<String> _passwordBlockKeyguardFeatures;
+    private java.util.List<AndroidKeyguardFeature> _passwordBlockKeyguardFeatures;
     /** Indicates the amount of time that a password can be set for before it expires and a new password will be required. Valid values 1 to 365 */
     private Integer _passwordExpirationDays;
     /** Indicates the minimum length of the password required on the device. Valid values 4 to 16 */
@@ -221,7 +221,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     /** Indicates whether or the status bar is disabled, including notifications, quick settings and other screen overlays. */
     private Boolean _statusBarBlocked;
     /** List of modes in which the device's display will stay powered-on. This collection can contain a maximum of 4 elements. */
-    private java.util.List<String> _stayOnModes;
+    private java.util.List<AndroidDeviceOwnerBatteryPluggedMode> _stayOnModes;
     /** Indicates whether or not to allow USB mass storage. */
     private Boolean _storageAllowUsb;
     /** Indicates whether or not to block external media. */
@@ -280,6 +280,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Instantiates a new AndroidDeviceOwnerGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerGeneralDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerGeneralDeviceConfiguration");
@@ -469,7 +470,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountsBlockModification", (n) -> { currentObject.setAccountsBlockModification(n.getBooleanValue()); });
             this.put("appsAllowInstallFromUnknownSources", (n) -> { currentObject.setAppsAllowInstallFromUnknownSources(n.getBooleanValue()); });
             this.put("appsAutoUpdatePolicy", (n) -> { currentObject.setAppsAutoUpdatePolicy(n.getEnumValue(AndroidDeviceOwnerAppAutoUpdatePolicyType.class)); });
@@ -550,7 +551,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
             this.put("networkEscapeHatchAllowed", (n) -> { currentObject.setNetworkEscapeHatchAllowed(n.getBooleanValue()); });
             this.put("nfcBlockOutgoingBeam", (n) -> { currentObject.setNfcBlockOutgoingBeam(n.getBooleanValue()); });
             this.put("passwordBlockKeyguard", (n) -> { currentObject.setPasswordBlockKeyguard(n.getBooleanValue()); });
-            this.put("passwordBlockKeyguardFeatures", (n) -> { currentObject.setPasswordBlockKeyguardFeatures(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("passwordBlockKeyguardFeatures", (n) -> { currentObject.setPasswordBlockKeyguardFeatures(n.getCollectionOfEnumValues(AndroidKeyguardFeature.class)); });
             this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
             this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
             this.put("passwordMinimumLetterCharacters", (n) -> { currentObject.setPasswordMinimumLetterCharacters(n.getIntegerValue()); });
@@ -576,7 +577,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
             this.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
             this.put("shortHelpText", (n) -> { currentObject.setShortHelpText(n.getObjectValue(AndroidDeviceOwnerUserFacingMessage::createFromDiscriminatorValue)); });
             this.put("statusBarBlocked", (n) -> { currentObject.setStatusBarBlocked(n.getBooleanValue()); });
-            this.put("stayOnModes", (n) -> { currentObject.setStayOnModes(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("stayOnModes", (n) -> { currentObject.setStayOnModes(n.getCollectionOfEnumValues(AndroidDeviceOwnerBatteryPluggedMode.class)); });
             this.put("storageAllowUsb", (n) -> { currentObject.setStorageAllowUsb(n.getBooleanValue()); });
             this.put("storageBlockExternalMedia", (n) -> { currentObject.setStorageBlockExternalMedia(n.getBooleanValue()); });
             this.put("storageBlockUsbFileTransfer", (n) -> { currentObject.setStorageBlockUsbFileTransfer(n.getBooleanValue()); });
@@ -623,7 +624,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this._googleAccountsBlocked;
     }
     /**
-     * Gets the kioskCustomizationDeviceSettingsBlocked property value. Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+     * Gets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device's Settings app while in Kiosk Mode.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1080,10 +1081,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordBlockKeyguardFeatures property value. List of device keyguard features to block. This collection can contain a maximum of 7 elements.
-     * @return a string
+     * @return a androidKeyguardFeature
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getPasswordBlockKeyguardFeatures() {
+    public java.util.List<AndroidKeyguardFeature> getPasswordBlockKeyguardFeatures() {
         return this._passwordBlockKeyguardFeatures;
     }
     /**
@@ -1288,10 +1289,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the stayOnModes property value. List of modes in which the device's display will stay powered-on. This collection can contain a maximum of 4 elements.
-     * @return a string
+     * @return a androidDeviceOwnerBatteryPluggedMode
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getStayOnModes() {
+    public java.util.List<AndroidDeviceOwnerBatteryPluggedMode> getStayOnModes() {
         return this._stayOnModes;
     }
     /**
@@ -1515,6 +1516,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -1598,7 +1600,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         writer.writeBooleanValue("networkEscapeHatchAllowed", this.getNetworkEscapeHatchAllowed());
         writer.writeBooleanValue("nfcBlockOutgoingBeam", this.getNfcBlockOutgoingBeam());
         writer.writeBooleanValue("passwordBlockKeyguard", this.getPasswordBlockKeyguard());
-        writer.writeCollectionOfPrimitiveValues("passwordBlockKeyguardFeatures", this.getPasswordBlockKeyguardFeatures());
+        writer.writeCollectionOfEnumValues("passwordBlockKeyguardFeatures", this.getPasswordBlockKeyguardFeatures());
         writer.writeIntegerValue("passwordExpirationDays", this.getPasswordExpirationDays());
         writer.writeIntegerValue("passwordMinimumLength", this.getPasswordMinimumLength());
         writer.writeIntegerValue("passwordMinimumLetterCharacters", this.getPasswordMinimumLetterCharacters());
@@ -1624,7 +1626,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         writer.writeBooleanValue("securityRequireVerifyApps", this.getSecurityRequireVerifyApps());
         writer.writeObjectValue("shortHelpText", this.getShortHelpText());
         writer.writeBooleanValue("statusBarBlocked", this.getStatusBarBlocked());
-        writer.writeCollectionOfPrimitiveValues("stayOnModes", this.getStayOnModes());
+        writer.writeCollectionOfEnumValues("stayOnModes", this.getStayOnModes());
         writer.writeBooleanValue("storageAllowUsb", this.getStorageAllowUsb());
         writer.writeBooleanValue("storageBlockExternalMedia", this.getStorageBlockExternalMedia());
         writer.writeBooleanValue("storageBlockUsbFileTransfer", this.getStorageBlockUsbFileTransfer());
@@ -1658,6 +1660,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the accountsBlockModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountsBlockModification(@javax.annotation.Nullable final Boolean value) {
         this._accountsBlockModification = value;
     }
@@ -1666,6 +1669,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the appsAllowInstallFromUnknownSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsAllowInstallFromUnknownSources(@javax.annotation.Nullable final Boolean value) {
         this._appsAllowInstallFromUnknownSources = value;
     }
@@ -1674,6 +1678,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the appsAutoUpdatePolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsAutoUpdatePolicy(@javax.annotation.Nullable final AndroidDeviceOwnerAppAutoUpdatePolicyType value) {
         this._appsAutoUpdatePolicy = value;
     }
@@ -1682,6 +1687,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the appsDefaultPermissionPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsDefaultPermissionPolicy(@javax.annotation.Nullable final AndroidDeviceOwnerDefaultAppPermissionPolicyType value) {
         this._appsDefaultPermissionPolicy = value;
     }
@@ -1690,6 +1696,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the appsRecommendSkippingFirstUseHints property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsRecommendSkippingFirstUseHints(@javax.annotation.Nullable final Boolean value) {
         this._appsRecommendSkippingFirstUseHints = value;
     }
@@ -1698,6 +1705,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the azureAdSharedDeviceDataClearApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdSharedDeviceDataClearApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._azureAdSharedDeviceDataClearApps = value;
     }
@@ -1706,6 +1714,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the bluetoothBlockConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlockConfiguration(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlockConfiguration = value;
     }
@@ -1714,6 +1723,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the bluetoothBlockContactSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlockContactSharing(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlockContactSharing = value;
     }
@@ -1722,6 +1732,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the cameraBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
         this._cameraBlocked = value;
     }
@@ -1730,6 +1741,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the cellularBlockWiFiTethering property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockWiFiTethering(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockWiFiTethering = value;
     }
@@ -1738,6 +1750,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the certificateCredentialConfigurationDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateCredentialConfigurationDisabled(@javax.annotation.Nullable final Boolean value) {
         this._certificateCredentialConfigurationDisabled = value;
     }
@@ -1746,6 +1759,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the crossProfilePoliciesAllowCopyPaste property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCrossProfilePoliciesAllowCopyPaste(@javax.annotation.Nullable final Boolean value) {
         this._crossProfilePoliciesAllowCopyPaste = value;
     }
@@ -1754,6 +1768,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the crossProfilePoliciesAllowDataSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCrossProfilePoliciesAllowDataSharing(@javax.annotation.Nullable final AndroidDeviceOwnerCrossProfileDataSharing value) {
         this._crossProfilePoliciesAllowDataSharing = value;
     }
@@ -1762,6 +1777,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the crossProfilePoliciesShowWorkContactsInPersonalProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCrossProfilePoliciesShowWorkContactsInPersonalProfile(@javax.annotation.Nullable final Boolean value) {
         this._crossProfilePoliciesShowWorkContactsInPersonalProfile = value;
     }
@@ -1770,6 +1786,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the dataRoamingBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataRoamingBlocked(@javax.annotation.Nullable final Boolean value) {
         this._dataRoamingBlocked = value;
     }
@@ -1778,6 +1795,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the dateTimeConfigurationBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateTimeConfigurationBlocked(@javax.annotation.Nullable final Boolean value) {
         this._dateTimeConfigurationBlocked = value;
     }
@@ -1786,6 +1804,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the detailedHelpText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetailedHelpText(@javax.annotation.Nullable final AndroidDeviceOwnerUserFacingMessage value) {
         this._detailedHelpText = value;
     }
@@ -1794,6 +1813,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the deviceOwnerLockScreenMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceOwnerLockScreenMessage(@javax.annotation.Nullable final AndroidDeviceOwnerUserFacingMessage value) {
         this._deviceOwnerLockScreenMessage = value;
     }
@@ -1802,6 +1822,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the enrollmentProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentProfile(@javax.annotation.Nullable final AndroidDeviceOwnerEnrollmentProfileType value) {
         this._enrollmentProfile = value;
     }
@@ -1810,6 +1831,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the factoryResetBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFactoryResetBlocked(@javax.annotation.Nullable final Boolean value) {
         this._factoryResetBlocked = value;
     }
@@ -1818,6 +1840,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the factoryResetDeviceAdministratorEmails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFactoryResetDeviceAdministratorEmails(@javax.annotation.Nullable final java.util.List<String> value) {
         this._factoryResetDeviceAdministratorEmails = value;
     }
@@ -1826,6 +1849,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the globalProxy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGlobalProxy(@javax.annotation.Nullable final AndroidDeviceOwnerGlobalProxy value) {
         this._globalProxy = value;
     }
@@ -1834,14 +1858,16 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the googleAccountsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGoogleAccountsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._googleAccountsBlocked = value;
     }
     /**
-     * Sets the kioskCustomizationDeviceSettingsBlocked property value. Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+     * Sets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device's Settings app while in Kiosk Mode.
      * @param value Value to set for the kioskCustomizationDeviceSettingsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskCustomizationDeviceSettingsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._kioskCustomizationDeviceSettingsBlocked = value;
     }
@@ -1850,6 +1876,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskCustomizationPowerButtonActionsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskCustomizationPowerButtonActionsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._kioskCustomizationPowerButtonActionsBlocked = value;
     }
@@ -1858,6 +1885,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskCustomizationStatusBar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskCustomizationStatusBar(@javax.annotation.Nullable final AndroidDeviceOwnerKioskCustomizationStatusBar value) {
         this._kioskCustomizationStatusBar = value;
     }
@@ -1866,6 +1894,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskCustomizationSystemErrorWarnings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskCustomizationSystemErrorWarnings(@javax.annotation.Nullable final Boolean value) {
         this._kioskCustomizationSystemErrorWarnings = value;
     }
@@ -1874,6 +1903,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskCustomizationSystemNavigation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskCustomizationSystemNavigation(@javax.annotation.Nullable final AndroidDeviceOwnerKioskCustomizationSystemNavigation value) {
         this._kioskCustomizationSystemNavigation = value;
     }
@@ -1882,6 +1912,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeAppOrderEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAppOrderEnabled(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAppOrderEnabled = value;
     }
@@ -1890,6 +1921,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeAppPositions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAppPositions(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerKioskModeAppPositionItem> value) {
         this._kioskModeAppPositions = value;
     }
@@ -1898,6 +1930,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._kioskModeApps = value;
     }
@@ -1906,6 +1939,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeAppsInFolderOrderedByName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAppsInFolderOrderedByName(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAppsInFolderOrderedByName = value;
     }
@@ -1914,6 +1948,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeBluetoothConfigurationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBluetoothConfigurationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeBluetoothConfigurationEnabled = value;
     }
@@ -1922,6 +1957,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeDebugMenuEasyAccessEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeDebugMenuEasyAccessEnabled(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeDebugMenuEasyAccessEnabled = value;
     }
@@ -1930,6 +1966,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeExitCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeExitCode(@javax.annotation.Nullable final String value) {
         this._kioskModeExitCode = value;
     }
@@ -1938,6 +1975,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeFlashlightConfigurationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeFlashlightConfigurationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeFlashlightConfigurationEnabled = value;
     }
@@ -1946,6 +1984,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeFolderIcon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeFolderIcon(@javax.annotation.Nullable final AndroidDeviceOwnerKioskModeFolderIcon value) {
         this._kioskModeFolderIcon = value;
     }
@@ -1954,6 +1993,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeGridHeight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeGridHeight(@javax.annotation.Nullable final Integer value) {
         this._kioskModeGridHeight = value;
     }
@@ -1962,6 +2002,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeGridWidth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeGridWidth(@javax.annotation.Nullable final Integer value) {
         this._kioskModeGridWidth = value;
     }
@@ -1970,6 +2011,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeIconSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeIconSize(@javax.annotation.Nullable final AndroidDeviceOwnerKioskModeIconSize value) {
         this._kioskModeIconSize = value;
     }
@@ -1978,6 +2020,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeLockHomeScreen property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeLockHomeScreen(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeLockHomeScreen = value;
     }
@@ -1986,6 +2029,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeManagedFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedFolders(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerKioskModeManagedFolder> value) {
         this._kioskModeManagedFolders = value;
     }
@@ -1994,6 +2038,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeManagedHomeScreenAutoSignout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedHomeScreenAutoSignout(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeManagedHomeScreenAutoSignout = value;
     }
@@ -2002,6 +2047,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedHomeScreenInactiveSignOutDelayInSeconds(@javax.annotation.Nullable final Integer value) {
         this._kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds = value;
     }
@@ -2010,6 +2056,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds(@javax.annotation.Nullable final Integer value) {
         this._kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds = value;
     }
@@ -2018,6 +2065,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeManagedHomeScreenPinComplexity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedHomeScreenPinComplexity(@javax.annotation.Nullable final KioskModeManagedHomeScreenPinComplexity value) {
         this._kioskModeManagedHomeScreenPinComplexity = value;
     }
@@ -2026,6 +2074,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeManagedHomeScreenPinRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedHomeScreenPinRequired(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeManagedHomeScreenPinRequired = value;
     }
@@ -2034,6 +2083,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeManagedHomeScreenPinRequiredToResume property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedHomeScreenPinRequiredToResume(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeManagedHomeScreenPinRequiredToResume = value;
     }
@@ -2042,6 +2092,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeManagedHomeScreenSignInBackground property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedHomeScreenSignInBackground(@javax.annotation.Nullable final String value) {
         this._kioskModeManagedHomeScreenSignInBackground = value;
     }
@@ -2050,6 +2101,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeManagedHomeScreenSignInBrandingLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedHomeScreenSignInBrandingLogo(@javax.annotation.Nullable final String value) {
         this._kioskModeManagedHomeScreenSignInBrandingLogo = value;
     }
@@ -2058,6 +2110,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeManagedHomeScreenSignInEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedHomeScreenSignInEnabled(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeManagedHomeScreenSignInEnabled = value;
     }
@@ -2066,6 +2119,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeManagedSettingsEntryDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedSettingsEntryDisabled(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeManagedSettingsEntryDisabled = value;
     }
@@ -2074,6 +2128,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeMediaVolumeConfigurationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeMediaVolumeConfigurationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeMediaVolumeConfigurationEnabled = value;
     }
@@ -2082,6 +2137,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeScreenOrientation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeScreenOrientation(@javax.annotation.Nullable final AndroidDeviceOwnerKioskModeScreenOrientation value) {
         this._kioskModeScreenOrientation = value;
     }
@@ -2090,6 +2146,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeScreenSaverConfigurationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeScreenSaverConfigurationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeScreenSaverConfigurationEnabled = value;
     }
@@ -2098,6 +2155,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeScreenSaverDetectMediaDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeScreenSaverDetectMediaDisabled(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeScreenSaverDetectMediaDisabled = value;
     }
@@ -2106,6 +2164,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeScreenSaverDisplayTimeInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeScreenSaverDisplayTimeInSeconds(@javax.annotation.Nullable final Integer value) {
         this._kioskModeScreenSaverDisplayTimeInSeconds = value;
     }
@@ -2114,6 +2173,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeScreenSaverImageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeScreenSaverImageUrl(@javax.annotation.Nullable final String value) {
         this._kioskModeScreenSaverImageUrl = value;
     }
@@ -2122,6 +2182,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeScreenSaverStartDelayInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeScreenSaverStartDelayInSeconds(@javax.annotation.Nullable final Integer value) {
         this._kioskModeScreenSaverStartDelayInSeconds = value;
     }
@@ -2130,6 +2191,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeShowAppNotificationBadge property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeShowAppNotificationBadge(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeShowAppNotificationBadge = value;
     }
@@ -2138,6 +2200,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeShowDeviceInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeShowDeviceInfo(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeShowDeviceInfo = value;
     }
@@ -2146,6 +2209,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeUseManagedHomeScreenApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeUseManagedHomeScreenApp(@javax.annotation.Nullable final KioskModeType value) {
         this._kioskModeUseManagedHomeScreenApp = value;
     }
@@ -2154,6 +2218,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeVirtualHomeButtonEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeVirtualHomeButtonEnabled(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeVirtualHomeButtonEnabled = value;
     }
@@ -2162,6 +2227,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeVirtualHomeButtonType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeVirtualHomeButtonType(@javax.annotation.Nullable final AndroidDeviceOwnerVirtualHomeButtonType value) {
         this._kioskModeVirtualHomeButtonType = value;
     }
@@ -2170,6 +2236,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeWallpaperUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeWallpaperUrl(@javax.annotation.Nullable final String value) {
         this._kioskModeWallpaperUrl = value;
     }
@@ -2178,6 +2245,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeWifiAllowedSsids property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeWifiAllowedSsids(@javax.annotation.Nullable final java.util.List<String> value) {
         this._kioskModeWifiAllowedSsids = value;
     }
@@ -2186,6 +2254,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the kioskModeWiFiConfigurationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeWiFiConfigurationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeWiFiConfigurationEnabled = value;
     }
@@ -2194,6 +2263,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the microphoneForceMute property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrophoneForceMute(@javax.annotation.Nullable final Boolean value) {
         this._microphoneForceMute = value;
     }
@@ -2202,6 +2272,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the microsoftLauncherConfigurationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftLauncherConfigurationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._microsoftLauncherConfigurationEnabled = value;
     }
@@ -2210,6 +2281,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the microsoftLauncherCustomWallpaperAllowUserModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftLauncherCustomWallpaperAllowUserModification(@javax.annotation.Nullable final Boolean value) {
         this._microsoftLauncherCustomWallpaperAllowUserModification = value;
     }
@@ -2218,6 +2290,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the microsoftLauncherCustomWallpaperEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftLauncherCustomWallpaperEnabled(@javax.annotation.Nullable final Boolean value) {
         this._microsoftLauncherCustomWallpaperEnabled = value;
     }
@@ -2226,6 +2299,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the microsoftLauncherCustomWallpaperImageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftLauncherCustomWallpaperImageUrl(@javax.annotation.Nullable final String value) {
         this._microsoftLauncherCustomWallpaperImageUrl = value;
     }
@@ -2234,6 +2308,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the microsoftLauncherDockPresenceAllowUserModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftLauncherDockPresenceAllowUserModification(@javax.annotation.Nullable final Boolean value) {
         this._microsoftLauncherDockPresenceAllowUserModification = value;
     }
@@ -2242,6 +2317,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the microsoftLauncherDockPresenceConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftLauncherDockPresenceConfiguration(@javax.annotation.Nullable final MicrosoftLauncherDockPresence value) {
         this._microsoftLauncherDockPresenceConfiguration = value;
     }
@@ -2250,6 +2326,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the microsoftLauncherFeedAllowUserModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftLauncherFeedAllowUserModification(@javax.annotation.Nullable final Boolean value) {
         this._microsoftLauncherFeedAllowUserModification = value;
     }
@@ -2258,6 +2335,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the microsoftLauncherFeedEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftLauncherFeedEnabled(@javax.annotation.Nullable final Boolean value) {
         this._microsoftLauncherFeedEnabled = value;
     }
@@ -2266,6 +2344,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the microsoftLauncherSearchBarPlacementConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftLauncherSearchBarPlacementConfiguration(@javax.annotation.Nullable final MicrosoftLauncherSearchBarPlacement value) {
         this._microsoftLauncherSearchBarPlacementConfiguration = value;
     }
@@ -2274,6 +2353,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the networkEscapeHatchAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkEscapeHatchAllowed(@javax.annotation.Nullable final Boolean value) {
         this._networkEscapeHatchAllowed = value;
     }
@@ -2282,6 +2362,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the nfcBlockOutgoingBeam property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNfcBlockOutgoingBeam(@javax.annotation.Nullable final Boolean value) {
         this._nfcBlockOutgoingBeam = value;
     }
@@ -2290,6 +2371,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordBlockKeyguard property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockKeyguard(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockKeyguard = value;
     }
@@ -2298,7 +2380,8 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordBlockKeyguardFeatures property.
      * @return a void
      */
-    public void setPasswordBlockKeyguardFeatures(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setPasswordBlockKeyguardFeatures(@javax.annotation.Nullable final java.util.List<AndroidKeyguardFeature> value) {
         this._passwordBlockKeyguardFeatures = value;
     }
     /**
@@ -2306,6 +2389,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -2314,6 +2398,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -2322,6 +2407,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordMinimumLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLetterCharacters = value;
     }
@@ -2330,6 +2416,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordMinimumLowerCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLowerCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLowerCaseCharacters = value;
     }
@@ -2338,6 +2425,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordMinimumNonLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumNonLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumNonLetterCharacters = value;
     }
@@ -2346,6 +2434,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordMinimumNumericCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumNumericCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumNumericCharacters = value;
     }
@@ -2354,6 +2443,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordMinimumSymbolCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumSymbolCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumSymbolCharacters = value;
     }
@@ -2362,6 +2452,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordMinimumUpperCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumUpperCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumUpperCaseCharacters = value;
     }
@@ -2370,6 +2461,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -2378,6 +2470,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordPreviousPasswordCountToBlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordCountToBlock(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordCountToBlock = value;
     }
@@ -2386,6 +2479,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -2394,6 +2488,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordRequireUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequireUnlock(@javax.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordUnlock value) {
         this._passwordRequireUnlock = value;
     }
@@ -2402,6 +2497,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._passwordSignInFailureCountBeforeFactoryReset = value;
     }
@@ -2410,6 +2506,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the personalProfileAppsAllowInstallFromUnknownSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalProfileAppsAllowInstallFromUnknownSources(@javax.annotation.Nullable final Boolean value) {
         this._personalProfileAppsAllowInstallFromUnknownSources = value;
     }
@@ -2418,6 +2515,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the personalProfileCameraBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalProfileCameraBlocked(@javax.annotation.Nullable final Boolean value) {
         this._personalProfileCameraBlocked = value;
     }
@@ -2426,6 +2524,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the personalProfilePersonalApplications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalProfilePersonalApplications(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._personalProfilePersonalApplications = value;
     }
@@ -2434,6 +2533,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the personalProfilePlayStoreMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalProfilePlayStoreMode(@javax.annotation.Nullable final PersonalProfilePersonalPlayStoreMode value) {
         this._personalProfilePlayStoreMode = value;
     }
@@ -2442,6 +2542,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the personalProfileScreenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalProfileScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._personalProfileScreenCaptureBlocked = value;
     }
@@ -2450,6 +2551,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the playStoreMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlayStoreMode(@javax.annotation.Nullable final AndroidDeviceOwnerPlayStoreMode value) {
         this._playStoreMode = value;
     }
@@ -2458,6 +2560,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
     }
@@ -2466,6 +2569,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the securityCommonCriteriaModeEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityCommonCriteriaModeEnabled(@javax.annotation.Nullable final Boolean value) {
         this._securityCommonCriteriaModeEnabled = value;
     }
@@ -2474,6 +2578,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the securityDeveloperSettingsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityDeveloperSettingsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._securityDeveloperSettingsEnabled = value;
     }
@@ -2482,6 +2587,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the securityRequireVerifyApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireVerifyApps(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireVerifyApps = value;
     }
@@ -2490,6 +2596,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the shortHelpText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShortHelpText(@javax.annotation.Nullable final AndroidDeviceOwnerUserFacingMessage value) {
         this._shortHelpText = value;
     }
@@ -2498,6 +2605,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the statusBarBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatusBarBlocked(@javax.annotation.Nullable final Boolean value) {
         this._statusBarBlocked = value;
     }
@@ -2506,7 +2614,8 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the stayOnModes property.
      * @return a void
      */
-    public void setStayOnModes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setStayOnModes(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerBatteryPluggedMode> value) {
         this._stayOnModes = value;
     }
     /**
@@ -2514,6 +2623,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the storageAllowUsb property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageAllowUsb(@javax.annotation.Nullable final Boolean value) {
         this._storageAllowUsb = value;
     }
@@ -2522,6 +2632,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the storageBlockExternalMedia property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageBlockExternalMedia(@javax.annotation.Nullable final Boolean value) {
         this._storageBlockExternalMedia = value;
     }
@@ -2530,6 +2641,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the storageBlockUsbFileTransfer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageBlockUsbFileTransfer(@javax.annotation.Nullable final Boolean value) {
         this._storageBlockUsbFileTransfer = value;
     }
@@ -2538,6 +2650,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the systemUpdateFreezePeriods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemUpdateFreezePeriods(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerSystemUpdateFreezePeriod> value) {
         this._systemUpdateFreezePeriods = value;
     }
@@ -2546,6 +2659,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the systemUpdateInstallType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemUpdateInstallType(@javax.annotation.Nullable final AndroidDeviceOwnerSystemUpdateInstallType value) {
         this._systemUpdateInstallType = value;
     }
@@ -2554,6 +2668,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the systemUpdateWindowEndMinutesAfterMidnight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemUpdateWindowEndMinutesAfterMidnight(@javax.annotation.Nullable final Integer value) {
         this._systemUpdateWindowEndMinutesAfterMidnight = value;
     }
@@ -2562,6 +2677,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the systemUpdateWindowStartMinutesAfterMidnight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemUpdateWindowStartMinutesAfterMidnight(@javax.annotation.Nullable final Integer value) {
         this._systemUpdateWindowStartMinutesAfterMidnight = value;
     }
@@ -2570,6 +2686,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the systemWindowsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemWindowsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._systemWindowsBlocked = value;
     }
@@ -2578,6 +2695,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the usersBlockAdd property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsersBlockAdd(@javax.annotation.Nullable final Boolean value) {
         this._usersBlockAdd = value;
     }
@@ -2586,6 +2704,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the usersBlockRemove property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsersBlockRemove(@javax.annotation.Nullable final Boolean value) {
         this._usersBlockRemove = value;
     }
@@ -2594,6 +2713,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the volumeBlockAdjustment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVolumeBlockAdjustment(@javax.annotation.Nullable final Boolean value) {
         this._volumeBlockAdjustment = value;
     }
@@ -2602,6 +2722,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the vpnAlwaysOnLockdownMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVpnAlwaysOnLockdownMode(@javax.annotation.Nullable final Boolean value) {
         this._vpnAlwaysOnLockdownMode = value;
     }
@@ -2610,6 +2731,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the vpnAlwaysOnPackageIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVpnAlwaysOnPackageIdentifier(@javax.annotation.Nullable final String value) {
         this._vpnAlwaysOnPackageIdentifier = value;
     }
@@ -2618,6 +2740,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the wifiBlockEditConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiBlockEditConfigurations(@javax.annotation.Nullable final Boolean value) {
         this._wifiBlockEditConfigurations = value;
     }
@@ -2626,6 +2749,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the wifiBlockEditPolicyDefinedConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiBlockEditPolicyDefinedConfigurations(@javax.annotation.Nullable final Boolean value) {
         this._wifiBlockEditPolicyDefinedConfigurations = value;
     }
@@ -2634,6 +2758,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordExpirationDays = value;
     }
@@ -2642,6 +2767,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinimumLength = value;
     }
@@ -2650,6 +2776,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinimumLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinimumLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinimumLetterCharacters = value;
     }
@@ -2658,6 +2785,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinimumLowerCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinimumLowerCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinimumLowerCaseCharacters = value;
     }
@@ -2666,6 +2794,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinimumNonLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinimumNonLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinimumNonLetterCharacters = value;
     }
@@ -2674,6 +2803,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinimumNumericCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinimumNumericCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinimumNumericCharacters = value;
     }
@@ -2682,6 +2812,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinimumSymbolCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinimumSymbolCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinimumSymbolCharacters = value;
     }
@@ -2690,6 +2821,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinimumUpperCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinimumUpperCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinimumUpperCaseCharacters = value;
     }
@@ -2698,6 +2830,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordPreviousPasswordCountToBlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordPreviousPasswordCountToBlock(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordPreviousPasswordCountToBlock = value;
     }
@@ -2706,6 +2839,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordRequiredType(@javax.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
         this._workProfilePasswordRequiredType = value;
     }
@@ -2714,6 +2848,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordRequireUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordRequireUnlock(@javax.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordUnlock value) {
         this._workProfilePasswordRequireUnlock = value;
     }
@@ -2722,6 +2857,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordSignInFailureCountBeforeFactoryReset = value;
     }

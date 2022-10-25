@@ -25,6 +25,7 @@ public class PersonAward extends ItemFacet implements Parsable {
      * Instantiates a new PersonAward and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PersonAward() {
         super();
         this.setOdataType("#microsoft.graph.personAward");
@@ -62,7 +63,7 @@ public class PersonAward extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersonAward currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("issuedDate", (n) -> { currentObject.setIssuedDate(n.getLocalDateValue()); });
@@ -108,6 +109,7 @@ public class PersonAward extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +125,7 @@ public class PersonAward extends ItemFacet implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -131,6 +134,7 @@ public class PersonAward extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -139,6 +143,7 @@ public class PersonAward extends ItemFacet implements Parsable {
      * @param value Value to set for the issuedDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuedDate(@javax.annotation.Nullable final LocalDate value) {
         this._issuedDate = value;
     }
@@ -147,6 +152,7 @@ public class PersonAward extends ItemFacet implements Parsable {
      * @param value Value to set for the issuingAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuingAuthority(@javax.annotation.Nullable final String value) {
         this._issuingAuthority = value;
     }
@@ -155,6 +161,7 @@ public class PersonAward extends ItemFacet implements Parsable {
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
         this._thumbnailUrl = value;
     }
@@ -163,6 +170,7 @@ public class PersonAward extends ItemFacet implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

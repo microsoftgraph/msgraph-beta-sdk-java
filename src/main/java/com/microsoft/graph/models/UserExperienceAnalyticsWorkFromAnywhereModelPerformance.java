@@ -30,6 +30,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereModelPerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformance() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereModelPerformance");
@@ -75,7 +76,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsWorkFromAnywhereModelPerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cloudIdentityScore", (n) -> { currentObject.setCloudIdentityScore(n.getDoubleValue()); });
             this.put("cloudManagementScore", (n) -> { currentObject.setCloudManagementScore(n.getDoubleValue()); });
             this.put("cloudProvisioningScore", (n) -> { currentObject.setCloudProvisioningScore(n.getDoubleValue()); });
@@ -140,6 +141,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +160,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param value Value to set for the cloudIdentityScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudIdentityScore(@javax.annotation.Nullable final Double value) {
         this._cloudIdentityScore = value;
     }
@@ -166,6 +169,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param value Value to set for the cloudManagementScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudManagementScore(@javax.annotation.Nullable final Double value) {
         this._cloudManagementScore = value;
     }
@@ -174,6 +178,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param value Value to set for the cloudProvisioningScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudProvisioningScore(@javax.annotation.Nullable final Double value) {
         this._cloudProvisioningScore = value;
     }
@@ -182,6 +187,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this._healthStatus = value;
     }
@@ -190,6 +196,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -198,6 +205,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -206,6 +214,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param value Value to set for the modelDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModelDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._modelDeviceCount = value;
     }
@@ -214,6 +223,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param value Value to set for the windowsScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsScore(@javax.annotation.Nullable final Double value) {
         this._windowsScore = value;
     }
@@ -222,6 +232,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param value Value to set for the workFromAnywhereScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkFromAnywhereScore(@javax.annotation.Nullable final Double value) {
         this._workFromAnywhereScore = value;
     }

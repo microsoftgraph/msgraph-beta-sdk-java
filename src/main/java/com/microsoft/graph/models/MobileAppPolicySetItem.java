@@ -16,6 +16,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
      * Instantiates a new MobileAppPolicySetItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppPolicySetItem() {
         super();
         this.setOdataType("#microsoft.graph.mobileAppPolicySetItem");
@@ -37,7 +38,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppPolicySetItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("intent", (n) -> { currentObject.setIntent(n.getEnumValue(InstallIntent.class)); });
             this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(MobileAppAssignmentSettings::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
      * @param value Value to set for the intent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntent(@javax.annotation.Nullable final InstallIntent value) {
         this._intent = value;
     }
@@ -82,6 +85,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final MobileAppAssignmentSettings value) {
         this._settings = value;
     }

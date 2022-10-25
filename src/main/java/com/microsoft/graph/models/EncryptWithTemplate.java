@@ -16,6 +16,7 @@ public class EncryptWithTemplate extends EncryptContent implements Parsable {
      * Instantiates a new EncryptWithTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EncryptWithTemplate() {
         super();
         this.setOdataType("#microsoft.graph.encryptWithTemplate");
@@ -45,7 +46,7 @@ public class EncryptWithTemplate extends EncryptContent implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EncryptWithTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("availableForEncryption", (n) -> { currentObject.setAvailableForEncryption(n.getBooleanValue()); });
             this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class EncryptWithTemplate extends EncryptContent implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class EncryptWithTemplate extends EncryptContent implements Parsable {
      * @param value Value to set for the availableForEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailableForEncryption(@javax.annotation.Nullable final Boolean value) {
         this._availableForEncryption = value;
     }
@@ -82,6 +85,7 @@ public class EncryptWithTemplate extends EncryptContent implements Parsable {
      * @param value Value to set for the templateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateId(@javax.annotation.Nullable final String value) {
         this._templateId = value;
     }

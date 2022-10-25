@@ -16,6 +16,7 @@ public class UserAnalytics extends Entity implements Parsable {
      * Instantiates a new UserAnalytics and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserAnalytics() {
         super();
         this.setOdataType("#microsoft.graph.userAnalytics");
@@ -45,7 +46,7 @@ public class UserAnalytics extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserAnalytics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activityStatistics", (n) -> { currentObject.setActivityStatistics(n.getCollectionOfObjectValues(ActivityStatistics::createFromDiscriminatorValue)); });
             this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(Settings::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class UserAnalytics extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class UserAnalytics extends Entity implements Parsable {
      * @param value Value to set for the activityStatistics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityStatistics(@javax.annotation.Nullable final java.util.List<ActivityStatistics> value) {
         this._activityStatistics = value;
     }
@@ -82,6 +85,7 @@ public class UserAnalytics extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final Settings value) {
         this._settings = value;
     }

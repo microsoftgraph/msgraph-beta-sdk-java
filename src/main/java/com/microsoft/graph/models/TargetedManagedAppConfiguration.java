@@ -24,6 +24,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * Instantiates a new TargetedManagedAppConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TargetedManagedAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.targetedManagedAppConfiguration");
@@ -85,7 +86,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TargetedManagedAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appGroupType", (n) -> { currentObject.setAppGroupType(n.getEnumValue(TargetedManagedAppGroupType.class)); });
             this.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
@@ -107,6 +108,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * @param value Value to set for the appGroupType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppGroupType(@javax.annotation.Nullable final TargetedManagedAppGroupType value) {
         this._appGroupType = value;
     }
@@ -130,6 +133,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this._apps = value;
     }
@@ -138,6 +142,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
         this._assignments = value;
     }
@@ -146,6 +151,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * @param value Value to set for the deployedAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
         this._deployedAppCount = value;
     }
@@ -154,6 +160,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * @param value Value to set for the deploymentSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
         this._deploymentSummary = value;
     }
@@ -162,6 +169,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * @param value Value to set for the isAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAssigned(@javax.annotation.Nullable final Boolean value) {
         this._isAssigned = value;
     }

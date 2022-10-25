@@ -36,6 +36,7 @@ public class Drive extends BaseItem implements Parsable {
      * Instantiates a new Drive and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Drive() {
         super();
         this.setOdataType("#microsoft.graph.drive");
@@ -81,7 +82,7 @@ public class Drive extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Drive currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ItemActivityOLD::createFromDiscriminatorValue)); });
             this.put("bundles", (n) -> { currentObject.setBundles(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
             this.put("driveType", (n) -> { currentObject.setDriveType(n.getStringValue()); });
@@ -173,6 +174,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -194,6 +196,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the activities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<ItemActivityOLD> value) {
         this._activities = value;
     }
@@ -202,6 +205,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the bundles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBundles(@javax.annotation.Nullable final java.util.List<DriveItem> value) {
         this._bundles = value;
     }
@@ -210,6 +214,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the driveType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriveType(@javax.annotation.Nullable final String value) {
         this._driveType = value;
     }
@@ -218,6 +223,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the following property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFollowing(@javax.annotation.Nullable final java.util.List<DriveItem> value) {
         this._following = value;
     }
@@ -226,6 +232,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the items property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<DriveItem> value) {
         this._items = value;
     }
@@ -234,6 +241,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the list property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setList(@javax.annotation.Nullable final List value) {
         this._list = value;
     }
@@ -242,6 +250,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final IdentitySet value) {
         this._owner = value;
     }
@@ -250,6 +259,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the quota property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuota(@javax.annotation.Nullable final Quota value) {
         this._quota = value;
     }
@@ -258,6 +268,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the root property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoot(@javax.annotation.Nullable final DriveItem value) {
         this._root = value;
     }
@@ -266,6 +277,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the sharePointIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharePointIds(@javax.annotation.Nullable final SharepointIds value) {
         this._sharePointIds = value;
     }
@@ -274,6 +286,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the special property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpecial(@javax.annotation.Nullable final java.util.List<DriveItem> value) {
         this._special = value;
     }
@@ -282,6 +295,7 @@ public class Drive extends BaseItem implements Parsable {
      * @param value Value to set for the system property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystem(@javax.annotation.Nullable final SystemFacet value) {
         this._system = value;
     }

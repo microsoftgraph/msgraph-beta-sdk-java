@@ -29,7 +29,7 @@ public enum AdvancedBitLockerState implements ValuedEnum {
     FixedDriveNotEncrypted("fixedDriveNotEncrypted"),
     /** Encryption method of Fixed Drive is different than that set by policy */
     FixedDriveEncryptionMethodMismatch("fixedDriveEncryptionMethodMismatch"),
-    /** Logged on user is non-admin. This requires “AllowStandardUserEncryption” policy set to 1 */
+    /** Logged on user is non-admin. This requires AllowStandardUserEncryption policy set to 1 */
     LoggedOnUserNonAdmin("loggedOnUserNonAdmin"),
     /** WinRE is not configured */
     WindowsRecoveryEnvironmentNotConfigured("windowsRecoveryEnvironmentNotConfigured"),

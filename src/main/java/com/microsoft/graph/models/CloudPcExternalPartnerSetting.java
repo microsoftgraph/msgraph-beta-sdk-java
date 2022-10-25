@@ -23,6 +23,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * Instantiates a new CloudPcExternalPartnerSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcExternalPartnerSetting() {
         super();
         this.setOdataType("#microsoft.graph.cloudPcExternalPartnerSetting");
@@ -52,7 +53,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcExternalPartnerSetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enableConnection", (n) -> { currentObject.setEnableConnection(n.getBooleanValue()); });
             this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
             this.put("partnerId", (n) -> { currentObject.setPartnerId(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param value Value to set for the enableConnection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableConnection(@javax.annotation.Nullable final Boolean value) {
         this._enableConnection = value;
     }
@@ -119,6 +122,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -127,6 +131,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param value Value to set for the partnerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerId(@javax.annotation.Nullable final String value) {
         this._partnerId = value;
     }
@@ -135,6 +140,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CloudPcExternalPartnerStatus value) {
         this._status = value;
     }
@@ -143,6 +149,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param value Value to set for the statusDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatusDetails(@javax.annotation.Nullable final String value) {
         this._statusDetails = value;
     }

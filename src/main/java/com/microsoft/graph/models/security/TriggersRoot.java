@@ -15,6 +15,7 @@ public class TriggersRoot extends Entity implements Parsable {
      * Instantiates a new triggersRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TriggersRoot() {
         super();
         this.setOdataType("#microsoft.graph.security.triggersRoot");
@@ -36,7 +37,7 @@ public class TriggersRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TriggersRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("retentionEvents", (n) -> { currentObject.setRetentionEvents(n.getCollectionOfObjectValues(RetentionEvent::createFromDiscriminatorValue)); });
         }};
     }
@@ -53,6 +54,7 @@ public class TriggersRoot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class TriggersRoot extends Entity implements Parsable {
      * @param value Value to set for the retentionEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRetentionEvents(@javax.annotation.Nullable final java.util.List<RetentionEvent> value) {
         this._retentionEvents = value;
     }

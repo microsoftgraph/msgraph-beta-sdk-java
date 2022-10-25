@@ -27,6 +27,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * Instantiates a new UserExperienceAnalyticsAppHealthDevicePerformanceDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsAppHealthDevicePerformanceDetails() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthDevicePerformanceDetails");
@@ -104,7 +105,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsAppHealthDevicePerformanceDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
             this.put("appPublisher", (n) -> { currentObject.setAppPublisher(n.getStringValue()); });
             this.put("appVersion", (n) -> { currentObject.setAppVersion(n.getStringValue()); });
@@ -119,6 +120,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -143,6 +146,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the appPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppPublisher(@javax.annotation.Nullable final String value) {
         this._appPublisher = value;
     }
@@ -151,6 +155,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the appVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppVersion(@javax.annotation.Nullable final String value) {
         this._appVersion = value;
     }
@@ -159,6 +164,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
         this._deviceDisplayName = value;
     }
@@ -167,6 +173,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -175,6 +182,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
     }
@@ -183,6 +191,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the eventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventType(@javax.annotation.Nullable final String value) {
         this._eventType = value;
     }

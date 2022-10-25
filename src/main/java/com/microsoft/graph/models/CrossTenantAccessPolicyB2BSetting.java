@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.CrossTenantAccessPolicyTenantRestrictions;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -21,6 +22,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
      * Instantiates a new crossTenantAccessPolicyB2BSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.crossTenantAccessPolicyB2BSetting");
@@ -33,6 +35,13 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public static CrossTenantAccessPolicyB2BSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.crossTenantAccessPolicyTenantRestrictions": return new CrossTenantAccessPolicyTenantRestrictions();
+            }
+        }
         return new CrossTenantAccessPolicyB2BSetting();
     }
     /**
@@ -58,7 +67,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyB2BSetting currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("applications", (n) -> { currentObject.setApplications(n.getObjectValue(CrossTenantAccessPolicyTargetConfiguration::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("usersAndGroups", (n) -> { currentObject.setUsersAndGroups(n.getObjectValue(CrossTenantAccessPolicyTargetConfiguration::createFromDiscriminatorValue)); });
@@ -85,6 +94,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applications", this.getApplications());
@@ -97,6 +107,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +116,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
      * @param value Value to set for the applications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplications(@javax.annotation.Nullable final CrossTenantAccessPolicyTargetConfiguration value) {
         this._applications = value;
     }
@@ -113,6 +125,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +134,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
      * @param value Value to set for the usersAndGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsersAndGroups(@javax.annotation.Nullable final CrossTenantAccessPolicyTargetConfiguration value) {
         this._usersAndGroups = value;
     }

@@ -24,6 +24,7 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
      * Instantiates a new dlpPoliciesJobResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DlpPoliciesJobResult() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.dlpPoliciesJobResult");
@@ -69,7 +70,7 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DlpPoliciesJobResult currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("auditCorrelationId", (n) -> { currentObject.setAuditCorrelationId(n.getStringValue()); });
             this.put("evaluationDateTime", (n) -> { currentObject.setEvaluationDateTime(n.getOffsetDateTimeValue()); });
             this.put("matchingRules", (n) -> { currentObject.setMatchingRules(n.getCollectionOfObjectValues(MatchingDlpRule::createFromDiscriminatorValue)); });
@@ -97,6 +98,7 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("auditCorrelationId", this.getAuditCorrelationId());
@@ -110,6 +112,7 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the auditCorrelationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuditCorrelationId(@javax.annotation.Nullable final String value) {
         this._auditCorrelationId = value;
     }
@@ -126,6 +130,7 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the evaluationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._evaluationDateTime = value;
     }
@@ -134,6 +139,7 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the matchingRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatchingRules(@javax.annotation.Nullable final java.util.List<MatchingDlpRule> value) {
         this._matchingRules = value;
     }
@@ -142,6 +148,7 @@ public class DlpPoliciesJobResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

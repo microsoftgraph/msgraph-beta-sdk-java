@@ -45,6 +45,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * Instantiates a new FileSecurityProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileSecurityProfile() {
         super();
         this.setOdataType("#microsoft.graph.fileSecurityProfile");
@@ -106,7 +107,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileSecurityProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activityGroupNames", (n) -> { currentObject.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
             this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
@@ -218,6 +219,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -243,6 +245,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the activityGroupNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityGroupNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._activityGroupNames = value;
     }
@@ -251,6 +254,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
         this._azureSubscriptionId = value;
     }
@@ -259,6 +263,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -267,6 +272,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the certificateThumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateThumbprint(@javax.annotation.Nullable final String value) {
         this._certificateThumbprint = value;
     }
@@ -275,6 +281,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._extensions = value;
     }
@@ -283,6 +290,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the fileType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileType(@javax.annotation.Nullable final String value) {
         this._fileType = value;
     }
@@ -291,6 +299,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._firstSeenDateTime = value;
     }
@@ -299,6 +308,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the hashes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHashes(@javax.annotation.Nullable final java.util.List<FileHash> value) {
         this._hashes = value;
     }
@@ -307,6 +317,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSeenDateTime = value;
     }
@@ -315,6 +326,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the malwareStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMalwareStates(@javax.annotation.Nullable final java.util.List<MalwareState> value) {
         this._malwareStates = value;
     }
@@ -323,6 +335,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the names property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._names = value;
     }
@@ -331,6 +344,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
         this._riskScore = value;
     }
@@ -339,6 +353,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
         this._size = value;
     }
@@ -347,6 +362,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -355,6 +371,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
         this._vendorInformation = value;
     }
@@ -363,6 +380,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the vulnerabilityStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVulnerabilityStates(@javax.annotation.Nullable final java.util.List<VulnerabilityState> value) {
         this._vulnerabilityStates = value;
     }

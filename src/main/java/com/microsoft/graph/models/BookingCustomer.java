@@ -16,6 +16,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * Instantiates a new BookingCustomer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingCustomer() {
         super();
         this.setOdataType("#microsoft.graph.bookingCustomer");
@@ -45,7 +46,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingCustomer currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("addresses", (n) -> { currentObject.setAddresses(n.getCollectionOfObjectValues(PhysicalAddress::createFromDiscriminatorValue)); });
             this.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * @param value Value to set for the addresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddresses(@javax.annotation.Nullable final java.util.List<PhysicalAddress> value) {
         this._addresses = value;
     }
@@ -82,6 +85,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * @param value Value to set for the phones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhones(@javax.annotation.Nullable final java.util.List<Phone> value) {
         this._phones = value;
     }

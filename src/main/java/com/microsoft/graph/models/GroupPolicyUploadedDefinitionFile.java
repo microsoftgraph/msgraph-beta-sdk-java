@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The entity represents an ADMX (Administrative Template) XML file uploaded by Administrator. The ADMX file contains a collection of group policy definitions and their locations by category path. The group policy definition file also contains the languages supported as determined by the language dependent ADML (Administrative Template) language files. */
 public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile implements Parsable {
     /** The contents of the uploaded ADMX file. */
     private byte[] _content;
@@ -22,9 +23,10 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     /** The uploaded time of the uploaded ADMX file. */
     private OffsetDateTime _uploadDateTime;
     /**
-     * Instantiates a new GroupPolicyUploadedDefinitionFile and sets the default values.
+     * Instantiates a new groupPolicyUploadedDefinitionFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyUploadedDefinitionFile() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyUploadedDefinitionFile");
@@ -32,7 +34,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyUploadedDefinitionFile
+     * @return a groupPolicyUploadedDefinitionFile
      */
     @javax.annotation.Nonnull
     public static GroupPolicyUploadedDefinitionFile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +64,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyUploadedDefinitionFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("defaultLanguageCode", (n) -> { currentObject.setDefaultLanguageCode(n.getStringValue()); });
             this.put("groupPolicyOperations", (n) -> { currentObject.setGroupPolicyOperations(n.getCollectionOfObjectValues(GroupPolicyOperation::createFromDiscriminatorValue)); });
@@ -108,6 +110,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +126,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
     }
@@ -131,6 +135,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the defaultLanguageCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLanguageCode(@javax.annotation.Nullable final String value) {
         this._defaultLanguageCode = value;
     }
@@ -139,6 +144,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the groupPolicyOperations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyOperations(@javax.annotation.Nullable final java.util.List<GroupPolicyOperation> value) {
         this._groupPolicyOperations = value;
     }
@@ -147,6 +153,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the groupPolicyUploadedLanguageFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyUploadedLanguageFiles(@javax.annotation.Nullable final java.util.List<GroupPolicyUploadedLanguageFile> value) {
         this._groupPolicyUploadedLanguageFiles = value;
     }
@@ -155,6 +162,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final GroupPolicyUploadedDefinitionFileStatus value) {
         this._status = value;
     }
@@ -163,6 +171,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the uploadDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUploadDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._uploadDateTime = value;
     }

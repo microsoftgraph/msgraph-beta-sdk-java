@@ -43,6 +43,7 @@ public class AccessPackage extends Entity implements Parsable {
      * Instantiates a new accessPackage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackage() {
         super();
         this.setOdataType("#microsoft.graph.accessPackage");
@@ -136,7 +137,7 @@ public class AccessPackage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessPackageAssignmentPolicies", (n) -> { currentObject.setAccessPackageAssignmentPolicies(n.getCollectionOfObjectValues(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
             this.put("accessPackageCatalog", (n) -> { currentObject.setAccessPackageCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
             this.put("accessPackageResourceRoleScopes", (n) -> { currentObject.setAccessPackageResourceRoleScopes(n.getCollectionOfObjectValues(AccessPackageResourceRoleScope::createFromDiscriminatorValue)); });
@@ -207,6 +208,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -231,6 +233,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignmentPolicies(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
         this._accessPackageAssignmentPolicies = value;
     }
@@ -239,6 +242,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the accessPackageCatalog property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageCatalog(@javax.annotation.Nullable final AccessPackageCatalog value) {
         this._accessPackageCatalog = value;
     }
@@ -247,6 +251,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceRoleScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceRoleScopes(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRoleScope> value) {
         this._accessPackageResourceRoleScopes = value;
     }
@@ -255,6 +260,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the accessPackagesIncompatibleWith property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackagesIncompatibleWith(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
         this._accessPackagesIncompatibleWith = value;
     }
@@ -263,6 +269,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the catalogId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalogId(@javax.annotation.Nullable final String value) {
         this._catalogId = value;
     }
@@ -271,6 +278,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final String value) {
         this._createdBy = value;
     }
@@ -279,6 +287,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -287,6 +296,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -295,6 +305,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -303,6 +314,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the incompatibleAccessPackages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncompatibleAccessPackages(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
         this._incompatibleAccessPackages = value;
     }
@@ -311,6 +323,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the incompatibleGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncompatibleGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
         this._incompatibleGroups = value;
     }
@@ -319,6 +332,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the isHidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHidden(@javax.annotation.Nullable final Boolean value) {
         this._isHidden = value;
     }
@@ -327,6 +341,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the isRoleScopesVisible property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRoleScopesVisible(@javax.annotation.Nullable final Boolean value) {
         this._isRoleScopesVisible = value;
     }
@@ -335,6 +350,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the modifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedBy(@javax.annotation.Nullable final String value) {
         this._modifiedBy = value;
     }
@@ -343,6 +359,7 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._modifiedDateTime = value;
     }

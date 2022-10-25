@@ -10,7 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class Tag extends Entity implements Parsable {
     /** Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group. */
     private ChildSelectability _childSelectability;
@@ -27,9 +26,10 @@ public class Tag extends Entity implements Parsable {
     /** Returns the parent tag of the specified tag. */
     private Tag _parent;
     /**
-     * Instantiates a new tag and sets the default values.
+     * Instantiates a new Tag and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Tag() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.tag");
@@ -37,7 +37,7 @@ public class Tag extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tag
+     * @return a Tag
      */
     @javax.annotation.Nonnull
     public static Tag createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -91,7 +91,7 @@ public class Tag extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Tag currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("childSelectability", (n) -> { currentObject.setChildSelectability(n.getEnumValue(ChildSelectability.class)); });
             this.put("childTags", (n) -> { currentObject.setChildTags(n.getCollectionOfObjectValues(Tag::createFromDiscriminatorValue)); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -122,6 +122,7 @@ public class Tag extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -138,6 +139,7 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the childSelectability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildSelectability(@javax.annotation.Nullable final ChildSelectability value) {
         this._childSelectability = value;
     }
@@ -146,6 +148,7 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the childTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildTags(@javax.annotation.Nullable final java.util.List<Tag> value) {
         this._childTags = value;
     }
@@ -154,6 +157,7 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -162,6 +166,7 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -170,6 +175,7 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -178,6 +184,7 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -186,6 +193,7 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the parent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParent(@javax.annotation.Nullable final Tag value) {
         this._parent = value;
     }

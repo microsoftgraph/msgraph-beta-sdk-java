@@ -39,6 +39,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Instantiates a new cloudPcAuditActor and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcAuditActor() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.cloudPcAuditActor");
@@ -84,7 +85,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcAuditActor currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("applicationDisplayName", (n) -> { currentObject.setApplicationDisplayName(n.getStringValue()); });
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
@@ -184,6 +185,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationDisplayName", this.getApplicationDisplayName());
@@ -205,6 +207,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -213,6 +216,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationDisplayName(@javax.annotation.Nullable final String value) {
         this._applicationDisplayName = value;
     }
@@ -221,6 +225,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationId(@javax.annotation.Nullable final String value) {
         this._applicationId = value;
     }
@@ -229,6 +234,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -237,6 +243,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -245,6 +252,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remoteTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteTenantId(@javax.annotation.Nullable final String value) {
         this._remoteTenantId = value;
     }
@@ -253,6 +261,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remoteUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteUserId(@javax.annotation.Nullable final String value) {
         this._remoteUserId = value;
     }
@@ -261,6 +270,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the servicePrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalName(@javax.annotation.Nullable final String value) {
         this._servicePrincipalName = value;
     }
@@ -269,6 +279,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final CloudPcAuditActorType value) {
         this._type = value;
     }
@@ -277,6 +288,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -285,6 +297,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPermissions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._userPermissions = value;
     }
@@ -293,6 +306,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -301,6 +315,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userRoleScopeTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRoleScopeTags(@javax.annotation.Nullable final java.util.List<CloudPcUserRoleScopeTagInfo> value) {
         this._userRoleScopeTags = value;
     }

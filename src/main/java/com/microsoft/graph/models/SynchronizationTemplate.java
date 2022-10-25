@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class SynchronizationTemplate extends Entity implements Parsable {
     /** Identifier of the application this template belongs to. */
     private String _applicationId;
@@ -27,6 +27,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * Instantiates a new synchronizationTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationTemplate() {
         super();
         this.setOdataType("#microsoft.graph.synchronizationTemplate");
@@ -88,7 +89,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
             this.put("default", (n) -> { currentObject.setDefault(n.getBooleanValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -119,6 +120,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the applicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationId(@javax.annotation.Nullable final String value) {
         this._applicationId = value;
     }
@@ -143,6 +146,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the default property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefault(@javax.annotation.Nullable final Boolean value) {
         this._default_escaped = value;
     }
@@ -151,6 +155,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -159,6 +164,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the discoverable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscoverable(@javax.annotation.Nullable final Boolean value) {
         this._discoverable = value;
     }
@@ -167,6 +173,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the factoryTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFactoryTag(@javax.annotation.Nullable final String value) {
         this._factoryTag = value;
     }
@@ -175,6 +182,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final java.util.List<MetadataEntry> value) {
         this._metadata = value;
     }
@@ -183,6 +191,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the schema property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchema(@javax.annotation.Nullable final SynchronizationSchema value) {
         this._schema = value;
     }

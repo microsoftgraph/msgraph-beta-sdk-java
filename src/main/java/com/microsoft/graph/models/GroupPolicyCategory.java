@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The category entity stores the category of a group policy definition */
 public class GroupPolicyCategory extends Entity implements Parsable {
     /** The children categories */
     private java.util.List<GroupPolicyCategory> _children;
@@ -27,9 +26,10 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     /** The parent category */
     private GroupPolicyCategory _parent;
     /**
-     * Instantiates a new groupPolicyCategory and sets the default values.
+     * Instantiates a new GroupPolicyCategory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyCategory() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyCategory");
@@ -37,7 +37,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyCategory
+     * @return a GroupPolicyCategory
      */
     @javax.annotation.Nonnull
     public static GroupPolicyCategory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(GroupPolicyCategory::createFromDiscriminatorValue)); });
             this.put("definitionFile", (n) -> { currentObject.setDefinitionFile(n.getObjectValue(GroupPolicyDefinitionFile::createFromDiscriminatorValue)); });
             this.put("definitions", (n) -> { currentObject.setDefinitions(n.getCollectionOfObjectValues(GroupPolicyDefinition::createFromDiscriminatorValue)); });
@@ -131,6 +131,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +149,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * @param value Value to set for the children property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildren(@javax.annotation.Nullable final java.util.List<GroupPolicyCategory> value) {
         this._children = value;
     }
@@ -156,6 +158,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * @param value Value to set for the definitionFile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionFile(@javax.annotation.Nullable final GroupPolicyDefinitionFile value) {
         this._definitionFile = value;
     }
@@ -164,6 +167,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * @param value Value to set for the definitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitions(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinition> value) {
         this._definitions = value;
     }
@@ -172,6 +176,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -180,6 +185,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * @param value Value to set for the ingestionSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIngestionSource(@javax.annotation.Nullable final IngestionSource value) {
         this._ingestionSource = value;
     }
@@ -188,6 +194,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * @param value Value to set for the isRoot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRoot(@javax.annotation.Nullable final Boolean value) {
         this._isRoot = value;
     }
@@ -196,6 +203,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -204,6 +212,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * @param value Value to set for the parent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParent(@javax.annotation.Nullable final GroupPolicyCategory value) {
         this._parent = value;
     }

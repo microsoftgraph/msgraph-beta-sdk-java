@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class UnifiedRbacResourceAction extends Entity implements Parsable {
     /** HTTP method for the action, such as DELETE, GET, PATCH, POST, PUT, or null. Supports $filter (eq) but not for null values. */
     private String _actionVerb;
@@ -23,6 +23,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * Instantiates a new unifiedRbacResourceAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRbacResourceAction() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRbacResourceAction");
@@ -60,7 +61,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRbacResourceAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionVerb", (n) -> { currentObject.setActionVerb(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param value Value to set for the actionVerb property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionVerb(@javax.annotation.Nullable final String value) {
         this._actionVerb = value;
     }
@@ -119,6 +122,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -127,6 +131,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -135,6 +140,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param value Value to set for the resourceScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceScope(@javax.annotation.Nullable final UnifiedRbacResourceScope value) {
         this._resourceScope = value;
     }
@@ -143,6 +149,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param value Value to set for the resourceScopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceScopeId(@javax.annotation.Nullable final String value) {
         this._resourceScopeId = value;
     }

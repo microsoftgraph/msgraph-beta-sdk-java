@@ -15,6 +15,7 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      * Instantiates a new DeviceHealthScriptRunOnceSchedule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptRunOnceSchedule() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScriptRunOnceSchedule");
@@ -44,7 +45,7 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptRunOnceSchedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("date", (n) -> { currentObject.setDate(n.getLocalDateValue()); });
         }};
     }
@@ -53,6 +54,7 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      * @param value Value to set for the date property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDate(@javax.annotation.Nullable final LocalDate value) {
         this._date = value;
     }

@@ -24,6 +24,7 @@ public class OrganizationalMessageLogoGuide implements AdditionalDataHolder, Par
      * Instantiates a new organizationalMessageLogoGuide and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalMessageLogoGuide() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.organizationalMessageLogoGuide");
@@ -69,7 +70,7 @@ public class OrganizationalMessageLogoGuide implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageLogoGuide currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("assetName", (n) -> { currentObject.setAssetName(n.getStringValue()); });
             this.put("dimensions", (n) -> { currentObject.setDimensions(n.getObjectValue(OrganizationalMessageLogoDimensions::createFromDiscriminatorValue)); });
             this.put("logoCdnUrl", (n) -> { currentObject.setLogoCdnUrl(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class OrganizationalMessageLogoGuide implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("assetName", this.getAssetName());
@@ -110,6 +112,7 @@ public class OrganizationalMessageLogoGuide implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class OrganizationalMessageLogoGuide implements AdditionalDataHolder, Par
      * @param value Value to set for the assetName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssetName(@javax.annotation.Nullable final String value) {
         this._assetName = value;
     }
@@ -126,6 +130,7 @@ public class OrganizationalMessageLogoGuide implements AdditionalDataHolder, Par
      * @param value Value to set for the dimensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDimensions(@javax.annotation.Nullable final OrganizationalMessageLogoDimensions value) {
         this._dimensions = value;
     }
@@ -134,6 +139,7 @@ public class OrganizationalMessageLogoGuide implements AdditionalDataHolder, Par
      * @param value Value to set for the logoCdnUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoCdnUrl(@javax.annotation.Nullable final String value) {
         this._logoCdnUrl = value;
     }
@@ -142,6 +148,7 @@ public class OrganizationalMessageLogoGuide implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

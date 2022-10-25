@@ -28,6 +28,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * Instantiates a new teamworkDisplayScreenConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkDisplayScreenConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teamworkDisplayScreenConfiguration");
@@ -73,7 +74,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDisplayScreenConfiguration currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("backlightBrightness", (n) -> { currentObject.setBacklightBrightness(n.getIntegerValue()); });
             this.put("backlightTimeout", (n) -> { currentObject.setBacklightTimeout(n.getPeriodValue()); });
             this.put("isHighContrastEnabled", (n) -> { currentObject.setIsHighContrastEnabled(n.getBooleanValue()); });
@@ -119,6 +120,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("backlightBrightness", this.getBacklightBrightness());
@@ -134,6 +136,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +145,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the backlightBrightness property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBacklightBrightness(@javax.annotation.Nullable final Integer value) {
         this._backlightBrightness = value;
     }
@@ -150,6 +154,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the backlightTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBacklightTimeout(@javax.annotation.Nullable final Period value) {
         this._backlightTimeout = value;
     }
@@ -158,6 +163,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the isHighContrastEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHighContrastEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isHighContrastEnabled = value;
     }
@@ -166,6 +172,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the isScreensaverEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsScreensaverEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isScreensaverEnabled = value;
     }
@@ -174,6 +181,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -182,6 +190,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * @param value Value to set for the screensaverTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreensaverTimeout(@javax.annotation.Nullable final Period value) {
         this._screensaverTimeout = value;
     }

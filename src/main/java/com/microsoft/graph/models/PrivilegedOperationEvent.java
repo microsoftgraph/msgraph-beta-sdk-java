@@ -41,6 +41,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Instantiates a new PrivilegedOperationEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivilegedOperationEvent() {
         super();
         this.setOdataType("#microsoft.graph.privilegedOperationEvent");
@@ -86,7 +87,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedOperationEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
             this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
@@ -196,6 +197,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,6 +221,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the additionalInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalInformation(@javax.annotation.Nullable final String value) {
         this._additionalInformation = value;
     }
@@ -227,6 +230,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._creationDateTime = value;
     }
@@ -235,6 +239,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -243,6 +248,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the referenceKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferenceKey(@javax.annotation.Nullable final String value) {
         this._referenceKey = value;
     }
@@ -251,6 +257,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the referenceSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferenceSystem(@javax.annotation.Nullable final String value) {
         this._referenceSystem = value;
     }
@@ -259,6 +266,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the requestorId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestorId(@javax.annotation.Nullable final String value) {
         this._requestorId = value;
     }
@@ -267,6 +275,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the requestorName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestorName(@javax.annotation.Nullable final String value) {
         this._requestorName = value;
     }
@@ -275,6 +284,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the requestType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestType(@javax.annotation.Nullable final String value) {
         this._requestType = value;
     }
@@ -283,6 +293,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the roleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleId(@javax.annotation.Nullable final String value) {
         this._roleId = value;
     }
@@ -291,6 +302,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the roleName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleName(@javax.annotation.Nullable final String value) {
         this._roleName = value;
     }
@@ -299,6 +311,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -307,6 +320,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -315,6 +329,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the userMail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserMail(@javax.annotation.Nullable final String value) {
         this._userMail = value;
     }
@@ -323,6 +338,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }

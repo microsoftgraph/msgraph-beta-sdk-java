@@ -18,6 +18,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * Instantiates a new ItemPhone and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemPhone() {
         super();
         this.setOdataType("#microsoft.graph.itemPhone");
@@ -47,7 +48,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemPhone currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PhoneType.class)); });
@@ -74,6 +75,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -94,6 +97,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final String value) {
         this._number = value;
     }
@@ -102,6 +106,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final PhoneType value) {
         this._type = value;
     }

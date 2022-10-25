@@ -37,6 +37,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * Instantiates a new aggregatedPolicyCompliance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AggregatedPolicyCompliance() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.aggregatedPolicyCompliance");
@@ -90,7 +91,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AggregatedPolicyCompliance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("compliancePolicyId", (n) -> { currentObject.setCompliancePolicyId(n.getStringValue()); });
             this.put("compliancePolicyName", (n) -> { currentObject.setCompliancePolicyName(n.getStringValue()); });
             this.put("compliancePolicyPlatform", (n) -> { currentObject.setCompliancePolicyPlatform(n.getStringValue()); });
@@ -165,6 +166,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -185,6 +187,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the compliancePolicyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicyId(@javax.annotation.Nullable final String value) {
         this._compliancePolicyId = value;
     }
@@ -193,6 +196,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the compliancePolicyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicyName(@javax.annotation.Nullable final String value) {
         this._compliancePolicyName = value;
     }
@@ -201,6 +205,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the compliancePolicyPlatform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicyPlatform(@javax.annotation.Nullable final String value) {
         this._compliancePolicyPlatform = value;
     }
@@ -209,6 +214,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the compliancePolicyType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicyType(@javax.annotation.Nullable final String value) {
         this._compliancePolicyType = value;
     }
@@ -217,6 +223,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastRefreshedDateTime = value;
     }
@@ -225,6 +232,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the numberOfCompliantDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCompliantDevices(@javax.annotation.Nullable final Long value) {
         this._numberOfCompliantDevices = value;
     }
@@ -233,6 +241,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the numberOfErrorDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfErrorDevices(@javax.annotation.Nullable final Long value) {
         this._numberOfErrorDevices = value;
     }
@@ -241,6 +250,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the numberOfNonCompliantDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfNonCompliantDevices(@javax.annotation.Nullable final Long value) {
         this._numberOfNonCompliantDevices = value;
     }
@@ -249,6 +259,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the policyModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._policyModifiedDateTime = value;
     }
@@ -257,6 +268,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
         this._tenantDisplayName = value;
     }
@@ -265,6 +277,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

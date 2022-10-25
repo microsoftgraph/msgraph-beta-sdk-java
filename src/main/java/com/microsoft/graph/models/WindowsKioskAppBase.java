@@ -29,6 +29,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      * Instantiates a new windowsKioskAppBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskAppBase() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.windowsKioskAppBase");
@@ -83,7 +84,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskAppBase currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("appType", (n) -> { currentObject.setAppType(n.getEnumValue(WindowsKioskAppType.class)); });
             this.put("autoLaunch", (n) -> { currentObject.setAutoLaunch(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
@@ -120,6 +121,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("appType", this.getAppType());
@@ -134,6 +136,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +145,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppType(@javax.annotation.Nullable final WindowsKioskAppType value) {
         this._appType = value;
     }
@@ -150,6 +154,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the autoLaunch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoLaunch(@javax.annotation.Nullable final Boolean value) {
         this._autoLaunch = value;
     }
@@ -158,6 +163,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -166,6 +172,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -174,6 +181,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startLayoutTileSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartLayoutTileSize(@javax.annotation.Nullable final WindowsAppStartLayoutTileSize value) {
         this._startLayoutTileSize = value;
     }

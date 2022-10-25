@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This will allow the admin to see the specific details of an organizational message that has been created for their tenant */
 public class OrganizationalMessageDetail extends Entity implements Parsable {
     /** The content that will be displayed to clients for the message. This includes the text portion of the message and the displayed logo */
     private OrganizationalMessageContent _content;
@@ -15,30 +16,31 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** The date and time of when the message will stop being displayed to clients */
     private OffsetDateTime _endDateTime;
-    /** The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice, unknownFutureValue. */
+    /** The frequency at which a client will see the message */
     private OrganizationalMessageFrequency _frequency;
     /** The date and time of when the message was last modified */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Indicates the scenario for the message. Possible values are: onboarding, lifecycle, unknownFutureValue. */
+    /** Indicates the scenario for the message */
     private OrganizationalMessageScenario _scenario;
     /** The date and time of when the message will start being displayed to clients */
     private OffsetDateTime _startDateTime;
-    /** Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled, unknownFutureValue. */
+    /** Indicates the deployment status of the message */
     private OrganizationalMessageStatus _status;
-    /** Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue. */
+    /** Indicates the area where content will be displayed to customers */
     private OrganizationalMessageSurface _surface;
     /** The groups of devices that will receive the message. This also contains a list of excluded groups that will not receive the message regardless of the device being part of an included group */
     private OrganizationalMessageTargeting _targeting;
-    /** Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue. */
+    /** Indicates the theme for the experience */
     private OrganizationalMessageTheme _theme;
     /** The statistics containing how the message was interacted with by clients. This includes the number of impressions, clicks, and dismisses from targeted clients. */
     private OrganizationalMessageInsights _userEngagementStatistics;
     /** Indicates the corresponding variant for the experience */
     private String _variant;
     /**
-     * Instantiates a new OrganizationalMessageDetail and sets the default values.
+     * Instantiates a new organizationalMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.organizationalMessageDetail");
@@ -46,7 +48,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OrganizationalMessageDetail
+     * @return a organizationalMessageDetail
      */
     @javax.annotation.Nonnull
     public static OrganizationalMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -84,7 +86,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(OrganizationalMessageContent::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -101,7 +103,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the frequency property value. The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice, unknownFutureValue.
+     * Gets the frequency property value. The frequency at which a client will see the message
      * @return a organizationalMessageFrequency
      */
     @javax.annotation.Nullable
@@ -117,7 +119,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the scenario property value. Indicates the scenario for the message. Possible values are: onboarding, lifecycle, unknownFutureValue.
+     * Gets the scenario property value. Indicates the scenario for the message
      * @return a organizationalMessageScenario
      */
     @javax.annotation.Nullable
@@ -133,7 +135,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         return this._startDateTime;
     }
     /**
-     * Gets the status property value. Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled, unknownFutureValue.
+     * Gets the status property value. Indicates the deployment status of the message
      * @return a organizationalMessageStatus
      */
     @javax.annotation.Nullable
@@ -141,7 +143,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         return this._status;
     }
     /**
-     * Gets the surface property value. Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue.
+     * Gets the surface property value. Indicates the area where content will be displayed to customers
      * @return a organizationalMessageSurface
      */
     @javax.annotation.Nullable
@@ -157,7 +159,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
         return this._targeting;
     }
     /**
-     * Gets the theme property value. Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue.
+     * Gets the theme property value. Indicates the theme for the experience
      * @return a organizationalMessageTheme
      */
     @javax.annotation.Nullable
@@ -185,6 +187,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -207,6 +210,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final OrganizationalMessageContent value) {
         this._content = value;
     }
@@ -215,6 +219,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -223,14 +228,16 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
     /**
-     * Sets the frequency property value. The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice, unknownFutureValue.
+     * Sets the frequency property value. The frequency at which a client will see the message
      * @param value Value to set for the frequency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrequency(@javax.annotation.Nullable final OrganizationalMessageFrequency value) {
         this._frequency = value;
     }
@@ -239,14 +246,16 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the scenario property value. Indicates the scenario for the message. Possible values are: onboarding, lifecycle, unknownFutureValue.
+     * Sets the scenario property value. Indicates the scenario for the message
      * @param value Value to set for the scenario property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScenario(@javax.annotation.Nullable final OrganizationalMessageScenario value) {
         this._scenario = value;
     }
@@ -255,22 +264,25 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
     /**
-     * Sets the status property value. Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled, unknownFutureValue.
+     * Sets the status property value. Indicates the deployment status of the message
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final OrganizationalMessageStatus value) {
         this._status = value;
     }
     /**
-     * Sets the surface property value. Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue.
+     * Sets the surface property value. Indicates the area where content will be displayed to customers
      * @param value Value to set for the surface property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurface(@javax.annotation.Nullable final OrganizationalMessageSurface value) {
         this._surface = value;
     }
@@ -279,14 +291,16 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the targeting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargeting(@javax.annotation.Nullable final OrganizationalMessageTargeting value) {
         this._targeting = value;
     }
     /**
-     * Sets the theme property value. Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue.
+     * Sets the theme property value. Indicates the theme for the experience
      * @param value Value to set for the theme property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTheme(@javax.annotation.Nullable final OrganizationalMessageTheme value) {
         this._theme = value;
     }
@@ -295,6 +309,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the userEngagementStatistics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEngagementStatistics(@javax.annotation.Nullable final OrganizationalMessageInsights value) {
         this._userEngagementStatistics = value;
     }
@@ -303,6 +318,7 @@ public class OrganizationalMessageDetail extends Entity implements Parsable {
      * @param value Value to set for the variant property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVariant(@javax.annotation.Nullable final String value) {
         this._variant = value;
     }

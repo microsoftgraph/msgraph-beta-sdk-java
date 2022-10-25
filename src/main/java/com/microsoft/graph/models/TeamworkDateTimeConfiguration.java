@@ -28,6 +28,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
      * Instantiates a new teamworkDateTimeConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkDateTimeConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teamworkDateTimeConfiguration");
@@ -65,7 +66,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDateTimeConfiguration currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("dateFormat", (n) -> { currentObject.setDateFormat(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("officeHoursEndTime", (n) -> { currentObject.setOfficeHoursEndTime(n.getLocalTimeValue()); });
@@ -119,6 +120,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("dateFormat", this.getDateFormat());
@@ -134,6 +136,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +145,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the dateFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateFormat(@javax.annotation.Nullable final String value) {
         this._dateFormat = value;
     }
@@ -150,6 +154,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -158,6 +163,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the officeHoursEndTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeHoursEndTime(@javax.annotation.Nullable final LocalTime value) {
         this._officeHoursEndTime = value;
     }
@@ -166,6 +172,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the officeHoursStartTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeHoursStartTime(@javax.annotation.Nullable final LocalTime value) {
         this._officeHoursStartTime = value;
     }
@@ -174,6 +181,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the timeFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeFormat(@javax.annotation.Nullable final String value) {
         this._timeFormat = value;
     }
@@ -182,6 +190,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the timeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeZone(@javax.annotation.Nullable final String value) {
         this._timeZone = value;
     }

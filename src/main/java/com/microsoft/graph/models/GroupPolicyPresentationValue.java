@@ -28,6 +28,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * Instantiates a new groupPolicyPresentationValue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationValue() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationValue");
@@ -77,7 +78,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("definitionValue", (n) -> { currentObject.setDefinitionValue(n.getObjectValue(GroupPolicyDefinitionValue::createFromDiscriminatorValue)); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -105,6 +106,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,6 +120,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -126,6 +129,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * @param value Value to set for the definitionValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionValue(@javax.annotation.Nullable final GroupPolicyDefinitionValue value) {
         this._definitionValue = value;
     }
@@ -134,6 +138,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -142,6 +147,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * @param value Value to set for the presentation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPresentation(@javax.annotation.Nullable final GroupPolicyPresentation value) {
         this._presentation = value;
     }

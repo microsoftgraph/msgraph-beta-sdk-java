@@ -26,6 +26,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * Instantiates a new UserExperienceAnalyticsAppHealthDeviceModelPerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsAppHealthDeviceModelPerformance() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthDeviceModelPerformance");
@@ -71,7 +72,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsAppHealthDeviceModelPerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeDeviceCount", (n) -> { currentObject.setActiveDeviceCount(n.getIntegerValue()); });
             this.put("deviceManufacturer", (n) -> { currentObject.setDeviceManufacturer(n.getStringValue()); });
             this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
@@ -118,6 +119,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +136,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * @param value Value to set for the activeDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._activeDeviceCount = value;
     }
@@ -142,6 +145,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * @param value Value to set for the deviceManufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManufacturer(@javax.annotation.Nullable final String value) {
         this._deviceManufacturer = value;
     }
@@ -150,6 +154,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
         this._deviceModel = value;
     }
@@ -158,6 +163,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this._healthStatus = value;
     }
@@ -166,6 +172,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * @param value Value to set for the meanTimeToFailureInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeanTimeToFailureInMinutes(@javax.annotation.Nullable final Integer value) {
         this._meanTimeToFailureInMinutes = value;
     }
@@ -174,6 +181,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * @param value Value to set for the modelAppHealthScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModelAppHealthScore(@javax.annotation.Nullable final Double value) {
         this._modelAppHealthScore = value;
     }
@@ -182,6 +190,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * @param value Value to set for the modelAppHealthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModelAppHealthStatus(@javax.annotation.Nullable final String value) {
         this._modelAppHealthStatus = value;
     }

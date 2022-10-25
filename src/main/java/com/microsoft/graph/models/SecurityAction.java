@@ -41,6 +41,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Instantiates a new SecurityAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityAction() {
         super();
         this.setOdataType("#microsoft.graph.securityAction");
@@ -118,7 +119,7 @@ public class SecurityAction extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionReason", (n) -> { currentObject.setActionReason(n.getStringValue()); });
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
@@ -196,6 +197,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,6 +221,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the actionReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionReason(@javax.annotation.Nullable final String value) {
         this._actionReason = value;
     }
@@ -227,6 +230,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -235,6 +239,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -243,6 +248,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the clientContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
         this._clientContext = value;
     }
@@ -251,6 +257,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completedDateTime = value;
     }
@@ -259,6 +266,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -267,6 +275,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the errorInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorInfo(@javax.annotation.Nullable final ResultInfo value) {
         this._errorInfo = value;
     }
@@ -275,6 +284,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastActionDateTime = value;
     }
@@ -283,6 +293,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -291,6 +302,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the parameters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParameters(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._parameters = value;
     }
@@ -299,6 +311,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the states property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStates(@javax.annotation.Nullable final java.util.List<SecurityActionState> value) {
         this._states = value;
     }
@@ -307,6 +320,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final OperationStatus value) {
         this._status = value;
     }
@@ -315,6 +329,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the user property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final String value) {
         this._user = value;
     }
@@ -323,6 +338,7 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
         this._vendorInformation = value;
     }

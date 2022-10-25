@@ -14,6 +14,7 @@ public class DeviceManagementConfigurationStringSettingValueTemplate extends Dev
      * Instantiates a new DeviceManagementConfigurationStringSettingValueTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationStringSettingValueTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate");
@@ -43,7 +44,7 @@ public class DeviceManagementConfigurationStringSettingValueTemplate extends Dev
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationStringSettingValueTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationStringSettingValueDefaultTemplate::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceManagementConfigurationStringSettingValueTemplate extends Dev
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementConfigurationStringSettingValueTemplate extends Dev
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final DeviceManagementConfigurationStringSettingValueDefaultTemplate value) {
         this._defaultValue = value;
     }

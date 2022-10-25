@@ -49,6 +49,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * Instantiates a new HostSecurityProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public HostSecurityProfile() {
         super();
         this.setOdataType("#microsoft.graph.hostSecurityProfile");
@@ -86,7 +87,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HostSecurityProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
             this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
             this.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
@@ -240,6 +241,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -267,6 +269,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
         this._azureSubscriptionId = value;
     }
@@ -275,6 +278,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -283,6 +287,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._firstSeenDateTime = value;
     }
@@ -291,6 +296,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the fqdn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFqdn(@javax.annotation.Nullable final String value) {
         this._fqdn = value;
     }
@@ -299,6 +305,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the isAzureAdJoined property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAzureAdJoined(@javax.annotation.Nullable final Boolean value) {
         this._isAzureAdJoined = value;
     }
@@ -307,6 +314,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the isAzureAdRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAzureAdRegistered(@javax.annotation.Nullable final Boolean value) {
         this._isAzureAdRegistered = value;
     }
@@ -315,6 +323,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the isHybridAzureDomainJoined property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHybridAzureDomainJoined(@javax.annotation.Nullable final Boolean value) {
         this._isHybridAzureDomainJoined = value;
     }
@@ -323,6 +332,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSeenDateTime = value;
     }
@@ -331,6 +341,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the logonUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogonUsers(@javax.annotation.Nullable final java.util.List<LogonUser> value) {
         this._logonUsers = value;
     }
@@ -339,6 +350,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the netBiosName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetBiosName(@javax.annotation.Nullable final String value) {
         this._netBiosName = value;
     }
@@ -347,6 +359,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the networkInterfaces property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkInterfaces(@javax.annotation.Nullable final java.util.List<NetworkInterface> value) {
         this._networkInterfaces = value;
     }
@@ -355,6 +368,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the os property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOs(@javax.annotation.Nullable final String value) {
         this._os = value;
     }
@@ -363,6 +377,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -371,6 +386,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the parentHost property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentHost(@javax.annotation.Nullable final String value) {
         this._parentHost = value;
     }
@@ -379,6 +395,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the relatedHostIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelatedHostIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._relatedHostIds = value;
     }
@@ -387,6 +404,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
         this._riskScore = value;
     }
@@ -395,6 +413,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -403,6 +422,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
         this._vendorInformation = value;
     }

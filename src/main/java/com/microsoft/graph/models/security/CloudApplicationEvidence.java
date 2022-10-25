@@ -22,6 +22,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * Instantiates a new CloudApplicationEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudApplicationEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.cloudApplicationEvidence");
@@ -59,7 +60,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudApplicationEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getLongValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("instanceId", (n) -> { currentObject.setInstanceId(n.getLongValue()); });
@@ -96,6 +97,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final Long value) {
         this._appId = value;
     }
@@ -118,6 +121,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -126,6 +130,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the instanceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstanceId(@javax.annotation.Nullable final Long value) {
         this._instanceId = value;
     }
@@ -134,6 +139,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the instanceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstanceName(@javax.annotation.Nullable final String value) {
         this._instanceName = value;
     }
@@ -142,6 +148,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the saasAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSaasAppId(@javax.annotation.Nullable final Long value) {
         this._saasAppId = value;
     }

@@ -14,6 +14,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
      * Instantiates a new WindowsPhone81AppXBundle and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPhone81AppXBundle() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81AppXBundle");
@@ -43,7 +44,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhone81AppXBundle currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appXPackageInformationList", (n) -> { currentObject.setAppXPackageInformationList(n.getCollectionOfObjectValues(WindowsPackageInformation::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
      * @param value Value to set for the appXPackageInformationList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppXPackageInformationList(@javax.annotation.Nullable final java.util.List<WindowsPackageInformation> value) {
         this._appXPackageInformationList = value;
     }

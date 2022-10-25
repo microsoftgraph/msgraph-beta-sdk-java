@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The Group Policy Object file uploaded by admin. */
 public class GroupPolicyObjectFile extends Entity implements Parsable {
     /** The Group Policy Object file content. */
     private String _content;
@@ -21,9 +20,10 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     /** The distinguished name of the OU. */
     private String _ouDistinguishedName;
     /**
-     * Instantiates a new groupPolicyObjectFile and sets the default values.
+     * Instantiates a new GroupPolicyObjectFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyObjectFile() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyObjectFile");
@@ -31,7 +31,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyObjectFile
+     * @return a GroupPolicyObjectFile
      */
     @javax.annotation.Nonnull
     public static GroupPolicyObjectFile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyObjectFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("groupPolicyObjectId", (n) -> { currentObject.setGroupPolicyObjectId(n.getStringValue()); });
@@ -98,6 +98,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +113,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final String value) {
         this._content = value;
     }
@@ -120,6 +122,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -128,6 +131,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyObjectId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyObjectId(@javax.annotation.Nullable final String value) {
         this._groupPolicyObjectId = value;
     }
@@ -136,6 +140,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -144,6 +149,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the ouDistinguishedName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOuDistinguishedName(@javax.annotation.Nullable final String value) {
         this._ouDistinguishedName = value;
     }

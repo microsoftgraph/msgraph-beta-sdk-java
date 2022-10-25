@@ -118,6 +118,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * Instantiates a new DefaultManagedAppProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DefaultManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.defaultManagedAppProtection");
@@ -403,7 +404,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DefaultManagedAppProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedAndroidDeviceManufacturers", (n) -> { currentObject.setAllowedAndroidDeviceManufacturers(n.getStringValue()); });
             this.put("allowedAndroidDeviceModels", (n) -> { currentObject.setAllowedAndroidDeviceModels(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("allowedIosDeviceModels", (n) -> { currentObject.setAllowedIosDeviceModels(n.getStringValue()); });
@@ -624,6 +625,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -686,6 +688,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the allowedAndroidDeviceManufacturers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedAndroidDeviceManufacturers(@javax.annotation.Nullable final String value) {
         this._allowedAndroidDeviceManufacturers = value;
     }
@@ -694,6 +697,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the allowedAndroidDeviceModels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedAndroidDeviceModels(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedAndroidDeviceModels = value;
     }
@@ -702,6 +706,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the allowedIosDeviceModels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedIosDeviceModels(@javax.annotation.Nullable final String value) {
         this._allowedIosDeviceModels = value;
     }
@@ -710,6 +715,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appActionIfAndroidDeviceManufacturerNotAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidDeviceManufacturerNotAllowed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfAndroidDeviceManufacturerNotAllowed = value;
     }
@@ -718,6 +724,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appActionIfAndroidDeviceModelNotAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidDeviceModelNotAllowed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfAndroidDeviceModelNotAllowed = value;
     }
@@ -726,6 +733,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appActionIfAndroidSafetyNetAppsVerificationFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidSafetyNetAppsVerificationFailed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfAndroidSafetyNetAppsVerificationFailed = value;
     }
@@ -734,6 +742,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appActionIfAndroidSafetyNetDeviceAttestationFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidSafetyNetDeviceAttestationFailed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfAndroidSafetyNetDeviceAttestationFailed = value;
     }
@@ -742,6 +751,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appActionIfDeviceLockNotSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDeviceLockNotSet(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfDeviceLockNotSet = value;
     }
@@ -750,6 +760,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanHigh property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDevicePasscodeComplexityLessThanHigh(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfDevicePasscodeComplexityLessThanHigh = value;
     }
@@ -758,6 +769,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanLow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDevicePasscodeComplexityLessThanLow(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfDevicePasscodeComplexityLessThanLow = value;
     }
@@ -766,6 +778,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanMedium property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDevicePasscodeComplexityLessThanMedium(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfDevicePasscodeComplexityLessThanMedium = value;
     }
@@ -774,6 +787,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appActionIfIosDeviceModelNotAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfIosDeviceModelNotAllowed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfIosDeviceModelNotAllowed = value;
     }
@@ -782,6 +796,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appDataEncryptionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDataEncryptionType(@javax.annotation.Nullable final ManagedAppDataEncryptionType value) {
         this._appDataEncryptionType = value;
     }
@@ -790,6 +805,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this._apps = value;
     }
@@ -798,6 +814,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the biometricAuthenticationBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBiometricAuthenticationBlocked(@javax.annotation.Nullable final Boolean value) {
         this._biometricAuthenticationBlocked = value;
     }
@@ -806,6 +823,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the blockAfterCompanyPortalUpdateDeferralInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
         this._blockAfterCompanyPortalUpdateDeferralInDays = value;
     }
@@ -814,6 +832,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the connectToVpnOnLaunch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectToVpnOnLaunch(@javax.annotation.Nullable final Boolean value) {
         this._connectToVpnOnLaunch = value;
     }
@@ -822,6 +841,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the customBrowserDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomBrowserDisplayName(@javax.annotation.Nullable final String value) {
         this._customBrowserDisplayName = value;
     }
@@ -830,6 +850,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the customBrowserPackageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomBrowserPackageId(@javax.annotation.Nullable final String value) {
         this._customBrowserPackageId = value;
     }
@@ -838,6 +859,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the customBrowserProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomBrowserProtocol(@javax.annotation.Nullable final String value) {
         this._customBrowserProtocol = value;
     }
@@ -846,6 +868,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the customDialerAppDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDialerAppDisplayName(@javax.annotation.Nullable final String value) {
         this._customDialerAppDisplayName = value;
     }
@@ -854,6 +877,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the customDialerAppPackageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDialerAppPackageId(@javax.annotation.Nullable final String value) {
         this._customDialerAppPackageId = value;
     }
@@ -862,6 +886,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the customDialerAppProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDialerAppProtocol(@javax.annotation.Nullable final String value) {
         this._customDialerAppProtocol = value;
     }
@@ -870,6 +895,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the customSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSettings(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._customSettings = value;
     }
@@ -878,6 +904,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the deployedAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
         this._deployedAppCount = value;
     }
@@ -886,6 +913,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the deploymentSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
         this._deploymentSummary = value;
     }
@@ -894,6 +922,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the deviceLockRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceLockRequired(@javax.annotation.Nullable final Boolean value) {
         this._deviceLockRequired = value;
     }
@@ -902,6 +931,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
     }
@@ -910,6 +940,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the disableProtectionOfManagedOutboundOpenInData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableProtectionOfManagedOutboundOpenInData(@javax.annotation.Nullable final Boolean value) {
         this._disableProtectionOfManagedOutboundOpenInData = value;
     }
@@ -918,6 +949,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the encryptAppData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptAppData(@javax.annotation.Nullable final Boolean value) {
         this._encryptAppData = value;
     }
@@ -926,6 +958,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the exemptedAppPackages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExemptedAppPackages(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._exemptedAppPackages = value;
     }
@@ -934,6 +967,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the exemptedAppProtocols property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExemptedAppProtocols(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._exemptedAppProtocols = value;
     }
@@ -942,6 +976,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the faceIdBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFaceIdBlocked(@javax.annotation.Nullable final Boolean value) {
         this._faceIdBlocked = value;
     }
@@ -950,6 +985,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the filterOpenInToOnlyManagedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilterOpenInToOnlyManagedApps(@javax.annotation.Nullable final Boolean value) {
         this._filterOpenInToOnlyManagedApps = value;
     }
@@ -958,6 +994,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the fingerprintAndBiometricEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFingerprintAndBiometricEnabled(@javax.annotation.Nullable final Boolean value) {
         this._fingerprintAndBiometricEnabled = value;
     }
@@ -966,6 +1003,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the minimumRequiredCompanyPortalVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredCompanyPortalVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredCompanyPortalVersion = value;
     }
@@ -974,6 +1012,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the minimumRequiredPatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredPatchVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredPatchVersion = value;
     }
@@ -982,6 +1021,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the minimumRequiredSdkVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredSdkVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredSdkVersion = value;
     }
@@ -990,6 +1030,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the minimumWarningCompanyPortalVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningCompanyPortalVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningCompanyPortalVersion = value;
     }
@@ -998,6 +1039,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the minimumWarningPatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningPatchVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningPatchVersion = value;
     }
@@ -1006,6 +1048,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the minimumWipeCompanyPortalVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipeCompanyPortalVersion(@javax.annotation.Nullable final String value) {
         this._minimumWipeCompanyPortalVersion = value;
     }
@@ -1014,6 +1057,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the minimumWipePatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipePatchVersion(@javax.annotation.Nullable final String value) {
         this._minimumWipePatchVersion = value;
     }
@@ -1022,6 +1066,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the minimumWipeSdkVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipeSdkVersion(@javax.annotation.Nullable final String value) {
         this._minimumWipeSdkVersion = value;
     }
@@ -1030,6 +1075,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the protectInboundDataFromUnknownSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtectInboundDataFromUnknownSources(@javax.annotation.Nullable final Boolean value) {
         this._protectInboundDataFromUnknownSources = value;
     }
@@ -1038,6 +1084,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the requireClass3Biometrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireClass3Biometrics(@javax.annotation.Nullable final Boolean value) {
         this._requireClass3Biometrics = value;
     }
@@ -1046,6 +1093,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the requiredAndroidSafetyNetAppsVerificationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredAndroidSafetyNetAppsVerificationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetAppsVerificationType value) {
         this._requiredAndroidSafetyNetAppsVerificationType = value;
     }
@@ -1054,6 +1102,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the requiredAndroidSafetyNetDeviceAttestationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredAndroidSafetyNetDeviceAttestationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetDeviceAttestationType value) {
         this._requiredAndroidSafetyNetDeviceAttestationType = value;
     }
@@ -1062,6 +1111,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the requiredAndroidSafetyNetEvaluationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredAndroidSafetyNetEvaluationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetEvaluationType value) {
         this._requiredAndroidSafetyNetEvaluationType = value;
     }
@@ -1070,6 +1120,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the requirePinAfterBiometricChange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequirePinAfterBiometricChange(@javax.annotation.Nullable final Boolean value) {
         this._requirePinAfterBiometricChange = value;
     }
@@ -1078,6 +1129,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
     }
@@ -1086,6 +1138,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the thirdPartyKeyboardsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThirdPartyKeyboardsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._thirdPartyKeyboardsBlocked = value;
     }
@@ -1094,6 +1147,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the warnAfterCompanyPortalUpdateDeferralInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWarnAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
         this._warnAfterCompanyPortalUpdateDeferralInDays = value;
     }
@@ -1102,6 +1156,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the wipeAfterCompanyPortalUpdateDeferralInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWipeAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
         this._wipeAfterCompanyPortalUpdateDeferralInDays = value;
     }

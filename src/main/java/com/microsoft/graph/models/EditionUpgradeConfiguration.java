@@ -22,6 +22,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * Instantiates a new EditionUpgradeConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EditionUpgradeConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.editionUpgradeConfiguration");
@@ -43,7 +44,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EditionUpgradeConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("license", (n) -> { currentObject.setLicense(n.getStringValue()); });
             this.put("licenseType", (n) -> { currentObject.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType.class)); });
             this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the license property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicense(@javax.annotation.Nullable final String value) {
         this._license = value;
     }
@@ -118,6 +121,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the licenseType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenseType(@javax.annotation.Nullable final EditionUpgradeLicenseType value) {
         this._licenseType = value;
     }
@@ -126,6 +130,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the productKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductKey(@javax.annotation.Nullable final String value) {
         this._productKey = value;
     }
@@ -134,6 +139,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the targetEdition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetEdition(@javax.annotation.Nullable final Windows10EditionType value) {
         this._targetEdition = value;
     }
@@ -142,6 +148,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the windowsSMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSMode(@javax.annotation.Nullable final WindowsSModeConfiguration value) {
         this._windowsSMode = value;
     }

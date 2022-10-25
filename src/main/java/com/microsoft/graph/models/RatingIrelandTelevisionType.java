@@ -15,7 +15,7 @@ public enum RatingIrelandTelevisionType implements ValuedEnum {
     Children("children"),
     /** The YA classification is suitable for teenage audience */
     YoungAdults("youngAdults"),
-    /** The PS classification invites parents and guardians to consider restriction children’s access */
+    /** The PS classification invites parents and guardians to consider restriction childrens access */
     ParentalSupervision("parentalSupervision"),
     /** The MA classification is suitable for adults */
     Mature("mature");

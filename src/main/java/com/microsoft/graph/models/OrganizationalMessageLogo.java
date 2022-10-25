@@ -12,7 +12,7 @@ import java.util.Objects;
 public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png, unknownFutureValue. */
+    /** The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo */
     private OrganizationalMessageLogoType _contentType;
     /** The binary contents of the logo. This is null when logoCdnUrl is used to send the logo */
     private byte[] _logo;
@@ -24,6 +24,7 @@ public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable
      * Instantiates a new organizationalMessageLogo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalMessageLogo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.organizationalMessageLogo");
@@ -47,7 +48,7 @@ public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable
         return this._additionalData;
     }
     /**
-     * Gets the contentType property value. The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png, unknownFutureValue.
+     * Gets the contentType property value. The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo
      * @return a organizationalMessageLogoType
      */
     @javax.annotation.Nullable
@@ -61,7 +62,7 @@ public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalMessageLogo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("contentType", (n) -> { currentObject.setContentType(n.getEnumValue(OrganizationalMessageLogoType.class)); });
             this.put("logo", (n) -> { currentObject.setLogo(n.getByteArrayValue()); });
             this.put("logoCdnUrl", (n) -> { currentObject.setLogoCdnUrl(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("contentType", this.getContentType());
@@ -110,14 +112,16 @@ public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the contentType property value. The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png, unknownFutureValue.
+     * Sets the contentType property value. The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo
      * @param value Value to set for the contentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final OrganizationalMessageLogoType value) {
         this._contentType = value;
     }
@@ -126,6 +130,7 @@ public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the logo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogo(@javax.annotation.Nullable final byte[] value) {
         this._logo = value;
     }
@@ -134,6 +139,7 @@ public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the logoCdnUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoCdnUrl(@javax.annotation.Nullable final String value) {
         this._logoCdnUrl = value;
     }
@@ -142,6 +148,7 @@ public class OrganizationalMessageLogo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

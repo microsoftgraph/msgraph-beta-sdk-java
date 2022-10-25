@@ -16,6 +16,7 @@ public class InsightsSettings extends Entity implements Parsable {
      * Instantiates a new insightsSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InsightsSettings() {
         super();
         this.setOdataType("#microsoft.graph.insightsSettings");
@@ -45,7 +46,7 @@ public class InsightsSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InsightsSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("disabledForGroup", (n) -> { currentObject.setDisabledForGroup(n.getStringValue()); });
             this.put("isEnabledInOrganization", (n) -> { currentObject.setIsEnabledInOrganization(n.getBooleanValue()); });
         }};
@@ -63,6 +64,7 @@ public class InsightsSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class InsightsSettings extends Entity implements Parsable {
      * @param value Value to set for the disabledForGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisabledForGroup(@javax.annotation.Nullable final String value) {
         this._disabledForGroup = value;
     }
@@ -82,6 +85,7 @@ public class InsightsSettings extends Entity implements Parsable {
      * @param value Value to set for the isEnabledInOrganization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabledInOrganization(@javax.annotation.Nullable final Boolean value) {
         this._isEnabledInOrganization = value;
     }

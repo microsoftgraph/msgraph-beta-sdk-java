@@ -25,6 +25,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * Instantiates a new RoleManagement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RoleManagement() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.roleManagement");
@@ -86,7 +87,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleManagement currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("cloudPC", (n) -> { currentObject.setCloudPC(n.getObjectValue(RbacApplicationMultiple::createFromDiscriminatorValue)); });
             this.put("deviceManagement", (n) -> { currentObject.setDeviceManagement(n.getObjectValue(RbacApplicationMultiple::createFromDiscriminatorValue)); });
             this.put("directory", (n) -> { currentObject.setDirectory(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
@@ -107,6 +108,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("cloudPC", this.getCloudPC());
@@ -121,6 +123,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the cloudPC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPC(@javax.annotation.Nullable final RbacApplicationMultiple value) {
         this._cloudPC = value;
     }
@@ -137,6 +141,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceManagement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagement(@javax.annotation.Nullable final RbacApplicationMultiple value) {
         this._deviceManagement = value;
     }
@@ -145,6 +150,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the directory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectory(@javax.annotation.Nullable final RbacApplication value) {
         this._directory = value;
     }
@@ -153,6 +159,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the entitlementManagement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEntitlementManagement(@javax.annotation.Nullable final RbacApplication value) {
         this._entitlementManagement = value;
     }
@@ -161,6 +168,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

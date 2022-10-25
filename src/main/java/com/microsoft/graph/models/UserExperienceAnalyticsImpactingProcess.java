@@ -24,6 +24,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * Instantiates a new UserExperienceAnalyticsImpactingProcess and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsImpactingProcess() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsImpactingProcess");
@@ -69,7 +70,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsImpactingProcess currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final String value) {
         this._category = value;
     }
@@ -130,6 +133,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -138,6 +142,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -146,6 +151,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * @param value Value to set for the impactValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImpactValue(@javax.annotation.Nullable final Double value) {
         this._impactValue = value;
     }
@@ -154,6 +160,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * @param value Value to set for the processName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessName(@javax.annotation.Nullable final String value) {
         this._processName = value;
     }
@@ -162,6 +169,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }

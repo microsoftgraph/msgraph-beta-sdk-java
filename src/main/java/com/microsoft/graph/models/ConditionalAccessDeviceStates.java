@@ -21,6 +21,7 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
      * Instantiates a new conditionalAccessDeviceStates and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessDeviceStates() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.conditionalAccessDeviceStates");
@@ -58,7 +59,7 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessDeviceStates currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("excludeStates", (n) -> { currentObject.setExcludeStates(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeStates", (n) -> { currentObject.setIncludeStates(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("excludeStates", this.getExcludeStates());
@@ -97,6 +99,7 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
      * @param value Value to set for the excludeStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludeStates(@javax.annotation.Nullable final java.util.List<String> value) {
         this._excludeStates = value;
     }
@@ -113,6 +117,7 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
      * @param value Value to set for the includeStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeStates(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includeStates = value;
     }
@@ -121,6 +126,7 @@ public class ConditionalAccessDeviceStates implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

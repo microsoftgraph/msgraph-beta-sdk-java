@@ -14,6 +14,7 @@ public class DeviceManagementConfigurationChoiceSettingInstanceTemplate extends 
      * Instantiates a new DeviceManagementConfigurationChoiceSettingInstanceTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingInstanceTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingInstanceTemplate");
@@ -43,7 +44,7 @@ public class DeviceManagementConfigurationChoiceSettingInstanceTemplate extends 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationChoiceSettingInstanceTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("choiceSettingValueTemplate", (n) -> { currentObject.setChoiceSettingValueTemplate(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueTemplate::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceManagementConfigurationChoiceSettingInstanceTemplate extends 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementConfigurationChoiceSettingInstanceTemplate extends 
      * @param value Value to set for the choiceSettingValueTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChoiceSettingValueTemplate(@javax.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueTemplate value) {
         this._choiceSettingValueTemplate = value;
     }

@@ -15,6 +15,7 @@ public class ExternalActivityResult extends ExternalActivity implements Parsable
      * Instantiates a new ExternalActivityResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExternalActivityResult() {
         super();
         this.setOdataType("#microsoft.graph.externalConnectors.externalActivityResult");
@@ -44,7 +45,7 @@ public class ExternalActivityResult extends ExternalActivity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalActivityResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
         }};
     }
@@ -53,6 +54,7 @@ public class ExternalActivityResult extends ExternalActivity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class ExternalActivityResult extends ExternalActivity implements Parsable
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final PublicError value) {
         this._error = value;
     }

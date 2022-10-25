@@ -18,6 +18,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
      * Instantiates a new updateAdDomainPasswordPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateAdDomainPasswordPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,7 +55,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateAdDomainPasswordPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("adDomainPassword", (n) -> { currentObject.setAdDomainPassword(n.getStringValue()); });
         }};
     }
@@ -63,6 +64,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("adDomainPassword", this.getAdDomainPassword());
@@ -73,6 +75,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the adDomainPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdDomainPassword(@javax.annotation.Nullable final String value) {
         this._adDomainPassword = value;
     }

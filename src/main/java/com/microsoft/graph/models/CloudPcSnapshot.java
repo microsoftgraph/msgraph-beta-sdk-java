@@ -21,6 +21,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * Instantiates a new CloudPcSnapshot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcSnapshot() {
         super();
         this.setOdataType("#microsoft.graph.cloudPcSnapshot");
@@ -58,7 +59,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcSnapshot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cloudPcId", (n) -> { currentObject.setCloudPcId(n.getStringValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastRestoredDateTime", (n) -> { currentObject.setLastRestoredDateTime(n.getOffsetDateTimeValue()); });
@@ -86,6 +87,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * @param value Value to set for the cloudPcId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcId(@javax.annotation.Nullable final String value) {
         this._cloudPcId = value;
     }
@@ -107,6 +110,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -115,6 +119,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * @param value Value to set for the lastRestoredDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRestoredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastRestoredDateTime = value;
     }
@@ -123,6 +128,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CloudPcSnapshotStatus value) {
         this._status = value;
     }

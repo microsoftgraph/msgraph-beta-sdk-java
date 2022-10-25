@@ -24,6 +24,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * Instantiates a new UserExperienceAnalyticsAppHealthOSVersionPerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsAppHealthOSVersionPerformance() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthOSVersionPerformance");
@@ -53,7 +54,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsAppHealthOSVersionPerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeDeviceCount", (n) -> { currentObject.setActiveDeviceCount(n.getIntegerValue()); });
             this.put("meanTimeToFailureInMinutes", (n) -> { currentObject.setMeanTimeToFailureInMinutes(n.getIntegerValue()); });
             this.put("osBuildNumber", (n) -> { currentObject.setOsBuildNumber(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the activeDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._activeDeviceCount = value;
     }
@@ -130,6 +133,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the meanTimeToFailureInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeanTimeToFailureInMinutes(@javax.annotation.Nullable final Integer value) {
         this._meanTimeToFailureInMinutes = value;
     }
@@ -138,6 +142,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the osBuildNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsBuildNumber(@javax.annotation.Nullable final String value) {
         this._osBuildNumber = value;
     }
@@ -146,6 +151,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -154,6 +160,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the osVersionAppHealthScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersionAppHealthScore(@javax.annotation.Nullable final Double value) {
         this._osVersionAppHealthScore = value;
     }
@@ -162,6 +169,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the osVersionAppHealthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersionAppHealthStatus(@javax.annotation.Nullable final String value) {
         this._osVersionAppHealthStatus = value;
     }

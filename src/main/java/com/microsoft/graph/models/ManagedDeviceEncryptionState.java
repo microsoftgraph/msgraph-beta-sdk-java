@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Encryption report per device */
 public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /** Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError. */
     private AdvancedBitLockerState _advancedBitLockerStates;
@@ -32,9 +31,10 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /** User name */
     private String _userPrincipalName;
     /**
-     * Instantiates a new managedDeviceEncryptionState and sets the default values.
+     * Instantiates a new ManagedDeviceEncryptionState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceEncryptionState() {
         super();
         this.setOdataType("#microsoft.graph.managedDeviceEncryptionState");
@@ -42,7 +42,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceEncryptionState
+     * @return a ManagedDeviceEncryptionState
      */
     @javax.annotation.Nonnull
     public static ManagedDeviceEncryptionState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -104,7 +104,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceEncryptionState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("advancedBitLockerStates", (n) -> { currentObject.setAdvancedBitLockerStates(n.getEnumValue(AdvancedBitLockerState.class)); });
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getEnumValue(DeviceTypes.class)); });
@@ -163,6 +163,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,6 +184,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the advancedBitLockerStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedBitLockerStates(@javax.annotation.Nullable final AdvancedBitLockerState value) {
         this._advancedBitLockerStates = value;
     }
@@ -191,6 +193,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -199,6 +202,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the deviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceType(@javax.annotation.Nullable final DeviceTypes value) {
         this._deviceType = value;
     }
@@ -207,6 +211,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the encryptionPolicySettingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionPolicySettingState(@javax.annotation.Nullable final ComplianceStatus value) {
         this._encryptionPolicySettingState = value;
     }
@@ -215,6 +220,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the encryptionReadinessState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionReadinessState(@javax.annotation.Nullable final EncryptionReadinessState value) {
         this._encryptionReadinessState = value;
     }
@@ -223,6 +229,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the encryptionState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionState(@javax.annotation.Nullable final EncryptionState value) {
         this._encryptionState = value;
     }
@@ -231,6 +238,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the fileVaultStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultStates(@javax.annotation.Nullable final FileVaultState value) {
         this._fileVaultStates = value;
     }
@@ -239,6 +247,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -247,6 +256,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the policyDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyDetails(@javax.annotation.Nullable final java.util.List<EncryptionReportPolicyDetails> value) {
         this._policyDetails = value;
     }
@@ -255,6 +265,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the tpmSpecificationVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTpmSpecificationVersion(@javax.annotation.Nullable final String value) {
         this._tpmSpecificationVersion = value;
     }
@@ -263,6 +274,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

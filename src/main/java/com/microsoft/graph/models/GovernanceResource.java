@@ -35,6 +35,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Instantiates a new GovernanceResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GovernanceResource() {
         super();
         this.setOdataType("#microsoft.graph.governanceResource");
@@ -72,7 +73,7 @@ public class GovernanceResource extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
             this.put("parent", (n) -> { currentObject.setParent(n.getObjectValue(GovernanceResource::createFromDiscriminatorValue)); });
@@ -163,6 +164,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,6 +185,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -191,6 +194,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
     }
@@ -199,6 +203,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the parent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParent(@javax.annotation.Nullable final GovernanceResource value) {
         this._parent = value;
     }
@@ -207,6 +212,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the registeredDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegisteredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._registeredDateTime = value;
     }
@@ -215,6 +221,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the registeredRoot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegisteredRoot(@javax.annotation.Nullable final String value) {
         this._registeredRoot = value;
     }
@@ -223,6 +230,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the roleAssignmentRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentRequests(@javax.annotation.Nullable final java.util.List<GovernanceRoleAssignmentRequest> value) {
         this._roleAssignmentRequests = value;
     }
@@ -231,6 +239,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<GovernanceRoleAssignment> value) {
         this._roleAssignments = value;
     }
@@ -239,6 +248,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<GovernanceRoleDefinition> value) {
         this._roleDefinitions = value;
     }
@@ -247,6 +257,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the roleSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleSettings(@javax.annotation.Nullable final java.util.List<GovernanceRoleSetting> value) {
         this._roleSettings = value;
     }
@@ -255,6 +266,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }
@@ -263,6 +275,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

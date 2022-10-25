@@ -35,6 +35,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new recordResponsePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RecordResponsePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -79,7 +80,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecordResponsePostRequestBody currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("bargeInAllowed", (n) -> { currentObject.setBargeInAllowed(n.getBooleanValue()); });
             this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
             this.put("initialSilenceTimeoutInSeconds", (n) -> { currentObject.setInitialSilenceTimeoutInSeconds(n.getIntegerValue()); });
@@ -152,6 +153,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("bargeInAllowed", this.getBargeInAllowed());
@@ -170,6 +172,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -178,6 +181,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the bargeInAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBargeInAllowed(@javax.annotation.Nullable final Boolean value) {
         this._bargeInAllowed = value;
     }
@@ -186,6 +190,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the clientContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
         this._clientContext = value;
     }
@@ -194,6 +199,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the initialSilenceTimeoutInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitialSilenceTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
         this._initialSilenceTimeoutInSeconds = value;
     }
@@ -202,6 +208,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the maxRecordDurationInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxRecordDurationInSeconds(@javax.annotation.Nullable final Integer value) {
         this._maxRecordDurationInSeconds = value;
     }
@@ -210,6 +217,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the maxSilenceTimeoutInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxSilenceTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
         this._maxSilenceTimeoutInSeconds = value;
     }
@@ -218,6 +226,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the playBeep property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlayBeep(@javax.annotation.Nullable final Boolean value) {
         this._playBeep = value;
     }
@@ -226,6 +235,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the prompts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrompts(@javax.annotation.Nullable final java.util.List<Prompt> value) {
         this._prompts = value;
     }
@@ -234,6 +244,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the stopTones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStopTones(@javax.annotation.Nullable final java.util.List<String> value) {
         this._stopTones = value;
     }
@@ -242,6 +253,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the streamWhileRecording property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStreamWhileRecording(@javax.annotation.Nullable final Boolean value) {
         this._streamWhileRecording = value;
     }

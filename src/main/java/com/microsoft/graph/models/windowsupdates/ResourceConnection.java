@@ -17,6 +17,7 @@ public class ResourceConnection extends Entity implements Parsable {
      * Instantiates a new resourceConnection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResourceConnection() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.resourceConnection");
@@ -45,7 +46,7 @@ public class ResourceConnection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ResourceConnectionState.class)); });
         }};
     }
@@ -62,6 +63,7 @@ public class ResourceConnection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -72,6 +74,7 @@ public class ResourceConnection extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ResourceConnectionState value) {
         this._state = value;
     }

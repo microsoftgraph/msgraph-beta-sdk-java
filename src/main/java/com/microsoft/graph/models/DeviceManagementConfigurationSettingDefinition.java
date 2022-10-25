@@ -14,7 +14,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class DeviceManagementConfigurationSettingDefinition extends Entity implements Parsable {
     /** The accessTypes property */
     private DeviceManagementConfigurationSettingAccessTypes _accessTypes;
@@ -56,6 +56,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * Instantiates a new deviceManagementConfigurationSettingDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingDefinition() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingDefinition");
@@ -138,7 +139,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessTypes", (n) -> { currentObject.setAccessTypes(n.getEnumValue(DeviceManagementConfigurationSettingAccessTypes.class)); });
             this.put("applicability", (n) -> { currentObject.setApplicability(n.getObjectValue(DeviceManagementConfigurationSettingApplicability::createFromDiscriminatorValue)); });
             this.put("baseUri", (n) -> { currentObject.setBaseUri(n.getStringValue()); });
@@ -260,6 +261,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -287,6 +289,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the accessTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessTypes(@javax.annotation.Nullable final DeviceManagementConfigurationSettingAccessTypes value) {
         this._accessTypes = value;
     }
@@ -295,6 +298,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the applicability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicability(@javax.annotation.Nullable final DeviceManagementConfigurationSettingApplicability value) {
         this._applicability = value;
     }
@@ -303,6 +307,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the baseUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBaseUri(@javax.annotation.Nullable final String value) {
         this._baseUri = value;
     }
@@ -311,6 +316,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the categoryId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategoryId(@javax.annotation.Nullable final String value) {
         this._categoryId = value;
     }
@@ -319,6 +325,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -327,6 +334,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -335,6 +343,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the helpText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHelpText(@javax.annotation.Nullable final String value) {
         this._helpText = value;
     }
@@ -343,6 +352,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the infoUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfoUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._infoUrls = value;
     }
@@ -351,6 +361,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the keywords property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeywords(@javax.annotation.Nullable final java.util.List<String> value) {
         this._keywords = value;
     }
@@ -359,6 +370,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -367,6 +379,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the occurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOccurrence(@javax.annotation.Nullable final DeviceManagementConfigurationSettingOccurrence value) {
         this._occurrence = value;
     }
@@ -375,6 +388,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the offsetUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffsetUri(@javax.annotation.Nullable final String value) {
         this._offsetUri = value;
     }
@@ -383,6 +397,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the referredSettingInformationList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferredSettingInformationList(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationReferredSettingInformation> value) {
         this._referredSettingInformationList = value;
     }
@@ -391,6 +406,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the rootDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootDefinitionId(@javax.annotation.Nullable final String value) {
         this._rootDefinitionId = value;
     }
@@ -399,6 +415,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the settingUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingUsage(@javax.annotation.Nullable final DeviceManagementConfigurationSettingUsage value) {
         this._settingUsage = value;
     }
@@ -407,6 +424,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the uxBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUxBehavior(@javax.annotation.Nullable final DeviceManagementConfigurationControlType value) {
         this._uxBehavior = value;
     }
@@ -415,6 +433,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }
@@ -423,6 +442,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the visibility property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisibility(@javax.annotation.Nullable final DeviceManagementConfigurationSettingVisibility value) {
         this._visibility = value;
     }

@@ -14,6 +14,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
      * Instantiates a new CommunicationsUserIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CommunicationsUserIdentity() {
         super();
         this.setOdataType("#microsoft.graph.communicationsUserIdentity");
@@ -35,7 +36,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommunicationsUserIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

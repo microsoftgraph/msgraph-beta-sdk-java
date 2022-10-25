@@ -12,6 +12,7 @@ public class ProtectDoNotForwardAction extends InformationProtectionAction imple
      * Instantiates a new ProtectDoNotForwardAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProtectDoNotForwardAction() {
         super();
         this.setOdataType("#microsoft.graph.security.protectDoNotForwardAction");
@@ -33,7 +34,7 @@ public class ProtectDoNotForwardAction extends InformationProtectionAction imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProtectDoNotForwardAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -41,6 +42,7 @@ public class ProtectDoNotForwardAction extends InformationProtectionAction imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 public class Calendar extends Entity implements Parsable {
     /** Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness. */
-    private java.util.List<String> _allowedOnlineMeetingProviders;
+    private java.util.List<OnlineMeetingProviderType> _allowedOnlineMeetingProviders;
     /** The calendarGroup in which to create the calendar. If the user has never explicitly set a group for the calendar, this property is  null. */
     private String _calendarGroupId;
     /** The permissions of the users with whom the calendar is shared. */
@@ -54,6 +54,7 @@ public class Calendar extends Entity implements Parsable {
      * Instantiates a new calendar and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Calendar() {
         super();
         this.setOdataType("#microsoft.graph.calendar");
@@ -70,10 +71,10 @@ public class Calendar extends Entity implements Parsable {
     }
     /**
      * Gets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     * @return a string
+     * @return a onlineMeetingProviderType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getAllowedOnlineMeetingProviders() {
+    public java.util.List<OnlineMeetingProviderType> getAllowedOnlineMeetingProviders() {
         return this._allowedOnlineMeetingProviders;
     }
     /**
@@ -163,8 +164,8 @@ public class Calendar extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Calendar currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedOnlineMeetingProviders", (n) -> { currentObject.setAllowedOnlineMeetingProviders(n.getCollectionOfPrimitiveValues(String.class)); });
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
+            this.put("allowedOnlineMeetingProviders", (n) -> { currentObject.setAllowedOnlineMeetingProviders(n.getCollectionOfEnumValues(OnlineMeetingProviderType.class)); });
             this.put("calendarGroupId", (n) -> { currentObject.setCalendarGroupId(n.getStringValue()); });
             this.put("calendarPermissions", (n) -> { currentObject.setCalendarPermissions(n.getCollectionOfObjectValues(CalendarPermission::createFromDiscriminatorValue)); });
             this.put("calendarView", (n) -> { currentObject.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
@@ -272,10 +273,11 @@ public class Calendar extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfPrimitiveValues("allowedOnlineMeetingProviders", this.getAllowedOnlineMeetingProviders());
+        writer.writeCollectionOfEnumValues("allowedOnlineMeetingProviders", this.getAllowedOnlineMeetingProviders());
         writer.writeStringValue("calendarGroupId", this.getCalendarGroupId());
         writer.writeCollectionOfObjectValues("calendarPermissions", this.getCalendarPermissions());
         writer.writeCollectionOfObjectValues("calendarView", this.getCalendarView());
@@ -302,7 +304,8 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the allowedOnlineMeetingProviders property.
      * @return a void
      */
-    public void setAllowedOnlineMeetingProviders(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setAllowedOnlineMeetingProviders(@javax.annotation.Nullable final java.util.List<OnlineMeetingProviderType> value) {
         this._allowedOnlineMeetingProviders = value;
     }
     /**
@@ -310,6 +313,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the calendarGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarGroupId(@javax.annotation.Nullable final String value) {
         this._calendarGroupId = value;
     }
@@ -318,6 +322,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the calendarPermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarPermissions(@javax.annotation.Nullable final java.util.List<CalendarPermission> value) {
         this._calendarPermissions = value;
     }
@@ -326,6 +331,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the calendarView property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarView(@javax.annotation.Nullable final java.util.List<Event> value) {
         this._calendarView = value;
     }
@@ -334,6 +340,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the canEdit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCanEdit(@javax.annotation.Nullable final Boolean value) {
         this._canEdit = value;
     }
@@ -342,6 +349,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the canShare property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCanShare(@javax.annotation.Nullable final Boolean value) {
         this._canShare = value;
     }
@@ -350,6 +358,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the canViewPrivateItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCanViewPrivateItems(@javax.annotation.Nullable final Boolean value) {
         this._canViewPrivateItems = value;
     }
@@ -358,6 +367,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the changeKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeKey(@javax.annotation.Nullable final String value) {
         this._changeKey = value;
     }
@@ -366,6 +376,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the color property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final CalendarColor value) {
         this._color = value;
     }
@@ -374,6 +385,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the defaultOnlineMeetingProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultOnlineMeetingProvider(@javax.annotation.Nullable final OnlineMeetingProviderType value) {
         this._defaultOnlineMeetingProvider = value;
     }
@@ -382,6 +394,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the events property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvents(@javax.annotation.Nullable final java.util.List<Event> value) {
         this._events = value;
     }
@@ -390,6 +403,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the hexColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHexColor(@javax.annotation.Nullable final String value) {
         this._hexColor = value;
     }
@@ -398,6 +412,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the isDefaultCalendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefaultCalendar(@javax.annotation.Nullable final Boolean value) {
         this._isDefaultCalendar = value;
     }
@@ -406,6 +421,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the isRemovable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRemovable(@javax.annotation.Nullable final Boolean value) {
         this._isRemovable = value;
     }
@@ -414,6 +430,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the isShared property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsShared(@javax.annotation.Nullable final Boolean value) {
         this._isShared = value;
     }
@@ -422,6 +439,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the isSharedWithMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSharedWithMe(@javax.annotation.Nullable final Boolean value) {
         this._isSharedWithMe = value;
     }
@@ -430,6 +448,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the isTallyingResponses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsTallyingResponses(@javax.annotation.Nullable final Boolean value) {
         this._isTallyingResponses = value;
     }
@@ -438,6 +457,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this._multiValueExtendedProperties = value;
     }
@@ -446,6 +466,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -454,6 +475,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final EmailAddress value) {
         this._owner = value;
     }
@@ -462,6 +484,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this._singleValueExtendedProperties = value;
     }

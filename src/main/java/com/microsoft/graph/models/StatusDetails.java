@@ -22,6 +22,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * Instantiates a new StatusDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public StatusDetails() {
         super();
         this.setOdataType("#microsoft.graph.statusDetails");
@@ -67,7 +68,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StatusDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
             this.put("errorCategory", (n) -> { currentObject.setErrorCategory(n.getEnumValue(ProvisioningStatusErrorCategory.class)); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalDetails(@javax.annotation.Nullable final String value) {
         this._additionalDetails = value;
     }
@@ -118,6 +121,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param value Value to set for the errorCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCategory(@javax.annotation.Nullable final ProvisioningStatusErrorCategory value) {
         this._errorCategory = value;
     }
@@ -126,6 +130,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final String value) {
         this._errorCode = value;
     }
@@ -134,6 +139,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
         this._reason = value;
     }
@@ -142,6 +148,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param value Value to set for the recommendedAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedAction(@javax.annotation.Nullable final String value) {
         this._recommendedAction = value;
     }

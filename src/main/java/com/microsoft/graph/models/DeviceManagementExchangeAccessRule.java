@@ -22,6 +22,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * Instantiates a new deviceManagementExchangeAccessRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementExchangeAccessRule() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceManagementExchangeAccessRule");
@@ -67,7 +68,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementExchangeAccessRule currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("accessLevel", (n) -> { currentObject.setAccessLevel(n.getEnumValue(DeviceManagementExchangeAccessLevel.class)); });
             this.put("deviceClass", (n) -> { currentObject.setDeviceClass(n.getObjectValue(DeviceManagementExchangeDeviceClass::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("accessLevel", this.getAccessLevel());
@@ -98,6 +100,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * @param value Value to set for the accessLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessLevel(@javax.annotation.Nullable final DeviceManagementExchangeAccessLevel value) {
         this._accessLevel = value;
     }
@@ -106,6 +109,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -114,6 +118,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * @param value Value to set for the deviceClass property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceClass(@javax.annotation.Nullable final DeviceManagementExchangeDeviceClass value) {
         this._deviceClass = value;
     }
@@ -122,6 +127,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

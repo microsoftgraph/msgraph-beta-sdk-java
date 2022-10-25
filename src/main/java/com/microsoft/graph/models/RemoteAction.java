@@ -5,54 +5,62 @@ import java.util.Objects;
 
 /** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum RemoteAction implements ValuedEnum {
-    /** User initiates an unknown action. */
+    /** Indicate user initiates an unknown action. */
     Unknown("unknown"),
-    /** User initiates an action to factory reset a device.  */
+    /** Indicate user initiates an action to factory reset a device.  */
     FactoryReset("factoryReset"),
-    /** User initiates an action to remove company data from a device.  */
+    /** Indicate user initiates an action to remove company data from a device.  */
     RemoveCompanyData("removeCompanyData"),
-    /** User initiates an action to remove the passcode of an iOS device, or reset the passcode of Android / Windows device.  */
+    /** Indicate user initiates an action to remove the passcode of an iOS device, or reset the passcode of Android / Windows device.  */
     ResetPasscode("resetPasscode"),
-    /** User initiates an action to remote lock a device. */
+    /** Indicate user initiates an action to remote lock a device. */
     RemoteLock("remoteLock"),
-    /** User initiates an action to enable lost mode on a supervised iOS device. */
+    /** Indicate user initiates an action to enable lost mode on a supervised iOS device. */
     EnableLostMode("enableLostMode"),
-    /** User initiates an action to disable lost mode on a supervised iOS device. */
+    /** Indicate user initiates an action to disable lost mode on a supervised iOS device. */
     DisableLostMode("disableLostMode"),
-    /** User initiates an action to locate a supervised iOS device. */
+    /** Indicate user initiates an action to locate a supervised iOS device. */
     LocateDevice("locateDevice"),
-    /** User initiates an action to reboot a Windows device. */
+    /** Indicate user initiates an action to reboot the device. */
     RebootNow("rebootNow"),
-    /** User initiates an action to reset the pin for passport for work on windows phone device. */
+    /** Indicate user initiates an action to reset the pin for passport for work on windows phone device. */
     RecoverPasscode("recoverPasscode"),
-    /** User initiates an action to clean up windows device. */
+    /** Indicate user initiates an action to clean up windows device. */
     CleanWindowsDevice("cleanWindowsDevice"),
-    /** User initiates an action to log out current user on shared apple device. */
+    /** Indicate user initiates an action to log out current user on shared apple device. */
     LogoutSharedAppleDeviceActiveUser("logoutSharedAppleDeviceActiveUser"),
-    /** User initiates an action to run quick scan on device. */
+    /** Indicate user initiates an action to run quick scan on device. */
     QuickScan("quickScan"),
-    /** User initiates an action to run full scan on device. */
+    /** Indicate user initiates an action to run full scan on device. */
     FullScan("fullScan"),
-    /** User initiates an action to update malware signatures on device. */
+    /** Indicate user initiates an action to update malware signatures on device. */
     WindowsDefenderUpdateSignatures("windowsDefenderUpdateSignatures"),
-    /** User initiates an action remote wipe device with keeping enrollment data. */
+    /** Indicate user initiates an action remote wipe device with keeping enrollment data. */
     FactoryResetKeepEnrollmentData("factoryResetKeepEnrollmentData"),
-    /** User initiates an action to update account on device. */
+    /** Indicate user initiates an action to update account on device. */
     UpdateDeviceAccount("updateDeviceAccount"),
-    /** User initiates an action to automatice redeploy the device */
+    /** Indicate user initiates an action to automatic redeploy the device */
     AutomaticRedeployment("automaticRedeployment"),
-    /** User initiates an action to shut down the device. */
+    /** Indicate user initiates an action to shut down the device. */
     ShutDown("shutDown"),
-    /** User initiates an action to Rotate BitLockerKeys on the device. */
+    /** Indicate user initiates an action to Rotate BitLockerKeys on the device. */
     RotateBitLockerKeys("rotateBitLockerKeys"),
-    /** User initiates an action to Rotate FileVaultKey on mac. */
+    /** Indicate user initiates an action to Rotate FileVaultKey on mac. */
     RotateFileVaultKey("rotateFileVaultKey"),
-    /** User initiates an action to Get FileVaultKey on mac. */
+    /** Indicate user initiates an action to Get FileVaultKey on mac. */
     GetFileVaultKey("getFileVaultKey"),
-    /** User initiates an action to Set Device Name on the device. */
+    /** Indicate user initiates an action to Set Device Name on the device. */
     SetDeviceName("setDeviceName"),
-    /** User initiates an action to Activate eSIM on the device. */
-    ActivateDeviceEsim("activateDeviceEsim");
+    /** Indicate user initiates an action to Activate eSIM on the device. */
+    ActivateDeviceEsim("activateDeviceEsim"),
+    /** Indicate user initiates an action to deprovision the device. */
+    Deprovision("deprovision"),
+    /** Indicate user initiates an action to disable the device. */
+    Disable("disable"),
+    /** Indicate user initiates an action to reenable the device. */
+    Reenable("reenable"),
+    /** Indicate user initiates an action to move the device to a new organizational unit. */
+    MoveDeviceToOrganizationalUnit("moveDeviceToOrganizationalUnit");
     public final String value;
     RemoteAction(final String value) {
         this.value = value;
@@ -87,6 +95,10 @@ public enum RemoteAction implements ValuedEnum {
             case "getFileVaultKey": return GetFileVaultKey;
             case "setDeviceName": return SetDeviceName;
             case "activateDeviceEsim": return ActivateDeviceEsim;
+            case "deprovision": return Deprovision;
+            case "disable": return Disable;
+            case "reenable": return Reenable;
+            case "moveDeviceToOrganizationalUnit": return MoveDeviceToOrganizationalUnit;
             default: return null;
         }
     }
