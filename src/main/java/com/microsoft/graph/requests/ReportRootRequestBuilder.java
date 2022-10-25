@@ -12,7 +12,6 @@ import com.microsoft.graph.models.ApplicationSignInSummary;
 import com.microsoft.graph.models.CredentialUsageSummary;
 import com.microsoft.graph.models.CredentialUserRegistrationCount;
 import com.microsoft.graph.models.RelyingPartyDetailedSummary;
-import com.microsoft.graph.models.Report;
 import com.microsoft.graph.models.Office365ActiveUserCounts;
 import com.microsoft.graph.models.Office365ActiveUserDetail;
 import com.microsoft.graph.models.Office365GroupsActivityCounts;

@@ -88,6 +88,24 @@ public class WorkflowBase implements IJsonBackedObject {
     public WorkflowExecutionConditions executionConditions;
 
     /**
+     * The Is Enabled.
+     * Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
+     */
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isEnabled;
+
+    /**
+     * The Is Scheduling Enabled.
+     * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+     */
+    @SerializedName(value = "isSchedulingEnabled", alternate = {"IsSchedulingEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isSchedulingEnabled;
+
+    /**
      * The Last Modified Date Time.
      * When the workflow was last modified.
      */

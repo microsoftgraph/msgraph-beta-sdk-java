@@ -40,7 +40,7 @@ public class OrganizationalMessageLogo implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png, unknownFutureValue.
+     * The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose

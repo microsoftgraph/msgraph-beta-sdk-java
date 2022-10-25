@@ -96,6 +96,16 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
     public com.microsoft.graph.requests.CloudPCRequestBuilder cloudPCs(@Nonnull final String id) {
         return new com.microsoft.graph.requests.CloudPCRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPCs") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for CloudPcCrossCloudGovernmentOrganizationMapping
+     *
+     * @return the CloudPcCrossCloudGovernmentOrganizationMappingRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CloudPcCrossCloudGovernmentOrganizationMappingRequestBuilder crossCloudGovernmentOrganizationMapping() {
+        return new com.microsoft.graph.requests.CloudPcCrossCloudGovernmentOrganizationMappingRequestBuilder(getRequestUrlWithAdditionalSegment("crossCloudGovernmentOrganizationMapping"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the CloudPcDeviceImage collection
      *

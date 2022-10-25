@@ -29,7 +29,7 @@ public class CloudPcReports extends Entity implements IJsonBackedObject {
 
     /**
      * The Export Jobs.
-     * 
+     * The export jobs created for downloading reports.
      */
     @SerializedName(value = "exportJobs", alternate = {"ExportJobs"})
     @Expose

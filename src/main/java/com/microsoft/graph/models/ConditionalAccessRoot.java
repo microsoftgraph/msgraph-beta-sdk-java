@@ -33,7 +33,7 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Strengths.
-     * 
+     * Defines the authentication strength policies, valid authentication method combinations, and authentication method mode details that can be required by a conditional access policy .
      */
     @SerializedName(value = "authenticationStrengths", alternate = {"AuthenticationStrengths"})
     @Expose
@@ -69,7 +69,7 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Templates.
-     * 
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      */
     @SerializedName(value = "templates", alternate = {"Templates"})
     @Expose

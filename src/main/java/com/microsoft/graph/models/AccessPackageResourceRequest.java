@@ -92,7 +92,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Request Type.
-     * Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource.
+     * Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource.
      */
     @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose

@@ -42,7 +42,7 @@ public class ConditionalAccessPolicyDetail implements IJsonBackedObject {
 
     /**
      * The Conditions.
-     * 
+     * Represents the type of conditions that govern when the policy applies.
      */
     @SerializedName(value = "conditions", alternate = {"Conditions"})
     @Expose
@@ -51,7 +51,7 @@ public class ConditionalAccessPolicyDetail implements IJsonBackedObject {
 
     /**
      * The Grant Controls.
-     * 
+     * Represents grant controls that must be fulfilled for the policy.
      */
     @SerializedName(value = "grantControls", alternate = {"GrantControls"})
     @Expose
@@ -60,7 +60,7 @@ public class ConditionalAccessPolicyDetail implements IJsonBackedObject {
 
     /**
      * The Session Controls.
-     * 
+     * Represents a complex type of session controls that is enforced after sign-in.
      */
     @SerializedName(value = "sessionControls", alternate = {"SessionControls"})
     @Expose

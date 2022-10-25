@@ -41,7 +41,7 @@ public class RuleThreshold implements IJsonBackedObject {
 
     /**
      * The Aggregation.
-     * 
+     * Indicates the built-in aggregation methods. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
      */
     @SerializedName(value = "aggregation", alternate = {"Aggregation"})
     @Expose
@@ -50,7 +50,7 @@ public class RuleThreshold implements IJsonBackedObject {
 
     /**
      * The Operator.
-     * 
+     * Indicates the built-in operator. The possible values are: greaterOrEqual, equal, greater, less, lessOrEqual, notEqual, unknownFutureValue.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
@@ -59,7 +59,7 @@ public class RuleThreshold implements IJsonBackedObject {
 
     /**
      * The Target.
-     * 
+     * The target threshold value.
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose
