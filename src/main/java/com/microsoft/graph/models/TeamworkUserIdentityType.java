@@ -48,6 +48,10 @@ public enum TeamworkUserIdentityType
     */
     EMAIL_USER,
     /**
+    * azure Communication Services User
+    */
+    AZURE_COMMUNICATION_SERVICES_USER,
+    /**
     * For TeamworkUserIdentityType values that were not expected from the service
     */
     UNEXPECTED_VALUE

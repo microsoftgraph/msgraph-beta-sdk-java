@@ -59,7 +59,7 @@ public class OrganizationalMessageTargeting implements IJsonBackedObject {
 
     /**
      * The Targeting Type.
-     * Indicates the type of targeting. Possible values are: aadGroup, unknownFutureValue.
+     * Indicates the type of targeting
      */
     @SerializedName(value = "targetingType", alternate = {"TargetingType"})
     @Expose

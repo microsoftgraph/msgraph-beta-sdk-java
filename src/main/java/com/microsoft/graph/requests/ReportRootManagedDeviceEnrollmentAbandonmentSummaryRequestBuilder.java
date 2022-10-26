@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ReportRootManagedDeviceEnrollmentAbandonmentSummaryRequest;
 import com.microsoft.graph.models.ReportRoot;
-import com.microsoft.graph.models.Report;
+
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.ReportRootManagedDeviceEnrollmentAbandonmentSummaryParameterSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -19,7 +19,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Report Root Managed Device Enrollment Abandonment Summary Request Builder.
  */
-public class ReportRootManagedDeviceEnrollmentAbandonmentSummaryRequestBuilder extends BaseFunctionRequestBuilder<Report> {
+public class ReportRootManagedDeviceEnrollmentAbandonmentSummaryRequestBuilder extends BaseFunctionRequestBuilder<java.io.InputStream> {
 
     /**
      * The request builder for this ReportRootManagedDeviceEnrollmentAbandonmentSummary

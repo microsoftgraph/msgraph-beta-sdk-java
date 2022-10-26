@@ -74,7 +74,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Authentication Strength Policies.
-     * 
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      */
     @SerializedName(value = "authenticationStrengthPolicies", alternate = {"AuthenticationStrengthPolicies"})
     @Expose

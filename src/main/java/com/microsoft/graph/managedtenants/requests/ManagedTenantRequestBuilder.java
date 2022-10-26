@@ -257,6 +257,146 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
         return new com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceComplianceTrends") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the ManagedTenantAlertLog collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionRequestBuilder managedTenantAlertLogs() {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantAlertLogs"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagedTenantAlertLog item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogRequestBuilder managedTenantAlertLogs(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantAlertLogs") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagedTenantAlertRuleDefinition collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleDefinitionCollectionRequestBuilder managedTenantAlertRuleDefinitions() {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantAlertRuleDefinitions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagedTenantAlertRuleDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleDefinitionRequestBuilder managedTenantAlertRuleDefinitions(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantAlertRuleDefinitions") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagedTenantAlertRule collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleCollectionRequestBuilder managedTenantAlertRules() {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantAlertRules"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagedTenantAlertRule item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleRequestBuilder managedTenantAlertRules(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantAlertRules") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagedTenantAlert collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertCollectionRequestBuilder managedTenantAlerts() {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantAlertCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantAlerts"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagedTenantAlert item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRequestBuilder managedTenantAlerts(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantAlerts") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagedTenantApiNotification collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationCollectionRequestBuilder managedTenantApiNotifications() {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantApiNotifications"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagedTenantApiNotification item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationRequestBuilder managedTenantApiNotifications(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantApiNotifications") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagedTenantEmailNotification collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationCollectionRequestBuilder managedTenantEmailNotifications() {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantEmailNotifications"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagedTenantEmailNotification item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationRequestBuilder managedTenantEmailNotifications(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantEmailNotifications") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagedTenantTicketingEndpoint collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantTicketingEndpointCollectionRequestBuilder managedTenantTicketingEndpoints() {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantTicketingEndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantTicketingEndpoints"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagedTenantTicketingEndpoint item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantTicketingEndpointRequestBuilder managedTenantTicketingEndpoints(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagedTenantTicketingEndpointRequestBuilder(getRequestUrlWithAdditionalSegment("managedTenantTicketingEndpoints") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the ManagementAction collection
      *
      * @return the collection request builder

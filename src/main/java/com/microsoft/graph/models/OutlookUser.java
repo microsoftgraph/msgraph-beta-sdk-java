@@ -42,7 +42,9 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
     /**
      * The Task Folders.
      * 
+     * @deprecated The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/
      */
+    @Deprecated
     @SerializedName(value = "taskFolders", alternate = {"TaskFolders"})
     @Expose
 	@Nullable
@@ -51,7 +53,9 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
     /**
      * The Task Groups.
      * 
+     * @deprecated The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/
      */
+    @Deprecated
     @SerializedName(value = "taskGroups", alternate = {"TaskGroups"})
     @Expose
 	@Nullable
@@ -60,7 +64,9 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
     /**
      * The Tasks.
      * 
+     * @deprecated The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/
      */
+    @Deprecated
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
 	@Nullable

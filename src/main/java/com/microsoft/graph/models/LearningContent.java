@@ -46,7 +46,7 @@ public class LearningContent extends Entity implements IJsonBackedObject {
 
     /**
      * The Contributors.
-     * 
+     * The authors, creators, or contributors of the learning content. Optional.
      */
     @SerializedName(value = "contributors", alternate = {"Contributors"})
     @Expose

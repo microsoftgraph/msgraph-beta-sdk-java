@@ -50,7 +50,7 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
 
     /**
      * The View Point.
-     * 
+     * Additional data for a printer share as viewed by the signed-in user.
      */
     @SerializedName(value = "viewPoint", alternate = {"ViewPoint"})
     @Expose

@@ -27,7 +27,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements IJsonBackedO
 
     /**
      * The Allow Deleted Identities Data Removal.
-     * Notifies Azure AD whether to clean up the user information about the external identity, from the guest tenant, when the user is deleted in their home tenant.
+     * Reserved for future use.
      */
     @SerializedName(value = "allowDeletedIdentitiesDataRemoval", alternate = {"AllowDeletedIdentitiesDataRemoval"})
     @Expose
