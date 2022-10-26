@@ -15,7 +15,6 @@ import com.microsoft.graph.callrecords.models.CallType;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.callrecords.requests.SessionCollectionPage;
 
-
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
