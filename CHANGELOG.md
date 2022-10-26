@@ -11,6 +11,289 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.58.0] - 2022-10-12
+
+### Added
+ 
+- AccessPackageMoveToCatalog models and related requests.
+- CloudPcExportJob models and related requests. 
+- CloudPcReports models and related requests. 
+- ConditionalAccessTemplate model and related requests. 
+- DeviceCompliancePolicyGetNoncompliantDevicesToRetire models and related requests. 
+- DeviceManagementGetOrganizationalMessageTenantConsent models and related requests. 
+- DeviceManagementPostOrganizationalMessageTenantConsent models and related requests. 
+- DeviceManagementReportsGetMobileApplicationManagementAppRegistrationSummaryReport models and related requests. 
+- DeviceManagementUpdateOrganizationalMessageTenantConsent models and related requests. 
+- ManagedDeviceEnrollNowAction models and related requests. 
+- MicrosoftTunnelServerGenerateServerLog models and related requests. 
+- MicrosoftTunnelServerLogCollectionResponseGenerateDownloadUrl models and related requests. 
+- UserExperienceAnalyticsAnomaly models and related requests. 
+- AssociatedAssignmentPayloadType model.
+- CloudPcReportName model.
+- ConditionalAccessPolicyDetail model. 
+- DeviceManagementPriorityMetaData model. 
+- MobileThreatDefensePartnerPriority model. 
+- OrganizationalMessageTenantConsent model. 
+- PayloadByFilter model. 
+- SearchContent model. 
+- ServicePrincipalLockConfiguration model. 
+- SharePointOneDriveOptions model. 
+- TemplateScenarios model. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests.
+
+## [0.57.0] - 2022-09-22
+
+### Added
+ 
+- AppliedAuthenticationEventListener model.
+- AuthenticationEventHandlerResult model. 
+- AuthenticationEventType model. 
+- CustomExtensionCalloutResult model. 
+- WatermarkProtectionValues model. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests. 
+- Removed MeetingChatMode model. 
+
+## [0.56.0] - 2022-09-15
+
+### Added
+ 
+- AuthenticationCombinationConfiguration model and related requests. 
+- AuthenticationMethodModeDetail model and related requests.
+- AuthenticationStrengthPolicy models and related requests. 
+- AuthenticationStrengthRoot model and related requests. 
+- DriveItemAssignSensitivityLabel models and related requests. 
+- Fido2CombinationConfiguration model and related requests. 
+- AuthenticationMethodFeatureConfiguration model. 
+- AuthenticationMethodModes model. 
+- AuthenticationStrengthRequirements model. 
+- AuthenticationStrengthUsage model. 
+- BaseAuthenticationMethod model. 
+- CloudPcDiskEncryptionState model. 
+- ConditionalAccess models. 
+- CrossTenantAccessPolicyTenantRestrictions model. 
+- DevicesFilter model. 
+- FeatureTarget models. 
+- MicrosoftAuthenticatorFeatureSettings model. 
+- UpdateAllowedCombinationsResult model. 
+- CaseExportOperationC requests added to the ediscovery namespace. 
+- Models and Requests added to the newly added DeviceManagement namespace.  
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests. 
+- Removed ConnectionQuota requests from the ExternalConnectors namespace. 
+- Removed AzureADFeatureUsage models and related requests.
+- Removed AzureADLicenseUsage models and realted requests.  
+- Removed AzureADUserFeatureUsage models and related requests. 
+- Removed RestrictedSignIn model and related requests. 
+- Removed the AzureADLicenseType model. 
+- Removed FeatureUsageDetail model. 
+- Removed LicenseInfoDetail model. 
+
+## [0.55.0] - 2022-09-01
+
+### Added
+ 
+- DataProcessorServiceForWindowsFeaturesOnboarding model. 
+- DetectedAppPlatformType model. 
+- SubjectSet model. 
+- CreateRemoteHelpSessionResponse model and requests. 
+- DeletedItemContainer model and requests. 
+- ManagedDeviceCreateRemoteHelpSession models and requests. 
+- ManagedDeviceRequestRemoteHelpSessionAccess models and requests. 
+- ManagedDeviceRetrieveRemoteHelpSession models and requests. 
+- RequestRemoteHelpSessionAccessResponse model and requests. 
+- RetrieveRemoteHelpSessionResponse model and requests. 
+- WinGetApp models and requests. 
+- Models and Requests added to the IdentityGovernance namespace.
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+
+## [0.54.0] - 2022-08-23
+
+### Added
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- VerifiedPublisher property added to ServicePrincipal model. 
+
+## [0.53.0] - 2022-08-18
+
+### Added
+ 
+- AccessPackageSubjectLifecycle model.
+- AndroidDeviceOwnerCertificateAccessType model.
+- AndroidDeviceOwnerSilentCertificateAccess model.
+- AuthenticationConfigurationValidation model. 
+- AzureCommunicationServicesUserIdentity model. 
+- CloudPcHealthCheckItem model. 
+- CloudPCRestoreParameterSet models. 
+- CloudPcSupportedRegionStatus model. 
+- CommunicationsApplication models. 
+- Communications Identities models. 
+- DeviceDeltaParameterSet models. 
+- DeviceLicensingStatus model. 
+- GroupPeerOutlierRecommendationInsightSettings model. 
+- GroupPolicyConfigurationIngestionType model. 
+- HttpRequestEndpoint model. 
+- IngestionSource model. 
+- OfficeSuiteDefaultFileFormatType model. 
+- OutlierContainerType model. 
+- OutlierMemberType model. 
+- PowerliftDownloadRequest model. 
+- PowerliftIncidentMetadata model. 
+- RequestSignatureVerification model. 
+- SupportedClaimConfiguration model. 
+- TenantInformation model. 
+- VpnOnDemandRuleInterfaceTypeMatch model. 
+- WeakAlgorithms model. 
+- AdminReportSettings model and related requests. 
+- AuthenticationCondition models and related requests. 
+- AuthenticationEventListener model and related requests.
+- CallTranscript model and related requests. 
+- CloudPcConnectivityEvent models and related requests. 
+- CustomAuthenticationExtension models and related requests. 
+- DeviceManagementReportsGetNoncompliantDevicesAndSettingsReport models and related requests. 
+- EmployeeExperience model and related requests. 
+- GroupPolicyUploadedPresentation model and related requests. 
+- LearningContent model and related requests. 
+- LearningProvider model and related requests. 
+- ManagedDeviceAppDiagnostics models and related requests. 
+- ManagedDeviceDownloadAppDiagnostics models and related requests.
+- MembershipOutlierInsight model and related requests. 
+- OnTokenIssuanceStart models and related requests. 
+- OrganizationalMessage models and related requests. 
+- SecurityReportsRoot models and related requests. 
+- SecurityRunHuntingQuery models and related requests. 
+- SolutionsRoot model and requests. 
+- TeamTemplate models and related requests. 
+- TenantRelationshipFindTenantInformation models and related requests. 
+- UnifiedRoleDefinitionAssignedPrincipals models and related requests. 
+- VirtualAppointment models and related requests. 
+- Workspace model and related requests. 
+- Models and Requests added to the ExternalConncectors namespace. 
+- Models and Requests added to the Security namespace. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Model and request classes related to the newly added entities have been modified to reference the newly added models and requests. 
+- Security namespace has been expanded to include broadened functionality. 
+- ExternalConnectors namespace has been expanded to included broadened functionality.  
+
+## [0.52.0] - 2022-06-29
+
+### Added
+ 
+- AzureCommunicationServicesUserIdentity model.
+- CommunicationsIdentitiy models. 
+- SecurityReportsRoot models and related requests. 
+- AdminReportSettings model and related requests. 
+- New models and related requests added to the graph.security namespace.
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Adjusted references in models related to the newly added requests and models, ie. ReportRoot, Security, Admin models etc. 
+
+## [0.51.0] - 2022-06-21
+
+### Added
+ 
+- AuthorizationInfo model
+- CustomExtension models
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+
+## [0.50.0] - 2022-06-15
+
+### Added
+ 
+- TeamsAppSettings model and requests. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests with Attachment_v2 prefix changed to use AttachmentBase prefix. 
+- Models and requests with FileAttachment_v2 prefix changed to use TaskFileAttachment prefix. 
+
+## [0.49.0] - 2022-06-07
+
+### Added
+ 
+- AudioCodec, VideoCodec, NetworkTransportProtocol, TraceRouteHop models in the callRecords directory.
+- AzureAdJoinPolicy and AzureADRegistrationPolicy models. 
+- CrossCloudAzureActiveDirectoryTenant model.
+- DefaultMfaMethodType model.  
+- GroupWritebackConfiguration model. 
+- MessagePinned & MessageUnpinned models.
+- MultiFactorAuthConfiguration model. 
+- WindowsManagedAppClipboardSharingLevel & WindowsManagedAppDataTransferLevel models. 
+- WritebackConfiguration model. 
+- Attachment_v2 models and related requests.
+- DeletedTeam models and related requests. 
+- DeviceManagementReports models and related requests. 
+- DeviceRegistrationPolicy model and related requests. 
+- DomainPromote models and related requests. 
+- EducationAssignment models and related requests. 
+- EducationFeedback models and related requests. 
+- IosiPadOSWebClip model and related requests. 
+- ManagedDeviceRemoveDeviceFirmwareConfigurationInterfaceManagement models and related requests. 
+- PinnedChatMessageInfo model and related requests. 
+- TeamworkSendActivityNotificationToRecipients models and related requests. 
+- WindowsManagedAppProtection models and related requests.
+- WindowsWebApp model and related requests. 
+- OnPremisesAgentGroup requests. 
+- TeamworkSendActivityNotificationToRecipients requests.
+- TenantAdmin/models & TenantAdmin/requests directories. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests realted to the added entities have been modified to reflect addition of new classes and requests/request builders. 
+
+## [0.48.0] - 2022-05-19
+
+### Added
+ 
+- CloudPcForensicStorageAccount models and related requests. 
+- Storage model and related requests. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Updated models and requests related to the newly added CloudPcForensicsStorageAccount & Storage models, ie: CloudPcSnapshotCollectionRequestBuilder, GraphServiceClient, & ManagedDeviceBulkReprovisionCloudPcRequest. 
+
+## [0.47.0] - 2022-05-12
+
+### Added
+ 
+- Added security features (models and requests) related to the Ediscovery-namespace to the Security-namespace.
+- Added models and requests to the ManagedTenants-namespace.
+- SignInConfirmation & SignInFrequency models and related requests. 
+- ZebraFoto models and related requests.  
+- DocumentSetVersion models and related requests. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Removed managementCondition models and related requests from the general microsoftGraph-namespace.
+- Updated dependencies of classes related to added models, added requests, and namespace updates.
+
 ## [0.46.0] - 2022-04-22
 
 ### Added
