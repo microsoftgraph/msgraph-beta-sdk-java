@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AccessScope;
 import com.microsoft.graph.models.CurrentLabel;
 import com.microsoft.graph.models.DiscoveredSensitiveType;
 
@@ -40,15 +39,6 @@ public class DlpEvaluationInput implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
-
-    /**
-     * The Access Scope.
-     * 
-     */
-    @SerializedName(value = "accessScope", alternate = {"AccessScope"})
-    @Expose
-	@Nullable
-    public AccessScope accessScope;
 
     /**
      * The Current Label.

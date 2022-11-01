@@ -42,7 +42,7 @@ public class PortalNotification implements IJsonBackedObject {
 
     /**
      * The Alert Impact.
-     * 
+     * The associated alert impact.
      */
     @SerializedName(value = "alertImpact", alternate = {"AlertImpact"})
     @Expose
@@ -51,7 +51,7 @@ public class PortalNotification implements IJsonBackedObject {
 
     /**
      * The Alert Record Id.
-     * 
+     * The associated alert record ID.
      */
     @SerializedName(value = "alertRecordId", alternate = {"AlertRecordId"})
     @Expose
@@ -60,7 +60,7 @@ public class PortalNotification implements IJsonBackedObject {
 
     /**
      * The Alert Rule Id.
-     * 
+     * The associated alert rule ID.
      */
     @SerializedName(value = "alertRuleId", alternate = {"AlertRuleId"})
     @Expose
@@ -69,7 +69,7 @@ public class PortalNotification implements IJsonBackedObject {
 
     /**
      * The Alert Rule Name.
-     * 
+     * The associated alert rule name.
      */
     @SerializedName(value = "alertRuleName", alternate = {"AlertRuleName"})
     @Expose
@@ -78,7 +78,7 @@ public class PortalNotification implements IJsonBackedObject {
 
     /**
      * The Alert Rule Template.
-     * 
+     * The associated alert rule template. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
      */
     @SerializedName(value = "alertRuleTemplate", alternate = {"AlertRuleTemplate"})
     @Expose
@@ -87,7 +87,7 @@ public class PortalNotification implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * The unique identifier for the portal notification.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -96,7 +96,7 @@ public class PortalNotification implements IJsonBackedObject {
 
     /**
      * The Is Portal Notification Sent.
-     * 
+     * If true, the portal notification has already been sent for the user; otherwise, the portal notification hasn't been sent yet.
      */
     @SerializedName(value = "isPortalNotificationSent", alternate = {"IsPortalNotificationSent"})
     @Expose
@@ -105,7 +105,7 @@ public class PortalNotification implements IJsonBackedObject {
 
     /**
      * The Severity.
-     * 
+     * The associated alert rule severity. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
      */
     @SerializedName(value = "severity", alternate = {"Severity"})
     @Expose

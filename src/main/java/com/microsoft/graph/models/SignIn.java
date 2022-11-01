@@ -11,6 +11,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AppliedConditionalAccessPolicy;
 import com.microsoft.graph.models.AppliedAuthenticationEventListener;
+import com.microsoft.graph.models.AuthenticationAppDeviceDetails;
+import com.microsoft.graph.models.AuthenticationAppPolicyDetails;
 import com.microsoft.graph.models.AuthenticationContext;
 import com.microsoft.graph.models.AuthenticationDetail;
 import com.microsoft.graph.models.KeyValue;
@@ -85,6 +87,24 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AppliedAuthenticationEventListener> appliedEventListeners;
+
+    /**
+     * The Authentication App Device Details.
+     * 
+     */
+    @SerializedName(value = "authenticationAppDeviceDetails", alternate = {"AuthenticationAppDeviceDetails"})
+    @Expose
+	@Nullable
+    public AuthenticationAppDeviceDetails authenticationAppDeviceDetails;
+
+    /**
+     * The Authentication App Policy Evaluation Details.
+     * 
+     */
+    @SerializedName(value = "authenticationAppPolicyEvaluationDetails", alternate = {"AuthenticationAppPolicyEvaluationDetails"})
+    @Expose
+	@Nullable
+    public java.util.List<AuthenticationAppPolicyDetails> authenticationAppPolicyEvaluationDetails;
 
     /**
      * The Authentication Context Class References.

@@ -68,6 +68,7 @@ public class CustodianRemoveHoldRequestBuilder extends BaseActionRequestBuilder<
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        request.body = this.body;
         return request;
     }
 }

@@ -68,6 +68,7 @@ public class CustodianApplyHoldRequestBuilder extends BaseActionRequestBuilder<C
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        request.body = this.body;
         return request;
     }
 }

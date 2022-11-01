@@ -15,6 +15,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ApplicationSignInDetailedSummaryCollectionPage;
 import com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionPage;
 import com.microsoft.graph.requests.UserCredentialUsageDetailsCollectionPage;
+import com.microsoft.graph.requests.PrintUsageCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -66,6 +67,15 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.UserCredentialUsageDetailsCollectionPage userCredentialUsageDetails;
+
+    /**
+     * The Daily Print Usage.
+     * 
+     */
+    @SerializedName(value = "dailyPrintUsage", alternate = {"DailyPrintUsage"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.PrintUsageCollectionPage dailyPrintUsage;
 
     /**
      * The Daily Print Usage By Printer.
@@ -168,6 +178,10 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
         if (json.has("userCredentialUsageDetails")) {
             userCredentialUsageDetails = serializer.deserializeObject(json.get("userCredentialUsageDetails"), com.microsoft.graph.requests.UserCredentialUsageDetailsCollectionPage.class);
+        }
+
+        if (json.has("dailyPrintUsage")) {
+            dailyPrintUsage = serializer.deserializeObject(json.get("dailyPrintUsage"), com.microsoft.graph.requests.PrintUsageCollectionPage.class);
         }
 
         if (json.has("dailyPrintUsageByPrinter")) {

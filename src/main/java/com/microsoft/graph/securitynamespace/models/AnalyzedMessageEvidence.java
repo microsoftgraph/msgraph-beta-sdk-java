@@ -29,7 +29,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements IJsonBacke
 
     /**
      * The Anti Spam Direction.
-     * Direction of the email relative to your network. The possible values are: Inbound, Outbound or Intraorg.
+     * Direction of the email relative to your network. The possible values are: inbound, outbound or intraorg.
      */
     @SerializedName(value = "antiSpamDirection", alternate = {"AntiSpamDirection"})
     @Expose
@@ -47,7 +47,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements IJsonBacke
 
     /**
      * The Delivery Action.
-     * Delivery action of the email. The possible values are: Delivered, DeliveredAsSpam, Junked, Blocked, or Replaced.
+     * Delivery action of the email. The possible values are: delivered, deliveredAsSpam, junked, blocked, or replaced.
      */
     @SerializedName(value = "deliveryAction", alternate = {"DeliveryAction"})
     @Expose
@@ -56,7 +56,7 @@ public class AnalyzedMessageEvidence extends AlertEvidence implements IJsonBacke
 
     /**
      * The Delivery Location.
-     * Location where the email was delivered. The possible values are: Inbox, External, JunkFolder, Quarantine, Failed, Dropped, DeletedFolder or Forwarded.
+     * Location where the email was delivered. The possible values are: inbox, external, junkFolder, quarantine, failed, dropped, deletedFolder or forwarded.
      */
     @SerializedName(value = "deliveryLocation", alternate = {"DeliveryLocation"})
     @Expose

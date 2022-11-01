@@ -30,7 +30,7 @@ public class TaskDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver. This is a multi-valued enumeration whose allowed combinations are joiner, joiner,leaver, or leaver. Supports $filter (eq).
+     * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver. This is a multi-valued enumeration whose allowed combinations are joiner, joiner,leaver, or leaver. Supports $filter (eq, has).
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
