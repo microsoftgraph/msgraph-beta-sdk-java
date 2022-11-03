@@ -42,7 +42,7 @@ public class OrganizationalMessagePlacementDetail implements IJsonBackedObject {
 
     /**
      * The Placement.
-     * Indicates the name of the placement. Possible values are: default, card0, card1, card2, card3, unknownFutureValue.
+     * Indicates the name of the placement
      */
     @SerializedName(value = "placement", alternate = {"Placement"})
     @Expose

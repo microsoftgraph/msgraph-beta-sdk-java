@@ -20,6 +20,13 @@ import com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSu
 import com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleDefinitionCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantAlertCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantTicketingEndpointCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementActionCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionPage;
@@ -140,6 +147,69 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendCollectionPage managedDeviceComplianceTrends;
+
+    /**
+     * The Managed Tenant Alert Logs.
+     * 
+     */
+    @SerializedName(value = "managedTenantAlertLogs", alternate = {"ManagedTenantAlertLogs"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionPage managedTenantAlertLogs;
+
+    /**
+     * The Managed Tenant Alert Rule Definitions.
+     * 
+     */
+    @SerializedName(value = "managedTenantAlertRuleDefinitions", alternate = {"ManagedTenantAlertRuleDefinitions"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleDefinitionCollectionPage managedTenantAlertRuleDefinitions;
+
+    /**
+     * The Managed Tenant Alert Rules.
+     * 
+     */
+    @SerializedName(value = "managedTenantAlertRules", alternate = {"ManagedTenantAlertRules"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleCollectionPage managedTenantAlertRules;
+
+    /**
+     * The Managed Tenant Alerts.
+     * 
+     */
+    @SerializedName(value = "managedTenantAlerts", alternate = {"ManagedTenantAlerts"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertCollectionPage managedTenantAlerts;
+
+    /**
+     * The Managed Tenant Api Notifications.
+     * 
+     */
+    @SerializedName(value = "managedTenantApiNotifications", alternate = {"ManagedTenantApiNotifications"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationCollectionPage managedTenantApiNotifications;
+
+    /**
+     * The Managed Tenant Email Notifications.
+     * 
+     */
+    @SerializedName(value = "managedTenantEmailNotifications", alternate = {"ManagedTenantEmailNotifications"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationCollectionPage managedTenantEmailNotifications;
+
+    /**
+     * The Managed Tenant Ticketing Endpoints.
+     * 
+     */
+    @SerializedName(value = "managedTenantTicketingEndpoints", alternate = {"ManagedTenantTicketingEndpoints"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantTicketingEndpointCollectionPage managedTenantTicketingEndpoints;
 
     /**
      * The Management Actions.
@@ -324,6 +394,34 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
         if (json.has("managedDeviceComplianceTrends")) {
             managedDeviceComplianceTrends = serializer.deserializeObject(json.get("managedDeviceComplianceTrends"), com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendCollectionPage.class);
+        }
+
+        if (json.has("managedTenantAlertLogs")) {
+            managedTenantAlertLogs = serializer.deserializeObject(json.get("managedTenantAlertLogs"), com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionPage.class);
+        }
+
+        if (json.has("managedTenantAlertRuleDefinitions")) {
+            managedTenantAlertRuleDefinitions = serializer.deserializeObject(json.get("managedTenantAlertRuleDefinitions"), com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleDefinitionCollectionPage.class);
+        }
+
+        if (json.has("managedTenantAlertRules")) {
+            managedTenantAlertRules = serializer.deserializeObject(json.get("managedTenantAlertRules"), com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleCollectionPage.class);
+        }
+
+        if (json.has("managedTenantAlerts")) {
+            managedTenantAlerts = serializer.deserializeObject(json.get("managedTenantAlerts"), com.microsoft.graph.managedtenants.requests.ManagedTenantAlertCollectionPage.class);
+        }
+
+        if (json.has("managedTenantApiNotifications")) {
+            managedTenantApiNotifications = serializer.deserializeObject(json.get("managedTenantApiNotifications"), com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationCollectionPage.class);
+        }
+
+        if (json.has("managedTenantEmailNotifications")) {
+            managedTenantEmailNotifications = serializer.deserializeObject(json.get("managedTenantEmailNotifications"), com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationCollectionPage.class);
+        }
+
+        if (json.has("managedTenantTicketingEndpoints")) {
+            managedTenantTicketingEndpoints = serializer.deserializeObject(json.get("managedTenantTicketingEndpoints"), com.microsoft.graph.managedtenants.requests.ManagedTenantTicketingEndpointCollectionPage.class);
         }
 
         if (json.has("managementActions")) {

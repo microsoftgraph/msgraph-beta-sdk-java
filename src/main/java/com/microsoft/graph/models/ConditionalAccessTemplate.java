@@ -29,7 +29,7 @@ public class ConditionalAccessTemplate extends Entity implements IJsonBackedObje
 
     /**
      * The Description.
-     * 
+     * The user-friendly name of the template.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -38,7 +38,7 @@ public class ConditionalAccessTemplate extends Entity implements IJsonBackedObje
 
     /**
      * The Details.
-     * 
+     * Complete list of policy details specific to the template. This property contains the JSON of policy settings for configuring a Conditional Access policy.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -47,7 +47,7 @@ public class ConditionalAccessTemplate extends Entity implements IJsonBackedObje
 
     /**
      * The Name.
-     * 
+     * The user-friendly name of the template.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -56,7 +56,7 @@ public class ConditionalAccessTemplate extends Entity implements IJsonBackedObje
 
     /**
      * The Scenarios.
-     * 
+     * List of conditional access scenarios that the template is recommended for. The possible values are: new, secureFoundation, zeroTrust, remoteWork, protectAdmins, emergingThreats, unknownFutureValue. This is a multi-valued enum. Supports $filter (has).
      */
     @SerializedName(value = "scenarios", alternate = {"Scenarios"})
     @Expose

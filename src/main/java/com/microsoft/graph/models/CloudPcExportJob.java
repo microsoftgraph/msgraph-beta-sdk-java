@@ -30,7 +30,7 @@ public class CloudPcExportJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * 
+     * The date time when the export job expires.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -39,7 +39,7 @@ public class CloudPcExportJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Export Job Status.
-     * 
+     * The status of the export job.The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "exportJobStatus", alternate = {"ExportJobStatus"})
     @Expose
@@ -48,7 +48,7 @@ public class CloudPcExportJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Export Url.
-     * 
+     * The storage account url of the exported report, it can be used to download the file.
      */
     @SerializedName(value = "exportUrl", alternate = {"ExportUrl"})
     @Expose
@@ -57,7 +57,7 @@ public class CloudPcExportJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Filter.
-     * 
+     * The filter applied on the report.
      */
     @SerializedName(value = "filter", alternate = {"Filter"})
     @Expose
@@ -66,7 +66,7 @@ public class CloudPcExportJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Format.
-     * 
+     * The format of the exported report.
      */
     @SerializedName(value = "format", alternate = {"Format"})
     @Expose
@@ -75,7 +75,7 @@ public class CloudPcExportJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Report Name.
-     * 
+     * The report name.The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, unknownFutureValue.
      */
     @SerializedName(value = "reportName", alternate = {"ReportName"})
     @Expose
@@ -84,7 +84,7 @@ public class CloudPcExportJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Request Date Time.
-     * 
+     * The date time when the export job was requested.
      */
     @SerializedName(value = "requestDateTime", alternate = {"RequestDateTime"})
     @Expose
@@ -93,7 +93,7 @@ public class CloudPcExportJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Select.
-     * 
+     * The selected columns of the report.
      */
     @SerializedName(value = "select", alternate = {"Select"})
     @Expose

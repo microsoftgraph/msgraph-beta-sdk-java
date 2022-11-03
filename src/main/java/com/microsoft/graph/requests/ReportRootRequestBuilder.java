@@ -240,6 +240,26 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
         return new com.microsoft.graph.requests.UserCredentialUsageDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userCredentialUsageDetails") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the PrintUsage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PrintUsageCollectionRequestBuilder dailyPrintUsage() {
+        return new com.microsoft.graph.requests.PrintUsageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsage"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the PrintUsage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PrintUsageRequestBuilder dailyPrintUsage(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsage") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the PrintUsageByPrinter collection
      *
      * @return the collection request builder

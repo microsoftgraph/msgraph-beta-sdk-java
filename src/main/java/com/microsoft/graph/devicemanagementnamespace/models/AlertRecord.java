@@ -31,7 +31,7 @@ public class AlertRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Alert Impact.
-     * 
+     * The impact of the alert event. Consists of a number followed by the aggregation type. For example, 6 Count and 12 AffectedCloudPcPercentage.
      */
     @SerializedName(value = "alertImpact", alternate = {"AlertImpact"})
     @Expose
@@ -40,7 +40,7 @@ public class AlertRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Alert Rule Id.
-     * 
+     * The corresponding ID of the alert rule.
      */
     @SerializedName(value = "alertRuleId", alternate = {"AlertRuleId"})
     @Expose
@@ -49,7 +49,7 @@ public class AlertRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Alert Rule Template.
-     * 
+     * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
      */
     @SerializedName(value = "alertRuleTemplate", alternate = {"AlertRuleTemplate"})
     @Expose
@@ -58,7 +58,7 @@ public class AlertRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Detected Date Time.
-     * 
+     * The date and time when the alert event was detected. The Timestamp type represents date and time information using ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "detectedDateTime", alternate = {"DetectedDateTime"})
     @Expose
@@ -67,7 +67,7 @@ public class AlertRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name of the alert record.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -76,7 +76,7 @@ public class AlertRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Updated Date Time.
-     * 
+     * The date and time when the alert record was last updated. The Timestamp type represents date and time information using ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
@@ -85,7 +85,7 @@ public class AlertRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Resolved Date Time.
-     * 
+     * The date and time when the alert event was resolved. The Timestamp type represents date and time information using ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "resolvedDateTime", alternate = {"ResolvedDateTime"})
     @Expose
@@ -94,7 +94,7 @@ public class AlertRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Severity.
-     * 
+     * The severity of the alert event. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
      */
     @SerializedName(value = "severity", alternate = {"Severity"})
     @Expose
@@ -103,7 +103,7 @@ public class AlertRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the alert record. The possible values are: active, resolved, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

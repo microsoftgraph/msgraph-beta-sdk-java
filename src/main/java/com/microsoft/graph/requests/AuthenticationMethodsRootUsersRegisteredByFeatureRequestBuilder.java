@@ -72,6 +72,9 @@ public class AuthenticationMethodsRootUsersRegisteredByFeatureRequestBuilder ext
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+            request.addFunctionOption(option);
+        }
         return request;
     }
 }

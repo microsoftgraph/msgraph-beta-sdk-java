@@ -7,20 +7,24 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Access Scope.
+ * The Enum Authentication App Evaluation.
 */
-public enum AccessScope
+public enum AuthenticationAppEvaluation
 {
     /**
-    * in Organization
+    * success
     */
-    IN_ORGANIZATION,
+    SUCCESS,
     /**
-    * not In Organization
+    * failure
     */
-    NOT_IN_ORGANIZATION,
+    FAILURE,
     /**
-    * For AccessScope values that were not expected from the service
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
+    * For AuthenticationAppEvaluation values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

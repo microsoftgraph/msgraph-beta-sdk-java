@@ -36,6 +36,15 @@ public class UnifiedRbacResourceAction extends Entity implements IJsonBackedObje
     public String actionVerb;
 
     /**
+     * The Authentication Context Id.
+     * 
+     */
+    @SerializedName(value = "authenticationContextId", alternate = {"AuthenticationContextId"})
+    @Expose
+	@Nullable
+    public String authenticationContextId;
+
+    /**
      * The Description.
      * Description for the action. Supports $filter (eq).
      */
@@ -43,6 +52,15 @@ public class UnifiedRbacResourceAction extends Entity implements IJsonBackedObje
     @Expose
 	@Nullable
     public String description;
+
+    /**
+     * The Is Authentication Context Settable.
+     * 
+     */
+    @SerializedName(value = "isAuthenticationContextSettable", alternate = {"IsAuthenticationContextSettable"})
+    @Expose
+	@Nullable
+    public Boolean isAuthenticationContextSettable;
 
     /**
      * The Name.

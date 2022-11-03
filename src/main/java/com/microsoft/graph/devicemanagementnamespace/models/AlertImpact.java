@@ -40,7 +40,7 @@ public class AlertImpact implements IJsonBackedObject {
 
     /**
      * The Aggregation Type.
-     * 
+     * The aggregation type of the impact. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
      */
     @SerializedName(value = "aggregationType", alternate = {"AggregationType"})
     @Expose
@@ -49,7 +49,7 @@ public class AlertImpact implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * The number value of the impact.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

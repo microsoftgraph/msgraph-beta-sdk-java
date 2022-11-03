@@ -46,7 +46,7 @@ public class LearningContent extends Entity implements IJsonBackedObject {
 
     /**
      * The Contributors.
-     * 
+     * The authors, creators, or contributors of the learning content. Optional.
      */
     @SerializedName(value = "contributors", alternate = {"Contributors"})
     @Expose
@@ -73,7 +73,7 @@ public class LearningContent extends Entity implements IJsonBackedObject {
 
     /**
      * The Duration.
-     * The duration of the learning content in seconds. Optional.
+     * The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose

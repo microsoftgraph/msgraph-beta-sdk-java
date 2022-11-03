@@ -1808,21 +1808,21 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the AuthenticationMethodsPolicy
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
-        return new com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder(getServiceRoot() + "/authenticationMethodsPolicy", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the SolutionsRoot
      */
     @Nonnull
     public com.microsoft.graph.requests.SolutionsRootRequestBuilder solutions() {
         return new com.microsoft.graph.requests.SolutionsRootRequestBuilder(getServiceRoot() + "/solutions", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the AuthenticationMethodsPolicy
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
+        return new com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder(getServiceRoot() + "/authenticationMethodsPolicy", this, null);
     }
 
     /**

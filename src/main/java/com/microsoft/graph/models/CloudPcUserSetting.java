@@ -84,7 +84,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignments.
-     * Represents the set of Microsoft 365 groups and security groups in Azure AD that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
+     * Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose

@@ -30,7 +30,7 @@ public class Monitoring extends Entity implements IJsonBackedObject {
 
     /**
      * The Alert Records.
-     * 
+     * The collection of records of alert events.
      */
     @SerializedName(value = "alertRecords", alternate = {"AlertRecords"})
     @Expose
@@ -39,7 +39,7 @@ public class Monitoring extends Entity implements IJsonBackedObject {
 
     /**
      * The Alert Rules.
-     * 
+     * The collection of alert rules.
      */
     @SerializedName(value = "alertRules", alternate = {"AlertRules"})
     @Expose

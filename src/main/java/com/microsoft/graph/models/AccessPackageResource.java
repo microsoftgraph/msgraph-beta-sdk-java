@@ -41,7 +41,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Added On.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "addedOn", alternate = {"AddedOn"})
     @Expose
@@ -77,7 +77,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Pending Onboarding.
-     * True if the resource is not yet available for assignment.
+     * True if the resource is not yet available for assignment. Read-only.
      */
     @SerializedName(value = "isPendingOnboarding", alternate = {"IsPendingOnboarding"})
     @Expose

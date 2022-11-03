@@ -33,7 +33,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Deleted Date Time.
-     * The time and date a workflow is deleted. Supports $filter(lt,gt) and $orderby.
+     * When the workflow was deleted. Supports $filter(lt,gt) and $orderBy.
      */
     @SerializedName(value = "deletedDateTime", alternate = {"DeletedDateTime"})
     @Expose
@@ -42,7 +42,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Identifier used for individually addressing a specific workflow. Supports $filter(eq).
+     * Identifier used for individually addressing a specific workflow. Supports $filter(eq, ne).
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -50,26 +50,8 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
     public String id;
 
     /**
-     * The Is Enabled.
-     * If true, the workflow engine creates and processes taskProcessingResults on the users scoped to the workflow. Supports $filter(eq,ne) and orderby.
-     */
-    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
-    @Expose
-	@Nullable
-    public Boolean isEnabled;
-
-    /**
-     * The Is Scheduling Enabled.
-     * If true, the workflow engine executes the workflow on the schedule defined by tenant settings.
-     */
-    @SerializedName(value = "isSchedulingEnabled", alternate = {"IsSchedulingEnabled"})
-    @Expose
-	@Nullable
-    public Boolean isSchedulingEnabled;
-
-    /**
      * The Next Schedule Run Date Time.
-     * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
+     * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy.
      */
     @SerializedName(value = "nextScheduleRunDateTime", alternate = {"NextScheduleRunDateTime"})
     @Expose
@@ -78,7 +60,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Version.
-     * The current version number of the workflow. Value is 1 when the workflow is first created. Supports $filter(eq).
+     * The current version number of the workflow. Value is 1 when the workflow is first created. Supports $filter(eq, ne).
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

@@ -24,6 +24,10 @@ public enum CloudPcExportJobStatus
     */
     COMPLETED,
     /**
+    * failed
+    */
+    FAILED,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

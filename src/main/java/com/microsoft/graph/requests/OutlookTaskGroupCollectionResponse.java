@@ -12,7 +12,9 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 
 /**
  * The class for the Outlook Task Group Collection Response.
+ * @deprecated The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/
  */
+@Deprecated
 public class OutlookTaskGroupCollectionResponse extends BaseCollectionResponse<OutlookTaskGroup> {
 
 }
