@@ -11,6 +11,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.59.0] - 2022-11-03
+
+### Added
+ 
+- AttachmentContentProperties model. 
+- AuthenticationApp* models. 
+- CollapseProperty model. 
+- OpticalCharacterRecognitionConfiguration model. 
+- ChatMessageSetReaction models and related requests. 
+- ChatMessageUnsetReaction models and related requests. 
+- CloudPcCrossCloudGovernmentOrganizationMapping model and related requests. 
+- PrintUsage requests. 
+- Added the following models and requests to the ManagedTenants namespace: 
+- ManagedTenant alert models and related requests. 
+- ManagedTenant email models and related requests. 
+- ManagedTenant api models and related requests. 
+- ManagedTenant notification models and related requests. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests.
+- Added lots of models and requests to the ManagedTenant namespace. 
+
 ## [0.58.0] - 2022-10-12
 
 ### Added
