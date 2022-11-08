@@ -102,6 +102,15 @@ public class GroupPolicyMigrationReport extends Entity implements IJsonBackedObj
     public String ouDistinguishedName;
 
     /**
+     * The Role Scope Tag Ids.
+     * The list of scope tags for the configuration.
+     */
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
+    @Expose
+	@Nullable
+    public java.util.List<String> roleScopeTagIds;
+
+    /**
      * The Supported Settings Count.
      * The number of Group Policy Settings supported by Intune.
      */

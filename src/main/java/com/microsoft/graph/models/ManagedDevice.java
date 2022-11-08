@@ -369,7 +369,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Free Storage Space In Bytes.
-     * Free Storage in Bytes. This property is read-only.
+     * Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
      */
     @SerializedName(value = "freeStorageSpaceInBytes", alternate = {"FreeStorageSpaceInBytes"})
     @Expose
@@ -378,7 +378,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Hardware Information.
-     * The hardward details for the device.  Includes information such as storage space, manufacturer, serial number, etc. This property is read-only.
+     * The hardward details for the device.  Includes information such as storage space, manufacturer, serial number, etc. Return default value in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     @SerializedName(value = "hardwareInformation", alternate = {"HardwareInformation"})
     @Expose
@@ -387,7 +387,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Iccid.
-     * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
+     * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     @SerializedName(value = "iccid", alternate = {"Iccid"})
     @Expose
@@ -540,7 +540,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * Notes on the device created by IT Admin
+     * Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
@@ -594,7 +594,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Physical Memory In Bytes.
-     * Total Memory in Bytes. This property is read-only.
+     * Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
      */
     @SerializedName(value = "physicalMemoryInBytes", alternate = {"PhysicalMemoryInBytes"})
     @Expose
@@ -684,7 +684,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Number.
-     * Device sku number, see also: https://docs.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
+     * Device sku number, see also: https://learn.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
      */
     @SerializedName(value = "skuNumber", alternate = {"SkuNumber"})
     @Expose
@@ -720,7 +720,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Udid.
-     * Unique Device Identifier for iOS and macOS devices. This property is read-only.
+     * Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     @SerializedName(value = "udid", alternate = {"Udid"})
     @Expose

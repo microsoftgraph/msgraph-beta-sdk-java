@@ -18,6 +18,7 @@ import com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionP
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.IdentityProviderBaseCollectionPage;
 import com.microsoft.graph.requests.InboundSharedUserProfileCollectionPage;
+import com.microsoft.graph.requests.OnPremisesDirectorySynchronizationCollectionPage;
 import com.microsoft.graph.requests.OutboundSharedUserProfileCollectionPage;
 import com.microsoft.graph.requests.SharedEmailDomainCollectionPage;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage;
@@ -110,6 +111,15 @@ public class Directory extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.InboundSharedUserProfileCollectionPage inboundSharedUserProfiles;
 
     /**
+     * The On Premises Synchronization.
+     * 
+     */
+    @SerializedName(value = "onPremisesSynchronization", alternate = {"OnPremisesSynchronization"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.OnPremisesDirectorySynchronizationCollectionPage onPremisesSynchronization;
+
+    /**
      * The Outbound Shared User Profiles.
      * 
      */
@@ -178,6 +188,10 @@ public class Directory extends Entity implements IJsonBackedObject {
 
         if (json.has("inboundSharedUserProfiles")) {
             inboundSharedUserProfiles = serializer.deserializeObject(json.get("inboundSharedUserProfiles"), com.microsoft.graph.requests.InboundSharedUserProfileCollectionPage.class);
+        }
+
+        if (json.has("onPremisesSynchronization")) {
+            onPremisesSynchronization = serializer.deserializeObject(json.get("onPremisesSynchronization"), com.microsoft.graph.requests.OnPremisesDirectorySynchronizationCollectionPage.class);
         }
 
         if (json.has("outboundSharedUserProfiles")) {

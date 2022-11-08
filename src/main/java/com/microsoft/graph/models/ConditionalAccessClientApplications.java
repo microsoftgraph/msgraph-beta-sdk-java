@@ -59,7 +59,7 @@ public class ConditionalAccessClientApplications implements IJsonBackedObject {
 
     /**
      * The Service Principal Filter.
-     * 
+     * Filter that defines the dynamic-servicePrincipal-syntax rule to include/exclude service principals. A filter can use custom security attributes to include/exclude service principals.
      */
     @SerializedName(value = "servicePrincipalFilter", alternate = {"ServicePrincipalFilter"})
     @Expose

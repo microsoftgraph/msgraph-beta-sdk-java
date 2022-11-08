@@ -176,6 +176,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
+     * Gets the collection of DirectoryObjects objects
+     *
+     * @return the request builder for the collection of DirectoryObjects objects
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder directoryObjects() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder(getServiceRoot() + "/directoryObjects", this, null);
+    }
+
+    /**
+     * Gets a single DirectoryObjects
+     *
+     * @param id the id of the DirectoryObjects to retrieve
+     * @return the request builder for the DirectoryObjects object
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DirectoryObjectRequestBuilder directoryObjects(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectRequestBuilder(getServiceRoot() + "/directoryObjects/" + id, this, null);
+    }
+
+    /**
      * Gets the collection of Invitations objects
      *
      * @return the request builder for the collection of Invitations objects
@@ -534,27 +555,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public com.microsoft.graph.requests.ContractRequestBuilder contracts(@Nonnull final String id) {
         return new com.microsoft.graph.requests.ContractRequestBuilder(getServiceRoot() + "/contracts/" + id, this, null);
-    }
-
-    /**
-     * Gets the collection of DirectoryObjects objects
-     *
-     * @return the request builder for the collection of DirectoryObjects objects
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder directoryObjects() {
-        return new com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder(getServiceRoot() + "/directoryObjects", this, null);
-    }
-
-    /**
-     * Gets a single DirectoryObjects
-     *
-     * @param id the id of the DirectoryObjects to retrieve
-     * @return the request builder for the DirectoryObjects object
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.DirectoryObjectRequestBuilder directoryObjects(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.DirectoryObjectRequestBuilder(getServiceRoot() + "/directoryObjects/" + id, this, null);
     }
 
     /**

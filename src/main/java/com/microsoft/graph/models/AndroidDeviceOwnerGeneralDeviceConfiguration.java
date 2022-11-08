@@ -775,7 +775,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Password Block Keyguard Features.
-     * List of device keyguard features to block. This collection can contain a maximum of 7 elements.
+     * List of device keyguard features to block. This collection can contain a maximum of 11 elements.
      */
     @SerializedName(value = "passwordBlockKeyguardFeatures", alternate = {"PasswordBlockKeyguardFeatures"})
     @Expose

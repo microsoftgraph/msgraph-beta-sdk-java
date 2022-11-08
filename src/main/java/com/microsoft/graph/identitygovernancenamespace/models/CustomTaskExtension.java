@@ -38,7 +38,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
 
     /**
      * The Created Date Time.
-     * When the custom task extension was created.
+     * When the custom task extension was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -47,7 +47,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
 
     /**
      * The Last Modified Date Time.
-     * When the custom extension was last modified.
+     * When the custom extension was last modified.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
 
     /**
      * The Created By.
-     * The unique identifier of the Azure AD user that created the custom task extension.
+     * The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -65,7 +65,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
 
     /**
      * The Last Modified By.
-     * The unique identifier of the Azure AD user that modified the custom task extension last.
+     * The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose

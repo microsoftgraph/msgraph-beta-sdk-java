@@ -266,6 +266,15 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
     public Boolean showAzureADEnterpriseApps;
 
     /**
+     * The Show Configuration Manager Apps.
+     * Boolean that indicates if Configuration Manager Apps will be shown in Company Portal
+     */
+    @SerializedName(value = "showConfigurationManagerApps", alternate = {"ShowConfigurationManagerApps"})
+    @Expose
+	@Nullable
+    public Boolean showConfigurationManagerApps;
+
+    /**
      * The Show Display Name Next To Logo.
      * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image or not
      */

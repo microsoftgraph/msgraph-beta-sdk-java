@@ -41,7 +41,7 @@ public class MeetingParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Identity.
-     * Identity information of the participant.
+     * Identity information of the participant. Only the user property is used for onlineMeeting participants.
      */
     @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose
