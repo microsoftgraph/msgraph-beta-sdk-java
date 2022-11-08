@@ -22,6 +22,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * Instantiates a new deviceManagementConfigurationIntegerSettingValueDefinitionTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinitionTemplate");
@@ -51,7 +52,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("maxValue", (n) -> { currentObject.setMaxValue(n.getIntegerValue()); });
             this.put("minValue", (n) -> { currentObject.setMinValue(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("maxValue", this.getMaxValue());
@@ -98,6 +100,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * @param value Value to set for the maxValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxValue(@javax.annotation.Nullable final Integer value) {
         this._maxValue = value;
     }
@@ -114,6 +118,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * @param value Value to set for the minValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinValue(@javax.annotation.Nullable final Integer value) {
         this._minValue = value;
     }
@@ -122,6 +127,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

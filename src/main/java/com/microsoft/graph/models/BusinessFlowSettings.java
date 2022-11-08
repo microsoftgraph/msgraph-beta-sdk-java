@@ -14,6 +14,7 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
      * Instantiates a new BusinessFlowSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BusinessFlowSettings() {
         super();
         this.setOdataType("#microsoft.graph.businessFlowSettings");
@@ -43,7 +44,7 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BusinessFlowSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
      * @param value Value to set for the durationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationInDays(@javax.annotation.Nullable final Integer value) {
         this._durationInDays = value;
     }

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the dataClassificationService singleton. */
 public class SensitiveType extends Entity implements Parsable {
     /** The classificationMethod property */
     private ClassificationMethod _classificationMethod;
@@ -31,6 +31,7 @@ public class SensitiveType extends Entity implements Parsable {
      * Instantiates a new sensitiveType and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SensitiveType() {
         super();
         this.setOdataType("#microsoft.graph.sensitiveType");
@@ -68,7 +69,7 @@ public class SensitiveType extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitiveType currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classificationMethod", (n) -> { currentObject.setClassificationMethod(n.getEnumValue(ClassificationMethod.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
@@ -141,6 +142,7 @@ public class SensitiveType extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +161,7 @@ public class SensitiveType extends Entity implements Parsable {
      * @param value Value to set for the classificationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassificationMethod(@javax.annotation.Nullable final ClassificationMethod value) {
         this._classificationMethod = value;
     }
@@ -167,6 +170,7 @@ public class SensitiveType extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -175,6 +179,7 @@ public class SensitiveType extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -183,6 +188,7 @@ public class SensitiveType extends Entity implements Parsable {
      * @param value Value to set for the publisherName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisherName(@javax.annotation.Nullable final String value) {
         this._publisherName = value;
     }
@@ -191,6 +197,7 @@ public class SensitiveType extends Entity implements Parsable {
      * @param value Value to set for the rulePackageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRulePackageId(@javax.annotation.Nullable final String value) {
         this._rulePackageId = value;
     }
@@ -199,6 +206,7 @@ public class SensitiveType extends Entity implements Parsable {
      * @param value Value to set for the rulePackageType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRulePackageType(@javax.annotation.Nullable final String value) {
         this._rulePackageType = value;
     }
@@ -207,6 +215,7 @@ public class SensitiveType extends Entity implements Parsable {
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final SensitiveTypeScope value) {
         this._scope = value;
     }
@@ -215,6 +224,7 @@ public class SensitiveType extends Entity implements Parsable {
      * @param value Value to set for the sensitiveTypeSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitiveTypeSource(@javax.annotation.Nullable final SensitiveTypeSource value) {
         this._sensitiveTypeSource = value;
     }
@@ -223,6 +233,7 @@ public class SensitiveType extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
         this._state = value;
     }

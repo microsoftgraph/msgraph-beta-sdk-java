@@ -20,6 +20,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * Instantiates a new governanceSubject and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GovernanceSubject() {
         super();
         this.setOdataType("#microsoft.graph.governanceSubject");
@@ -57,7 +58,7 @@ public class GovernanceSubject extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceSubject currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("principalName", (n) -> { currentObject.setPrincipalName(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -106,6 +109,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -114,6 +118,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param value Value to set for the principalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalName(@javax.annotation.Nullable final String value) {
         this._principalName = value;
     }
@@ -122,6 +127,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

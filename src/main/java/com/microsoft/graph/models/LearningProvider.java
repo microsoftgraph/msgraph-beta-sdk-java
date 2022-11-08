@@ -28,6 +28,7 @@ public class LearningProvider extends Entity implements Parsable {
      * Instantiates a new LearningProvider and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LearningProvider() {
         super();
         this.setOdataType("#microsoft.graph.learningProvider");
@@ -57,7 +58,7 @@ public class LearningProvider extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LearningProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
             this.put("learningContents", (n) -> { currentObject.setLearningContents(n.getCollectionOfObjectValues(LearningContent::createFromDiscriminatorValue)); });
@@ -129,6 +130,7 @@ public class LearningProvider extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class LearningProvider extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -154,6 +157,7 @@ public class LearningProvider extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -162,6 +166,7 @@ public class LearningProvider extends Entity implements Parsable {
      * @param value Value to set for the learningContents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLearningContents(@javax.annotation.Nullable final java.util.List<LearningContent> value) {
         this._learningContents = value;
     }
@@ -170,6 +175,7 @@ public class LearningProvider extends Entity implements Parsable {
      * @param value Value to set for the loginWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoginWebUrl(@javax.annotation.Nullable final String value) {
         this._loginWebUrl = value;
     }
@@ -178,6 +184,7 @@ public class LearningProvider extends Entity implements Parsable {
      * @param value Value to set for the longLogoWebUrlForDarkTheme property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLongLogoWebUrlForDarkTheme(@javax.annotation.Nullable final String value) {
         this._longLogoWebUrlForDarkTheme = value;
     }
@@ -186,6 +193,7 @@ public class LearningProvider extends Entity implements Parsable {
      * @param value Value to set for the longLogoWebUrlForLightTheme property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLongLogoWebUrlForLightTheme(@javax.annotation.Nullable final String value) {
         this._longLogoWebUrlForLightTheme = value;
     }
@@ -194,6 +202,7 @@ public class LearningProvider extends Entity implements Parsable {
      * @param value Value to set for the squareLogoWebUrlForDarkTheme property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogoWebUrlForDarkTheme(@javax.annotation.Nullable final String value) {
         this._squareLogoWebUrlForDarkTheme = value;
     }
@@ -202,6 +211,7 @@ public class LearningProvider extends Entity implements Parsable {
      * @param value Value to set for the squareLogoWebUrlForLightTheme property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogoWebUrlForLightTheme(@javax.annotation.Nullable final String value) {
         this._squareLogoWebUrlForLightTheme = value;
     }

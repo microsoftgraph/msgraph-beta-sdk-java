@@ -1,7 +1,7 @@
 package com.microsoft.graph.groups.item.team.primarychannel;
 
 import com.microsoft.graph.groups.item.team.primarychannel.completemigration.CompleteMigrationRequestBuilder;
-import com.microsoft.graph.groups.item.team.primarychannel.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname.DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder;
+import com.microsoft.graph.groups.item.team.primarychannel.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.groups.item.team.primarychannel.filesfolder.FilesFolderRequestBuilder;
 import com.microsoft.graph.groups.item.team.primarychannel.members.item.ConversationMemberItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.primarychannel.members.MembersRequestBuilder;
@@ -20,7 +20,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -31,63 +30,64 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the primaryChannel property of the microsoft.graph.team entity. */
 public class PrimaryChannelRequestBuilder {
-    /** The completeMigration property */
+    /** Provides operations to call the completeMigration method. */
     @javax.annotation.Nonnull
     public CompleteMigrationRequestBuilder completeMigration() {
         return new CompleteMigrationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The filesFolder property */
+    /** Provides operations to manage the filesFolder property of the microsoft.graph.channel entity. */
     @javax.annotation.Nonnull
     public FilesFolderRequestBuilder filesFolder() {
         return new FilesFolderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The members property */
+    /** Provides operations to manage the members property of the microsoft.graph.channel entity. */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The messages property */
+    /** Provides operations to manage the messages property of the microsoft.graph.channel entity. */
     @javax.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The provisionEmail property */
+    private HashMap<String, Object> pathParameters;
+    /** Provides operations to call the provisionEmail method. */
     @javax.annotation.Nonnull
     public ProvisionEmailRequestBuilder provisionEmail() {
         return new ProvisionEmailRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The removeEmail property */
+    /** Provides operations to call the removeEmail method. */
     @javax.annotation.Nonnull
     public RemoveEmailRequestBuilder removeEmail() {
         return new RemoveEmailRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The sharedWithTeams property */
+    private RequestAdapter requestAdapter;
+    /** Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity. */
     @javax.annotation.Nonnull
     public SharedWithTeamsRequestBuilder sharedWithTeams() {
         return new SharedWithTeamsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tabs property */
+    /** Provides operations to manage the tabs property of the microsoft.graph.channel entity. */
     @javax.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new PrimaryChannelRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrimaryChannelRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/groups/{group%2Did}/team/primaryChannel{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -97,9 +97,10 @@ public class PrimaryChannelRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrimaryChannelRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/groups/{group%2Did}/team/primaryChannel{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -133,7 +134,7 @@ public class PrimaryChannelRequestBuilder {
         return requestInfo;
     }
     /**
-     * The general channel for the team.
+     * Get the default channel, **General**, of a team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -141,7 +142,7 @@ public class PrimaryChannelRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The general channel for the team.
+     * Get the default channel, **General**, of a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -185,6 +186,7 @@ public class PrimaryChannelRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PrimaryChannelRequestBuilderPatchRequestConfiguration requestConfig = new PrimaryChannelRequestBuilderPatchRequestConfiguration();
@@ -198,16 +200,19 @@ public class PrimaryChannelRequestBuilder {
      * Delete navigation property primaryChannel for groups
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -215,195 +220,155 @@ public class PrimaryChannelRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<PrimaryChannelRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property primaryChannel for groups
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<PrimaryChannelRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
      * Provides operations to call the doesUserHaveAccess method.
-     * @return a doesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder
+     * @return a doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder
      */
     @javax.annotation.Nonnull
-    public DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder doesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalName() {
-        return new DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter);
+    public DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName() {
+        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * The general channel for the team.
+     * Get the default channel, **General**, of a team.
      * @return a CompletableFuture of channel
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, Channel::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Channel::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Channel>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * The general channel for the team.
+     * Get the default channel, **General**, of a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of channel
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> get(@javax.annotation.Nullable final java.util.function.Consumer<PrimaryChannelRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, Channel::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Channel::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * The general channel for the team.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of channel
-     */
-    public java.util.concurrent.CompletableFuture<Channel> get(@javax.annotation.Nullable final java.util.function.Consumer<PrimaryChannelRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<Channel>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, Channel::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.primaryChannel.members.item collection
+     * Provides operations to manage the members property of the microsoft.graph.channel entity.
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConversationMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("conversationMember%2Did", id);
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.primaryChannel.messages.item collection
+     * Provides operations to manage the messages property of the microsoft.graph.channel entity.
      * @param id Unique identifier of the item
      * @return a ChatMessageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChatMessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("chatMessage%2Did", id);
         return new ChatMessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property primaryChannel in groups
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of channel
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Channel body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Channel> patch(@javax.annotation.Nonnull final Channel body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Channel::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Channel>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property primaryChannel in groups
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of channel
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Channel body, @javax.annotation.Nullable final java.util.function.Consumer<PrimaryChannelRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property primaryChannel in groups
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Channel body, @javax.annotation.Nullable final java.util.function.Consumer<PrimaryChannelRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Channel> patch(@javax.annotation.Nonnull final Channel body, @javax.annotation.Nullable final java.util.function.Consumer<PrimaryChannelRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Channel::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Channel>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.primaryChannel.sharedWithTeams.item collection
+     * Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity.
      * @param id Unique identifier of the item
      * @return a SharedWithChannelTeamInfoItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SharedWithChannelTeamInfoItemRequestBuilder sharedWithTeams(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("sharedWithChannelTeamInfo%2Did", id);
         return new SharedWithChannelTeamInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.primaryChannel.tabs.item collection
+     * Provides operations to manage the tabs property of the microsoft.graph.channel entity.
      * @param id Unique identifier of the item
      * @return a TeamsTabItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsTabItemRequestBuilder tabs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("teamsTab%2Did", id);
         return new TeamsTabItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -414,15 +379,16 @@ public class PrimaryChannelRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new primaryChannelRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public PrimaryChannelRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The general channel for the team. */
+    /** Get the default channel, **General**, of a team. */
     public class PrimaryChannelRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -440,7 +406,7 @@ public class PrimaryChannelRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public PrimaryChannelRequestBuilderGetQueryParameters queryParameters = new PrimaryChannelRequestBuilderGetQueryParameters();
@@ -448,6 +414,7 @@ public class PrimaryChannelRequestBuilder {
          * Instantiates a new primaryChannelRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public PrimaryChannelRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -458,11 +425,12 @@ public class PrimaryChannelRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new primaryChannelRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public PrimaryChannelRequestBuilderPatchRequestConfiguration() {
         }
     }

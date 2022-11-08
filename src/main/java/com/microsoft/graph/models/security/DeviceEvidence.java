@@ -43,6 +43,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Instantiates a new DeviceEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.deviceEvidence");
@@ -88,7 +89,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureAdDeviceId", (n) -> { currentObject.setAzureAdDeviceId(n.getStringValue()); });
             this.put("defenderAvStatus", (n) -> { currentObject.setDefenderAvStatus(n.getEnumValue(DefenderAvStatus.class)); });
             this.put("deviceDnsName", (n) -> { currentObject.setDeviceDnsName(n.getStringValue()); });
@@ -207,6 +208,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -231,6 +233,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the azureAdDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdDeviceId(@javax.annotation.Nullable final String value) {
         this._azureAdDeviceId = value;
     }
@@ -239,6 +242,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the defenderAvStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAvStatus(@javax.annotation.Nullable final DefenderAvStatus value) {
         this._defenderAvStatus = value;
     }
@@ -247,6 +251,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the deviceDnsName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDnsName(@javax.annotation.Nullable final String value) {
         this._deviceDnsName = value;
     }
@@ -255,6 +260,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._firstSeenDateTime = value;
     }
@@ -263,6 +269,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStatus(@javax.annotation.Nullable final DeviceHealthStatus value) {
         this._healthStatus = value;
     }
@@ -271,6 +278,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the loggedOnUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoggedOnUsers(@javax.annotation.Nullable final java.util.List<LoggedOnUser> value) {
         this._loggedOnUsers = value;
     }
@@ -279,6 +287,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the mdeDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdeDeviceId(@javax.annotation.Nullable final String value) {
         this._mdeDeviceId = value;
     }
@@ -287,6 +296,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the onboardingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnboardingStatus(@javax.annotation.Nullable final OnboardingStatus value) {
         this._onboardingStatus = value;
     }
@@ -295,6 +305,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the osBuild property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsBuild(@javax.annotation.Nullable final Long value) {
         this._osBuild = value;
     }
@@ -303,6 +314,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the osPlatform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsPlatform(@javax.annotation.Nullable final String value) {
         this._osPlatform = value;
     }
@@ -311,6 +323,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the rbacGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRbacGroupId(@javax.annotation.Nullable final Integer value) {
         this._rbacGroupId = value;
     }
@@ -319,6 +332,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the rbacGroupName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRbacGroupName(@javax.annotation.Nullable final String value) {
         this._rbacGroupName = value;
     }
@@ -327,6 +341,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final DeviceRiskScore value) {
         this._riskScore = value;
     }
@@ -335,6 +350,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }
@@ -343,6 +359,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the vmMetadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVmMetadata(@javax.annotation.Nullable final VmMetadata value) {
         this._vmMetadata = value;
     }

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class UserConfiguration extends Entity implements Parsable {
     /** The binaryData property */
     private byte[] _binaryData;
@@ -15,6 +15,7 @@ public class UserConfiguration extends Entity implements Parsable {
      * Instantiates a new userConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.userConfiguration");
@@ -44,7 +45,7 @@ public class UserConfiguration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("binaryData", (n) -> { currentObject.setBinaryData(n.getByteArrayValue()); });
         }};
     }
@@ -53,6 +54,7 @@ public class UserConfiguration extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class UserConfiguration extends Entity implements Parsable {
      * @param value Value to set for the binaryData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBinaryData(@javax.annotation.Nullable final byte[] value) {
         this._binaryData = value;
     }

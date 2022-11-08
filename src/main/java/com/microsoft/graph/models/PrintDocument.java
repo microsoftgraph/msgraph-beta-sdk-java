@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PrintDocument extends Entity implements Parsable {
     /** The configuration property */
     private PrinterDocumentConfiguration _configuration;
@@ -21,6 +21,7 @@ public class PrintDocument extends Entity implements Parsable {
      * Instantiates a new printDocument and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrintDocument() {
         super();
         this.setOdataType("#microsoft.graph.printDocument");
@@ -66,7 +67,7 @@ public class PrintDocument extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintDocument currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configuration", (n) -> { currentObject.setConfiguration(n.getObjectValue(PrinterDocumentConfiguration::createFromDiscriminatorValue)); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class PrintDocument extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class PrintDocument extends Entity implements Parsable {
      * @param value Value to set for the configuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfiguration(@javax.annotation.Nullable final PrinterDocumentConfiguration value) {
         this._configuration = value;
     }
@@ -107,6 +110,7 @@ public class PrintDocument extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final String value) {
         this._contentType = value;
     }
@@ -115,6 +119,7 @@ public class PrintDocument extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -123,6 +128,7 @@ public class PrintDocument extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
         this._size = value;
     }

@@ -21,15 +21,15 @@ import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulereque
 import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.RoleEligibilityScheduleRequestsRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedules.item.UnifiedRoleEligibilityScheduleItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedules.RoleEligibilitySchedulesRequestBuilder;
-import com.microsoft.graph.rolemanagement.directory.rolescheduleinstanceswithdirectoryscopeidwithappscopeidwithprincipalidwithroledefinitionid.RoleScheduleInstancesWithDirectoryScopeIdWithAppScopeIdWithPrincipalIdWithRoleDefinitionIdRequestBuilder;
-import com.microsoft.graph.rolemanagement.directory.rolescheduleswithdirectoryscopeidwithappscopeidwithprincipalidwithroledefinitionid.RoleSchedulesWithDirectoryScopeIdWithAppScopeIdWithPrincipalIdWithRoleDefinitionIdRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.rolescheduleinstancesdirectoryscopeiddirectoryscopeidappscopeidappscopeidprincipalidprincipalidroledefinitionidroledefinitionid.RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleschedulesdirectoryscopeiddirectoryscopeidappscopeidappscopeidprincipalidprincipalidroledefinitionidroledefinitionid.RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.transitiveroleassignments.item.UnifiedRoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.transitiveroleassignments.TransitiveRoleAssignmentsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -41,77 +41,78 @@ import java.util.Objects;
 /** Provides operations to manage the directory property of the microsoft.graph.roleManagement entity. */
 public class DirectoryRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The resourceNamespaces property */
+    private RequestAdapter requestAdapter;
+    /** Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public ResourceNamespacesRequestBuilder resourceNamespaces() {
         return new ResourceNamespacesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleAssignmentApprovals property */
+    /** Provides operations to manage the roleAssignmentApprovals property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleAssignmentApprovalsRequestBuilder roleAssignmentApprovals() {
         return new RoleAssignmentApprovalsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleAssignments property */
+    /** Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleAssignmentsRequestBuilder roleAssignments() {
         return new RoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleAssignmentScheduleInstances property */
+    /** Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleAssignmentScheduleInstancesRequestBuilder roleAssignmentScheduleInstances() {
         return new RoleAssignmentScheduleInstancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleAssignmentScheduleRequests property */
+    /** Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleAssignmentScheduleRequestsRequestBuilder roleAssignmentScheduleRequests() {
         return new RoleAssignmentScheduleRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleAssignmentSchedules property */
+    /** Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleAssignmentSchedulesRequestBuilder roleAssignmentSchedules() {
         return new RoleAssignmentSchedulesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleDefinitions property */
+    /** Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleDefinitionsRequestBuilder roleDefinitions() {
         return new RoleDefinitionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleEligibilityScheduleInstances property */
+    /** Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleEligibilityScheduleInstancesRequestBuilder roleEligibilityScheduleInstances() {
         return new RoleEligibilityScheduleInstancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleEligibilityScheduleRequests property */
+    /** Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleEligibilityScheduleRequestsRequestBuilder roleEligibilityScheduleRequests() {
         return new RoleEligibilityScheduleRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleEligibilitySchedules property */
+    /** Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleEligibilitySchedulesRequestBuilder roleEligibilitySchedules() {
         return new RoleEligibilitySchedulesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The transitiveRoleAssignments property */
+    /** Provides operations to manage the transitiveRoleAssignments property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public TransitiveRoleAssignmentsRequestBuilder transitiveRoleAssignments() {
         return new TransitiveRoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new DirectoryRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/roleManagement/directory{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -121,9 +122,10 @@ public class DirectoryRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/roleManagement/directory{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -209,6 +211,7 @@ public class DirectoryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DirectoryRequestBuilderPatchRequestConfiguration requestConfig = new DirectoryRequestBuilderPatchRequestConfiguration();
@@ -222,16 +225,19 @@ public class DirectoryRequestBuilder {
      * Delete navigation property directory for roleManagement
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -239,50 +245,38 @@ public class DirectoryRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property directory for roleManagement
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
      * Get directory from roleManagement
      * @return a CompletableFuture of rbacApplication
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, RbacApplication::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, RbacApplication::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<RbacApplication>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -290,236 +284,208 @@ public class DirectoryRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of rbacApplication
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> get(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, RbacApplication::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, RbacApplication::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<RbacApplication>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Get directory from roleManagement
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
+     * Update the navigation property directory in roleManagement
+     * @param body 
      * @return a CompletableFuture of rbacApplication
      */
-    public java.util.concurrent.CompletableFuture<RbacApplication> get(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, RbacApplication::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property directory in roleManagement
-     * @param body 
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final RbacApplication body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<RbacApplication> patch(@javax.annotation.Nonnull final RbacApplication body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, RbacApplication::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<RbacApplication>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property directory in roleManagement
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of rbacApplication
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final RbacApplication body, @javax.annotation.Nullable final java.util.function.Consumer<DirectoryRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property directory in roleManagement
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final RbacApplication body, @javax.annotation.Nullable final java.util.function.Consumer<DirectoryRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<RbacApplication> patch(@javax.annotation.Nonnull final RbacApplication body, @javax.annotation.Nullable final java.util.function.Consumer<DirectoryRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, RbacApplication::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<RbacApplication>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.resourceNamespaces.item collection
+     * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRbacResourceNamespaceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRbacResourceNamespaceItemRequestBuilder resourceNamespaces(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRbacResourceNamespace%2Did", id);
         return new UnifiedRbacResourceNamespaceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignmentApprovals.item collection
+     * Provides operations to manage the roleAssignmentApprovals property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a ApprovalItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ApprovalItemRequestBuilder roleAssignmentApprovals(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("approval%2Did", id);
         return new ApprovalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignments.item collection
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.rolemanagement.directory.roleassignments.item.UnifiedRoleAssignmentItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleAssignment%2Did", id);
         return new com.microsoft.graph.rolemanagement.directory.roleassignments.item.UnifiedRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignmentScheduleInstances.item collection
+     * Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder roleAssignmentScheduleInstances(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleAssignmentScheduleInstance%2Did", id);
         return new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignmentScheduleRequests.item collection
+     * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleAssignmentScheduleRequestItemRequestBuilder roleAssignmentScheduleRequests(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleAssignmentScheduleRequest%2Did", id);
         return new UnifiedRoleAssignmentScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignmentSchedules.item collection
+     * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentScheduleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleAssignmentScheduleItemRequestBuilder roleAssignmentSchedules(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleAssignmentSchedule%2Did", id);
         return new UnifiedRoleAssignmentScheduleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleDefinitions.item collection
+     * Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleDefinitionItemRequestBuilder roleDefinitions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleDefinition%2Did", id);
         return new UnifiedRoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleEligibilityScheduleInstances.item collection
+     * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder roleEligibilityScheduleInstances(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleEligibilityScheduleInstance%2Did", id);
         return new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleEligibilityScheduleRequests.item collection
+     * Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleEligibilityScheduleRequestItemRequestBuilder roleEligibilityScheduleRequests(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleEligibilityScheduleRequest%2Did", id);
         return new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleEligibilitySchedules.item collection
+     * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleEligibilityScheduleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleEligibilityScheduleItemRequestBuilder roleEligibilitySchedules(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleEligibilitySchedule%2Did", id);
         return new UnifiedRoleEligibilityScheduleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Provides operations to call the roleScheduleInstances method.
-     * @return a roleScheduleInstancesWithDirectoryScopeIdWithAppScopeIdWithPrincipalIdWithRoleDefinitionIdRequestBuilder
+     * @return a roleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder
      */
     @javax.annotation.Nonnull
-    public RoleScheduleInstancesWithDirectoryScopeIdWithAppScopeIdWithPrincipalIdWithRoleDefinitionIdRequestBuilder roleScheduleInstancesWithDirectoryScopeIdWithAppScopeIdWithPrincipalIdWithRoleDefinitionId() {
-        return new RoleScheduleInstancesWithDirectoryScopeIdWithAppScopeIdWithPrincipalIdWithRoleDefinitionIdRequestBuilder(pathParameters, requestAdapter);
+    public RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder roleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
+        return new RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the roleSchedules method.
-     * @return a roleSchedulesWithDirectoryScopeIdWithAppScopeIdWithPrincipalIdWithRoleDefinitionIdRequestBuilder
+     * @return a roleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder
      */
     @javax.annotation.Nonnull
-    public RoleSchedulesWithDirectoryScopeIdWithAppScopeIdWithPrincipalIdWithRoleDefinitionIdRequestBuilder roleSchedulesWithDirectoryScopeIdWithAppScopeIdWithPrincipalIdWithRoleDefinitionId() {
-        return new RoleSchedulesWithDirectoryScopeIdWithAppScopeIdWithPrincipalIdWithRoleDefinitionIdRequestBuilder(pathParameters, requestAdapter);
+    public RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder roleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
+        return new RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.transitiveRoleAssignments.item collection
+     * Provides operations to manage the transitiveRoleAssignments property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.rolemanagement.directory.transitiveroleassignments.item.UnifiedRoleAssignmentItemRequestBuilder transitiveRoleAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleAssignment%2Did", id);
         return new com.microsoft.graph.rolemanagement.directory.transitiveroleassignments.item.UnifiedRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -530,11 +496,12 @@ public class DirectoryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new directoryRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public DirectoryRequestBuilderDeleteRequestConfiguration() {
         }
     }
@@ -556,7 +523,7 @@ public class DirectoryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DirectoryRequestBuilderGetQueryParameters queryParameters = new DirectoryRequestBuilderGetQueryParameters();
@@ -564,6 +531,7 @@ public class DirectoryRequestBuilder {
          * Instantiates a new directoryRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public DirectoryRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -574,11 +542,12 @@ public class DirectoryRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new directoryRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public DirectoryRequestBuilderPatchRequestConfiguration() {
         }
     }

@@ -19,11 +19,14 @@ import com.microsoft.graph.devicemanagement.comanageddevices.item.deviceconfigur
 import com.microsoft.graph.devicemanagement.comanageddevices.item.disable.DisableRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanageddevices.item.disablelostmode.DisableLostModeRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanageddevices.item.enablelostmode.EnableLostModeRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.item.endremotehelpsession.EndRemoteHelpSessionRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.item.enrollnowaction.EnrollNowActionRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanageddevices.item.getcloudpcremoteactionresults.GetCloudPcRemoteActionResultsRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanageddevices.item.getcloudpcreviewstatus.GetCloudPcReviewStatusRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanageddevices.item.getfilevaultkey.GetFileVaultKeyRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanageddevices.item.getnoncompliantsettings.GetNonCompliantSettingsRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanageddevices.item.getoemwarranty.GetOemWarrantyRequestBuilder;
+import com.microsoft.graph.devicemanagement.comanageddevices.item.initiatemobiledevicemanagementkeyrecovery.InitiateMobileDeviceManagementKeyRecoveryRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanageddevices.item.locatedevice.LocateDeviceRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanageddevices.item.logcollectionrequests.item.DeviceLogCollectionResponseItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.comanageddevices.item.logcollectionrequests.LogCollectionRequestsRequestBuilder;
@@ -69,7 +72,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -80,266 +82,281 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the comanagedDevices property of the microsoft.graph.deviceManagement entity. */
 public class ManagedDeviceItemRequestBuilder {
-    /** The activateDeviceEsim property */
+    /** Provides operations to call the activateDeviceEsim method. */
     @javax.annotation.Nonnull
     public ActivateDeviceEsimRequestBuilder activateDeviceEsim() {
         return new ActivateDeviceEsimRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignmentFilterEvaluationStatusDetails property */
+    /** Provides operations to manage the assignmentFilterEvaluationStatusDetails property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public AssignmentFilterEvaluationStatusDetailsRequestBuilder assignmentFilterEvaluationStatusDetails() {
         return new AssignmentFilterEvaluationStatusDetailsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The bypassActivationLock property */
+    /** Provides operations to call the bypassActivationLock method. */
     @javax.annotation.Nonnull
     public BypassActivationLockRequestBuilder bypassActivationLock() {
         return new BypassActivationLockRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The cleanWindowsDevice property */
+    /** Provides operations to call the cleanWindowsDevice method. */
     @javax.annotation.Nonnull
     public CleanWindowsDeviceRequestBuilder cleanWindowsDevice() {
         return new CleanWindowsDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The createDeviceLogCollectionRequest property */
+    /** Provides operations to call the createDeviceLogCollectionRequest method. */
     @javax.annotation.Nonnull
     public CreateDeviceLogCollectionRequestRequestBuilder createDeviceLogCollectionRequest() {
         return new CreateDeviceLogCollectionRequestRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The createRemoteHelpSession property */
+    /** Provides operations to call the createRemoteHelpSession method. */
     @javax.annotation.Nonnull
     public CreateRemoteHelpSessionRequestBuilder createRemoteHelpSession() {
         return new CreateRemoteHelpSessionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deleteUserFromSharedAppleDevice property */
+    /** Provides operations to call the deleteUserFromSharedAppleDevice method. */
     @javax.annotation.Nonnull
     public DeleteUserFromSharedAppleDeviceRequestBuilder deleteUserFromSharedAppleDevice() {
         return new DeleteUserFromSharedAppleDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deprovision property */
+    /** Provides operations to call the deprovision method. */
     @javax.annotation.Nonnull
     public DeprovisionRequestBuilder deprovision() {
         return new DeprovisionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The detectedApps property */
+    /** Provides operations to manage the detectedApps property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public DetectedAppsRequestBuilder detectedApps() {
         return new DetectedAppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceCategory property */
+    /** Provides operations to manage the deviceCategory property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public DeviceCategoryRequestBuilder deviceCategory() {
         return new DeviceCategoryRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceCompliancePolicyStates property */
+    /** Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public DeviceCompliancePolicyStatesRequestBuilder deviceCompliancePolicyStates() {
         return new DeviceCompliancePolicyStatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceConfigurationStates property */
+    /** Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public DeviceConfigurationStatesRequestBuilder deviceConfigurationStates() {
         return new DeviceConfigurationStatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The disable property */
+    /** Provides operations to call the disable method. */
     @javax.annotation.Nonnull
     public DisableRequestBuilder disable() {
         return new DisableRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The disableLostMode property */
+    /** Provides operations to call the disableLostMode method. */
     @javax.annotation.Nonnull
     public DisableLostModeRequestBuilder disableLostMode() {
         return new DisableLostModeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The enableLostMode property */
+    /** Provides operations to call the enableLostMode method. */
     @javax.annotation.Nonnull
     public EnableLostModeRequestBuilder enableLostMode() {
         return new EnableLostModeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The locateDevice property */
+    /** Provides operations to call the endRemoteHelpSession method. */
+    @javax.annotation.Nonnull
+    public EndRemoteHelpSessionRequestBuilder endRemoteHelpSession() {
+        return new EndRemoteHelpSessionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the enrollNowAction method. */
+    @javax.annotation.Nonnull
+    public EnrollNowActionRequestBuilder enrollNowAction() {
+        return new EnrollNowActionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the initiateMobileDeviceManagementKeyRecovery method. */
+    @javax.annotation.Nonnull
+    public InitiateMobileDeviceManagementKeyRecoveryRequestBuilder initiateMobileDeviceManagementKeyRecovery() {
+        return new InitiateMobileDeviceManagementKeyRecoveryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the locateDevice method. */
     @javax.annotation.Nonnull
     public LocateDeviceRequestBuilder locateDevice() {
         return new LocateDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The logCollectionRequests property */
+    /** Provides operations to manage the logCollectionRequests property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public LogCollectionRequestsRequestBuilder logCollectionRequests() {
         return new LogCollectionRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The logoutSharedAppleDeviceActiveUser property */
+    /** Provides operations to call the logoutSharedAppleDeviceActiveUser method. */
     @javax.annotation.Nonnull
     public LogoutSharedAppleDeviceActiveUserRequestBuilder logoutSharedAppleDeviceActiveUser() {
         return new LogoutSharedAppleDeviceActiveUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedDeviceMobileAppConfigurationStates property */
+    /** Provides operations to manage the managedDeviceMobileAppConfigurationStates property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public ManagedDeviceMobileAppConfigurationStatesRequestBuilder managedDeviceMobileAppConfigurationStates() {
         return new ManagedDeviceMobileAppConfigurationStatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The overrideComplianceState property */
+    /** Provides operations to call the overrideComplianceState method. */
     @javax.annotation.Nonnull
     public OverrideComplianceStateRequestBuilder overrideComplianceState() {
         return new OverrideComplianceStateRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The playLostModeSound property */
+    private HashMap<String, Object> pathParameters;
+    /** Provides operations to call the playLostModeSound method. */
     @javax.annotation.Nonnull
     public PlayLostModeSoundRequestBuilder playLostModeSound() {
         return new PlayLostModeSoundRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The rebootNow property */
+    /** Provides operations to call the rebootNow method. */
     @javax.annotation.Nonnull
     public RebootNowRequestBuilder rebootNow() {
         return new RebootNowRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The recoverPasscode property */
+    /** Provides operations to call the recoverPasscode method. */
     @javax.annotation.Nonnull
     public RecoverPasscodeRequestBuilder recoverPasscode() {
         return new RecoverPasscodeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The reenable property */
+    /** Provides operations to call the reenable method. */
     @javax.annotation.Nonnull
     public ReenableRequestBuilder reenable() {
         return new ReenableRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The remoteLock property */
+    /** Provides operations to call the remoteLock method. */
     @javax.annotation.Nonnull
     public RemoteLockRequestBuilder remoteLock() {
         return new RemoteLockRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The removeDeviceFirmwareConfigurationInterfaceManagement property */
+    /** Provides operations to call the removeDeviceFirmwareConfigurationInterfaceManagement method. */
     @javax.annotation.Nonnull
     public RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder removeDeviceFirmwareConfigurationInterfaceManagement() {
         return new RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The reprovisionCloudPc property */
+    /** Provides operations to call the reprovisionCloudPc method. */
     @javax.annotation.Nonnull
     public ReprovisionCloudPcRequestBuilder reprovisionCloudPc() {
         return new ReprovisionCloudPcRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The requestRemoteAssistance property */
+    private RequestAdapter requestAdapter;
+    /** Provides operations to call the requestRemoteAssistance method. */
     @javax.annotation.Nonnull
     public RequestRemoteAssistanceRequestBuilder requestRemoteAssistance() {
         return new RequestRemoteAssistanceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The requestRemoteHelpSessionAccess property */
+    /** Provides operations to call the requestRemoteHelpSessionAccess method. */
     @javax.annotation.Nonnull
     public RequestRemoteHelpSessionAccessRequestBuilder requestRemoteHelpSessionAccess() {
         return new RequestRemoteHelpSessionAccessRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The resetPasscode property */
+    /** Provides operations to call the resetPasscode method. */
     @javax.annotation.Nonnull
     public ResetPasscodeRequestBuilder resetPasscode() {
         return new ResetPasscodeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The resizeCloudPc property */
+    /** Provides operations to call the resizeCloudPc method. */
     @javax.annotation.Nonnull
     public ResizeCloudPcRequestBuilder resizeCloudPc() {
         return new ResizeCloudPcRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The restoreCloudPc property */
+    /** Provides operations to call the restoreCloudPc method. */
     @javax.annotation.Nonnull
     public RestoreCloudPcRequestBuilder restoreCloudPc() {
         return new RestoreCloudPcRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The retire property */
+    /** Provides operations to call the retire method. */
     @javax.annotation.Nonnull
     public RetireRequestBuilder retire() {
         return new RetireRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The revokeAppleVppLicenses property */
+    /** Provides operations to call the revokeAppleVppLicenses method. */
     @javax.annotation.Nonnull
     public RevokeAppleVppLicensesRequestBuilder revokeAppleVppLicenses() {
         return new RevokeAppleVppLicensesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The rotateBitLockerKeys property */
+    /** Provides operations to call the rotateBitLockerKeys method. */
     @javax.annotation.Nonnull
     public RotateBitLockerKeysRequestBuilder rotateBitLockerKeys() {
         return new RotateBitLockerKeysRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The rotateFileVaultKey property */
+    /** Provides operations to call the rotateFileVaultKey method. */
     @javax.annotation.Nonnull
     public RotateFileVaultKeyRequestBuilder rotateFileVaultKey() {
         return new RotateFileVaultKeyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The securityBaselineStates property */
+    /** Provides operations to manage the securityBaselineStates property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public SecurityBaselineStatesRequestBuilder securityBaselineStates() {
         return new SecurityBaselineStatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The sendCustomNotificationToCompanyPortal property */
+    /** Provides operations to call the sendCustomNotificationToCompanyPortal method. */
     @javax.annotation.Nonnull
     public SendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal() {
         return new SendCustomNotificationToCompanyPortalRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The setCloudPcReviewStatus property */
+    /** Provides operations to call the setCloudPcReviewStatus method. */
     @javax.annotation.Nonnull
     public SetCloudPcReviewStatusRequestBuilder setCloudPcReviewStatus() {
         return new SetCloudPcReviewStatusRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The setDeviceName property */
+    /** Provides operations to call the setDeviceName method. */
     @javax.annotation.Nonnull
     public SetDeviceNameRequestBuilder setDeviceName() {
         return new SetDeviceNameRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The shutDown property */
+    /** Provides operations to call the shutDown method. */
     @javax.annotation.Nonnull
     public ShutDownRequestBuilder shutDown() {
         return new ShutDownRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The syncDevice property */
+    /** Provides operations to call the syncDevice method. */
     @javax.annotation.Nonnull
     public SyncDeviceRequestBuilder syncDevice() {
         return new SyncDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The triggerConfigurationManagerAction property */
+    /** Provides operations to call the triggerConfigurationManagerAction method. */
     @javax.annotation.Nonnull
     public TriggerConfigurationManagerActionRequestBuilder triggerConfigurationManagerAction() {
         return new TriggerConfigurationManagerActionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The updateWindowsDeviceAccount property */
+    /** Provides operations to call the updateWindowsDeviceAccount method. */
     @javax.annotation.Nonnull
     public UpdateWindowsDeviceAccountRequestBuilder updateWindowsDeviceAccount() {
         return new UpdateWindowsDeviceAccountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /** The users property */
+    private String urlTemplate;
+    /** Provides operations to manage the users property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsDefenderScan property */
+    /** Provides operations to call the windowsDefenderScan method. */
     @javax.annotation.Nonnull
     public WindowsDefenderScanRequestBuilder windowsDefenderScan() {
         return new WindowsDefenderScanRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsDefenderUpdateSignatures property */
+    /** Provides operations to call the windowsDefenderUpdateSignatures method. */
     @javax.annotation.Nonnull
     public WindowsDefenderUpdateSignaturesRequestBuilder windowsDefenderUpdateSignatures() {
         return new WindowsDefenderUpdateSignaturesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsProtectionState property */
+    /** Provides operations to manage the windowsProtectionState property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public WindowsProtectionStateRequestBuilder windowsProtectionState() {
         return new WindowsProtectionStateRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The wipe property */
+    /** Provides operations to call the wipe method. */
     @javax.annotation.Nonnull
     public WipeRequestBuilder wipe() {
         return new WipeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.comanagedDevices.item.assignmentFilterEvaluationStatusDetails.item collection
+     * Provides operations to manage the assignmentFilterEvaluationStatusDetails property of the microsoft.graph.managedDevice entity.
      * @param id Unique identifier of the item
      * @return a AssignmentFilterEvaluationStatusDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AssignmentFilterEvaluationStatusDetailsItemRequestBuilder assignmentFilterEvaluationStatusDetails(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("assignmentFilterEvaluationStatusDetails%2Did", id);
         return new AssignmentFilterEvaluationStatusDetailsItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -349,11 +366,12 @@ public class ManagedDeviceItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/comanagedDevices/{managedDevice%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -363,9 +381,10 @@ public class ManagedDeviceItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/deviceManagement/comanagedDevices/{managedDevice%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -451,6 +470,7 @@ public class ManagedDeviceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ManagedDeviceItemRequestBuilderPatchRequestConfiguration requestConfig = new ManagedDeviceItemRequestBuilderPatchRequestConfiguration();
@@ -464,16 +484,19 @@ public class ManagedDeviceItemRequestBuilder {
      * Delete navigation property comanagedDevices for deviceManagement
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -481,69 +504,54 @@ public class ManagedDeviceItemRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property comanagedDevices for deviceManagement
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.comanagedDevices.item.detectedApps.item collection
+     * Provides operations to manage the detectedApps property of the microsoft.graph.managedDevice entity.
      * @param id Unique identifier of the item
      * @return a DetectedAppItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DetectedAppItemRequestBuilder detectedApps(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("detectedApp%2Did", id);
         return new DetectedAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.comanagedDevices.item.deviceCompliancePolicyStates.item collection
+     * Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity.
      * @param id Unique identifier of the item
      * @return a DeviceCompliancePolicyStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceCompliancePolicyStateItemRequestBuilder deviceCompliancePolicyStates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceCompliancePolicyState%2Did", id);
         return new DeviceCompliancePolicyStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.comanagedDevices.item.deviceConfigurationStates.item collection
+     * Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity.
      * @param id Unique identifier of the item
      * @return a DeviceConfigurationStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceConfigurationStateItemRequestBuilder deviceConfigurationStates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceConfigurationState%2Did", id);
         return new DeviceConfigurationStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -551,16 +559,19 @@ public class ManagedDeviceItemRequestBuilder {
      * The list of co-managed devices report
      * @return a CompletableFuture of managedDevice
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, ManagedDevice::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedDevice::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ManagedDevice>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -568,34 +579,19 @@ public class ManagedDeviceItemRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDevice
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, ManagedDevice::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedDevice::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * The list of co-managed devices report
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of managedDevice
-     */
-    public java.util.concurrent.CompletableFuture<ManagedDevice> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<ManagedDevice>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, ManagedDevice::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -639,82 +635,69 @@ public class ManagedDeviceItemRequestBuilder {
         return new GetOemWarrantyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.comanagedDevices.item.logCollectionRequests.item collection
+     * Provides operations to manage the logCollectionRequests property of the microsoft.graph.managedDevice entity.
      * @param id Unique identifier of the item
      * @return a DeviceLogCollectionResponseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceLogCollectionResponseItemRequestBuilder logCollectionRequests(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceLogCollectionResponse%2Did", id);
         return new DeviceLogCollectionResponseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.comanagedDevices.item.managedDeviceMobileAppConfigurationStates.item collection
+     * Provides operations to manage the managedDeviceMobileAppConfigurationStates property of the microsoft.graph.managedDevice entity.
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceMobileAppConfigurationStateItemRequestBuilder managedDeviceMobileAppConfigurationStates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedDeviceMobileAppConfigurationState%2Did", id);
         return new ManagedDeviceMobileAppConfigurationStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property comanagedDevices in deviceManagement
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of managedDevice
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ManagedDevice body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDevice> patch(@javax.annotation.Nonnull final ManagedDevice body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedDevice::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ManagedDevice>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property comanagedDevices in deviceManagement
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of managedDevice
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ManagedDevice body, @javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property comanagedDevices in deviceManagement
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ManagedDevice body, @javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDevice> patch(@javax.annotation.Nonnull final ManagedDevice body, @javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedDevice::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ManagedDevice>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -728,14 +711,14 @@ public class ManagedDeviceItemRequestBuilder {
         return new RetrieveRemoteHelpSessionWithSessionKeyRequestBuilder(pathParameters, requestAdapter, sessionKey);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.comanagedDevices.item.securityBaselineStates.item collection
+     * Provides operations to manage the securityBaselineStates property of the microsoft.graph.managedDevice entity.
      * @param id Unique identifier of the item
      * @return a SecurityBaselineStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SecurityBaselineStateItemRequestBuilder securityBaselineStates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("securityBaselineState%2Did", id);
         return new SecurityBaselineStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -746,11 +729,12 @@ public class ManagedDeviceItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ManagedDeviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public ManagedDeviceItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
@@ -772,7 +756,7 @@ public class ManagedDeviceItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ManagedDeviceItemRequestBuilderGetQueryParameters queryParameters = new ManagedDeviceItemRequestBuilderGetQueryParameters();
@@ -780,6 +764,7 @@ public class ManagedDeviceItemRequestBuilder {
          * Instantiates a new ManagedDeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public ManagedDeviceItemRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -790,11 +775,12 @@ public class ManagedDeviceItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ManagedDeviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public ManagedDeviceItemRequestBuilderPatchRequestConfiguration() {
         }
     }

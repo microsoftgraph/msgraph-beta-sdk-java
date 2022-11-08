@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the financials singleton. */
 public class Picture extends Entity implements Parsable {
     /** The content property */
     private byte[] _content;
@@ -21,6 +21,7 @@ public class Picture extends Entity implements Parsable {
      * Instantiates a new picture and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Picture() {
         super();
         this.setOdataType("#microsoft.graph.picture");
@@ -58,7 +59,7 @@ public class Picture extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Picture currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
             this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
@@ -86,6 +87,7 @@ public class Picture extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class Picture extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
     }
@@ -107,6 +110,7 @@ public class Picture extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final String value) {
         this._contentType = value;
     }
@@ -115,6 +119,7 @@ public class Picture extends Entity implements Parsable {
      * @param value Value to set for the height property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeight(@javax.annotation.Nullable final Integer value) {
         this._height = value;
     }
@@ -123,6 +128,7 @@ public class Picture extends Entity implements Parsable {
      * @param value Value to set for the width property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWidth(@javax.annotation.Nullable final Integer value) {
         this._width = value;
     }

@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
      * Instantiates a new DeviceManagementConfigurationChoiceSettingCollectionDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingCollectionDefinition() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition");
@@ -37,7 +38,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationChoiceSettingCollectionDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maximumCount", (n) -> { currentObject.setMaximumCount(n.getIntegerValue()); });
             this.put("minimumCount", (n) -> { currentObject.setMinimumCount(n.getIntegerValue()); });
         }};
@@ -63,6 +64,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
      * @param value Value to set for the maximumCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumCount(@javax.annotation.Nullable final Integer value) {
         this._maximumCount = value;
     }
@@ -82,6 +85,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
      * @param value Value to set for the minimumCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumCount(@javax.annotation.Nullable final Integer value) {
         this._minimumCount = value;
     }

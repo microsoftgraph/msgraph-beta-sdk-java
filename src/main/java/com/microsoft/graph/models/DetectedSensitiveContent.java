@@ -23,6 +23,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
      * Instantiates a new DetectedSensitiveContent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DetectedSensitiveContent() {
         super();
         this.setOdataType("#microsoft.graph.detectedSensitiveContent");
@@ -67,7 +68,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DetectedSensitiveContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classificationAttributes", (n) -> { currentObject.setClassificationAttributes(n.getCollectionOfObjectValues(ClassificationAttribute::createFromDiscriminatorValue)); });
             this.put("classificationMethod", (n) -> { currentObject.setClassificationMethod(n.getEnumValue(ClassificationMethod.class)); });
             this.put("matches", (n) -> { currentObject.setMatches(n.getCollectionOfObjectValues(SensitiveContentLocation::createFromDiscriminatorValue)); });
@@ -104,6 +105,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,6 +120,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
      * @param value Value to set for the classificationAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassificationAttributes(@javax.annotation.Nullable final java.util.List<ClassificationAttribute> value) {
         this._classificationAttributes = value;
     }
@@ -126,6 +129,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
      * @param value Value to set for the classificationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassificationMethod(@javax.annotation.Nullable final ClassificationMethod value) {
         this._classificationMethod = value;
     }
@@ -134,6 +138,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
      * @param value Value to set for the matches property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatches(@javax.annotation.Nullable final java.util.List<SensitiveContentLocation> value) {
         this._matches = value;
     }
@@ -142,6 +147,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final SensitiveTypeScope value) {
         this._scope = value;
     }
@@ -150,6 +156,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
      * @param value Value to set for the sensitiveTypeSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitiveTypeSource(@javax.annotation.Nullable final SensitiveTypeSource value) {
         this._sensitiveTypeSource = value;
     }

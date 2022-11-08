@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ManagementActionTenantDeploymentStatus extends Entity implements Parsable {
     /** The collection of deployment status for each instance of a management action. Optional. */
     private java.util.List<ManagementActionDeploymentStatus> _statuses;
@@ -20,6 +20,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      * Instantiates a new managementActionTenantDeploymentStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagementActionTenantDeploymentStatus() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.managementActionTenantDeploymentStatus");
@@ -41,7 +42,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementActionTenantDeploymentStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("statuses", (n) -> { currentObject.setStatuses(n.getCollectionOfObjectValues(ManagementActionDeploymentStatus::createFromDiscriminatorValue)); });
             this.put("tenantGroupId", (n) -> { currentObject.setTenantGroupId(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
@@ -76,6 +77,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -88,6 +90,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      * @param value Value to set for the statuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatuses(@javax.annotation.Nullable final java.util.List<ManagementActionDeploymentStatus> value) {
         this._statuses = value;
     }
@@ -96,6 +99,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      * @param value Value to set for the tenantGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantGroupId(@javax.annotation.Nullable final String value) {
         this._tenantGroupId = value;
     }
@@ -104,6 +108,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

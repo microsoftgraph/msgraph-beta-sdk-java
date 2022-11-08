@@ -23,6 +23,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
      * Instantiates a new VpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.vpnConfiguration");
@@ -67,7 +68,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });
             this.put("connectionName", (n) -> { currentObject.setConnectionName(n.getStringValue()); });
             this.put("realm", (n) -> { currentObject.setRealm(n.getStringValue()); });
@@ -104,6 +105,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,6 +120,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final VpnAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -126,6 +129,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
      * @param value Value to set for the connectionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionName(@javax.annotation.Nullable final String value) {
         this._connectionName = value;
     }
@@ -134,6 +138,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
      * @param value Value to set for the realm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRealm(@javax.annotation.Nullable final String value) {
         this._realm = value;
     }
@@ -142,6 +147,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final String value) {
         this._role = value;
     }
@@ -150,6 +156,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
      * @param value Value to set for the servers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServers(@javax.annotation.Nullable final java.util.List<VpnServer> value) {
         this._servers = value;
     }

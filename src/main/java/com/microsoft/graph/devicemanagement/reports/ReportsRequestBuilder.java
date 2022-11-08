@@ -35,12 +35,15 @@ import com.microsoft.graph.devicemanagement.reports.getdeviceinstallstatusreport
 import com.microsoft.graph.devicemanagement.reports.getdevicemanagementintentpersettingcontributingprofiles.GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getdevicemanagementintentsettingsreport.GetDeviceManagementIntentSettingsReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getdevicenoncompliancereport.GetDeviceNonComplianceReportRequestBuilder;
+import com.microsoft.graph.devicemanagement.reports.getencryptionreportfordevices.GetEncryptionReportForDevicesRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getenrollmentconfigurationpoliciesbydevice.GetEnrollmentConfigurationPoliciesByDeviceRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getfailedmobileappsreport.GetFailedMobileAppsReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getfailedmobileappssummaryreport.GetFailedMobileAppsSummaryReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getgrouppolicysettingsdevicesettingsreport.GetGroupPolicySettingsDeviceSettingsReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.gethistoricalreport.GetHistoricalReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getmalwaresummaryreport.GetMalwareSummaryReportRequestBuilder;
+import com.microsoft.graph.devicemanagement.reports.getmobileapplicationmanagementappconfigurationreport.GetMobileApplicationManagementAppConfigurationReportRequestBuilder;
+import com.microsoft.graph.devicemanagement.reports.getmobileapplicationmanagementappregistrationsummaryreport.GetMobileApplicationManagementAppRegistrationSummaryReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getnoncompliantdevicesandsettingsreport.GetNoncompliantDevicesAndSettingsReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getpolicynoncompliancemetadata.GetPolicyNonComplianceMetadataRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getpolicynoncompliancereport.GetPolicyNonComplianceReportRequestBuilder;
@@ -67,7 +70,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -78,311 +80,326 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the reports property of the microsoft.graph.deviceManagement entity. */
 public class ReportsRequestBuilder {
-    /** The cachedReportConfigurations property */
+    /** Provides operations to manage the cachedReportConfigurations property of the microsoft.graph.deviceManagementReports entity. */
     @javax.annotation.Nonnull
     public CachedReportConfigurationsRequestBuilder cachedReportConfigurations() {
         return new CachedReportConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The exportJobs property */
+    /** Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity. */
     @javax.annotation.Nonnull
     public ExportJobsRequestBuilder exportJobs() {
         return new ExportJobsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getActiveMalwareReport property */
+    /** Provides operations to call the getActiveMalwareReport method. */
     @javax.annotation.Nonnull
     public GetActiveMalwareReportRequestBuilder getActiveMalwareReport() {
         return new GetActiveMalwareReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getActiveMalwareSummaryReport property */
+    /** Provides operations to call the getActiveMalwareSummaryReport method. */
     @javax.annotation.Nonnull
     public GetActiveMalwareSummaryReportRequestBuilder getActiveMalwareSummaryReport() {
         return new GetActiveMalwareSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getAllCertificatesReport property */
+    /** Provides operations to call the getAllCertificatesReport method. */
     @javax.annotation.Nonnull
     public GetAllCertificatesReportRequestBuilder getAllCertificatesReport() {
         return new GetAllCertificatesReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getAppsInstallSummaryReport property */
+    /** Provides operations to call the getAppsInstallSummaryReport method. */
     @javax.annotation.Nonnull
     public GetAppsInstallSummaryReportRequestBuilder getAppsInstallSummaryReport() {
         return new GetAppsInstallSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getAppStatusOverviewReport property */
+    /** Provides operations to call the getAppStatusOverviewReport method. */
     @javax.annotation.Nonnull
     public GetAppStatusOverviewReportRequestBuilder getAppStatusOverviewReport() {
         return new GetAppStatusOverviewReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getCachedReport property */
+    /** Provides operations to call the getCachedReport method. */
     @javax.annotation.Nonnull
     public GetCachedReportRequestBuilder getCachedReport() {
         return new GetCachedReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getCertificatesReport property */
+    /** Provides operations to call the getCertificatesReport method. */
     @javax.annotation.Nonnull
     public GetCertificatesReportRequestBuilder getCertificatesReport() {
         return new GetCertificatesReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getCompliancePoliciesReportForDevice property */
+    /** Provides operations to call the getCompliancePoliciesReportForDevice method. */
     @javax.annotation.Nonnull
     public GetCompliancePoliciesReportForDeviceRequestBuilder getCompliancePoliciesReportForDevice() {
         return new GetCompliancePoliciesReportForDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getCompliancePolicyDevicesReport property */
+    /** Provides operations to call the getCompliancePolicyDevicesReport method. */
     @javax.annotation.Nonnull
     public GetCompliancePolicyDevicesReportRequestBuilder getCompliancePolicyDevicesReport() {
         return new GetCompliancePolicyDevicesReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getCompliancePolicyDeviceSummaryReport property */
+    /** Provides operations to call the getCompliancePolicyDeviceSummaryReport method. */
     @javax.annotation.Nonnull
     public GetCompliancePolicyDeviceSummaryReportRequestBuilder getCompliancePolicyDeviceSummaryReport() {
         return new GetCompliancePolicyDeviceSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getCompliancePolicyNonComplianceReport property */
+    /** Provides operations to call the getCompliancePolicyNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetCompliancePolicyNonComplianceReportRequestBuilder getCompliancePolicyNonComplianceReport() {
         return new GetCompliancePolicyNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getCompliancePolicyNonComplianceSummaryReport property */
+    /** Provides operations to call the getCompliancePolicyNonComplianceSummaryReport method. */
     @javax.annotation.Nonnull
     public GetCompliancePolicyNonComplianceSummaryReportRequestBuilder getCompliancePolicyNonComplianceSummaryReport() {
         return new GetCompliancePolicyNonComplianceSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getComplianceSettingDetailsReport property */
+    /** Provides operations to call the getComplianceSettingDetailsReport method. */
     @javax.annotation.Nonnull
     public GetComplianceSettingDetailsReportRequestBuilder getComplianceSettingDetailsReport() {
         return new GetComplianceSettingDetailsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getComplianceSettingNonComplianceReport property */
+    /** Provides operations to call the getComplianceSettingNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetComplianceSettingNonComplianceReportRequestBuilder getComplianceSettingNonComplianceReport() {
         return new GetComplianceSettingNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getComplianceSettingsReport property */
+    /** Provides operations to call the getComplianceSettingsReport method. */
     @javax.annotation.Nonnull
     public GetComplianceSettingsReportRequestBuilder getComplianceSettingsReport() {
         return new GetComplianceSettingsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigManagerDevicePolicyStatusReport property */
+    /** Provides operations to call the getConfigManagerDevicePolicyStatusReport method. */
     @javax.annotation.Nonnull
     public GetConfigManagerDevicePolicyStatusReportRequestBuilder getConfigManagerDevicePolicyStatusReport() {
         return new GetConfigManagerDevicePolicyStatusReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationPoliciesReportForDevice property */
+    /** Provides operations to call the getConfigurationPoliciesReportForDevice method. */
     @javax.annotation.Nonnull
     public GetConfigurationPoliciesReportForDeviceRequestBuilder getConfigurationPoliciesReportForDevice() {
         return new GetConfigurationPoliciesReportForDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationPolicyDevicesReport property */
+    /** Provides operations to call the getConfigurationPolicyDevicesReport method. */
     @javax.annotation.Nonnull
     public GetConfigurationPolicyDevicesReportRequestBuilder getConfigurationPolicyDevicesReport() {
         return new GetConfigurationPolicyDevicesReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationPolicyDeviceSummaryReport property */
+    /** Provides operations to call the getConfigurationPolicyDeviceSummaryReport method. */
     @javax.annotation.Nonnull
     public GetConfigurationPolicyDeviceSummaryReportRequestBuilder getConfigurationPolicyDeviceSummaryReport() {
         return new GetConfigurationPolicyDeviceSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationPolicyNonComplianceReport property */
+    /** Provides operations to call the getConfigurationPolicyNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetConfigurationPolicyNonComplianceReportRequestBuilder getConfigurationPolicyNonComplianceReport() {
         return new GetConfigurationPolicyNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationPolicyNonComplianceSummaryReport property */
+    /** Provides operations to call the getConfigurationPolicyNonComplianceSummaryReport method. */
     @javax.annotation.Nonnull
     public GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder getConfigurationPolicyNonComplianceSummaryReport() {
         return new GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationPolicySettingsDeviceSummaryReport property */
+    /** Provides operations to call the getConfigurationPolicySettingsDeviceSummaryReport method. */
     @javax.annotation.Nonnull
     public GetConfigurationPolicySettingsDeviceSummaryReportRequestBuilder getConfigurationPolicySettingsDeviceSummaryReport() {
         return new GetConfigurationPolicySettingsDeviceSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationSettingDetailsReport property */
+    /** Provides operations to call the getConfigurationSettingDetailsReport method. */
     @javax.annotation.Nonnull
     public GetConfigurationSettingDetailsReportRequestBuilder getConfigurationSettingDetailsReport() {
         return new GetConfigurationSettingDetailsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationSettingNonComplianceReport property */
+    /** Provides operations to call the getConfigurationSettingNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetConfigurationSettingNonComplianceReportRequestBuilder getConfigurationSettingNonComplianceReport() {
         return new GetConfigurationSettingNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationSettingsReport property */
+    /** Provides operations to call the getConfigurationSettingsReport method. */
     @javax.annotation.Nonnull
     public GetConfigurationSettingsReportRequestBuilder getConfigurationSettingsReport() {
         return new GetConfigurationSettingsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getDeviceConfigurationPolicySettingsSummaryReport property */
+    /** Provides operations to call the getDeviceConfigurationPolicySettingsSummaryReport method. */
     @javax.annotation.Nonnull
     public GetDeviceConfigurationPolicySettingsSummaryReportRequestBuilder getDeviceConfigurationPolicySettingsSummaryReport() {
         return new GetDeviceConfigurationPolicySettingsSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getDeviceConfigurationPolicyStatusSummary property */
+    /** Provides operations to call the getDeviceConfigurationPolicyStatusSummary method. */
     @javax.annotation.Nonnull
     public GetDeviceConfigurationPolicyStatusSummaryRequestBuilder getDeviceConfigurationPolicyStatusSummary() {
         return new GetDeviceConfigurationPolicyStatusSummaryRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getDeviceInstallStatusReport property */
+    /** Provides operations to call the getDeviceInstallStatusReport method. */
     @javax.annotation.Nonnull
     public GetDeviceInstallStatusReportRequestBuilder getDeviceInstallStatusReport() {
         return new GetDeviceInstallStatusReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getDeviceManagementIntentPerSettingContributingProfiles property */
+    /** Provides operations to call the getDeviceManagementIntentPerSettingContributingProfiles method. */
     @javax.annotation.Nonnull
     public GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder getDeviceManagementIntentPerSettingContributingProfiles() {
         return new GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getDeviceManagementIntentSettingsReport property */
+    /** Provides operations to call the getDeviceManagementIntentSettingsReport method. */
     @javax.annotation.Nonnull
     public GetDeviceManagementIntentSettingsReportRequestBuilder getDeviceManagementIntentSettingsReport() {
         return new GetDeviceManagementIntentSettingsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getDeviceNonComplianceReport property */
+    /** Provides operations to call the getDeviceNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetDeviceNonComplianceReportRequestBuilder getDeviceNonComplianceReport() {
         return new GetDeviceNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getEnrollmentConfigurationPoliciesByDevice property */
+    /** Provides operations to call the getEncryptionReportForDevices method. */
+    @javax.annotation.Nonnull
+    public GetEncryptionReportForDevicesRequestBuilder getEncryptionReportForDevices() {
+        return new GetEncryptionReportForDevicesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the getEnrollmentConfigurationPoliciesByDevice method. */
     @javax.annotation.Nonnull
     public GetEnrollmentConfigurationPoliciesByDeviceRequestBuilder getEnrollmentConfigurationPoliciesByDevice() {
         return new GetEnrollmentConfigurationPoliciesByDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getFailedMobileAppsReport property */
+    /** Provides operations to call the getFailedMobileAppsReport method. */
     @javax.annotation.Nonnull
     public GetFailedMobileAppsReportRequestBuilder getFailedMobileAppsReport() {
         return new GetFailedMobileAppsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getFailedMobileAppsSummaryReport property */
+    /** Provides operations to call the getFailedMobileAppsSummaryReport method. */
     @javax.annotation.Nonnull
     public GetFailedMobileAppsSummaryReportRequestBuilder getFailedMobileAppsSummaryReport() {
         return new GetFailedMobileAppsSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getGroupPolicySettingsDeviceSettingsReport property */
+    /** Provides operations to call the getGroupPolicySettingsDeviceSettingsReport method. */
     @javax.annotation.Nonnull
     public GetGroupPolicySettingsDeviceSettingsReportRequestBuilder getGroupPolicySettingsDeviceSettingsReport() {
         return new GetGroupPolicySettingsDeviceSettingsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getHistoricalReport property */
+    /** Provides operations to call the getHistoricalReport method. */
     @javax.annotation.Nonnull
     public GetHistoricalReportRequestBuilder getHistoricalReport() {
         return new GetHistoricalReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMalwareSummaryReport property */
+    /** Provides operations to call the getMalwareSummaryReport method. */
     @javax.annotation.Nonnull
     public GetMalwareSummaryReportRequestBuilder getMalwareSummaryReport() {
         return new GetMalwareSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getNoncompliantDevicesAndSettingsReport property */
+    /** Provides operations to call the getMobileApplicationManagementAppConfigurationReport method. */
+    @javax.annotation.Nonnull
+    public GetMobileApplicationManagementAppConfigurationReportRequestBuilder getMobileApplicationManagementAppConfigurationReport() {
+        return new GetMobileApplicationManagementAppConfigurationReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the getMobileApplicationManagementAppRegistrationSummaryReport method. */
+    @javax.annotation.Nonnull
+    public GetMobileApplicationManagementAppRegistrationSummaryReportRequestBuilder getMobileApplicationManagementAppRegistrationSummaryReport() {
+        return new GetMobileApplicationManagementAppRegistrationSummaryReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the getNoncompliantDevicesAndSettingsReport method. */
     @javax.annotation.Nonnull
     public GetNoncompliantDevicesAndSettingsReportRequestBuilder getNoncompliantDevicesAndSettingsReport() {
         return new GetNoncompliantDevicesAndSettingsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getPolicyNonComplianceMetadata property */
+    /** Provides operations to call the getPolicyNonComplianceMetadata method. */
     @javax.annotation.Nonnull
     public GetPolicyNonComplianceMetadataRequestBuilder getPolicyNonComplianceMetadata() {
         return new GetPolicyNonComplianceMetadataRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getPolicyNonComplianceReport property */
+    /** Provides operations to call the getPolicyNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetPolicyNonComplianceReportRequestBuilder getPolicyNonComplianceReport() {
         return new GetPolicyNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getPolicyNonComplianceSummaryReport property */
+    /** Provides operations to call the getPolicyNonComplianceSummaryReport method. */
     @javax.annotation.Nonnull
     public GetPolicyNonComplianceSummaryReportRequestBuilder getPolicyNonComplianceSummaryReport() {
         return new GetPolicyNonComplianceSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getQuietTimePolicyUsersReport property */
+    /** Provides operations to call the getQuietTimePolicyUsersReport method. */
     @javax.annotation.Nonnull
     public GetQuietTimePolicyUsersReportRequestBuilder getQuietTimePolicyUsersReport() {
         return new GetQuietTimePolicyUsersReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getQuietTimePolicyUserSummaryReport property */
+    /** Provides operations to call the getQuietTimePolicyUserSummaryReport method. */
     @javax.annotation.Nonnull
     public GetQuietTimePolicyUserSummaryReportRequestBuilder getQuietTimePolicyUserSummaryReport() {
         return new GetQuietTimePolicyUserSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getRelatedAppsStatusReport property */
+    /** Provides operations to call the getRelatedAppsStatusReport method. */
     @javax.annotation.Nonnull
     public GetRelatedAppsStatusReportRequestBuilder getRelatedAppsStatusReport() {
         return new GetRelatedAppsStatusReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getRemoteAssistanceSessionsReport property */
+    /** Provides operations to call the getRemoteAssistanceSessionsReport method. */
     @javax.annotation.Nonnull
     public GetRemoteAssistanceSessionsReportRequestBuilder getRemoteAssistanceSessionsReport() {
         return new GetRemoteAssistanceSessionsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getReportFilters property */
+    /** Provides operations to call the getReportFilters method. */
     @javax.annotation.Nonnull
     public GetReportFiltersRequestBuilder getReportFilters() {
         return new GetReportFiltersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getSettingNonComplianceReport property */
+    /** Provides operations to call the getSettingNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetSettingNonComplianceReportRequestBuilder getSettingNonComplianceReport() {
         return new GetSettingNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getUnhealthyDefenderAgentsReport property */
+    /** Provides operations to call the getUnhealthyDefenderAgentsReport method. */
     @javax.annotation.Nonnull
     public GetUnhealthyDefenderAgentsReportRequestBuilder getUnhealthyDefenderAgentsReport() {
         return new GetUnhealthyDefenderAgentsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getUnhealthyFirewallReport property */
+    /** Provides operations to call the getUnhealthyFirewallReport method. */
     @javax.annotation.Nonnull
     public GetUnhealthyFirewallReportRequestBuilder getUnhealthyFirewallReport() {
         return new GetUnhealthyFirewallReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getUnhealthyFirewallSummaryReport property */
+    /** Provides operations to call the getUnhealthyFirewallSummaryReport method. */
     @javax.annotation.Nonnull
     public GetUnhealthyFirewallSummaryReportRequestBuilder getUnhealthyFirewallSummaryReport() {
         return new GetUnhealthyFirewallSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getUserInstallStatusReport property */
+    /** Provides operations to call the getUserInstallStatusReport method. */
     @javax.annotation.Nonnull
     public GetUserInstallStatusReportRequestBuilder getUserInstallStatusReport() {
         return new GetUserInstallStatusReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport property */
+    /** Provides operations to call the getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport method. */
     @javax.annotation.Nonnull
     public GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRequestBuilder getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport() {
         return new GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getWindowsQualityUpdateAlertSummaryReport property */
+    /** Provides operations to call the getWindowsQualityUpdateAlertSummaryReport method. */
     @javax.annotation.Nonnull
     public GetWindowsQualityUpdateAlertSummaryReportRequestBuilder getWindowsQualityUpdateAlertSummaryReport() {
         return new GetWindowsQualityUpdateAlertSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getWindowsUpdateAlertsPerPolicyPerDeviceReport property */
+    /** Provides operations to call the getWindowsUpdateAlertsPerPolicyPerDeviceReport method. */
     @javax.annotation.Nonnull
     public GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder getWindowsUpdateAlertsPerPolicyPerDeviceReport() {
         return new GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getWindowsUpdateAlertSummaryReport property */
+    /** Provides operations to call the getWindowsUpdateAlertSummaryReport method. */
     @javax.annotation.Nonnull
     public GetWindowsUpdateAlertSummaryReportRequestBuilder getWindowsUpdateAlertSummaryReport() {
         return new GetWindowsUpdateAlertSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getZebraFotaDeploymentReport property */
+    /** Provides operations to call the getZebraFotaDeploymentReport method. */
     @javax.annotation.Nonnull
     public GetZebraFotaDeploymentReportRequestBuilder getZebraFotaDeploymentReport() {
         return new GetZebraFotaDeploymentReportRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.reports.cachedReportConfigurations.item collection
+     * Provides operations to manage the cachedReportConfigurations property of the microsoft.graph.deviceManagementReports entity.
      * @param id Unique identifier of the item
      * @return a DeviceManagementCachedReportConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementCachedReportConfigurationItemRequestBuilder cachedReportConfigurations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceManagementCachedReportConfiguration%2Did", id);
         return new DeviceManagementCachedReportConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -392,11 +409,12 @@ public class ReportsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReportsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/reports{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -406,9 +424,10 @@ public class ReportsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReportsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/deviceManagement/reports{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -494,6 +513,7 @@ public class ReportsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ReportsRequestBuilderPatchRequestConfiguration requestConfig = new ReportsRequestBuilderPatchRequestConfiguration();
@@ -507,16 +527,19 @@ public class ReportsRequestBuilder {
      * Delete navigation property reports for deviceManagement
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -524,45 +547,30 @@ public class ReportsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property reports for deviceManagement
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.reports.exportJobs.item collection
+     * Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity.
      * @param id Unique identifier of the item
      * @return a DeviceManagementExportJobItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementExportJobItemRequestBuilder exportJobs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceManagementExportJob%2Did", id);
         return new DeviceManagementExportJobItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -570,16 +578,19 @@ public class ReportsRequestBuilder {
      * Reports singleton
      * @return a CompletableFuture of deviceManagementReports
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReports> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementReports::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementReports::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DeviceManagementReports>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -587,89 +598,61 @@ public class ReportsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementReports
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReports> get(@javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementReports::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementReports::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DeviceManagementReports>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Reports singleton
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
+     * Update the navigation property reports in deviceManagement
+     * @param body 
      * @return a CompletableFuture of deviceManagementReports
      */
-    public java.util.concurrent.CompletableFuture<DeviceManagementReports> get(@javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementReports::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property reports in deviceManagement
-     * @param body 
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DeviceManagementReports body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementReports> patch(@javax.annotation.Nonnull final DeviceManagementReports body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementReports::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DeviceManagementReports>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property reports in deviceManagement
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of deviceManagementReports
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DeviceManagementReports body, @javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property reports in deviceManagement
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DeviceManagementReports body, @javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementReports> patch(@javax.annotation.Nonnull final DeviceManagementReports body, @javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementReports::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DeviceManagementReports>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
@@ -679,11 +662,12 @@ public class ReportsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new reportsRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public ReportsRequestBuilderDeleteRequestConfiguration() {
         }
     }
@@ -705,7 +689,7 @@ public class ReportsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ReportsRequestBuilderGetQueryParameters queryParameters = new ReportsRequestBuilderGetQueryParameters();
@@ -713,6 +697,7 @@ public class ReportsRequestBuilder {
          * Instantiates a new reportsRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public ReportsRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -723,11 +708,12 @@ public class ReportsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new reportsRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public ReportsRequestBuilderPatchRequestConfiguration() {
         }
     }

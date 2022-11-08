@@ -18,6 +18,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * Instantiates a new AppManagementPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppManagementPolicy() {
         super();
         this.setOdataType("#microsoft.graph.appManagementPolicy");
@@ -47,7 +48,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppManagementPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
             this.put("restrictions", (n) -> { currentObject.setRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._appliesTo = value;
     }
@@ -94,6 +97,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -102,6 +106,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the restrictions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestrictions(@javax.annotation.Nullable final AppManagementConfiguration value) {
         this._restrictions = value;
     }

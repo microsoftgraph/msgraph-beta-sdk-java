@@ -14,6 +14,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
      * Instantiates a new DeviceManagementConfigurationChoiceSettingCollectionInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingCollectionInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionInstance");
@@ -43,7 +44,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationChoiceSettingCollectionInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("choiceSettingCollectionValue", (n) -> { currentObject.setChoiceSettingCollectionValue(n.getCollectionOfObjectValues(DeviceManagementConfigurationChoiceSettingValue::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
      * @param value Value to set for the choiceSettingCollectionValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChoiceSettingCollectionValue(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationChoiceSettingValue> value) {
         this._choiceSettingCollectionValue = value;
     }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the auditLogRoot singleton. */
 public class DirectoryAudit extends Entity implements Parsable {
     /** Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _activityDateTime;
@@ -15,7 +16,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     private String _activityDisplayName;
     /** Indicates additional details on the activity. */
     private java.util.List<KeyValue> _additionalDetails;
-    /** Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..) */
+    /** Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. */
     private String _category;
     /** Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services. */
     private String _correlationId;
@@ -34,9 +35,10 @@ public class DirectoryAudit extends Entity implements Parsable {
     /** Type of user agent used by a user in the activity. */
     private String _userAgent;
     /**
-     * Instantiates a new DirectoryAudit and sets the default values.
+     * Instantiates a new directoryAudit and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryAudit() {
         super();
         this.setOdataType("#microsoft.graph.directoryAudit");
@@ -44,7 +46,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DirectoryAudit
+     * @return a directoryAudit
      */
     @javax.annotation.Nonnull
     public static DirectoryAudit createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -76,7 +78,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this._additionalDetails;
     }
     /**
-     * Gets the category property value. Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
+     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -98,7 +100,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DirectoryAudit currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
             this.put("activityDisplayName", (n) -> { currentObject.setActivityDisplayName(n.getStringValue()); });
             this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
@@ -174,6 +176,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,6 +198,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._activityDateTime = value;
     }
@@ -203,6 +207,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the activityDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDisplayName(@javax.annotation.Nullable final String value) {
         this._activityDisplayName = value;
     }
@@ -211,14 +216,16 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalDetails(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
         this._additionalDetails = value;
     }
     /**
-     * Sets the category property value. Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
+     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final String value) {
         this._category = value;
     }
@@ -227,6 +234,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the correlationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCorrelationId(@javax.annotation.Nullable final String value) {
         this._correlationId = value;
     }
@@ -235,6 +243,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedBy(@javax.annotation.Nullable final AuditActivityInitiator value) {
         this._initiatedBy = value;
     }
@@ -243,6 +252,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the loggedByService property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoggedByService(@javax.annotation.Nullable final String value) {
         this._loggedByService = value;
     }
@@ -251,6 +261,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the operationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperationType(@javax.annotation.Nullable final String value) {
         this._operationType = value;
     }
@@ -259,6 +270,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the result property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResult(@javax.annotation.Nullable final OperationResult value) {
         this._result = value;
     }
@@ -267,6 +279,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the resultReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultReason(@javax.annotation.Nullable final String value) {
         this._resultReason = value;
     }
@@ -275,6 +288,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the targetResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetResources(@javax.annotation.Nullable final java.util.List<TargetResource> value) {
         this._targetResources = value;
     }
@@ -283,6 +297,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the userAgent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAgent(@javax.annotation.Nullable final String value) {
         this._userAgent = value;
     }

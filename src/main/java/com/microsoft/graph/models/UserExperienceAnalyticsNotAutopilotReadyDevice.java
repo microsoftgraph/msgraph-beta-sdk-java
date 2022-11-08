@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics Device not windows autopilot ready. */
 public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity implements Parsable {
     /** The intune device's autopilotProfileAssigned. */
     private Boolean _autoPilotProfileAssigned;
@@ -27,9 +28,10 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     /** The intune device's serial number. */
     private String _serialNumber;
     /**
-     * Instantiates a new UserExperienceAnalyticsNotAutopilotReadyDevice and sets the default values.
+     * Instantiates a new userExperienceAnalyticsNotAutopilotReadyDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsNotAutopilotReadyDevice() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsNotAutopilotReadyDevice");
@@ -37,7 +39,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a userExperienceAnalyticsNotAutopilotReadyDevice
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsNotAutopilotReadyDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -91,7 +93,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsNotAutopilotReadyDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("autoPilotProfileAssigned", (n) -> { currentObject.setAutoPilotProfileAssigned(n.getBooleanValue()); });
             this.put("autoPilotRegistered", (n) -> { currentObject.setAutoPilotRegistered(n.getBooleanValue()); });
             this.put("azureAdJoinType", (n) -> { currentObject.setAzureAdJoinType(n.getStringValue()); });
@@ -140,6 +142,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +161,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param value Value to set for the autoPilotProfileAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoPilotProfileAssigned(@javax.annotation.Nullable final Boolean value) {
         this._autoPilotProfileAssigned = value;
     }
@@ -166,6 +170,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param value Value to set for the autoPilotRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoPilotRegistered(@javax.annotation.Nullable final Boolean value) {
         this._autoPilotRegistered = value;
     }
@@ -174,6 +179,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param value Value to set for the azureAdJoinType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdJoinType(@javax.annotation.Nullable final String value) {
         this._azureAdJoinType = value;
     }
@@ -182,6 +188,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param value Value to set for the azureAdRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdRegistered(@javax.annotation.Nullable final Boolean value) {
         this._azureAdRegistered = value;
     }
@@ -190,6 +197,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -198,6 +206,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param value Value to set for the managedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedBy(@javax.annotation.Nullable final String value) {
         this._managedBy = value;
     }
@@ -206,6 +215,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -214,6 +224,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -222,6 +233,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
         this._serialNumber = value;
     }

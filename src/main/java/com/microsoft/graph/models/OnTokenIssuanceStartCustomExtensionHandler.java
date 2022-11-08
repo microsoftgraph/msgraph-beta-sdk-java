@@ -14,6 +14,7 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
      * Instantiates a new OnTokenIssuanceStartCustomExtensionHandler and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnTokenIssuanceStartCustomExtensionHandler() {
         super();
         this.setOdataType("#microsoft.graph.onTokenIssuanceStartCustomExtensionHandler");
@@ -43,7 +44,7 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnTokenIssuanceStartCustomExtensionHandler currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customExtension", (n) -> { currentObject.setCustomExtension(n.getObjectValue(OnTokenIssuanceStartCustomExtension::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
      * @param value Value to set for the customExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomExtension(@javax.annotation.Nullable final OnTokenIssuanceStartCustomExtension value) {
         this._customExtension = value;
     }

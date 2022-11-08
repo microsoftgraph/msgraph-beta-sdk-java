@@ -23,6 +23,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
      * Instantiates a new synchronizationLinkedObjects and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationLinkedObjects() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.synchronizationLinkedObjects");
@@ -52,7 +53,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationLinkedObjects currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("manager", (n) -> { currentObject.setManager(n.getObjectValue(SynchronizationJobSubject::createFromDiscriminatorValue)); });
             this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(SynchronizationJobSubject::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("manager", this.getManager());
@@ -109,6 +111,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
      * @param value Value to set for the manager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManager(@javax.annotation.Nullable final SynchronizationJobSubject value) {
         this._manager = value;
     }
@@ -125,6 +129,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<SynchronizationJobSubject> value) {
         this._members = value;
     }
@@ -133,6 +138,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +147,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
      * @param value Value to set for the owners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwners(@javax.annotation.Nullable final java.util.List<SynchronizationJobSubject> value) {
         this._owners = value;
     }

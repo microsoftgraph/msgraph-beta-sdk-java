@@ -34,6 +34,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * Instantiates a new RiskyServicePrincipal and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RiskyServicePrincipal() {
         super();
         this.setOdataType("#microsoft.graph.riskyServicePrincipal");
@@ -86,7 +87,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskyServicePrincipal currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -160,6 +161,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -179,6 +181,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
         this._accountEnabled = value;
     }
@@ -187,6 +190,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -195,6 +199,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -203,6 +208,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param value Value to set for the history property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistory(@javax.annotation.Nullable final java.util.List<RiskyServicePrincipalHistoryItem> value) {
         this._history = value;
     }
@@ -211,6 +217,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param value Value to set for the isProcessing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsProcessing(@javax.annotation.Nullable final Boolean value) {
         this._isProcessing = value;
     }
@@ -219,6 +226,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param value Value to set for the riskDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskDetail(@javax.annotation.Nullable final RiskDetail value) {
         this._riskDetail = value;
     }
@@ -227,6 +235,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param value Value to set for the riskLastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._riskLastUpdatedDateTime = value;
     }
@@ -235,6 +244,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param value Value to set for the riskLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLevel(@javax.annotation.Nullable final RiskLevel value) {
         this._riskLevel = value;
     }
@@ -243,6 +253,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param value Value to set for the riskState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskState(@javax.annotation.Nullable final RiskState value) {
         this._riskState = value;
     }
@@ -251,6 +262,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param value Value to set for the servicePrincipalType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalType(@javax.annotation.Nullable final String value) {
         this._servicePrincipalType = value;
     }

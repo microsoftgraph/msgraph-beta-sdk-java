@@ -43,6 +43,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * Instantiates a new deviceManagementSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceManagementSettings");
@@ -152,7 +153,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettings currentObject = this;
-        return new HashMap<>(14) {{
+        return new HashMap<String, Consumer<ParseNode>>(14) {{
             this.put("androidDeviceAdministratorEnrollmentEnabled", (n) -> { currentObject.setAndroidDeviceAdministratorEnrollmentEnabled(n.getBooleanValue()); });
             this.put("derivedCredentialProvider", (n) -> { currentObject.setDerivedCredentialProvider(n.getEnumValue(DerivedCredentialProviderType.class)); });
             this.put("derivedCredentialUrl", (n) -> { currentObject.setDerivedCredentialUrl(n.getStringValue()); });
@@ -206,6 +207,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("androidDeviceAdministratorEnrollmentEnabled", this.getAndroidDeviceAdministratorEnrollmentEnabled());
@@ -229,6 +231,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -237,6 +240,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the androidDeviceAdministratorEnrollmentEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidDeviceAdministratorEnrollmentEnabled(@javax.annotation.Nullable final Boolean value) {
         this._androidDeviceAdministratorEnrollmentEnabled = value;
     }
@@ -245,6 +249,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the derivedCredentialProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialProvider(@javax.annotation.Nullable final DerivedCredentialProviderType value) {
         this._derivedCredentialProvider = value;
     }
@@ -253,6 +258,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the derivedCredentialUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialUrl(@javax.annotation.Nullable final String value) {
         this._derivedCredentialUrl = value;
     }
@@ -261,6 +267,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the deviceComplianceCheckinThresholdDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceComplianceCheckinThresholdDays(@javax.annotation.Nullable final Integer value) {
         this._deviceComplianceCheckinThresholdDays = value;
     }
@@ -269,6 +276,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the deviceInactivityBeforeRetirementInDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceInactivityBeforeRetirementInDay(@javax.annotation.Nullable final Integer value) {
         this._deviceInactivityBeforeRetirementInDay = value;
     }
@@ -277,6 +285,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the enableAutopilotDiagnostics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableAutopilotDiagnostics(@javax.annotation.Nullable final Boolean value) {
         this._enableAutopilotDiagnostics = value;
     }
@@ -285,6 +294,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the enableDeviceGroupMembershipReport property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableDeviceGroupMembershipReport(@javax.annotation.Nullable final Boolean value) {
         this._enableDeviceGroupMembershipReport = value;
     }
@@ -293,6 +303,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the enableEnhancedTroubleshootingExperience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableEnhancedTroubleshootingExperience(@javax.annotation.Nullable final Boolean value) {
         this._enableEnhancedTroubleshootingExperience = value;
     }
@@ -301,6 +312,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the enableLogCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableLogCollection(@javax.annotation.Nullable final Boolean value) {
         this._enableLogCollection = value;
     }
@@ -309,6 +321,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the enhancedJailBreak property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnhancedJailBreak(@javax.annotation.Nullable final Boolean value) {
         this._enhancedJailBreak = value;
     }
@@ -317,6 +330,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the ignoreDevicesForUnsupportedSettingsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIgnoreDevicesForUnsupportedSettingsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._ignoreDevicesForUnsupportedSettingsEnabled = value;
     }
@@ -325,6 +339,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the isScheduledActionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsScheduledActionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isScheduledActionEnabled = value;
     }
@@ -333,6 +348,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -341,6 +357,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the secureByDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecureByDefault(@javax.annotation.Nullable final Boolean value) {
         this._secureByDefault = value;
     }

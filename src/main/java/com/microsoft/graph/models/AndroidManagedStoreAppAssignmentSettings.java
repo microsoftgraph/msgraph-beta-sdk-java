@@ -16,6 +16,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
      * Instantiates a new AndroidManagedStoreAppAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedStoreAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedStoreAppAssignmentSettings");
@@ -53,7 +54,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedStoreAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("androidManagedStoreAppTrackIds", (n) -> { currentObject.setAndroidManagedStoreAppTrackIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("autoUpdateMode", (n) -> { currentObject.setAutoUpdateMode(n.getEnumValue(AndroidManagedStoreAutoUpdateMode.class)); });
         }};
@@ -63,6 +64,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
      * @param value Value to set for the androidManagedStoreAppTrackIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidManagedStoreAppTrackIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._androidManagedStoreAppTrackIds = value;
     }
@@ -82,6 +85,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
      * @param value Value to set for the autoUpdateMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoUpdateMode(@javax.annotation.Nullable final AndroidManagedStoreAutoUpdateMode value) {
         this._autoUpdateMode = value;
     }

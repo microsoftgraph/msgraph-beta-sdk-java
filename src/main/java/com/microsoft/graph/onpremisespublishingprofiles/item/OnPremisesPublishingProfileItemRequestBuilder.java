@@ -17,7 +17,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -28,82 +27,82 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of onPremisesPublishingProfile entities. */
 public class OnPremisesPublishingProfileItemRequestBuilder {
-    /** The agentGroups property */
+    /** Provides operations to manage the agentGroups property of the microsoft.graph.onPremisesPublishingProfile entity. */
     @javax.annotation.Nonnull
     public AgentGroupsRequestBuilder agentGroups() {
         return new AgentGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The agents property */
+    /** Provides operations to manage the agents property of the microsoft.graph.onPremisesPublishingProfile entity. */
     @javax.annotation.Nonnull
     public AgentsRequestBuilder agents() {
         return new AgentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The connectorGroups property */
+    /** Provides operations to manage the connectorGroups property of the microsoft.graph.onPremisesPublishingProfile entity. */
     @javax.annotation.Nonnull
     public ConnectorGroupsRequestBuilder connectorGroups() {
         return new ConnectorGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The connectors property */
+    /** Provides operations to manage the connectors property of the microsoft.graph.onPremisesPublishingProfile entity. */
     @javax.annotation.Nonnull
     public ConnectorsRequestBuilder connectors() {
         return new ConnectorsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The publishedResources property */
+    private HashMap<String, Object> pathParameters;
+    /** Provides operations to manage the publishedResources property of the microsoft.graph.onPremisesPublishingProfile entity. */
     @javax.annotation.Nonnull
     public PublishedResourcesRequestBuilder publishedResources() {
         return new PublishedResourcesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.agentGroups.item collection
+     * Provides operations to manage the agentGroups property of the microsoft.graph.onPremisesPublishingProfile entity.
      * @param id Unique identifier of the item
      * @return a OnPremisesAgentGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnPremisesAgentGroupItemRequestBuilder agentGroups(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("onPremisesAgentGroup%2Did", id);
         return new OnPremisesAgentGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.agents.item collection
+     * Provides operations to manage the agents property of the microsoft.graph.onPremisesPublishingProfile entity.
      * @param id Unique identifier of the item
      * @return a OnPremisesAgentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnPremisesAgentItemRequestBuilder agents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("onPremisesAgent%2Did", id);
         return new OnPremisesAgentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.connectorGroups.item collection
+     * Provides operations to manage the connectorGroups property of the microsoft.graph.onPremisesPublishingProfile entity.
      * @param id Unique identifier of the item
      * @return a ConnectorGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConnectorGroupItemRequestBuilder connectorGroups(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("connectorGroup%2Did", id);
         return new ConnectorGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.connectors.item collection
+     * Provides operations to manage the connectors property of the microsoft.graph.onPremisesPublishingProfile entity.
      * @param id Unique identifier of the item
      * @return a ConnectorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConnectorItemRequestBuilder connectors(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("connector%2Did", id);
         return new ConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -113,11 +112,12 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnPremisesPublishingProfileItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -127,9 +127,10 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnPremisesPublishingProfileItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -215,6 +216,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final OnPremisesPublishingProfileItemRequestBuilderPatchRequestConfiguration requestConfig = new OnPremisesPublishingProfileItemRequestBuilderPatchRequestConfiguration();
@@ -228,16 +230,19 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
      * Delete entity from onPremisesPublishingProfiles
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -245,50 +250,38 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<OnPremisesPublishingProfileItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete entity from onPremisesPublishingProfiles
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<OnPremisesPublishingProfileItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
      * Get entity from onPremisesPublishingProfiles by key
      * @return a CompletableFuture of onPremisesPublishingProfile
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, OnPremisesPublishingProfile::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OnPremisesPublishingProfile::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -296,100 +289,72 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onPremisesPublishingProfile
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile> get(@javax.annotation.Nullable final java.util.function.Consumer<OnPremisesPublishingProfileItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, OnPremisesPublishingProfile::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OnPremisesPublishingProfile::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Get entity from onPremisesPublishingProfiles by key
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
+     * Update entity in onPremisesPublishingProfiles
+     * @param body 
      * @return a CompletableFuture of onPremisesPublishingProfile
      */
-    public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile> get(@javax.annotation.Nullable final java.util.function.Consumer<OnPremisesPublishingProfileItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, OnPremisesPublishingProfile::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update entity in onPremisesPublishingProfiles
-     * @param body 
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final OnPremisesPublishingProfile body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile> patch(@javax.annotation.Nonnull final OnPremisesPublishingProfile body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OnPremisesPublishingProfile::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update entity in onPremisesPublishingProfiles
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of onPremisesPublishingProfile
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final OnPremisesPublishingProfile body, @javax.annotation.Nullable final java.util.function.Consumer<OnPremisesPublishingProfileItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update entity in onPremisesPublishingProfiles
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final OnPremisesPublishingProfile body, @javax.annotation.Nullable final java.util.function.Consumer<OnPremisesPublishingProfileItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile> patch(@javax.annotation.Nonnull final OnPremisesPublishingProfile body, @javax.annotation.Nullable final java.util.function.Consumer<OnPremisesPublishingProfileItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OnPremisesPublishingProfile::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.onPremisesPublishingProfiles.item.publishedResources.item collection
+     * Provides operations to manage the publishedResources property of the microsoft.graph.onPremisesPublishingProfile entity.
      * @param id Unique identifier of the item
      * @return a PublishedResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PublishedResourceItemRequestBuilder publishedResources(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("publishedResource%2Did", id);
         return new PublishedResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -400,11 +365,12 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new OnPremisesPublishingProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public OnPremisesPublishingProfileItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
@@ -426,7 +392,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public OnPremisesPublishingProfileItemRequestBuilderGetQueryParameters queryParameters = new OnPremisesPublishingProfileItemRequestBuilderGetQueryParameters();
@@ -434,6 +400,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
          * Instantiates a new OnPremisesPublishingProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public OnPremisesPublishingProfileItemRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -444,11 +411,12 @@ public class OnPremisesPublishingProfileItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new OnPremisesPublishingProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public OnPremisesPublishingProfileItemRequestBuilderPatchRequestConfiguration() {
         }
     }

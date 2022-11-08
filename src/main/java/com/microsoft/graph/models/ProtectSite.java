@@ -16,6 +16,7 @@ public class ProtectSite extends LabelActionBase implements Parsable {
      * Instantiates a new ProtectSite and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProtectSite() {
         super();
         this.setOdataType("#microsoft.graph.protectSite");
@@ -53,7 +54,7 @@ public class ProtectSite extends LabelActionBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProtectSite currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessType", (n) -> { currentObject.setAccessType(n.getEnumValue(SiteAccessType.class)); });
             this.put("conditionalAccessProtectionLevelId", (n) -> { currentObject.setConditionalAccessProtectionLevelId(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class ProtectSite extends LabelActionBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class ProtectSite extends LabelActionBase implements Parsable {
      * @param value Value to set for the accessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessType(@javax.annotation.Nullable final SiteAccessType value) {
         this._accessType = value;
     }
@@ -82,6 +85,7 @@ public class ProtectSite extends LabelActionBase implements Parsable {
      * @param value Value to set for the conditionalAccessProtectionLevelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessProtectionLevelId(@javax.annotation.Nullable final String value) {
         this._conditionalAccessProtectionLevelId = value;
     }

@@ -24,6 +24,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * Instantiates a new markChatUnreadForUserPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MarkChatUnreadForUserPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -52,7 +53,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MarkChatUnreadForUserPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("lastMessageReadDateTime", (n) -> { currentObject.setLastMessageReadDateTime(n.getOffsetDateTimeValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
             this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
@@ -87,6 +88,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastMessageReadDateTime", this.getLastMessageReadDateTime());
@@ -99,6 +101,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -107,6 +110,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the lastMessageReadDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastMessageReadDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastMessageReadDateTime = value;
     }
@@ -115,6 +119,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -123,6 +128,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the user property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final TeamworkUserIdentity value) {
         this._user = value;
     }

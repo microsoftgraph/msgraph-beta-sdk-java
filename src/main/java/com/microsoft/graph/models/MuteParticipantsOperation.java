@@ -14,6 +14,7 @@ public class MuteParticipantsOperation extends CommsOperation implements Parsabl
      * Instantiates a new MuteParticipantsOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MuteParticipantsOperation() {
         super();
         this.setOdataType("#microsoft.graph.muteParticipantsOperation");
@@ -35,7 +36,7 @@ public class MuteParticipantsOperation extends CommsOperation implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MuteParticipantsOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class MuteParticipantsOperation extends CommsOperation implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class MuteParticipantsOperation extends CommsOperation implements Parsabl
      * @param value Value to set for the participants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final java.util.List<String> value) {
         this._participants = value;
     }

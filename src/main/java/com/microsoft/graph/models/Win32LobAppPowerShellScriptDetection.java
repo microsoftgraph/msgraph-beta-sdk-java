@@ -18,6 +18,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * Instantiates a new Win32LobAppPowerShellScriptDetection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppPowerShellScriptDetection() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppPowerShellScriptDetection");
@@ -47,7 +48,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppPowerShellScriptDetection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });
             this.put("runAs32Bit", (n) -> { currentObject.setRunAs32Bit(n.getBooleanValue()); });
             this.put("scriptContent", (n) -> { currentObject.setScriptContent(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * @param value Value to set for the enforceSignatureCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforceSignatureCheck(@javax.annotation.Nullable final Boolean value) {
         this._enforceSignatureCheck = value;
     }
@@ -94,6 +97,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * @param value Value to set for the runAs32Bit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAs32Bit(@javax.annotation.Nullable final Boolean value) {
         this._runAs32Bit = value;
     }
@@ -102,6 +106,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * @param value Value to set for the scriptContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScriptContent(@javax.annotation.Nullable final String value) {
         this._scriptContent = value;
     }

@@ -41,6 +41,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Instantiates a new unmanagedDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnmanagedDevice() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.unmanagedDevice");
@@ -86,7 +87,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnmanagedDevice currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("domain", (n) -> { currentObject.setDomain(n.getStringValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
@@ -186,6 +187,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceName", this.getDeviceName());
@@ -207,6 +209,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -215,6 +218,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -223,6 +227,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the domain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomain(@javax.annotation.Nullable final String value) {
         this._domain = value;
     }
@@ -231,6 +236,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -239,6 +245,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastLoggedOnUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastLoggedOnUser(@javax.annotation.Nullable final String value) {
         this._lastLoggedOnUser = value;
     }
@@ -247,6 +254,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSeenDateTime = value;
     }
@@ -255,6 +263,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final String value) {
         this._location = value;
     }
@@ -263,6 +272,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the macAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacAddress(@javax.annotation.Nullable final String value) {
         this._macAddress = value;
     }
@@ -271,6 +281,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -279,6 +290,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -287,6 +299,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -295,6 +308,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the os property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOs(@javax.annotation.Nullable final String value) {
         this._os = value;
     }
@@ -303,6 +317,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }

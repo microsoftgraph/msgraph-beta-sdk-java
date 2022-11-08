@@ -31,6 +31,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * Instantiates a new AndroidManagedStoreApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedStoreApp() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedStoreApp");
@@ -83,7 +84,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedStoreApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appIdentifier", (n) -> { currentObject.setAppIdentifier(n.getStringValue()); });
             this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
             this.put("appTracks", (n) -> { currentObject.setAppTracks(n.getCollectionOfObjectValues(AndroidManagedStoreAppTrack::createFromDiscriminatorValue)); });
@@ -148,6 +149,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -166,6 +168,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the appIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppIdentifier(@javax.annotation.Nullable final String value) {
         this._appIdentifier = value;
     }
@@ -174,6 +177,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the appStoreUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
         this._appStoreUrl = value;
     }
@@ -182,6 +186,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the appTracks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppTracks(@javax.annotation.Nullable final java.util.List<AndroidManagedStoreAppTrack> value) {
         this._appTracks = value;
     }
@@ -190,6 +195,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the isPrivate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPrivate(@javax.annotation.Nullable final Boolean value) {
         this._isPrivate = value;
     }
@@ -198,6 +204,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the isSystemApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSystemApp(@javax.annotation.Nullable final Boolean value) {
         this._isSystemApp = value;
     }
@@ -206,6 +213,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the packageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
         this._packageId = value;
     }
@@ -214,6 +222,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the supportsOemConfig property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportsOemConfig(@javax.annotation.Nullable final Boolean value) {
         this._supportsOemConfig = value;
     }
@@ -222,6 +231,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the totalLicenseCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalLicenseCount(@javax.annotation.Nullable final Integer value) {
         this._totalLicenseCount = value;
     }
@@ -230,6 +240,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the usedLicenseCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsedLicenseCount(@javax.annotation.Nullable final Integer value) {
         this._usedLicenseCount = value;
     }

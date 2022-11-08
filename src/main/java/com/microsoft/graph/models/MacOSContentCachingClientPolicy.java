@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum MacOSContentCachingClientPolicy implements ValuedEnum {
     /** Defaults to clients in local network. */
     NotConfigured("notConfigured"),

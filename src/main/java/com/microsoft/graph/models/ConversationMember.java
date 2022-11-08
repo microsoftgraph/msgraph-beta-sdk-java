@@ -13,7 +13,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ConversationMember extends Entity implements Parsable {
     /** The display name of the user. */
     private String _displayName;
@@ -25,6 +25,7 @@ public class ConversationMember extends Entity implements Parsable {
      * Instantiates a new conversationMember and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.conversationMember");
@@ -65,7 +66,7 @@ public class ConversationMember extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConversationMember currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("visibleHistoryStartDateTime", (n) -> { currentObject.setVisibleHistoryStartDateTime(n.getOffsetDateTimeValue()); });
@@ -92,6 +93,7 @@ public class ConversationMember extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,6 +106,7 @@ public class ConversationMember extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -112,6 +115,7 @@ public class ConversationMember extends Entity implements Parsable {
      * @param value Value to set for the roles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoles(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roles = value;
     }
@@ -120,6 +124,7 @@ public class ConversationMember extends Entity implements Parsable {
      * @param value Value to set for the visibleHistoryStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisibleHistoryStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._visibleHistoryStartDateTime = value;
     }

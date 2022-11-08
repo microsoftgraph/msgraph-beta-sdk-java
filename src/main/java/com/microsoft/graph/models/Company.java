@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the financials singleton. */
 public class Company extends Entity implements Parsable {
     /** The accounts property */
     private java.util.List<Account> _accounts;
@@ -87,9 +88,10 @@ public class Company extends Entity implements Parsable {
     /** The vendors property */
     private java.util.List<Vendor> _vendors;
     /**
-     * Instantiates a new Company and sets the default values.
+     * Instantiates a new company and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Company() {
         super();
         this.setOdataType("#microsoft.graph.company");
@@ -97,7 +99,7 @@ public class Company extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Company
+     * @return a company
      */
     @javax.annotation.Nonnull
     public static Company createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -223,7 +225,7 @@ public class Company extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Company currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accounts", (n) -> { currentObject.setAccounts(n.getCollectionOfObjectValues(Account::createFromDiscriminatorValue)); });
             this.put("agedAccountsPayable", (n) -> { currentObject.setAgedAccountsPayable(n.getCollectionOfObjectValues(AgedAccountsPayable::createFromDiscriminatorValue)); });
             this.put("agedAccountsReceivable", (n) -> { currentObject.setAgedAccountsReceivable(n.getCollectionOfObjectValues(AgedAccountsReceivable::createFromDiscriminatorValue)); });
@@ -470,6 +472,7 @@ public class Company extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -518,6 +521,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the accounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccounts(@javax.annotation.Nullable final java.util.List<Account> value) {
         this._accounts = value;
     }
@@ -526,6 +530,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the agedAccountsPayable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgedAccountsPayable(@javax.annotation.Nullable final java.util.List<AgedAccountsPayable> value) {
         this._agedAccountsPayable = value;
     }
@@ -534,6 +539,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the agedAccountsReceivable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgedAccountsReceivable(@javax.annotation.Nullable final java.util.List<AgedAccountsReceivable> value) {
         this._agedAccountsReceivable = value;
     }
@@ -542,6 +548,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the businessProfileId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessProfileId(@javax.annotation.Nullable final String value) {
         this._businessProfileId = value;
     }
@@ -550,6 +557,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the companyInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompanyInformation(@javax.annotation.Nullable final java.util.List<CompanyInformation> value) {
         this._companyInformation = value;
     }
@@ -558,6 +566,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the countriesRegions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountriesRegions(@javax.annotation.Nullable final java.util.List<CountryRegion> value) {
         this._countriesRegions = value;
     }
@@ -566,6 +575,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the currencies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrencies(@javax.annotation.Nullable final java.util.List<Currency> value) {
         this._currencies = value;
     }
@@ -574,6 +584,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the customerPaymentJournals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerPaymentJournals(@javax.annotation.Nullable final java.util.List<CustomerPaymentJournal> value) {
         this._customerPaymentJournals = value;
     }
@@ -582,6 +593,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the customerPayments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerPayments(@javax.annotation.Nullable final java.util.List<CustomerPayment> value) {
         this._customerPayments = value;
     }
@@ -590,6 +602,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the customers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomers(@javax.annotation.Nullable final java.util.List<Customer> value) {
         this._customers = value;
     }
@@ -598,6 +611,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the dimensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDimensions(@javax.annotation.Nullable final java.util.List<Dimension> value) {
         this._dimensions = value;
     }
@@ -606,6 +620,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the dimensionValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDimensionValues(@javax.annotation.Nullable final java.util.List<DimensionValue> value) {
         this._dimensionValues = value;
     }
@@ -614,6 +629,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -622,6 +638,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the employees property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployees(@javax.annotation.Nullable final java.util.List<Employee> value) {
         this._employees = value;
     }
@@ -630,6 +647,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the generalLedgerEntries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGeneralLedgerEntries(@javax.annotation.Nullable final java.util.List<GeneralLedgerEntry> value) {
         this._generalLedgerEntries = value;
     }
@@ -638,6 +656,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the itemCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemCategories(@javax.annotation.Nullable final java.util.List<ItemCategory> value) {
         this._itemCategories = value;
     }
@@ -646,6 +665,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the items property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<Item> value) {
         this._items = value;
     }
@@ -654,6 +674,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the journalLines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJournalLines(@javax.annotation.Nullable final java.util.List<JournalLine> value) {
         this._journalLines = value;
     }
@@ -662,6 +683,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the journals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJournals(@javax.annotation.Nullable final java.util.List<Journal> value) {
         this._journals = value;
     }
@@ -670,6 +692,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -678,6 +701,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the paymentMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPaymentMethods(@javax.annotation.Nullable final java.util.List<PaymentMethod> value) {
         this._paymentMethods = value;
     }
@@ -686,6 +710,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the paymentTerms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPaymentTerms(@javax.annotation.Nullable final java.util.List<PaymentTerm> value) {
         this._paymentTerms = value;
     }
@@ -694,6 +719,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the picture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPicture(@javax.annotation.Nullable final java.util.List<Picture> value) {
         this._picture = value;
     }
@@ -702,6 +728,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the purchaseInvoiceLines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPurchaseInvoiceLines(@javax.annotation.Nullable final java.util.List<PurchaseInvoiceLine> value) {
         this._purchaseInvoiceLines = value;
     }
@@ -710,6 +737,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the purchaseInvoices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPurchaseInvoices(@javax.annotation.Nullable final java.util.List<PurchaseInvoice> value) {
         this._purchaseInvoices = value;
     }
@@ -718,6 +746,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the salesCreditMemoLines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesCreditMemoLines(@javax.annotation.Nullable final java.util.List<SalesCreditMemoLine> value) {
         this._salesCreditMemoLines = value;
     }
@@ -726,6 +755,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the salesCreditMemos property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesCreditMemos(@javax.annotation.Nullable final java.util.List<SalesCreditMemo> value) {
         this._salesCreditMemos = value;
     }
@@ -734,6 +764,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the salesInvoiceLines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesInvoiceLines(@javax.annotation.Nullable final java.util.List<SalesInvoiceLine> value) {
         this._salesInvoiceLines = value;
     }
@@ -742,6 +773,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the salesInvoices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesInvoices(@javax.annotation.Nullable final java.util.List<SalesInvoice> value) {
         this._salesInvoices = value;
     }
@@ -750,6 +782,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the salesOrderLines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesOrderLines(@javax.annotation.Nullable final java.util.List<SalesOrderLine> value) {
         this._salesOrderLines = value;
     }
@@ -758,6 +791,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the salesOrders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesOrders(@javax.annotation.Nullable final java.util.List<SalesOrder> value) {
         this._salesOrders = value;
     }
@@ -766,6 +800,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the salesQuoteLines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesQuoteLines(@javax.annotation.Nullable final java.util.List<SalesQuoteLine> value) {
         this._salesQuoteLines = value;
     }
@@ -774,6 +809,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the salesQuotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesQuotes(@javax.annotation.Nullable final java.util.List<SalesQuote> value) {
         this._salesQuotes = value;
     }
@@ -782,6 +818,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the shipmentMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShipmentMethods(@javax.annotation.Nullable final java.util.List<ShipmentMethod> value) {
         this._shipmentMethods = value;
     }
@@ -790,6 +827,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the systemVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemVersion(@javax.annotation.Nullable final String value) {
         this._systemVersion = value;
     }
@@ -798,6 +836,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the taxAreas property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxAreas(@javax.annotation.Nullable final java.util.List<TaxArea> value) {
         this._taxAreas = value;
     }
@@ -806,6 +845,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the taxGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxGroups(@javax.annotation.Nullable final java.util.List<TaxGroup> value) {
         this._taxGroups = value;
     }
@@ -814,6 +854,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the unitsOfMeasure property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnitsOfMeasure(@javax.annotation.Nullable final java.util.List<UnitOfMeasure> value) {
         this._unitsOfMeasure = value;
     }
@@ -822,6 +863,7 @@ public class Company extends Entity implements Parsable {
      * @param value Value to set for the vendors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendors(@javax.annotation.Nullable final java.util.List<Vendor> value) {
         this._vendors = value;
     }

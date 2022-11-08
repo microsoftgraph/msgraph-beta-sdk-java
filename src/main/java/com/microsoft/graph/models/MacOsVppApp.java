@@ -37,6 +37,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * Instantiates a new MacOsVppApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOsVppApp() {
         super();
         this.setOdataType("#microsoft.graph.macOsVppApp");
@@ -82,7 +83,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOsVppApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
             this.put("assignedLicenses", (n) -> { currentObject.setAssignedLicenses(n.getCollectionOfObjectValues(MacOsVppAppAssignedLicense::createFromDiscriminatorValue)); });
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
@@ -174,6 +175,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,6 +197,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the appStoreUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
         this._appStoreUrl = value;
     }
@@ -203,6 +206,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the assignedLicenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedLicenses(@javax.annotation.Nullable final java.util.List<MacOsVppAppAssignedLicense> value) {
         this._assignedLicenses = value;
     }
@@ -211,6 +215,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the bundleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBundleId(@javax.annotation.Nullable final String value) {
         this._bundleId = value;
     }
@@ -219,6 +224,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the licensingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicensingType(@javax.annotation.Nullable final VppLicensingType value) {
         this._licensingType = value;
     }
@@ -227,6 +233,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the releaseDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReleaseDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._releaseDateTime = value;
     }
@@ -235,6 +242,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the revokeLicenseActionResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRevokeLicenseActionResults(@javax.annotation.Nullable final java.util.List<MacOsVppAppRevokeLicensesActionResult> value) {
         this._revokeLicenseActionResults = value;
     }
@@ -243,6 +251,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the totalLicenseCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalLicenseCount(@javax.annotation.Nullable final Integer value) {
         this._totalLicenseCount = value;
     }
@@ -251,6 +260,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the usedLicenseCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsedLicenseCount(@javax.annotation.Nullable final Integer value) {
         this._usedLicenseCount = value;
     }
@@ -259,6 +269,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the vppTokenAccountType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVppTokenAccountType(@javax.annotation.Nullable final VppTokenAccountType value) {
         this._vppTokenAccountType = value;
     }
@@ -267,6 +278,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the vppTokenAppleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVppTokenAppleId(@javax.annotation.Nullable final String value) {
         this._vppTokenAppleId = value;
     }
@@ -275,6 +287,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the vppTokenId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVppTokenId(@javax.annotation.Nullable final String value) {
         this._vppTokenId = value;
     }
@@ -283,6 +296,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      * @param value Value to set for the vppTokenOrganizationName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVppTokenOrganizationName(@javax.annotation.Nullable final String value) {
         this._vppTokenOrganizationName = value;
     }

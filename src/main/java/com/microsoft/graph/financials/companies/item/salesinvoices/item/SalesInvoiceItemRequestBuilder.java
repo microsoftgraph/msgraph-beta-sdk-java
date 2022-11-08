@@ -18,7 +18,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -29,73 +28,74 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the salesInvoices property of the microsoft.graph.company entity. */
 public class SalesInvoiceItemRequestBuilder {
-    /** The cancel property */
+    /** Provides operations to call the cancel method. */
     @javax.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The cancelAndSend property */
+    /** Provides operations to call the cancelAndSend method. */
     @javax.annotation.Nonnull
     public CancelAndSendRequestBuilder cancelAndSend() {
         return new CancelAndSendRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The currency property */
+    /** Provides operations to manage the currency property of the microsoft.graph.salesInvoice entity. */
     @javax.annotation.Nonnull
     public CurrencyRequestBuilder currency() {
         return new CurrencyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The customer property */
+    /** Provides operations to manage the customer property of the microsoft.graph.salesInvoice entity. */
     @javax.annotation.Nonnull
     public CustomerRequestBuilder customer() {
         return new CustomerRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The paymentTerm property */
+    private HashMap<String, Object> pathParameters;
+    /** Provides operations to manage the paymentTerm property of the microsoft.graph.salesInvoice entity. */
     @javax.annotation.Nonnull
     public PaymentTermRequestBuilder paymentTerm() {
         return new PaymentTermRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The post property */
+    /** Provides operations to call the post method. */
     @javax.annotation.Nonnull
     public PostRequestBuilder post() {
         return new PostRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The postAndSend property */
+    /** Provides operations to call the postAndSend method. */
     @javax.annotation.Nonnull
     public PostAndSendRequestBuilder postAndSend() {
         return new PostAndSendRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The salesInvoiceLines property */
+    private RequestAdapter requestAdapter;
+    /** Provides operations to manage the salesInvoiceLines property of the microsoft.graph.salesInvoice entity. */
     @javax.annotation.Nonnull
     public SalesInvoiceLinesRequestBuilder salesInvoiceLines() {
         return new SalesInvoiceLinesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The send property */
+    /** Provides operations to call the send method. */
     @javax.annotation.Nonnull
     public SendRequestBuilder send() {
         return new SendRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The shipmentMethod property */
+    /** Provides operations to manage the shipmentMethod property of the microsoft.graph.salesInvoice entity. */
     @javax.annotation.Nonnull
     public ShipmentMethodRequestBuilder shipmentMethod() {
         return new ShipmentMethodRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new SalesInvoiceItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SalesInvoiceItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/financials/companies/{company%2Did}/salesInvoices/{salesInvoice%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -105,9 +105,10 @@ public class SalesInvoiceItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SalesInvoiceItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/financials/companies/{company%2Did}/salesInvoices/{salesInvoice%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -165,6 +166,7 @@ public class SalesInvoiceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SalesInvoiceItemRequestBuilderPatchRequestConfiguration requestConfig = new SalesInvoiceItemRequestBuilderPatchRequestConfiguration();
@@ -178,16 +180,19 @@ public class SalesInvoiceItemRequestBuilder {
      * Get salesInvoices from financials
      * @return a CompletableFuture of salesInvoice
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesInvoice> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, SalesInvoice::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, SalesInvoice::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<SalesInvoice>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -195,100 +200,72 @@ public class SalesInvoiceItemRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of salesInvoice
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesInvoice> get(@javax.annotation.Nullable final java.util.function.Consumer<SalesInvoiceItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, SalesInvoice::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, SalesInvoice::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<SalesInvoice>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Get salesInvoices from financials
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
+     * Update the navigation property salesInvoices in financials
+     * @param body 
      * @return a CompletableFuture of salesInvoice
      */
-    public java.util.concurrent.CompletableFuture<SalesInvoice> get(@javax.annotation.Nullable final java.util.function.Consumer<SalesInvoiceItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, SalesInvoice::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property salesInvoices in financials
-     * @param body 
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final SalesInvoice body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<SalesInvoice> patch(@javax.annotation.Nonnull final SalesInvoice body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, SalesInvoice::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<SalesInvoice>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property salesInvoices in financials
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of salesInvoice
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final SalesInvoice body, @javax.annotation.Nullable final java.util.function.Consumer<SalesInvoiceItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property salesInvoices in financials
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final SalesInvoice body, @javax.annotation.Nullable final java.util.function.Consumer<SalesInvoiceItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<SalesInvoice> patch(@javax.annotation.Nonnull final SalesInvoice body, @javax.annotation.Nullable final java.util.function.Consumer<SalesInvoiceItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, SalesInvoice::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<SalesInvoice>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesInvoices.item.salesInvoiceLines.item collection
+     * Provides operations to manage the salesInvoiceLines property of the microsoft.graph.salesInvoice entity.
      * @param id Unique identifier of the item
      * @return a SalesInvoiceLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesInvoiceLineItemRequestBuilder salesInvoiceLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesInvoiceLine%2Did", id);
         return new SalesInvoiceLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -310,7 +287,7 @@ public class SalesInvoiceItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SalesInvoiceItemRequestBuilderGetQueryParameters queryParameters = new SalesInvoiceItemRequestBuilderGetQueryParameters();
@@ -318,6 +295,7 @@ public class SalesInvoiceItemRequestBuilder {
          * Instantiates a new SalesInvoiceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public SalesInvoiceItemRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -328,11 +306,12 @@ public class SalesInvoiceItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new SalesInvoiceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public SalesInvoiceItemRequestBuilderPatchRequestConfiguration() {
         }
     }

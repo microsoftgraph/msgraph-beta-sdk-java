@@ -23,6 +23,7 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new resumePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResumePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -59,7 +60,7 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResumePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("data", (n) -> { currentObject.setData(n.getObjectValue(CustomTaskExtensionCallbackData::createFromDiscriminatorValue)); });
             this.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("data", this.getData());
@@ -98,6 +100,7 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the data property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setData(@javax.annotation.Nullable final CustomTaskExtensionCallbackData value) {
         this._data = value;
     }
@@ -114,6 +118,7 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final String value) {
         this._source = value;
     }
@@ -122,6 +127,7 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

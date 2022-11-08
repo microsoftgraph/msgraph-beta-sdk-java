@@ -7,7 +7,10 @@ import com.microsoft.graph.reports.applicationsignindetailedsummary.item.Applica
 import com.microsoft.graph.reports.authenticationmethods.AuthenticationMethodsRequestBuilder;
 import com.microsoft.graph.reports.credentialuserregistrationdetails.CredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.reports.credentialuserregistrationdetails.item.CredentialUserRegistrationDetailsItemRequestBuilder;
+import com.microsoft.graph.reports.dailyprintusage.DailyPrintUsageRequestBuilder;
+import com.microsoft.graph.reports.dailyprintusage.item.PrintUsageItemRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyprinter.DailyPrintUsageByPrinterRequestBuilder;
+import com.microsoft.graph.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyuser.DailyPrintUsageByUserRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagesummariesbyprinter.DailyPrintUsageSummariesByPrinterRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagesummariesbyuser.DailyPrintUsageSummariesByUserRequestBuilder;
@@ -17,9 +20,6 @@ import com.microsoft.graph.reports.getattacksimulationrepeatoffenders.GetAttackS
 import com.microsoft.graph.reports.getattacksimulationsimulationusercoverage.GetAttackSimulationSimulationUserCoverageRequestBuilder;
 import com.microsoft.graph.reports.getattacksimulationtrainingusercoverage.GetAttackSimulationTrainingUserCoverageRequestBuilder;
 import com.microsoft.graph.reports.getazureadapplicationsigninsummarywithperiod.GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder;
-import com.microsoft.graph.reports.getazureadfeatureusagewithperiod.GetAzureADFeatureUsageWithPeriodRequestBuilder;
-import com.microsoft.graph.reports.getazureadlicenseusagewithperiod.GetAzureADLicenseUsageWithPeriodRequestBuilder;
-import com.microsoft.graph.reports.getazureaduserfeatureusage.GetAzureADUserFeatureUsageRequestBuilder;
 import com.microsoft.graph.reports.getbrowserdistributionusercountswithperiod.GetBrowserDistributionUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getbrowserusercountswithperiod.GetBrowserUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getbrowseruserdetailwithperiod.GetBrowserUserDetailWithPeriodRequestBuilder;
@@ -137,6 +137,7 @@ import com.microsoft.graph.reports.manageddeviceenrollmenttopfailureswithperiod.
 import com.microsoft.graph.reports.monthlyprintusagebyprinter.MonthlyPrintUsageByPrinterRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyuser.MonthlyPrintUsageByUserRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagesummariesbyprinter.MonthlyPrintUsageSummariesByPrinterRequestBuilder;
+import com.microsoft.graph.reports.monthlyprintusagesummariesbyuser.item.PrintUsageByUserItemRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagesummariesbyuser.MonthlyPrintUsageSummariesByUserRequestBuilder;
 import com.microsoft.graph.reports.security.SecurityRequestBuilder;
 import com.microsoft.graph.reports.usercredentialusagedetails.item.UserCredentialUsageDetailsItemRequestBuilder;
@@ -146,7 +147,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -159,86 +159,91 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the reportRoot singleton. */
 public class ReportsRequestBuilder {
-    /** The applicationSignInDetailedSummary property */
+    /** Provides operations to manage the applicationSignInDetailedSummary property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public ApplicationSignInDetailedSummaryRequestBuilder applicationSignInDetailedSummary() {
         return new ApplicationSignInDetailedSummaryRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The authenticationMethods property */
+    /** Provides operations to manage the authenticationMethods property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public AuthenticationMethodsRequestBuilder authenticationMethods() {
         return new AuthenticationMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The credentialUserRegistrationDetails property */
+    /** Provides operations to manage the credentialUserRegistrationDetails property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public CredentialUserRegistrationDetailsRequestBuilder credentialUserRegistrationDetails() {
         return new CredentialUserRegistrationDetailsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The dailyPrintUsageByPrinter property */
+    /** Provides operations to manage the dailyPrintUsage property of the microsoft.graph.reportRoot entity. */
+    @javax.annotation.Nonnull
+    public DailyPrintUsageRequestBuilder dailyPrintUsage() {
+        return new DailyPrintUsageRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public DailyPrintUsageByPrinterRequestBuilder dailyPrintUsageByPrinter() {
         return new DailyPrintUsageByPrinterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The dailyPrintUsageByUser property */
+    /** Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public DailyPrintUsageByUserRequestBuilder dailyPrintUsageByUser() {
         return new DailyPrintUsageByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The dailyPrintUsageSummariesByPrinter property */
+    /** Provides operations to manage the dailyPrintUsageSummariesByPrinter property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public DailyPrintUsageSummariesByPrinterRequestBuilder dailyPrintUsageSummariesByPrinter() {
         return new DailyPrintUsageSummariesByPrinterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The dailyPrintUsageSummariesByUser property */
+    /** Provides operations to manage the dailyPrintUsageSummariesByUser property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public DailyPrintUsageSummariesByUserRequestBuilder dailyPrintUsageSummariesByUser() {
         return new DailyPrintUsageSummariesByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The monthlyPrintUsageByPrinter property */
+    /** Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public MonthlyPrintUsageByPrinterRequestBuilder monthlyPrintUsageByPrinter() {
         return new MonthlyPrintUsageByPrinterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The monthlyPrintUsageByUser property */
+    /** Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public MonthlyPrintUsageByUserRequestBuilder monthlyPrintUsageByUser() {
         return new MonthlyPrintUsageByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The monthlyPrintUsageSummariesByPrinter property */
+    /** Provides operations to manage the monthlyPrintUsageSummariesByPrinter property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public MonthlyPrintUsageSummariesByPrinterRequestBuilder monthlyPrintUsageSummariesByPrinter() {
         return new MonthlyPrintUsageSummariesByPrinterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The monthlyPrintUsageSummariesByUser property */
+    /** Provides operations to manage the monthlyPrintUsageSummariesByUser property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public MonthlyPrintUsageSummariesByUserRequestBuilder monthlyPrintUsageSummariesByUser() {
         return new MonthlyPrintUsageSummariesByUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The security property */
+    private RequestAdapter requestAdapter;
+    /** Provides operations to manage the security property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public SecurityRequestBuilder security() {
         return new SecurityRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /** The userCredentialUsageDetails property */
+    private String urlTemplate;
+    /** Provides operations to manage the userCredentialUsageDetails property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public UserCredentialUsageDetailsRequestBuilder userCredentialUsageDetails() {
         return new UserCredentialUsageDetailsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.applicationSignInDetailedSummary.item collection
+     * Provides operations to manage the applicationSignInDetailedSummary property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a ApplicationSignInDetailedSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ApplicationSignInDetailedSummaryItemRequestBuilder applicationSignInDetailedSummary(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("applicationSignInDetailedSummary%2Did", id);
         return new ApplicationSignInDetailedSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -248,11 +253,12 @@ public class ReportsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReportsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -262,9 +268,10 @@ public class ReportsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReportsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/reports{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -322,6 +329,7 @@ public class ReportsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ReportsRequestBuilderPatchRequestConfiguration requestConfig = new ReportsRequestBuilderPatchRequestConfiguration();
@@ -332,62 +340,74 @@ public class ReportsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.credentialUserRegistrationDetails.item collection
+     * Provides operations to manage the credentialUserRegistrationDetails property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a CredentialUserRegistrationDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CredentialUserRegistrationDetailsItemRequestBuilder credentialUserRegistrationDetails(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("credentialUserRegistrationDetails%2Did", id);
         return new CredentialUserRegistrationDetailsItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.dailyPrintUsageByPrinter.item collection
+     * Provides operations to manage the dailyPrintUsage property of the microsoft.graph.reportRoot entity.
+     * @param id Unique identifier of the item
+     * @return a PrintUsageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PrintUsageItemRequestBuilder dailyPrintUsage(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("printUsage%2Did", id);
+        return new PrintUsageItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByPrinterItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder dailyPrintUsageByPrinter(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("printUsageByPrinter%2Did", id);
         return new com.microsoft.graph.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.dailyPrintUsageByUser.item collection
+     * Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.reports.dailyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder dailyPrintUsageByUser(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("printUsageByUser%2Did", id);
         return new com.microsoft.graph.reports.dailyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.dailyPrintUsageSummariesByPrinter.item collection
+     * Provides operations to manage the dailyPrintUsageSummariesByPrinter property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByPrinterItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.reports.dailyprintusagesummariesbyprinter.item.PrintUsageByPrinterItemRequestBuilder dailyPrintUsageSummariesByPrinter(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("printUsageByPrinter%2Did", id);
         return new com.microsoft.graph.reports.dailyprintusagesummariesbyprinter.item.PrintUsageByPrinterItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.dailyPrintUsageSummariesByUser.item collection
+     * Provides operations to manage the dailyPrintUsageSummariesByUser property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.reports.dailyprintusagesummariesbyuser.item.PrintUsageByUserItemRequestBuilder dailyPrintUsageSummariesByUser(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("printUsageByUser%2Did", id);
         return new com.microsoft.graph.reports.dailyprintusagesummariesbyuser.item.PrintUsageByUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -411,16 +431,19 @@ public class ReportsRequestBuilder {
      * Get reports
      * @return a CompletableFuture of reportRoot
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ReportRoot>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -428,34 +451,19 @@ public class ReportsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of reportRoot
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Get reports
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of reportRoot
-     */
-    public java.util.concurrent.CompletableFuture<ReportRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<ReportRoot>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -491,34 +499,6 @@ public class ReportsRequestBuilder {
     public GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder getAzureADApplicationSignInSummaryWithPeriod(@javax.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
         return new GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
-    }
-    /**
-     * Provides operations to call the getAzureADFeatureUsage method.
-     * @param period Usage: period='{period}'
-     * @return a getAzureADFeatureUsageWithPeriodRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetAzureADFeatureUsageWithPeriodRequestBuilder getAzureADFeatureUsageWithPeriod(@javax.annotation.Nonnull final String period) {
-        Objects.requireNonNull(period);
-        return new GetAzureADFeatureUsageWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
-    }
-    /**
-     * Provides operations to call the getAzureADLicenseUsage method.
-     * @param period Usage: period='{period}'
-     * @return a getAzureADLicenseUsageWithPeriodRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetAzureADLicenseUsageWithPeriodRequestBuilder getAzureADLicenseUsageWithPeriod(@javax.annotation.Nonnull final String period) {
-        Objects.requireNonNull(period);
-        return new GetAzureADLicenseUsageWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
-    }
-    /**
-     * Provides operations to call the getAzureADUserFeatureUsage method.
-     * @return a getAzureADUserFeatureUsageRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetAzureADUserFeatureUsageRequestBuilder getAzureADUserFeatureUsage() {
-        return new GetAzureADUserFeatureUsageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getBrowserDistributionUserCounts method.
@@ -660,9 +640,9 @@ public class ReportsRequestBuilder {
     }
     /**
      * Provides operations to call the getGroupArchivedPrintJobs method.
-     * @param endDateTime Usage: endDateTime='{endDateTime}'
+     * @param endDateTime Usage: endDateTime={endDateTime}
      * @param groupId Usage: groupId='{groupId}'
-     * @param startDateTime Usage: startDateTime='{startDateTime}'
+     * @param startDateTime Usage: startDateTime={startDateTime}
      * @return a getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @javax.annotation.Nonnull
@@ -968,9 +948,9 @@ public class ReportsRequestBuilder {
     }
     /**
      * Provides operations to call the getPrinterArchivedPrintJobs method.
-     * @param endDateTime Usage: endDateTime='{endDateTime}'
+     * @param endDateTime Usage: endDateTime={endDateTime}
      * @param printerId Usage: printerId='{printerId}'
-     * @param startDateTime Usage: startDateTime='{startDateTime}'
+     * @param startDateTime Usage: startDateTime={startDateTime}
      * @return a getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @javax.annotation.Nonnull
@@ -1462,8 +1442,8 @@ public class ReportsRequestBuilder {
     }
     /**
      * Provides operations to call the getUserArchivedPrintJobs method.
-     * @param endDateTime Usage: endDateTime='{endDateTime}'
-     * @param startDateTime Usage: startDateTime='{startDateTime}'
+     * @param endDateTime Usage: endDateTime={endDateTime}
+     * @param startDateTime Usage: startDateTime={startDateTime}
      * @param userId Usage: userId='{userId}'
      * @return a getUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder
      */
@@ -1677,117 +1657,104 @@ public class ReportsRequestBuilder {
         return new ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.monthlyPrintUsageByPrinter.item collection
+     * Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByPrinterItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.reports.monthlyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder monthlyPrintUsageByPrinter(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("printUsageByPrinter%2Did", id);
         return new com.microsoft.graph.reports.monthlyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.monthlyPrintUsageByUser.item collection
+     * Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.reports.monthlyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder monthlyPrintUsageByUser(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("printUsageByUser%2Did", id);
         return new com.microsoft.graph.reports.monthlyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.monthlyPrintUsageSummariesByPrinter.item collection
+     * Provides operations to manage the monthlyPrintUsageSummariesByPrinter property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByPrinterItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.reports.monthlyprintusagesummariesbyprinter.item.PrintUsageByPrinterItemRequestBuilder monthlyPrintUsageSummariesByPrinter(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("printUsageByPrinter%2Did", id);
         return new com.microsoft.graph.reports.monthlyprintusagesummariesbyprinter.item.PrintUsageByPrinterItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.monthlyPrintUsageSummariesByUser.item collection
+     * Provides operations to manage the monthlyPrintUsageSummariesByUser property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.reports.monthlyprintusagesummariesbyuser.item.PrintUsageByUserItemRequestBuilder monthlyPrintUsageSummariesByUser(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("printUsageByUser%2Did", id);
         return new com.microsoft.graph.reports.monthlyprintusagesummariesbyuser.item.PrintUsageByUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update reports
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of reportRoot
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ReportRoot body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ReportRoot> patch(@javax.annotation.Nonnull final ReportRoot body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ReportRoot>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update reports
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of reportRoot
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ReportRoot body, @javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update reports
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ReportRoot body, @javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ReportRoot> patch(@javax.annotation.Nonnull final ReportRoot body, @javax.annotation.Nullable final java.util.function.Consumer<ReportsRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ReportRoot>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.userCredentialUsageDetails.item collection
+     * Provides operations to manage the userCredentialUsageDetails property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a UserCredentialUsageDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserCredentialUsageDetailsItemRequestBuilder userCredentialUsageDetails(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userCredentialUsageDetails%2Did", id);
         return new UserCredentialUsageDetailsItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -1809,7 +1776,7 @@ public class ReportsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ReportsRequestBuilderGetQueryParameters queryParameters = new ReportsRequestBuilderGetQueryParameters();
@@ -1817,6 +1784,7 @@ public class ReportsRequestBuilder {
          * Instantiates a new reportsRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public ReportsRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -1827,11 +1795,12 @@ public class ReportsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new reportsRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public ReportsRequestBuilderPatchRequestConfiguration() {
         }
     }

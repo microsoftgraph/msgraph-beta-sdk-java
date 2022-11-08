@@ -29,6 +29,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * Instantiates a new MeetingRegistration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingRegistration() {
         super();
         this.setOdataType("#microsoft.graph.meetingRegistration");
@@ -74,7 +75,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingRegistration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customQuestions", (n) -> { currentObject.setCustomQuestions(n.getCollectionOfObjectValues(MeetingRegistrationQuestion::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -130,6 +131,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,6 +149,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the customQuestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomQuestions(@javax.annotation.Nullable final java.util.List<MeetingRegistrationQuestion> value) {
         this._customQuestions = value;
     }
@@ -155,6 +158,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -163,6 +167,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -171,6 +176,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the registrationPageViewCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistrationPageViewCount(@javax.annotation.Nullable final Integer value) {
         this._registrationPageViewCount = value;
     }
@@ -179,6 +185,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the registrationPageWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistrationPageWebUrl(@javax.annotation.Nullable final String value) {
         this._registrationPageWebUrl = value;
     }
@@ -187,6 +194,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the speakers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpeakers(@javax.annotation.Nullable final java.util.List<MeetingSpeaker> value) {
         this._speakers = value;
     }
@@ -195,6 +203,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -203,6 +212,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }

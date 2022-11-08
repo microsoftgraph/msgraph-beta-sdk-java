@@ -25,6 +25,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
      * Instantiates a new azureADRegistrationPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AzureADRegistrationPolicy() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.azureADRegistrationPolicy");
@@ -78,7 +79,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AzureADRegistrationPolicy currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("allowedGroups", (n) -> { currentObject.setAllowedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("allowedUsers", (n) -> { currentObject.setAllowedUsers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getEnumValue(PolicyScope.class)); });
@@ -107,6 +108,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("allowedGroups", this.getAllowedGroups());
@@ -121,6 +123,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
      * @param value Value to set for the allowedGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedGroups(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedGroups = value;
     }
@@ -137,6 +141,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
      * @param value Value to set for the allowedUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedUsers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedUsers = value;
     }
@@ -145,6 +150,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final PolicyScope value) {
         this._appliesTo = value;
     }
@@ -153,6 +159,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
      * @param value Value to set for the isAdminConfigurable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAdminConfigurable(@javax.annotation.Nullable final Boolean value) {
         this._isAdminConfigurable = value;
     }
@@ -161,6 +168,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

@@ -26,6 +26,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * Instantiates a new synchronizationProgress and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationProgress() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.synchronizationProgress");
@@ -63,7 +64,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationProgress currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("completedUnits", (n) -> { currentObject.setCompletedUnits(n.getLongValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("progressObservationDateTime", (n) -> { currentObject.setProgressObservationDateTime(n.getOffsetDateTimeValue()); });
@@ -108,6 +109,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("completedUnits", this.getCompletedUnits());
@@ -122,6 +124,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the completedUnits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedUnits(@javax.annotation.Nullable final Long value) {
         this._completedUnits = value;
     }
@@ -138,6 +142,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -146,6 +151,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the progressObservationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgressObservationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._progressObservationDateTime = value;
     }
@@ -154,6 +160,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalUnits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUnits(@javax.annotation.Nullable final Long value) {
         this._totalUnits = value;
     }
@@ -162,6 +169,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the units property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnits(@javax.annotation.Nullable final String value) {
         this._units = value;
     }

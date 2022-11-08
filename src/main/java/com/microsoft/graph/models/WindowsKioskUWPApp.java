@@ -18,6 +18,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
      * Instantiates a new WindowsKioskUWPApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskUWPApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskUWPApp");
@@ -63,7 +64,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskUWPApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("appUserModelId", (n) -> { currentObject.setAppUserModelId(n.getStringValue()); });
             this.put("containedAppId", (n) -> { currentObject.setContainedAppId(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -94,6 +97,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
      * @param value Value to set for the appUserModelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppUserModelId(@javax.annotation.Nullable final String value) {
         this._appUserModelId = value;
     }
@@ -102,6 +106,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
      * @param value Value to set for the containedAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainedAppId(@javax.annotation.Nullable final String value) {
         this._containedAppId = value;
     }

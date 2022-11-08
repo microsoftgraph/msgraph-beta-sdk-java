@@ -58,6 +58,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * Instantiates a new IosKerberosSingleSignOnExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosKerberosSingleSignOnExtension() {
         super();
         this.setOdataType("#microsoft.graph.iosKerberosSingleSignOnExtension");
@@ -135,7 +136,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosKerberosSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeDirectorySiteCode", (n) -> { currentObject.setActiveDirectorySiteCode(n.getStringValue()); });
             this.put("blockActiveDirectorySiteAutoDiscovery", (n) -> { currentObject.setBlockActiveDirectorySiteAutoDiscovery(n.getBooleanValue()); });
             this.put("blockAutomaticLogin", (n) -> { currentObject.setBlockAutomaticLogin(n.getBooleanValue()); });
@@ -294,6 +295,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -326,6 +328,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the activeDirectorySiteCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDirectorySiteCode(@javax.annotation.Nullable final String value) {
         this._activeDirectorySiteCode = value;
     }
@@ -334,6 +337,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the blockActiveDirectorySiteAutoDiscovery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockActiveDirectorySiteAutoDiscovery(@javax.annotation.Nullable final Boolean value) {
         this._blockActiveDirectorySiteAutoDiscovery = value;
     }
@@ -342,6 +346,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the blockAutomaticLogin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockAutomaticLogin(@javax.annotation.Nullable final Boolean value) {
         this._blockAutomaticLogin = value;
     }
@@ -350,6 +355,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the cacheName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheName(@javax.annotation.Nullable final String value) {
         this._cacheName = value;
     }
@@ -358,6 +364,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the credentialBundleIdAccessControlList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCredentialBundleIdAccessControlList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._credentialBundleIdAccessControlList = value;
     }
@@ -366,6 +373,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the domainRealms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainRealms(@javax.annotation.Nullable final java.util.List<String> value) {
         this._domainRealms = value;
     }
@@ -374,6 +382,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the domains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._domains = value;
     }
@@ -382,6 +391,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the isDefaultRealm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefaultRealm(@javax.annotation.Nullable final Boolean value) {
         this._isDefaultRealm = value;
     }
@@ -390,6 +400,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the managedAppsInBundleIdACLIncluded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedAppsInBundleIdACLIncluded(@javax.annotation.Nullable final Boolean value) {
         this._managedAppsInBundleIdACLIncluded = value;
     }
@@ -398,6 +409,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the passwordBlockModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockModification(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockModification = value;
     }
@@ -406,6 +418,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the passwordChangeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordChangeUrl(@javax.annotation.Nullable final String value) {
         this._passwordChangeUrl = value;
     }
@@ -414,6 +427,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the passwordEnableLocalSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordEnableLocalSync(@javax.annotation.Nullable final Boolean value) {
         this._passwordEnableLocalSync = value;
     }
@@ -422,6 +436,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -430,6 +445,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the passwordExpirationNotificationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationNotificationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationNotificationDays = value;
     }
@@ -438,6 +454,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the passwordMinimumAgeDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumAgeDays(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumAgeDays = value;
     }
@@ -446,6 +463,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -454,6 +472,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -462,6 +481,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the passwordRequireActiveDirectoryComplexity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequireActiveDirectoryComplexity(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequireActiveDirectoryComplexity = value;
     }
@@ -470,6 +490,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the passwordRequirementsDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequirementsDescription(@javax.annotation.Nullable final String value) {
         this._passwordRequirementsDescription = value;
     }
@@ -478,6 +499,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the realm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRealm(@javax.annotation.Nullable final String value) {
         this._realm = value;
     }
@@ -486,6 +508,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the requireUserPresence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireUserPresence(@javax.annotation.Nullable final Boolean value) {
         this._requireUserPresence = value;
     }
@@ -494,6 +517,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the signInHelpText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInHelpText(@javax.annotation.Nullable final String value) {
         this._signInHelpText = value;
     }
@@ -502,6 +526,7 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

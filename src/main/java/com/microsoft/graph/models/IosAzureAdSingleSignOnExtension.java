@@ -18,6 +18,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
      * Instantiates a new IosAzureAdSingleSignOnExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosAzureAdSingleSignOnExtension() {
         super();
         this.setOdataType("#microsoft.graph.iosAzureAdSingleSignOnExtension");
@@ -63,7 +64,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosAzureAdSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bundleIdAccessControlList", (n) -> { currentObject.setBundleIdAccessControlList(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("configurations", (n) -> { currentObject.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
             this.put("enableSharedDeviceMode", (n) -> { currentObject.setEnableSharedDeviceMode(n.getBooleanValue()); });
@@ -74,6 +75,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
      * @param value Value to set for the bundleIdAccessControlList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBundleIdAccessControlList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._bundleIdAccessControlList = value;
     }
@@ -94,6 +97,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
      * @param value Value to set for the configurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurations(@javax.annotation.Nullable final java.util.List<KeyTypedValuePair> value) {
         this._configurations = value;
     }
@@ -102,6 +106,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
      * @param value Value to set for the enableSharedDeviceMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableSharedDeviceMode(@javax.annotation.Nullable final Boolean value) {
         this._enableSharedDeviceMode = value;
     }

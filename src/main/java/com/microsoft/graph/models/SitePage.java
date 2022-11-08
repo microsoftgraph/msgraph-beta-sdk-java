@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SitePage extends BaseItem implements Parsable {
     /** The content type of the page. */
     private ContentTypeInfo _contentType;
@@ -23,6 +23,7 @@ public class SitePage extends BaseItem implements Parsable {
      * Instantiates a new sitePage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SitePage() {
         super();
         this.setOdataType("#microsoft.graph.sitePage");
@@ -52,7 +53,7 @@ public class SitePage extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SitePage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contentType", (n) -> { currentObject.setContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
             this.put("pageLayoutType", (n) -> { currentObject.setPageLayoutType(n.getStringValue()); });
             this.put("publishingState", (n) -> { currentObject.setPublishingState(n.getObjectValue(PublicationFacet::createFromDiscriminatorValue)); });
@@ -97,6 +98,7 @@ public class SitePage extends BaseItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class SitePage extends BaseItem implements Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final ContentTypeInfo value) {
         this._contentType = value;
     }
@@ -119,6 +122,7 @@ public class SitePage extends BaseItem implements Parsable {
      * @param value Value to set for the pageLayoutType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPageLayoutType(@javax.annotation.Nullable final String value) {
         this._pageLayoutType = value;
     }
@@ -127,6 +131,7 @@ public class SitePage extends BaseItem implements Parsable {
      * @param value Value to set for the publishingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingState(@javax.annotation.Nullable final PublicationFacet value) {
         this._publishingState = value;
     }
@@ -135,6 +140,7 @@ public class SitePage extends BaseItem implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }
@@ -143,6 +149,7 @@ public class SitePage extends BaseItem implements Parsable {
      * @param value Value to set for the webParts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebParts(@javax.annotation.Nullable final java.util.List<WebPart> value) {
         this._webParts = value;
     }

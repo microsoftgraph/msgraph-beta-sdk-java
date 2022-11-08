@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Recommendation extends Entity implements Parsable {
     /** The actionSteps property */
     private java.util.List<ActionStep> _actionSteps;
@@ -44,6 +44,7 @@ public class Recommendation extends Entity implements Parsable {
      * Instantiates a new recommendation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Recommendation() {
         super();
         this.setOdataType("#microsoft.graph.recommendation");
@@ -105,7 +106,7 @@ public class Recommendation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Recommendation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionSteps", (n) -> { currentObject.setActionSteps(n.getCollectionOfObjectValues(ActionStep::createFromDiscriminatorValue)); });
             this.put("benefits", (n) -> { currentObject.setBenefits(n.getStringValue()); });
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(RecommendationCategory.class)); });
@@ -208,6 +209,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -232,6 +234,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the actionSteps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionSteps(@javax.annotation.Nullable final java.util.List<ActionStep> value) {
         this._actionSteps = value;
     }
@@ -240,6 +243,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the benefits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBenefits(@javax.annotation.Nullable final String value) {
         this._benefits = value;
     }
@@ -248,6 +252,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final RecommendationCategory value) {
         this._category = value;
     }
@@ -256,6 +261,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -264,6 +270,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -272,6 +279,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the impactedResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImpactedResources(@javax.annotation.Nullable final java.util.List<RecommendationResource> value) {
         this._impactedResources = value;
     }
@@ -280,6 +288,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the impactStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImpactStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._impactStartDateTime = value;
     }
@@ -288,6 +297,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the impactType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImpactType(@javax.annotation.Nullable final String value) {
         this._impactType = value;
     }
@@ -296,6 +306,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the insights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsights(@javax.annotation.Nullable final String value) {
         this._insights = value;
     }
@@ -304,6 +315,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the lastCheckedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastCheckedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastCheckedDateTime = value;
     }
@@ -312,6 +324,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final String value) {
         this._lastModifiedBy = value;
     }
@@ -320,6 +333,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -328,6 +342,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the postponeUntilDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostponeUntilDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._postponeUntilDateTime = value;
     }
@@ -336,6 +351,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final RecommendationPriority value) {
         this._priority = value;
     }
@@ -344,6 +360,7 @@ public class Recommendation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final RecommendationStatus value) {
         this._status = value;
     }

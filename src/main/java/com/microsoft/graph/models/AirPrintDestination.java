@@ -26,6 +26,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      * Instantiates a new airPrintDestination and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AirPrintDestination() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.airPrintDestination");
@@ -55,7 +56,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AirPrintDestination currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("forceTls", (n) -> { currentObject.setForceTls(n.getBooleanValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -108,6 +109,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("forceTls", this.getForceTls());
@@ -122,6 +124,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the forceTls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setForceTls(@javax.annotation.Nullable final Boolean value) {
         this._forceTls = value;
     }
@@ -138,6 +142,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -146,6 +151,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -154,6 +160,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the port property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPort(@javax.annotation.Nullable final Integer value) {
         this._port = value;
     }
@@ -162,6 +169,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resourcePath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourcePath(@javax.annotation.Nullable final String value) {
         this._resourcePath = value;
     }

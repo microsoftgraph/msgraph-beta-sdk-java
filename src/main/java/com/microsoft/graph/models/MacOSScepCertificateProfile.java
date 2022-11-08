@@ -36,6 +36,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * Instantiates a new MacOSScepCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSScepCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.macOSScepCertificateProfile");
@@ -89,7 +90,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSScepCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowAllAppsAccess", (n) -> { currentObject.setAllowAllAppsAccess(n.getBooleanValue()); });
             this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
             this.put("customSubjectAlternativeNames", (n) -> { currentObject.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
@@ -173,6 +174,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -194,6 +196,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the allowAllAppsAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowAllAppsAccess(@javax.annotation.Nullable final Boolean value) {
         this._allowAllAppsAccess = value;
     }
@@ -202,6 +205,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the certificateStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateStore(@javax.annotation.Nullable final CertificateStore value) {
         this._certificateStore = value;
     }
@@ -210,6 +214,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the customSubjectAlternativeNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSubjectAlternativeNames(@javax.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
         this._customSubjectAlternativeNames = value;
     }
@@ -218,6 +223,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the extendedKeyUsages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtendedKeyUsages(@javax.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
         this._extendedKeyUsages = value;
     }
@@ -226,6 +232,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the hashAlgorithm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHashAlgorithm(@javax.annotation.Nullable final HashAlgorithms value) {
         this._hashAlgorithm = value;
     }
@@ -234,6 +241,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the keySize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeySize(@javax.annotation.Nullable final KeySize value) {
         this._keySize = value;
     }
@@ -242,6 +250,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the keyUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyUsage(@javax.annotation.Nullable final KeyUsages value) {
         this._keyUsage = value;
     }
@@ -250,6 +259,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
         this._managedDeviceCertificateStates = value;
     }
@@ -258,6 +268,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the rootCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificate(@javax.annotation.Nullable final MacOSTrustedRootCertificate value) {
         this._rootCertificate = value;
     }
@@ -266,6 +277,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the scepServerUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScepServerUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._scepServerUrls = value;
     }
@@ -274,6 +286,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
         this._subjectAlternativeNameFormatString = value;
     }
@@ -282,6 +295,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @param value Value to set for the subjectNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
         this._subjectNameFormatString = value;
     }

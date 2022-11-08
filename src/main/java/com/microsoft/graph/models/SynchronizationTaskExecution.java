@@ -46,6 +46,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Instantiates a new synchronizationTaskExecution and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationTaskExecution() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.synchronizationTaskExecution");
@@ -163,7 +164,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationTaskExecution currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<String, Consumer<ParseNode>>(15) {{
             this.put("activityIdentifier", (n) -> { currentObject.setActivityIdentifier(n.getStringValue()); });
             this.put("countEntitled", (n) -> { currentObject.setCountEntitled(n.getLongValue()); });
             this.put("countEntitledForProvisioning", (n) -> { currentObject.setCountEntitledForProvisioning(n.getLongValue()); });
@@ -218,6 +219,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activityIdentifier", this.getActivityIdentifier());
@@ -242,6 +244,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the activityIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityIdentifier(@javax.annotation.Nullable final String value) {
         this._activityIdentifier = value;
     }
@@ -250,6 +253,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -258,6 +262,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the countEntitled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountEntitled(@javax.annotation.Nullable final Long value) {
         this._countEntitled = value;
     }
@@ -266,6 +271,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the countEntitledForProvisioning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountEntitledForProvisioning(@javax.annotation.Nullable final Long value) {
         this._countEntitledForProvisioning = value;
     }
@@ -274,6 +280,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the countEscrowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountEscrowed(@javax.annotation.Nullable final Long value) {
         this._countEscrowed = value;
     }
@@ -282,6 +289,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the countEscrowedRaw property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountEscrowedRaw(@javax.annotation.Nullable final Long value) {
         this._countEscrowedRaw = value;
     }
@@ -290,6 +298,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the countExported property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountExported(@javax.annotation.Nullable final Long value) {
         this._countExported = value;
     }
@@ -298,6 +307,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the countExports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountExports(@javax.annotation.Nullable final Long value) {
         this._countExports = value;
     }
@@ -306,6 +316,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the countImported property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountImported(@javax.annotation.Nullable final Long value) {
         this._countImported = value;
     }
@@ -314,6 +325,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the countImportedDeltas property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountImportedDeltas(@javax.annotation.Nullable final Long value) {
         this._countImportedDeltas = value;
     }
@@ -322,6 +334,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the countImportedReferenceDeltas property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountImportedReferenceDeltas(@javax.annotation.Nullable final Long value) {
         this._countImportedReferenceDeltas = value;
     }
@@ -330,6 +343,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final SynchronizationError value) {
         this._error = value;
     }
@@ -338,6 +352,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -346,6 +361,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final SynchronizationTaskExecutionResult value) {
         this._state = value;
     }
@@ -354,6 +370,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the timeBegan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeBegan(@javax.annotation.Nullable final OffsetDateTime value) {
         this._timeBegan = value;
     }
@@ -362,6 +379,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param value Value to set for the timeEnded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeEnded(@javax.annotation.Nullable final OffsetDateTime value) {
         this._timeEnded = value;
     }

@@ -17,6 +17,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
      * Instantiates a new termsAndConditionsGroupAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TermsAndConditionsGroupAssignment() {
         super();
         this.setOdataType("#microsoft.graph.termsAndConditionsGroupAssignment");
@@ -38,7 +39,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermsAndConditionsGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });
             this.put("termsAndConditions", (n) -> { currentObject.setTermsAndConditions(n.getObjectValue(TermsAndConditions::createFromDiscriminatorValue)); });
         }};
@@ -64,6 +65,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
      * @param value Value to set for the targetGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetGroupId(@javax.annotation.Nullable final String value) {
         this._targetGroupId = value;
     }
@@ -83,6 +86,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
      * @param value Value to set for the termsAndConditions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsAndConditions(@javax.annotation.Nullable final TermsAndConditions value) {
         this._termsAndConditions = value;
     }

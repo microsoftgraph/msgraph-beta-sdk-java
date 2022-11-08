@@ -34,6 +34,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * Instantiates a new PersonName and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PersonName() {
         super();
         this.setOdataType("#microsoft.graph.personName");
@@ -63,7 +64,7 @@ public class PersonName extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersonName currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("first", (n) -> { currentObject.setFirst(n.getStringValue()); });
             this.put("initials", (n) -> { currentObject.setInitials(n.getStringValue()); });
@@ -162,6 +163,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +184,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -190,6 +193,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param value Value to set for the first property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirst(@javax.annotation.Nullable final String value) {
         this._first = value;
     }
@@ -198,6 +202,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param value Value to set for the initials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitials(@javax.annotation.Nullable final String value) {
         this._initials = value;
     }
@@ -206,6 +211,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param value Value to set for the languageTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageTag(@javax.annotation.Nullable final String value) {
         this._languageTag = value;
     }
@@ -214,6 +220,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param value Value to set for the last property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLast(@javax.annotation.Nullable final String value) {
         this._last = value;
     }
@@ -222,6 +229,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param value Value to set for the maiden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaiden(@javax.annotation.Nullable final String value) {
         this._maiden = value;
     }
@@ -230,6 +238,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param value Value to set for the middle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMiddle(@javax.annotation.Nullable final String value) {
         this._middle = value;
     }
@@ -238,6 +247,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param value Value to set for the nickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNickname(@javax.annotation.Nullable final String value) {
         this._nickname = value;
     }
@@ -246,6 +256,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param value Value to set for the pronunciation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPronunciation(@javax.annotation.Nullable final PersonNamePronounciation value) {
         this._pronunciation = value;
     }
@@ -254,6 +265,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param value Value to set for the suffix property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuffix(@javax.annotation.Nullable final String value) {
         this._suffix = value;
     }
@@ -262,6 +274,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }

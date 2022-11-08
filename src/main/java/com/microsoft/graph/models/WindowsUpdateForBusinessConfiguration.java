@@ -88,6 +88,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Instantiates a new WindowsUpdateForBusinessConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsUpdateForBusinessConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdateForBusinessConfiguration");
@@ -269,7 +270,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsUpdateForBusinessConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowWindows11Upgrade", (n) -> { currentObject.setAllowWindows11Upgrade(n.getBooleanValue()); });
             this.put("automaticUpdateMode", (n) -> { currentObject.setAutomaticUpdateMode(n.getEnumValue(AutomaticUpdateMode.class)); });
             this.put("autoRestartNotificationDismissal", (n) -> { currentObject.setAutoRestartNotificationDismissal(n.getEnumValue(AutoRestartNotificationDismissalMethod.class)); });
@@ -450,6 +451,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -469,7 +471,6 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         writer.writeIntegerValue("featureUpdatesDeferralPeriodInDays", this.getFeatureUpdatesDeferralPeriodInDays());
         writer.writeBooleanValue("featureUpdatesPaused", this.getFeatureUpdatesPaused());
         writer.writeOffsetDateTimeValue("featureUpdatesPauseExpiryDateTime", this.getFeatureUpdatesPauseExpiryDateTime());
-        writer.writeLocalDateValue("featureUpdatesPauseStartDate", this.getFeatureUpdatesPauseStartDate());
         writer.writeOffsetDateTimeValue("featureUpdatesRollbackStartDateTime", this.getFeatureUpdatesRollbackStartDateTime());
         writer.writeIntegerValue("featureUpdatesRollbackWindowInDays", this.getFeatureUpdatesRollbackWindowInDays());
         writer.writeBooleanValue("featureUpdatesWillBeRolledBack", this.getFeatureUpdatesWillBeRolledBack());
@@ -480,7 +481,6 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         writer.writeIntegerValue("qualityUpdatesDeferralPeriodInDays", this.getQualityUpdatesDeferralPeriodInDays());
         writer.writeBooleanValue("qualityUpdatesPaused", this.getQualityUpdatesPaused());
         writer.writeOffsetDateTimeValue("qualityUpdatesPauseExpiryDateTime", this.getQualityUpdatesPauseExpiryDateTime());
-        writer.writeLocalDateValue("qualityUpdatesPauseStartDate", this.getQualityUpdatesPauseStartDate());
         writer.writeOffsetDateTimeValue("qualityUpdatesRollbackStartDateTime", this.getQualityUpdatesRollbackStartDateTime());
         writer.writeBooleanValue("qualityUpdatesWillBeRolledBack", this.getQualityUpdatesWillBeRolledBack());
         writer.writeIntegerValue("scheduleImminentRestartWarningInMinutes", this.getScheduleImminentRestartWarningInMinutes());
@@ -496,6 +496,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the allowWindows11Upgrade property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowWindows11Upgrade(@javax.annotation.Nullable final Boolean value) {
         this._allowWindows11Upgrade = value;
     }
@@ -504,6 +505,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the automaticUpdateMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutomaticUpdateMode(@javax.annotation.Nullable final AutomaticUpdateMode value) {
         this._automaticUpdateMode = value;
     }
@@ -512,6 +514,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the autoRestartNotificationDismissal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoRestartNotificationDismissal(@javax.annotation.Nullable final AutoRestartNotificationDismissalMethod value) {
         this._autoRestartNotificationDismissal = value;
     }
@@ -520,6 +523,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the businessReadyUpdatesOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessReadyUpdatesOnly(@javax.annotation.Nullable final WindowsUpdateType value) {
         this._businessReadyUpdatesOnly = value;
     }
@@ -528,6 +532,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the deadlineForFeatureUpdatesInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeadlineForFeatureUpdatesInDays(@javax.annotation.Nullable final Integer value) {
         this._deadlineForFeatureUpdatesInDays = value;
     }
@@ -536,6 +541,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the deadlineForQualityUpdatesInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeadlineForQualityUpdatesInDays(@javax.annotation.Nullable final Integer value) {
         this._deadlineForQualityUpdatesInDays = value;
     }
@@ -544,6 +550,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the deadlineGracePeriodInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeadlineGracePeriodInDays(@javax.annotation.Nullable final Integer value) {
         this._deadlineGracePeriodInDays = value;
     }
@@ -552,6 +559,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the deliveryOptimizationMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeliveryOptimizationMode(@javax.annotation.Nullable final WindowsDeliveryOptimizationMode value) {
         this._deliveryOptimizationMode = value;
     }
@@ -560,6 +568,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the deviceUpdateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceUpdateStates(@javax.annotation.Nullable final java.util.List<WindowsUpdateState> value) {
         this._deviceUpdateStates = value;
     }
@@ -568,6 +577,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the driversExcluded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriversExcluded(@javax.annotation.Nullable final Boolean value) {
         this._driversExcluded = value;
     }
@@ -576,6 +586,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the engagedRestartDeadlineInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEngagedRestartDeadlineInDays(@javax.annotation.Nullable final Integer value) {
         this._engagedRestartDeadlineInDays = value;
     }
@@ -584,6 +595,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the engagedRestartSnoozeScheduleInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEngagedRestartSnoozeScheduleInDays(@javax.annotation.Nullable final Integer value) {
         this._engagedRestartSnoozeScheduleInDays = value;
     }
@@ -592,6 +604,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the engagedRestartTransitionScheduleInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEngagedRestartTransitionScheduleInDays(@javax.annotation.Nullable final Integer value) {
         this._engagedRestartTransitionScheduleInDays = value;
     }
@@ -600,6 +613,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the featureUpdatesDeferralPeriodInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureUpdatesDeferralPeriodInDays(@javax.annotation.Nullable final Integer value) {
         this._featureUpdatesDeferralPeriodInDays = value;
     }
@@ -608,6 +622,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the featureUpdatesPaused property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureUpdatesPaused(@javax.annotation.Nullable final Boolean value) {
         this._featureUpdatesPaused = value;
     }
@@ -616,6 +631,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the featureUpdatesPauseExpiryDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureUpdatesPauseExpiryDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._featureUpdatesPauseExpiryDateTime = value;
     }
@@ -624,6 +640,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the featureUpdatesPauseStartDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureUpdatesPauseStartDate(@javax.annotation.Nullable final LocalDate value) {
         this._featureUpdatesPauseStartDate = value;
     }
@@ -632,6 +649,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the featureUpdatesRollbackStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureUpdatesRollbackStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._featureUpdatesRollbackStartDateTime = value;
     }
@@ -640,6 +658,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the featureUpdatesRollbackWindowInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureUpdatesRollbackWindowInDays(@javax.annotation.Nullable final Integer value) {
         this._featureUpdatesRollbackWindowInDays = value;
     }
@@ -648,6 +667,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the featureUpdatesWillBeRolledBack property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureUpdatesWillBeRolledBack(@javax.annotation.Nullable final Boolean value) {
         this._featureUpdatesWillBeRolledBack = value;
     }
@@ -656,6 +676,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the installationSchedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallationSchedule(@javax.annotation.Nullable final WindowsUpdateInstallScheduleType value) {
         this._installationSchedule = value;
     }
@@ -664,6 +685,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the microsoftUpdateServiceAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftUpdateServiceAllowed(@javax.annotation.Nullable final Boolean value) {
         this._microsoftUpdateServiceAllowed = value;
     }
@@ -672,6 +694,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the postponeRebootUntilAfterDeadline property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostponeRebootUntilAfterDeadline(@javax.annotation.Nullable final Boolean value) {
         this._postponeRebootUntilAfterDeadline = value;
     }
@@ -680,6 +703,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the prereleaseFeatures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrereleaseFeatures(@javax.annotation.Nullable final PrereleaseFeatures value) {
         this._prereleaseFeatures = value;
     }
@@ -688,6 +712,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the qualityUpdatesDeferralPeriodInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQualityUpdatesDeferralPeriodInDays(@javax.annotation.Nullable final Integer value) {
         this._qualityUpdatesDeferralPeriodInDays = value;
     }
@@ -696,6 +721,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the qualityUpdatesPaused property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQualityUpdatesPaused(@javax.annotation.Nullable final Boolean value) {
         this._qualityUpdatesPaused = value;
     }
@@ -704,6 +730,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the qualityUpdatesPauseExpiryDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQualityUpdatesPauseExpiryDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._qualityUpdatesPauseExpiryDateTime = value;
     }
@@ -712,6 +739,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the qualityUpdatesPauseStartDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQualityUpdatesPauseStartDate(@javax.annotation.Nullable final LocalDate value) {
         this._qualityUpdatesPauseStartDate = value;
     }
@@ -720,6 +748,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the qualityUpdatesRollbackStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQualityUpdatesRollbackStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._qualityUpdatesRollbackStartDateTime = value;
     }
@@ -728,6 +757,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the qualityUpdatesWillBeRolledBack property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQualityUpdatesWillBeRolledBack(@javax.annotation.Nullable final Boolean value) {
         this._qualityUpdatesWillBeRolledBack = value;
     }
@@ -736,6 +766,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the scheduleImminentRestartWarningInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduleImminentRestartWarningInMinutes(@javax.annotation.Nullable final Integer value) {
         this._scheduleImminentRestartWarningInMinutes = value;
     }
@@ -744,6 +775,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the scheduleRestartWarningInHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduleRestartWarningInHours(@javax.annotation.Nullable final Integer value) {
         this._scheduleRestartWarningInHours = value;
     }
@@ -752,6 +784,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the skipChecksBeforeRestart property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkipChecksBeforeRestart(@javax.annotation.Nullable final Boolean value) {
         this._skipChecksBeforeRestart = value;
     }
@@ -760,6 +793,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the updateNotificationLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateNotificationLevel(@javax.annotation.Nullable final WindowsUpdateNotificationDisplayOption value) {
         this._updateNotificationLevel = value;
     }
@@ -768,6 +802,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the updateWeeks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateWeeks(@javax.annotation.Nullable final WindowsUpdateForBusinessUpdateWeeks value) {
         this._updateWeeks = value;
     }
@@ -776,6 +811,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the userPauseAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPauseAccess(@javax.annotation.Nullable final Enablement value) {
         this._userPauseAccess = value;
     }
@@ -784,6 +820,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param value Value to set for the userWindowsUpdateScanAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserWindowsUpdateScanAccess(@javax.annotation.Nullable final Enablement value) {
         this._userWindowsUpdateScanAccess = value;
     }

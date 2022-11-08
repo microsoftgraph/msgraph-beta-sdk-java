@@ -15,6 +15,7 @@ public class Sharepoint extends Entity implements Parsable {
      * Instantiates a new sharepoint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Sharepoint() {
         super();
         this.setOdataType("#microsoft.graph.tenantAdmin.sharepoint");
@@ -36,7 +37,7 @@ public class Sharepoint extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Sharepoint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(Settings::createFromDiscriminatorValue)); });
         }};
     }
@@ -53,6 +54,7 @@ public class Sharepoint extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class Sharepoint extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final Settings value) {
         this._settings = value;
     }

@@ -48,6 +48,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * Instantiates a new OutlookTask and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutlookTask() {
         super();
         this.setOdataType("#microsoft.graph.outlookTask");
@@ -109,7 +110,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutlookTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
             this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
             this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
@@ -239,6 +240,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -266,6 +268,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final String value) {
         this._assignedTo = value;
     }
@@ -274,6 +277,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the attachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment> value) {
         this._attachments = value;
     }
@@ -282,6 +286,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
         this._body = value;
     }
@@ -290,6 +295,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._completedDateTime = value;
     }
@@ -298,6 +304,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._dueDateTime = value;
     }
@@ -306,6 +313,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
         this._hasAttachments = value;
     }
@@ -314,6 +322,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the importance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final Importance value) {
         this._importance = value;
     }
@@ -322,6 +331,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the isReminderOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsReminderOn(@javax.annotation.Nullable final Boolean value) {
         this._isReminderOn = value;
     }
@@ -330,6 +340,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this._multiValueExtendedProperties = value;
     }
@@ -338,6 +349,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final String value) {
         this._owner = value;
     }
@@ -346,6 +358,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the parentFolderId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentFolderId(@javax.annotation.Nullable final String value) {
         this._parentFolderId = value;
     }
@@ -354,6 +367,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the recurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
         this._recurrence = value;
     }
@@ -362,6 +376,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the reminderDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReminderDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._reminderDateTime = value;
     }
@@ -370,6 +385,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the sensitivity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitivity(@javax.annotation.Nullable final Sensitivity value) {
         this._sensitivity = value;
     }
@@ -378,6 +394,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this._singleValueExtendedProperties = value;
     }
@@ -386,6 +403,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._startDateTime = value;
     }
@@ -394,6 +412,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final TaskStatus value) {
         this._status = value;
     }
@@ -402,6 +421,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }

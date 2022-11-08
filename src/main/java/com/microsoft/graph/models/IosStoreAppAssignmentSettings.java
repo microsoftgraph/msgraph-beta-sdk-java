@@ -18,6 +18,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      * Instantiates a new IosStoreAppAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosStoreAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.iosStoreAppAssignmentSettings");
@@ -39,7 +40,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosStoreAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
             this.put("uninstallOnDeviceRemoval", (n) -> { currentObject.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
             this.put("vpnConfigurationId", (n) -> { currentObject.setVpnConfigurationId(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the isRemovable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRemovable(@javax.annotation.Nullable final Boolean value) {
         this._isRemovable = value;
     }
@@ -94,6 +97,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the uninstallOnDeviceRemoval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUninstallOnDeviceRemoval(@javax.annotation.Nullable final Boolean value) {
         this._uninstallOnDeviceRemoval = value;
     }
@@ -102,6 +106,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the vpnConfigurationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVpnConfigurationId(@javax.annotation.Nullable final String value) {
         this._vpnConfigurationId = value;
     }

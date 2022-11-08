@@ -17,6 +17,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      * Instantiates a new UserLastSignInRecommendationInsightSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserLastSignInRecommendationInsightSetting() {
         super();
         this.setOdataType("#microsoft.graph.userLastSignInRecommendationInsightSetting");
@@ -38,7 +39,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserLastSignInRecommendationInsightSetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("recommendationLookBackDuration", (n) -> { currentObject.setRecommendationLookBackDuration(n.getPeriodValue()); });
             this.put("signInScope", (n) -> { currentObject.setSignInScope(n.getEnumValue(UserSignInRecommendationScope.class)); });
         }};
@@ -64,6 +65,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      * @param value Value to set for the recommendationLookBackDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationLookBackDuration(@javax.annotation.Nullable final Period value) {
         this._recommendationLookBackDuration = value;
     }
@@ -83,6 +86,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      * @param value Value to set for the signInScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInScope(@javax.annotation.Nullable final UserSignInRecommendationScope value) {
         this._signInScope = value;
     }

@@ -2,10 +2,10 @@ package com.microsoft.graph.print.reports.getcredentialusagesummarywithperiod;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
+import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -17,11 +17,11 @@ import java.util.Objects;
 /** Provides operations to call the getCredentialUsageSummary method. */
 public class GetCredentialUsageSummaryWithPeriodRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new GetCredentialUsageSummaryWithPeriodRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -29,11 +29,12 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetCredentialUsageSummaryWithPeriodRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter, @javax.annotation.Nullable final String period) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/print/reports/microsoft.graph.getCredentialUsageSummary(period='{period}')";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/print/reports/microsoft.graph.getCredentialUsageSummary(period='{period}'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         urlTplParams.put("period", period);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -44,9 +45,10 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetCredentialUsageSummaryWithPeriodRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/print/reports/microsoft.graph.getCredentialUsageSummary(period='{period}')";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/print/reports/microsoft.graph.getCredentialUsageSummary(period='{period}'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -75,6 +77,7 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder {
         if (requestConfiguration != null) {
             final GetCredentialUsageSummaryWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetCredentialUsageSummaryWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
@@ -84,16 +87,19 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder {
      * Invoke function getCredentialUsageSummary
      * @return a CompletableFuture of getCredentialUsageSummaryWithPeriodResponse
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetCredentialUsageSummaryWithPeriodResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, GetCredentialUsageSummaryWithPeriodResponse::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, GetCredentialUsageSummaryWithPeriodResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<GetCredentialUsageSummaryWithPeriodResponse>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -101,35 +107,51 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getCredentialUsageSummaryWithPeriodResponse
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetCredentialUsageSummaryWithPeriodResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetCredentialUsageSummaryWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, GetCredentialUsageSummaryWithPeriodResponse::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, GetCredentialUsageSummaryWithPeriodResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<GetCredentialUsageSummaryWithPeriodResponse>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
-    /**
-     * Invoke function getCredentialUsageSummary
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of getCredentialUsageSummaryWithPeriodResponse
-     */
-    public java.util.concurrent.CompletableFuture<GetCredentialUsageSummaryWithPeriodResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetCredentialUsageSummaryWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, GetCredentialUsageSummaryWithPeriodResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
+    /** Invoke function getCredentialUsageSummary */
+    public class GetCredentialUsageSummaryWithPeriodRequestBuilderGetQueryParameters {
+        /** Include count of items */
+        @QueryParameter(name = "%24count")
+        @javax.annotation.Nullable
+        public Boolean count;
+        /** Filter items by property values */
+        @QueryParameter(name = "%24filter")
+        @javax.annotation.Nullable
+        public String filter;
+        /** Order items by property values */
+        @QueryParameter(name = "%24orderby")
+        @javax.annotation.Nullable
+        public String[] orderby;
+        /** Search items by search phrases */
+        @QueryParameter(name = "%24search")
+        @javax.annotation.Nullable
+        public String search;
+        /** Select properties to be returned */
+        @QueryParameter(name = "%24select")
+        @javax.annotation.Nullable
+        public String[] select;
+        /** Skip the first n items */
+        @QueryParameter(name = "%24skip")
+        @javax.annotation.Nullable
+        public Integer skip;
+        /** Show only the first n items */
+        @QueryParameter(name = "%24top")
+        @javax.annotation.Nullable
+        public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class GetCredentialUsageSummaryWithPeriodRequestBuilderGetRequestConfiguration {
@@ -138,11 +160,15 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
+        /** Request query parameters */
+        @javax.annotation.Nullable
+        public GetCredentialUsageSummaryWithPeriodRequestBuilderGetQueryParameters queryParameters = new GetCredentialUsageSummaryWithPeriodRequestBuilderGetQueryParameters();
         /**
          * Instantiates a new getCredentialUsageSummaryWithPeriodRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public GetCredentialUsageSummaryWithPeriodRequestBuilderGetRequestConfiguration() {
         }
     }
