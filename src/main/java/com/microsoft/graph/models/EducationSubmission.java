@@ -130,6 +130,15 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime unsubmittedDateTime;
 
     /**
+     * The Web Url.
+     * The deep link URL for the given submission.
+     */
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
+    @Expose
+	@Nullable
+    public String webUrl;
+
+    /**
      * The Outcomes.
      * 
      */

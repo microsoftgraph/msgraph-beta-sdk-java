@@ -50,6 +50,7 @@ import com.microsoft.graph.models.ManagedDeviceUpdateWindowsDeviceAccountParamet
 import com.microsoft.graph.models.ManagedDeviceWindowsDefenderScanParameterSet;
 import com.microsoft.graph.models.ManagedDeviceWipeParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCreateRemoteHelpSessionParameterSet;
+import com.microsoft.graph.models.ManagedDeviceEndRemoteHelpSessionParameterSet;
 import com.microsoft.graph.models.ManagedDeviceRequestRemoteHelpSessionAccessParameterSet;
 import com.microsoft.graph.models.ManagedDeviceRetrieveRemoteHelpSessionParameterSet;
 
@@ -421,6 +422,15 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
+     * Perform MDM key recovery and TPM attestation
+     * @return the request builder
+     */
+    @Nonnull
+    public ManagedDeviceInitiateMobileDeviceManagementKeyRecoveryRequestBuilder initiateMobileDeviceManagementKeyRecovery() {
+        return new ManagedDeviceInitiateMobileDeviceManagementKeyRecoveryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.initiateMobileDeviceManagementKeyRecovery"), getClient(), null);
+    }
+
+    /**
      * Locate a device
      * @return the request builder
      */
@@ -642,6 +652,16 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     @Nonnull
     public ManagedDeviceCreateRemoteHelpSessionRequestBuilder createRemoteHelpSession(@Nonnull final ManagedDeviceCreateRemoteHelpSessionParameterSet parameters) {
         return new ManagedDeviceCreateRemoteHelpSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createRemoteHelpSession"), getClient(), null, parameters);
+    }
+
+    /**
+     * Remote help - End ACS session, Pubsub session and delete Remote help session
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ManagedDeviceEndRemoteHelpSessionRequestBuilder endRemoteHelpSession(@Nonnull final ManagedDeviceEndRemoteHelpSessionParameterSet parameters) {
+        return new ManagedDeviceEndRemoteHelpSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.endRemoteHelpSession"), getClient(), null, parameters);
     }
 
     /**

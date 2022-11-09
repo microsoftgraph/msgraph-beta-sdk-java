@@ -44,13 +44,25 @@ public enum DeviceManagementConfigurationTemplateFamily
     */
     ENDPOINT_SECURITY_APPLICATION_CONTROL,
     /**
+    * endpoint Security Endpoint Privilege Management
+    */
+    ENDPOINT_SECURITY_ENDPOINT_PRIVILEGE_MANAGEMENT,
+    /**
     * enrollment Configuration
     */
     ENROLLMENT_CONFIGURATION,
     /**
+    * app Quiet Time
+    */
+    APP_QUIET_TIME,
+    /**
     * baseline
     */
     BASELINE,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
     /**
     * For DeviceManagementConfigurationTemplateFamily values that were not expected from the service
     */

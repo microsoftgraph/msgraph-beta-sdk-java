@@ -27,7 +27,7 @@ public class WorkflowVersion extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Version Number.
-     * The version of the workflow.Supports $filter(eq, ne), orderby.
+     * The version of the workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      */
     @SerializedName(value = "versionNumber", alternate = {"VersionNumber"})
     @Expose

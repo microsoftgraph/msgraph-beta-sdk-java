@@ -27,7 +27,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
 
     /**
      * The Is Removable.
-     * Whether or not the app can be removed by the user.
+     * When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
      */
     @SerializedName(value = "isRemovable", alternate = {"IsRemovable"})
     @Expose

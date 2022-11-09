@@ -69,6 +69,7 @@ import com.microsoft.graph.models.ManagedDeviceUpdateWindowsDeviceAccountParamet
 import com.microsoft.graph.models.ManagedDeviceWindowsDefenderScanParameterSet;
 import com.microsoft.graph.models.ManagedDeviceWipeParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCreateRemoteHelpSessionParameterSet;
+import com.microsoft.graph.models.ManagedDeviceEndRemoteHelpSessionParameterSet;
 import com.microsoft.graph.models.ManagedDeviceRequestRemoteHelpSessionAccessParameterSet;
 import com.microsoft.graph.models.ManagedDeviceAppDiagnosticsParameterSet;
 import com.microsoft.graph.models.ManagedDeviceRetrieveRemoteHelpSessionParameterSet;

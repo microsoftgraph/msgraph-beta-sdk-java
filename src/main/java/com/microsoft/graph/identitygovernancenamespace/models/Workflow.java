@@ -33,7 +33,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Deleted Date Time.
-     * When the workflow was deleted. Supports $filter(lt,gt) and $orderBy.
+     * When the workflow was deleted.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      */
     @SerializedName(value = "deletedDateTime", alternate = {"DeletedDateTime"})
     @Expose
@@ -42,7 +42,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Identifier used for individually addressing a specific workflow. Supports $filter(eq, ne).
+     * Identifier used for individually addressing a specific workflow.Supports $filter(eq, ne) and $orderby.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -60,7 +60,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Version.
-     * The current version number of the workflow. Value is 1 when the workflow is first created. Supports $filter(eq, ne).
+     * The current version number of the workflow. Value is 1 when the workflow is first created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

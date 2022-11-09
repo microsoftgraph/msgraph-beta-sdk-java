@@ -82,6 +82,15 @@ public class ComanagementEligibleDevicesSummary implements IJsonBackedObject {
 	@Nullable
     public Integer needsOsUpdateCount;
 
+    /**
+     * The Scheduled For Enrollment Count.
+     * Count of devices scheduled for Co-Management enrollment. Valid values 0 to 9999999
+     */
+    @SerializedName(value = "scheduledForEnrollmentCount", alternate = {"ScheduledForEnrollmentCount"})
+    @Expose
+	@Nullable
+    public Integer scheduledForEnrollmentCount;
+
 
     /**
      * Sets the raw JSON object

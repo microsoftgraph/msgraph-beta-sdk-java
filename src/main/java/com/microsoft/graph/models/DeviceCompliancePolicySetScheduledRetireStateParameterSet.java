@@ -21,6 +21,15 @@ import java.util.ArrayList;
  */
 public class DeviceCompliancePolicySetScheduledRetireStateParameterSet {
     /**
+     * The scoped To All Devices.
+     * 
+     */
+    @SerializedName(value = "scopedToAllDevices", alternate = {"ScopedToAllDevices"})
+    @Expose
+	@Nullable
+    public Boolean scopedToAllDevices;
+
+    /**
      * The state.
      * 
      */
@@ -48,6 +57,7 @@ public class DeviceCompliancePolicySetScheduledRetireStateParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected DeviceCompliancePolicySetScheduledRetireStateParameterSet(@Nonnull final DeviceCompliancePolicySetScheduledRetireStateParameterSetBuilder builder) {
+        this.scopedToAllDevices = builder.scopedToAllDevices;
         this.state = builder.state;
         this.managedDeviceIds = builder.managedDeviceIds;
     }
@@ -63,6 +73,21 @@ public class DeviceCompliancePolicySetScheduledRetireStateParameterSet {
      * Fluent builder for the DeviceCompliancePolicySetScheduledRetireStateParameterSet
      */
     public static final class DeviceCompliancePolicySetScheduledRetireStateParameterSetBuilder {
+        /**
+         * The scopedToAllDevices parameter value
+         */
+        @Nullable
+        protected Boolean scopedToAllDevices;
+        /**
+         * Sets the ScopedToAllDevices
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public DeviceCompliancePolicySetScheduledRetireStateParameterSetBuilder withScopedToAllDevices(@Nullable final Boolean val) {
+            this.scopedToAllDevices = val;
+            return this;
+        }
         /**
          * The state parameter value
          */
@@ -114,6 +139,9 @@ public class DeviceCompliancePolicySetScheduledRetireStateParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.scopedToAllDevices != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("scopedToAllDevices", scopedToAllDevices));
+        }
         if(this.state != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("state", state));
         }

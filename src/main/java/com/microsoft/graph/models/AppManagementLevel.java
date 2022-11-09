@@ -40,6 +40,10 @@ public enum AppManagementLevel
     */
     ANDROID_OPEN_SOURCE_PROJECT_USERLESS,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For AppManagementLevel values that were not expected from the service
     */
     UNEXPECTED_VALUE

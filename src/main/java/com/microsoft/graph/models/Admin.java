@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.Edge;
 import com.microsoft.graph.tenantadmin.models.Sharepoint;
 import com.microsoft.graph.models.ServiceAnnouncement;
 import com.microsoft.graph.models.AdminReportSettings;
@@ -40,6 +41,15 @@ public class Admin implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Edge.
+     * A container for Microsoft Edge resources. Read-only.
+     */
+    @SerializedName(value = "edge", alternate = {"Edge"})
+    @Expose
+	@Nullable
+    public Edge edge;
 
     /**
      * The Sharepoint.

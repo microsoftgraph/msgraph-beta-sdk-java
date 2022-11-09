@@ -66,7 +66,7 @@ public class SearchRequest implements IJsonBackedObject {
 
     /**
      * The Collapse Properties.
-     * 
+     * Contains the ordered collection of fields and limit to collapse results. Optional.
      */
     @SerializedName(value = "collapseProperties", alternate = {"CollapseProperties"})
     @Expose

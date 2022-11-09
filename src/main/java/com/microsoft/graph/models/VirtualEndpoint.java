@@ -21,6 +21,7 @@ import com.microsoft.graph.requests.CloudPcGalleryImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionPage;
 import com.microsoft.graph.requests.CloudPcServicePlanCollectionPage;
+import com.microsoft.graph.requests.CloudPcSharedUseServicePlanCollectionPage;
 import com.microsoft.graph.requests.CloudPcSnapshotCollectionPage;
 import com.microsoft.graph.requests.CloudPcSupportedRegionCollectionPage;
 import com.microsoft.graph.requests.CloudPcUserSettingCollectionPage;
@@ -140,6 +141,13 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.CloudPcServicePlanCollectionPage servicePlans;
 
     /**
+     * The Shared Use Service Plans.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.CloudPcSharedUseServicePlanCollectionPage sharedUseServicePlans;
+
+    /**
      * The Snapshots.
      * Cloud PC snapshots.
      */
@@ -206,6 +214,10 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
         if (json.has("servicePlans")) {
             servicePlans = serializer.deserializeObject(json.get("servicePlans"), com.microsoft.graph.requests.CloudPcServicePlanCollectionPage.class);
+        }
+
+        if (json.has("sharedUseServicePlans")) {
+            sharedUseServicePlans = serializer.deserializeObject(json.get("sharedUseServicePlans"), com.microsoft.graph.requests.CloudPcSharedUseServicePlanCollectionPage.class);
         }
 
         if (json.has("snapshots")) {

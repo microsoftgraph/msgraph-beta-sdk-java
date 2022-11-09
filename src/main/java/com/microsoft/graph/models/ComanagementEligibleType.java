@@ -36,6 +36,10 @@ public enum ComanagementEligibleType
     */
     SCHEDULED_FOR_ENROLLMENT,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For ComanagementEligibleType values that were not expected from the service
     */
     UNEXPECTED_VALUE

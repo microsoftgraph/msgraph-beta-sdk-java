@@ -149,6 +149,15 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     public String minimumRequiredSdkVersion;
 
     /**
+     * The Minimum Warning Sdk Version.
+     * Versions less than the specified version will result in warning message on the managed app from accessing company data.
+     */
+    @SerializedName(value = "minimumWarningSdkVersion", alternate = {"MinimumWarningSdkVersion"})
+    @Expose
+	@Nullable
+    public String minimumWarningSdkVersion;
+
+    /**
      * The Minimum Wipe Sdk Version.
      * Versions less than the specified version will block the managed app from accessing company data.
      */
