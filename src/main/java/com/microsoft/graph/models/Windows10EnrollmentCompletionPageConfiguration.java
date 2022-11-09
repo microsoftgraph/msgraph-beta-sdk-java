@@ -99,6 +99,15 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     public Integer installProgressTimeoutInMinutes;
 
     /**
+     * The Install Quality Updates.
+     * Allows quality updates installation during OOBE
+     */
+    @SerializedName(value = "installQualityUpdates", alternate = {"InstallQualityUpdates"})
+    @Expose
+	@Nullable
+    public Boolean installQualityUpdates;
+
+    /**
      * The Selected Mobile App Ids.
      * Selected applications to track the installation status
      */

@@ -65,7 +65,7 @@ public class IosLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Identity Version.
-     * The identity version.
+     * The identity version. This property is being deprecated in 2211(November 2022)
      */
     @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose

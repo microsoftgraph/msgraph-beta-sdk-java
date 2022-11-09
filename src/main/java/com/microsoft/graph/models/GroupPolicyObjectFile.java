@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
 
 
@@ -69,6 +70,15 @@ public class GroupPolicyObjectFile extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String ouDistinguishedName;
+
+    /**
+     * The Role Scope Tag Ids.
+     * The list of scope tags for the configuration.
+     */
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
+    @Expose
+	@Nullable
+    public java.util.List<String> roleScopeTagIds;
 
 
     /**

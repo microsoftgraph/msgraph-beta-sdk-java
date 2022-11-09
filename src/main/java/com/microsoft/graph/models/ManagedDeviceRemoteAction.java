@@ -76,6 +76,10 @@ public enum ManagedDeviceRemoteAction
     */
     COLLECT_DIAGNOSTICS,
     /**
+    * initiate Mobile Device Management Key Recovery
+    */
+    INITIATE_MOBILE_DEVICE_MANAGEMENT_KEY_RECOVERY,
+    /**
     * For ManagedDeviceRemoteAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

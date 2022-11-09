@@ -31,7 +31,7 @@ public class Task extends Entity implements IJsonBackedObject {
 
     /**
      * The Arguments.
-     * Arguments included within the task.  For guidance to configure this property, see Configure the arguments for built-in Lifecycle Workflow tasks.
+     * Arguments included within the task.  For guidance to configure this property, see Configure the arguments for built-in Lifecycle Workflow tasks. Required.
      */
     @SerializedName(value = "arguments", alternate = {"Arguments"})
     @Expose
@@ -40,7 +40,7 @@ public class Task extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * The category of the task. The possible values are: joiner, leaver, unknownFutureValue. This property is multi-valued and the same task can apply to both joiner and leaver categories.
+     * The category of the task. The possible values are: joiner, leaver, unknownFutureValue. This property is multi-valued and the same task can apply to both joiner and leaver categories.Supports $filter(eq, ne).
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -49,7 +49,7 @@ public class Task extends Entity implements IJsonBackedObject {
 
     /**
      * The Continue On Error.
-     * A boolean value that determines if the failure of this task stops the subsequent workflows from running.
+     * A boolean value that determines if the failure of this task stops the subsequent workflows from running. Optional.
      */
     @SerializedName(value = "continueOnError", alternate = {"ContinueOnError"})
     @Expose
@@ -58,7 +58,7 @@ public class Task extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * A string that describes the purpose of the task for administrative use.
+     * A string that describes the purpose of the task for administrative use. Optional.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -67,7 +67,7 @@ public class Task extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * A unique string that identifies the task. Supports $filter(eq) and orderBy.
+     * A unique string that identifies the task. Required.Supports $filter(eq, ne) and orderBy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -76,7 +76,7 @@ public class Task extends Entity implements IJsonBackedObject {
 
     /**
      * The Execution Sequence.
-     * An integer that states in what order the task will run in a workflow.
+     * An integer that states in what order the task will run in a workflow.Supports $orderby.
      */
     @SerializedName(value = "executionSequence", alternate = {"ExecutionSequence"})
     @Expose
@@ -85,7 +85,7 @@ public class Task extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * A boolean value that denotes whether the task is set to run or not. Supports $filter(eq, ne) and orderBy.
+     * A boolean value that denotes whether the task is set to run or not. Optional.Supports $filter(eq, ne) and orderBy.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -94,7 +94,7 @@ public class Task extends Entity implements IJsonBackedObject {
 
     /**
      * The Task Definition Id.
-     * A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks
+     * A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks. Required.Supports $filter(eq, ne).
      */
     @SerializedName(value = "taskDefinitionId", alternate = {"TaskDefinitionId"})
     @Expose

@@ -36,6 +36,15 @@ public class WinGetApp extends MobileApp implements IJsonBackedObject {
     public WinGetAppInstallExperience installExperience;
 
     /**
+     * The Manifest Hash.
+     * Hash of package metadata properties used to validate that the application matches the metadata in the source repository.
+     */
+    @SerializedName(value = "manifestHash", alternate = {"ManifestHash"})
+    @Expose
+	@Nullable
+    public String manifestHash;
+
+    /**
      * The Package Identifier.
      * The PackageIdentifier from the WinGet source repository REST API. This also maps to the Id when using the WinGet client command line application. Required at creation time, cannot be modified on existing objects.
      */

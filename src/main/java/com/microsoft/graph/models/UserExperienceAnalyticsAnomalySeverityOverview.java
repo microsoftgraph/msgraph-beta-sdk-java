@@ -73,15 +73,6 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements IJsonBack
 	@Nullable
     public Integer mediumSeverityAnomalyCount;
 
-    /**
-     * The Other Severity Anomaly Count.
-     * The number of anomalies which have been detected with undefined severity. Valid values -2147483648 to 2147483647
-     */
-    @SerializedName(value = "otherSeverityAnomalyCount", alternate = {"OtherSeverityAnomalyCount"})
-    @Expose
-	@Nullable
-    public Integer otherSeverityAnomalyCount;
-
 
     /**
      * Sets the raw JSON object

@@ -49,7 +49,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
 
     /**
      * The Targeted App Management Levels.
-     * The intended app management levels for this policy. Possible values are: unspecified, unmanaged, mdm, androidEnterprise, androidEnterpriseDedicatedDevicesWithAzureAdSharedMode, androidOpenSourceProjectUserAssociated, androidOpenSourceProjectUserless.
+     * The intended app management levels for this policy. Possible values are: unspecified, unmanaged, mdm, androidEnterprise, androidEnterpriseDedicatedDevicesWithAzureAdSharedMode, androidOpenSourceProjectUserAssociated, androidOpenSourceProjectUserless, unknownFutureValue.
      */
     @SerializedName(value = "targetedAppManagementLevels", alternate = {"TargetedAppManagementLevels"})
     @Expose

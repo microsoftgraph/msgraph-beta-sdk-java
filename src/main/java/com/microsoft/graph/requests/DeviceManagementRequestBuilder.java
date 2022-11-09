@@ -10,10 +10,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagement;
 import com.microsoft.graph.models.AssignmentFilterEvaluateRequest;
 import com.microsoft.graph.models.AssignmentFilterStatusDetails;
-import com.microsoft.graph.models.OrganizationalMessageTenantConsent;
 import com.microsoft.graph.models.RolePermission;
 import com.microsoft.graph.models.ComanagedDevicesSummary;
 import com.microsoft.graph.models.ComanagementEligibleDevicesSummary;
+import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScopeSummary;
 import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDevicesSummary;
 import com.microsoft.graph.models.SuggestedEnrollmentLimit;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignedRoleDetails;
@@ -27,8 +27,6 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.DeviceManagementSendCustomNotificationToCompanyPortalParameterSet;
 import com.microsoft.graph.models.DeviceManagementEvaluateAssignmentFilterParameterSet;
 import com.microsoft.graph.models.DeviceManagementGetAssignmentFiltersStatusDetailsParameterSet;
-import com.microsoft.graph.models.DeviceManagementPostOrganizationalMessageTenantConsentParameterSet;
-import com.microsoft.graph.models.DeviceManagementUpdateOrganizationalMessageTenantConsentParameterSet;
 import com.microsoft.graph.models.DeviceManagementGetEffectivePermissionsParameterSet;
 import com.microsoft.graph.models.DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet;
 import com.microsoft.graph.models.DeviceManagementGetSuggestedEnrollmentLimitParameterSet;
@@ -1967,16 +1965,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     public com.microsoft.graph.requests.UserExperienceAnalyticsOverviewRequestBuilder userExperienceAnalyticsOverview() {
         return new com.microsoft.graph.requests.UserExperienceAnalyticsOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsOverview"), getClient(), null);
     }
-
-    /**
-     * Gets the request builder for UserExperienceAnalyticsRegressionSummary
-     *
-     * @return the UserExperienceAnalyticsRegressionSummaryRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.UserExperienceAnalyticsRegressionSummaryRequestBuilder userExperienceAnalyticsRegressionSummary() {
-        return new com.microsoft.graph.requests.UserExperienceAnalyticsRegressionSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsRegressionSummary"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the UserExperienceAnalyticsRemoteConnection collection
      *
@@ -2608,46 +2596,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new com.microsoft.graph.requests.ConfigManagerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("configManagerCollections") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the OrganizationalMessageDetail collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.OrganizationalMessageDetailCollectionRequestBuilder organizationalMessageDetails() {
-        return new com.microsoft.graph.requests.OrganizationalMessageDetailCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("organizationalMessageDetails"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the OrganizationalMessageDetail item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.OrganizationalMessageDetailRequestBuilder organizationalMessageDetails(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.OrganizationalMessageDetailRequestBuilder(getRequestUrlWithAdditionalSegment("organizationalMessageDetails") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the OrganizationalMessageGuidedContent collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.OrganizationalMessageGuidedContentCollectionRequestBuilder organizationalMessageGuidedContents() {
-        return new com.microsoft.graph.requests.OrganizationalMessageGuidedContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("organizationalMessageGuidedContents"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the OrganizationalMessageGuidedContent item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.OrganizationalMessageGuidedContentRequestBuilder organizationalMessageGuidedContents(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.OrganizationalMessageGuidedContentRequestBuilder(getRequestUrlWithAdditionalSegment("organizationalMessageGuidedContents") + "/" + id, getClient(), null);
-    }
-    /**
      *  Gets a request builder for the ResourceOperation collection
      *
      * @return the collection request builder
@@ -3087,26 +3035,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public DeviceManagementPostOrganizationalMessageTenantConsentRequestBuilder postOrganizationalMessageTenantConsent(@Nonnull final DeviceManagementPostOrganizationalMessageTenantConsentParameterSet parameters) {
-        return new DeviceManagementPostOrganizationalMessageTenantConsentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.postOrganizationalMessageTenantConsent"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public DeviceManagementUpdateOrganizationalMessageTenantConsentRequestBuilder updateOrganizationalMessageTenantConsent(@Nonnull final DeviceManagementUpdateOrganizationalMessageTenantConsentParameterSet parameters) {
-        return new DeviceManagementUpdateOrganizationalMessageTenantConsentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateOrganizationalMessageTenantConsent"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
      * @return the request builder collection
      */
     @Nonnull
@@ -3157,6 +3085,15 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
      * @return the request builder
      */
     @Nonnull
+    public DeviceManagementUserExperienceAnalyticsSummarizedDeviceScopesRequestBuilder userExperienceAnalyticsSummarizedDeviceScopes() {
+        return new DeviceManagementUserExperienceAnalyticsSummarizedDeviceScopesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.userExperienceAnalyticsSummarizedDeviceScopes"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public DeviceManagementUserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder userExperienceAnalyticsSummarizeWorkFromAnywhereDevices() {
         return new DeviceManagementUserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.userExperienceAnalyticsSummarizeWorkFromAnywhereDevices"), getClient(), null);
     }
@@ -3169,15 +3106,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public DeviceManagementGetSuggestedEnrollmentLimitRequestBuilder getSuggestedEnrollmentLimit(@Nonnull final DeviceManagementGetSuggestedEnrollmentLimitParameterSet parameters) {
         return new DeviceManagementGetSuggestedEnrollmentLimitRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSuggestedEnrollmentLimit"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public DeviceManagementGetOrganizationalMessageTenantConsentRequestBuilder getOrganizationalMessageTenantConsent() {
-        return new DeviceManagementGetOrganizationalMessageTenantConsentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOrganizationalMessageTenantConsent"), getClient(), null);
     }
 
     /**

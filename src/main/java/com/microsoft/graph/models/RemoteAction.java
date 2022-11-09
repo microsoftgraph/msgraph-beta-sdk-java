@@ -124,6 +124,10 @@ public enum RemoteAction
     */
     MOVE_DEVICE_TO_ORGANIZATIONAL_UNIT,
     /**
+    * initiate Mobile Device Management Key Recovery
+    */
+    INITIATE_MOBILE_DEVICE_MANAGEMENT_KEY_RECOVERY,
+    /**
     * For RemoteAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

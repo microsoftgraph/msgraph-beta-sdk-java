@@ -56,4 +56,13 @@ public class DeviceManagementPartnerRequestBuilder extends BaseRequestBuilder<De
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public DeviceManagementPartnerTerminateRequestBuilder terminate() {
+        return new DeviceManagementPartnerTerminateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.terminate"), getClient(), null);
+    }
 }

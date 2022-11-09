@@ -26,6 +26,15 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
 
 
     /**
+     * The Enrolled By User.
+     * The User Principal Name (UPN) of the user that enrolled the device
+     */
+    @SerializedName(value = "enrolledByUser", alternate = {"EnrolledByUser"})
+    @Expose
+	@Nullable
+    public String enrolledByUser;
+
+    /**
      * The Error Code.
      * The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
      */
