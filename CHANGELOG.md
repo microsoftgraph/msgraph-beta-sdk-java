@@ -11,6 +11,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.60.0] - 2022-11-09
+
+### Added
+ 
+- ChatMessageActions model. 
+- ChatMessageHistoryItem model.
+- CloudPcProvisioningType model. 
+- OnPremisesAccidentalDeletionPrevention model. 
+- UserExperienceAnalyticsDeviceScopeSummary model. 
+- BrowserSharedCookie models and related requests. 
+- BrowserSite models and related requests.
+- DeviceManagementConfigurationPolicyReorder models and related requests. 
+- DeviceManagementPartnerTerminate models and related requests.
+- DeviceManagementReportsGetEncryptionReportForDevices models and related requests. 
+- DeviceManagementReportsGetMobileApplicationManagementAppConfigurationReport models and related requests. 
+- DeviceManagementUserExperienceAnalyticsSummarizedDeviceScopes models and related requests.
+- Edge model and related requests. 
+- InternetExplorerMode model and related requests. 
+- MacOSMicrosoftDefenderApp model and related requests. 
+- ManagedDeviceEndRemoteHelpSession models and related requests.
+- ManagedDeviceInitiateMobileDeviceManagementKeyRecovery models and related requests.
+- OnPremisesDirectorySynchronization models and related requests.
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests.
+- Removed OrganizationalMessage models and related requests. 
+- Removed DeviceManagement requests and models related to OrganizationalMessage. 
+- Removed UserExperienceAnalyticsRegressionSummary models and related requests. 
+
 ## [0.59.0] - 2022-11-03
 
 ### Added
