@@ -13,6 +13,7 @@ import com.microsoft.graph.models.CloudPcDomainJoinConfiguration;
 import com.microsoft.graph.models.CloudPcProvisioningPolicyImageType;
 import com.microsoft.graph.models.CloudPcManagementService;
 import com.microsoft.graph.models.MicrosoftManagedDesktop;
+import com.microsoft.graph.models.CloudPcProvisioningType;
 import com.microsoft.graph.models.CloudPcWindowsSettings;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionPage;
@@ -148,6 +149,15 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     @Expose
 	@Nullable
     public String onPremisesConnectionId;
+
+    /**
+     * The Provisioning Type.
+     * 
+     */
+    @SerializedName(value = "provisioningType", alternate = {"ProvisioningType"})
+    @Expose
+	@Nullable
+    public CloudPcProvisioningType provisioningType;
 
     /**
      * The Windows Settings.

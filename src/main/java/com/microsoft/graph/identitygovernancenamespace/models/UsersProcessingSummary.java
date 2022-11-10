@@ -39,7 +39,7 @@ public class UsersProcessingSummary implements IJsonBackedObject {
 
     /**
      * The Failed Tasks.
-     * Numerical count of failed tasks for users processed by a workflow.
+     * 
      */
     @SerializedName(value = "failedTasks", alternate = {"FailedTasks"})
     @Expose
@@ -48,7 +48,7 @@ public class UsersProcessingSummary implements IJsonBackedObject {
 
     /**
      * The Failed Users.
-     * Numerical count of failed users processed by a workflow.
+     * 
      */
     @SerializedName(value = "failedUsers", alternate = {"FailedUsers"})
     @Expose
@@ -57,7 +57,7 @@ public class UsersProcessingSummary implements IJsonBackedObject {
 
     /**
      * The Successful Users.
-     * Numerical count of successful users processed by a workflow.
+     * 
      */
     @SerializedName(value = "successfulUsers", alternate = {"SuccessfulUsers"})
     @Expose
@@ -66,7 +66,7 @@ public class UsersProcessingSummary implements IJsonBackedObject {
 
     /**
      * The Total Tasks.
-     * Numerical count of total tasks for users processed by a workflow.
+     * 
      */
     @SerializedName(value = "totalTasks", alternate = {"TotalTasks"})
     @Expose
@@ -75,7 +75,7 @@ public class UsersProcessingSummary implements IJsonBackedObject {
 
     /**
      * The Total Users.
-     * Numerical count of total users processed by a workflow.
+     * 
      */
     @SerializedName(value = "totalUsers", alternate = {"TotalUsers"})
     @Expose

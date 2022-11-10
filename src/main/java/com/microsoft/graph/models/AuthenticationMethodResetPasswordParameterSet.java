@@ -29,15 +29,6 @@ public class AuthenticationMethodResetPasswordParameterSet {
 	@Nullable
     public String newPassword;
 
-    /**
-     * The require Change On Next Sign In.
-     * 
-     */
-    @SerializedName(value = "requireChangeOnNextSignIn", alternate = {"RequireChangeOnNextSignIn"})
-    @Expose
-	@Nullable
-    public Boolean requireChangeOnNextSignIn;
-
 
     /**
      * Instiaciates a new AuthenticationMethodResetPasswordParameterSet
@@ -49,7 +40,6 @@ public class AuthenticationMethodResetPasswordParameterSet {
      */
     protected AuthenticationMethodResetPasswordParameterSet(@Nonnull final AuthenticationMethodResetPasswordParameterSetBuilder builder) {
         this.newPassword = builder.newPassword;
-        this.requireChangeOnNextSignIn = builder.requireChangeOnNextSignIn;
     }
     /**
      * Gets a new builder for the body
@@ -79,21 +69,6 @@ public class AuthenticationMethodResetPasswordParameterSet {
             return this;
         }
         /**
-         * The requireChangeOnNextSignIn parameter value
-         */
-        @Nullable
-        protected Boolean requireChangeOnNextSignIn;
-        /**
-         * Sets the RequireChangeOnNextSignIn
-         * @param val the value to set it to
-         * @return the current builder object
-         */
-        @Nonnull
-        public AuthenticationMethodResetPasswordParameterSetBuilder withRequireChangeOnNextSignIn(@Nullable final Boolean val) {
-            this.requireChangeOnNextSignIn = val;
-            return this;
-        }
-        /**
          * Instanciates a new AuthenticationMethodResetPasswordParameterSetBuilder
          */
         @Nullable
@@ -116,9 +91,6 @@ public class AuthenticationMethodResetPasswordParameterSet {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
         if(this.newPassword != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("newPassword", newPassword));
-        }
-        if(this.requireChangeOnNextSignIn != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("requireChangeOnNextSignIn", requireChangeOnNextSignIn));
         }
         return result;
     }

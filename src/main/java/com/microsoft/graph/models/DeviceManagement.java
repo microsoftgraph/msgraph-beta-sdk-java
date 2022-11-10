@@ -39,7 +39,6 @@ import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthCapacityDe
 import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthRuntimeDetails;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScope;
 import com.microsoft.graph.models.UserExperienceAnalyticsOverview;
-import com.microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
 import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
 import com.microsoft.graph.models.WindowsAutopilotSettings;
 import com.microsoft.graph.models.ZebraFotaConnector;
@@ -149,8 +148,6 @@ import com.microsoft.graph.requests.MicrosoftTunnelSiteCollectionPage;
 import com.microsoft.graph.requests.NotificationMessageTemplateCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorCollectionPage;
 import com.microsoft.graph.requests.ConfigManagerCollectionCollectionPage;
-import com.microsoft.graph.requests.OrganizationalMessageDetailCollectionPage;
-import com.microsoft.graph.requests.OrganizationalMessageGuidedContentCollectionPage;
 import com.microsoft.graph.requests.ResourceOperationCollectionPage;
 import com.microsoft.graph.requests.DeviceAndAppManagementRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.RoleDefinitionCollectionPage;
@@ -1284,15 +1281,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public UserExperienceAnalyticsOverview userExperienceAnalyticsOverview;
 
     /**
-     * The User Experience Analytics Regression Summary.
-     * User experience analytics regression summary
-     */
-    @SerializedName(value = "userExperienceAnalyticsRegressionSummary", alternate = {"UserExperienceAnalyticsRegressionSummary"})
-    @Expose
-	@Nullable
-    public UserExperienceAnalyticsRegressionSummary userExperienceAnalyticsRegressionSummary;
-
-    /**
      * The User Experience Analytics Remote Connection.
      * User experience analytics remote connection
      */
@@ -1588,24 +1576,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.ConfigManagerCollectionCollectionPage configManagerCollections;
-
-    /**
-     * The Organizational Message Details.
-     * A list of OrganizationalMessageDetails
-     */
-    @SerializedName(value = "organizationalMessageDetails", alternate = {"OrganizationalMessageDetails"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.OrganizationalMessageDetailCollectionPage organizationalMessageDetails;
-
-    /**
-     * The Organizational Message Guided Contents.
-     * A list of OrganizationalMessageGuidedContents
-     */
-    @SerializedName(value = "organizationalMessageGuidedContents", alternate = {"OrganizationalMessageGuidedContents"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.OrganizationalMessageGuidedContentCollectionPage organizationalMessageGuidedContents;
 
     /**
      * The Resource Operations.
@@ -2255,14 +2225,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("configManagerCollections")) {
             configManagerCollections = serializer.deserializeObject(json.get("configManagerCollections"), com.microsoft.graph.requests.ConfigManagerCollectionCollectionPage.class);
-        }
-
-        if (json.has("organizationalMessageDetails")) {
-            organizationalMessageDetails = serializer.deserializeObject(json.get("organizationalMessageDetails"), com.microsoft.graph.requests.OrganizationalMessageDetailCollectionPage.class);
-        }
-
-        if (json.has("organizationalMessageGuidedContents")) {
-            organizationalMessageGuidedContents = serializer.deserializeObject(json.get("organizationalMessageGuidedContents"), com.microsoft.graph.requests.OrganizationalMessageGuidedContentCollectionPage.class);
         }
 
         if (json.has("resourceOperations")) {

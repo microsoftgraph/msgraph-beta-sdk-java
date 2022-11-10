@@ -159,7 +159,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
 
     /**
      * The Status.
-     * ComanagementEligibleStatus. Possible values are: comanaged, eligible, eligibleButNotAzureAdJoined, needsOsUpdate, ineligible, scheduledForEnrollment.
+     * ComanagementEligibleStatus. Possible values are: comanaged, eligible, eligibleButNotAzureAdJoined, needsOsUpdate, ineligible, scheduledForEnrollment, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

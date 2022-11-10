@@ -377,6 +377,15 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public String minimumWarningPatchVersion;
 
     /**
+     * The Minimum Warning Sdk Version.
+     * Versions less than the specified version will result in warning message on the managed app from accessing company data. (iOS only)
+     */
+    @SerializedName(value = "minimumWarningSdkVersion", alternate = {"MinimumWarningSdkVersion"})
+    @Expose
+	@Nullable
+    public String minimumWarningSdkVersion;
+
+    /**
      * The Minimum Wipe Company Portal Version.
      * Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
      */

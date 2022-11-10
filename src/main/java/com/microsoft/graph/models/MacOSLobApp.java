@@ -30,7 +30,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Build Number.
-     * The build number of MacOS Line of Business (LoB) app.
+     * The build number of the package. This should match the package CFBundleShortVersionString of the .pkg file.
      */
     @SerializedName(value = "buildNumber", alternate = {"BuildNumber"})
     @Expose
@@ -39,7 +39,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Bundle Id.
-     * The bundle id.
+     * The primary bundleId of the package.
      */
     @SerializedName(value = "bundleId", alternate = {"BundleId"})
     @Expose
@@ -48,7 +48,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Child Apps.
-     * The app list in this bundle package
+     * List of ComplexType macOSLobChildApp objects. Represents the apps expected to be installed by the package.
      */
     @SerializedName(value = "childApps", alternate = {"ChildApps"})
     @Expose
@@ -57,7 +57,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Identity Version.
-     * The identity version.
+     * The identity version. This property is being deprecated in 2211(November 2022).
      */
     @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose
@@ -66,7 +66,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Ignore Version Detection.
-     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
+     * When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
      */
     @SerializedName(value = "ignoreVersionDetection", alternate = {"IgnoreVersionDetection"})
     @Expose
@@ -75,7 +75,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Install As Managed.
-     * A boolean to control whether the app will be installed as managed (requires macOS 11.0 and other PKG restrictions).
+     * When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
      */
     @SerializedName(value = "installAsManaged", alternate = {"InstallAsManaged"})
     @Expose
@@ -84,7 +84,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Md5Hash.
-     * The MD5 hash codes
+     * The MD5 hash codes. This is empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      */
     @SerializedName(value = "md5Hash", alternate = {"Md5Hash"})
     @Expose
@@ -93,7 +93,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Md5Hash Chunk Size.
-     * The chunk size for MD5 hash
+     * The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      */
     @SerializedName(value = "md5HashChunkSize", alternate = {"Md5HashChunkSize"})
     @Expose
@@ -102,7 +102,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Minimum Supported Operating System.
-     * The value for the minimum applicable operating system.
+     * ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
      */
     @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
@@ -111,7 +111,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Version Number.
-     * The version number of MacOS Line of Business (LoB) app.
+     * The version number of the package. This should match the package CFBundleVersion in the packageinfo file.
      */
     @SerializedName(value = "versionNumber", alternate = {"VersionNumber"})
     @Expose

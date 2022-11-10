@@ -34,6 +34,7 @@ import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSetting
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceConfigurationPolicySettingsSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceConfigurationPolicyStatusSummaryParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetEncryptionReportForDevicesParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetQuietTimePolicyUserSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetEnrollmentConfigurationPoliciesByDeviceParameterSet;
@@ -47,6 +48,7 @@ import com.microsoft.graph.models.DeviceManagementReportsGetAllCertificatesRepor
 import com.microsoft.graph.models.DeviceManagementReportsGetCertificatesReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetZebraFotaDeploymentReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetMobileApplicationManagementAppConfigurationReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetMobileApplicationManagementAppRegistrationSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetRemoteAssistanceSessionsReportParameterSet;
@@ -360,6 +362,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @param parameters the parameters for the service method
      */
     @Nonnull
+    public DeviceManagementReportsGetEncryptionReportForDevicesRequestBuilder getEncryptionReportForDevices(@Nonnull final DeviceManagementReportsGetEncryptionReportForDevicesParameterSet parameters) {
+        return new DeviceManagementReportsGetEncryptionReportForDevicesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEncryptionReportForDevices"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
     public DeviceManagementReportsGetQuietTimePolicyUsersReportRequestBuilder getQuietTimePolicyUsersReport(@Nonnull final DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSet parameters) {
         return new DeviceManagementReportsGetQuietTimePolicyUsersReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getQuietTimePolicyUsersReport"), getClient(), null, parameters);
     }
@@ -482,6 +494,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportRequestBuilder getGroupPolicySettingsDeviceSettingsReport(@Nonnull final DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportParameterSet parameters) {
         return new DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getGroupPolicySettingsDeviceSettingsReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetMobileApplicationManagementAppConfigurationReportRequestBuilder getMobileApplicationManagementAppConfigurationReport(@Nonnull final DeviceManagementReportsGetMobileApplicationManagementAppConfigurationReportParameterSet parameters) {
+        return new DeviceManagementReportsGetMobileApplicationManagementAppConfigurationReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMobileApplicationManagementAppConfigurationReport"), getClient(), null, parameters);
     }
 
     /**

@@ -37,6 +37,15 @@ public class DeviceManagementPriorityMetaData implements IJsonBackedObject {
         return additionalDataManager;
     }
 
+    /**
+     * The Priority.
+     * Priority of the policy. Valid values 1 to 500
+     */
+    @SerializedName(value = "priority", alternate = {"Priority"})
+    @Expose
+	@Nullable
+    public Integer priority;
+
 
     /**
      * Sets the raw JSON object

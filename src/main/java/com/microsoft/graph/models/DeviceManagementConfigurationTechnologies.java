@@ -48,6 +48,10 @@ public enum DeviceManagementConfigurationTechnologies
     */
     ENROLLMENT,
     /**
+    * endpoint Privilege Management
+    */
+    ENDPOINT_PRIVILEGE_MANAGEMENT,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

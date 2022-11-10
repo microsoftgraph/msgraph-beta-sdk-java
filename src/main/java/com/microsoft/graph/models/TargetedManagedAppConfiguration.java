@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.TargetedManagedAppGroupType;
+import com.microsoft.graph.models.AppManagementLevel;
 import com.microsoft.graph.models.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.ManagedAppConfiguration;
 import com.microsoft.graph.requests.ManagedMobileAppCollectionPage;
@@ -56,6 +57,15 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     @Expose
 	@Nullable
     public Boolean isAssigned;
+
+    /**
+     * The Targeted App Management Levels.
+     * The intended app management levels for this policy
+     */
+    @SerializedName(value = "targetedAppManagementLevels", alternate = {"TargetedAppManagementLevels"})
+    @Expose
+	@Nullable
+    public EnumSet<AppManagementLevel> targetedAppManagementLevels;
 
     /**
      * The Apps.

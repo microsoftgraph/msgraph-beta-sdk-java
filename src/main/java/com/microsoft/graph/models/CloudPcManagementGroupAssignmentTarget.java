@@ -34,6 +34,15 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
 	@Nullable
     public String groupId;
 
+    /**
+     * The Service Plan Id.
+     * 
+     */
+    @SerializedName(value = "servicePlanId", alternate = {"ServicePlanId"})
+    @Expose
+	@Nullable
+    public String servicePlanId;
+
 
     /**
      * Sets the raw JSON object
