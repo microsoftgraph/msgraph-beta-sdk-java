@@ -39,7 +39,7 @@ public class ServicePrincipalLockConfiguration implements IJsonBackedObject {
 
     /**
      * The All Properties.
-     * 
+     * Enables locking all sensitive properties. The sensitive properties are keyCredentials, passwordCredentials, and tokenEncryptionKeyId.
      */
     @SerializedName(value = "allProperties", alternate = {"AllProperties"})
     @Expose
@@ -48,7 +48,7 @@ public class ServicePrincipalLockConfiguration implements IJsonBackedObject {
 
     /**
      * The Credentials With Usage Sign.
-     * 
+     * Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Sign.
      */
     @SerializedName(value = "credentialsWithUsageSign", alternate = {"CredentialsWithUsageSign"})
     @Expose
@@ -57,7 +57,7 @@ public class ServicePrincipalLockConfiguration implements IJsonBackedObject {
 
     /**
      * The Credentials With Usage Verify.
-     * 
+     * Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Verify. This locks OAuth service principals.
      */
     @SerializedName(value = "credentialsWithUsageVerify", alternate = {"CredentialsWithUsageVerify"})
     @Expose
@@ -66,7 +66,7 @@ public class ServicePrincipalLockConfiguration implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * 
+     * Enables or disables service principal lock configuration. To allow the sensitive properties to be updated, update this property to false to disable the lock on the service principal.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -75,7 +75,7 @@ public class ServicePrincipalLockConfiguration implements IJsonBackedObject {
 
     /**
      * The Token Encryption Key Id.
-     * 
+     * Locks the tokenEncryptionKeyId property for modification on the service principal.
      */
     @SerializedName(value = "tokenEncryptionKeyId", alternate = {"TokenEncryptionKeyId"})
     @Expose

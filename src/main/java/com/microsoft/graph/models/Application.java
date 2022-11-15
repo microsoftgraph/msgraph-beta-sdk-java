@@ -278,7 +278,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Service Principal Lock Configuration.
-     * 
+     * Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
      */
     @SerializedName(value = "servicePrincipalLockConfiguration", alternate = {"ServicePrincipalLockConfiguration"})
     @Expose
