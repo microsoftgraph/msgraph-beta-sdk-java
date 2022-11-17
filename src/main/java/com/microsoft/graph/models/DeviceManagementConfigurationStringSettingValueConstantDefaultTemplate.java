@@ -14,6 +14,7 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
      * Instantiates a new DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationStringSettingValueConstantDefaultTemplate");
@@ -43,7 +44,7 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("constantValue", (n) -> { currentObject.setConstantValue(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
      * @param value Value to set for the constantValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConstantValue(@javax.annotation.Nullable final String value) {
         this._constantValue = value;
     }

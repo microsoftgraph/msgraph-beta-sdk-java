@@ -13,7 +13,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     private Map<String, Object> _additionalData;
     /** The type of endpoint. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. */
     private EndpointType _endpointType;
-    /** The hidden property */
+    /** Optional. Whether to hide the participant from the roster. */
     private Boolean _hidden;
     /** The identity property */
     private IdentitySet _identity;
@@ -21,7 +21,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     private String _odataType;
     /** Optional. The ID of the target participant. */
     private String _participantId;
-    /** The removeFromDefaultAudioRoutingGroup property */
+    /** Optional. Whether to remove them from the main mixer. */
     private Boolean _removeFromDefaultAudioRoutingGroup;
     /** Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully. */
     private String _replacesCallId;
@@ -29,6 +29,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new invitationParticipantInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InvitationParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.invitationParticipantInfo");
@@ -66,7 +67,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InvitationParticipantInfo currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("endpointType", (n) -> { currentObject.setEndpointType(n.getEnumValue(EndpointType.class)); });
             this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
             this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -77,7 +78,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
         }};
     }
     /**
-     * Gets the hidden property value. The hidden property
+     * Gets the hidden property value. Optional. Whether to hide the participant from the roster.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -109,7 +110,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
         return this._participantId;
     }
     /**
-     * Gets the removeFromDefaultAudioRoutingGroup property value. The removeFromDefaultAudioRoutingGroup property
+     * Gets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -129,6 +130,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("endpointType", this.getEndpointType());
@@ -145,6 +147,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,14 +156,16 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the endpointType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointType(@javax.annotation.Nullable final EndpointType value) {
         this._endpointType = value;
     }
     /**
-     * Sets the hidden property value. The hidden property
+     * Sets the hidden property value. Optional. Whether to hide the participant from the roster.
      * @param value Value to set for the hidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHidden(@javax.annotation.Nullable final Boolean value) {
         this._hidden = value;
     }
@@ -169,6 +174,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the identity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentity(@javax.annotation.Nullable final IdentitySet value) {
         this._identity = value;
     }
@@ -177,6 +183,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -185,14 +192,16 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the participantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipantId(@javax.annotation.Nullable final String value) {
         this._participantId = value;
     }
     /**
-     * Sets the removeFromDefaultAudioRoutingGroup property value. The removeFromDefaultAudioRoutingGroup property
+     * Sets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
      * @param value Value to set for the removeFromDefaultAudioRoutingGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoveFromDefaultAudioRoutingGroup(@javax.annotation.Nullable final Boolean value) {
         this._removeFromDefaultAudioRoutingGroup = value;
     }
@@ -201,6 +210,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the replacesCallId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReplacesCallId(@javax.annotation.Nullable final String value) {
         this._replacesCallId = value;
     }

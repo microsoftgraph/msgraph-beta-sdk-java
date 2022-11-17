@@ -28,6 +28,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * Instantiates a new Windows10SecureAssessmentConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10SecureAssessmentConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10SecureAssessmentConfiguration");
@@ -97,7 +98,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10SecureAssessmentConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowPrinting", (n) -> { currentObject.setAllowPrinting(n.getBooleanValue()); });
             this.put("allowScreenCapture", (n) -> { currentObject.setAllowScreenCapture(n.getBooleanValue()); });
             this.put("allowTextSuggestion", (n) -> { currentObject.setAllowTextSuggestion(n.getBooleanValue()); });
@@ -129,6 +130,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the allowPrinting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowPrinting(@javax.annotation.Nullable final Boolean value) {
         this._allowPrinting = value;
     }
@@ -154,6 +157,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the allowScreenCapture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowScreenCapture(@javax.annotation.Nullable final Boolean value) {
         this._allowScreenCapture = value;
     }
@@ -162,6 +166,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the allowTextSuggestion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowTextSuggestion(@javax.annotation.Nullable final Boolean value) {
         this._allowTextSuggestion = value;
     }
@@ -170,6 +175,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the assessmentAppUserModelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssessmentAppUserModelId(@javax.annotation.Nullable final String value) {
         this._assessmentAppUserModelId = value;
     }
@@ -178,6 +184,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the configurationAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationAccount(@javax.annotation.Nullable final String value) {
         this._configurationAccount = value;
     }
@@ -186,6 +193,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the configurationAccountType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationAccountType(@javax.annotation.Nullable final SecureAssessmentAccountType value) {
         this._configurationAccountType = value;
     }
@@ -194,6 +202,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the launchUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLaunchUri(@javax.annotation.Nullable final String value) {
         this._launchUri = value;
     }
@@ -202,6 +211,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the localGuestAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalGuestAccountName(@javax.annotation.Nullable final String value) {
         this._localGuestAccountName = value;
     }

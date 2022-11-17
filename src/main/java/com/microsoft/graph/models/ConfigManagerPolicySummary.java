@@ -30,6 +30,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * Instantiates a new configManagerPolicySummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConfigManagerPolicySummary() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.configManagerPolicySummary");
@@ -83,7 +84,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConfigManagerPolicySummary currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
             this.put("enforcedDeviceCount", (n) -> { currentObject.setEnforcedDeviceCount(n.getIntegerValue()); });
             this.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
@@ -130,6 +131,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("compliantDeviceCount", this.getCompliantDeviceCount());
@@ -146,6 +148,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +157,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._compliantDeviceCount = value;
     }
@@ -162,6 +166,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the enforcedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforcedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._enforcedDeviceCount = value;
     }
@@ -170,6 +175,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the failedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._failedDeviceCount = value;
     }
@@ -178,6 +184,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the nonCompliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNonCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._nonCompliantDeviceCount = value;
     }
@@ -186,6 +193,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -194,6 +202,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the pendingDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._pendingDeviceCount = value;
     }
@@ -202,6 +211,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the targetedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._targetedDeviceCount = value;
     }

@@ -23,6 +23,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * Instantiates a new EasEmailProfileConfigurationBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EasEmailProfileConfigurationBase() {
         super();
         this.setOdataType("#microsoft.graph.easEmailProfileConfigurationBase");
@@ -61,7 +62,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EasEmailProfileConfigurationBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customDomainName", (n) -> { currentObject.setCustomDomainName(n.getStringValue()); });
             this.put("userDomainNameSource", (n) -> { currentObject.setUserDomainNameSource(n.getEnumValue(DomainNameSource.class)); });
             this.put("usernameAADSource", (n) -> { currentObject.setUsernameAADSource(n.getEnumValue(UsernameSource.class)); });
@@ -97,6 +98,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * @param value Value to set for the customDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDomainName(@javax.annotation.Nullable final String value) {
         this._customDomainName = value;
     }
@@ -118,6 +121,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * @param value Value to set for the userDomainNameSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDomainNameSource(@javax.annotation.Nullable final DomainNameSource value) {
         this._userDomainNameSource = value;
     }
@@ -126,6 +130,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * @param value Value to set for the usernameAADSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameAADSource(@javax.annotation.Nullable final UsernameSource value) {
         this._usernameAADSource = value;
     }
@@ -134,6 +139,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * @param value Value to set for the usernameSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameSource(@javax.annotation.Nullable final UserEmailSource value) {
         this._usernameSource = value;
     }

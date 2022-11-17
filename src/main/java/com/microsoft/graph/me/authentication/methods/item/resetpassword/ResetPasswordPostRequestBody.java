@@ -14,12 +14,11 @@ public class ResetPasswordPostRequestBody implements AdditionalDataHolder, Parsa
     private Map<String, Object> _additionalData;
     /** The newPassword property */
     private String _newPassword;
-    /** The requireChangeOnNextSignIn property */
-    private Boolean _requireChangeOnNextSignIn;
     /**
      * Instantiates a new resetPasswordPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResetPasswordPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,9 +47,8 @@ public class ResetPasswordPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResetPasswordPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("newPassword", (n) -> { currentObject.setNewPassword(n.getStringValue()); });
-            this.put("requireChangeOnNextSignIn", (n) -> { currentObject.setRequireChangeOnNextSignIn(n.getBooleanValue()); });
         }};
     }
     /**
@@ -62,22 +60,14 @@ public class ResetPasswordPostRequestBody implements AdditionalDataHolder, Parsa
         return this._newPassword;
     }
     /**
-     * Gets the requireChangeOnNextSignIn property value. The requireChangeOnNextSignIn property
-     * @return a boolean
-     */
-    @javax.annotation.Nullable
-    public Boolean getRequireChangeOnNextSignIn() {
-        return this._requireChangeOnNextSignIn;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("newPassword", this.getNewPassword());
-        writer.writeBooleanValue("requireChangeOnNextSignIn", this.getRequireChangeOnNextSignIn());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -85,6 +75,7 @@ public class ResetPasswordPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,15 +84,8 @@ public class ResetPasswordPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the newPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNewPassword(@javax.annotation.Nullable final String value) {
         this._newPassword = value;
-    }
-    /**
-     * Sets the requireChangeOnNextSignIn property value. The requireChangeOnNextSignIn property
-     * @param value Value to set for the requireChangeOnNextSignIn property.
-     * @return a void
-     */
-    public void setRequireChangeOnNextSignIn(@javax.annotation.Nullable final Boolean value) {
-        this._requireChangeOnNextSignIn = value;
     }
 }

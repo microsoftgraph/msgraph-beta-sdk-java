@@ -58,6 +58,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * Instantiates a new IosikEv2VpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosikEv2VpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosikEv2VpnConfiguration");
@@ -183,7 +184,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosikEv2VpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowDefaultChildSecurityAssociationParameters", (n) -> { currentObject.setAllowDefaultChildSecurityAssociationParameters(n.getBooleanValue()); });
             this.put("allowDefaultSecurityAssociationParameters", (n) -> { currentObject.setAllowDefaultSecurityAssociationParameters(n.getBooleanValue()); });
             this.put("alwaysOnConfiguration", (n) -> { currentObject.setAlwaysOnConfiguration(n.getObjectValue(AppleVpnAlwaysOnConfiguration::createFromDiscriminatorValue)); });
@@ -294,6 +295,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -326,6 +328,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the allowDefaultChildSecurityAssociationParameters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowDefaultChildSecurityAssociationParameters(@javax.annotation.Nullable final Boolean value) {
         this._allowDefaultChildSecurityAssociationParameters = value;
     }
@@ -334,6 +337,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the allowDefaultSecurityAssociationParameters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowDefaultSecurityAssociationParameters(@javax.annotation.Nullable final Boolean value) {
         this._allowDefaultSecurityAssociationParameters = value;
     }
@@ -342,6 +346,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the alwaysOnConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlwaysOnConfiguration(@javax.annotation.Nullable final AppleVpnAlwaysOnConfiguration value) {
         this._alwaysOnConfiguration = value;
     }
@@ -350,6 +355,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the childSecurityAssociationParameters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildSecurityAssociationParameters(@javax.annotation.Nullable final IosVpnSecurityAssociationParameters value) {
         this._childSecurityAssociationParameters = value;
     }
@@ -358,6 +364,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the clientAuthenticationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientAuthenticationType(@javax.annotation.Nullable final VpnClientAuthenticationType value) {
         this._clientAuthenticationType = value;
     }
@@ -366,6 +373,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the deadPeerDetectionRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeadPeerDetectionRate(@javax.annotation.Nullable final VpnDeadPeerDetectionRate value) {
         this._deadPeerDetectionRate = value;
     }
@@ -374,6 +382,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the disableMobilityAndMultihoming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableMobilityAndMultihoming(@javax.annotation.Nullable final Boolean value) {
         this._disableMobilityAndMultihoming = value;
     }
@@ -382,6 +391,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the disableRedirect property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableRedirect(@javax.annotation.Nullable final Boolean value) {
         this._disableRedirect = value;
     }
@@ -390,6 +400,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the enableAlwaysOnConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableAlwaysOnConfiguration(@javax.annotation.Nullable final Boolean value) {
         this._enableAlwaysOnConfiguration = value;
     }
@@ -398,6 +409,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the enableCertificateRevocationCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableCertificateRevocationCheck(@javax.annotation.Nullable final Boolean value) {
         this._enableCertificateRevocationCheck = value;
     }
@@ -406,6 +418,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the enableEAP property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableEAP(@javax.annotation.Nullable final Boolean value) {
         this._enableEAP = value;
     }
@@ -414,6 +427,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the enablePerfectForwardSecrecy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnablePerfectForwardSecrecy(@javax.annotation.Nullable final Boolean value) {
         this._enablePerfectForwardSecrecy = value;
     }
@@ -422,6 +436,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the enableUseInternalSubnetAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableUseInternalSubnetAttributes(@javax.annotation.Nullable final Boolean value) {
         this._enableUseInternalSubnetAttributes = value;
     }
@@ -430,6 +445,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the localIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalIdentifier(@javax.annotation.Nullable final VpnLocalIdentifier value) {
         this._localIdentifier = value;
     }
@@ -438,6 +454,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the mtuSizeInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMtuSizeInBytes(@javax.annotation.Nullable final Integer value) {
         this._mtuSizeInBytes = value;
     }
@@ -446,6 +463,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the remoteIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteIdentifier(@javax.annotation.Nullable final String value) {
         this._remoteIdentifier = value;
     }
@@ -454,6 +472,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the securityAssociationParameters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityAssociationParameters(@javax.annotation.Nullable final IosVpnSecurityAssociationParameters value) {
         this._securityAssociationParameters = value;
     }
@@ -462,6 +481,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the serverCertificateCommonName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServerCertificateCommonName(@javax.annotation.Nullable final String value) {
         this._serverCertificateCommonName = value;
     }
@@ -470,6 +490,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the serverCertificateIssuerCommonName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServerCertificateIssuerCommonName(@javax.annotation.Nullable final String value) {
         this._serverCertificateIssuerCommonName = value;
     }
@@ -478,6 +499,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the serverCertificateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServerCertificateType(@javax.annotation.Nullable final VpnServerCertificateType value) {
         this._serverCertificateType = value;
     }
@@ -486,6 +508,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the sharedSecret property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedSecret(@javax.annotation.Nullable final String value) {
         this._sharedSecret = value;
     }
@@ -494,6 +517,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the tlsMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTlsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._tlsMaximumVersion = value;
     }
@@ -502,6 +526,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the tlsMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTlsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._tlsMinimumVersion = value;
     }

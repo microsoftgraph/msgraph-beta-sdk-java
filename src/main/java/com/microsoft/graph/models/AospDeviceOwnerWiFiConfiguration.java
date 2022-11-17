@@ -27,6 +27,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * Instantiates a new AospDeviceOwnerWiFiConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AospDeviceOwnerWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.aospDeviceOwnerWiFiConfiguration");
@@ -71,7 +72,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AospDeviceOwnerWiFiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("connectAutomatically", (n) -> { currentObject.setConnectAutomatically(n.getBooleanValue()); });
             this.put("connectWhenNetworkNameIsHidden", (n) -> { currentObject.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
             this.put("networkName", (n) -> { currentObject.setNetworkName(n.getStringValue()); });
@@ -126,6 +127,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -142,6 +144,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the connectAutomatically property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectAutomatically(@javax.annotation.Nullable final Boolean value) {
         this._connectAutomatically = value;
     }
@@ -150,6 +153,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectWhenNetworkNameIsHidden(@javax.annotation.Nullable final Boolean value) {
         this._connectWhenNetworkNameIsHidden = value;
     }
@@ -158,6 +162,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the networkName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkName(@javax.annotation.Nullable final String value) {
         this._networkName = value;
     }
@@ -166,6 +171,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the preSharedKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreSharedKey(@javax.annotation.Nullable final String value) {
         this._preSharedKey = value;
     }
@@ -174,6 +180,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the preSharedKeyIsSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreSharedKeyIsSet(@javax.annotation.Nullable final Boolean value) {
         this._preSharedKeyIsSet = value;
     }
@@ -182,6 +189,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the ssid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSsid(@javax.annotation.Nullable final String value) {
         this._ssid = value;
     }
@@ -190,6 +198,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the wiFiSecurityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiSecurityType(@javax.annotation.Nullable final AospDeviceOwnerWiFiSecurityType value) {
         this._wiFiSecurityType = value;
     }

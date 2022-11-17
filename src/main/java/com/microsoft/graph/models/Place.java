@@ -23,6 +23,7 @@ public class Place extends Entity implements Parsable {
      * Instantiates a new Place and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Place() {
         super();
         this.setOdataType("#microsoft.graph.place");
@@ -69,7 +70,7 @@ public class Place extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Place currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("geoCoordinates", (n) -> { currentObject.setGeoCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
@@ -97,6 +98,7 @@ public class Place extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class Place extends Entity implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final PhysicalAddress value) {
         this._address = value;
     }
@@ -118,6 +121,7 @@ public class Place extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -126,6 +130,7 @@ public class Place extends Entity implements Parsable {
      * @param value Value to set for the geoCoordinates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGeoCoordinates(@javax.annotation.Nullable final OutlookGeoCoordinates value) {
         this._geoCoordinates = value;
     }
@@ -134,6 +139,7 @@ public class Place extends Entity implements Parsable {
      * @param value Value to set for the phone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhone(@javax.annotation.Nullable final String value) {
         this._phone = value;
     }

@@ -46,6 +46,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Instantiates a new AndroidEasEmailProfileConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidEasEmailProfileConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidEasEmailProfileConfiguration");
@@ -115,7 +116,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidEasEmailProfileConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod.class)); });
             this.put("customDomainName", (n) -> { currentObject.setCustomDomainName(n.getStringValue()); });
@@ -228,6 +229,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -254,6 +256,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the accountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountName(@javax.annotation.Nullable final String value) {
         this._accountName = value;
     }
@@ -262,6 +265,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final EasAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -270,6 +274,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the customDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDomainName(@javax.annotation.Nullable final String value) {
         this._customDomainName = value;
     }
@@ -278,6 +283,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationOfEmailToSync(@javax.annotation.Nullable final EmailSyncDuration value) {
         this._durationOfEmailToSync = value;
     }
@@ -286,6 +292,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddressSource(@javax.annotation.Nullable final UserEmailSource value) {
         this._emailAddressSource = value;
     }
@@ -294,6 +301,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the emailSyncSchedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailSyncSchedule(@javax.annotation.Nullable final EmailSyncSchedule value) {
         this._emailSyncSchedule = value;
     }
@@ -302,6 +310,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the hostName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostName(@javax.annotation.Nullable final String value) {
         this._hostName = value;
     }
@@ -310,6 +319,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final AndroidCertificateProfileBase value) {
         this._identityCertificate = value;
     }
@@ -318,6 +328,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the requireSmime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireSmime(@javax.annotation.Nullable final Boolean value) {
         this._requireSmime = value;
     }
@@ -326,6 +337,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the requireSsl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireSsl(@javax.annotation.Nullable final Boolean value) {
         this._requireSsl = value;
     }
@@ -334,6 +346,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the smimeSigningCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeSigningCertificate(@javax.annotation.Nullable final AndroidCertificateProfileBase value) {
         this._smimeSigningCertificate = value;
     }
@@ -342,6 +355,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the syncCalendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncCalendar(@javax.annotation.Nullable final Boolean value) {
         this._syncCalendar = value;
     }
@@ -350,6 +364,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the syncContacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncContacts(@javax.annotation.Nullable final Boolean value) {
         this._syncContacts = value;
     }
@@ -358,6 +373,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the syncNotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncNotes(@javax.annotation.Nullable final Boolean value) {
         this._syncNotes = value;
     }
@@ -366,6 +382,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the syncTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncTasks(@javax.annotation.Nullable final Boolean value) {
         this._syncTasks = value;
     }
@@ -374,6 +391,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the userDomainNameSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDomainNameSource(@javax.annotation.Nullable final DomainNameSource value) {
         this._userDomainNameSource = value;
     }
@@ -382,6 +400,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the usernameSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameSource(@javax.annotation.Nullable final AndroidUsernameSource value) {
         this._usernameSource = value;
     }

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TaxArea extends Entity implements Parsable {
     /** The code property */
     private String _code;
@@ -22,6 +22,7 @@ public class TaxArea extends Entity implements Parsable {
      * Instantiates a new taxArea and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TaxArea() {
         super();
         this.setOdataType("#microsoft.graph.taxArea");
@@ -59,7 +60,7 @@ public class TaxArea extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TaxArea currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -87,6 +88,7 @@ public class TaxArea extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +102,7 @@ public class TaxArea extends Entity implements Parsable {
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
         this._code = value;
     }
@@ -108,6 +111,7 @@ public class TaxArea extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -116,6 +120,7 @@ public class TaxArea extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -124,6 +129,7 @@ public class TaxArea extends Entity implements Parsable {
      * @param value Value to set for the taxType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxType(@javax.annotation.Nullable final String value) {
         this._taxType = value;
     }

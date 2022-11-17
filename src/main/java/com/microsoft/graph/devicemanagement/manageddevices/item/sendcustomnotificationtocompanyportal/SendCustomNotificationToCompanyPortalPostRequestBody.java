@@ -20,6 +20,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
      * Instantiates a new sendCustomNotificationToCompanyPortalPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SendCustomNotificationToCompanyPortalPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,7 +49,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SendCustomNotificationToCompanyPortalPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("notificationBody", (n) -> { currentObject.setNotificationBody(n.getStringValue()); });
             this.put("notificationTitle", (n) -> { currentObject.setNotificationTitle(n.getStringValue()); });
         }};
@@ -74,6 +75,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("notificationBody", this.getNotificationBody());
@@ -85,6 +87,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
      * @param value Value to set for the notificationBody property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationBody(@javax.annotation.Nullable final String value) {
         this._notificationBody = value;
     }
@@ -101,6 +105,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
      * @param value Value to set for the notificationTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationTitle(@javax.annotation.Nullable final String value) {
         this._notificationTitle = value;
     }

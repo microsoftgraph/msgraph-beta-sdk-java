@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class AgedAccountsPayable extends Entity implements Parsable {
     /** The agedAsOfDate property */
     private LocalDate _agedAsOfDate;
@@ -31,9 +32,10 @@ public class AgedAccountsPayable extends Entity implements Parsable {
     /** The vendorNumber property */
     private String _vendorNumber;
     /**
-     * Instantiates a new AgedAccountsPayable and sets the default values.
+     * Instantiates a new agedAccountsPayable and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AgedAccountsPayable() {
         super();
         this.setOdataType("#microsoft.graph.agedAccountsPayable");
@@ -41,7 +43,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AgedAccountsPayable
+     * @return a agedAccountsPayable
      */
     @javax.annotation.Nonnull
     public static AgedAccountsPayable createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -87,7 +89,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AgedAccountsPayable currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("agedAsOfDate", (n) -> { currentObject.setAgedAsOfDate(n.getLocalDateValue()); });
             this.put("balanceDue", (n) -> { currentObject.setBalanceDue(n.getBigDecimalValue()); });
             this.put("currencyCode", (n) -> { currentObject.setCurrencyCode(n.getStringValue()); });
@@ -153,6 +155,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,6 +175,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
      * @param value Value to set for the agedAsOfDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgedAsOfDate(@javax.annotation.Nullable final LocalDate value) {
         this._agedAsOfDate = value;
     }
@@ -180,6 +184,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
      * @param value Value to set for the balanceDue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBalanceDue(@javax.annotation.Nullable final BigDecimal value) {
         this._balanceDue = value;
     }
@@ -188,6 +193,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
      * @param value Value to set for the currencyCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrencyCode(@javax.annotation.Nullable final String value) {
         this._currencyCode = value;
     }
@@ -196,6 +202,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
      * @param value Value to set for the currentAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrentAmount(@javax.annotation.Nullable final BigDecimal value) {
         this._currentAmount = value;
     }
@@ -204,6 +211,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -212,6 +220,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
      * @param value Value to set for the period1Amount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriod1Amount(@javax.annotation.Nullable final BigDecimal value) {
         this._period1Amount = value;
     }
@@ -220,6 +229,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
      * @param value Value to set for the period2Amount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriod2Amount(@javax.annotation.Nullable final BigDecimal value) {
         this._period2Amount = value;
     }
@@ -228,6 +238,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
      * @param value Value to set for the period3Amount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriod3Amount(@javax.annotation.Nullable final BigDecimal value) {
         this._period3Amount = value;
     }
@@ -236,6 +247,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
      * @param value Value to set for the periodLengthFilter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriodLengthFilter(@javax.annotation.Nullable final String value) {
         this._periodLengthFilter = value;
     }
@@ -244,6 +256,7 @@ public class AgedAccountsPayable extends Entity implements Parsable {
      * @param value Value to set for the vendorNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorNumber(@javax.annotation.Nullable final String value) {
         this._vendorNumber = value;
     }

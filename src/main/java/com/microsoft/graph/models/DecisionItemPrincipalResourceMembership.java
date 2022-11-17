@@ -19,6 +19,7 @@ public class DecisionItemPrincipalResourceMembership implements AdditionalDataHo
      * Instantiates a new decisionItemPrincipalResourceMembership and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DecisionItemPrincipalResourceMembership() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.decisionItemPrincipalResourceMembership");
@@ -48,7 +49,7 @@ public class DecisionItemPrincipalResourceMembership implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DecisionItemPrincipalResourceMembership currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("membershipType", (n) -> { currentObject.setMembershipType(n.getEnumValue(DecisionItemPrincipalResourceMembershipType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
@@ -74,6 +75,7 @@ public class DecisionItemPrincipalResourceMembership implements AdditionalDataHo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("membershipType", this.getMembershipType());
@@ -85,6 +87,7 @@ public class DecisionItemPrincipalResourceMembership implements AdditionalDataHo
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class DecisionItemPrincipalResourceMembership implements AdditionalDataHo
      * @param value Value to set for the membershipType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembershipType(@javax.annotation.Nullable final DecisionItemPrincipalResourceMembershipType value) {
         this._membershipType = value;
     }
@@ -101,6 +105,7 @@ public class DecisionItemPrincipalResourceMembership implements AdditionalDataHo
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

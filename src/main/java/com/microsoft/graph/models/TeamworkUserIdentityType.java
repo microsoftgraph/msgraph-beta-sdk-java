@@ -13,7 +13,8 @@ public enum TeamworkUserIdentityType implements ValuedEnum {
     SkypeUser("skypeUser"),
     PhoneUser("phoneUser"),
     UnknownFutureValue("unknownFutureValue"),
-    EmailUser("emailUser");
+    EmailUser("emailUser"),
+    AzureCommunicationServicesUser("azureCommunicationServicesUser");
     public final String value;
     TeamworkUserIdentityType(final String value) {
         this.value = value;
@@ -33,6 +34,7 @@ public enum TeamworkUserIdentityType implements ValuedEnum {
             case "phoneUser": return PhoneUser;
             case "unknownFutureValue": return UnknownFutureValue;
             case "emailUser": return EmailUser;
+            case "azureCommunicationServicesUser": return AzureCommunicationServicesUser;
             default: return null;
         }
     }

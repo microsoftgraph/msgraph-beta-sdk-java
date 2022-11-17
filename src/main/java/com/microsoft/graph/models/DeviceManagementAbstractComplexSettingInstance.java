@@ -16,6 +16,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
      * Instantiates a new DeviceManagementAbstractComplexSettingInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementAbstractComplexSettingInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementAbstractComplexSettingInstance");
@@ -37,7 +38,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementAbstractComplexSettingInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("implementationId", (n) -> { currentObject.setImplementationId(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
      * @param value Value to set for the implementationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImplementationId(@javax.annotation.Nullable final String value) {
         this._implementationId = value;
     }
@@ -82,6 +85,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
         this._value = value;
     }

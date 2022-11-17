@@ -14,6 +14,7 @@ public class WindowsPhone81StoreApp extends MobileApp implements Parsable {
      * Instantiates a new WindowsPhone81StoreApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPhone81StoreApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81StoreApp");
@@ -43,7 +44,7 @@ public class WindowsPhone81StoreApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhone81StoreApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class WindowsPhone81StoreApp extends MobileApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class WindowsPhone81StoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the appStoreUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
         this._appStoreUrl = value;
     }

@@ -21,6 +21,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * Instantiates a new unsupportedGroupPolicyExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnsupportedGroupPolicyExtension() {
         super();
         this.setOdataType("#microsoft.graph.unsupportedGroupPolicyExtension");
@@ -50,7 +51,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnsupportedGroupPolicyExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("extensionType", (n) -> { currentObject.setExtensionType(n.getStringValue()); });
             this.put("namespaceUrl", (n) -> { currentObject.setNamespaceUrl(n.getStringValue()); });
             this.put("nodeName", (n) -> { currentObject.setNodeName(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * @param value Value to set for the extensionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionType(@javax.annotation.Nullable final String value) {
         this._extensionType = value;
     }
@@ -107,6 +110,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * @param value Value to set for the namespaceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNamespaceUrl(@javax.annotation.Nullable final String value) {
         this._namespaceUrl = value;
     }
@@ -115,6 +119,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * @param value Value to set for the nodeName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNodeName(@javax.annotation.Nullable final String value) {
         this._nodeName = value;
     }
@@ -123,6 +128,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * @param value Value to set for the settingScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingScope(@javax.annotation.Nullable final GroupPolicySettingScope value) {
         this._settingScope = value;
     }

@@ -38,6 +38,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * Instantiates a new advancedThreatProtectionOnboardingDeviceSettingState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AdvancedThreatProtectionOnboardingDeviceSettingState() {
         super();
         this.setOdataType("#microsoft.graph.advancedThreatProtectionOnboardingDeviceSettingState");
@@ -91,7 +92,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AdvancedThreatProtectionOnboardingDeviceSettingState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("complianceGracePeriodExpirationDateTime", (n) -> { currentObject.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
@@ -175,6 +176,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -196,6 +198,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceGracePeriodExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._complianceGracePeriodExpirationDateTime = value;
     }
@@ -204,6 +207,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -212,6 +216,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
         this._deviceModel = value;
     }
@@ -220,6 +225,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -228,6 +234,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the platformType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformType(@javax.annotation.Nullable final DeviceType value) {
         this._platformType = value;
     }
@@ -236,6 +243,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the setting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSetting(@javax.annotation.Nullable final String value) {
         this._setting = value;
     }
@@ -244,6 +252,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the settingName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
         this._settingName = value;
     }
@@ -252,6 +261,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
         this._state = value;
     }
@@ -260,6 +270,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the userEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEmail(@javax.annotation.Nullable final String value) {
         this._userEmail = value;
     }
@@ -268,6 +279,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -276,6 +288,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }
@@ -284,6 +297,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

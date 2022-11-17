@@ -24,6 +24,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * Instantiates a new WindowsPhone81VpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPhone81VpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81VpnConfiguration");
@@ -77,7 +78,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhone81VpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });
             this.put("bypassVpnOnCompanyWifi", (n) -> { currentObject.setBypassVpnOnCompanyWifi(n.getBooleanValue()); });
             this.put("bypassVpnOnHomeWifi", (n) -> { currentObject.setBypassVpnOnHomeWifi(n.getBooleanValue()); });
@@ -107,6 +108,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final VpnAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -130,6 +133,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * @param value Value to set for the bypassVpnOnCompanyWifi property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBypassVpnOnCompanyWifi(@javax.annotation.Nullable final Boolean value) {
         this._bypassVpnOnCompanyWifi = value;
     }
@@ -138,6 +142,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * @param value Value to set for the bypassVpnOnHomeWifi property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBypassVpnOnHomeWifi(@javax.annotation.Nullable final Boolean value) {
         this._bypassVpnOnHomeWifi = value;
     }
@@ -146,6 +151,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * @param value Value to set for the dnsSuffixSearchList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDnsSuffixSearchList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._dnsSuffixSearchList = value;
     }
@@ -154,6 +160,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final WindowsPhone81CertificateProfileBase value) {
         this._identityCertificate = value;
     }
@@ -162,6 +169,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * @param value Value to set for the rememberUserCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRememberUserCredentials(@javax.annotation.Nullable final Boolean value) {
         this._rememberUserCredentials = value;
     }

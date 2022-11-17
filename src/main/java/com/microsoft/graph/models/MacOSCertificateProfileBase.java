@@ -25,6 +25,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * Instantiates a new macOSCertificateProfileBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSCertificateProfileBase() {
         super();
         this.setOdataType("#microsoft.graph.macOSCertificateProfileBase");
@@ -71,7 +72,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSCertificateProfileBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateValidityPeriodScale", (n) -> { currentObject.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
             this.put("certificateValidityPeriodValue", (n) -> { currentObject.setCertificateValidityPeriodValue(n.getIntegerValue()); });
             this.put("renewalThresholdPercentage", (n) -> { currentObject.setRenewalThresholdPercentage(n.getIntegerValue()); });
@@ -108,6 +109,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateValidityPeriodScale(@javax.annotation.Nullable final CertificateValidityPeriodScale value) {
         this._certificateValidityPeriodScale = value;
     }
@@ -130,6 +133,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * @param value Value to set for the certificateValidityPeriodValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateValidityPeriodValue(@javax.annotation.Nullable final Integer value) {
         this._certificateValidityPeriodValue = value;
     }
@@ -138,6 +142,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * @param value Value to set for the renewalThresholdPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
         this._renewalThresholdPercentage = value;
     }
@@ -146,6 +151,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * @param value Value to set for the subjectAlternativeNameType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameType(@javax.annotation.Nullable final SubjectAlternativeNameType value) {
         this._subjectAlternativeNameType = value;
     }
@@ -154,6 +160,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * @param value Value to set for the subjectNameFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormat(@javax.annotation.Nullable final AppleSubjectNameFormat value) {
         this._subjectNameFormat = value;
     }

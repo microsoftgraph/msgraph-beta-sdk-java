@@ -44,6 +44,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * Instantiates a new AndroidWorkProfileVpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidWorkProfileVpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidWorkProfileVpnConfiguration");
@@ -121,7 +122,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidWorkProfileVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("alwaysOn", (n) -> { currentObject.setAlwaysOn(n.getBooleanValue()); });
             this.put("alwaysOnLockdown", (n) -> { currentObject.setAlwaysOnLockdown(n.getBooleanValue()); });
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });
@@ -217,6 +218,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -242,6 +244,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the alwaysOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlwaysOn(@javax.annotation.Nullable final Boolean value) {
         this._alwaysOn = value;
     }
@@ -250,6 +253,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the alwaysOnLockdown property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlwaysOnLockdown(@javax.annotation.Nullable final Boolean value) {
         this._alwaysOnLockdown = value;
     }
@@ -258,6 +262,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final VpnAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -266,6 +271,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the connectionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionName(@javax.annotation.Nullable final String value) {
         this._connectionName = value;
     }
@@ -274,6 +280,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the connectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionType(@javax.annotation.Nullable final AndroidWorkProfileVpnConnectionType value) {
         this._connectionType = value;
     }
@@ -282,6 +289,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the customData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomData(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
         this._customData = value;
     }
@@ -290,6 +298,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the customKeyValueData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomKeyValueData(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._customKeyValueData = value;
     }
@@ -298,6 +307,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the fingerprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFingerprint(@javax.annotation.Nullable final String value) {
         this._fingerprint = value;
     }
@@ -306,6 +316,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final AndroidWorkProfileCertificateProfileBase value) {
         this._identityCertificate = value;
     }
@@ -314,6 +325,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the microsoftTunnelSiteId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftTunnelSiteId(@javax.annotation.Nullable final String value) {
         this._microsoftTunnelSiteId = value;
     }
@@ -322,6 +334,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the proxyServer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyServer(@javax.annotation.Nullable final VpnProxyServer value) {
         this._proxyServer = value;
     }
@@ -330,6 +343,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the realm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRealm(@javax.annotation.Nullable final String value) {
         this._realm = value;
     }
@@ -338,6 +352,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final String value) {
         this._role = value;
     }
@@ -346,6 +361,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the servers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServers(@javax.annotation.Nullable final java.util.List<VpnServer> value) {
         this._servers = value;
     }
@@ -354,6 +370,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the targetedMobileApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedMobileApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._targetedMobileApps = value;
     }
@@ -362,6 +379,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the targetedPackageIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedPackageIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._targetedPackageIds = value;
     }

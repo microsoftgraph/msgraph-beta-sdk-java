@@ -15,9 +15,10 @@ public class Program extends Entity implements Parsable {
     /** The name of the program.  Required on create. */
     private String _displayName;
     /**
-     * Instantiates a new Program and sets the default values.
+     * Instantiates a new program and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Program() {
         super();
         this.setOdataType("#microsoft.graph.program");
@@ -25,7 +26,7 @@ public class Program extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Program
+     * @return a program
      */
     @javax.annotation.Nonnull
     public static Program createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +64,7 @@ public class Program extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Program currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("controls", (n) -> { currentObject.setControls(n.getCollectionOfObjectValues(ProgramControl::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class Program extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class Program extends Entity implements Parsable {
      * @param value Value to set for the controls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setControls(@javax.annotation.Nullable final java.util.List<ProgramControl> value) {
         this._controls = value;
     }
@@ -94,6 +97,7 @@ public class Program extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -102,6 +106,7 @@ public class Program extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }

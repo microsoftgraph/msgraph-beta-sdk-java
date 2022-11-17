@@ -14,6 +14,7 @@ public class ExpeditedQualityUpdateReference extends QualityUpdateReference impl
      * Instantiates a new ExpeditedQualityUpdateReference and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExpeditedQualityUpdateReference() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.expeditedQualityUpdateReference");
@@ -43,7 +44,7 @@ public class ExpeditedQualityUpdateReference extends QualityUpdateReference impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExpeditedQualityUpdateReference currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("equivalentContent", (n) -> { currentObject.setEquivalentContent(n.getEnumValue(EquivalentContentOption.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class ExpeditedQualityUpdateReference extends QualityUpdateReference impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ExpeditedQualityUpdateReference extends QualityUpdateReference impl
      * @param value Value to set for the equivalentContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEquivalentContent(@javax.annotation.Nullable final EquivalentContentOption value) {
         this._equivalentContent = value;
     }

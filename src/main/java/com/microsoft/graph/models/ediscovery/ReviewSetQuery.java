@@ -28,6 +28,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
      * Instantiates a new reviewSetQuery and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReviewSetQuery() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.reviewSetQuery");
@@ -73,7 +74,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReviewSetQuery currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -111,6 +112,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -126,6 +128,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -134,6 +137,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -142,6 +146,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -150,6 +155,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -158,6 +164,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -166,6 +173,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
      * @param value Value to set for the query property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuery(@javax.annotation.Nullable final String value) {
         this._query = value;
     }

@@ -22,6 +22,7 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      * Instantiates a new IosCredentialSingleSignOnExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosCredentialSingleSignOnExtension() {
         super();
         this.setOdataType("#microsoft.graph.iosCredentialSingleSignOnExtension");
@@ -67,7 +68,7 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosCredentialSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configurations", (n) -> { currentObject.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
             this.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("extensionIdentifier", (n) -> { currentObject.setExtensionIdentifier(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      * @param value Value to set for the configurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurations(@javax.annotation.Nullable final java.util.List<KeyTypedValuePair> value) {
         this._configurations = value;
     }
@@ -118,6 +121,7 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      * @param value Value to set for the domains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._domains = value;
     }
@@ -126,6 +130,7 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      * @param value Value to set for the extensionIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionIdentifier(@javax.annotation.Nullable final String value) {
         this._extensionIdentifier = value;
     }
@@ -134,6 +139,7 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      * @param value Value to set for the realm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRealm(@javax.annotation.Nullable final String value) {
         this._realm = value;
     }
@@ -142,6 +148,7 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      * @param value Value to set for the teamIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamIdentifier(@javax.annotation.Nullable final String value) {
         this._teamIdentifier = value;
     }

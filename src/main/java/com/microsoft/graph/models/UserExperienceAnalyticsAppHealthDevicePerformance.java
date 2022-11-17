@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device performance entity contains device performance details. */
 public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity implements Parsable {
     /** The number of app crashes for the device. Valid values -2147483648 to 2147483647 */
     private Integer _appCrashCount;
@@ -34,9 +35,10 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     /** The date and time when the statistics were last computed. */
     private OffsetDateTime _processedDateTime;
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthDevicePerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsAppHealthDevicePerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsAppHealthDevicePerformance() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthDevicePerformance");
@@ -44,7 +46,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthDevicePerformance
+     * @return a userExperienceAnalyticsAppHealthDevicePerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthDevicePerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -130,7 +132,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsAppHealthDevicePerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appCrashCount", (n) -> { currentObject.setAppCrashCount(n.getIntegerValue()); });
             this.put("appHangCount", (n) -> { currentObject.setAppHangCount(n.getIntegerValue()); });
             this.put("crashedAppCount", (n) -> { currentObject.setCrashedAppCount(n.getIntegerValue()); });
@@ -174,6 +176,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,6 +198,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the appCrashCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppCrashCount(@javax.annotation.Nullable final Integer value) {
         this._appCrashCount = value;
     }
@@ -203,6 +207,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the appHangCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppHangCount(@javax.annotation.Nullable final Integer value) {
         this._appHangCount = value;
     }
@@ -211,6 +216,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the crashedAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCrashedAppCount(@javax.annotation.Nullable final Integer value) {
         this._crashedAppCount = value;
     }
@@ -219,6 +225,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the deviceAppHealthScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceAppHealthScore(@javax.annotation.Nullable final Double value) {
         this._deviceAppHealthScore = value;
     }
@@ -227,6 +234,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the deviceAppHealthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceAppHealthStatus(@javax.annotation.Nullable final String value) {
         this._deviceAppHealthStatus = value;
     }
@@ -235,6 +243,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
         this._deviceDisplayName = value;
     }
@@ -243,6 +252,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -251,6 +261,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the deviceManufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManufacturer(@javax.annotation.Nullable final String value) {
         this._deviceManufacturer = value;
     }
@@ -259,6 +270,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
         this._deviceModel = value;
     }
@@ -267,6 +279,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this._healthStatus = value;
     }
@@ -275,6 +288,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the meanTimeToFailureInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeanTimeToFailureInMinutes(@javax.annotation.Nullable final Integer value) {
         this._meanTimeToFailureInMinutes = value;
     }
@@ -283,6 +297,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the processedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._processedDateTime = value;
     }

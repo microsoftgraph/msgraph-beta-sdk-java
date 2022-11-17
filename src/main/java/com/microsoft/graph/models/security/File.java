@@ -40,6 +40,7 @@ public class File extends Entity implements Parsable {
      * Instantiates a new file and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public File() {
         super();
         this.setOdataType("#microsoft.graph.security.file");
@@ -100,7 +101,7 @@ public class File extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final File currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("dateTime", (n) -> { currentObject.setDateTime(n.getOffsetDateTimeValue()); });
             this.put("extension", (n) -> { currentObject.setExtension(n.getStringValue()); });
@@ -184,6 +185,7 @@ public class File extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -205,6 +207,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
     }
@@ -213,6 +216,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the dateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._dateTime = value;
     }
@@ -221,6 +225,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the extension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtension(@javax.annotation.Nullable final String value) {
         this._extension = value;
     }
@@ -229,6 +234,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the extractedTextContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtractedTextContent(@javax.annotation.Nullable final byte[] value) {
         this._extractedTextContent = value;
     }
@@ -237,6 +243,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the mediaType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaType(@javax.annotation.Nullable final String value) {
         this._mediaType = value;
     }
@@ -245,6 +252,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -253,6 +261,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the otherProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOtherProperties(@javax.annotation.Nullable final StringValueDictionary value) {
         this._otherProperties = value;
     }
@@ -261,6 +270,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the processingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessingStatus(@javax.annotation.Nullable final FileProcessingStatus value) {
         this._processingStatus = value;
     }
@@ -269,6 +279,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the senderOrAuthors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSenderOrAuthors(@javax.annotation.Nullable final java.util.List<String> value) {
         this._senderOrAuthors = value;
     }
@@ -277,6 +288,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
         this._size = value;
     }
@@ -285,6 +297,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the sourceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceType(@javax.annotation.Nullable final SourceType value) {
         this._sourceType = value;
     }
@@ -293,6 +306,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the subjectTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectTitle(@javax.annotation.Nullable final String value) {
         this._subjectTitle = value;
     }

@@ -22,6 +22,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * Instantiates a new UnifiedRoleManagementPolicyAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyAssignment() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyAssignment");
@@ -43,7 +44,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("policy", (n) -> { currentObject.setPolicy(n.getObjectValue(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
             this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
             this.put("roleDefinitionId", (n) -> { currentObject.setRoleDefinitionId(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param value Value to set for the policy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicy(@javax.annotation.Nullable final UnifiedRoleManagementPolicy value) {
         this._policy = value;
     }
@@ -118,6 +121,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param value Value to set for the policyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyId(@javax.annotation.Nullable final String value) {
         this._policyId = value;
     }
@@ -126,6 +130,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
         this._roleDefinitionId = value;
     }
@@ -134,6 +139,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param value Value to set for the scopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopeId(@javax.annotation.Nullable final String value) {
         this._scopeId = value;
     }
@@ -142,6 +148,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param value Value to set for the scopeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopeType(@javax.annotation.Nullable final String value) {
         this._scopeType = value;
     }

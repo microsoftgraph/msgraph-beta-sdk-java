@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AccessPackageResourceRequest extends Entity implements Parsable {
     /** The accessPackageResource property */
     private AccessPackageResource _accessPackageResource;
@@ -28,12 +28,13 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     private String _requestState;
     /** The requestStatus property */
     private String _requestStatus;
-    /** Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource. */
+    /** Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource. */
     private String _requestType;
     /**
      * Instantiates a new accessPackageResourceRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageResourceRequest() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageResourceRequest");
@@ -87,7 +88,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageResourceRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessPackageResource", (n) -> { currentObject.setAccessPackageResource(n.getObjectValue(AccessPackageResource::createFromDiscriminatorValue)); });
             this.put("catalogId", (n) -> { currentObject.setCatalogId(n.getStringValue()); });
             this.put("executeImmediately", (n) -> { currentObject.setExecuteImmediately(n.getBooleanValue()); });
@@ -141,7 +142,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         return this._requestStatus;
     }
     /**
-     * Gets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource.
+     * Gets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -153,6 +154,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,6 +174,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResource(@javax.annotation.Nullable final AccessPackageResource value) {
         this._accessPackageResource = value;
     }
@@ -180,6 +183,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the catalogId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalogId(@javax.annotation.Nullable final String value) {
         this._catalogId = value;
     }
@@ -188,6 +192,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the executeImmediately property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExecuteImmediately(@javax.annotation.Nullable final Boolean value) {
         this._executeImmediately = value;
     }
@@ -196,6 +201,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -204,6 +210,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the isValidationOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsValidationOnly(@javax.annotation.Nullable final Boolean value) {
         this._isValidationOnly = value;
     }
@@ -212,6 +219,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the justification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
         this._justification = value;
     }
@@ -220,6 +228,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the requestor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestor(@javax.annotation.Nullable final AccessPackageSubject value) {
         this._requestor = value;
     }
@@ -228,6 +237,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the requestState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestState(@javax.annotation.Nullable final String value) {
         this._requestState = value;
     }
@@ -236,14 +246,16 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the requestStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestStatus(@javax.annotation.Nullable final String value) {
         this._requestStatus = value;
     }
     /**
-     * Sets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource.
+     * Sets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource.
      * @param value Value to set for the requestType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestType(@javax.annotation.Nullable final String value) {
         this._requestType = value;
     }

@@ -25,6 +25,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      * Instantiates a new integerRange and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IntegerRange() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.integerRange");
@@ -62,7 +63,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IntegerRange currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("end", (n) -> { currentObject.setEnd(n.getLongValue()); });
             this.put("maximum", (n) -> { currentObject.setMaximum(n.getLongValue()); });
             this.put("minimum", (n) -> { currentObject.setMinimum(n.getLongValue()); });
@@ -107,6 +108,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("end", this.getEnd());
@@ -121,6 +123,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the end property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnd(@javax.annotation.Nullable final Long value) {
         this._end = value;
     }
@@ -137,6 +141,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maximum property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximum(@javax.annotation.Nullable final Long value) {
         this._maximum = value;
     }
@@ -145,6 +150,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the minimum property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimum(@javax.annotation.Nullable final Long value) {
         this._minimum = value;
     }
@@ -153,6 +159,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -161,6 +168,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the start property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStart(@javax.annotation.Nullable final Long value) {
         this._start = value;
     }

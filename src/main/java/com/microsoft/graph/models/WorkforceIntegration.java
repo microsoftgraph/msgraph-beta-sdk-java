@@ -28,6 +28,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * Instantiates a new WorkforceIntegration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkforceIntegration() {
         super();
         this.setOdataType("#microsoft.graph.workforceIntegration");
@@ -81,7 +82,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkforceIntegration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("apiVersion", (n) -> { currentObject.setApiVersion(n.getIntegerValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("eligibilityFilteringEnabledEntities", (n) -> { currentObject.setEligibilityFilteringEnabledEntities(n.getEnumValue(EligibilityFilteringEnabledEntities.class)); });
@@ -129,6 +130,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the apiVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApiVersion(@javax.annotation.Nullable final Integer value) {
         this._apiVersion = value;
     }
@@ -154,6 +157,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -162,6 +166,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the eligibilityFilteringEnabledEntities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEligibilityFilteringEnabledEntities(@javax.annotation.Nullable final EligibilityFilteringEnabledEntities value) {
         this._eligibilityFilteringEnabledEntities = value;
     }
@@ -170,6 +175,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the encryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryption(@javax.annotation.Nullable final WorkforceIntegrationEncryption value) {
         this._encryption = value;
     }
@@ -178,6 +184,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the isActive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsActive(@javax.annotation.Nullable final Boolean value) {
         this._isActive = value;
     }
@@ -186,6 +193,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the supportedEntities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedEntities(@javax.annotation.Nullable final WorkforceIntegrationSupportedEntities value) {
         this._supportedEntities = value;
     }
@@ -194,6 +202,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the supports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupports(@javax.annotation.Nullable final WorkforceIntegrationSupportedEntities value) {
         this._supports = value;
     }
@@ -202,6 +211,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
         this._url = value;
     }

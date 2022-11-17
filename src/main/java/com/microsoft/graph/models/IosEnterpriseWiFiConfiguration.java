@@ -34,6 +34,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * Instantiates a new IosEnterpriseWiFiConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosEnterpriseWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosEnterpriseWiFiConfiguration");
@@ -87,7 +88,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosEnterpriseWiFiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
             this.put("derivedCredentialSettings", (n) -> { currentObject.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
             this.put("eapFastConfiguration", (n) -> { currentObject.setEapFastConfiguration(n.getEnumValue(EapFastConfiguration.class)); });
@@ -162,6 +163,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +184,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final WiFiAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -190,6 +193,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
         this._derivedCredentialSettings = value;
     }
@@ -198,6 +202,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the eapFastConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapFastConfiguration(@javax.annotation.Nullable final EapFastConfiguration value) {
         this._eapFastConfiguration = value;
     }
@@ -206,6 +211,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the eapType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapType(@javax.annotation.Nullable final EapType value) {
         this._eapType = value;
     }
@@ -214,6 +220,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final IosCertificateProfileBase value) {
         this._identityCertificateForClientAuthentication = value;
     }
@@ -222,6 +229,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInnerAuthenticationProtocolForEapTtls(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
         this._innerAuthenticationProtocolForEapTtls = value;
     }
@@ -230,6 +238,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
         this._outerIdentityPrivacyTemporaryValue = value;
     }
@@ -238,6 +247,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the passwordFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordFormatString(@javax.annotation.Nullable final String value) {
         this._passwordFormatString = value;
     }
@@ -246,6 +256,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the rootCertificatesForServerValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificatesForServerValidation(@javax.annotation.Nullable final java.util.List<IosTrustedRootCertificate> value) {
         this._rootCertificatesForServerValidation = value;
     }
@@ -254,6 +265,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the trustedServerCertificateNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._trustedServerCertificateNames = value;
     }
@@ -262,6 +274,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the usernameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameFormatString(@javax.annotation.Nullable final String value) {
         this._usernameFormatString = value;
     }

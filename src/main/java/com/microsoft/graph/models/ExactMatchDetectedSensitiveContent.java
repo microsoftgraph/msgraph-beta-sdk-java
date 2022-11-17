@@ -14,6 +14,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
      * Instantiates a new ExactMatchDetectedSensitiveContent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExactMatchDetectedSensitiveContent() {
         super();
         this.setOdataType("#microsoft.graph.exactMatchDetectedSensitiveContent");
@@ -35,7 +36,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExactMatchDetectedSensitiveContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("matches", (n) -> { currentObject.setMatches(n.getCollectionOfObjectValues(SensitiveContentLocation::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
      * @param value Value to set for the matches property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatches(@javax.annotation.Nullable final java.util.List<SensitiveContentLocation> value) {
         this._matches = value;
     }

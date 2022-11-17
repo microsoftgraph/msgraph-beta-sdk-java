@@ -23,6 +23,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * Instantiates a new iosVppAppAssignedLicense and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosVppAppAssignedLicense() {
         super();
         this.setOdataType("#microsoft.graph.iosVppAppAssignedLicense");
@@ -52,7 +53,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVppAppAssignedLicense currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userEmailAddress", (n) -> { currentObject.setUserEmailAddress(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
             this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -109,6 +111,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * @param value Value to set for the userEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEmailAddress(@javax.annotation.Nullable final String value) {
         this._userEmailAddress = value;
     }
@@ -117,6 +120,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -125,6 +129,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }
@@ -133,6 +138,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

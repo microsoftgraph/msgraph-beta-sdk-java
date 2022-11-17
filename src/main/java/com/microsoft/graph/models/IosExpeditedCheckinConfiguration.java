@@ -12,6 +12,7 @@ public class IosExpeditedCheckinConfiguration extends AppleExpeditedCheckinConfi
      * Instantiates a new IosExpeditedCheckinConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosExpeditedCheckinConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosExpeditedCheckinConfiguration");
@@ -33,7 +34,7 @@ public class IosExpeditedCheckinConfiguration extends AppleExpeditedCheckinConfi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosExpeditedCheckinConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -41,6 +42,7 @@ public class IosExpeditedCheckinConfiguration extends AppleExpeditedCheckinConfi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

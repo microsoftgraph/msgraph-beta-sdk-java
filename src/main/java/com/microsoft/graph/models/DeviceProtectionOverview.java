@@ -40,6 +40,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * Instantiates a new deviceProtectionOverview and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceProtectionOverview() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceProtectionOverview");
@@ -85,7 +86,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceProtectionOverview currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("cleanDeviceCount", (n) -> { currentObject.setCleanDeviceCount(n.getIntegerValue()); });
             this.put("criticalFailuresDeviceCount", (n) -> { currentObject.setCriticalFailuresDeviceCount(n.getIntegerValue()); });
             this.put("inactiveThreatAgentDeviceCount", (n) -> { currentObject.setInactiveThreatAgentDeviceCount(n.getIntegerValue()); });
@@ -185,6 +186,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("cleanDeviceCount", this.getCleanDeviceCount());
@@ -206,6 +208,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -214,6 +217,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the cleanDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCleanDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._cleanDeviceCount = value;
     }
@@ -222,6 +226,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the criticalFailuresDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCriticalFailuresDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._criticalFailuresDeviceCount = value;
     }
@@ -230,6 +235,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the inactiveThreatAgentDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInactiveThreatAgentDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._inactiveThreatAgentDeviceCount = value;
     }
@@ -238,6 +244,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -246,6 +253,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the pendingFullScanDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingFullScanDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._pendingFullScanDeviceCount = value;
     }
@@ -254,6 +262,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the pendingManualStepsDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingManualStepsDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._pendingManualStepsDeviceCount = value;
     }
@@ -262,6 +271,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the pendingOfflineScanDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingOfflineScanDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._pendingOfflineScanDeviceCount = value;
     }
@@ -270,6 +280,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the pendingQuickScanDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingQuickScanDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._pendingQuickScanDeviceCount = value;
     }
@@ -278,6 +289,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the pendingRestartDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingRestartDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._pendingRestartDeviceCount = value;
     }
@@ -286,6 +298,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the pendingSignatureUpdateDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingSignatureUpdateDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._pendingSignatureUpdateDeviceCount = value;
     }
@@ -294,6 +307,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the totalReportedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalReportedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._totalReportedDeviceCount = value;
     }
@@ -302,6 +316,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the unknownStateThreatAgentDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownStateThreatAgentDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._unknownStateThreatAgentDeviceCount = value;
     }

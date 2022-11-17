@@ -16,6 +16,7 @@ public class DeliveryOptimizationBandwidthPercentage extends DeliveryOptimizatio
      * Instantiates a new DeliveryOptimizationBandwidthPercentage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeliveryOptimizationBandwidthPercentage() {
         super();
         this.setOdataType("#microsoft.graph.deliveryOptimizationBandwidthPercentage");
@@ -37,7 +38,7 @@ public class DeliveryOptimizationBandwidthPercentage extends DeliveryOptimizatio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeliveryOptimizationBandwidthPercentage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maximumBackgroundBandwidthPercentage", (n) -> { currentObject.setMaximumBackgroundBandwidthPercentage(n.getIntegerValue()); });
             this.put("maximumForegroundBandwidthPercentage", (n) -> { currentObject.setMaximumForegroundBandwidthPercentage(n.getIntegerValue()); });
         }};
@@ -63,6 +64,7 @@ public class DeliveryOptimizationBandwidthPercentage extends DeliveryOptimizatio
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeliveryOptimizationBandwidthPercentage extends DeliveryOptimizatio
      * @param value Value to set for the maximumBackgroundBandwidthPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumBackgroundBandwidthPercentage(@javax.annotation.Nullable final Integer value) {
         this._maximumBackgroundBandwidthPercentage = value;
     }
@@ -82,6 +85,7 @@ public class DeliveryOptimizationBandwidthPercentage extends DeliveryOptimizatio
      * @param value Value to set for the maximumForegroundBandwidthPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumForegroundBandwidthPercentage(@javax.annotation.Nullable final Integer value) {
         this._maximumForegroundBandwidthPercentage = value;
     }

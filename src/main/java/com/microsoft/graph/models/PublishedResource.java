@@ -21,6 +21,7 @@ public class PublishedResource extends Entity implements Parsable {
      * Instantiates a new publishedResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PublishedResource() {
         super();
         this.setOdataType("#microsoft.graph.publishedResource");
@@ -58,7 +59,7 @@ public class PublishedResource extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PublishedResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("agentGroups", (n) -> { currentObject.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("publishingType", (n) -> { currentObject.setPublishingType(n.getEnumValue(OnPremisesPublishingType.class)); });
@@ -86,6 +87,7 @@ public class PublishedResource extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class PublishedResource extends Entity implements Parsable {
      * @param value Value to set for the agentGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgentGroups(@javax.annotation.Nullable final java.util.List<OnPremisesAgentGroup> value) {
         this._agentGroups = value;
     }
@@ -107,6 +110,7 @@ public class PublishedResource extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -115,6 +119,7 @@ public class PublishedResource extends Entity implements Parsable {
      * @param value Value to set for the publishingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingType(@javax.annotation.Nullable final OnPremisesPublishingType value) {
         this._publishingType = value;
     }
@@ -123,6 +128,7 @@ public class PublishedResource extends Entity implements Parsable {
      * @param value Value to set for the resourceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceName(@javax.annotation.Nullable final String value) {
         this._resourceName = value;
     }

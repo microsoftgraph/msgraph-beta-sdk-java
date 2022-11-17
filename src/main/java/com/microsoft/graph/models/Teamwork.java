@@ -22,6 +22,7 @@ public class Teamwork extends Entity implements Parsable {
      * Instantiates a new Teamwork and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Teamwork() {
         super();
         this.setOdataType("#microsoft.graph.teamwork");
@@ -59,7 +60,7 @@ public class Teamwork extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Teamwork currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deletedTeams", (n) -> { currentObject.setDeletedTeams(n.getCollectionOfObjectValues(DeletedTeam::createFromDiscriminatorValue)); });
             this.put("devices", (n) -> { currentObject.setDevices(n.getCollectionOfObjectValues(TeamworkDevice::createFromDiscriminatorValue)); });
             this.put("teamsAppSettings", (n) -> { currentObject.setTeamsAppSettings(n.getObjectValue(TeamsAppSettings::createFromDiscriminatorValue)); });
@@ -96,6 +97,7 @@ public class Teamwork extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class Teamwork extends Entity implements Parsable {
      * @param value Value to set for the deletedTeams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedTeams(@javax.annotation.Nullable final java.util.List<DeletedTeam> value) {
         this._deletedTeams = value;
     }
@@ -118,6 +121,7 @@ public class Teamwork extends Entity implements Parsable {
      * @param value Value to set for the devices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevices(@javax.annotation.Nullable final java.util.List<TeamworkDevice> value) {
         this._devices = value;
     }
@@ -126,6 +130,7 @@ public class Teamwork extends Entity implements Parsable {
      * @param value Value to set for the teamsAppSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppSettings(@javax.annotation.Nullable final TeamsAppSettings value) {
         this._teamsAppSettings = value;
     }
@@ -134,6 +139,7 @@ public class Teamwork extends Entity implements Parsable {
      * @param value Value to set for the teamTemplates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamTemplates(@javax.annotation.Nullable final java.util.List<TeamTemplate> value) {
         this._teamTemplates = value;
     }
@@ -142,6 +148,7 @@ public class Teamwork extends Entity implements Parsable {
      * @param value Value to set for the workforceIntegrations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkforceIntegrations(@javax.annotation.Nullable final java.util.List<WorkforceIntegration> value) {
         this._workforceIntegrations = value;
     }

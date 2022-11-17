@@ -12,6 +12,7 @@ public class RetentionDurationForever extends RetentionDuration implements Parsa
      * Instantiates a new RetentionDurationForever and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RetentionDurationForever() {
         super();
         this.setOdataType("#microsoft.graph.security.retentionDurationForever");
@@ -33,7 +34,7 @@ public class RetentionDurationForever extends RetentionDuration implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RetentionDurationForever currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -41,6 +42,7 @@ public class RetentionDurationForever extends RetentionDuration implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

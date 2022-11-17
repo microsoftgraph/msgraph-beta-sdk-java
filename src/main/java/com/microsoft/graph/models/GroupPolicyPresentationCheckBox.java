@@ -14,6 +14,7 @@ public class GroupPolicyPresentationCheckBox extends GroupPolicyUploadedPresenta
      * Instantiates a new GroupPolicyPresentationCheckBox and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationCheckBox() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationCheckBox");
@@ -43,7 +44,7 @@ public class GroupPolicyPresentationCheckBox extends GroupPolicyUploadedPresenta
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationCheckBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultChecked", (n) -> { currentObject.setDefaultChecked(n.getBooleanValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class GroupPolicyPresentationCheckBox extends GroupPolicyUploadedPresenta
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class GroupPolicyPresentationCheckBox extends GroupPolicyUploadedPresenta
      * @param value Value to set for the defaultChecked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultChecked(@javax.annotation.Nullable final Boolean value) {
         this._defaultChecked = value;
     }

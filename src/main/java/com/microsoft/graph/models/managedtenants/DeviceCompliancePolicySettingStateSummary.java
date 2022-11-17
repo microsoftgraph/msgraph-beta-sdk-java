@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsable {
     /** The number of devices in a conflict state. Optional. Read-only. */
     private Integer _conflictDeviceCount;
@@ -41,6 +41,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Instantiates a new deviceCompliancePolicySettingStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceCompliancePolicySettingStateSummary() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.deviceCompliancePolicySettingStateSummary");
@@ -86,7 +87,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceCompliancePolicySettingStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("conflictDeviceCount", (n) -> { currentObject.setConflictDeviceCount(n.getIntegerValue()); });
             this.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
             this.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
@@ -187,6 +188,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -209,6 +211,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the conflictDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._conflictDeviceCount = value;
     }
@@ -217,6 +220,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._errorDeviceCount = value;
     }
@@ -225,6 +229,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the failedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._failedDeviceCount = value;
     }
@@ -233,6 +238,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the intuneAccountId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntuneAccountId(@javax.annotation.Nullable final String value) {
         this._intuneAccountId = value;
     }
@@ -241,6 +247,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the intuneSettingId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntuneSettingId(@javax.annotation.Nullable final String value) {
         this._intuneSettingId = value;
     }
@@ -249,6 +256,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastRefreshedDateTime = value;
     }
@@ -257,6 +265,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the notApplicableDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._notApplicableDeviceCount = value;
     }
@@ -265,6 +274,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the pendingDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._pendingDeviceCount = value;
     }
@@ -273,6 +283,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the policyType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyType(@javax.annotation.Nullable final String value) {
         this._policyType = value;
     }
@@ -281,6 +292,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the settingName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
         this._settingName = value;
     }
@@ -289,6 +301,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the succeededDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSucceededDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._succeededDeviceCount = value;
     }
@@ -297,6 +310,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
         this._tenantDisplayName = value;
     }
@@ -305,6 +319,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

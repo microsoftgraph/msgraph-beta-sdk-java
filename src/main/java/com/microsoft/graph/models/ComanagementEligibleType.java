@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum ComanagementEligibleType implements ValuedEnum {
     Comanaged("comanaged"),
     Eligible("eligible"),
@@ -11,7 +11,9 @@ public enum ComanagementEligibleType implements ValuedEnum {
     NeedsOsUpdate("needsOsUpdate"),
     Ineligible("ineligible"),
     /** Devices scheduled for Co-Management enrollment */
-    ScheduledForEnrollment("scheduledForEnrollment");
+    ScheduledForEnrollment("scheduledForEnrollment"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     ComanagementEligibleType(final String value) {
         this.value = value;
@@ -28,6 +30,7 @@ public enum ComanagementEligibleType implements ValuedEnum {
             case "needsOsUpdate": return NeedsOsUpdate;
             case "ineligible": return Ineligible;
             case "scheduledForEnrollment": return ScheduledForEnrollment;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

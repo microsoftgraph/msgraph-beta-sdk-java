@@ -5,7 +5,7 @@ import java.util.Objects;
 
 /** Provides operations to manage the collection of accessReview entities. */
 public enum DeviceManagementConfigurationControlType implements ValuedEnum {
-    /** Don’t override default */
+    /** Dont override default */
     Default_escaped("default_escaped"),
     /** Display Choice in dropdown */
     Dropdown("dropdown"),

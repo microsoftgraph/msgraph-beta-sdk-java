@@ -20,10 +20,13 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** The distinguished name of the OU. */
     private String _ouDistinguishedName;
+    /** The list of scope tags for the configuration. */
+    private java.util.List<String> _roleScopeTagIds;
     /**
      * Instantiates a new groupPolicyObjectFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyObjectFile() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyObjectFile");
@@ -61,12 +64,13 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyObjectFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("groupPolicyObjectId", (n) -> { currentObject.setGroupPolicyObjectId(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("ouDistinguishedName", (n) -> { currentObject.setOuDistinguishedName(n.getStringValue()); });
+            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
     /**
@@ -94,10 +98,19 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
         return this._ouDistinguishedName;
     }
     /**
+     * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getRoleScopeTagIds() {
+        return this._roleScopeTagIds;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -106,12 +119,14 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
         writer.writeStringValue("groupPolicyObjectId", this.getGroupPolicyObjectId());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("ouDistinguishedName", this.getOuDistinguishedName());
+        writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
     }
     /**
      * Sets the content property value. The Group Policy Object file content.
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final String value) {
         this._content = value;
     }
@@ -120,6 +135,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -128,6 +144,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyObjectId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyObjectId(@javax.annotation.Nullable final String value) {
         this._groupPolicyObjectId = value;
     }
@@ -136,6 +153,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -144,7 +162,17 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the ouDistinguishedName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOuDistinguishedName(@javax.annotation.Nullable final String value) {
         this._ouDistinguishedName = value;
+    }
+    /**
+     * Sets the roleScopeTagIds property value. The list of scope tags for the configuration.
+     * @param value Value to set for the roleScopeTagIds property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+        this._roleScopeTagIds = value;
     }
 }

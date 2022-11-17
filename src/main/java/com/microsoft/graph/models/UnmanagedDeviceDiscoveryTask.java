@@ -14,6 +14,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
      * Instantiates a new UnmanagedDeviceDiscoveryTask and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnmanagedDeviceDiscoveryTask() {
         super();
         this.setOdataType("#microsoft.graph.unmanagedDeviceDiscoveryTask");
@@ -35,7 +36,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnmanagedDeviceDiscoveryTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("unmanagedDevices", (n) -> { currentObject.setUnmanagedDevices(n.getCollectionOfObjectValues(UnmanagedDevice::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
      * @param value Value to set for the unmanagedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnmanagedDevices(@javax.annotation.Nullable final java.util.List<UnmanagedDevice> value) {
         this._unmanagedDevices = value;
     }

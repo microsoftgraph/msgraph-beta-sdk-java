@@ -23,6 +23,7 @@ public class WinGetAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      * Instantiates a new winGetAppInstallTimeSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WinGetAppInstallTimeSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.winGetAppInstallTimeSettings");
@@ -60,7 +61,7 @@ public class WinGetAppInstallTimeSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WinGetAppInstallTimeSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("deadlineDateTime", (n) -> { currentObject.setDeadlineDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("useLocalTime", (n) -> { currentObject.setUseLocalTime(n.getBooleanValue()); });
@@ -87,6 +88,7 @@ public class WinGetAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("deadlineDateTime", this.getDeadlineDateTime());
@@ -99,6 +101,7 @@ public class WinGetAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -107,6 +110,7 @@ public class WinGetAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deadlineDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeadlineDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._deadlineDateTime = value;
     }
@@ -115,6 +119,7 @@ public class WinGetAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -123,6 +128,7 @@ public class WinGetAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the useLocalTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseLocalTime(@javax.annotation.Nullable final Boolean value) {
         this._useLocalTime = value;
     }

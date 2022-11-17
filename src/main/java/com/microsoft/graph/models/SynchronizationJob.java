@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Casts the previous resource to application. */
 public class SynchronizationJob extends Entity implements Parsable {
     /** Schedule used to run the job. Read-only. */
     private SynchronizationSchedule _schedule;
@@ -23,6 +23,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * Instantiates a new synchronizationJob and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationJob() {
         super();
         this.setOdataType("#microsoft.graph.synchronizationJob");
@@ -44,7 +45,7 @@ public class SynchronizationJob extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationJob currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(SynchronizationSchedule::createFromDiscriminatorValue)); });
             this.put("schema", (n) -> { currentObject.setSchema(n.getObjectValue(SynchronizationSchema::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(SynchronizationStatus::createFromDiscriminatorValue)); });
@@ -97,6 +98,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the schedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final SynchronizationSchedule value) {
         this._schedule = value;
     }
@@ -119,6 +122,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the schema property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchema(@javax.annotation.Nullable final SynchronizationSchema value) {
         this._schema = value;
     }
@@ -127,6 +131,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SynchronizationStatus value) {
         this._status = value;
     }
@@ -135,6 +140,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the synchronizationJobSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSynchronizationJobSettings(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._synchronizationJobSettings = value;
     }
@@ -143,6 +149,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the templateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateId(@javax.annotation.Nullable final String value) {
         this._templateId = value;
     }

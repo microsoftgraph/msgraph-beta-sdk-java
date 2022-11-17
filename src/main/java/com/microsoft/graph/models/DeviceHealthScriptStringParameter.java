@@ -14,6 +14,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
      * Instantiates a new DeviceHealthScriptStringParameter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptStringParameter() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScriptStringParameter");
@@ -43,7 +44,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptStringParameter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final String value) {
         this._defaultValue = value;
     }

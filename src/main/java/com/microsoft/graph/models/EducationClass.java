@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class EducationClass extends Entity implements Parsable {
     /** All categories associated with this class. Nullable. */
     private java.util.List<EducationCategory> _assignmentCategories;
@@ -49,9 +50,10 @@ public class EducationClass extends Entity implements Parsable {
     /** Term for the class. */
     private EducationTerm _term;
     /**
-     * Instantiates a new EducationClass and sets the default values.
+     * Instantiates a new educationClass and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationClass() {
         super();
         this.setOdataType("#microsoft.graph.educationClass");
@@ -59,7 +61,7 @@ public class EducationClass extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationClass
+     * @return a educationClass
      */
     @javax.annotation.Nonnull
     public static EducationClass createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -177,7 +179,7 @@ public class EducationClass extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationClass currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignmentCategories", (n) -> { currentObject.setAssignmentCategories(n.getCollectionOfObjectValues(EducationCategory::createFromDiscriminatorValue)); });
             this.put("assignmentDefaults", (n) -> { currentObject.setAssignmentDefaults(n.getObjectValue(EducationAssignmentDefaults::createFromDiscriminatorValue)); });
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(EducationAssignment::createFromDiscriminatorValue)); });
@@ -261,6 +263,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -290,6 +293,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the assignmentCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentCategories(@javax.annotation.Nullable final java.util.List<EducationCategory> value) {
         this._assignmentCategories = value;
     }
@@ -298,6 +302,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the assignmentDefaults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentDefaults(@javax.annotation.Nullable final EducationAssignmentDefaults value) {
         this._assignmentDefaults = value;
     }
@@ -306,6 +311,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<EducationAssignment> value) {
         this._assignments = value;
     }
@@ -314,6 +320,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the assignmentSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentSettings(@javax.annotation.Nullable final EducationAssignmentSettings value) {
         this._assignmentSettings = value;
     }
@@ -322,6 +329,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the classCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassCode(@javax.annotation.Nullable final String value) {
         this._classCode = value;
     }
@@ -330,6 +338,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the course property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCourse(@javax.annotation.Nullable final EducationCourse value) {
         this._course = value;
     }
@@ -338,6 +347,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -346,6 +356,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -354,6 +365,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -362,6 +374,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
     }
@@ -370,6 +383,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the externalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalName(@javax.annotation.Nullable final String value) {
         this._externalName = value;
     }
@@ -378,6 +392,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the externalSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalSource(@javax.annotation.Nullable final EducationExternalSource value) {
         this._externalSource = value;
     }
@@ -386,6 +401,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the externalSourceDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalSourceDetail(@javax.annotation.Nullable final String value) {
         this._externalSourceDetail = value;
     }
@@ -394,6 +410,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the grade property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrade(@javax.annotation.Nullable final String value) {
         this._grade = value;
     }
@@ -402,6 +419,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the group property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroup(@javax.annotation.Nullable final Group value) {
         this._group = value;
     }
@@ -410,6 +428,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNickname(@javax.annotation.Nullable final String value) {
         this._mailNickname = value;
     }
@@ -418,6 +437,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<EducationUser> value) {
         this._members = value;
     }
@@ -426,6 +446,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the schools property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchools(@javax.annotation.Nullable final java.util.List<EducationSchool> value) {
         this._schools = value;
     }
@@ -434,6 +455,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the teachers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeachers(@javax.annotation.Nullable final java.util.List<EducationUser> value) {
         this._teachers = value;
     }
@@ -442,6 +464,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the term property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTerm(@javax.annotation.Nullable final EducationTerm value) {
         this._term = value;
     }

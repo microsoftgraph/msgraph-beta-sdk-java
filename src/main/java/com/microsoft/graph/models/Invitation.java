@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class Invitation extends Entity implements Parsable {
     /** The user created as part of the invitation creation. Read-Only */
     private User _invitedUser;
@@ -29,9 +30,10 @@ public class Invitation extends Entity implements Parsable {
     /** The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error */
     private String _status;
     /**
-     * Instantiates a new Invitation and sets the default values.
+     * Instantiates a new invitation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Invitation() {
         super();
         this.setOdataType("#microsoft.graph.invitation");
@@ -39,7 +41,7 @@ public class Invitation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Invitation
+     * @return a invitation
      */
     @javax.annotation.Nonnull
     public static Invitation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +55,7 @@ public class Invitation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Invitation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("invitedUser", (n) -> { currentObject.setInvitedUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
             this.put("invitedUserDisplayName", (n) -> { currentObject.setInvitedUserDisplayName(n.getStringValue()); });
             this.put("invitedUserEmailAddress", (n) -> { currentObject.setInvitedUserEmailAddress(n.getStringValue()); });
@@ -151,6 +153,7 @@ public class Invitation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,6 +173,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUser(@javax.annotation.Nullable final User value) {
         this._invitedUser = value;
     }
@@ -178,6 +182,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUserDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserDisplayName(@javax.annotation.Nullable final String value) {
         this._invitedUserDisplayName = value;
     }
@@ -186,6 +191,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUserEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserEmailAddress(@javax.annotation.Nullable final String value) {
         this._invitedUserEmailAddress = value;
     }
@@ -194,6 +200,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUserMessageInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserMessageInfo(@javax.annotation.Nullable final InvitedUserMessageInfo value) {
         this._invitedUserMessageInfo = value;
     }
@@ -202,6 +209,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUserType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserType(@javax.annotation.Nullable final String value) {
         this._invitedUserType = value;
     }
@@ -210,6 +218,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the inviteRedeemUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInviteRedeemUrl(@javax.annotation.Nullable final String value) {
         this._inviteRedeemUrl = value;
     }
@@ -218,6 +227,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the inviteRedirectUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInviteRedirectUrl(@javax.annotation.Nullable final String value) {
         this._inviteRedirectUrl = value;
     }
@@ -226,6 +236,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the resetRedemption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResetRedemption(@javax.annotation.Nullable final Boolean value) {
         this._resetRedemption = value;
     }
@@ -234,6 +245,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the sendInvitationMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSendInvitationMessage(@javax.annotation.Nullable final Boolean value) {
         this._sendInvitationMessage = value;
     }
@@ -242,6 +254,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

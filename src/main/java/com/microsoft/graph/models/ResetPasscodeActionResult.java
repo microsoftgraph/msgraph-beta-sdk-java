@@ -16,6 +16,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * Instantiates a new ResetPasscodeActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResetPasscodeActionResult() {
         super();
         this.setOdataType("#microsoft.graph.resetPasscodeActionResult");
@@ -45,7 +46,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResetPasscodeActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
             this.put("passcode", (n) -> { currentObject.setPasscode(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Integer value) {
         this._errorCode = value;
     }
@@ -82,6 +85,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * @param value Value to set for the passcode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscode(@javax.annotation.Nullable final String value) {
         this._passcode = value;
     }

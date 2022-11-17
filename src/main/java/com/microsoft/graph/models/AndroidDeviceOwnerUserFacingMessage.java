@@ -22,6 +22,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
      * Instantiates a new androidDeviceOwnerUserFacingMessage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerUserFacingMessage() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.androidDeviceOwnerUserFacingMessage");
@@ -59,7 +60,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerUserFacingMessage currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("defaultMessage", (n) -> { currentObject.setDefaultMessage(n.getStringValue()); });
             this.put("localizedMessages", (n) -> { currentObject.setLocalizedMessages(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("defaultMessage", this.getDefaultMessage());
@@ -98,6 +100,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
      * @param value Value to set for the defaultMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultMessage(@javax.annotation.Nullable final String value) {
         this._defaultMessage = value;
     }
@@ -114,6 +118,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
      * @param value Value to set for the localizedMessages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalizedMessages(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._localizedMessages = value;
     }
@@ -122,6 +127,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

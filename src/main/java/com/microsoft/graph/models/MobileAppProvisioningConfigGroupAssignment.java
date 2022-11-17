@@ -15,6 +15,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      * Instantiates a new mobileAppProvisioningConfigGroupAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppProvisioningConfigGroupAssignment() {
         super();
         this.setOdataType("#microsoft.graph.mobileAppProvisioningConfigGroupAssignment");
@@ -36,7 +37,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppProvisioningConfigGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });
         }};
     }
@@ -53,6 +54,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      * @param value Value to set for the targetGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetGroupId(@javax.annotation.Nullable final String value) {
         this._targetGroupId = value;
     }

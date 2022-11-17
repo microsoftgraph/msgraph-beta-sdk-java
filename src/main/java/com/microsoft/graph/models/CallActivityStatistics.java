@@ -15,6 +15,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
      * Instantiates a new CallActivityStatistics and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CallActivityStatistics() {
         super();
         this.setOdataType("#microsoft.graph.callActivityStatistics");
@@ -44,7 +45,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallActivityStatistics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("afterHours", (n) -> { currentObject.setAfterHours(n.getPeriodValue()); });
         }};
     }
@@ -53,6 +54,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
      * @param value Value to set for the afterHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAfterHours(@javax.annotation.Nullable final Period value) {
         this._afterHours = value;
     }

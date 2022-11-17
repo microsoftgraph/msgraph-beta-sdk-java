@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Subscription extends Entity implements Parsable {
     /** Optional. Identifier of the application used to create the subscription. Read-only. */
     private String _applicationId;
@@ -44,6 +44,7 @@ public class Subscription extends Entity implements Parsable {
      * Instantiates a new subscription and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Subscription() {
         super();
         this.setOdataType("#microsoft.graph.subscription");
@@ -121,7 +122,7 @@ public class Subscription extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Subscription currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
             this.put("changeType", (n) -> { currentObject.setChangeType(n.getStringValue()); });
             this.put("clientState", (n) -> { currentObject.setClientState(n.getStringValue()); });
@@ -208,6 +209,7 @@ public class Subscription extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -232,6 +234,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the applicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationId(@javax.annotation.Nullable final String value) {
         this._applicationId = value;
     }
@@ -240,6 +243,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the changeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeType(@javax.annotation.Nullable final String value) {
         this._changeType = value;
     }
@@ -248,6 +252,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the clientState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientState(@javax.annotation.Nullable final String value) {
         this._clientState = value;
     }
@@ -256,6 +261,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the creatorId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatorId(@javax.annotation.Nullable final String value) {
         this._creatorId = value;
     }
@@ -264,6 +270,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the encryptionCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionCertificate(@javax.annotation.Nullable final String value) {
         this._encryptionCertificate = value;
     }
@@ -272,6 +279,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the encryptionCertificateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionCertificateId(@javax.annotation.Nullable final String value) {
         this._encryptionCertificateId = value;
     }
@@ -280,6 +288,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -288,6 +297,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the includeResourceData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeResourceData(@javax.annotation.Nullable final Boolean value) {
         this._includeResourceData = value;
     }
@@ -296,6 +306,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the latestSupportedTlsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLatestSupportedTlsVersion(@javax.annotation.Nullable final String value) {
         this._latestSupportedTlsVersion = value;
     }
@@ -304,6 +315,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the lifecycleNotificationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLifecycleNotificationUrl(@javax.annotation.Nullable final String value) {
         this._lifecycleNotificationUrl = value;
     }
@@ -312,6 +324,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the notificationContentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationContentType(@javax.annotation.Nullable final String value) {
         this._notificationContentType = value;
     }
@@ -320,6 +333,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the notificationQueryOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationQueryOptions(@javax.annotation.Nullable final String value) {
         this._notificationQueryOptions = value;
     }
@@ -328,6 +342,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the notificationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationUrl(@javax.annotation.Nullable final String value) {
         this._notificationUrl = value;
     }
@@ -336,6 +351,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the notificationUrlAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationUrlAppId(@javax.annotation.Nullable final String value) {
         this._notificationUrlAppId = value;
     }
@@ -344,6 +360,7 @@ public class Subscription extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final String value) {
         this._resource = value;
     }

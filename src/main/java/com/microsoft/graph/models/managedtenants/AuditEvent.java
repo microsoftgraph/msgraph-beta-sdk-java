@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AuditEvent extends Entity implements Parsable {
     /** A string which uniquely represents the operation that occurred. Required. Read-only. */
     private String _activity;
@@ -41,6 +41,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Instantiates a new auditEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuditEvent() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.auditEvent");
@@ -94,7 +95,7 @@ public class AuditEvent extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
             this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
             this.put("activityId", (n) -> { currentObject.setActivityId(n.getStringValue()); });
@@ -187,6 +188,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -209,6 +211,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final String value) {
         this._activity = value;
     }
@@ -217,6 +220,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._activityDateTime = value;
     }
@@ -225,6 +229,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activityId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityId(@javax.annotation.Nullable final String value) {
         this._activityId = value;
     }
@@ -233,6 +238,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final String value) {
         this._category = value;
     }
@@ -241,6 +247,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the httpVerb property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHttpVerb(@javax.annotation.Nullable final String value) {
         this._httpVerb = value;
     }
@@ -249,6 +256,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the initiatedByAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedByAppId(@javax.annotation.Nullable final String value) {
         this._initiatedByAppId = value;
     }
@@ -257,6 +265,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the initiatedByUpn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedByUpn(@javax.annotation.Nullable final String value) {
         this._initiatedByUpn = value;
     }
@@ -265,6 +274,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the initiatedByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedByUserId(@javax.annotation.Nullable final String value) {
         this._initiatedByUserId = value;
     }
@@ -273,6 +283,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -281,6 +292,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the requestBody property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestBody(@javax.annotation.Nullable final String value) {
         this._requestBody = value;
     }
@@ -289,6 +301,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the requestUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestUrl(@javax.annotation.Nullable final String value) {
         this._requestUrl = value;
     }
@@ -297,6 +310,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the tenantIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantIds(@javax.annotation.Nullable final String value) {
         this._tenantIds = value;
     }
@@ -305,6 +319,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the tenantNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantNames(@javax.annotation.Nullable final String value) {
         this._tenantNames = value;
     }

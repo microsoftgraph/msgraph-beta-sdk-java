@@ -24,6 +24,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      * Instantiates a new DeviceEnrollmentNotificationConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceEnrollmentNotificationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceEnrollmentNotificationConfiguration");
@@ -61,7 +62,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceEnrollmentNotificationConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("brandingOptions", (n) -> { currentObject.setBrandingOptions(n.getEnumValue(EnrollmentNotificationBrandingOptions.class)); });
             this.put("defaultLocale", (n) -> { currentObject.setDefaultLocale(n.getStringValue()); });
             this.put("notificationMessageTemplateId", (n) -> { currentObject.setNotificationMessageTemplateId(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      * @param value Value to set for the brandingOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrandingOptions(@javax.annotation.Nullable final EnrollmentNotificationBrandingOptions value) {
         this._brandingOptions = value;
     }
@@ -130,6 +133,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      * @param value Value to set for the defaultLocale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLocale(@javax.annotation.Nullable final String value) {
         this._defaultLocale = value;
     }
@@ -138,6 +142,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      * @param value Value to set for the notificationMessageTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationMessageTemplateId(@javax.annotation.Nullable final String value) {
         this._notificationMessageTemplateId = value;
     }
@@ -146,6 +151,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      * @param value Value to set for the notificationTemplates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationTemplates(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notificationTemplates = value;
     }
@@ -154,6 +160,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      * @param value Value to set for the platformType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformType(@javax.annotation.Nullable final EnrollmentRestrictionPlatformType value) {
         this._platformType = value;
     }
@@ -162,6 +169,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      * @param value Value to set for the templateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateType(@javax.annotation.Nullable final EnrollmentNotificationTemplateType value) {
         this._templateType = value;
     }

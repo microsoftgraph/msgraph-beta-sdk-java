@@ -14,6 +14,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      * Instantiates a new UpdateManagementEnrollment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateManagementEnrollment() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.updateManagementEnrollment");
@@ -35,7 +36,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateManagementEnrollment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("updateCategory", (n) -> { currentObject.setUpdateCategory(n.getEnumValue(UpdateCategory.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      * @param value Value to set for the updateCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateCategory(@javax.annotation.Nullable final UpdateCategory value) {
         this._updateCategory = value;
     }

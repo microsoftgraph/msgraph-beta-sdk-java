@@ -14,6 +14,7 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
      * Instantiates a new PayloadCompatibleAssignmentFilter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PayloadCompatibleAssignmentFilter() {
         super();
         this.setOdataType("#microsoft.graph.payloadCompatibleAssignmentFilter");
@@ -35,7 +36,7 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PayloadCompatibleAssignmentFilter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("payloadType", (n) -> { currentObject.setPayloadType(n.getEnumValue(AssignmentFilterPayloadType.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
      * @param value Value to set for the payloadType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadType(@javax.annotation.Nullable final AssignmentFilterPayloadType value) {
         this._payloadType = value;
     }

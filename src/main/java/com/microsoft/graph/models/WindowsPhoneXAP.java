@@ -18,6 +18,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
      * Instantiates a new WindowsPhoneXAP and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPhoneXAP() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhoneXAP");
@@ -39,7 +40,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhoneXAP currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
             this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(WindowsMinimumOperatingSystem::createFromDiscriminatorValue)); });
             this.put("productIdentifier", (n) -> { currentObject.setProductIdentifier(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityVersion(@javax.annotation.Nullable final String value) {
         this._identityVersion = value;
     }
@@ -94,6 +97,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final WindowsMinimumOperatingSystem value) {
         this._minimumSupportedOperatingSystem = value;
     }
@@ -102,6 +106,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
      * @param value Value to set for the productIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductIdentifier(@javax.annotation.Nullable final String value) {
         this._productIdentifier = value;
     }

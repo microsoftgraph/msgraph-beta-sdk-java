@@ -16,6 +16,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
      * Instantiates a new CustomAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomAction() {
         super();
         this.setOdataType("#microsoft.graph.customAction");
@@ -37,7 +38,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -82,6 +85,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
      * @param value Value to set for the properties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProperties(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._properties = value;
     }

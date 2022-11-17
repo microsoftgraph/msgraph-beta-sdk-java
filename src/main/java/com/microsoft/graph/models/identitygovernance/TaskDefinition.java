@@ -8,23 +8,25 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TaskDefinition extends Entity implements Parsable {
     /** The category property */
     private LifecycleTaskCategory _category;
     /** The continueOnError property */
     private Boolean _continueOnError;
-    /** The description property */
+    /** The description of the taskDefinition. */
     private String _description;
-    /** The displayName property */
+    /** The display name of the taskDefinition.Supports $filter(eq, ne) and $orderby. */
     private String _displayName;
-    /** The parameters property */
+    /** The parameters that must be supplied when creating a workflow task object.Supports $filter(any). */
     private java.util.List<Parameter> _parameters;
-    /** The version property */
+    /** The version number of the taskDefinition. New records are pushed when we add support for new parameters.Supports $filter(ge, gt, le, lt, eq, ne) and $orderby. */
     private Integer _version;
     /**
-     * Instantiates a new TaskDefinition and sets the default values.
+     * Instantiates a new taskDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TaskDefinition() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.taskDefinition");
@@ -32,7 +34,7 @@ public class TaskDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TaskDefinition
+     * @return a taskDefinition
      */
     @javax.annotation.Nonnull
     public static TaskDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +58,7 @@ public class TaskDefinition extends Entity implements Parsable {
         return this._continueOnError;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the taskDefinition.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -64,7 +66,7 @@ public class TaskDefinition extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the taskDefinition.Supports $filter(eq, ne) and $orderby.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -78,7 +80,7 @@ public class TaskDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TaskDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(LifecycleTaskCategory.class)); });
             this.put("continueOnError", (n) -> { currentObject.setContinueOnError(n.getBooleanValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -88,7 +90,7 @@ public class TaskDefinition extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the parameters property value. The parameters property
+     * Gets the parameters property value. The parameters that must be supplied when creating a workflow task object.Supports $filter(any).
      * @return a parameter
      */
     @javax.annotation.Nullable
@@ -96,7 +98,7 @@ public class TaskDefinition extends Entity implements Parsable {
         return this._parameters;
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version number of the taskDefinition. New records are pushed when we add support for new parameters.Supports $filter(ge, gt, le, lt, eq, ne) and $orderby.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -108,6 +110,7 @@ public class TaskDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +126,7 @@ public class TaskDefinition extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final LifecycleTaskCategory value) {
         this._category = value;
     }
@@ -131,38 +135,43 @@ public class TaskDefinition extends Entity implements Parsable {
      * @param value Value to set for the continueOnError property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContinueOnError(@javax.annotation.Nullable final Boolean value) {
         this._continueOnError = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the taskDefinition.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the taskDefinition.Supports $filter(eq, ne) and $orderby.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
     /**
-     * Sets the parameters property value. The parameters property
+     * Sets the parameters property value. The parameters that must be supplied when creating a workflow task object.Supports $filter(any).
      * @param value Value to set for the parameters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParameters(@javax.annotation.Nullable final java.util.List<Parameter> value) {
         this._parameters = value;
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version number of the taskDefinition. New records are pushed when we add support for new parameters.Supports $filter(ge, gt, le, lt, eq, ne) and $orderby.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }

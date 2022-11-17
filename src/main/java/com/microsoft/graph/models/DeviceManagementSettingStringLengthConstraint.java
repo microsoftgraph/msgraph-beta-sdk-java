@@ -16,6 +16,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
      * Instantiates a new DeviceManagementSettingStringLengthConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingStringLengthConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingStringLengthConstraint");
@@ -37,7 +38,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingStringLengthConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maximumLength", (n) -> { currentObject.setMaximumLength(n.getIntegerValue()); });
             this.put("minimumLength", (n) -> { currentObject.setMinimumLength(n.getIntegerValue()); });
         }};
@@ -63,6 +64,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
      * @param value Value to set for the maximumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumLength(@javax.annotation.Nullable final Integer value) {
         this._maximumLength = value;
     }
@@ -82,6 +85,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
      * @param value Value to set for the minimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._minimumLength = value;
     }

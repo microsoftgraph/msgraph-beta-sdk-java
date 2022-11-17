@@ -23,6 +23,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      * Instantiates a new searchQuery and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SearchQuery() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.searchQuery");
@@ -52,7 +53,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchQuery currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("query_string", (n) -> { currentObject.setQuery_string(n.getObjectValue(SearchQueryString::createFromDiscriminatorValue)); });
             this.put("queryString", (n) -> { currentObject.setQueryString(n.getStringValue()); });
@@ -96,12 +97,13 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeObjectValue("query_string", this.getQuery_string());
         writer.writeStringValue("queryString", this.getQueryString());
         writer.writeStringValue("queryTemplate", this.getQueryTemplate());
+        writer.writeObjectValue("query_string", this.getQuery_string());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -109,6 +111,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -125,6 +129,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the query_string property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuery_string(@javax.annotation.Nullable final SearchQueryString value) {
         this._query_string = value;
     }
@@ -133,6 +138,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the queryString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryString(@javax.annotation.Nullable final String value) {
         this._queryString = value;
     }
@@ -141,6 +147,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the queryTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryTemplate(@javax.annotation.Nullable final String value) {
         this._queryTemplate = value;
     }

@@ -14,6 +14,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
      * Instantiates a new EducationIdentityMatchingConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationIdentityMatchingConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.educationIdentityMatchingConfiguration");
@@ -35,7 +36,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationIdentityMatchingConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("matchingOptions", (n) -> { currentObject.setMatchingOptions(n.getCollectionOfObjectValues(EducationIdentityMatchingOptions::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
      * @param value Value to set for the matchingOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatchingOptions(@javax.annotation.Nullable final java.util.List<EducationIdentityMatchingOptions> value) {
         this._matchingOptions = value;
     }

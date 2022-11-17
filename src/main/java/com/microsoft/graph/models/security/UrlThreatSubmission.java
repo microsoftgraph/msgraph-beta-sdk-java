@@ -14,6 +14,7 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
      * Instantiates a new UrlThreatSubmission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UrlThreatSubmission() {
         super();
         this.setOdataType("#microsoft.graph.security.urlThreatSubmission");
@@ -35,7 +36,7 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UrlThreatSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

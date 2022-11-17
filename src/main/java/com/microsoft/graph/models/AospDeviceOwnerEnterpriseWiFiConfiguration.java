@@ -28,6 +28,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
      * Instantiates a new AospDeviceOwnerEnterpriseWiFiConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AospDeviceOwnerEnterpriseWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.aospDeviceOwnerEnterpriseWiFiConfiguration");
@@ -65,7 +66,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AospDeviceOwnerEnterpriseWiFiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
             this.put("eapType", (n) -> { currentObject.setEapType(n.getEnumValue(AndroidEapType.class)); });
             this.put("identityCertificateForClientAuthentication", (n) -> { currentObject.setIdentityCertificateForClientAuthentication(n.getObjectValue(AospDeviceOwnerCertificateProfileBase::createFromDiscriminatorValue)); });
@@ -129,6 +130,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final WiFiAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -154,6 +157,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
      * @param value Value to set for the eapType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapType(@javax.annotation.Nullable final AndroidEapType value) {
         this._eapType = value;
     }
@@ -162,6 +166,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final AospDeviceOwnerCertificateProfileBase value) {
         this._identityCertificateForClientAuthentication = value;
     }
@@ -170,6 +175,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInnerAuthenticationProtocolForEapTtls(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
         this._innerAuthenticationProtocolForEapTtls = value;
     }
@@ -178,6 +184,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
      * @param value Value to set for the innerAuthenticationProtocolForPeap property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInnerAuthenticationProtocolForPeap(@javax.annotation.Nullable final NonEapAuthenticationMethodForPeap value) {
         this._innerAuthenticationProtocolForPeap = value;
     }
@@ -186,6 +193,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
         this._outerIdentityPrivacyTemporaryValue = value;
     }
@@ -194,6 +202,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
      * @param value Value to set for the rootCertificateForServerValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificateForServerValidation(@javax.annotation.Nullable final AospDeviceOwnerTrustedRootCertificate value) {
         this._rootCertificateForServerValidation = value;
     }
@@ -202,6 +211,7 @@ public class AospDeviceOwnerEnterpriseWiFiConfiguration extends AospDeviceOwnerW
      * @param value Value to set for the trustedServerCertificateNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._trustedServerCertificateNames = value;
     }
