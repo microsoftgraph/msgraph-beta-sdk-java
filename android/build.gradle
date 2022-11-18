@@ -8,21 +8,24 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.gradle:gradle-enterprise-gradle-plugin:3.11.2"
+        classpath "com.gradle:gradle-enterprise-gradle-plugin:3.11.4"
         classpath "com.android.tools.build:gradle:7.3.1"
-        classpath "com.github.ben-manes:gradle-versions-plugin:0.43.0"
+        classpath "com.github.ben-manes:gradle-versions-plugin:0.44.0"
     }
 }
 
 repositories {
     google()
     gradlePluginPortal()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 apply plugin: "com.android.library"
 apply plugin: "com.github.ben-manes.versions"
 
 android {
+    namespace 'com.microsoft.graph'
+    
     compileSdkVersion 33
 
     defaultConfig {
