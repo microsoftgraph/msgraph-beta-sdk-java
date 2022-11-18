@@ -47,6 +47,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * Instantiates a new zebraFotaDeploymentStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ZebraFotaDeploymentStatus() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.zebraFotaDeploymentStatus");
@@ -92,7 +93,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ZebraFotaDeploymentStatus currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<String, Consumer<ParseNode>>(15) {{
             this.put("cancelRequested", (n) -> { currentObject.setCancelRequested(n.getBooleanValue()); });
             this.put("completeOrCanceledDateTime", (n) -> { currentObject.setCompleteOrCanceledDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
@@ -219,6 +220,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("cancelRequested", this.getCancelRequested());
@@ -243,6 +245,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -251,6 +254,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the cancelRequested property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCancelRequested(@javax.annotation.Nullable final Boolean value) {
         this._cancelRequested = value;
     }
@@ -259,6 +263,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the completeOrCanceledDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompleteOrCanceledDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completeOrCanceledDateTime = value;
     }
@@ -267,6 +272,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
     }
@@ -275,6 +281,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -283,6 +290,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ZebraFotaDeploymentState value) {
         this._state = value;
     }
@@ -291,6 +299,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the totalAwaitingInstall property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalAwaitingInstall(@javax.annotation.Nullable final Integer value) {
         this._totalAwaitingInstall = value;
     }
@@ -299,6 +308,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the totalCanceled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalCanceled(@javax.annotation.Nullable final Integer value) {
         this._totalCanceled = value;
     }
@@ -307,6 +317,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the totalCreated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalCreated(@javax.annotation.Nullable final Integer value) {
         this._totalCreated = value;
     }
@@ -315,6 +326,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the totalDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalDevices(@javax.annotation.Nullable final Integer value) {
         this._totalDevices = value;
     }
@@ -323,6 +335,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the totalDownloading property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalDownloading(@javax.annotation.Nullable final Integer value) {
         this._totalDownloading = value;
     }
@@ -331,6 +344,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the totalFailedDownload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalFailedDownload(@javax.annotation.Nullable final Integer value) {
         this._totalFailedDownload = value;
     }
@@ -339,6 +353,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the totalFailedInstall property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalFailedInstall(@javax.annotation.Nullable final Integer value) {
         this._totalFailedInstall = value;
     }
@@ -347,6 +362,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the totalScheduled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalScheduled(@javax.annotation.Nullable final Integer value) {
         this._totalScheduled = value;
     }
@@ -355,6 +371,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the totalSucceededInstall property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalSucceededInstall(@javax.annotation.Nullable final Integer value) {
         this._totalSucceededInstall = value;
     }
@@ -363,6 +380,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the totalUnknown property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUnknown(@javax.annotation.Nullable final Integer value) {
         this._totalUnknown = value;
     }

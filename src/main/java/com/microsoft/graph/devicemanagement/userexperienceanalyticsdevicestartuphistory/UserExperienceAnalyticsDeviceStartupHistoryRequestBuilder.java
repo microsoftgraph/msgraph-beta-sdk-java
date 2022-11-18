@@ -9,7 +9,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -20,28 +19,29 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the userExperienceAnalyticsDeviceStartupHistory property of the microsoft.graph.deviceManagement entity. */
 public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/userExperienceAnalyticsDeviceStartupHistory{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -51,9 +51,10 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/deviceManagement/userExperienceAnalyticsDeviceStartupHistory{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -72,15 +73,14 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration requestConfig = new UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -104,17 +104,16 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupHistory body, @javax.annotation.Nullable final java.util.function.Consumer<UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupHistory body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration requestConfig = new UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration();
+            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -125,16 +124,18 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
      * User experience analytics device Startup History
      * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -142,34 +143,18 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse
      */
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * User experience analytics device Startup History
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse
-     */
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -177,16 +162,18 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
      * @param body 
      * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupHistory
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory> post(@javax.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupHistory body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupHistory::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupHistory::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -195,40 +182,23 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupHistory
      */
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory> post(@javax.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupHistory body, @javax.annotation.Nullable final java.util.function.Consumer<UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupHistory::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to userExperienceAnalyticsDeviceStartupHistory for deviceManagement
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupHistory
-     */
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory> post(@javax.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupHistory body, @javax.annotation.Nullable final java.util.function.Consumer<UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory> post(@javax.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupHistory body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupHistory::createFromDiscriminatorValue, responseHandler, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupHistory::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /** User experience analytics device Startup History */
-    public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -263,36 +233,38 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder {
         public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetQueryParameters queryParameters = new UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
-        public UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration() {
+        @javax.annotation.Nullable
+        public GetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration {
+    public class PostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration and sets the default values.
+         * Instantiates a new PostRequestConfiguration and sets the default values.
          * @return a void
          */
-        public UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration() {
+        @javax.annotation.Nullable
+        public PostRequestConfiguration() {
         }
     }
 }

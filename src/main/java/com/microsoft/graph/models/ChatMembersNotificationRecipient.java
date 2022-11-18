@@ -8,12 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
-    /** The chat's identifier. */
+    /** The unique identifier for the chat whose members should receive the notifications. */
     private String _chatId;
     /**
      * Instantiates a new ChatMembersNotificationRecipient and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatMembersNotificationRecipient() {
         super();
         this.setOdataType("#microsoft.graph.chatMembersNotificationRecipient");
@@ -29,7 +30,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
         return new ChatMembersNotificationRecipient();
     }
     /**
-     * Gets the chatId property value. The chat's identifier.
+     * Gets the chatId property value. The unique identifier for the chat whose members should receive the notifications.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -43,7 +44,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMembersNotificationRecipient currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("chatId", (n) -> { currentObject.setChatId(n.getStringValue()); });
         }};
     }
@@ -52,16 +53,18 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("chatId", this.getChatId());
     }
     /**
-     * Sets the chatId property value. The chat's identifier.
+     * Sets the chatId property value. The unique identifier for the chat whose members should receive the notifications.
      * @param value Value to set for the chatId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChatId(@javax.annotation.Nullable final String value) {
         this._chatId = value;
     }

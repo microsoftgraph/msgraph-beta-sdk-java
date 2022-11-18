@@ -11,7 +11,7 @@ import java.util.Objects;
 public class SimulationEvent implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Count of occurence of the simulation event in an attack simulation and training campaign. */
+    /** Count of the simulation event occurrence in an attack simulation and training campaign. */
     private Integer _count;
     /** Name of the simulation event in an attack simulation and training campaign. */
     private String _eventName;
@@ -21,6 +21,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      * Instantiates a new simulationEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SimulationEvent() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.simulationEvent");
@@ -44,7 +45,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the count property value. Count of occurence of the simulation event in an attack simulation and training campaign.
+     * Gets the count property value. Count of the simulation event occurrence in an attack simulation and training campaign.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -66,7 +67,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SimulationEvent currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
             this.put("eventName", (n) -> { currentObject.setEventName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("count", this.getCount());
@@ -97,14 +99,16 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the count property value. Count of occurence of the simulation event in an attack simulation and training campaign.
+     * Sets the count property value. Count of the simulation event occurrence in an attack simulation and training campaign.
      * @param value Value to set for the count property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCount(@javax.annotation.Nullable final Integer value) {
         this._count = value;
     }
@@ -113,6 +117,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the eventName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventName(@javax.annotation.Nullable final String value) {
         this._eventName = value;
     }
@@ -121,6 +126,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

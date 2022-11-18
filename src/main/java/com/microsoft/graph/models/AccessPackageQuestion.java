@@ -29,6 +29,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * Instantiates a new accessPackageQuestion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageQuestion() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessPackageQuestion");
@@ -66,7 +67,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageQuestion currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("isAnswerEditable", (n) -> { currentObject.setIsAnswerEditable(n.getBooleanValue()); });
             this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
@@ -128,6 +129,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
@@ -143,6 +145,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -151,6 +154,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -159,6 +163,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAnswerEditable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAnswerEditable(@javax.annotation.Nullable final Boolean value) {
         this._isAnswerEditable = value;
     }
@@ -167,6 +172,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
         this._isRequired = value;
     }
@@ -175,6 +181,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -183,6 +190,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sequence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSequence(@javax.annotation.Nullable final Integer value) {
         this._sequence = value;
     }
@@ -191,6 +199,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final AccessPackageLocalizedContent value) {
         this._text = value;
     }

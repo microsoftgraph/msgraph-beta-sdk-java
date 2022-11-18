@@ -37,6 +37,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * Instantiates a new teamworkDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.teamworkDeviceConfiguration");
@@ -90,7 +91,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cameraConfiguration", (n) -> { currentObject.setCameraConfiguration(n.getObjectValue(TeamworkCameraConfiguration::createFromDiscriminatorValue)); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -174,6 +175,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,6 +197,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the cameraConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraConfiguration(@javax.annotation.Nullable final TeamworkCameraConfiguration value) {
         this._cameraConfiguration = value;
     }
@@ -203,6 +206,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -211,6 +215,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -219,6 +224,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the displayConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayConfiguration(@javax.annotation.Nullable final TeamworkDisplayConfiguration value) {
         this._displayConfiguration = value;
     }
@@ -227,6 +233,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the hardwareConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHardwareConfiguration(@javax.annotation.Nullable final TeamworkHardwareConfiguration value) {
         this._hardwareConfiguration = value;
     }
@@ -235,6 +242,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -243,6 +251,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -251,6 +260,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the microphoneConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrophoneConfiguration(@javax.annotation.Nullable final TeamworkMicrophoneConfiguration value) {
         this._microphoneConfiguration = value;
     }
@@ -259,6 +269,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the softwareVersions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareVersions(@javax.annotation.Nullable final TeamworkDeviceSoftwareVersions value) {
         this._softwareVersions = value;
     }
@@ -267,6 +278,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the speakerConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpeakerConfiguration(@javax.annotation.Nullable final TeamworkSpeakerConfiguration value) {
         this._speakerConfiguration = value;
     }
@@ -275,6 +287,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the systemConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemConfiguration(@javax.annotation.Nullable final TeamworkSystemConfiguration value) {
         this._systemConfiguration = value;
     }
@@ -283,6 +296,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the teamsClientConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsClientConfiguration(@javax.annotation.Nullable final TeamworkTeamsClientConfiguration value) {
         this._teamsClientConfiguration = value;
     }

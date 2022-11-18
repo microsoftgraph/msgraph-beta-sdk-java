@@ -12,43 +12,43 @@ import java.util.HashMap;
 import java.util.Objects;
 /** Builds and executes requests for operations under /administrativeUnits/{administrativeUnit-id}/members/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
-    /** The application property */
+    /** Casts the previous resource to application. */
     @javax.annotation.Nonnull
     public ApplicationRequestBuilder application() {
         return new ApplicationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The device property */
+    /** Casts the previous resource to device. */
     @javax.annotation.Nonnull
     public DeviceRequestBuilder device() {
         return new DeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The group property */
+    /** Casts the previous resource to group. */
     @javax.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The orgContact property */
+    /** Casts the previous resource to orgContact. */
     @javax.annotation.Nonnull
     public OrgContactRequestBuilder orgContact() {
         return new OrgContactRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The Ref property */
+    private HashMap<String, Object> pathParameters;
+    /** Provides operations to manage the collection of administrativeUnit entities. */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The servicePrincipal property */
+    private RequestAdapter requestAdapter;
+    /** Casts the previous resource to servicePrincipal. */
     @javax.annotation.Nonnull
     public ServicePrincipalRequestBuilder servicePrincipal() {
         return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /** The user property */
+    private String urlTemplate;
+    /** Casts the previous resource to user. */
     @javax.annotation.Nonnull
     public UserRequestBuilder user() {
         return new UserRequestBuilder(pathParameters, requestAdapter);
@@ -59,11 +59,12 @@ public class DirectoryObjectItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryObjectItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/administrativeUnits/{administrativeUnit%2Did}/members/{directoryObject%2Did}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -73,9 +74,10 @@ public class DirectoryObjectItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryObjectItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/administrativeUnits/{administrativeUnit%2Did}/members/{directoryObject%2Did}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;

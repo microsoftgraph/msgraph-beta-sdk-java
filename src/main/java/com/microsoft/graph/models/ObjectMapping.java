@@ -33,6 +33,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * Instantiates a new objectMapping and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ObjectMapping() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.objectMapping");
@@ -78,7 +79,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ObjectMapping currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("attributeMappings", (n) -> { currentObject.setAttributeMappings(n.getCollectionOfObjectValues(AttributeMapping::createFromDiscriminatorValue)); });
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
             this.put("flowTypes", (n) -> { currentObject.setFlowTypes(n.getEnumValue(ObjectFlowTypes.class)); });
@@ -151,6 +152,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attributeMappings", this.getAttributeMappings());
@@ -169,6 +171,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +180,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the attributeMappings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttributeMappings(@javax.annotation.Nullable final java.util.List<AttributeMapping> value) {
         this._attributeMappings = value;
     }
@@ -185,6 +189,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enabled = value;
     }
@@ -193,6 +198,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the flowTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlowTypes(@javax.annotation.Nullable final ObjectFlowTypes value) {
         this._flowTypes = value;
     }
@@ -201,6 +207,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final java.util.List<MetadataEntry> value) {
         this._metadata = value;
     }
@@ -209,6 +216,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -217,6 +225,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -225,6 +234,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final Filter value) {
         this._scope = value;
     }
@@ -233,6 +243,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceObjectName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceObjectName(@javax.annotation.Nullable final String value) {
         this._sourceObjectName = value;
     }
@@ -241,6 +252,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the targetObjectName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetObjectName(@javax.annotation.Nullable final String value) {
         this._targetObjectName = value;
     }

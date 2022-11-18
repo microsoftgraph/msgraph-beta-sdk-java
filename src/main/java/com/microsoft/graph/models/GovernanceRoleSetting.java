@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class GovernanceRoleSetting extends Entity implements Parsable {
     /** The rule settings that are evaluated when an administrator tries to add an eligible role assignment. */
     private java.util.List<GovernanceRuleSetting> _adminEligibleSettings;
@@ -35,6 +36,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Instantiates a new governanceRoleSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GovernanceRoleSetting() {
         super();
         this.setOdataType("#microsoft.graph.governanceRoleSetting");
@@ -72,7 +74,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceRoleSetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("adminEligibleSettings", (n) -> { currentObject.setAdminEligibleSettings(n.getCollectionOfObjectValues(GovernanceRuleSetting::createFromDiscriminatorValue)); });
             this.put("adminMemberSettings", (n) -> { currentObject.setAdminMemberSettings(n.getCollectionOfObjectValues(GovernanceRuleSetting::createFromDiscriminatorValue)); });
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
@@ -163,6 +165,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,6 +186,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the adminEligibleSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdminEligibleSettings(@javax.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
         this._adminEligibleSettings = value;
     }
@@ -191,6 +195,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the adminMemberSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdminMemberSettings(@javax.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
         this._adminMemberSettings = value;
     }
@@ -199,6 +204,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
         this._isDefault = value;
     }
@@ -207,6 +213,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedBy(@javax.annotation.Nullable final String value) {
         this._lastUpdatedBy = value;
     }
@@ -215,6 +222,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
     }
@@ -223,6 +231,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final GovernanceResource value) {
         this._resource = value;
     }
@@ -231,6 +240,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
         this._resourceId = value;
     }
@@ -239,6 +249,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinition(@javax.annotation.Nullable final GovernanceRoleDefinition value) {
         this._roleDefinition = value;
     }
@@ -247,6 +258,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
         this._roleDefinitionId = value;
     }
@@ -255,6 +267,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the userEligibleSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEligibleSettings(@javax.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
         this._userEligibleSettings = value;
     }
@@ -263,6 +276,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the userMemberSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserMemberSettings(@javax.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
         this._userMemberSettings = value;
     }

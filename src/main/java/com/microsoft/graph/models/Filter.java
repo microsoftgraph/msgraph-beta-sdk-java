@@ -23,6 +23,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
      * Instantiates a new filter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Filter() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.filter");
@@ -60,7 +61,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Filter currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("categoryFilterGroups", (n) -> { currentObject.setCategoryFilterGroups(n.getCollectionOfObjectValues(FilterGroup::createFromDiscriminatorValue)); });
             this.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfObjectValues(FilterGroup::createFromDiscriminatorValue)); });
             this.put("inputFilterGroups", (n) -> { currentObject.setInputFilterGroups(n.getCollectionOfObjectValues(FilterGroup::createFromDiscriminatorValue)); });
@@ -96,6 +97,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("categoryFilterGroups", this.getCategoryFilterGroups());
@@ -109,6 +111,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the categoryFilterGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategoryFilterGroups(@javax.annotation.Nullable final java.util.List<FilterGroup> value) {
         this._categoryFilterGroups = value;
     }
@@ -125,6 +129,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the groups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroups(@javax.annotation.Nullable final java.util.List<FilterGroup> value) {
         this._groups = value;
     }
@@ -133,6 +138,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the inputFilterGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInputFilterGroups(@javax.annotation.Nullable final java.util.List<FilterGroup> value) {
         this._inputFilterGroups = value;
     }
@@ -141,6 +147,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

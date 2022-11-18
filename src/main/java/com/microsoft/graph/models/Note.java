@@ -28,6 +28,7 @@ public class Note extends OutlookItem implements Parsable {
      * Instantiates a new Note and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Note() {
         super();
         this.setOdataType("#microsoft.graph.note");
@@ -73,7 +74,7 @@ public class Note extends OutlookItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Note currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
             this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
             this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
@@ -129,6 +130,7 @@ public class Note extends OutlookItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class Note extends OutlookItem implements Parsable {
      * @param value Value to set for the attachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment> value) {
         this._attachments = value;
     }
@@ -154,6 +157,7 @@ public class Note extends OutlookItem implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
         this._body = value;
     }
@@ -162,6 +166,7 @@ public class Note extends OutlookItem implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -170,6 +175,7 @@ public class Note extends OutlookItem implements Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
         this._hasAttachments = value;
     }
@@ -178,6 +184,7 @@ public class Note extends OutlookItem implements Parsable {
      * @param value Value to set for the isDeleted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeleted(@javax.annotation.Nullable final Boolean value) {
         this._isDeleted = value;
     }
@@ -186,6 +193,7 @@ public class Note extends OutlookItem implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this._multiValueExtendedProperties = value;
     }
@@ -194,6 +202,7 @@ public class Note extends OutlookItem implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this._singleValueExtendedProperties = value;
     }
@@ -202,6 +211,7 @@ public class Note extends OutlookItem implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }

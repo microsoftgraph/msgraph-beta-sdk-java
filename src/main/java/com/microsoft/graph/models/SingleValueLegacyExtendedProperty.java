@@ -15,6 +15,7 @@ public class SingleValueLegacyExtendedProperty extends Entity implements Parsabl
      * Instantiates a new singleValueLegacyExtendedProperty and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SingleValueLegacyExtendedProperty() {
         super();
         this.setOdataType("#microsoft.graph.singleValueLegacyExtendedProperty");
@@ -36,7 +37,7 @@ public class SingleValueLegacyExtendedProperty extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SingleValueLegacyExtendedProperty currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
     }
@@ -53,6 +54,7 @@ public class SingleValueLegacyExtendedProperty extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class SingleValueLegacyExtendedProperty extends Entity implements Parsabl
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
         this._value = value;
     }

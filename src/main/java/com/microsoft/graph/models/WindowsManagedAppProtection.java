@@ -61,6 +61,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * Instantiates a new WindowsManagedAppProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.windowsManagedAppProtection");
@@ -138,7 +139,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsManagedAppProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedInboundDataTransferSources", (n) -> { currentObject.setAllowedInboundDataTransferSources(n.getEnumValue(WindowsManagedAppDataTransferLevel.class)); });
             this.put("allowedOutboundClipboardSharingLevel", (n) -> { currentObject.setAllowedOutboundClipboardSharingLevel(n.getEnumValue(WindowsManagedAppClipboardSharingLevel.class)); });
             this.put("allowedOutboundDataTransferDestinations", (n) -> { currentObject.setAllowedOutboundDataTransferDestinations(n.getEnumValue(WindowsManagedAppDataTransferLevel.class)); });
@@ -306,6 +307,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -339,6 +341,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the allowedInboundDataTransferSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedInboundDataTransferSources(@javax.annotation.Nullable final WindowsManagedAppDataTransferLevel value) {
         this._allowedInboundDataTransferSources = value;
     }
@@ -347,6 +350,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the allowedOutboundClipboardSharingLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedOutboundClipboardSharingLevel(@javax.annotation.Nullable final WindowsManagedAppClipboardSharingLevel value) {
         this._allowedOutboundClipboardSharingLevel = value;
     }
@@ -355,6 +359,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the allowedOutboundDataTransferDestinations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedOutboundDataTransferDestinations(@javax.annotation.Nullable final WindowsManagedAppDataTransferLevel value) {
         this._allowedOutboundDataTransferDestinations = value;
     }
@@ -363,6 +368,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the appActionIfUnableToAuthenticateUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfUnableToAuthenticateUser(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfUnableToAuthenticateUser = value;
     }
@@ -371,6 +377,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this._apps = value;
     }
@@ -379,6 +386,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
         this._assignments = value;
     }
@@ -387,6 +395,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the deployedAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
         this._deployedAppCount = value;
     }
@@ -395,6 +404,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the isAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAssigned(@javax.annotation.Nullable final Boolean value) {
         this._isAssigned = value;
     }
@@ -403,6 +413,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the maximumAllowedDeviceThreatLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumAllowedDeviceThreatLevel(@javax.annotation.Nullable final ManagedAppDeviceThreatLevel value) {
         this._maximumAllowedDeviceThreatLevel = value;
     }
@@ -411,6 +422,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the maximumRequiredOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumRequiredOsVersion(@javax.annotation.Nullable final String value) {
         this._maximumRequiredOsVersion = value;
     }
@@ -419,6 +431,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the maximumWarningOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumWarningOsVersion(@javax.annotation.Nullable final String value) {
         this._maximumWarningOsVersion = value;
     }
@@ -427,6 +440,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the maximumWipeOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumWipeOsVersion(@javax.annotation.Nullable final String value) {
         this._maximumWipeOsVersion = value;
     }
@@ -435,6 +449,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the minimumRequiredAppVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredAppVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredAppVersion = value;
     }
@@ -443,6 +458,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the minimumRequiredOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredOsVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredOsVersion = value;
     }
@@ -451,6 +467,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the minimumRequiredSdkVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredSdkVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredSdkVersion = value;
     }
@@ -459,6 +476,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the minimumWarningAppVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningAppVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningAppVersion = value;
     }
@@ -467,6 +485,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the minimumWarningOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningOsVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningOsVersion = value;
     }
@@ -475,6 +494,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the minimumWipeAppVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipeAppVersion(@javax.annotation.Nullable final String value) {
         this._minimumWipeAppVersion = value;
     }
@@ -483,6 +503,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the minimumWipeOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipeOsVersion(@javax.annotation.Nullable final String value) {
         this._minimumWipeOsVersion = value;
     }
@@ -491,6 +512,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the minimumWipeSdkVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipeSdkVersion(@javax.annotation.Nullable final String value) {
         this._minimumWipeSdkVersion = value;
     }
@@ -499,6 +521,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the mobileThreatDefenseRemediationAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileThreatDefenseRemediationAction(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._mobileThreatDefenseRemediationAction = value;
     }
@@ -507,6 +530,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the periodOfflineBeforeAccessCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriodOfflineBeforeAccessCheck(@javax.annotation.Nullable final Period value) {
         this._periodOfflineBeforeAccessCheck = value;
     }
@@ -515,6 +539,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the periodOfflineBeforeWipeIsEnforced property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriodOfflineBeforeWipeIsEnforced(@javax.annotation.Nullable final Period value) {
         this._periodOfflineBeforeWipeIsEnforced = value;
     }
@@ -523,6 +548,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @param value Value to set for the printBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrintBlocked(@javax.annotation.Nullable final Boolean value) {
         this._printBlocked = value;
     }

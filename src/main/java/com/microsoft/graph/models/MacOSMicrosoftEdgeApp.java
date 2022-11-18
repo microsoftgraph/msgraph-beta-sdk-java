@@ -14,6 +14,7 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
      * Instantiates a new MacOSMicrosoftEdgeApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSMicrosoftEdgeApp() {
         super();
         this.setOdataType("#microsoft.graph.macOSMicrosoftEdgeApp");
@@ -43,7 +44,7 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSMicrosoftEdgeApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("channel", (n) -> { currentObject.setChannel(n.getEnumValue(MicrosoftEdgeChannel.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
      * @param value Value to set for the channel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChannel(@javax.annotation.Nullable final MicrosoftEdgeChannel value) {
         this._channel = value;
     }

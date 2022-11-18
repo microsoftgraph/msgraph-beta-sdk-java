@@ -21,6 +21,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * Instantiates a new governanceNotificationPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GovernanceNotificationPolicy() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.governanceNotificationPolicy");
@@ -58,7 +59,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceNotificationPolicy currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("enabledTemplateTypes", (n) -> { currentObject.setEnabledTemplateTypes(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("notificationTemplates", (n) -> { currentObject.setNotificationTemplates(n.getCollectionOfObjectValues(GovernanceNotificationTemplate::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("enabledTemplateTypes", this.getEnabledTemplateTypes());
@@ -97,6 +99,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the enabledTemplateTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabledTemplateTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._enabledTemplateTypes = value;
     }
@@ -113,6 +117,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the notificationTemplates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationTemplates(@javax.annotation.Nullable final java.util.List<GovernanceNotificationTemplate> value) {
         this._notificationTemplates = value;
     }
@@ -121,6 +126,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

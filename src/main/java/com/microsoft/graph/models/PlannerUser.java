@@ -28,6 +28,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      * Instantiates a new PlannerUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerUser() {
         super();
         this.setOdataType("#microsoft.graph.plannerUser");
@@ -73,7 +74,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("all", (n) -> { currentObject.setAll(n.getCollectionOfObjectValues(PlannerDelta::createFromDiscriminatorValue)); });
             this.put("favoritePlanReferences", (n) -> { currentObject.setFavoritePlanReferences(n.getObjectValue(PlannerFavoritePlanReferenceCollection::createFromDiscriminatorValue)); });
             this.put("favoritePlans", (n) -> { currentObject.setFavoritePlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
@@ -129,6 +130,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      * @param value Value to set for the all property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAll(@javax.annotation.Nullable final java.util.List<PlannerDelta> value) {
         this._all = value;
     }
@@ -154,6 +157,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      * @param value Value to set for the favoritePlanReferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFavoritePlanReferences(@javax.annotation.Nullable final PlannerFavoritePlanReferenceCollection value) {
         this._favoritePlanReferences = value;
     }
@@ -162,6 +166,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      * @param value Value to set for the favoritePlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFavoritePlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
         this._favoritePlans = value;
     }
@@ -170,6 +175,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      * @param value Value to set for the plans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
         this._plans = value;
     }
@@ -178,6 +184,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      * @param value Value to set for the recentPlanReferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecentPlanReferences(@javax.annotation.Nullable final PlannerRecentPlanReferenceCollection value) {
         this._recentPlanReferences = value;
     }
@@ -186,6 +193,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      * @param value Value to set for the recentPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecentPlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
         this._recentPlans = value;
     }
@@ -194,6 +202,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      * @param value Value to set for the rosterPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRosterPlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
         this._rosterPlans = value;
     }
@@ -202,6 +211,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<PlannerTask> value) {
         this._tasks = value;
     }

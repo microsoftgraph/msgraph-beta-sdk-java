@@ -12,6 +12,7 @@ public class EducationSynchronizationOAuth1ConnectionSettings extends EducationS
      * Instantiates a new EducationSynchronizationOAuth1ConnectionSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationSynchronizationOAuth1ConnectionSettings() {
         super();
         this.setOdataType("#microsoft.graph.educationSynchronizationOAuth1ConnectionSettings");
@@ -33,7 +34,7 @@ public class EducationSynchronizationOAuth1ConnectionSettings extends EducationS
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationOAuth1ConnectionSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -41,6 +42,7 @@ public class EducationSynchronizationOAuth1ConnectionSettings extends EducationS
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

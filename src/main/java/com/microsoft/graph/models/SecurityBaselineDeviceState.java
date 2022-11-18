@@ -24,6 +24,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * Instantiates a new securityBaselineDeviceState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityBaselineDeviceState() {
         super();
         this.setOdataType("#microsoft.graph.securityBaselineDeviceState");
@@ -53,7 +54,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityBaselineDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
             this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
             this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
@@ -98,6 +99,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +114,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
         this._deviceDisplayName = value;
     }
@@ -120,6 +123,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastReportedDateTime = value;
     }
@@ -128,6 +132,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -136,6 +141,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final SecurityBaselineComplianceState value) {
         this._state = value;
     }
@@ -144,6 +150,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

@@ -22,6 +22,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * Instantiates a new privilegedRoleSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivilegedRoleSummary() {
         super();
         this.setOdataType("#microsoft.graph.privilegedRoleSummary");
@@ -51,7 +52,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivilegedRoleSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("elevatedCount", (n) -> { currentObject.setElevatedCount(n.getIntegerValue()); });
             this.put("managedCount", (n) -> { currentObject.setManagedCount(n.getIntegerValue()); });
             this.put("mfaEnabled", (n) -> { currentObject.setMfaEnabled(n.getBooleanValue()); });
@@ -96,6 +97,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the elevatedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setElevatedCount(@javax.annotation.Nullable final Integer value) {
         this._elevatedCount = value;
     }
@@ -118,6 +121,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the managedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedCount(@javax.annotation.Nullable final Integer value) {
         this._managedCount = value;
     }
@@ -126,6 +130,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the mfaEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaEnabled(@javax.annotation.Nullable final Boolean value) {
         this._mfaEnabled = value;
     }
@@ -134,6 +139,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final RoleSummaryStatus value) {
         this._status = value;
     }
@@ -142,6 +148,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the usersCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsersCount(@javax.annotation.Nullable final Integer value) {
         this._usersCount = value;
     }

@@ -31,6 +31,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * Instantiates a new businessFlow and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BusinessFlow() {
         super();
         this.setOdataType("#microsoft.graph.businessFlow");
@@ -84,7 +85,7 @@ public class BusinessFlow extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BusinessFlow currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customData", (n) -> { currentObject.setCustomData(n.getStringValue()); });
             this.put("deDuplicationId", (n) -> { currentObject.setDeDuplicationId(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -141,6 +142,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +161,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * @param value Value to set for the customData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomData(@javax.annotation.Nullable final String value) {
         this._customData = value;
     }
@@ -167,6 +170,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * @param value Value to set for the deDuplicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeDuplicationId(@javax.annotation.Nullable final String value) {
         this._deDuplicationId = value;
     }
@@ -175,6 +179,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -183,6 +188,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -191,6 +197,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * @param value Value to set for the policy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicy(@javax.annotation.Nullable final GovernancePolicy value) {
         this._policy = value;
     }
@@ -199,6 +206,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * @param value Value to set for the policyTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyTemplateId(@javax.annotation.Nullable final String value) {
         this._policyTemplateId = value;
     }
@@ -207,6 +215,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * @param value Value to set for the recordVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordVersion(@javax.annotation.Nullable final String value) {
         this._recordVersion = value;
     }
@@ -215,6 +224,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * @param value Value to set for the schemaId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchemaId(@javax.annotation.Nullable final String value) {
         this._schemaId = value;
     }
@@ -223,6 +233,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final BusinessFlowSettings value) {
         this._settings = value;
     }

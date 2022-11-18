@@ -33,6 +33,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * Instantiates a new deviceDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceDetail() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceDetail");
@@ -94,7 +95,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceDetail currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
             this.put("browserId", (n) -> { currentObject.setBrowserId(n.getStringValue()); });
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
@@ -151,6 +152,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("browser", this.getBrowser());
@@ -169,6 +171,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +180,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the browser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowser(@javax.annotation.Nullable final String value) {
         this._browser = value;
     }
@@ -185,6 +189,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the browserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserId(@javax.annotation.Nullable final String value) {
         this._browserId = value;
     }
@@ -193,6 +198,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -201,6 +207,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -209,6 +216,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isCompliant property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCompliant(@javax.annotation.Nullable final Boolean value) {
         this._isCompliant = value;
     }
@@ -217,6 +225,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isManaged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsManaged(@javax.annotation.Nullable final Boolean value) {
         this._isManaged = value;
     }
@@ -225,6 +234,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -233,6 +243,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystem(@javax.annotation.Nullable final String value) {
         this._operatingSystem = value;
     }
@@ -241,6 +252,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the trustType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustType(@javax.annotation.Nullable final String value) {
         this._trustType = value;
     }

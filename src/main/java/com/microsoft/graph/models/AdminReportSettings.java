@@ -14,6 +14,7 @@ public class AdminReportSettings extends Entity implements Parsable {
      * Instantiates a new adminReportSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AdminReportSettings() {
         super();
         this.setOdataType("#microsoft.graph.adminReportSettings");
@@ -43,7 +44,7 @@ public class AdminReportSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AdminReportSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayConcealedNames", (n) -> { currentObject.setDisplayConcealedNames(n.getBooleanValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class AdminReportSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class AdminReportSettings extends Entity implements Parsable {
      * @param value Value to set for the displayConcealedNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayConcealedNames(@javax.annotation.Nullable final Boolean value) {
         this._displayConcealedNames = value;
     }

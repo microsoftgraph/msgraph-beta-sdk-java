@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class DispositionReviewStage extends Entity implements Parsable {
     /** Name representing each stage within a collection. */
     private String _name;
@@ -20,6 +20,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
      * Instantiates a new dispositionReviewStage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DispositionReviewStage() {
         super();
         this.setOdataType("#microsoft.graph.security.dispositionReviewStage");
@@ -41,7 +42,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DispositionReviewStage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("reviewersEmailAddresses", (n) -> { currentObject.setReviewersEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("stageNumber", (n) -> { currentObject.setStageNumber(n.getIntegerValue()); });
@@ -76,6 +77,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -88,6 +90,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -96,6 +99,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
      * @param value Value to set for the reviewersEmailAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewersEmailAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._reviewersEmailAddresses = value;
     }
@@ -104,6 +108,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
      * @param value Value to set for the stageNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStageNumber(@javax.annotation.Nullable final Integer value) {
         this._stageNumber = value;
     }

@@ -30,6 +30,7 @@ public class ListItem extends BaseItem implements Parsable {
      * Instantiates a new listItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ListItem() {
         super();
         this.setOdataType("#microsoft.graph.listItem");
@@ -99,7 +100,7 @@ public class ListItem extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ListItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ItemActivityOLD::createFromDiscriminatorValue)); });
             this.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
@@ -140,6 +141,7 @@ public class ListItem extends BaseItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +160,7 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the activities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<ItemActivityOLD> value) {
         this._activities = value;
     }
@@ -166,6 +169,7 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the analytics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnalytics(@javax.annotation.Nullable final ItemAnalytics value) {
         this._analytics = value;
     }
@@ -174,6 +178,7 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final ContentTypeInfo value) {
         this._contentType = value;
     }
@@ -182,6 +187,7 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the deleted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeleted(@javax.annotation.Nullable final Deleted value) {
         this._deleted = value;
     }
@@ -190,6 +196,7 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the documentSetVersions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDocumentSetVersions(@javax.annotation.Nullable final java.util.List<DocumentSetVersion> value) {
         this._documentSetVersions = value;
     }
@@ -198,6 +205,7 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the driveItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriveItem(@javax.annotation.Nullable final DriveItem value) {
         this._driveItem = value;
     }
@@ -206,6 +214,7 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the fields property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFields(@javax.annotation.Nullable final FieldValueSet value) {
         this._fields = value;
     }
@@ -214,6 +223,7 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
         this._sharepointIds = value;
     }
@@ -222,6 +232,7 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the versions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersions(@javax.annotation.Nullable final java.util.List<ListItemVersion> value) {
         this._versions = value;
     }

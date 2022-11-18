@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
      * Instantiates a new DeviceManagementConfigurationSecretSettingValue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSecretSettingValue() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationSecretSettingValue");
@@ -37,7 +38,7 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSecretSettingValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
             this.put("valueState", (n) -> { currentObject.setValueState(n.getEnumValue(DeviceManagementConfigurationSecretSettingValueState.class)); });
         }};
@@ -63,6 +64,7 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
         this._value = value;
     }
@@ -82,6 +85,7 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
      * @param value Value to set for the valueState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueState(@javax.annotation.Nullable final DeviceManagementConfigurationSecretSettingValueState value) {
         this._valueState = value;
     }

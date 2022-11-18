@@ -5,7 +5,6 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.io.InputStream;
@@ -18,11 +17,11 @@ import java.util.Objects;
 /** Provides operations to call the getTeamsUserActivityDistributionUserCounts method. */
 public class GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -30,11 +29,12 @@ public class GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter, @javax.annotation.Nullable final String period) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getTeamsUserActivityDistributionUserCounts(period='{period}')";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         urlTplParams.put("period", period);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -45,9 +45,10 @@ public class GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getTeamsUserActivityDistributionUserCounts(period='{period}')";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -66,14 +67,13 @@ public class GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -84,16 +84,18 @@ public class GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder 
      * Invoke function getTeamsUserActivityDistributionUserCounts
      * @return a CompletableFuture of InputStream
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<InputStream>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -101,49 +103,34 @@ public class GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Invoke function getTeamsUserActivityDistributionUserCounts
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of InputStream
-     */
-    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<InputStream>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new getTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
-        public GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration() {
+        @javax.annotation.Nullable
+        public GetRequestConfiguration() {
         }
     }
 }

@@ -22,6 +22,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * Instantiates a new tenantCustomizedInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantCustomizedInformation() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.tenantCustomizedInformation");
@@ -59,7 +60,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantCustomizedInformation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contacts", (n) -> { currentObject.setContacts(n.getCollectionOfObjectValues(TenantContactInformation::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
@@ -87,6 +88,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +102,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param value Value to set for the contacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContacts(@javax.annotation.Nullable final java.util.List<TenantContactInformation> value) {
         this._contacts = value;
     }
@@ -108,6 +111,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -116,6 +120,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -124,6 +129,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param value Value to set for the website property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebsite(@javax.annotation.Nullable final String value) {
         this._website = value;
     }

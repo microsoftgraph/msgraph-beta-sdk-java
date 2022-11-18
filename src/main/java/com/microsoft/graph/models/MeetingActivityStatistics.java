@@ -11,7 +11,7 @@ import java.util.Objects;
 public class MeetingActivityStatistics extends ActivityStatistics implements Parsable {
     /** Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations. */
     private Period _afterHours;
-    /** Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the person’s status is set to Busy). The value is represented in ISO 8601 format for durations. */
+    /** Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the persons status is set to Busy). The value is represented in ISO 8601 format for durations. */
     private Period _conflicting;
     /** Time spent in long meetings (more than an hour in duration). The value is represented in ISO 8601 format for durations. */
     private Period _long_escaped;
@@ -25,6 +25,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * Instantiates a new MeetingActivityStatistics and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingActivityStatistics() {
         super();
         this.setOdataType("#microsoft.graph.meetingActivityStatistics");
@@ -48,7 +49,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
         return this._afterHours;
     }
     /**
-     * Gets the conflicting property value. Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the person’s status is set to Busy). The value is represented in ISO 8601 format for durations.
+     * Gets the conflicting property value. Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the persons status is set to Busy). The value is represented in ISO 8601 format for durations.
      * @return a Period
      */
     @javax.annotation.Nullable
@@ -62,7 +63,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingActivityStatistics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("afterHours", (n) -> { currentObject.setAfterHours(n.getPeriodValue()); });
             this.put("conflicting", (n) -> { currentObject.setConflicting(n.getPeriodValue()); });
             this.put("long", (n) -> { currentObject.setLong(n.getPeriodValue()); });
@@ -108,6 +109,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,14 +125,16 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @param value Value to set for the afterHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAfterHours(@javax.annotation.Nullable final Period value) {
         this._afterHours = value;
     }
     /**
-     * Sets the conflicting property value. Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the person’s status is set to Busy). The value is represented in ISO 8601 format for durations.
+     * Sets the conflicting property value. Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the persons status is set to Busy). The value is represented in ISO 8601 format for durations.
      * @param value Value to set for the conflicting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflicting(@javax.annotation.Nullable final Period value) {
         this._conflicting = value;
     }
@@ -139,6 +143,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @param value Value to set for the long property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLong(@javax.annotation.Nullable final Period value) {
         this._long_escaped = value;
     }
@@ -147,6 +152,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @param value Value to set for the multitasking property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultitasking(@javax.annotation.Nullable final Period value) {
         this._multitasking = value;
     }
@@ -155,6 +161,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @param value Value to set for the organized property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganized(@javax.annotation.Nullable final Period value) {
         this._organized = value;
     }
@@ -163,6 +170,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @param value Value to set for the recurring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurring(@javax.annotation.Nullable final Period value) {
         this._recurring = value;
     }

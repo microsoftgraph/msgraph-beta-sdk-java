@@ -32,6 +32,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * Instantiates a new accessReviewDecision and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewDecision() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewDecision");
@@ -93,7 +94,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewDecision currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessRecommendation", (n) -> { currentObject.setAccessRecommendation(n.getStringValue()); });
             this.put("accessReviewId", (n) -> { currentObject.setAccessReviewId(n.getStringValue()); });
             this.put("appliedBy", (n) -> { currentObject.setAppliedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
@@ -142,6 +143,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the accessRecommendation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessRecommendation(@javax.annotation.Nullable final String value) {
         this._accessRecommendation = value;
     }
@@ -168,6 +171,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the accessReviewId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessReviewId(@javax.annotation.Nullable final String value) {
         this._accessReviewId = value;
     }
@@ -176,6 +180,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the appliedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliedBy(@javax.annotation.Nullable final UserIdentity value) {
         this._appliedBy = value;
     }
@@ -184,6 +189,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the appliedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._appliedDateTime = value;
     }
@@ -192,6 +198,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the applyResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplyResult(@javax.annotation.Nullable final String value) {
         this._applyResult = value;
     }
@@ -200,6 +207,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the justification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
         this._justification = value;
     }
@@ -208,6 +216,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the reviewedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewedBy(@javax.annotation.Nullable final UserIdentity value) {
         this._reviewedBy = value;
     }
@@ -216,6 +225,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the reviewedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._reviewedDateTime = value;
     }
@@ -224,6 +234,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the reviewResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewResult(@javax.annotation.Nullable final String value) {
         this._reviewResult = value;
     }

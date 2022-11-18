@@ -56,6 +56,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * Instantiates a new AndroidDeviceOwnerCompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerCompliancePolicy");
@@ -101,7 +102,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
             this.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
             this.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
@@ -283,6 +284,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -314,6 +316,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the advancedThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this._advancedThreatProtectionRequiredSecurityLevel = value;
     }
@@ -322,6 +325,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the deviceThreatProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._deviceThreatProtectionEnabled = value;
     }
@@ -330,6 +334,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this._deviceThreatProtectionRequiredSecurityLevel = value;
     }
@@ -338,6 +343,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the minAndroidSecurityPatchLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinAndroidSecurityPatchLevel(@javax.annotation.Nullable final String value) {
         this._minAndroidSecurityPatchLevel = value;
     }
@@ -346,6 +352,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._osMaximumVersion = value;
     }
@@ -354,6 +361,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._osMinimumVersion = value;
     }
@@ -362,6 +370,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -370,6 +379,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -378,6 +388,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLetterCharacters = value;
     }
@@ -386,6 +397,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumLowerCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLowerCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLowerCaseCharacters = value;
     }
@@ -394,6 +406,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumNonLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumNonLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumNonLetterCharacters = value;
     }
@@ -402,6 +415,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumNumericCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumNumericCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumNumericCharacters = value;
     }
@@ -410,6 +424,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumSymbolCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumSymbolCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumSymbolCharacters = value;
     }
@@ -418,6 +433,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumUpperCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumUpperCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumUpperCaseCharacters = value;
     }
@@ -426,6 +442,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeLock = value;
     }
@@ -434,6 +451,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordPreviousPasswordCountToBlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordCountToBlock(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordCountToBlock = value;
     }
@@ -442,6 +460,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequired = value;
     }
@@ -450,6 +469,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -458,6 +478,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the securityRequireIntuneAppIntegrity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireIntuneAppIntegrity(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireIntuneAppIntegrity = value;
     }
@@ -466,6 +487,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the securityRequireSafetyNetAttestationBasicIntegrity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireSafetyNetAttestationBasicIntegrity(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireSafetyNetAttestationBasicIntegrity = value;
     }
@@ -474,6 +496,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the securityRequireSafetyNetAttestationCertifiedDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireSafetyNetAttestationCertifiedDevice(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireSafetyNetAttestationCertifiedDevice = value;
     }
@@ -482,6 +505,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireEncryption = value;
     }

@@ -10,7 +10,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -21,38 +20,39 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the ownedObjects property of the microsoft.graph.user entity. */
 public class DirectoryObjectItemRequestBuilder {
-    /** The application property */
+    /** Casts the previous resource to application. */
     @javax.annotation.Nonnull
     public ApplicationRequestBuilder application() {
         return new ApplicationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The group property */
+    /** Casts the previous resource to group. */
     @javax.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The servicePrincipal property */
+    private RequestAdapter requestAdapter;
+    /** Casts the previous resource to servicePrincipal. */
     @javax.annotation.Nonnull
     public ServicePrincipalRequestBuilder servicePrincipal() {
         return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryObjectItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/ownedObjects/{directoryObject%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -62,9 +62,10 @@ public class DirectoryObjectItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryObjectItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/me/ownedObjects/{directoryObject%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -83,15 +84,14 @@ public class DirectoryObjectItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryObjectItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final DirectoryObjectItemRequestBuilderGetRequestConfiguration requestConfig = new DirectoryObjectItemRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -103,16 +103,18 @@ public class DirectoryObjectItemRequestBuilder {
      * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of directoryObject
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DirectoryObject>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -120,38 +122,22 @@ public class DirectoryObjectItemRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
-    public java.util.concurrent.CompletableFuture<DirectoryObject> get(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryObjectItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObject> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of directoryObject
-     */
-    public java.util.concurrent.CompletableFuture<DirectoryObject> get(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryObjectItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<DirectoryObject>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /** Directory objects that are owned by the user. Read-only. Nullable. Supports $expand. */
-    public class DirectoryObjectItemRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -162,21 +148,22 @@ public class DirectoryObjectItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DirectoryObjectItemRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public DirectoryObjectItemRequestBuilderGetQueryParameters queryParameters = new DirectoryObjectItemRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new DirectoryObjectItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
-        public DirectoryObjectItemRequestBuilderGetRequestConfiguration() {
+        @javax.annotation.Nullable
+        public GetRequestConfiguration() {
         }
     }
 }

@@ -38,10 +38,13 @@ public class EducationSubmission extends Entity implements Parsable {
     private IdentitySet _unsubmittedBy;
     /** Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _unsubmittedDateTime;
+    /** The deep link URL for the given submission. */
+    private String _webUrl;
     /**
      * Instantiates a new educationSubmission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationSubmission() {
         super();
         this.setOdataType("#microsoft.graph.educationSubmission");
@@ -63,7 +66,7 @@ public class EducationSubmission extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("outcomes", (n) -> { currentObject.setOutcomes(n.getCollectionOfObjectValues(EducationOutcome::createFromDiscriminatorValue)); });
             this.put("reassignedBy", (n) -> { currentObject.setReassignedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("reassignedDateTime", (n) -> { currentObject.setReassignedDateTime(n.getOffsetDateTimeValue()); });
@@ -78,6 +81,7 @@ public class EducationSubmission extends Entity implements Parsable {
             this.put("submittedResources", (n) -> { currentObject.setSubmittedResources(n.getCollectionOfObjectValues(EducationSubmissionResource::createFromDiscriminatorValue)); });
             this.put("unsubmittedBy", (n) -> { currentObject.setUnsubmittedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("unsubmittedDateTime", (n) -> { currentObject.setUnsubmittedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};
     }
     /**
@@ -193,33 +197,33 @@ public class EducationSubmission extends Entity implements Parsable {
         return this._unsubmittedDateTime;
     }
     /**
+     * Gets the webUrl property value. The deep link URL for the given submission.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getWebUrl() {
+        return this._webUrl;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("outcomes", this.getOutcomes());
-        writer.writeObjectValue("reassignedBy", this.getReassignedBy());
-        writer.writeOffsetDateTimeValue("reassignedDateTime", this.getReassignedDateTime());
         writer.writeObjectValue("recipient", this.getRecipient());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
-        writer.writeStringValue("resourcesFolderUrl", this.getResourcesFolderUrl());
-        writer.writeObjectValue("returnedBy", this.getReturnedBy());
-        writer.writeOffsetDateTimeValue("returnedDateTime", this.getReturnedDateTime());
-        writer.writeEnumValue("status", this.getStatus());
-        writer.writeObjectValue("submittedBy", this.getSubmittedBy());
-        writer.writeOffsetDateTimeValue("submittedDateTime", this.getSubmittedDateTime());
         writer.writeCollectionOfObjectValues("submittedResources", this.getSubmittedResources());
-        writer.writeObjectValue("unsubmittedBy", this.getUnsubmittedBy());
-        writer.writeOffsetDateTimeValue("unsubmittedDateTime", this.getUnsubmittedDateTime());
     }
     /**
      * Sets the outcomes property value. The outcomes property
      * @param value Value to set for the outcomes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutcomes(@javax.annotation.Nullable final java.util.List<EducationOutcome> value) {
         this._outcomes = value;
     }
@@ -228,6 +232,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the reassignedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReassignedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._reassignedBy = value;
     }
@@ -236,6 +241,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the reassignedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReassignedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._reassignedDateTime = value;
     }
@@ -244,6 +250,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the recipient property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipient(@javax.annotation.Nullable final EducationSubmissionRecipient value) {
         this._recipient = value;
     }
@@ -252,6 +259,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the resources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResources(@javax.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {
         this._resources = value;
     }
@@ -260,6 +268,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the resourcesFolderUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourcesFolderUrl(@javax.annotation.Nullable final String value) {
         this._resourcesFolderUrl = value;
     }
@@ -268,6 +277,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the returnedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReturnedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._returnedBy = value;
     }
@@ -276,6 +286,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the returnedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReturnedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._returnedDateTime = value;
     }
@@ -284,6 +295,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final EducationSubmissionStatus value) {
         this._status = value;
     }
@@ -292,6 +304,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the submittedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubmittedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._submittedBy = value;
     }
@@ -300,6 +313,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the submittedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubmittedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._submittedDateTime = value;
     }
@@ -308,6 +322,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the submittedResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubmittedResources(@javax.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {
         this._submittedResources = value;
     }
@@ -316,6 +331,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the unsubmittedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnsubmittedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._unsubmittedBy = value;
     }
@@ -324,7 +340,17 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the unsubmittedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnsubmittedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._unsubmittedDateTime = value;
+    }
+    /**
+     * Sets the webUrl property value. The deep link URL for the given submission.
+     * @param value Value to set for the webUrl property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setWebUrl(@javax.annotation.Nullable final String value) {
+        this._webUrl = value;
     }
 }

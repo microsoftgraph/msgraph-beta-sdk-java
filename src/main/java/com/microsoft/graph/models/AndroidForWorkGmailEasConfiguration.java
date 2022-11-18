@@ -12,6 +12,7 @@ public class AndroidForWorkGmailEasConfiguration extends AndroidForWorkEasEmailP
      * Instantiates a new AndroidForWorkGmailEasConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidForWorkGmailEasConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidForWorkGmailEasConfiguration");
@@ -33,7 +34,7 @@ public class AndroidForWorkGmailEasConfiguration extends AndroidForWorkEasEmailP
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkGmailEasConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -41,6 +42,7 @@ public class AndroidForWorkGmailEasConfiguration extends AndroidForWorkEasEmailP
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

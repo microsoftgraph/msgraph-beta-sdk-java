@@ -26,6 +26,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
      * Instantiates a new androidDeviceOwnerSystemUpdateFreezePeriod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerSystemUpdateFreezePeriod() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.androidDeviceOwnerSystemUpdateFreezePeriod");
@@ -71,7 +72,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerSystemUpdateFreezePeriod currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("endDay", (n) -> { currentObject.setEndDay(n.getIntegerValue()); });
             this.put("endMonth", (n) -> { currentObject.setEndMonth(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -108,6 +109,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("endDay", this.getEndDay());
@@ -122,6 +124,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
      * @param value Value to set for the endDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDay(@javax.annotation.Nullable final Integer value) {
         this._endDay = value;
     }
@@ -138,6 +142,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
      * @param value Value to set for the endMonth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndMonth(@javax.annotation.Nullable final Integer value) {
         this._endMonth = value;
     }
@@ -146,6 +151,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -154,6 +160,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
      * @param value Value to set for the startDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDay(@javax.annotation.Nullable final Integer value) {
         this._startDay = value;
     }
@@ -162,6 +169,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
      * @param value Value to set for the startMonth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMonth(@javax.annotation.Nullable final Integer value) {
         this._startMonth = value;
     }

@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class RetentionLabel extends Entity implements Parsable {
     /** Specifies the action to take on a document with this label applied during the retention period. The possible values are: none, delete, startDispositionReview, unknownFutureValue. */
     private ActionAfterRetentionPeriod _actionAfterRetentionPeriod;
@@ -48,6 +48,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Instantiates a new retentionLabel and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RetentionLabel() {
         super();
         this.setOdataType("#microsoft.graph.security.retentionLabel");
@@ -141,7 +142,7 @@ public class RetentionLabel extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RetentionLabel currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionAfterRetentionPeriod", (n) -> { currentObject.setActionAfterRetentionPeriod(n.getEnumValue(ActionAfterRetentionPeriod.class)); });
             this.put("behaviorDuringRetentionPeriod", (n) -> { currentObject.setBehaviorDuringRetentionPeriod(n.getEnumValue(BehaviorDuringRetentionPeriod.class)); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -221,6 +222,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -246,6 +248,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the actionAfterRetentionPeriod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionAfterRetentionPeriod(@javax.annotation.Nullable final ActionAfterRetentionPeriod value) {
         this._actionAfterRetentionPeriod = value;
     }
@@ -254,6 +257,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the behaviorDuringRetentionPeriod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBehaviorDuringRetentionPeriod(@javax.annotation.Nullable final BehaviorDuringRetentionPeriod value) {
         this._behaviorDuringRetentionPeriod = value;
     }
@@ -262,6 +266,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -270,6 +275,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -278,6 +284,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the defaultRecordBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultRecordBehavior(@javax.annotation.Nullable final DefaultRecordBehavior value) {
         this._defaultRecordBehavior = value;
     }
@@ -286,6 +293,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the descriptionForAdmins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescriptionForAdmins(@javax.annotation.Nullable final String value) {
         this._descriptionForAdmins = value;
     }
@@ -294,6 +302,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the descriptionForUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescriptionForUsers(@javax.annotation.Nullable final String value) {
         this._descriptionForUsers = value;
     }
@@ -302,6 +311,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -310,6 +320,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the dispositionReviewStages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDispositionReviewStages(@javax.annotation.Nullable final java.util.List<DispositionReviewStage> value) {
         this._dispositionReviewStages = value;
     }
@@ -318,6 +329,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the isInUse property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsInUse(@javax.annotation.Nullable final Boolean value) {
         this._isInUse = value;
     }
@@ -326,6 +338,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the labelToBeApplied property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabelToBeApplied(@javax.annotation.Nullable final String value) {
         this._labelToBeApplied = value;
     }
@@ -334,6 +347,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -342,6 +356,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -350,6 +365,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the retentionDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRetentionDuration(@javax.annotation.Nullable final RetentionDuration value) {
         this._retentionDuration = value;
     }
@@ -358,6 +374,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the retentionEventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRetentionEventType(@javax.annotation.Nullable final RetentionEventType value) {
         this._retentionEventType = value;
     }
@@ -366,6 +383,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param value Value to set for the retentionTrigger property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRetentionTrigger(@javax.annotation.Nullable final RetentionTrigger value) {
         this._retentionTrigger = value;
     }

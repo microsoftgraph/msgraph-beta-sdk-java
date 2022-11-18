@@ -28,6 +28,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
      * Instantiates a new cloudPcConnectivityEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcConnectivityEvent() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.cloudPcConnectivityEvent");
@@ -89,7 +90,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcConnectivityEvent currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
             this.put("eventName", (n) -> { currentObject.setEventName(n.getStringValue()); });
             this.put("eventResult", (n) -> { currentObject.setEventResult(n.getEnumValue(CloudPcConnectivityEventResult.class)); });
@@ -119,6 +120,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("eventDateTime", this.getEventDateTime());
@@ -134,6 +136,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +145,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
     }
@@ -150,6 +154,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the eventName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventName(@javax.annotation.Nullable final String value) {
         this._eventName = value;
     }
@@ -158,6 +163,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the eventResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventResult(@javax.annotation.Nullable final CloudPcConnectivityEventResult value) {
         this._eventResult = value;
     }
@@ -166,6 +172,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the eventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventType(@javax.annotation.Nullable final CloudPcConnectivityEventType value) {
         this._eventType = value;
     }
@@ -174,6 +181,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
     }
@@ -182,6 +190,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

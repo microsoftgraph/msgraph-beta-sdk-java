@@ -16,6 +16,7 @@ public class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileB
      * Instantiates a new MacOSImportedPFXCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSImportedPFXCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.macOSImportedPFXCertificateProfile");
@@ -37,7 +38,7 @@ public class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileB
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSImportedPFXCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("intendedPurpose", (n) -> { currentObject.setIntendedPurpose(n.getEnumValue(IntendedPurpose.class)); });
             this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileB
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileB
      * @param value Value to set for the intendedPurpose property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntendedPurpose(@javax.annotation.Nullable final IntendedPurpose value) {
         this._intendedPurpose = value;
     }
@@ -82,6 +85,7 @@ public class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileB
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
         this._managedDeviceCertificateStates = value;
     }

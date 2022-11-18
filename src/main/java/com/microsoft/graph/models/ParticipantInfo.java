@@ -33,6 +33,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new participantInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.participantInfo");
@@ -78,7 +79,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParticipantInfo currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("countryCode", (n) -> { currentObject.setCountryCode(n.getStringValue()); });
             this.put("endpointType", (n) -> { currentObject.setEndpointType(n.getEnumValue(EndpointType.class)); });
             this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -151,6 +152,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("countryCode", this.getCountryCode());
@@ -169,6 +171,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +180,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the countryCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryCode(@javax.annotation.Nullable final String value) {
         this._countryCode = value;
     }
@@ -185,6 +189,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endpointType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointType(@javax.annotation.Nullable final EndpointType value) {
         this._endpointType = value;
     }
@@ -193,6 +198,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the identity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentity(@javax.annotation.Nullable final IdentitySet value) {
         this._identity = value;
     }
@@ -201,6 +207,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the languageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageId(@javax.annotation.Nullable final String value) {
         this._languageId = value;
     }
@@ -209,6 +216,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the nonAnonymizedIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNonAnonymizedIdentity(@javax.annotation.Nullable final IdentitySet value) {
         this._nonAnonymizedIdentity = value;
     }
@@ -217,6 +225,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -225,6 +234,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the participantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipantId(@javax.annotation.Nullable final String value) {
         this._participantId = value;
     }
@@ -233,6 +243,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the platformId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformId(@javax.annotation.Nullable final String value) {
         this._platformId = value;
     }
@@ -241,6 +252,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the region property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegion(@javax.annotation.Nullable final String value) {
         this._region = value;
     }

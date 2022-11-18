@@ -11,8 +11,12 @@ import java.util.Objects;
 public class UnifiedRbacResourceAction extends Entity implements Parsable {
     /** HTTP method for the action, such as DELETE, GET, PATCH, POST, PUT, or null. Supports $filter (eq) but not for null values. */
     private String _actionVerb;
+    /** The authenticationContextId property */
+    private String _authenticationContextId;
     /** Description for the action. Supports $filter (eq). */
     private String _description;
+    /** The isAuthenticationContextSettable property */
+    private Boolean _isAuthenticationContextSettable;
     /** Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq). */
     private String _name;
     /** The resourceScope property */
@@ -23,6 +27,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * Instantiates a new unifiedRbacResourceAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRbacResourceAction() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRbacResourceAction");
@@ -46,6 +51,14 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
         return this._actionVerb;
     }
     /**
+     * Gets the authenticationContextId property value. The authenticationContextId property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getAuthenticationContextId() {
+        return this._authenticationContextId;
+    }
+    /**
      * Gets the description property value. Description for the action. Supports $filter (eq).
      * @return a string
      */
@@ -60,13 +73,23 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRbacResourceAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionVerb", (n) -> { currentObject.setActionVerb(n.getStringValue()); });
+            this.put("authenticationContextId", (n) -> { currentObject.setAuthenticationContextId(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+            this.put("isAuthenticationContextSettable", (n) -> { currentObject.setIsAuthenticationContextSettable(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("resourceScope", (n) -> { currentObject.setResourceScope(n.getObjectValue(UnifiedRbacResourceScope::createFromDiscriminatorValue)); });
             this.put("resourceScopeId", (n) -> { currentObject.setResourceScopeId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the isAuthenticationContextSettable property value. The isAuthenticationContextSettable property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsAuthenticationContextSettable() {
+        return this._isAuthenticationContextSettable;
     }
     /**
      * Gets the name property value. Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq).
@@ -97,11 +120,14 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("actionVerb", this.getActionVerb());
+        writer.writeStringValue("authenticationContextId", this.getAuthenticationContextId());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeBooleanValue("isAuthenticationContextSettable", this.getIsAuthenticationContextSettable());
         writer.writeStringValue("name", this.getName());
         writer.writeObjectValue("resourceScope", this.getResourceScope());
         writer.writeStringValue("resourceScopeId", this.getResourceScopeId());
@@ -111,22 +137,43 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param value Value to set for the actionVerb property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionVerb(@javax.annotation.Nullable final String value) {
         this._actionVerb = value;
+    }
+    /**
+     * Sets the authenticationContextId property value. The authenticationContextId property
+     * @param value Value to set for the authenticationContextId property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthenticationContextId(@javax.annotation.Nullable final String value) {
+        this._authenticationContextId = value;
     }
     /**
      * Sets the description property value. Description for the action. Supports $filter (eq).
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
+    }
+    /**
+     * Sets the isAuthenticationContextSettable property value. The isAuthenticationContextSettable property
+     * @param value Value to set for the isAuthenticationContextSettable property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsAuthenticationContextSettable(@javax.annotation.Nullable final Boolean value) {
+        this._isAuthenticationContextSettable = value;
     }
     /**
      * Sets the name property value. Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq).
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -135,6 +182,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param value Value to set for the resourceScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceScope(@javax.annotation.Nullable final UnifiedRbacResourceScope value) {
         this._resourceScope = value;
     }
@@ -143,6 +191,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      * @param value Value to set for the resourceScopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceScopeId(@javax.annotation.Nullable final String value) {
         this._resourceScopeId = value;
     }

@@ -9,7 +9,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -20,28 +19,29 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity. */
 public class FederatedIdentityCredentialsRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new FederatedIdentityCredentialsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FederatedIdentityCredentialsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/federatedIdentityCredentials{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -51,9 +51,10 @@ public class FederatedIdentityCredentialsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FederatedIdentityCredentialsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/federatedIdentityCredentials{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -72,15 +73,14 @@ public class FederatedIdentityCredentialsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration requestConfig = new FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -104,17 +104,16 @@ public class FederatedIdentityCredentialsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final FederatedIdentityCredential body, @javax.annotation.Nullable final java.util.function.Consumer<FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final FederatedIdentityCredential body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration requestConfig = new FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration();
+            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -125,16 +124,18 @@ public class FederatedIdentityCredentialsRequestBuilder {
      * Get federatedIdentityCredentials from servicePrincipals
      * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredentialCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredentialCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -142,34 +143,18 @@ public class FederatedIdentityCredentialsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
      */
-    public java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredentialCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredentialCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Get federatedIdentityCredentials from servicePrincipals
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
-     */
-    public java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredentialCollectionResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -177,16 +162,18 @@ public class FederatedIdentityCredentialsRequestBuilder {
      * @param body 
      * @return a CompletableFuture of federatedIdentityCredential
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> post(@javax.annotation.Nonnull final FederatedIdentityCredential body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<FederatedIdentityCredential>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -195,40 +182,23 @@ public class FederatedIdentityCredentialsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of federatedIdentityCredential
      */
-    public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> post(@javax.annotation.Nonnull final FederatedIdentityCredential body, @javax.annotation.Nullable final java.util.function.Consumer<FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to federatedIdentityCredentials for servicePrincipals
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of federatedIdentityCredential
-     */
-    public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> post(@javax.annotation.Nonnull final FederatedIdentityCredential body, @javax.annotation.Nullable final java.util.function.Consumer<FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> post(@javax.annotation.Nonnull final FederatedIdentityCredential body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, responseHandler, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<FederatedIdentityCredential>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /** Get federatedIdentityCredentials from servicePrincipals */
-    public class FederatedIdentityCredentialsRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -263,36 +233,38 @@ public class FederatedIdentityCredentialsRequestBuilder {
         public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public FederatedIdentityCredentialsRequestBuilderGetQueryParameters queryParameters = new FederatedIdentityCredentialsRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new federatedIdentityCredentialsRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
-        public FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration() {
+        @javax.annotation.Nullable
+        public GetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration {
+    public class PostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new federatedIdentityCredentialsRequestBuilderPostRequestConfiguration and sets the default values.
+         * Instantiates a new PostRequestConfiguration and sets the default values.
          * @return a void
          */
-        public FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration() {
+        @javax.annotation.Nullable
+        public PostRequestConfiguration() {
         }
     }
 }

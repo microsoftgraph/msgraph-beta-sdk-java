@@ -56,7 +56,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     private Integer _temporarySessionTimeoutInSeconds;
     /** Indicates if Weclome screen is disabled */
     private Boolean _updateCompleteScreenDisabled;
-    /** Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-shared-ios */
+    /** Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See https://learn.microsoft.com/mem/intune/enrollment/device-enrollment-shared-ios */
     private Boolean _userlessSharedAadModeEnabled;
     /** Indicates timeout of temporary session */
     private Integer _userSessionTimeoutInSeconds;
@@ -70,6 +70,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * Instantiates a new DepIOSEnrollmentProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DepIOSEnrollmentProfile() {
         super();
         this.setOdataType("#microsoft.graph.depIOSEnrollmentProfile");
@@ -155,7 +156,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DepIOSEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appearanceScreenDisabled", (n) -> { currentObject.setAppearanceScreenDisabled(n.getBooleanValue()); });
             this.put("awaitDeviceConfiguredConfirmation", (n) -> { currentObject.setAwaitDeviceConfiguredConfirmation(n.getBooleanValue()); });
             this.put("carrierActivationUrl", (n) -> { currentObject.setCarrierActivationUrl(n.getStringValue()); });
@@ -316,7 +317,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
         return this._updateCompleteScreenDisabled;
     }
     /**
-     * Gets the userlessSharedAadModeEnabled property value. Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-shared-ios
+     * Gets the userlessSharedAadModeEnabled property value. Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See https://learn.microsoft.com/mem/intune/enrollment/device-enrollment-shared-ios
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -360,6 +361,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -398,6 +400,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the appearanceScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppearanceScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._appearanceScreenDisabled = value;
     }
@@ -406,6 +409,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the awaitDeviceConfiguredConfirmation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAwaitDeviceConfiguredConfirmation(@javax.annotation.Nullable final Boolean value) {
         this._awaitDeviceConfiguredConfirmation = value;
     }
@@ -414,6 +418,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the carrierActivationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCarrierActivationUrl(@javax.annotation.Nullable final String value) {
         this._carrierActivationUrl = value;
     }
@@ -422,6 +427,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the companyPortalVppTokenId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompanyPortalVppTokenId(@javax.annotation.Nullable final String value) {
         this._companyPortalVppTokenId = value;
     }
@@ -430,6 +436,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the deviceToDeviceMigrationDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceToDeviceMigrationDisabled(@javax.annotation.Nullable final Boolean value) {
         this._deviceToDeviceMigrationDisabled = value;
     }
@@ -438,6 +445,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the enableSharedIPad property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableSharedIPad(@javax.annotation.Nullable final Boolean value) {
         this._enableSharedIPad = value;
     }
@@ -446,6 +454,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the enableSingleAppEnrollmentMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableSingleAppEnrollmentMode(@javax.annotation.Nullable final Boolean value) {
         this._enableSingleAppEnrollmentMode = value;
     }
@@ -454,6 +463,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the expressLanguageScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpressLanguageScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._expressLanguageScreenDisabled = value;
     }
@@ -462,6 +472,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the forceTemporarySession property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setForceTemporarySession(@javax.annotation.Nullable final Boolean value) {
         this._forceTemporarySession = value;
     }
@@ -470,6 +481,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the homeButtonScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeButtonScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._homeButtonScreenDisabled = value;
     }
@@ -478,6 +490,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the iMessageAndFaceTimeScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIMessageAndFaceTimeScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._iMessageAndFaceTimeScreenDisabled = value;
     }
@@ -486,6 +499,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the iTunesPairingMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setITunesPairingMode(@javax.annotation.Nullable final ITunesPairingMode value) {
         this._iTunesPairingMode = value;
     }
@@ -494,6 +508,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the managementCertificates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementCertificates(@javax.annotation.Nullable final java.util.List<ManagementCertificateWithThumbprint> value) {
         this._managementCertificates = value;
     }
@@ -502,6 +517,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the onBoardingScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnBoardingScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._onBoardingScreenDisabled = value;
     }
@@ -510,6 +526,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the passCodeDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassCodeDisabled(@javax.annotation.Nullable final Boolean value) {
         this._passCodeDisabled = value;
     }
@@ -518,6 +535,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the passcodeLockGracePeriodInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeLockGracePeriodInSeconds(@javax.annotation.Nullable final Integer value) {
         this._passcodeLockGracePeriodInSeconds = value;
     }
@@ -526,6 +544,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the preferredLanguageScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredLanguageScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._preferredLanguageScreenDisabled = value;
     }
@@ -534,6 +553,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the restoreCompletedScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestoreCompletedScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._restoreCompletedScreenDisabled = value;
     }
@@ -542,6 +562,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the restoreFromAndroidDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestoreFromAndroidDisabled(@javax.annotation.Nullable final Boolean value) {
         this._restoreFromAndroidDisabled = value;
     }
@@ -550,6 +571,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the sharedIPadMaximumUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedIPadMaximumUserCount(@javax.annotation.Nullable final Integer value) {
         this._sharedIPadMaximumUserCount = value;
     }
@@ -558,6 +580,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the simSetupScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimSetupScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._simSetupScreenDisabled = value;
     }
@@ -566,6 +589,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the softwareUpdateScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdateScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._softwareUpdateScreenDisabled = value;
     }
@@ -574,6 +598,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the temporarySessionTimeoutInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemporarySessionTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
         this._temporarySessionTimeoutInSeconds = value;
     }
@@ -582,14 +607,16 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the updateCompleteScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateCompleteScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._updateCompleteScreenDisabled = value;
     }
     /**
-     * Sets the userlessSharedAadModeEnabled property value. Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-shared-ios
+     * Sets the userlessSharedAadModeEnabled property value. Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See https://learn.microsoft.com/mem/intune/enrollment/device-enrollment-shared-ios
      * @param value Value to set for the userlessSharedAadModeEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserlessSharedAadModeEnabled(@javax.annotation.Nullable final Boolean value) {
         this._userlessSharedAadModeEnabled = value;
     }
@@ -598,6 +625,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the userSessionTimeoutInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserSessionTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
         this._userSessionTimeoutInSeconds = value;
     }
@@ -606,6 +634,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the watchMigrationScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWatchMigrationScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._watchMigrationScreenDisabled = value;
     }
@@ -614,6 +643,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the welcomeScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWelcomeScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._welcomeScreenDisabled = value;
     }
@@ -622,6 +652,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
      * @param value Value to set for the zoomDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setZoomDisabled(@javax.annotation.Nullable final Boolean value) {
         this._zoomDisabled = value;
     }

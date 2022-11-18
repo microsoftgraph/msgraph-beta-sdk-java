@@ -4,6 +4,7 @@ import com.microsoft.graph.devicemanagement.virtualendpoint.auditevents.AuditEve
 import com.microsoft.graph.devicemanagement.virtualendpoint.auditevents.item.CloudPcAuditEventItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.CloudPCsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.CloudPCItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.crosscloudgovernmentorganizationmapping.CrossCloudGovernmentOrganizationMappingRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.deviceimages.DeviceImagesRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.deviceimages.item.CloudPcDeviceImageItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.externalpartnersettings.ExternalPartnerSettingsRequestBuilder;
@@ -16,8 +17,11 @@ import com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnection
 import com.microsoft.graph.devicemanagement.virtualendpoint.organizationsettings.OrganizationSettingsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.CloudPcProvisioningPolicyItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.ProvisioningPoliciesRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.reports.ReportsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.serviceplans.item.CloudPcServicePlanItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.serviceplans.ServicePlansRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.shareduseserviceplans.item.CloudPcSharedUseServicePlanItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.shareduseserviceplans.SharedUseServicePlansRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.snapshots.item.CloudPcSnapshotItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.snapshots.SnapshotsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.supportedregions.item.CloudPcSupportedRegionItemRequestBuilder;
@@ -31,7 +35,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -42,93 +45,108 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the virtualEndpoint property of the microsoft.graph.deviceManagement entity. */
 public class VirtualEndpointRequestBuilder {
-    /** The auditEvents property */
+    /** Provides operations to manage the auditEvents property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public AuditEventsRequestBuilder auditEvents() {
         return new AuditEventsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The cloudPCs property */
+    /** Provides operations to manage the cloudPCs property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public CloudPCsRequestBuilder cloudPCs() {
         return new CloudPCsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceImages property */
+    /** Provides operations to manage the crossCloudGovernmentOrganizationMapping property of the microsoft.graph.virtualEndpoint entity. */
+    @javax.annotation.Nonnull
+    public CrossCloudGovernmentOrganizationMappingRequestBuilder crossCloudGovernmentOrganizationMapping() {
+        return new CrossCloudGovernmentOrganizationMappingRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the deviceImages property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public DeviceImagesRequestBuilder deviceImages() {
         return new DeviceImagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The externalPartnerSettings property */
+    /** Provides operations to manage the externalPartnerSettings property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public ExternalPartnerSettingsRequestBuilder externalPartnerSettings() {
         return new ExternalPartnerSettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The galleryImages property */
+    /** Provides operations to manage the galleryImages property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public GalleryImagesRequestBuilder galleryImages() {
         return new GalleryImagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The onPremisesConnections property */
+    /** Provides operations to manage the onPremisesConnections property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public OnPremisesConnectionsRequestBuilder onPremisesConnections() {
         return new OnPremisesConnectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The organizationSettings property */
+    /** Provides operations to manage the organizationSettings property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public OrganizationSettingsRequestBuilder organizationSettings() {
         return new OrganizationSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The provisioningPolicies property */
+    private HashMap<String, Object> pathParameters;
+    /** Provides operations to manage the provisioningPolicies property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public ProvisioningPoliciesRequestBuilder provisioningPolicies() {
         return new ProvisioningPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to manage the reports property of the microsoft.graph.virtualEndpoint entity. */
+    @javax.annotation.Nonnull
+    public ReportsRequestBuilder reports() {
+        return new ReportsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The servicePlans property */
+    private RequestAdapter requestAdapter;
+    /** Provides operations to manage the servicePlans property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public ServicePlansRequestBuilder servicePlans() {
         return new ServicePlansRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The snapshots property */
+    /** Provides operations to manage the sharedUseServicePlans property of the microsoft.graph.virtualEndpoint entity. */
+    @javax.annotation.Nonnull
+    public SharedUseServicePlansRequestBuilder sharedUseServicePlans() {
+        return new SharedUseServicePlansRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the snapshots property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public SnapshotsRequestBuilder snapshots() {
         return new SnapshotsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The supportedRegions property */
+    /** Provides operations to manage the supportedRegions property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public SupportedRegionsRequestBuilder supportedRegions() {
         return new SupportedRegionsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /** The userSettings property */
+    private String urlTemplate;
+    /** Provides operations to manage the userSettings property of the microsoft.graph.virtualEndpoint entity. */
     @javax.annotation.Nonnull
     public UserSettingsRequestBuilder userSettings() {
         return new UserSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.auditEvents.item collection
+     * Provides operations to manage the auditEvents property of the microsoft.graph.virtualEndpoint entity.
      * @param id Unique identifier of the item
      * @return a CloudPcAuditEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcAuditEventItemRequestBuilder auditEvents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcAuditEvent%2Did", id);
         return new CloudPcAuditEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.cloudPCs.item collection
+     * Provides operations to manage the cloudPCs property of the microsoft.graph.virtualEndpoint entity.
      * @param id Unique identifier of the item
      * @return a CloudPCItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPCItemRequestBuilder cloudPCs(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPC%2Did", id);
         return new CloudPCItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -138,11 +156,12 @@ public class VirtualEndpointRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VirtualEndpointRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/virtualEndpoint{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -152,9 +171,10 @@ public class VirtualEndpointRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VirtualEndpointRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/deviceManagement/virtualEndpoint{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -173,14 +193,13 @@ public class VirtualEndpointRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<VirtualEndpointRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.DELETE;
-        }};
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final VirtualEndpointRequestBuilderDeleteRequestConfiguration requestConfig = new VirtualEndpointRequestBuilderDeleteRequestConfiguration();
+            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -201,15 +220,14 @@ public class VirtualEndpointRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<VirtualEndpointRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final VirtualEndpointRequestBuilderGetRequestConfiguration requestConfig = new VirtualEndpointRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -233,16 +251,16 @@ public class VirtualEndpointRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final VirtualEndpoint body, @javax.annotation.Nullable final java.util.function.Consumer<VirtualEndpointRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final VirtualEndpoint body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.PATCH;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final VirtualEndpointRequestBuilderPatchRequestConfiguration requestConfig = new VirtualEndpointRequestBuilderPatchRequestConfiguration();
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -253,16 +271,18 @@ public class VirtualEndpointRequestBuilder {
      * Delete navigation property virtualEndpoint for deviceManagement
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -270,69 +290,53 @@ public class VirtualEndpointRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<VirtualEndpointRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Delete navigation property virtualEndpoint for deviceManagement
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<VirtualEndpointRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.deviceImages.item collection
+     * Provides operations to manage the deviceImages property of the microsoft.graph.virtualEndpoint entity.
      * @param id Unique identifier of the item
      * @return a CloudPcDeviceImageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcDeviceImageItemRequestBuilder deviceImages(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcDeviceImage%2Did", id);
         return new CloudPcDeviceImageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.externalPartnerSettings.item collection
+     * Provides operations to manage the externalPartnerSettings property of the microsoft.graph.virtualEndpoint entity.
      * @param id Unique identifier of the item
      * @return a CloudPcExternalPartnerSettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcExternalPartnerSettingItemRequestBuilder externalPartnerSettings(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcExternalPartnerSetting%2Did", id);
         return new CloudPcExternalPartnerSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.galleryImages.item collection
+     * Provides operations to manage the galleryImages property of the microsoft.graph.virtualEndpoint entity.
      * @param id Unique identifier of the item
      * @return a CloudPcGalleryImageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcGalleryImageItemRequestBuilder galleryImages(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcGalleryImage%2Did", id);
         return new CloudPcGalleryImageItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -340,16 +344,18 @@ public class VirtualEndpointRequestBuilder {
      * Get virtualEndpoint from deviceManagement
      * @return a CompletableFuture of virtualEndpoint
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEndpoint> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, VirtualEndpoint::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, VirtualEndpoint::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<VirtualEndpoint>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -357,34 +363,18 @@ public class VirtualEndpointRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of virtualEndpoint
      */
-    public java.util.concurrent.CompletableFuture<VirtualEndpoint> get(@javax.annotation.Nullable final java.util.function.Consumer<VirtualEndpointRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<VirtualEndpoint> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, VirtualEndpoint::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, VirtualEndpoint::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Get virtualEndpoint from deviceManagement
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of virtualEndpoint
-     */
-    public java.util.concurrent.CompletableFuture<VirtualEndpoint> get(@javax.annotation.Nullable final java.util.function.Consumer<VirtualEndpointRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<VirtualEndpoint>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, VirtualEndpoint::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -396,149 +386,147 @@ public class VirtualEndpointRequestBuilder {
         return new GetEffectivePermissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.onPremisesConnections.item collection
+     * Provides operations to manage the onPremisesConnections property of the microsoft.graph.virtualEndpoint entity.
      * @param id Unique identifier of the item
      * @return a CloudPcOnPremisesConnectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcOnPremisesConnectionItemRequestBuilder onPremisesConnections(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcOnPremisesConnection%2Did", id);
         return new CloudPcOnPremisesConnectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property virtualEndpoint in deviceManagement
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of virtualEndpoint
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final VirtualEndpoint body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<VirtualEndpoint> patch(@javax.annotation.Nonnull final VirtualEndpoint body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, VirtualEndpoint::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<VirtualEndpoint>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property virtualEndpoint in deviceManagement
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of virtualEndpoint
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final VirtualEndpoint body, @javax.annotation.Nullable final java.util.function.Consumer<VirtualEndpointRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property virtualEndpoint in deviceManagement
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final VirtualEndpoint body, @javax.annotation.Nullable final java.util.function.Consumer<VirtualEndpointRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<VirtualEndpoint> patch(@javax.annotation.Nonnull final VirtualEndpoint body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, VirtualEndpoint::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<VirtualEndpoint>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.provisioningPolicies.item collection
+     * Provides operations to manage the provisioningPolicies property of the microsoft.graph.virtualEndpoint entity.
      * @param id Unique identifier of the item
      * @return a CloudPcProvisioningPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcProvisioningPolicyItemRequestBuilder provisioningPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcProvisioningPolicy%2Did", id);
         return new CloudPcProvisioningPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.servicePlans.item collection
+     * Provides operations to manage the servicePlans property of the microsoft.graph.virtualEndpoint entity.
      * @param id Unique identifier of the item
      * @return a CloudPcServicePlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcServicePlanItemRequestBuilder servicePlans(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcServicePlan%2Did", id);
         return new CloudPcServicePlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.snapshots.item collection
+     * Provides operations to manage the sharedUseServicePlans property of the microsoft.graph.virtualEndpoint entity.
+     * @param id Unique identifier of the item
+     * @return a CloudPcSharedUseServicePlanItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CloudPcSharedUseServicePlanItemRequestBuilder sharedUseServicePlans(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("cloudPcSharedUseServicePlan%2Did", id);
+        return new CloudPcSharedUseServicePlanItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the snapshots property of the microsoft.graph.virtualEndpoint entity.
      * @param id Unique identifier of the item
      * @return a CloudPcSnapshotItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcSnapshotItemRequestBuilder snapshots(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcSnapshot%2Did", id);
         return new CloudPcSnapshotItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.supportedRegions.item collection
+     * Provides operations to manage the supportedRegions property of the microsoft.graph.virtualEndpoint entity.
      * @param id Unique identifier of the item
      * @return a CloudPcSupportedRegionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcSupportedRegionItemRequestBuilder supportedRegions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcSupportedRegion%2Did", id);
         return new CloudPcSupportedRegionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.virtualEndpoint.userSettings.item collection
+     * Provides operations to manage the userSettings property of the microsoft.graph.virtualEndpoint entity.
      * @param id Unique identifier of the item
      * @return a CloudPcUserSettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcUserSettingItemRequestBuilder userSettings(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcUserSetting%2Did", id);
         return new CloudPcUserSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class VirtualEndpointRequestBuilderDeleteRequestConfiguration {
+    public class DeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new virtualEndpointRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeleteRequestConfiguration and sets the default values.
          * @return a void
          */
-        public VirtualEndpointRequestBuilderDeleteRequestConfiguration() {
+        @javax.annotation.Nullable
+        public DeleteRequestConfiguration() {
         }
     }
     /** Get virtualEndpoint from deviceManagement */
-    public class VirtualEndpointRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -549,36 +537,38 @@ public class VirtualEndpointRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class VirtualEndpointRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public VirtualEndpointRequestBuilderGetQueryParameters queryParameters = new VirtualEndpointRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new virtualEndpointRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
-        public VirtualEndpointRequestBuilderGetRequestConfiguration() {
+        @javax.annotation.Nullable
+        public GetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class VirtualEndpointRequestBuilderPatchRequestConfiguration {
+    public class PatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new virtualEndpointRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PatchRequestConfiguration and sets the default values.
          * @return a void
          */
-        public VirtualEndpointRequestBuilderPatchRequestConfiguration() {
+        @javax.annotation.Nullable
+        public PatchRequestConfiguration() {
         }
     }
 }

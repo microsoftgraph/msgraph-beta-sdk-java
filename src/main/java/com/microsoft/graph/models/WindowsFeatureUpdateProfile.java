@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Feature Update Profile */
 public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /** The list of group assignments of the profile. */
     private java.util.List<WindowsFeatureUpdateProfileAssignment> _assignments;
@@ -30,9 +31,10 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /** The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers. */
     private WindowsUpdateRolloutSettings _rolloutSettings;
     /**
-     * Instantiates a new WindowsFeatureUpdateProfile and sets the default values.
+     * Instantiates a new windowsFeatureUpdateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsFeatureUpdateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windowsFeatureUpdateProfile");
@@ -40,7 +42,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsFeatureUpdateProfile
+     * @return a windowsFeatureUpdateProfile
      */
     @javax.annotation.Nonnull
     public static WindowsFeatureUpdateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -110,7 +112,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsFeatureUpdateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsFeatureUpdateProfileAssignment::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("deployableContentDisplayName", (n) -> { currentObject.setDeployableContentDisplayName(n.getStringValue()); });
@@ -152,6 +154,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,6 +174,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<WindowsFeatureUpdateProfileAssignment> value) {
         this._assignments = value;
     }
@@ -179,6 +183,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -187,6 +192,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the deployableContentDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployableContentDisplayName(@javax.annotation.Nullable final String value) {
         this._deployableContentDisplayName = value;
     }
@@ -195,6 +201,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -203,6 +210,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -211,6 +219,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the endOfSupportDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndOfSupportDate(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endOfSupportDate = value;
     }
@@ -219,6 +228,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the featureUpdateVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureUpdateVersion(@javax.annotation.Nullable final String value) {
         this._featureUpdateVersion = value;
     }
@@ -227,6 +237,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -235,6 +246,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -243,6 +255,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the rolloutSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRolloutSettings(@javax.annotation.Nullable final WindowsUpdateRolloutSettings value) {
         this._rolloutSettings = value;
     }

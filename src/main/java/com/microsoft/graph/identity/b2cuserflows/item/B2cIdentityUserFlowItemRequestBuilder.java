@@ -15,7 +15,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -26,28 +25,28 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the b2cUserFlows property of the microsoft.graph.identityContainer entity. */
 public class B2cIdentityUserFlowItemRequestBuilder {
-    /** The identityProviders property */
+    /** Provides operations to manage the identityProviders property of the microsoft.graph.b2cIdentityUserFlow entity. */
     @javax.annotation.Nonnull
     public IdentityProvidersRequestBuilder identityProviders() {
         return new IdentityProvidersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The languages property */
+    /** Provides operations to manage the languages property of the microsoft.graph.b2cIdentityUserFlow entity. */
     @javax.annotation.Nonnull
     public LanguagesRequestBuilder languages() {
         return new LanguagesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /** The userAttributeAssignments property */
+    private String urlTemplate;
+    /** Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2cIdentityUserFlow entity. */
     @javax.annotation.Nonnull
     public UserAttributeAssignmentsRequestBuilder userAttributeAssignments() {
         return new UserAttributeAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The userFlowIdentityProviders property */
+    /** Provides operations to manage the userFlowIdentityProviders property of the microsoft.graph.b2cIdentityUserFlow entity. */
     @javax.annotation.Nonnull
     public UserFlowIdentityProvidersRequestBuilder userFlowIdentityProviders() {
         return new UserFlowIdentityProvidersRequestBuilder(pathParameters, requestAdapter);
@@ -58,11 +57,12 @@ public class B2cIdentityUserFlowItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public B2cIdentityUserFlowItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identity/b2cUserFlows/{b2cIdentityUserFlow%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -72,9 +72,10 @@ public class B2cIdentityUserFlowItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public B2cIdentityUserFlowItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/identity/b2cUserFlows/{b2cIdentityUserFlow%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -93,14 +94,13 @@ public class B2cIdentityUserFlowItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<B2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.DELETE;
-        }};
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final B2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration requestConfig = new B2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration();
+            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -121,15 +121,14 @@ public class B2cIdentityUserFlowItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration requestConfig = new B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -153,16 +152,16 @@ public class B2cIdentityUserFlowItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final B2cIdentityUserFlow body, @javax.annotation.Nullable final java.util.function.Consumer<B2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final B2cIdentityUserFlow body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.PATCH;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final B2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration requestConfig = new B2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration();
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -173,16 +172,18 @@ public class B2cIdentityUserFlowItemRequestBuilder {
      * Delete navigation property b2cUserFlows for identity
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -190,50 +191,36 @@ public class B2cIdentityUserFlowItemRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<B2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property b2cUserFlows for identity
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<B2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
      * Represents entry point for B2C identity userflows.
      * @return a CompletableFuture of b2cIdentityUserFlow
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, B2cIdentityUserFlow::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, B2cIdentityUserFlow::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<B2cIdentityUserFlow>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -241,34 +228,18 @@ public class B2cIdentityUserFlowItemRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of b2cIdentityUserFlow
      */
-    public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> get(@javax.annotation.Nullable final java.util.function.Consumer<B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, B2cIdentityUserFlow::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, B2cIdentityUserFlow::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Represents entry point for B2C identity userflows.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of b2cIdentityUserFlow
-     */
-    public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> get(@javax.annotation.Nullable final java.util.function.Consumer<B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<B2cIdentityUserFlow>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, B2cIdentityUserFlow::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -279,118 +250,104 @@ public class B2cIdentityUserFlowItemRequestBuilder {
     @javax.annotation.Nonnull
     public IdentityProviderItemRequestBuilder identityProviders(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("identityProvider%2Did", id);
         return new IdentityProviderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.b2cUserFlows.item.languages.item collection
+     * Provides operations to manage the languages property of the microsoft.graph.b2cIdentityUserFlow entity.
      * @param id Unique identifier of the item
      * @return a UserFlowLanguageConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserFlowLanguageConfigurationItemRequestBuilder languages(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userFlowLanguageConfiguration%2Did", id);
         return new UserFlowLanguageConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property b2cUserFlows in identity
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of b2cIdentityUserFlow
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final B2cIdentityUserFlow body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> patch(@javax.annotation.Nonnull final B2cIdentityUserFlow body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, B2cIdentityUserFlow::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<B2cIdentityUserFlow>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property b2cUserFlows in identity
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of b2cIdentityUserFlow
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final B2cIdentityUserFlow body, @javax.annotation.Nullable final java.util.function.Consumer<B2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property b2cUserFlows in identity
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final B2cIdentityUserFlow body, @javax.annotation.Nullable final java.util.function.Consumer<B2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> patch(@javax.annotation.Nonnull final B2cIdentityUserFlow body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, B2cIdentityUserFlow::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<B2cIdentityUserFlow>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.b2cUserFlows.item.userAttributeAssignments.item collection
+     * Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2cIdentityUserFlow entity.
      * @param id Unique identifier of the item
      * @return a IdentityUserFlowAttributeAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityUserFlowAttributeAssignmentItemRequestBuilder userAttributeAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("identityUserFlowAttributeAssignment%2Did", id);
         return new IdentityUserFlowAttributeAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.b2cUserFlows.item.userFlowIdentityProviders.item collection
+     * Provides operations to manage the userFlowIdentityProviders property of the microsoft.graph.b2cIdentityUserFlow entity.
      * @param id Unique identifier of the item
      * @return a IdentityProviderBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityProviderBaseItemRequestBuilder userFlowIdentityProviders(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("identityProviderBase%2Did", id);
         return new IdentityProviderBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class B2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration {
+    public class DeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new B2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeleteRequestConfiguration and sets the default values.
          * @return a void
          */
-        public B2cIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration() {
+        @javax.annotation.Nullable
+        public DeleteRequestConfiguration() {
         }
     }
     /** Represents entry point for B2C identity userflows. */
-    public class B2cIdentityUserFlowItemRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -401,36 +358,38 @@ public class B2cIdentityUserFlowItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public B2cIdentityUserFlowItemRequestBuilderGetQueryParameters queryParameters = new B2cIdentityUserFlowItemRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
-        public B2cIdentityUserFlowItemRequestBuilderGetRequestConfiguration() {
+        @javax.annotation.Nullable
+        public GetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class B2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration {
+    public class PatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new B2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PatchRequestConfiguration and sets the default values.
          * @return a void
          */
-        public B2cIdentityUserFlowItemRequestBuilderPatchRequestConfiguration() {
+        @javax.annotation.Nullable
+        public PatchRequestConfiguration() {
         }
     }
 }

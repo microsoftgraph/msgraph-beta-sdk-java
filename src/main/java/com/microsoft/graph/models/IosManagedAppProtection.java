@@ -38,6 +38,8 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     private java.util.List<String> _managedUniversalLinks;
     /** Versions less than the specified version will block the managed app from accessing company data. */
     private String _minimumRequiredSdkVersion;
+    /** Versions less than the specified version will result in warning message on the managed app from accessing company data. */
+    private String _minimumWarningSdkVersion;
     /** Versions less than the specified version will block the managed app from accessing company data. */
     private String _minimumWipeSdkVersion;
     /** Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps. */
@@ -48,6 +50,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * Instantiates a new IosManagedAppProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.iosManagedAppProtection");
@@ -165,7 +168,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosManagedAppProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedIosDeviceModels", (n) -> { currentObject.setAllowedIosDeviceModels(n.getStringValue()); });
             this.put("appActionIfIosDeviceModelNotAllowed", (n) -> { currentObject.setAppActionIfIosDeviceModelNotAllowed(n.getEnumValue(ManagedAppRemediationAction.class)); });
             this.put("appDataEncryptionType", (n) -> { currentObject.setAppDataEncryptionType(n.getEnumValue(ManagedAppDataEncryptionType.class)); });
@@ -181,6 +184,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
             this.put("filterOpenInToOnlyManagedApps", (n) -> { currentObject.setFilterOpenInToOnlyManagedApps(n.getBooleanValue()); });
             this.put("managedUniversalLinks", (n) -> { currentObject.setManagedUniversalLinks(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("minimumRequiredSdkVersion", (n) -> { currentObject.setMinimumRequiredSdkVersion(n.getStringValue()); });
+            this.put("minimumWarningSdkVersion", (n) -> { currentObject.setMinimumWarningSdkVersion(n.getStringValue()); });
             this.put("minimumWipeSdkVersion", (n) -> { currentObject.setMinimumWipeSdkVersion(n.getStringValue()); });
             this.put("protectInboundDataFromUnknownSources", (n) -> { currentObject.setProtectInboundDataFromUnknownSources(n.getBooleanValue()); });
             this.put("thirdPartyKeyboardsBlocked", (n) -> { currentObject.setThirdPartyKeyboardsBlocked(n.getBooleanValue()); });
@@ -211,6 +215,14 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this._minimumRequiredSdkVersion;
     }
     /**
+     * Gets the minimumWarningSdkVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getMinimumWarningSdkVersion() {
+        return this._minimumWarningSdkVersion;
+    }
+    /**
      * Gets the minimumWipeSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
      * @return a string
      */
@@ -239,6 +251,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -257,6 +270,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         writer.writeBooleanValue("filterOpenInToOnlyManagedApps", this.getFilterOpenInToOnlyManagedApps());
         writer.writeCollectionOfPrimitiveValues("managedUniversalLinks", this.getManagedUniversalLinks());
         writer.writeStringValue("minimumRequiredSdkVersion", this.getMinimumRequiredSdkVersion());
+        writer.writeStringValue("minimumWarningSdkVersion", this.getMinimumWarningSdkVersion());
         writer.writeStringValue("minimumWipeSdkVersion", this.getMinimumWipeSdkVersion());
         writer.writeBooleanValue("protectInboundDataFromUnknownSources", this.getProtectInboundDataFromUnknownSources());
         writer.writeBooleanValue("thirdPartyKeyboardsBlocked", this.getThirdPartyKeyboardsBlocked());
@@ -266,6 +280,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the allowedIosDeviceModels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedIosDeviceModels(@javax.annotation.Nullable final String value) {
         this._allowedIosDeviceModels = value;
     }
@@ -274,6 +289,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the appActionIfIosDeviceModelNotAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfIosDeviceModelNotAllowed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfIosDeviceModelNotAllowed = value;
     }
@@ -282,6 +298,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the appDataEncryptionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDataEncryptionType(@javax.annotation.Nullable final ManagedAppDataEncryptionType value) {
         this._appDataEncryptionType = value;
     }
@@ -290,6 +307,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this._apps = value;
     }
@@ -298,6 +316,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the customBrowserProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomBrowserProtocol(@javax.annotation.Nullable final String value) {
         this._customBrowserProtocol = value;
     }
@@ -306,6 +325,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the customDialerAppProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDialerAppProtocol(@javax.annotation.Nullable final String value) {
         this._customDialerAppProtocol = value;
     }
@@ -314,6 +334,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the deployedAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
         this._deployedAppCount = value;
     }
@@ -322,6 +343,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the deploymentSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
         this._deploymentSummary = value;
     }
@@ -330,6 +352,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the disableProtectionOfManagedOutboundOpenInData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableProtectionOfManagedOutboundOpenInData(@javax.annotation.Nullable final Boolean value) {
         this._disableProtectionOfManagedOutboundOpenInData = value;
     }
@@ -338,6 +361,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the exemptedAppProtocols property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExemptedAppProtocols(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._exemptedAppProtocols = value;
     }
@@ -346,6 +370,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the exemptedUniversalLinks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExemptedUniversalLinks(@javax.annotation.Nullable final java.util.List<String> value) {
         this._exemptedUniversalLinks = value;
     }
@@ -354,6 +379,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the faceIdBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFaceIdBlocked(@javax.annotation.Nullable final Boolean value) {
         this._faceIdBlocked = value;
     }
@@ -362,6 +388,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the filterOpenInToOnlyManagedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilterOpenInToOnlyManagedApps(@javax.annotation.Nullable final Boolean value) {
         this._filterOpenInToOnlyManagedApps = value;
     }
@@ -370,6 +397,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the managedUniversalLinks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedUniversalLinks(@javax.annotation.Nullable final java.util.List<String> value) {
         this._managedUniversalLinks = value;
     }
@@ -378,14 +406,25 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the minimumRequiredSdkVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredSdkVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredSdkVersion = value;
+    }
+    /**
+     * Sets the minimumWarningSdkVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data.
+     * @param value Value to set for the minimumWarningSdkVersion property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMinimumWarningSdkVersion(@javax.annotation.Nullable final String value) {
+        this._minimumWarningSdkVersion = value;
     }
     /**
      * Sets the minimumWipeSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
      * @param value Value to set for the minimumWipeSdkVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipeSdkVersion(@javax.annotation.Nullable final String value) {
         this._minimumWipeSdkVersion = value;
     }
@@ -394,6 +433,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the protectInboundDataFromUnknownSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtectInboundDataFromUnknownSources(@javax.annotation.Nullable final Boolean value) {
         this._protectInboundDataFromUnknownSources = value;
     }
@@ -402,6 +442,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the thirdPartyKeyboardsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThirdPartyKeyboardsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._thirdPartyKeyboardsBlocked = value;
     }

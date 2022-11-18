@@ -25,6 +25,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * Instantiates a new objectDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ObjectDefinition() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.objectDefinition");
@@ -62,7 +63,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ObjectDefinition currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("attributes", (n) -> { currentObject.setAttributes(n.getCollectionOfObjectValues(AttributeDefinition::createFromDiscriminatorValue)); });
             this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(MetadataEntry::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attributes", this.getAttributes());
@@ -121,6 +123,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the attributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttributes(@javax.annotation.Nullable final java.util.List<AttributeDefinition> value) {
         this._attributes = value;
     }
@@ -137,6 +141,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final java.util.List<MetadataEntry> value) {
         this._metadata = value;
     }
@@ -145,6 +150,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -153,6 +159,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -161,6 +168,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedApis property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedApis(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedApis = value;
     }

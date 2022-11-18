@@ -14,6 +14,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      * Instantiates a new IosDerivedCredentialAuthenticationConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosDerivedCredentialAuthenticationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosDerivedCredentialAuthenticationConfiguration");
@@ -43,7 +44,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosDerivedCredentialAuthenticationConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("derivedCredentialSettings", (n) -> { currentObject.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
         this._derivedCredentialSettings = value;
     }

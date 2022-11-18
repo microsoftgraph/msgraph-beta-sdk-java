@@ -6,7 +6,6 @@ import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -18,22 +17,23 @@ import java.util.Objects;
 /** Provides operations to call the createInstance method. */
 public class CreateInstanceRequestBuilder {
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new CreateInstanceRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CreateInstanceRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/microsoft.graph.createInstance";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -43,9 +43,10 @@ public class CreateInstanceRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CreateInstanceRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/microsoft.graph.createInstance";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -66,17 +67,16 @@ public class CreateInstanceRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CreateInstancePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CreateInstanceRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CreateInstancePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final CreateInstanceRequestBuilderPostRequestConfiguration requestConfig = new CreateInstanceRequestBuilderPostRequestConfiguration();
+            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -88,16 +88,18 @@ public class CreateInstanceRequestBuilder {
      * @param body 
      * @return a CompletableFuture of deviceManagementIntent
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntent> post(@javax.annotation.Nonnull final CreateInstancePostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementIntent::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementIntent::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DeviceManagementIntent>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -106,51 +108,35 @@ public class CreateInstanceRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementIntent
      */
-    public java.util.concurrent.CompletableFuture<DeviceManagementIntent> post(@javax.annotation.Nonnull final CreateInstancePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CreateInstanceRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementIntent::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Invoke action createInstance
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of deviceManagementIntent
-     */
-    public java.util.concurrent.CompletableFuture<DeviceManagementIntent> post(@javax.annotation.Nonnull final CreateInstancePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CreateInstanceRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementIntent> post(@javax.annotation.Nonnull final CreateInstancePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementIntent::createFromDiscriminatorValue, responseHandler, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceManagementIntent::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DeviceManagementIntent>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class CreateInstanceRequestBuilderPostRequestConfiguration {
+    public class PostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new createInstanceRequestBuilderPostRequestConfiguration and sets the default values.
+         * Instantiates a new PostRequestConfiguration and sets the default values.
          * @return a void
          */
-        public CreateInstanceRequestBuilderPostRequestConfiguration() {
+        @javax.annotation.Nullable
+        public PostRequestConfiguration() {
         }
     }
 }

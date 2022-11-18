@@ -24,6 +24,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * Instantiates a new windowsManagementAppHealthState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsManagementAppHealthState() {
         super();
         this.setOdataType("#microsoft.graph.windowsManagementAppHealthState");
@@ -61,7 +62,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsManagementAppHealthState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("deviceOSVersion", (n) -> { currentObject.setDeviceOSVersion(n.getStringValue()); });
             this.put("healthState", (n) -> { currentObject.setHealthState(n.getEnumValue(HealthState.class)); });
@@ -98,6 +99,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +114,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -120,6 +123,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * @param value Value to set for the deviceOSVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceOSVersion(@javax.annotation.Nullable final String value) {
         this._deviceOSVersion = value;
     }
@@ -128,6 +132,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * @param value Value to set for the healthState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthState(@javax.annotation.Nullable final HealthState value) {
         this._healthState = value;
     }
@@ -136,6 +141,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * @param value Value to set for the installedVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstalledVersion(@javax.annotation.Nullable final String value) {
         this._installedVersion = value;
     }
@@ -144,6 +150,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * @param value Value to set for the lastCheckInDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastCheckInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastCheckInDateTime = value;
     }

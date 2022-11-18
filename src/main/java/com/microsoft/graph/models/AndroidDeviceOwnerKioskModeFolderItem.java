@@ -14,6 +14,7 @@ public class AndroidDeviceOwnerKioskModeFolderItem extends AndroidDeviceOwnerKio
      * Instantiates a new AndroidDeviceOwnerKioskModeFolderItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerKioskModeFolderItem() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeFolderItem");
@@ -43,7 +44,7 @@ public class AndroidDeviceOwnerKioskModeFolderItem extends AndroidDeviceOwnerKio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerKioskModeFolderItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -51,6 +52,7 @@ public class AndroidDeviceOwnerKioskModeFolderItem extends AndroidDeviceOwnerKio
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

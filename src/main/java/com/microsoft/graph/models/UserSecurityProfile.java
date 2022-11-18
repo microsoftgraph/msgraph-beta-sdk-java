@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class UserSecurityProfile extends Entity implements Parsable {
     /** The accounts property */
     private java.util.List<UserAccount> _accounts;
@@ -30,9 +31,10 @@ public class UserSecurityProfile extends Entity implements Parsable {
     /** The vendorInformation property */
     private SecurityVendorInformation _vendorInformation;
     /**
-     * Instantiates a new UserSecurityProfile and sets the default values.
+     * Instantiates a new userSecurityProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserSecurityProfile() {
         super();
         this.setOdataType("#microsoft.graph.userSecurityProfile");
@@ -40,7 +42,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserSecurityProfile
+     * @return a userSecurityProfile
      */
     @javax.annotation.Nonnull
     public static UserSecurityProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -94,7 +96,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserSecurityProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accounts", (n) -> { currentObject.setAccounts(n.getCollectionOfObjectValues(UserAccount::createFromDiscriminatorValue)); });
             this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
             this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
@@ -152,6 +154,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,6 +174,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the accounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccounts(@javax.annotation.Nullable final java.util.List<UserAccount> value) {
         this._accounts = value;
     }
@@ -179,6 +183,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
         this._azureSubscriptionId = value;
     }
@@ -187,6 +192,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -195,6 +201,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -203,6 +210,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -211,6 +219,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -219,6 +228,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
         this._riskScore = value;
     }
@@ -227,6 +237,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -235,6 +246,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -243,6 +255,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
         this._vendorInformation = value;
     }

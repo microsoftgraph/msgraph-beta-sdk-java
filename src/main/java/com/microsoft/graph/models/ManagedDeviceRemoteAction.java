@@ -26,7 +26,9 @@ public enum ManagedDeviceRemoteAction implements ValuedEnum {
     /** Name of action to Activate eSIM on the device. */
     ActivateDeviceEsim("activateDeviceEsim"),
     /** Name of the collectDiagnostics action. */
-    CollectDiagnostics("collectDiagnostics");
+    CollectDiagnostics("collectDiagnostics"),
+    /** Name of action to initiate MDM key recovery */
+    InitiateMobileDeviceManagementKeyRecovery("initiateMobileDeviceManagementKeyRecovery");
     public final String value;
     ManagedDeviceRemoteAction(final String value) {
         this.value = value;
@@ -53,6 +55,7 @@ public enum ManagedDeviceRemoteAction implements ValuedEnum {
             case "moveDeviceToOrganizationalUnit": return MoveDeviceToOrganizationalUnit;
             case "activateDeviceEsim": return ActivateDeviceEsim;
             case "collectDiagnostics": return CollectDiagnostics;
+            case "initiateMobileDeviceManagementKeyRecovery": return InitiateMobileDeviceManagementKeyRecovery;
             default: return null;
         }
     }

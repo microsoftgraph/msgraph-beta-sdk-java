@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class SchemaExtension extends Entity implements Parsable {
     /** Description for the schema extension. Supports $filter (eq). */
     private String _description;
@@ -19,9 +20,10 @@ public class SchemaExtension extends Entity implements Parsable {
     /** Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, todoTask, todoTaskList, or user. */
     private java.util.List<String> _targetTypes;
     /**
-     * Instantiates a new SchemaExtension and sets the default values.
+     * Instantiates a new schemaExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SchemaExtension() {
         super();
         this.setOdataType("#microsoft.graph.schemaExtension");
@@ -29,7 +31,7 @@ public class SchemaExtension extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SchemaExtension
+     * @return a schemaExtension
      */
     @javax.annotation.Nonnull
     public static SchemaExtension createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +53,7 @@ public class SchemaExtension extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SchemaExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("owner", (n) -> { currentObject.setOwner(n.getStringValue()); });
             this.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(ExtensionSchemaProperty::createFromDiscriminatorValue)); });
@@ -96,6 +98,7 @@ public class SchemaExtension extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +113,7 @@ public class SchemaExtension extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -118,6 +122,7 @@ public class SchemaExtension extends Entity implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final String value) {
         this._owner = value;
     }
@@ -126,6 +131,7 @@ public class SchemaExtension extends Entity implements Parsable {
      * @param value Value to set for the properties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProperties(@javax.annotation.Nullable final java.util.List<ExtensionSchemaProperty> value) {
         this._properties = value;
     }
@@ -134,6 +140,7 @@ public class SchemaExtension extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }
@@ -142,6 +149,7 @@ public class SchemaExtension extends Entity implements Parsable {
      * @param value Value to set for the targetTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._targetTypes = value;
     }

@@ -30,6 +30,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * Instantiates a new DataClassificationService and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DataClassificationService() {
         super();
         this.setOdataType("#microsoft.graph.dataClassificationService");
@@ -99,7 +100,7 @@ public class DataClassificationService extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DataClassificationService currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classifyFileJobs", (n) -> { currentObject.setClassifyFileJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
             this.put("classifyTextJobs", (n) -> { currentObject.setClassifyTextJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
             this.put("evaluateDlpPoliciesJobs", (n) -> { currentObject.setEvaluateDlpPoliciesJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
@@ -140,6 +141,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +160,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the classifyFileJobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassifyFileJobs(@javax.annotation.Nullable final java.util.List<JobResponseBase> value) {
         this._classifyFileJobs = value;
     }
@@ -166,6 +169,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the classifyTextJobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassifyTextJobs(@javax.annotation.Nullable final java.util.List<JobResponseBase> value) {
         this._classifyTextJobs = value;
     }
@@ -174,6 +178,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the evaluateDlpPoliciesJobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluateDlpPoliciesJobs(@javax.annotation.Nullable final java.util.List<JobResponseBase> value) {
         this._evaluateDlpPoliciesJobs = value;
     }
@@ -182,6 +187,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the evaluateLabelJobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluateLabelJobs(@javax.annotation.Nullable final java.util.List<JobResponseBase> value) {
         this._evaluateLabelJobs = value;
     }
@@ -190,6 +196,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the exactMatchDataStores property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExactMatchDataStores(@javax.annotation.Nullable final java.util.List<ExactMatchDataStore> value) {
         this._exactMatchDataStores = value;
     }
@@ -198,6 +205,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the exactMatchUploadAgents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExactMatchUploadAgents(@javax.annotation.Nullable final java.util.List<ExactMatchUploadAgent> value) {
         this._exactMatchUploadAgents = value;
     }
@@ -206,6 +214,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the jobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobs(@javax.annotation.Nullable final java.util.List<JobResponseBase> value) {
         this._jobs = value;
     }
@@ -214,6 +223,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the sensitiveTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitiveTypes(@javax.annotation.Nullable final java.util.List<SensitiveType> value) {
         this._sensitiveTypes = value;
     }
@@ -222,6 +232,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the sensitivityLabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitivityLabels(@javax.annotation.Nullable final java.util.List<SensitivityLabel> value) {
         this._sensitivityLabels = value;
     }

@@ -26,6 +26,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * Instantiates a new macOSSoftwareUpdateStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSSoftwareUpdateStateSummary() {
         super();
         this.setOdataType("#microsoft.graph.macOSSoftwareUpdateStateSummary");
@@ -55,7 +56,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSSoftwareUpdateStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
@@ -109,6 +110,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,6 +126,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -132,6 +135,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
     }
@@ -140,6 +144,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the productKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductKey(@javax.annotation.Nullable final String value) {
         this._productKey = value;
     }
@@ -148,6 +153,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final MacOSSoftwareUpdateState value) {
         this._state = value;
     }
@@ -156,6 +162,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the updateCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateCategory(@javax.annotation.Nullable final MacOSSoftwareUpdateCategory value) {
         this._updateCategory = value;
     }
@@ -164,6 +171,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the updateVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateVersion(@javax.annotation.Nullable final String value) {
         this._updateVersion = value;
     }

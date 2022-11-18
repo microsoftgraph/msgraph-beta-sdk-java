@@ -23,7 +23,9 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
     LinuxMdm("linuxMdm"),
     /** Setting can be deployed through device enrollment. */
     Enrollment("enrollment"),
-    /** Sentinel member for cases where the client cannot handle the new enum values. */
+    /** Setting can be deployed using the Endpoint privilege management channel */
+    EndpointPrivilegeManagement("endpointPrivilegeManagement"),
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceManagementConfigurationTechnologies(final String value) {
@@ -44,6 +46,7 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
             case "exchangeOnline": return ExchangeOnline;
             case "linuxMdm": return LinuxMdm;
             case "enrollment": return Enrollment;
+            case "endpointPrivilegeManagement": return EndpointPrivilegeManagement;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

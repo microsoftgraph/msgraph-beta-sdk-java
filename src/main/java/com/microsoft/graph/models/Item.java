@@ -45,9 +45,10 @@ public class Item extends Entity implements Parsable {
     /** The unitPrice property */
     private BigDecimal _unitPrice;
     /**
-     * Instantiates a new Item and sets the default values.
+     * Instantiates a new item and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Item() {
         super();
         this.setOdataType("#microsoft.graph.item");
@@ -55,7 +56,7 @@ public class Item extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Item
+     * @return a item
      */
     @javax.annotation.Nonnull
     public static Item createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -93,7 +94,7 @@ public class Item extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Item currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("baseUnitOfMeasureId", (n) -> { currentObject.setBaseUnitOfMeasureId(n.getStringValue()); });
             this.put("blocked", (n) -> { currentObject.setBlocked(n.getBooleanValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -230,6 +231,7 @@ public class Item extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -256,6 +258,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the baseUnitOfMeasureId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBaseUnitOfMeasureId(@javax.annotation.Nullable final String value) {
         this._baseUnitOfMeasureId = value;
     }
@@ -264,6 +267,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the blocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlocked(@javax.annotation.Nullable final Boolean value) {
         this._blocked = value;
     }
@@ -272,6 +276,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -280,6 +285,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the gtin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGtin(@javax.annotation.Nullable final String value) {
         this._gtin = value;
     }
@@ -288,6 +294,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the inventory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInventory(@javax.annotation.Nullable final BigDecimal value) {
         this._inventory = value;
     }
@@ -296,6 +303,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the itemCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemCategory(@javax.annotation.Nullable final ItemCategory value) {
         this._itemCategory = value;
     }
@@ -304,6 +312,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the itemCategoryCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemCategoryCode(@javax.annotation.Nullable final String value) {
         this._itemCategoryCode = value;
     }
@@ -312,6 +321,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the itemCategoryId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemCategoryId(@javax.annotation.Nullable final String value) {
         this._itemCategoryId = value;
     }
@@ -320,6 +330,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -328,6 +339,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final String value) {
         this._number = value;
     }
@@ -336,6 +348,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the picture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPicture(@javax.annotation.Nullable final java.util.List<Picture> value) {
         this._picture = value;
     }
@@ -344,6 +357,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the priceIncludesTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriceIncludesTax(@javax.annotation.Nullable final Boolean value) {
         this._priceIncludesTax = value;
     }
@@ -352,6 +366,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the taxGroupCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxGroupCode(@javax.annotation.Nullable final String value) {
         this._taxGroupCode = value;
     }
@@ -360,6 +375,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the taxGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxGroupId(@javax.annotation.Nullable final String value) {
         this._taxGroupId = value;
     }
@@ -368,6 +384,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
@@ -376,6 +393,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the unitCost property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnitCost(@javax.annotation.Nullable final BigDecimal value) {
         this._unitCost = value;
     }
@@ -384,6 +402,7 @@ public class Item extends Entity implements Parsable {
      * @param value Value to set for the unitPrice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnitPrice(@javax.annotation.Nullable final BigDecimal value) {
         this._unitPrice = value;
     }

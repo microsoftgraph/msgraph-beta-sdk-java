@@ -8,6 +8,7 @@ import com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatorm
 import com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.memberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredowners.RegisteredOwnersRequestBuilder;
 import com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredusers.RegisteredUsersRequestBuilder;
@@ -22,7 +23,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -33,81 +33,81 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the device property of the microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod entity. */
 public class DeviceRequestBuilder {
-    /** The checkMemberGroups property */
+    /** Provides operations to call the checkMemberGroups method. */
     @javax.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkMemberObjects property */
+    /** Provides operations to call the checkMemberObjects method. */
     @javax.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The commands property */
+    /** Provides operations to manage the commands property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public CommandsRequestBuilder commands() {
         return new CommandsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The extensions property */
+    /** Provides operations to manage the extensions property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberGroups property */
+    /** Provides operations to call the getMemberGroups method. */
     @javax.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberObjects property */
+    /** Provides operations to call the getMemberObjects method. */
     @javax.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The memberOf property */
+    /** Provides operations to manage the memberOf property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
         return new MemberOfRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The registeredOwners property */
+    private HashMap<String, Object> pathParameters;
+    /** Provides operations to manage the registeredOwners property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public RegisteredOwnersRequestBuilder registeredOwners() {
         return new RegisteredOwnersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The registeredUsers property */
+    /** Provides operations to manage the registeredUsers property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public RegisteredUsersRequestBuilder registeredUsers() {
         return new RegisteredUsersRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The restore property */
+    private RequestAdapter requestAdapter;
+    /** Provides operations to call the restore method. */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The transitiveMemberOf property */
+    /** Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {
         return new TransitiveMemberOfRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /** The usageRights property */
+    private String urlTemplate;
+    /** Provides operations to manage the usageRights property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public UsageRightsRequestBuilder usageRights() {
         return new UsageRightsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.passwordlessMicrosoftAuthenticatorMethods.item.device.commands.item collection
+     * Provides operations to manage the commands property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a CommandItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CommandItemRequestBuilder commands(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("command%2Did", id);
         return new CommandItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -117,11 +117,12 @@ public class DeviceRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod%2Did}/device{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -131,9 +132,10 @@ public class DeviceRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/me/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod%2Did}/device{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -152,14 +154,13 @@ public class DeviceRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeviceRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.DELETE;
-        }};
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final DeviceRequestBuilderDeleteRequestConfiguration requestConfig = new DeviceRequestBuilderDeleteRequestConfiguration();
+            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -180,15 +181,14 @@ public class DeviceRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeviceRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final DeviceRequestBuilderGetRequestConfiguration requestConfig = new DeviceRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -212,16 +212,16 @@ public class DeviceRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final Device body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final Device body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.PATCH;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final DeviceRequestBuilderPatchRequestConfiguration requestConfig = new DeviceRequestBuilderPatchRequestConfiguration();
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -232,16 +232,18 @@ public class DeviceRequestBuilder {
      * Delete navigation property device for me
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -249,45 +251,29 @@ public class DeviceRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeviceRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Delete navigation property device for me
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeviceRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.passwordlessMicrosoftAuthenticatorMethods.item.device.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("extension%2Did", id);
         return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -295,16 +281,18 @@ public class DeviceRequestBuilder {
      * Get device from me
      * @return a CompletableFuture of device
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Device> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Device::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Device>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -312,101 +300,70 @@ public class DeviceRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of device
      */
-    public java.util.concurrent.CompletableFuture<Device> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Device> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Device::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Device>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Get device from me
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of device
-     */
-    public java.util.concurrent.CompletableFuture<Device> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Device::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.passwordlessMicrosoftAuthenticatorMethods.item.device.memberOf.item collection
+     * Provides operations to manage the memberOf property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property device in me
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of device
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Device body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Device> patch(@javax.annotation.Nonnull final Device body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Device>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property device in me
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of device
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Device body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property device in me
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Device body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Device> patch(@javax.annotation.Nonnull final Device body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Device>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -417,63 +374,64 @@ public class DeviceRequestBuilder {
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredowners.item.DirectoryObjectItemRequestBuilder registeredOwners(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredowners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.passwordlessMicrosoftAuthenticatorMethods.item.device.registeredUsers.item collection
+     * Provides operations to manage the registeredUsers property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredusers.item.DirectoryObjectItemRequestBuilder registeredUsers(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.registeredusers.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.passwordlessMicrosoftAuthenticatorMethods.item.device.transitiveMemberOf.item collection
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
         return new com.microsoft.graph.me.authentication.passwordlessmicrosoftauthenticatormethods.item.device.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.passwordlessMicrosoftAuthenticatorMethods.item.device.usageRights.item collection
+     * Provides operations to manage the usageRights property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a UsageRightItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UsageRightItemRequestBuilder usageRights(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("usageRight%2Did", id);
         return new UsageRightItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeviceRequestBuilderDeleteRequestConfiguration {
+    public class DeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeleteRequestConfiguration and sets the default values.
          * @return a void
          */
-        public DeviceRequestBuilderDeleteRequestConfiguration() {
+        @javax.annotation.Nullable
+        public DeleteRequestConfiguration() {
         }
     }
     /** Get device from me */
-    public class DeviceRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -484,36 +442,38 @@ public class DeviceRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeviceRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public DeviceRequestBuilderGetQueryParameters queryParameters = new DeviceRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new deviceRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
-        public DeviceRequestBuilderGetRequestConfiguration() {
+        @javax.annotation.Nullable
+        public GetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeviceRequestBuilderPatchRequestConfiguration {
+    public class PatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PatchRequestConfiguration and sets the default values.
          * @return a void
          */
-        public DeviceRequestBuilderPatchRequestConfiguration() {
+        @javax.annotation.Nullable
+        public PatchRequestConfiguration() {
         }
     }
 }

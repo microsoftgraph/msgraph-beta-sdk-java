@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class AccessReviewInstance extends Entity implements Parsable {
     /** Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only. */
     private java.util.List<AccessReviewReviewer> _contactedReviewers;
@@ -35,6 +36,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * Instantiates a new accessReviewInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewInstance() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstance");
@@ -104,7 +106,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contactedReviewers", (n) -> { currentObject.setContactedReviewers(n.getCollectionOfObjectValues(AccessReviewReviewer::createFromDiscriminatorValue)); });
             this.put("decisions", (n) -> { currentObject.setDecisions(n.getCollectionOfObjectValues(AccessReviewInstanceDecisionItem::createFromDiscriminatorValue)); });
             this.put("definition", (n) -> { currentObject.setDefinition(n.getObjectValue(AccessReviewScheduleDefinition::createFromDiscriminatorValue)); });
@@ -163,6 +165,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,6 +186,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param value Value to set for the contactedReviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactedReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewer> value) {
         this._contactedReviewers = value;
     }
@@ -191,6 +195,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param value Value to set for the decisions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecisions(@javax.annotation.Nullable final java.util.List<AccessReviewInstanceDecisionItem> value) {
         this._decisions = value;
     }
@@ -199,6 +204,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param value Value to set for the definition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinition(@javax.annotation.Nullable final AccessReviewScheduleDefinition value) {
         this._definition = value;
     }
@@ -207,6 +213,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -215,6 +222,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param value Value to set for the errors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrors(@javax.annotation.Nullable final java.util.List<AccessReviewError> value) {
         this._errors = value;
     }
@@ -223,6 +231,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param value Value to set for the fallbackReviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFallbackReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._fallbackReviewers = value;
     }
@@ -231,6 +240,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param value Value to set for the reviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._reviewers = value;
     }
@@ -239,6 +249,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final AccessReviewScope value) {
         this._scope = value;
     }
@@ -247,6 +258,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param value Value to set for the stages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStages(@javax.annotation.Nullable final java.util.List<AccessReviewStage> value) {
         this._stages = value;
     }
@@ -255,6 +267,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -263,6 +276,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

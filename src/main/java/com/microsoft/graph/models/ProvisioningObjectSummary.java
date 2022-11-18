@@ -49,6 +49,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Instantiates a new ProvisioningObjectSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProvisioningObjectSummary() {
         super();
         this.setOdataType("#microsoft.graph.provisioningObjectSummary");
@@ -110,7 +111,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisioningObjectSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("action", (n) -> { currentObject.setAction(n.getStringValue()); });
             this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
             this.put("changeId", (n) -> { currentObject.setChangeId(n.getStringValue()); });
@@ -240,6 +241,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -267,6 +269,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final String value) {
         this._action = value;
     }
@@ -275,6 +278,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._activityDateTime = value;
     }
@@ -283,6 +287,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the changeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeId(@javax.annotation.Nullable final String value) {
         this._changeId = value;
     }
@@ -291,6 +296,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the cycleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCycleId(@javax.annotation.Nullable final String value) {
         this._cycleId = value;
     }
@@ -299,6 +305,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the durationInMilliseconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationInMilliseconds(@javax.annotation.Nullable final Integer value) {
         this._durationInMilliseconds = value;
     }
@@ -307,6 +314,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedBy(@javax.annotation.Nullable final Initiator value) {
         this._initiatedBy = value;
     }
@@ -315,6 +323,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the jobId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobId(@javax.annotation.Nullable final String value) {
         this._jobId = value;
     }
@@ -323,6 +332,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the modifiedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedProperties(@javax.annotation.Nullable final java.util.List<ModifiedProperty> value) {
         this._modifiedProperties = value;
     }
@@ -331,6 +341,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the provisioningAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningAction(@javax.annotation.Nullable final ProvisioningAction value) {
         this._provisioningAction = value;
     }
@@ -339,6 +350,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the provisioningStatusInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningStatusInfo(@javax.annotation.Nullable final ProvisioningStatusInfo value) {
         this._provisioningStatusInfo = value;
     }
@@ -347,6 +359,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the provisioningSteps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningSteps(@javax.annotation.Nullable final java.util.List<ProvisioningStep> value) {
         this._provisioningSteps = value;
     }
@@ -355,6 +368,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the servicePrincipal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipal(@javax.annotation.Nullable final ProvisioningServicePrincipal value) {
         this._servicePrincipal = value;
     }
@@ -363,6 +377,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the sourceIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceIdentity(@javax.annotation.Nullable final ProvisionedIdentity value) {
         this._sourceIdentity = value;
     }
@@ -371,6 +386,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the sourceSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceSystem(@javax.annotation.Nullable final ProvisioningSystem value) {
         this._sourceSystem = value;
     }
@@ -379,6 +395,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the statusInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatusInfo(@javax.annotation.Nullable final StatusBase value) {
         this._statusInfo = value;
     }
@@ -387,6 +404,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the targetIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetIdentity(@javax.annotation.Nullable final ProvisionedIdentity value) {
         this._targetIdentity = value;
     }
@@ -395,6 +413,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the targetSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetSystem(@javax.annotation.Nullable final ProvisioningSystem value) {
         this._targetSystem = value;
     }
@@ -403,6 +422,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

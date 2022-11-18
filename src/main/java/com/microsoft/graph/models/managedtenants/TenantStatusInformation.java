@@ -12,7 +12,7 @@ import java.util.Objects;
 public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue. Optional. Read-only. */
+    /** The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only. */
     private DelegatedPrivilegeStatus _delegatedPrivilegeStatus;
     /** The date and time the delegated admin privileges status was updated. Optional. Read-only. */
     private OffsetDateTime _lastDelegatedPrivilegeRefreshDateTime;
@@ -36,6 +36,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * Instantiates a new tenantStatusInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantStatusInformation() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.managedTenants.tenantStatusInformation");
@@ -59,7 +60,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue. Optional. Read-only.
+     * Gets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
      * @return a delegatedPrivilegeStatus
      */
     @javax.annotation.Nullable
@@ -73,7 +74,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantStatusInformation currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("delegatedPrivilegeStatus", (n) -> { currentObject.setDelegatedPrivilegeStatus(n.getEnumValue(DelegatedPrivilegeStatus.class)); });
             this.put("lastDelegatedPrivilegeRefreshDateTime", (n) -> { currentObject.setLastDelegatedPrivilegeRefreshDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -163,6 +164,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("delegatedPrivilegeStatus", this.getDelegatedPrivilegeStatus());
@@ -182,14 +184,16 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue. Optional. Read-only.
+     * Sets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
      * @param value Value to set for the delegatedPrivilegeStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDelegatedPrivilegeStatus(@javax.annotation.Nullable final DelegatedPrivilegeStatus value) {
         this._delegatedPrivilegeStatus = value;
     }
@@ -198,6 +202,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastDelegatedPrivilegeRefreshDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastDelegatedPrivilegeRefreshDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastDelegatedPrivilegeRefreshDateTime = value;
     }
@@ -206,6 +211,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -214,6 +220,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the offboardedByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffboardedByUserId(@javax.annotation.Nullable final String value) {
         this._offboardedByUserId = value;
     }
@@ -222,6 +229,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the offboardedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffboardedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._offboardedDateTime = value;
     }
@@ -230,6 +238,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onboardedByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnboardedByUserId(@javax.annotation.Nullable final String value) {
         this._onboardedByUserId = value;
     }
@@ -238,6 +247,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onboardedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnboardedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._onboardedDateTime = value;
     }
@@ -246,6 +256,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onboardingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnboardingStatus(@javax.annotation.Nullable final TenantOnboardingStatus value) {
         this._onboardingStatus = value;
     }
@@ -254,6 +265,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tenantOnboardingEligibilityReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantOnboardingEligibilityReason(@javax.annotation.Nullable final TenantOnboardingEligibilityReason value) {
         this._tenantOnboardingEligibilityReason = value;
     }
@@ -262,6 +274,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the workloadStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkloadStatuses(@javax.annotation.Nullable final java.util.List<WorkloadStatus> value) {
         this._workloadStatuses = value;
     }

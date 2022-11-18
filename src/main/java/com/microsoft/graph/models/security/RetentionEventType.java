@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class RetentionEventType extends Entity implements Parsable {
     /** The user who created the retentionEventType. */
     private IdentitySet _createdBy;
@@ -27,6 +28,7 @@ public class RetentionEventType extends Entity implements Parsable {
      * Instantiates a new retentionEventType and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RetentionEventType() {
         super();
         this.setOdataType("#microsoft.graph.security.retentionEventType");
@@ -80,7 +82,7 @@ public class RetentionEventType extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RetentionEventType currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -110,6 +112,7 @@ public class RetentionEventType extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -125,6 +128,7 @@ public class RetentionEventType extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -133,6 +137,7 @@ public class RetentionEventType extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -141,6 +146,7 @@ public class RetentionEventType extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -149,6 +155,7 @@ public class RetentionEventType extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -157,6 +164,7 @@ public class RetentionEventType extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -165,6 +173,7 @@ public class RetentionEventType extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }

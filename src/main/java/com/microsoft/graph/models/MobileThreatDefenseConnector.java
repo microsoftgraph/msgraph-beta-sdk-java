@@ -50,6 +50,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * Instantiates a new mobileThreatDefenseConnector and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileThreatDefenseConnector() {
         super();
         this.setOdataType("#microsoft.graph.mobileThreatDefenseConnector");
@@ -111,7 +112,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileThreatDefenseConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowPartnerToCollectIOSApplicationMetadata", (n) -> { currentObject.setAllowPartnerToCollectIOSApplicationMetadata(n.getBooleanValue()); });
             this.put("allowPartnerToCollectIOSPersonalApplicationMetadata", (n) -> { currentObject.setAllowPartnerToCollectIOSPersonalApplicationMetadata(n.getBooleanValue()); });
             this.put("androidDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setAndroidDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
@@ -241,6 +242,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -268,6 +270,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the allowPartnerToCollectIOSApplicationMetadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowPartnerToCollectIOSApplicationMetadata(@javax.annotation.Nullable final Boolean value) {
         this._allowPartnerToCollectIOSApplicationMetadata = value;
     }
@@ -276,6 +279,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the allowPartnerToCollectIOSPersonalApplicationMetadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowPartnerToCollectIOSPersonalApplicationMetadata(@javax.annotation.Nullable final Boolean value) {
         this._allowPartnerToCollectIOSPersonalApplicationMetadata = value;
     }
@@ -284,6 +288,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the androidDeviceBlockedOnMissingPartnerData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidDeviceBlockedOnMissingPartnerData(@javax.annotation.Nullable final Boolean value) {
         this._androidDeviceBlockedOnMissingPartnerData = value;
     }
@@ -292,6 +297,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the androidEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidEnabled(@javax.annotation.Nullable final Boolean value) {
         this._androidEnabled = value;
     }
@@ -300,6 +306,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the androidMobileApplicationManagementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidMobileApplicationManagementEnabled(@javax.annotation.Nullable final Boolean value) {
         this._androidMobileApplicationManagementEnabled = value;
     }
@@ -308,6 +315,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the iosDeviceBlockedOnMissingPartnerData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosDeviceBlockedOnMissingPartnerData(@javax.annotation.Nullable final Boolean value) {
         this._iosDeviceBlockedOnMissingPartnerData = value;
     }
@@ -316,6 +324,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the iosEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosEnabled(@javax.annotation.Nullable final Boolean value) {
         this._iosEnabled = value;
     }
@@ -324,6 +333,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the iosMobileApplicationManagementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosMobileApplicationManagementEnabled(@javax.annotation.Nullable final Boolean value) {
         this._iosMobileApplicationManagementEnabled = value;
     }
@@ -332,6 +342,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the lastHeartbeatDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastHeartbeatDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastHeartbeatDateTime = value;
     }
@@ -340,6 +351,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the macDeviceBlockedOnMissingPartnerData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacDeviceBlockedOnMissingPartnerData(@javax.annotation.Nullable final Boolean value) {
         this._macDeviceBlockedOnMissingPartnerData = value;
     }
@@ -348,6 +360,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the macEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacEnabled(@javax.annotation.Nullable final Boolean value) {
         this._macEnabled = value;
     }
@@ -356,6 +369,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the microsoftDefenderForEndpointAttachEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftDefenderForEndpointAttachEnabled(@javax.annotation.Nullable final Boolean value) {
         this._microsoftDefenderForEndpointAttachEnabled = value;
     }
@@ -364,6 +378,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the partnerState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerState(@javax.annotation.Nullable final MobileThreatPartnerTenantState value) {
         this._partnerState = value;
     }
@@ -372,6 +387,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the partnerUnresponsivenessThresholdInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerUnresponsivenessThresholdInDays(@javax.annotation.Nullable final Integer value) {
         this._partnerUnresponsivenessThresholdInDays = value;
     }
@@ -380,6 +396,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the partnerUnsupportedOsVersionBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerUnsupportedOsVersionBlocked(@javax.annotation.Nullable final Boolean value) {
         this._partnerUnsupportedOsVersionBlocked = value;
     }
@@ -388,6 +405,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the windowsDeviceBlockedOnMissingPartnerData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsDeviceBlockedOnMissingPartnerData(@javax.annotation.Nullable final Boolean value) {
         this._windowsDeviceBlockedOnMissingPartnerData = value;
     }
@@ -396,6 +414,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the windowsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._windowsEnabled = value;
     }
@@ -404,6 +423,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the windowsMobileApplicationManagementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsMobileApplicationManagementEnabled(@javax.annotation.Nullable final Boolean value) {
         this._windowsMobileApplicationManagementEnabled = value;
     }

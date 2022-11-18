@@ -28,6 +28,7 @@ public class SearchAnswer extends Entity implements Parsable {
      * Instantiates a new searchAnswer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SearchAnswer() {
         super();
         this.setOdataType("#microsoft.graph.search.searchAnswer");
@@ -74,7 +75,7 @@ public class SearchAnswer extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchAnswer currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -111,6 +112,7 @@ public class SearchAnswer extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -125,6 +127,7 @@ public class SearchAnswer extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -133,6 +136,7 @@ public class SearchAnswer extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -141,6 +145,7 @@ public class SearchAnswer extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -149,6 +154,7 @@ public class SearchAnswer extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -157,6 +163,7 @@ public class SearchAnswer extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

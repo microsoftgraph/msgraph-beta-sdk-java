@@ -40,6 +40,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * Instantiates a new deviceManagementCompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementCompliancePolicy");
@@ -93,7 +94,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicyAssignment::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("creationSource", (n) -> { currentObject.setCreationSource(n.getStringValue()); });
@@ -186,20 +187,17 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("creationSource", this.getCreationSource());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeBooleanValue("isAssigned", this.getIsAssigned());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("name", this.getName());
         writer.writeEnumValue("platforms", this.getPlatforms());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeCollectionOfObjectValues("scheduledActionsForRule", this.getScheduledActionsForRule());
-        writer.writeIntegerValue("settingCount", this.getSettingCount());
         writer.writeCollectionOfObjectValues("settings", this.getSettings());
         writer.writeEnumValue("technologies", this.getTechnologies());
     }
@@ -208,6 +206,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationPolicyAssignment> value) {
         this._assignments = value;
     }
@@ -216,6 +215,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -224,6 +224,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the creationSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationSource(@javax.annotation.Nullable final String value) {
         this._creationSource = value;
     }
@@ -232,6 +233,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -240,6 +242,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the isAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAssigned(@javax.annotation.Nullable final Boolean value) {
         this._isAssigned = value;
     }
@@ -248,6 +251,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -256,6 +260,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -264,6 +269,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the platforms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatforms(@javax.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
         this._platforms = value;
     }
@@ -272,6 +278,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -280,6 +287,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the scheduledActionsForRule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduledActionsForRule(@javax.annotation.Nullable final java.util.List<DeviceManagementComplianceScheduledActionForRule> value) {
         this._scheduledActionsForRule = value;
     }
@@ -288,6 +296,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the settingCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingCount(@javax.annotation.Nullable final Integer value) {
         this._settingCount = value;
     }
@@ -296,6 +305,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSetting> value) {
         this._settings = value;
     }
@@ -304,6 +314,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      * @param value Value to set for the technologies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTechnologies(@javax.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
         this._technologies = value;
     }

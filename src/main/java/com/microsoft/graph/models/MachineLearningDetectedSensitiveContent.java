@@ -16,6 +16,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * Instantiates a new MachineLearningDetectedSensitiveContent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MachineLearningDetectedSensitiveContent() {
         super();
         this.setOdataType("#microsoft.graph.machineLearningDetectedSensitiveContent");
@@ -37,7 +38,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MachineLearningDetectedSensitiveContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("matchTolerance", (n) -> { currentObject.setMatchTolerance(n.getEnumValue(MlClassificationMatchTolerance.class)); });
             this.put("modelVersion", (n) -> { currentObject.setModelVersion(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * @param value Value to set for the matchTolerance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatchTolerance(@javax.annotation.Nullable final MlClassificationMatchTolerance value) {
         this._matchTolerance = value;
     }
@@ -82,6 +85,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * @param value Value to set for the modelVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModelVersion(@javax.annotation.Nullable final String value) {
         this._modelVersion = value;
     }

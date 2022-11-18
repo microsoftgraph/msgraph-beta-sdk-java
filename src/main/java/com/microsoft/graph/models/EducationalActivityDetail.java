@@ -35,6 +35,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Instantiates a new educationalActivityDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationalActivityDetail() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.educationalActivityDetail");
@@ -104,7 +105,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationalActivityDetail currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("abbreviation", (n) -> { currentObject.setAbbreviation(n.getStringValue()); });
             this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("awards", (n) -> { currentObject.setAwards(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -162,6 +163,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("abbreviation", this.getAbbreviation());
@@ -181,6 +183,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the abbreviation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAbbreviation(@javax.annotation.Nullable final String value) {
         this._abbreviation = value;
     }
@@ -189,6 +192,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the activities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<String> value) {
         this._activities = value;
     }
@@ -197,6 +201,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -205,6 +210,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the awards property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAwards(@javax.annotation.Nullable final java.util.List<String> value) {
         this._awards = value;
     }
@@ -213,6 +219,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -221,6 +228,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -229,6 +237,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the fieldsOfStudy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFieldsOfStudy(@javax.annotation.Nullable final java.util.List<String> value) {
         this._fieldsOfStudy = value;
     }
@@ -237,6 +246,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the grade property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrade(@javax.annotation.Nullable final String value) {
         this._grade = value;
     }
@@ -245,6 +255,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
         this._notes = value;
     }
@@ -253,6 +264,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -261,6 +273,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

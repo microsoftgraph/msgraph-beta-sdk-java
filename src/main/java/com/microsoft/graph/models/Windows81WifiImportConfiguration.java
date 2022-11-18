@@ -18,6 +18,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * Instantiates a new Windows81WifiImportConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows81WifiImportConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows81WifiImportConfiguration");
@@ -39,7 +40,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows81WifiImportConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("payload", (n) -> { currentObject.setPayload(n.getByteArrayValue()); });
             this.put("payloadFileName", (n) -> { currentObject.setPayloadFileName(n.getStringValue()); });
             this.put("profileName", (n) -> { currentObject.setProfileName(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the payload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayload(@javax.annotation.Nullable final byte[] value) {
         this._payload = value;
     }
@@ -94,6 +97,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the payloadFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadFileName(@javax.annotation.Nullable final String value) {
         this._payloadFileName = value;
     }
@@ -102,6 +106,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the profileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileName(@javax.annotation.Nullable final String value) {
         this._profileName = value;
     }

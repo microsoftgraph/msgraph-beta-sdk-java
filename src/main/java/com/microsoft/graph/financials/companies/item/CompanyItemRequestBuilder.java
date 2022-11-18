@@ -77,7 +77,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -88,232 +87,232 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the companies property of the microsoft.graph.financials entity. */
 public class CompanyItemRequestBuilder {
-    /** The accounts property */
+    /** Provides operations to manage the accounts property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public AccountsRequestBuilder accounts() {
         return new AccountsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The agedAccountsPayable property */
+    /** Provides operations to manage the agedAccountsPayable property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public AgedAccountsPayableRequestBuilder agedAccountsPayable() {
         return new AgedAccountsPayableRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The agedAccountsReceivable property */
+    /** Provides operations to manage the agedAccountsReceivable property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public AgedAccountsReceivableRequestBuilder agedAccountsReceivable() {
         return new AgedAccountsReceivableRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The companyInformation property */
+    /** Provides operations to manage the companyInformation property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public CompanyInformationRequestBuilder companyInformation() {
         return new CompanyInformationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The countriesRegions property */
+    /** Provides operations to manage the countriesRegions property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public CountriesRegionsRequestBuilder countriesRegions() {
         return new CountriesRegionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The currencies property */
+    /** Provides operations to manage the currencies property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public CurrenciesRequestBuilder currencies() {
         return new CurrenciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The customerPaymentJournals property */
+    /** Provides operations to manage the customerPaymentJournals property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public CustomerPaymentJournalsRequestBuilder customerPaymentJournals() {
         return new CustomerPaymentJournalsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The customerPayments property */
+    /** Provides operations to manage the customerPayments property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public CustomerPaymentsRequestBuilder customerPayments() {
         return new CustomerPaymentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The customers property */
+    /** Provides operations to manage the customers property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public CustomersRequestBuilder customers() {
         return new CustomersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The dimensions property */
+    /** Provides operations to manage the dimensions property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public DimensionsRequestBuilder dimensions() {
         return new DimensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The dimensionValues property */
+    /** Provides operations to manage the dimensionValues property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public DimensionValuesRequestBuilder dimensionValues() {
         return new DimensionValuesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The employees property */
+    /** Provides operations to manage the employees property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public EmployeesRequestBuilder employees() {
         return new EmployeesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The generalLedgerEntries property */
+    /** Provides operations to manage the generalLedgerEntries property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public GeneralLedgerEntriesRequestBuilder generalLedgerEntries() {
         return new GeneralLedgerEntriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The itemCategories property */
+    /** Provides operations to manage the itemCategories property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public ItemCategoriesRequestBuilder itemCategories() {
         return new ItemCategoriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The items property */
+    /** Provides operations to manage the items property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The journalLines property */
+    /** Provides operations to manage the journalLines property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public JournalLinesRequestBuilder journalLines() {
         return new JournalLinesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The journals property */
+    /** Provides operations to manage the journals property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public JournalsRequestBuilder journals() {
         return new JournalsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The paymentMethods property */
+    private HashMap<String, Object> pathParameters;
+    /** Provides operations to manage the paymentMethods property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public PaymentMethodsRequestBuilder paymentMethods() {
         return new PaymentMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The paymentTerms property */
+    /** Provides operations to manage the paymentTerms property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public PaymentTermsRequestBuilder paymentTerms() {
         return new PaymentTermsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The picture property */
+    /** Provides operations to manage the picture property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public PictureRequestBuilder picture() {
         return new PictureRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The purchaseInvoiceLines property */
+    /** Provides operations to manage the purchaseInvoiceLines property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public PurchaseInvoiceLinesRequestBuilder purchaseInvoiceLines() {
         return new PurchaseInvoiceLinesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The purchaseInvoices property */
+    /** Provides operations to manage the purchaseInvoices property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public PurchaseInvoicesRequestBuilder purchaseInvoices() {
         return new PurchaseInvoicesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The salesCreditMemoLines property */
+    private RequestAdapter requestAdapter;
+    /** Provides operations to manage the salesCreditMemoLines property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public SalesCreditMemoLinesRequestBuilder salesCreditMemoLines() {
         return new SalesCreditMemoLinesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The salesCreditMemos property */
+    /** Provides operations to manage the salesCreditMemos property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public SalesCreditMemosRequestBuilder salesCreditMemos() {
         return new SalesCreditMemosRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The salesInvoiceLines property */
+    /** Provides operations to manage the salesInvoiceLines property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public SalesInvoiceLinesRequestBuilder salesInvoiceLines() {
         return new SalesInvoiceLinesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The salesInvoices property */
+    /** Provides operations to manage the salesInvoices property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public SalesInvoicesRequestBuilder salesInvoices() {
         return new SalesInvoicesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The salesOrderLines property */
+    /** Provides operations to manage the salesOrderLines property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public SalesOrderLinesRequestBuilder salesOrderLines() {
         return new SalesOrderLinesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The salesOrders property */
+    /** Provides operations to manage the salesOrders property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public SalesOrdersRequestBuilder salesOrders() {
         return new SalesOrdersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The salesQuoteLines property */
+    /** Provides operations to manage the salesQuoteLines property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public SalesQuoteLinesRequestBuilder salesQuoteLines() {
         return new SalesQuoteLinesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The salesQuotes property */
+    /** Provides operations to manage the salesQuotes property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public SalesQuotesRequestBuilder salesQuotes() {
         return new SalesQuotesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The shipmentMethods property */
+    /** Provides operations to manage the shipmentMethods property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public ShipmentMethodsRequestBuilder shipmentMethods() {
         return new ShipmentMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The taxAreas property */
+    /** Provides operations to manage the taxAreas property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public TaxAreasRequestBuilder taxAreas() {
         return new TaxAreasRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The taxGroups property */
+    /** Provides operations to manage the taxGroups property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public TaxGroupsRequestBuilder taxGroups() {
         return new TaxGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The unitsOfMeasure property */
+    /** Provides operations to manage the unitsOfMeasure property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public UnitsOfMeasureRequestBuilder unitsOfMeasure() {
         return new UnitsOfMeasureRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /** The vendors property */
+    private String urlTemplate;
+    /** Provides operations to manage the vendors property of the microsoft.graph.company entity. */
     @javax.annotation.Nonnull
     public VendorsRequestBuilder vendors() {
         return new VendorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.accounts.item collection
+     * Provides operations to manage the accounts property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a AccountItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccountItemRequestBuilder accounts(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("account%2Did", id);
         return new AccountItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.agedAccountsPayable.item collection
+     * Provides operations to manage the agedAccountsPayable property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a AgedAccountsPayableItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgedAccountsPayableItemRequestBuilder agedAccountsPayable(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("agedAccountsPayable%2Did", id);
         return new AgedAccountsPayableItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.agedAccountsReceivable.item collection
+     * Provides operations to manage the agedAccountsReceivable property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a AgedAccountsReceivableItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgedAccountsReceivableItemRequestBuilder agedAccountsReceivable(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("agedAccountsReceivable%2Did", id);
         return new AgedAccountsReceivableItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.companyInformation.item collection
+     * Provides operations to manage the companyInformation property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a CompanyInformationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CompanyInformationItemRequestBuilder companyInformation(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("companyInformation%2Did", id);
         return new CompanyInformationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -323,11 +322,12 @@ public class CompanyItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CompanyItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/financials/companies/{company%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -337,22 +337,23 @@ public class CompanyItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CompanyItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/financials/companies/{company%2Did}{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.countriesRegions.item collection
+     * Provides operations to manage the countriesRegions property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a CountryRegionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CountryRegionItemRequestBuilder countriesRegions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("countryRegion%2Did", id);
         return new CountryRegionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -370,15 +371,14 @@ public class CompanyItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<CompanyItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final CompanyItemRequestBuilderGetRequestConfiguration requestConfig = new CompanyItemRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -387,98 +387,98 @@ public class CompanyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.currencies.item collection
+     * Provides operations to manage the currencies property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a CurrencyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CurrencyItemRequestBuilder currencies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("currency%2Did", id);
         return new CurrencyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.customerPaymentJournals.item collection
+     * Provides operations to manage the customerPaymentJournals property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a CustomerPaymentJournalItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CustomerPaymentJournalItemRequestBuilder customerPaymentJournals(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("customerPaymentJournal%2Did", id);
         return new CustomerPaymentJournalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.customerPayments.item collection
+     * Provides operations to manage the customerPayments property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a CustomerPaymentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CustomerPaymentItemRequestBuilder customerPayments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("customerPayment%2Did", id);
         return new CustomerPaymentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.customers.item collection
+     * Provides operations to manage the customers property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a CustomerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CustomerItemRequestBuilder customers(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("customer%2Did", id);
         return new CustomerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.dimensions.item collection
+     * Provides operations to manage the dimensions property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a DimensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DimensionItemRequestBuilder dimensions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("dimension%2Did", id);
         return new DimensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.dimensionValues.item collection
+     * Provides operations to manage the dimensionValues property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a DimensionValueItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DimensionValueItemRequestBuilder dimensionValues(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("dimensionValue%2Did", id);
         return new DimensionValueItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.employees.item collection
+     * Provides operations to manage the employees property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a EmployeeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EmployeeItemRequestBuilder employees(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("employee%2Did", id);
         return new EmployeeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.generalLedgerEntries.item collection
+     * Provides operations to manage the generalLedgerEntries property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a GeneralLedgerEntryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GeneralLedgerEntryItemRequestBuilder generalLedgerEntries(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("generalLedgerEntry%2Did", id);
         return new GeneralLedgerEntryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -486,16 +486,18 @@ public class CompanyItemRequestBuilder {
      * Get companies from financials
      * @return a CompletableFuture of company
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Company> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Company::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, Company::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Company>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -503,302 +505,286 @@ public class CompanyItemRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of company
      */
-    public java.util.concurrent.CompletableFuture<Company> get(@javax.annotation.Nullable final java.util.function.Consumer<CompanyItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Company> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Company::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, Company::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Company>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Get companies from financials
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of company
-     */
-    public java.util.concurrent.CompletableFuture<Company> get(@javax.annotation.Nullable final java.util.function.Consumer<CompanyItemRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Company::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.itemCategories.item collection
+     * Provides operations to manage the itemCategories property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a ItemCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemCategoryItemRequestBuilder itemCategories(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("itemCategory%2Did", id);
         return new ItemCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.items.item collection
+     * Provides operations to manage the items property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a ItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("item%2Did", id);
         return new ItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.journalLines.item collection
+     * Provides operations to manage the journalLines property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a JournalLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public JournalLineItemRequestBuilder journalLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("journalLine%2Did", id);
         return new JournalLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.journals.item collection
+     * Provides operations to manage the journals property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a JournalItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public JournalItemRequestBuilder journals(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("journal%2Did", id);
         return new JournalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.paymentMethods.item collection
+     * Provides operations to manage the paymentMethods property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a PaymentMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PaymentMethodItemRequestBuilder paymentMethods(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("paymentMethod%2Did", id);
         return new PaymentMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.paymentTerms.item collection
+     * Provides operations to manage the paymentTerms property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a PaymentTermItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PaymentTermItemRequestBuilder paymentTerms(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("paymentTerm%2Did", id);
         return new PaymentTermItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.picture.item collection
+     * Provides operations to manage the picture property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a PictureItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PictureItemRequestBuilder picture(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("picture%2Did", id);
         return new PictureItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.purchaseInvoiceLines.item collection
+     * Provides operations to manage the purchaseInvoiceLines property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a PurchaseInvoiceLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PurchaseInvoiceLineItemRequestBuilder purchaseInvoiceLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("purchaseInvoiceLine%2Did", id);
         return new PurchaseInvoiceLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.purchaseInvoices.item collection
+     * Provides operations to manage the purchaseInvoices property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a PurchaseInvoiceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PurchaseInvoiceItemRequestBuilder purchaseInvoices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("purchaseInvoice%2Did", id);
         return new PurchaseInvoiceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesCreditMemoLines.item collection
+     * Provides operations to manage the salesCreditMemoLines property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a SalesCreditMemoLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesCreditMemoLineItemRequestBuilder salesCreditMemoLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesCreditMemoLine%2Did", id);
         return new SalesCreditMemoLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesCreditMemos.item collection
+     * Provides operations to manage the salesCreditMemos property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a SalesCreditMemoItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesCreditMemoItemRequestBuilder salesCreditMemos(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesCreditMemo%2Did", id);
         return new SalesCreditMemoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesInvoiceLines.item collection
+     * Provides operations to manage the salesInvoiceLines property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a SalesInvoiceLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesInvoiceLineItemRequestBuilder salesInvoiceLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesInvoiceLine%2Did", id);
         return new SalesInvoiceLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesInvoices.item collection
+     * Provides operations to manage the salesInvoices property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a SalesInvoiceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesInvoiceItemRequestBuilder salesInvoices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesInvoice%2Did", id);
         return new SalesInvoiceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesOrderLines.item collection
+     * Provides operations to manage the salesOrderLines property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a SalesOrderLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesOrderLineItemRequestBuilder salesOrderLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesOrderLine%2Did", id);
         return new SalesOrderLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesOrders.item collection
+     * Provides operations to manage the salesOrders property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a SalesOrderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesOrderItemRequestBuilder salesOrders(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesOrder%2Did", id);
         return new SalesOrderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesQuoteLines.item collection
+     * Provides operations to manage the salesQuoteLines property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a SalesQuoteLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesQuoteLineItemRequestBuilder salesQuoteLines(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesQuoteLine%2Did", id);
         return new SalesQuoteLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.salesQuotes.item collection
+     * Provides operations to manage the salesQuotes property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a SalesQuoteItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SalesQuoteItemRequestBuilder salesQuotes(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesQuote%2Did", id);
         return new SalesQuoteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.shipmentMethods.item collection
+     * Provides operations to manage the shipmentMethods property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a ShipmentMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ShipmentMethodItemRequestBuilder shipmentMethods(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("shipmentMethod%2Did", id);
         return new ShipmentMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.taxAreas.item collection
+     * Provides operations to manage the taxAreas property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a TaxAreaItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TaxAreaItemRequestBuilder taxAreas(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("taxArea%2Did", id);
         return new TaxAreaItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.taxGroups.item collection
+     * Provides operations to manage the taxGroups property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a TaxGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TaxGroupItemRequestBuilder taxGroups(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("taxGroup%2Did", id);
         return new TaxGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.unitsOfMeasure.item collection
+     * Provides operations to manage the unitsOfMeasure property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a UnitOfMeasureItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnitOfMeasureItemRequestBuilder unitsOfMeasure(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unitOfMeasure%2Did", id);
         return new UnitOfMeasureItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.financials.companies.item.vendors.item collection
+     * Provides operations to manage the vendors property of the microsoft.graph.company entity.
      * @param id Unique identifier of the item
      * @return a VendorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public VendorItemRequestBuilder vendors(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("vendor%2Did", id);
         return new VendorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Get companies from financials */
-    public class CompanyItemRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -809,21 +795,22 @@ public class CompanyItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class CompanyItemRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public CompanyItemRequestBuilderGetQueryParameters queryParameters = new CompanyItemRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new CompanyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
-        public CompanyItemRequestBuilderGetRequestConfiguration() {
+        @javax.annotation.Nullable
+        public GetRequestConfiguration() {
         }
     }
 }

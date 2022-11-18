@@ -22,6 +22,20 @@ import com.microsoft.graph.tenantrelationships.managedtenants.manageddevicecompl
 import com.microsoft.graph.tenantrelationships.managedtenants.manageddevicecompliances.ManagedDeviceCompliancesRequestBuilder;
 import com.microsoft.graph.tenantrelationships.managedtenants.manageddevicecompliancetrends.item.ManagedDeviceComplianceTrendItemRequestBuilder;
 import com.microsoft.graph.tenantrelationships.managedtenants.manageddevicecompliancetrends.ManagedDeviceComplianceTrendsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantalertlogs.item.ManagedTenantAlertLogItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantalertlogs.ManagedTenantAlertLogsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantalertruledefinitions.item.ManagedTenantAlertRuleDefinitionItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantalertruledefinitions.ManagedTenantAlertRuleDefinitionsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantalertrules.item.ManagedTenantAlertRuleItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantalertrules.ManagedTenantAlertRulesRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantalerts.item.ManagedTenantAlertItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantalerts.ManagedTenantAlertsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantapinotifications.item.ManagedTenantApiNotificationItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantapinotifications.ManagedTenantApiNotificationsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantemailnotifications.item.ManagedTenantEmailNotificationItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantemailnotifications.ManagedTenantEmailNotificationsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantticketingendpoints.item.ManagedTenantTicketingEndpointItemRequestBuilder;
+import com.microsoft.graph.tenantrelationships.managedtenants.managedtenantticketingendpoints.ManagedTenantTicketingEndpointsRequestBuilder;
 import com.microsoft.graph.tenantrelationships.managedtenants.managementactions.item.ManagementActionItemRequestBuilder;
 import com.microsoft.graph.tenantrelationships.managedtenants.managementactions.ManagementActionsRequestBuilder;
 import com.microsoft.graph.tenantrelationships.managedtenants.managementactiontenantdeploymentstatuses.item.ManagementActionTenantDeploymentStatusItemRequestBuilder;
@@ -57,7 +71,6 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
@@ -68,206 +81,241 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the managedTenants property of the microsoft.graph.tenantRelationship entity. */
 public class ManagedTenantsRequestBuilder {
-    /** The aggregatedPolicyCompliances property */
+    /** Provides operations to manage the aggregatedPolicyCompliances property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public AggregatedPolicyCompliancesRequestBuilder aggregatedPolicyCompliances() {
         return new AggregatedPolicyCompliancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The auditEvents property */
+    /** Provides operations to manage the auditEvents property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public AuditEventsRequestBuilder auditEvents() {
         return new AuditEventsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The cloudPcConnections property */
+    /** Provides operations to manage the cloudPcConnections property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public CloudPcConnectionsRequestBuilder cloudPcConnections() {
         return new CloudPcConnectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The cloudPcDevices property */
+    /** Provides operations to manage the cloudPcDevices property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public CloudPcDevicesRequestBuilder cloudPcDevices() {
         return new CloudPcDevicesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The cloudPcsOverview property */
+    /** Provides operations to manage the cloudPcsOverview property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public CloudPcsOverviewRequestBuilder cloudPcsOverview() {
         return new CloudPcsOverviewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The conditionalAccessPolicyCoverages property */
+    /** Provides operations to manage the conditionalAccessPolicyCoverages property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public ConditionalAccessPolicyCoveragesRequestBuilder conditionalAccessPolicyCoverages() {
         return new ConditionalAccessPolicyCoveragesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The credentialUserRegistrationsSummaries property */
+    /** Provides operations to manage the credentialUserRegistrationsSummaries property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public CredentialUserRegistrationsSummariesRequestBuilder credentialUserRegistrationsSummaries() {
         return new CredentialUserRegistrationsSummariesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceCompliancePolicySettingStateSummaries property */
+    /** Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public DeviceCompliancePolicySettingStateSummariesRequestBuilder deviceCompliancePolicySettingStateSummaries() {
         return new DeviceCompliancePolicySettingStateSummariesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedDeviceCompliances property */
+    /** Provides operations to manage the managedDeviceCompliances property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public ManagedDeviceCompliancesRequestBuilder managedDeviceCompliances() {
         return new ManagedDeviceCompliancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedDeviceComplianceTrends property */
+    /** Provides operations to manage the managedDeviceComplianceTrends property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public ManagedDeviceComplianceTrendsRequestBuilder managedDeviceComplianceTrends() {
         return new ManagedDeviceComplianceTrendsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managementActions property */
+    /** Provides operations to manage the managedTenantAlertLogs property of the microsoft.graph.managedTenants.managedTenant entity. */
+    @javax.annotation.Nonnull
+    public ManagedTenantAlertLogsRequestBuilder managedTenantAlertLogs() {
+        return new ManagedTenantAlertLogsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the managedTenantAlertRuleDefinitions property of the microsoft.graph.managedTenants.managedTenant entity. */
+    @javax.annotation.Nonnull
+    public ManagedTenantAlertRuleDefinitionsRequestBuilder managedTenantAlertRuleDefinitions() {
+        return new ManagedTenantAlertRuleDefinitionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the managedTenantAlertRules property of the microsoft.graph.managedTenants.managedTenant entity. */
+    @javax.annotation.Nonnull
+    public ManagedTenantAlertRulesRequestBuilder managedTenantAlertRules() {
+        return new ManagedTenantAlertRulesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the managedTenantAlerts property of the microsoft.graph.managedTenants.managedTenant entity. */
+    @javax.annotation.Nonnull
+    public ManagedTenantAlertsRequestBuilder managedTenantAlerts() {
+        return new ManagedTenantAlertsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the managedTenantApiNotifications property of the microsoft.graph.managedTenants.managedTenant entity. */
+    @javax.annotation.Nonnull
+    public ManagedTenantApiNotificationsRequestBuilder managedTenantApiNotifications() {
+        return new ManagedTenantApiNotificationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the managedTenantEmailNotifications property of the microsoft.graph.managedTenants.managedTenant entity. */
+    @javax.annotation.Nonnull
+    public ManagedTenantEmailNotificationsRequestBuilder managedTenantEmailNotifications() {
+        return new ManagedTenantEmailNotificationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the managedTenantTicketingEndpoints property of the microsoft.graph.managedTenants.managedTenant entity. */
+    @javax.annotation.Nonnull
+    public ManagedTenantTicketingEndpointsRequestBuilder managedTenantTicketingEndpoints() {
+        return new ManagedTenantTicketingEndpointsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the managementActions property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public ManagementActionsRequestBuilder managementActions() {
         return new ManagementActionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managementActionTenantDeploymentStatuses property */
+    /** Provides operations to manage the managementActionTenantDeploymentStatuses property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public ManagementActionTenantDeploymentStatusesRequestBuilder managementActionTenantDeploymentStatuses() {
         return new ManagementActionTenantDeploymentStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managementIntents property */
+    /** Provides operations to manage the managementIntents property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public ManagementIntentsRequestBuilder managementIntents() {
         return new ManagementIntentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managementTemplateCollections property */
+    /** Provides operations to manage the managementTemplateCollections property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public ManagementTemplateCollectionsRequestBuilder managementTemplateCollections() {
         return new ManagementTemplateCollectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managementTemplates property */
+    /** Provides operations to manage the managementTemplates property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public ManagementTemplatesRequestBuilder managementTemplates() {
         return new ManagementTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managementTemplateSteps property */
+    /** Provides operations to manage the managementTemplateSteps property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public ManagementTemplateStepsRequestBuilder managementTemplateSteps() {
         return new ManagementTemplateStepsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managementTemplateStepVersions property */
+    /** Provides operations to manage the managementTemplateStepVersions property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public ManagementTemplateStepVersionsRequestBuilder managementTemplateStepVersions() {
         return new ManagementTemplateStepVersionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The myRoles property */
+    /** Provides operations to manage the myRoles property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public MyRolesRequestBuilder myRoles() {
         return new MyRolesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The tenantGroups property */
+    private RequestAdapter requestAdapter;
+    /** Provides operations to manage the tenantGroups property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public TenantGroupsRequestBuilder tenantGroups() {
         return new TenantGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tenants property */
+    /** Provides operations to manage the tenants property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public TenantsRequestBuilder tenants() {
         return new TenantsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tenantsCustomizedInformation property */
+    /** Provides operations to manage the tenantsCustomizedInformation property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public TenantsCustomizedInformationRequestBuilder tenantsCustomizedInformation() {
         return new TenantsCustomizedInformationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tenantsDetailedInformation property */
+    /** Provides operations to manage the tenantsDetailedInformation property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public TenantsDetailedInformationRequestBuilder tenantsDetailedInformation() {
         return new TenantsDetailedInformationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tenantTags property */
+    /** Provides operations to manage the tenantTags property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public TenantTagsRequestBuilder tenantTags() {
         return new TenantTagsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /** The windowsDeviceMalwareStates property */
+    private String urlTemplate;
+    /** Provides operations to manage the windowsDeviceMalwareStates property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public WindowsDeviceMalwareStatesRequestBuilder windowsDeviceMalwareStates() {
         return new WindowsDeviceMalwareStatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsProtectionStates property */
+    /** Provides operations to manage the windowsProtectionStates property of the microsoft.graph.managedTenants.managedTenant entity. */
     @javax.annotation.Nonnull
     public WindowsProtectionStatesRequestBuilder windowsProtectionStates() {
         return new WindowsProtectionStatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.aggregatedPolicyCompliances.item collection
+     * Provides operations to manage the aggregatedPolicyCompliances property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a AggregatedPolicyComplianceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AggregatedPolicyComplianceItemRequestBuilder aggregatedPolicyCompliances(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("aggregatedPolicyCompliance%2Did", id);
         return new AggregatedPolicyComplianceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.auditEvents.item collection
+     * Provides operations to manage the auditEvents property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a AuditEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AuditEventItemRequestBuilder auditEvents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("auditEvent%2Did", id);
         return new AuditEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.cloudPcConnections.item collection
+     * Provides operations to manage the cloudPcConnections property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a CloudPcConnectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcConnectionItemRequestBuilder cloudPcConnections(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcConnection%2Did", id);
         return new CloudPcConnectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.cloudPcDevices.item collection
+     * Provides operations to manage the cloudPcDevices property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a CloudPcDeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcDeviceItemRequestBuilder cloudPcDevices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcDevice%2Did", id);
         return new CloudPcDeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.cloudPcsOverview.item collection
+     * Provides operations to manage the cloudPcsOverview property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a CloudPcOverviewTenantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CloudPcOverviewTenantItemRequestBuilder cloudPcsOverview(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("cloudPcOverview%2DtenantId", id);
         return new CloudPcOverviewTenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.conditionalAccessPolicyCoverages.item collection
+     * Provides operations to manage the conditionalAccessPolicyCoverages property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a ConditionalAccessPolicyCoverageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConditionalAccessPolicyCoverageItemRequestBuilder conditionalAccessPolicyCoverages(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("conditionalAccessPolicyCoverage%2Did", id);
         return new ConditionalAccessPolicyCoverageItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -277,11 +325,12 @@ public class ManagedTenantsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedTenantsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/tenantRelationships/managedTenants{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -291,9 +340,10 @@ public class ManagedTenantsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedTenantsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/tenantRelationships/managedTenants{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -312,14 +362,13 @@ public class ManagedTenantsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.DELETE;
-        }};
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final ManagedTenantsRequestBuilderDeleteRequestConfiguration requestConfig = new ManagedTenantsRequestBuilderDeleteRequestConfiguration();
+            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -340,15 +389,14 @@ public class ManagedTenantsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final ManagedTenantsRequestBuilderGetRequestConfiguration requestConfig = new ManagedTenantsRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -372,16 +420,16 @@ public class ManagedTenantsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final ManagedTenant body, @javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final ManagedTenant body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.PATCH;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final ManagedTenantsRequestBuilderPatchRequestConfiguration requestConfig = new ManagedTenantsRequestBuilderPatchRequestConfiguration();
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -389,14 +437,14 @@ public class ManagedTenantsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.credentialUserRegistrationsSummaries.item collection
+     * Provides operations to manage the credentialUserRegistrationsSummaries property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a CredentialUserRegistrationsSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CredentialUserRegistrationsSummaryItemRequestBuilder credentialUserRegistrationsSummaries(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("credentialUserRegistrationsSummary%2Did", id);
         return new CredentialUserRegistrationsSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -404,16 +452,18 @@ public class ManagedTenantsRequestBuilder {
      * Delete navigation property managedTenants for tenantRelationships
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -421,45 +471,29 @@ public class ManagedTenantsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Delete navigation property managedTenants for tenantRelationships
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.deviceCompliancePolicySettingStateSummaries.item collection
+     * Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceCompliancePolicySettingStateSummaryItemRequestBuilder deviceCompliancePolicySettingStateSummaries(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceCompliancePolicySettingStateSummary%2Did", id);
         return new DeviceCompliancePolicySettingStateSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -467,16 +501,18 @@ public class ManagedTenantsRequestBuilder {
      * The operations available to interact with the multi-tenant management platform.
      * @return a CompletableFuture of managedTenant
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenant> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ManagedTenant>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -484,312 +520,366 @@ public class ManagedTenantsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedTenant
      */
-    public java.util.concurrent.CompletableFuture<ManagedTenant> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedTenant> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ManagedTenant>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * The operations available to interact with the multi-tenant management platform.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of managedTenant
-     */
-    public java.util.concurrent.CompletableFuture<ManagedTenant> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managedDeviceCompliances.item collection
+     * Provides operations to manage the managedDeviceCompliances property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a ManagedDeviceComplianceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceComplianceItemRequestBuilder managedDeviceCompliances(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedDeviceCompliance%2Did", id);
         return new ManagedDeviceComplianceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managedDeviceComplianceTrends.item collection
+     * Provides operations to manage the managedDeviceComplianceTrends property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a ManagedDeviceComplianceTrendItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceComplianceTrendItemRequestBuilder managedDeviceComplianceTrends(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedDeviceComplianceTrend%2Did", id);
         return new ManagedDeviceComplianceTrendItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementActions.item collection
+     * Provides operations to manage the managedTenantAlertLogs property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @param id Unique identifier of the item
+     * @return a ManagedTenantAlertLogItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedTenantAlertLogItemRequestBuilder managedTenantAlertLogs(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedTenantAlertLog%2Did", id);
+        return new ManagedTenantAlertLogItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedTenantAlertRuleDefinitions property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @param id Unique identifier of the item
+     * @return a ManagedTenantAlertRuleDefinitionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedTenantAlertRuleDefinitionItemRequestBuilder managedTenantAlertRuleDefinitions(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedTenantAlertRuleDefinition%2Did", id);
+        return new ManagedTenantAlertRuleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedTenantAlertRules property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @param id Unique identifier of the item
+     * @return a ManagedTenantAlertRuleItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedTenantAlertRuleItemRequestBuilder managedTenantAlertRules(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedTenantAlertRule%2Did", id);
+        return new ManagedTenantAlertRuleItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedTenantAlerts property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @param id Unique identifier of the item
+     * @return a ManagedTenantAlertItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedTenantAlertItemRequestBuilder managedTenantAlerts(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedTenantAlert%2Did", id);
+        return new ManagedTenantAlertItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedTenantApiNotifications property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @param id Unique identifier of the item
+     * @return a ManagedTenantApiNotificationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedTenantApiNotificationItemRequestBuilder managedTenantApiNotifications(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedTenantApiNotification%2Did", id);
+        return new ManagedTenantApiNotificationItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedTenantEmailNotifications property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @param id Unique identifier of the item
+     * @return a ManagedTenantEmailNotificationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedTenantEmailNotificationItemRequestBuilder managedTenantEmailNotifications(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedTenantEmailNotification%2Did", id);
+        return new ManagedTenantEmailNotificationItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedTenantTicketingEndpoints property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @param id Unique identifier of the item
+     * @return a ManagedTenantTicketingEndpointItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedTenantTicketingEndpointItemRequestBuilder managedTenantTicketingEndpoints(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedTenantTicketingEndpoint%2Did", id);
+        return new ManagedTenantTicketingEndpointItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managementActions property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a ManagementActionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementActionItemRequestBuilder managementActions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementAction%2Did", id);
         return new ManagementActionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementActionTenantDeploymentStatuses.item collection
+     * Provides operations to manage the managementActionTenantDeploymentStatuses property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a ManagementActionTenantDeploymentStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementActionTenantDeploymentStatusItemRequestBuilder managementActionTenantDeploymentStatuses(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementActionTenantDeploymentStatus%2Did", id);
         return new ManagementActionTenantDeploymentStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementIntents.item collection
+     * Provides operations to manage the managementIntents property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a ManagementIntentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementIntentItemRequestBuilder managementIntents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementIntent%2Did", id);
         return new ManagementIntentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateCollections.item collection
+     * Provides operations to manage the managementTemplateCollections property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a ManagementTemplateCollectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateCollectionItemRequestBuilder managementTemplateCollections(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementTemplateCollection%2Did", id);
         return new ManagementTemplateCollectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementTemplates.item collection
+     * Provides operations to manage the managementTemplates property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a ManagementTemplateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateItemRequestBuilder managementTemplates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementTemplate%2Did", id);
         return new ManagementTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateSteps.item collection
+     * Provides operations to manage the managementTemplateSteps property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a ManagementTemplateStepItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateStepItemRequestBuilder managementTemplateSteps(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementTemplateStep%2Did", id);
         return new ManagementTemplateStepItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.managementTemplateStepVersions.item collection
+     * Provides operations to manage the managementTemplateStepVersions property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a ManagementTemplateStepVersionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagementTemplateStepVersionItemRequestBuilder managementTemplateStepVersions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managementTemplateStepVersion%2Did", id);
         return new ManagementTemplateStepVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.myRoles.item collection
+     * Provides operations to manage the myRoles property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a MyRoleTenantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MyRoleTenantItemRequestBuilder myRoles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("myRole%2DtenantId", id);
         return new MyRoleTenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property managedTenants in tenantRelationships
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of managedTenant
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ManagedTenant body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedTenant> patch(@javax.annotation.Nonnull final ManagedTenant body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ManagedTenant>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update the navigation property managedTenants in tenantRelationships
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of managedTenant
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ManagedTenant body, @javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property managedTenants in tenantRelationships
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ManagedTenant body, @javax.annotation.Nullable final java.util.function.Consumer<ManagedTenantsRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedTenant> patch(@javax.annotation.Nonnull final ManagedTenant body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<ManagedTenant>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.tenantGroups.item collection
+     * Provides operations to manage the tenantGroups property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a TenantGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TenantGroupItemRequestBuilder tenantGroups(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tenantGroup%2Did", id);
         return new TenantGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.tenants.item collection
+     * Provides operations to manage the tenants property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a TenantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TenantItemRequestBuilder tenants(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tenant%2Did", id);
         return new TenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.tenantsCustomizedInformation.item collection
+     * Provides operations to manage the tenantsCustomizedInformation property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a TenantCustomizedInformationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TenantCustomizedInformationItemRequestBuilder tenantsCustomizedInformation(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tenantCustomizedInformation%2Did", id);
         return new TenantCustomizedInformationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.tenantsDetailedInformation.item collection
+     * Provides operations to manage the tenantsDetailedInformation property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a TenantDetailedInformationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TenantDetailedInformationItemRequestBuilder tenantsDetailedInformation(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tenantDetailedInformation%2Did", id);
         return new TenantDetailedInformationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.tenantTags.item collection
+     * Provides operations to manage the tenantTags property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a TenantTagItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TenantTagItemRequestBuilder tenantTags(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tenantTag%2Did", id);
         return new TenantTagItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.windowsDeviceMalwareStates.item collection
+     * Provides operations to manage the windowsDeviceMalwareStates property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a WindowsDeviceMalwareStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsDeviceMalwareStateItemRequestBuilder windowsDeviceMalwareStates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsDeviceMalwareState%2Did", id);
         return new WindowsDeviceMalwareStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.tenantRelationships.managedTenants.windowsProtectionStates.item collection
+     * Provides operations to manage the windowsProtectionStates property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param id Unique identifier of the item
      * @return a WindowsProtectionStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsProtectionStateItemRequestBuilder windowsProtectionStates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsProtectionState%2Did", id);
         return new WindowsProtectionStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class ManagedTenantsRequestBuilderDeleteRequestConfiguration {
+    public class DeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedTenantsRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeleteRequestConfiguration and sets the default values.
          * @return a void
          */
-        public ManagedTenantsRequestBuilderDeleteRequestConfiguration() {
+        @javax.annotation.Nullable
+        public DeleteRequestConfiguration() {
         }
     }
     /** The operations available to interact with the multi-tenant management platform. */
-    public class ManagedTenantsRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -800,36 +890,38 @@ public class ManagedTenantsRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class ManagedTenantsRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public ManagedTenantsRequestBuilderGetQueryParameters queryParameters = new ManagedTenantsRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new managedTenantsRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
-        public ManagedTenantsRequestBuilderGetRequestConfiguration() {
+        @javax.annotation.Nullable
+        public GetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class ManagedTenantsRequestBuilderPatchRequestConfiguration {
+    public class PatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedTenantsRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PatchRequestConfiguration and sets the default values.
          * @return a void
          */
-        public ManagedTenantsRequestBuilderPatchRequestConfiguration() {
+        @javax.annotation.Nullable
+        public PatchRequestConfiguration() {
         }
     }
 }

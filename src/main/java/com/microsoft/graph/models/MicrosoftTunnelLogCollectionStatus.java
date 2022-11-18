@@ -5,12 +5,14 @@ import java.util.Objects;
 
 /** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum MicrosoftTunnelLogCollectionStatus implements ValuedEnum {
-    /** Log collection is in progress */
+    /** Indicates that the log collection is in progress */
     Pending("pending"),
-    /** Log collection is completed */
+    /** Indicates that the log collection is completed */
     Completed("completed"),
-    /** Log collection has failed */
-    Failed("failed");
+    /** Indicates that the log collection has failed */
+    Failed("failed"),
+    /** Placeholder value for future expansion enums */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     MicrosoftTunnelLogCollectionStatus(final String value) {
         this.value = value;
@@ -24,6 +26,7 @@ public enum MicrosoftTunnelLogCollectionStatus implements ValuedEnum {
             case "pending": return Pending;
             case "completed": return Completed;
             case "failed": return Failed;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }
